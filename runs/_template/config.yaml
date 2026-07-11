@@ -1,0 +1,14 @@
+run_id: YYYYMMDD_model_stage
+stage: 1a0 | 1a | 1b | review | repair
+model: ""
+provider: ""
+thinking_budget: ""
+temperature: null
+payload_file: payloads/1a_blind.md
+payload_sha256: ""
+web_access: false
+tools: []
+started: ""
+finished: ""
+operator: istr
+notes: ""

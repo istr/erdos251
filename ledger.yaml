@@ -1,0 +1,60 @@
+version: 1
+convention:
+  scoring: brier            # (p - outcome)^2, outcome in {0,1}; categorical = sum over classes
+  registration_rule: bets are written here BEFORE evidence arrives; edits append, never rewrite
+
+scored:
+  - id: BET-20260711-01
+    registered: 2026-07-11
+    claim: content class of the 2026-04-15 variant solution at erdosproblems.com/251
+    distribution:
+      H1_conditional_under_tuples: 0.25
+      H2_generalized_denominators_g1_gn: 0.25
+      H3_carries_defused_base_or_lacunarity: 0.20
+      H4_pk_family_or_subsequence: 0.15
+      H5_other: 0.15
+    outcome: H2 (negative resolution of the g_1...g_n generalization by adversarial telescoping)
+    note: object correct, direction (disproof vs conditional proof) not anticipated
+    brier: 0.71
+    baseline_uniform: 0.80
+  - id: BET-20260711-02
+    registered: 2026-07-11
+    claim: variant writeup contains a delta-like tail-recursion object
+    p: 0.60
+    outcome: true   # c_{n+1} = c_n g_n - p_n IS the tail recursion in base g_n
+    brier: 0.16
+    note: grading ambiguity acknowledged; strict textual reading applied
+  - id: BET-20260711-03
+    registered: 2026-07-11
+    claim: variant writeup cites Zhang-Maynard or Baker-Harman-Pintz
+    p: 0.50
+    outcome: false  # construction is elementary, no gap theorems
+    brier: 0.25
+
+open:
+  - id: BET-20260711-04
+    registered: 2026-07-11
+    claim: round 1 produces a complete informal proof of "uniform quantitative
+      prime tuples hypothesis implies irrationality of sum p_n/2^n"
+    p: 0.65
+    resolution: blind cross-review by a second model plus operator finds no gap
+    resolve_by: end of round 1
+  - id: BET-20260711-05
+    registered: 2026-07-11
+    claim: the same implication is Lean-verified (sorry-free modulo the stated
+      hypothesis) within the round-1 session budget
+    p: 0.45
+    resolution: lake build green on the implication file
+    resolve_by: end of round 1
+  - id: BET-20260711-06
+    registered: 2026-07-11
+    claim: the implication already exists in prior literature or preprints
+    p: 0.10
+    resolution: item A1 literature verification
+    resolve_by: before any public claim
+  - id: BET-20260711-07
+    registered: 2026-07-11
+    claim: unconditional progress on the original within 4 weeks
+    p: 0.03
+    resolution: operator judgment against wiki taxonomy (would rate at least yellow)
+    resolve_by: 2026-08-08
