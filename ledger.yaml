@@ -198,3 +198,29 @@ annotations:
       lemmas. BET-04 resolution now awaits operator sign-off on chain-v1;
       BET-05 remains open pending item-0002. HANDOVER.md rewritten for
       cold start.
+  - id: ANN-20260712-12
+    refs: [BET-20260711-05, ANN-20260712-11]
+    date: 2026-07-12
+    note: >-
+      item-0002 executed steering-side. Lean statement layer settled from
+      chain-v1 (sections 1-3, 8.2) with gpt-iso 9.x index conventions;
+      round-0 True placeholder (HypUniformTuples) removed; HLQuantA and
+      CramerGranville DEFINED; gpt-iso 9.8 HLQuantFull deliberately not
+      ported (triage-1b Q1 defect). 15 intentional sorries, 0 stubs;
+      round-0 warm-up gap_series_identity constant corrected to -2 (was
+      -1; exact Fraction verification, off by exactly 1). mathlib pinned
+      v4.16.0 = rev a6276f4c6097, toolchain pair verified, manifest
+      committed. Sandbox egress blocks release.lean-lang.org,
+      reservoir.lean-lang.org and the mathlib cache hosts
+      (mathlib4.lean-cache.cloud, lakecache.blob.core.windows.net, R2),
+      all 403 host_not_allowed; toolchain obtained via GitHub release
+      assets, deps resolved git+rev; first green build is CI's, so the
+      item-0002 acceptance gate is CI on main after erdos251-followup11;
+      the roadmap done-move is staged separately as followup12, apply
+      only after green CI. Two chain-v1 statement flags recorded for the
+      sign-off decision: Definition 3.1 orders n_r < m_r while section 6
+      swaps names to match fork orientation (drop the ordering or note
+      the symmetry; the proof of 3.2 never uses it); Hypothesis A
+      displays a vestigial C_A that its inequality never uses. BET-05
+      resolve_by (end of round 1) has passed without a green build;
+      scoring is an operator call.
