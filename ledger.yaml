@@ -79,3 +79,15 @@ annotations:
       k ~ loglog x, error budget summed over polylog many patterns).
       The verdict decides whether BET-04 resolves against an off-the-shelf
       quantified-HL hypothesis or a bespoke anti-concentration axiom.
+  - id: ANN-20260712-03
+    refs: [BET-20260711-04, BET-20260711-05]
+    date: 2026-07-12
+    note: >-
+      After three 1a runs the route landscape is: (P)/L-star (existence plus
+      anti-concentration, fable5), H-sep (repeats plus pair separation,
+      fable5), v2-block cancellation and word-powers with growing fixpoint
+      denominator (existence-only, gpt56sol-ab1), fork-merge (existence-only,
+      immune to exact locking, gpt56sol-ab2). Current weakest-hypothesis
+      favorite: fork-merge. Also recorded: runde0 Lemma L retracted
+      (ERRATUM-3); a within-model A/B pair produced disjoint routes and
+      opposite output languages under an identical German wrapper.

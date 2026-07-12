@@ -34,3 +34,19 @@ unverified figure across turns; the exact computation gives
 |delta_{n+4} - 30| = 4.693390861..., fully consistent with runde0's own
 datum 0.293 = 4.693/16. No numerical error in runde0; phrasing sharpened.
 Fidelity lesson recorded under experiment question Q5.
+
+## ERRATUM-3 (2026-07-12) -- runde0.md section 4, Lemma L insufficient as stated
+
+Lemma L demanded runs with aftermath control |delta_{n+J} - c| <= C log p_n
+without strict positivity, and runde0 dismissed the exact-hit case
+delta_{n+J} = c as a "technical branch (maximal runs / first deviating
+gap)". Both points fail: run 20260712_gpt56sol_1a_ab2 constructs a rational
+countermodel (report C8, section 7) with positive even unbounded gaps of
+size Theta(log n), arbitrarily long equal-gap runs whose common difference
+is divisible by lcm(1..J+1), and EXACT tail locking delta = c at every
+interior run end -- the squeeze never fires, and those runs are maximal,
+refuting the sketched fix as well. Corrected sufficient forms: (L*)/(P)
+with strict positivity 0 < |delta_{n+J} - c| (run fable5, Theorems A/B), or
+fork-merge (run ab2, C5/C6), which needs no positivity clause because the
+differing fork gap supplies the nonzero difference combinatorially.
+Status of runde0's Lemma L: RETRACTED as stated; superseded.
