@@ -170,3 +170,18 @@ annotations:
       non-circular, materially stronger than pure HL via clause B.
       BET-04 not yet resolved: repairs plus operator sign-off pending;
       review 2 independent.
+  - id: ANN-20260712-10
+    refs: [BET-20260711-04, ANN-20260712-09]
+    date: 2026-07-12
+    note: >-
+      Review 2 complete: gpt-web chain judged UNSOUND (fatal) at 0.90 by
+      fresh fable-5; steering re-derived and confirms the counterexample
+      (clause Q1 with purely relative error is unsatisfiable at sub-1
+      model masses; thousands of family words in the lethal band).
+      Deductive layer confirmed correct; failure class = provably empty
+      antecedent, same as Gemini 1a. Reviewer-provided mixed-error repair
+      (eps0 <= 1/77 plus additive x^theta) adopted as canonical; gpt-iso
+      architecture infected likewise; fable chain structurally immune via
+      nonconsecutive counting plus Bonferroni transfer. Third steering
+      blind spot owned; methodology checklist extended. BET-04 path now
+      runs through the fable chain alone: consolidation plus sign-off.

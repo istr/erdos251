@@ -237,3 +237,68 @@ cross-review with zero fatal findings. Resolution still requires (i) the
 seven repairs executed in the consolidated chain document and re-verified,
 (ii) operator sign-off; review of object 1 (gpt-web chain, reviewer fresh
 fable-5) proceeds independently.
+
+### Review 2 verdict and steering adjudication (2026-07-12)
+
+Object 1 (gpt-web chain) reviewed by fresh fable-5 incognito, web off,
+multi-turn (turn-1 transcript self-hashed 74750bee...d7aa4f, continuation
+not restart, all three attachment/self hashes computed correctly). Review
+file sha 50efe768...236e64. Language: German.
+
+VERDICT: UNSOUND (fatal gap), confidence 0.90. Finding A9, RE-DERIVED AND
+CONFIRMED BY STEERING: clause (Q1) is unconditionally unsatisfiable for
+large x. For the length-1 word d = (d1), d1 = largest even <= (log x)^3,
+the pair {0, d1} is admissible (nu_2 = 1; nu_q <= 2 < q), so M_x(d) > 0;
+the exponential span factor of model (6.1) gives M_x(d) =
+e^{-(1+o(1))(log x)^2} < 1/(1+eps); the purely RELATIVE error form then
+demands an integer N_x(d) inside (0,1), which does not exist. The M ~ 1
+threshold sits near d1 = (log x)^2, so THOUSANDS of family words lie in the
+lethal band -- not a corner case. Consequence: HL_quant (web form) is
+provably false as stated; the conditional theorem is vacuously true; the
+document's own section 14 misdiagnosed its gap (A26). Failure CLASS:
+provably-empty antecedent -- identical to the two Gemini 1a hypotheses,
+which steering diagnosed there and MISSED here (third steering blind spot,
+the largest; the triage sentence "chain complete and correct" for the web
+arm is hereby retracted in its hypothesis half; the deductive half stands,
+confirmed by the reviewer: C1-C5 watertight, HL=>FM correct modulo the P2
+one-line lemma, constants exact with the sharp threshold
+eps <= eta/(4-3eta) = 1/77, no circularity, exact-hit immunity real).
+
+REPAIR (reviewer-provided, adopted as canonical for item-0007): mixed error
+form |N - M| <= eps0 * M + x^theta, theta < 1 fixed, eps0 <= 1/77; the word
+family has x^{o(1)} members, so additive terms cost x^{theta+o(1)} = o(T_x)
+and the chain survives with eta/2 -> eta/3 slack. Additionally A_err = 10
+is abandoned: even post-repair, (log x)^{-10} relative precision against
+the closed-form model (6.1) is presumably false (secondary corrections of
+relative order 1/log x, Montgomery-Soundararajan flavor -- UNVERIFIED,
+item-0004). The P2 lemma (T_x = (1-o(1))|I_x|) must be stated explicitly.
+
+ARCHITECTURE IMPACT: gpt-iso's HLQ1 carries the SAME defect (relative
+(log X)^{-20} on exact gap cylinders; single-entry huge-gap words in
+family). The fable chain is STRUCTURALLY IMMUNE: its clause A counts
+nonconsecutive tuples, whose in-budget masses are x^{1-o(1)}
+(singular series >= e^{-Ck}, k <= 4 lnln x), and consecutiveness is DERIVED
+via the Bonferroni layer CL9/CL10. Canonical design going forward: fable
+spine (nonconsecutive counting + Bonferroni transfer) with the mixed error
+form; consecutive-level clauses, where unavoidable, mixed-form mandatory.
+
+STEERING METHODOLOGY REGISTER (blind spots now three: invalid convergence
+justification; s = 0 parity threshold; Q1 integrality -- plus the habit of
+verifying-and-silently-supplying unstated steps like P2 instead of flagging
+them). New checklist rules: (i) every family-quantified hypothesis clause
+is evaluated at extreme family members; (ii) integrality, positivity, and
+sub-1-mass corners are checked explicitly; (iii) unstated load-bearing
+steps are flagged as gaps even when true. Role-blindness datum: a fresh
+same-family instance caught what the architect-adjacent instance missed --
+the blindness is role-induced, not family-induced.
+
+Misc: reviewer flagged the briefing citation "Acta Arith. 126 (2007)"
+alongside arXiv:1105.1451 as anachronism-suspicious (plausible
+retro-posting; verify in item-0004).
+
+BET-04 position after both reviews: the path runs exclusively through the
+FABLE chain (review 1: sound with repairables, zero fatal). The gpt-web
+chain is locally repairable but would need re-review post-repair; not
+required for the bet. Next artifact: the consolidated chain document
+(item-0007 deliverable) -- fable spine, mixed-error clause A, all seven
+review-1 repairs executed, both reviews ingested -- then operator sign-off.
