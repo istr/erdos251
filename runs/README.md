@@ -47,3 +47,18 @@ Rules:
     asserting claude.ai has no code execution while this repo's fable runs
     hashed and sieved in exactly that environment). The capability register
     is empirical-only: per surface, per observation, with dates.
+
+11. Trace-artifact layer register (2026-07-13). Displayed reasoning
+    threads on consumer surfaces are DERIVED renderings (rendered or
+    summarized), not raw traces; the raw layer is accessible to neither
+    the model nor the operator (claude.ai steering surface, confirmed
+    2026-07-13: transcript only, on both sides). Every archived trace or
+    thread artifact records trace_artifact_layer: raw | rendered |
+    summarized | undetermined, plus the derivation chain where known;
+    prefer the least-derived available artifact. Consequences:
+    artifact-to-artifact comparisons remain valid (the 15.6
+    anchor-propagation finding stands); operator-side hashes certify
+    WHICH rendering exists, never what produced it -- integrity is not
+    provenance depth; model self-reports about the underlying
+    computation remain non-evidence (rule 10 applies to introspection
+    too).

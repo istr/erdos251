@@ -263,3 +263,44 @@ annotations:
       stored); validity condition: git diff 302df37..HEAD -- lean/
       roadmap/ empty, so ledger/HANDOVER bookkeeping commits do not
       invalidate it.
+  - id: ANN-20260713-15
+    refs: [ANN-20260712-14]
+    date: 2026-07-13
+    note: >-
+      item-0003 kickoff amended to v2 (sha 846b291c...3803bb; supersedes
+      v1 sha a6549936...ac51e0, discard v1). Deltas, from applying the
+      strike mechanism taxonomy to this loop (AI-WORKFLOW sha
+      9a9630e5..., AI-ORCHESTRATION sha 2ce0c29d..., read 2026-07-13):
+      (1) M2 closure -- the executor completion report ends with three
+      mandatory sections (Gates verbatim, Observations, Follow-up
+      candidates); a missing section is a gate failure; candidates
+      become proposed roadmap items steering-side, never in-passing
+      implementations. (2) M3 closure -- item-0011 created (proposed,
+      rank 0011, unscheduled) as owner of the Hypotheses faithfulness
+      pair singularSeries_multipliable/_pos; contingent: ratify only if
+      item-0003 closes at floor with the pair still sorried, retire
+      unratified if the stretch discharges it. (3) Kickoff validity
+      predicate refined to the exact dependency paths (lean/,
+      roadmap/item-0003.md, roadmap/_order.md), so this bookkeeping
+      cannot false-alarm the executor.
+  - id: ANN-20260713-16
+    refs: [ANN-20260712-04, ANN-20260712-07]
+    date: 2026-07-13
+    note: >-
+      Surface observation, codified as runs/README rule 11. Displayed
+      reasoning threads on the steering surface (claude.ai) are DERIVED
+      renderings; the raw trace layer is accessible to neither the
+      model nor the operator (operator confirmed 2026-07-13: transcript
+      only, no raw data). Consequences: the Q5 corpus is an artifact
+      corpus, not a trace corpus; operator-side hashes certify WHICH
+      rendering exists, never what produced it; model introspection
+      about the underlying computation is non-evidence (rule 10 applied
+      inward); archived artifacts carry trace_artifact_layer. First
+      datum under the register: steering-thread diglossia -- working
+      language English across the analytic span, switch to German at
+      the meta-sentence about answering in German (content pulled the
+      language; complements the 1a A/B language split and the ab1
+      code-switch), artifact = displayed thread quoted verbatim by the
+      operator into the session, trace_artifact_layer: undetermined.
+      Blind-arm validity untouched: steering surface is class C+ per
+      rule 8; phenomenology corpus only.
