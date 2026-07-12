@@ -240,3 +240,26 @@ annotations:
       Conditional 1 = 12 sorries; Hypotheses faithfulness lemmata and
       the unconditional Statement target out of scope unless the
       operator overrides.
+  - id: ANN-20260712-14
+    refs: [ANN-20260712-13, BET-20260711-05]
+    date: 2026-07-12
+    note: >-
+      item-0003 kickoff. Operator confirmed the steering scope reading
+      at pin 302df37 and selected option ii-a (floor, not fiat-out):
+      acceptance floor = the 12 implication-cone sorries (Basic 9 +
+      ForkMerge 2 + Conditional 1). Machine gates: (A) #print axioms on
+      erdos_251_conditional reports no sorryAx and an axiom set within
+      propext / Classical.choice / Quot.sound (also polices axiom
+      smuggling and native_decide); (B) sorry inventory = exactly the 3
+      named residuals (singularSeries_multipliable, singularSeries_pos,
+      erdos_251_irrational), no new sorried declarations anywhere. The
+      Hypotheses faithfulness pair is permitted and encouraged as an
+      early stretch (definition-layer canary before the analytic heart;
+      if inline counting-layer work yields the general statements, the
+      public lemmata are discharged rather than twinned privately).
+      Statement shapes of all sorried declarations are frozen;
+      deviations stop-and-report, never silent. Kickoff instruction
+      authored ephemerally against the pin (skill convention, not
+      stored); validity condition: git diff 302df37..HEAD -- lean/
+      roadmap/ empty, so ledger/HANDOVER bookkeeping commits do not
+      invalidate it.

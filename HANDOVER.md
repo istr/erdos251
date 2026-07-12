@@ -47,13 +47,22 @@ non-circularity check; proof survives blind cross-review; implication
 file builds sorry-free modulo the stated hypothesis. Profile:
 class=largest, reasoning=high (advisory). Sources: chain-v1 (spine and
 8.2 interface) plus the landed lean/ tree -- the 15-sorry map IS the
-work plan. Steering scope reading (CONFIRM WITH OPERATOR at kickoff):
-"sorry-free modulo hypothesis" covers the implication cone, i.e. Basic
-(9) + ForkMerge (2) + Conditional (1) = 12 sorries to eliminate; the two
-Hypotheses faithfulness lemmata (singularSeries_multipliable/_pos) and
-the unconditional Statement target stay open unless the operator says
-otherwise. Author the byte-exact kickoff instruction ephemerally against
-the operator HEAD pin; do not store it in the repo (skill convention).
+work plan. Scope CONFIRMED by operator (2026-07-12, ANN-14, option
+ii-a = floor, not fiat-out): acceptance floor = the 12 implication-cone
+sorries (Basic 9 + ForkMerge 2 + Conditional 1). Machine gates:
+(A) #print axioms erdos_251_conditional shows no sorryAx, axiom set
+within propext / Classical.choice / Quot.sound; (B) sorry inventory =
+exactly the 3 named residuals (singularSeries_multipliable,
+singularSeries_pos, erdos_251_irrational), no new sorried declarations.
+The Hypotheses faithfulness pair MAY be proved as an early stretch
+(definition-layer canary; discharge the public lemmata if inline
+counting-layer work yields them -- no private twins); the unconditional
+Statement target stays open. Statement shapes of all sorried
+declarations are frozen; deviations stop-and-report, never silent.
+Kickoff instruction authored ephemerally against pin 302df37, not
+stored (skill convention); it stays valid while
+git diff 302df37..HEAD -- lean/ roadmap/ is empty, so bookkeeping
+commits (ledger/HANDOVER) do not invalidate it.
 
 ## Pending decisions (operator)
 1. Sign-off on chain-v1 -> BET-04 resolution and Brier scoring (see the
