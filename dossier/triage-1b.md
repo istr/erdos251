@@ -109,3 +109,66 @@ consecutive transfer inside Q1; both named identically by the two arms.
 - BET-05 (Lean-verified same round): unresolved; Lean bring-up (item-0002)
   has not started. Both arms delivered compatible skeletons (the isolated
   9.x set is the more index-careful one).
+
+---
+
+## Addendum (2026-07-12, late): fable-5 1b arm -- third chain, kernel factorization
+
+Registry: run 20260712_fable5_1b (incognito, web off, >= 2 turns; turn-1 file
+write aborted by a filesystem reset; turn 2 = deterministic 3-step abort-safe
+serialization of the turn-1 reasoning plus closure of CL3). Provenance is
+producer-side complete for the first time: payload self-hash correct,
+turn-1 transcript self-hashed (1c5a5ecb...f1d2a75), report self-hashed and
+VERIFIED by steering (e5f818af...c7a6560). Output sha256 = the self-hash.
+Language: English. Turn-1 trace to the trace repo when available.
+
+Verdict (steering, line-by-line): chain complete and correct.
+- CL6 five-step contradiction verified; strictness comes free from
+  delta >= 2 (end-tails in [2, H] give |diff| < H <= 2^K); only TWO tail
+  bounds; b-free statement; J at triple-log scale suffices since
+  gamma <= span <= C1 L ln L.
+- CL12 deletion construction verified: both sub-tuples of one super-tuple of
+  the first L+2 primes above L+3; antisymmetric middle (+gamma, -gamma);
+  admissibility automatic; span <= C1 L ln L; budget L+2+1 <= 4 lnln x
+  (explains clause A's constant).
+- CL9/CL10 verified in outline: r_p < 1 for non-colliding p, collision
+  primes <= 3k, extension sum <= C2 k (ln k)^2; Bonferroni r = 1 is an exact
+  union bound; N_cons >= (1/4) S(H) x / l^{L+1} >= 1. THIS CLOSES the
+  "nonconsecutive -> consecutive" transition both GPT arms had left open.
+  Top reviewer target (self-rated 0.88).
+- CL11 tail bound from Cramer-Granville verified. CL13 (independence of
+  clause B from clause A at polylog savings) is an exponent-level sketch,
+  self-rated 0.70 -- second reviewer target.
+- Discipline: [CLASSICAL] tags with inline sketches; briefing-usage register
+  complete; FS1-FS5 false-start map with the quantitative family-tax
+  computation (fails at the triple-log margin) -- the sharpest wall
+  cartography of the experiment so far. Lean skeleton uses the requested
+  names; NOTE the HLQuantA stub is literally `True` (flagged by the model
+  itself) -- it must not be mistaken for a formalized hypothesis.
+
+Architecture comparison, now three chains:
+
+| | gpt-web | gpt-iso | fable |
+|---|---|---|---|
+| counting clause | relative error, 20 loglog | relative error, 6 loglog | two-sided factor 2, 4 lnln |
+| second clause | Q2 model entropy (bespoke, weak, plausibly provable) | HLQ2 cylinder moments (heavy, 0.05) + HLQ3 | B = Cramer-Granville (NAMED standard conjecture) |
+| tail control | proved unconditionally (Markov) | hypothesized per cylinder | pointwise from B |
+| fork existence | pigeonhole over all contexts | pointwise pair mass | CONSTRUCTED (deletion pair) |
+| transfer noncons->cons | open (transition 1) | open | PROVED (CL9/CL10) |
+| FM shape | 1-gap middle, four tails | 1-gap middle, four tails | 2-entry +-gamma middle, two tails, b-free |
+
+KERNEL FACTORIZATION (the experiment's central structural finding): all
+three chains share the proved elementary lattice layer and now a proved
+transfer layer (fable CL9/CL10, transplantable); what remains is ONE
+statistical kernel in four formulations, ordered by strength:
+  B (pointwise Cramer gaps)  >  HLQ2 (per-cylinder moments)  >
+  two-word variance (fable section 11: second moment of delta over the
+  occurrences of one fixed word)  ;  Q2 (model-side entropy) orthogonal,
+  plausibly provable for the standard singular-series model.
+Sharpest open sub-target on record: the two-word variance estimate.
+
+Review matrix (BET-04): payload R1 is generic and reusable. Object 1 =
+gpt-web document, reviewers fresh fable-5 incognito + gemini-3.1-pro.
+Object 2 = fable document, reviewers gpt-5.6-sol + gemini-3.1-pro
+(cross-family: no model family reviews its own chain). BET-04 resolves if
+ANY one chain survives blind review plus operator sign-off.

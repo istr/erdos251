@@ -121,3 +121,17 @@ annotations:
       cross-vendor); BET-05 unresolved, Lean bring-up not started.
       Repo-leak alarm on the web arm raised and retracted (substring
       false positives); future audits use word-boundary greps.
+  - id: ANN-20260712-06
+    refs: [BET-20260711-04, BET-20260711-05]
+    date: 2026-07-12
+    note: >-
+      Third complete conditional chain (fable-5, 1b): HL_quant = uniform
+      tuple clause A plus Cramer-Granville clause B implies a b-free
+      two-tail fork-merge via an unconditional deletion construction;
+      steering-verified. Closes the nonconsecutive-to-consecutive transfer
+      (CL9/CL10) left open by both GPT arms. Kernel factorization recorded:
+      one residual statistical kernel in four ordered formulations; sharpest
+      open sub-target = the two-word variance estimate. Producer-side
+      provenance closed for the first time (self-hashed transcript and
+      report, verified). Review matrix: cross-family, two objects, payload
+      R1 reused; BET-04 resolves if any chain survives.
