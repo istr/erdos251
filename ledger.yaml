@@ -224,3 +224,19 @@ annotations:
       displays a vestigial C_A that its inequality never uses. BET-05
       resolve_by (end of round 1) has passed without a green build;
       scoring is an operator call.
+  - id: ANN-20260712-13
+    refs: [ANN-20260712-12, BET-20260711-05]
+    date: 2026-07-12
+    note: >-
+      item-0002 CLOSED: CI green on main after erdos251-followup11 plus
+      CI repair followup13 (single defect: Finset.image elaboration
+      order in nuMod, fixed with an explicitly typed Nat.cast); roadmap
+      done applied via the regenerated followup12. Final inventory: 15
+      intentional sorries, 0 stubs; pins v4.16.0 / a6276f4c with
+      committed manifest. BET-05 scoring remains an operator call
+      (resolve_by passed before the green build). HANDOVER refreshed for
+      the item-0003 thread (followup14) including the steering scope
+      reading for item-0003: implication cone = Basic 9 + ForkMerge 2 +
+      Conditional 1 = 12 sorries; Hypotheses faithfulness lemmata and
+      the unconditional Statement target out of scope unless the
+      operator overrides.
