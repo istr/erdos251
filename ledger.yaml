@@ -157,3 +157,16 @@ annotations:
       third opinion only. Gemini stays in the measurement track. Trigger:
       confabulated cross-vendor capability claims (rule 10), on top of the
       1a integrity record.
+  - id: ANN-20260712-09
+    refs: [BET-20260711-04]
+    date: 2026-07-12
+    note: >-
+      Review 1 complete: fable chain judged SOUND with repairable issues,
+      confidence 0.94, zero fatal, by gpt-5.6-sol under full blind
+      conditions with closed hash provenance on both attachments. Two of
+      the seven accepted repairs (invalid convergence justification;
+      parity threshold at s = 0) were missed by steering verification and
+      are recorded as steering blind spots. Hypothesis affirmed
+      non-circular, materially stronger than pure HL via clause B.
+      BET-04 not yet resolved: repairs plus operator sign-off pending;
+      review 2 independent.

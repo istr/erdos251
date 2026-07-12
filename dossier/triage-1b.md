@@ -187,3 +187,53 @@ reviews its own chain. Gemini remains welcome as an optional third opinion
 empty 1a hypotheses, no self-hash capability in the isolated surface, one
 fabricated checksum, and confabulated cross-vendor capability claims
 (runs/README rule 10).
+
+### Review 1 verdict and steering adjudication (2026-07-12)
+
+Object 2 (fable chain) reviewed by gpt-5.6-sol, web off, temporary chat,
+8m19s. Provenance fully closed: reviewer self-computed BOTH attachment
+hashes correctly (R1 f4a15ffa..., object e5f818...); review file sha
+4a2e2eab...6329d209, self-reported and operator-verified. Language: German
+under the German wrapper. Phase discipline attested (A written before B).
+
+VERDICT: "SOUND with repairable issues", confidence 0.94. Zero fatal. The
+entire load-bearing structure was independently confirmed step by step
+(CL3/CL4, the five-step CL6, the CL9/CL10 counting layer including r_p < 1
+and Bonferroni, the deletion construction with the interior check i0 = J+2,
+CL11, the two-site selection). P7 affirms the exact-hit immunity as real;
+P1 concludes the hypothesis is NOT circular but, through clause B, is
+materially stronger than a pure HL tuple hypothesis -- matching the
+steering kernel ordering exactly.
+
+Steering adjudication of the seven repairs: ALL ACCEPTED.
+1. Convergence via p_n <= 2^n is a REAL error (true statement, invalid
+   proof, self-confidence 1.00) -- fix p_n = O(n log n). MISSED BY STEERING.
+2. Parity threshold fails at s = 0 (g_1 = 1 odd makes b*delta_1 odd) --
+   REAL; elegant fix "wlog s >= 1" (representation need not be reduced,
+   reviewer A08/A17). MISSED BY STEERING: the mechanism was verified
+   generically, the boundary instantiation never tested. Both misses are
+   recorded as steering-verification blind spots; the blind review layer
+   caught what the architect-adjacent reader did not. Process working.
+3. Mertens/Euler-product package (A35, the single gap-severity item):
+   accepted; resolution by post-blind citation or full proofs in the
+   consolidated chain (item-0004/0007), where blind constraints no longer
+   apply.
+4. CL13 weakened to "the presented inclusion-exclusion route does not
+   suffice" -- accepted, matches the 0.70 triage rating.
+5. Budget off-by-one (L+2+1) -- cosmetic, accepted; factor 3 suffices.
+6. Lean thresholds and a REAL HLQuantA definition -- accepted, item-0002.
+7. Overclaim language ("every implication proved", "Mathlib-ready") to be
+   qualified -- accepted; also logged as a Q5 datum (producer confidence
+   language vs. audited status).
+
+Probe-design lesson: P2/P3/P5/P6 were shaped around the web-arm
+architecture; the reviewer adapted them correctly (e.g. establishing that
+H/2^J -> 0 is neither claimed nor needed in the fable architecture, and
+that no (1+eps)/(1-eps) division occurs). Future R-payloads: object-neutral
+probes or per-object probe sets.
+
+BET-04 position after review 1: the fable chain has survived one blind
+cross-review with zero fatal findings. Resolution still requires (i) the
+seven repairs executed in the consolidated chain document and re-verified,
+(ii) operator sign-off; review of object 1 (gpt-web chain, reviewer fresh
+fable-5) proceeds independently.
