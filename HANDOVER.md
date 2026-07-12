@@ -25,7 +25,8 @@ triage-1a.md (verdicts, review trail, methodology register).
   stub removed; HLQuantA and CramerGranville DEFINED; 15 sorries, 0 stubs;
   round-0 warm-up gap_series_identity constant corrected (-2, was -1).
   mathlib pinned v4.16.0 (toolchain pair verified). Acceptance gate = CI
-  green after erdos251-followup11 is applied and pushed; roadmap done-move
+  green after erdos251-followup11 plus CI repair followup13 are applied
+  and pushed; roadmap done-move
   staged as followup12, apply ONLY after green CI. Steering-sandbox build
   limited by egress (details lean/README.md). BET-05 resolve_by (end of
   round 1) has passed without a green build: scoring is an operator call.

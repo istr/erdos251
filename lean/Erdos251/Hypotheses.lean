@@ -31,7 +31,7 @@ noncomputable section
 
 /-- Number of residue classes mod `p` occupied by `H`. -/
 def nuMod (H : Finset ℕ) (p : ℕ) : ℕ :=
-  (H.image fun h => (h : ZMod p)).card
+  (H.image (Nat.cast : ℕ → ZMod p)).card
 
 /-- Admissibility: no prime has all of its residue classes occupied
 (chain-v1 section 1). -/
