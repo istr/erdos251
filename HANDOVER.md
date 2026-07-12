@@ -1,89 +1,72 @@
-# HANDOVER -- erdos251
+# HANDOVER -- erdos251 (state after round 1, 2026-07-12)
 
-Regenerated: 2026-07-11. Budget: keep this file under ~1500 tokens.
-Acceptance test: a cold instance with this file plus the referenced artifacts
-is fully operational without any prior conversation.
+Mission: public experiment attacking Erdos #251 (irrationality of
+S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
+Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
-## 1. Goal and status (one paragraph)
+## Read order for a cold start
+1. This file. 2. ledger.yaml (append-only decisions ANN-01..11, bets).
+3. dossier/chain-v1.md (THE round-1 result). 4. dossier/triage-1b.md then
+triage-1a.md (verdicts, review trail, methodology register).
+5. runs/README.md rules 1-10. 6. roadmap: python3
+/mnt/skills/user/roadmap-items/scripts/roadmap.py list --arc research.
 
-Research pilot on Erdős Problem #251 (irrationality of S = sum p_n/2^n).
-Round 0 (analysis) and the thread/[ScPu11] dissection are DONE and archived.
-The working target is the conditional theorem "uniform quantitative prime
-tuples hypothesis implies S irrational" (Tao sketched the idea 2025-10-07;
-nobody has executed it; novelty risk assessed at 0.10). Two-stage round 1 is
-designed and ready to dispatch: stage 1a blind (class-B payload), stage 1b
-briefed (class-C payload), across three frontier provers, plus optional
-control arm 1a0. Lean project is scaffolded but UNVERIFIED (item I1).
+## State
+- Round 1 CLOSED analytically. 5 blind 1a runs (fable, gpt56sol A/B pair,
+  two Gemini), 3 briefed 1b chains (gpt web/iso, fable), 2 blind
+  cross-reviews (matrix crossed: fable chain SOUND-with-repairables 0.94;
+  gpt-web chain UNSOUND, fatal Q1 integrality, repair known).
+- dossier/chain-v1.md consolidates everything: fable spine, all seven
+  review repairs executed, review-2 lesson as design rationale.
+  Hypotheses: A (uniform two-sided tuple counts, 4 lnln x window) and
+  B (Cramer-Granville). Awaiting OPERATOR SIGN-OFF -> resolves BET-04.
+- BET-05 (Lean in round 1): not started; item-0002. BET-06/07 open.
+- Gemini: demoted to measurement track (ANN-08, pre-registered before
+  review verdicts). Review matrix ran without it.
+- Steering blind-spot register (3 entries) and checklist: triage-1b end.
 
-## 2. Canonical artifacts
+## Pending decisions (operator)
+1. Sign-off on chain-v1 -> BET-04 resolution and Brier scoring.
+2. Round-2 scope: item-0002 Lean bring-up (source: chain-v1 + gpt-iso
+   9.x skeleton as index template); item-0004 literature verification
+   (list below); two-word variance sub-target (item-0007 remark 8.3);
+   optional thread post AFTER item-0004.
+3. Whether to re-review the repaired gpt-web chain (not needed for bets).
 
-- dossier/runde0.md        frozen pre-dissection analysis (class B source)
-- dossier/dissektion.md    thread + ScPu11 findings, scoring (class C source)
-- payloads/1a0_control.md  class A payload (optional arm)
-- payloads/1a_blind.md     class B payload (stage 1a)
-- payloads/1b_briefed.md   class C payload (stage 1b)
-- payloads/HASHES.txt      sha256 of all payloads; copy into run configs
-- runs/README.md           run protocol (stateless, repair, blind review)
-- lean/                    Lake project; 5 sorries total: erdos_251_irrational,
-                           summable_SL, gap_series_identity, delta_recursion,
-                           erdos_251_of_uniform_tuples (hypothesis = placeholder)
-- ledger.yaml              bets: 3 scored, 4 open (BET-20260711-04..07)
-- roadmap/                 items item-0001..0006, all status proposed
-                           (0001 round-1 runs, 0002 Lean bring-up, 0003
-                           conditional theorem, 0004 literature verification,
-                           0005 TaTe transfer, 0006 adaptivity threshold).
-                           Execution order intentionally EMPTY until the
-                           operator ratifies; then schedule via
-                           roadmap.py reorder (suggested: 0001, 0002, 0003,
-                           0004, 0005, 0006).
+## item-0004 verification list (accumulated)
+ScPu11 identifiers (Acta Arith 126 (2007) vs arXiv:1105.1451 -- reviewer
+flagged anachronism-suspicious); Kuperberg arXiv:2210.09775; Mertens /
+Rosser-Schoenfeld / Hardy-Wright citations in chain-v1; mathlib module
+names (expect Mathlib.Data.Nat.Nth, Mathlib.Data.Real.Irrational);
+CPAP-3 status (still assumed open).
 
-## 3. Next action (exactly one)
+## Protocol essentials (learned the hard way)
+- Operator-side sha256 is the ONLY canonical integrity layer. Model
+  self-hashes: OpenAI and Anthropic reliable WITH tools; Gemini anon
+  chats have no tools (rule 9); never demand tool-dependent outputs in
+  tool-less environments (confabulation trap).
+- claude.ai normal chats are never class-clean for this operator
+  (memory); use incognito. ChatGPT temp chats for reviews.
+- German wrapper flips some outputs to German (sampling-level, Q5);
+  wrappers are part of the effective input -- record verbatim in configs.
+- Reviews: payload payloads/review_1b.md (generic, two-phase); reviewer
+  gets EXACTLY payload + object, never steering triage; cross-family
+  assignment; web OFF (public repo now contains answer keys).
+- Multi-turn continuations allowed; feed back only the model's own
+  trace, record its sha (fable pattern; fs resets happen).
+- Patches: git am -3, mboxes erdos251-followup2..10 in order; roadmap
+  changes via the skill's emit-patch; steering author string
+  "Claude Fable 5 (steering) <fable5-steering@localhost>".
+- Audits: word-boundary greps (substring false-positive incident).
+- Steering checklist additions: evaluate family-quantified clauses at
+  extreme members; check integrality/positivity/sub-1-mass corners;
+  flag unstated load-bearing steps instead of silently supplying them.
 
-Execute item-0001: dispatch payloads/1a_blind.md (verify sha256 against
-payloads/HASHES.txt) as stateless runs to the three provers per runs/README;
-archive each run under runs/<date>_<model>_1a/. Only after all 1a outputs are
-archived, dispatch payloads/1b_briefed.md as stage 1b.
-
-## 4. Firewall map (contamination classes)
-
-Class A = statement only; B = A + runde0; C = B + dissection briefing.
-
-| Artifact                 | may enter 1a0 | 1a  | 1b  | review |
-| dossier/runde0.md        | no            | via payload | via payload | as needed |
-| dossier/dissektion.md    | no            | NO  | via payload | as needed |
-| payloads/1a0_control.md  | yes           | no  | no  | no |
-| payloads/1a_blind.md     | no            | yes | no  | no |
-| payloads/1b_briefed.md   | no            | NO  | yes | no |
-| producer transcripts     | no            | no  | no  | NO (blind review) |
-
-Hard rule: stage-1a/1a0 runs must never see class-C material (Tao comment,
-variant construction, ScPu11 briefing). Reviews are blind to producer
-reasoning until the verdict is archived.
-
-## 5. Ledger snapshot (open bets)
-
-- BET-04: informal conditional proof lands in round 1 -- p = 0.65
-- BET-05: Lean-verified implication same round -- p = 0.45
-- BET-06: implication already exists in literature -- p = 0.10 (gate: item A1)
-- BET-07: unconditional progress within 4 weeks -- p = 0.03
-
-## 6. Glossary (canonical objects; do not re-derive, do not rename)
-
-- S        sum_{n>=1} p_n/2^n, approx 3.674643966...; Lean sum = 2S (0-index)
-- g_n      prime gap p_{n+1} - p_n
-- u_n      tail sum_{k>=1} p_{n+k}/2^k; recursion u_{n+1} = 2 u_n - p_{n+1}
-- delta_n  u_n - p_{n+1} = sum_j g_{n+j}/2^j; weighted future-gap average;
-           recursion delta_{n+1} = 2 delta_n - g_{n+1}; >= 2; ~ log n
-- Lemma L  for every J: equal-gap runs of length J, aftermath O(log p_n),
-           first occurrence N(J) with log N(J) = o(2^J)  =>  S irrational
-- Routes   A squeeze (Lean backbone) / B entropy (Tao) / D elimination
-           (ScPu11 base-2 uniformization); C variant ladder = calibration only
-- CPAP     consecutive primes in arithmetic progression (run of equal gaps)
-- Stages   1a0 control (class A) / 1a blind (B) / 1b briefed (C) / review
-- Scoring  Brier, registered in ledger.yaml BEFORE evidence
-
-## 7. Session hygiene
-
-Sessions are crash-only: anything durable goes to files immediately; this
-HANDOVER is regenerated at every checkpoint; repair loops carry only compiler
-errors; reviewer contexts stay clean of producer reasoning.
+## Experiment questions snapshot
+Q2 wall: one statistical kernel, four ordered forms (chain-v1 8.1/8.3).
+Q3: 3 basins over 5 blind runs; diversity is sample-level (GPT A/B pair).
+Q4: briefing = route lock + execution; web bought literature grounding.
+Q5: language sampling-level; anchor propagation; confabulated checksums
+vs honest declines; overclaim language vs audited status; role-induced
+blindness (fresh same-family reviewer caught what steering missed).
+Traces live in the private trace repo; sha commitments in run configs.
