@@ -104,3 +104,20 @@ annotations:
       canonical. Payload 1b revised to revision 2 (fork-merge primary);
       new sha in HASHES.txt. Q4 pairing: dispatch 1b to the same endpoints,
       web off.
+  - id: ANN-20260712-05
+    refs: [BET-20260711-04, BET-20260711-05, ANN-20260712-02]
+    date: 2026-07-12
+    note: >-
+      Stage 1b pair complete (gpt-5.6-sol, web and isolated arms). Both arms
+      delivered complete conditional chains HL_quant => fork-merge =>
+      irrational, each verified line by line by steering; architectures
+      differ (web: unconditional Markov tail layer plus averaged model
+      entropy eta = 1/20; isolated: conditional cylinder tail moment,
+      self-rated truth 0.05, plus pointwise fork-pair mass). ANN-02
+      adjudicated in the middle: pointwise HL insufficient (FS1), but the
+      entropy content lives in the model, no prime-level anti-concentration
+      axiom needed. BET-04 now pending blind cross-review (payload
+      payloads/review_1b.md, object = web-arm document, reviewers
+      cross-vendor); BET-05 unresolved, Lean bring-up not started.
+      Repo-leak alarm on the web arm raised and retracted (substring
+      false positives); future audits use word-boundary greps.
