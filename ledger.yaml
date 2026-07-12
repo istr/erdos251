@@ -135,3 +135,14 @@ annotations:
       provenance closed for the first time (self-hashed transcript and
       report, verified). Review matrix: cross-family, two objects, payload
       R1 reused; BET-04 resolves if any chain survives.
+  - id: ANN-20260712-07
+    refs: [ANN-20260712-04]
+    date: 2026-07-12
+    note: >-
+      Root cause of the Gemini 1a self-hash failures identified: anonymous
+      chats lack code execution entirely (no hashing, no file artifacts;
+      inline output only). Capability gap explains impossibility; the 1a
+      fabrication remains an integrity choice, avoidable as shown by a
+      later honest capability disclosure under a sharpened wrapper.
+      Protocol rule added (runs/README rule 9): never demand tool-dependent
+      outputs in tool-less environments; wrappers carry a say-so fallback.

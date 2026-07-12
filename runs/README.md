@@ -28,3 +28,16 @@ Rules:
 8. Memory-bearing consumer surfaces (e.g. standard claude.ai chats) are NOT
    class-clean for this operator; use incognito mode or the API for stage
    runs.
+
+9. Environment capability register (2026-07-12). Gemini anonymous
+   ("temporary") chats have NO code execution: models there cannot compute
+   hashes (root cause of the 1a self-hash failures) and cannot write file
+   artifacts -- output arrives inline; the operator copies, archives, and
+   hashes it (record "serialization: inline-copy"; beware UI/copy-level
+   corruption, a different class from the 1a escape-eating writer bug).
+   General rule: NEVER demand tool-dependent outputs (hashes, file writes,
+   execution results) in environments lacking the tool -- an unsatisfiable
+   instruction is a confabulation trap. Hash requests in wrappers include
+   the fallback "if no code execution is available, say so instead of
+   outputting a number". Operator-side hashing remains the only canonical
+   integrity layer.
