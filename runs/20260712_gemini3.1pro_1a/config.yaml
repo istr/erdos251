@@ -1,0 +1,14 @@
+run_id: 20260712_gemini3.1pro_1a
+stage: 1a
+model: Gemini 3.1 Pro
+provider: Google
+thinking_budget: ""
+temperature: null
+payload_file: payloads/1a_blind.md
+payload_sha256: ""
+web_access: false
+tools: []
+started: ""
+finished: ""
+operator: istr
+notes: ""
