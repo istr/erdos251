@@ -58,3 +58,24 @@ open:
     p: 0.03
     resolution: operator judgment against wiki taxonomy (would rate at least yellow)
     resolve_by: 2026-08-08
+
+annotations:
+  - id: ANN-20260712-01
+    refs: [BET-20260711-04, BET-20260711-05]
+    date: 2026-07-12
+    note: >-
+      Hypothesis form refined by run 20260712_fable5_1a_item0001: target
+      implication is now HL_quant (tuples k <= C loglog x, shifts <=
+      (log x)^3, polylog error savings) => Hypothesis (P) => S irrational;
+      see items item-0007..item-0010 and dossier/errata.md. Resolution
+      criteria unchanged.
+  - id: ANN-20260712-02
+    refs: [BET-20260711-04]
+    date: 2026-07-12
+    note: >-
+      Open adjudication for stage 1b: report claim C18 (standard uniform HL
+      insufficient; deterministic worst-case-tail reading) vs steering
+      counter-analysis (distributional route: Markov truncation at
+      k ~ loglog x, error budget summed over polylog many patterns).
+      The verdict decides whether BET-04 resolves against an off-the-shelf
+      quantified-HL hypothesis or a bespoke anti-concentration axiom.

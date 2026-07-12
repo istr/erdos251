@@ -15,3 +15,16 @@ Rules:
    minimal dependencies, NOT the producer's reasoning or transcript. Rebuttal
    only after the independent verdict is archived.
 5. Nothing is deleted. Failed runs are data.
+
+## Clarifications (2026-07-12, after run 20260712_fable5_1a_item0001)
+
+6. "No external tools" in stage payloads means NETWORK/LITERATURE tools.
+   Local code execution without network access is permitted and encouraged
+   at every stage; record enabled tools in config.yaml.
+7. Provider turn limits: continuing in the same chat is permitted. Feed back
+   only the model's own prior trace/output (record its sha256 in the next
+   turn's input); note the pattern in config notes ("consolidation turn").
+   Contamination class discipline is unchanged by continuation.
+8. Memory-bearing consumer surfaces (e.g. standard claude.ai chats) are NOT
+   class-clean for this operator; use incognito mode or the API for stage
+   runs.
