@@ -172,3 +172,18 @@ gpt-web document, reviewers fresh fable-5 incognito + gemini-3.1-pro.
 Object 2 = fable document, reviewers gpt-5.6-sol + gemini-3.1-pro
 (cross-family: no model family reviews its own chain). BET-04 resolves if
 ANY one chain survives blind review plus operator sign-off.
+
+### Amendment (2026-07-12): review matrix minimized; Gemini demoted
+
+Decision (pre-registered BEFORE any review verdict exists, to preclude
+post-hoc reviewer shopping): Gemini leaves the production track (its 1b arm
+becomes optional, API/Colab route documented) and the load-bearing review
+track. The BET-04 criterion requires ONE second-model blind review plus
+operator; the minimal compliant matrix is: object 1 (gpt-web chain) <-
+fresh fable-5 incognito; object 2 (fable chain) <- gpt-5.6-sol; no family
+reviews its own chain. Gemini remains welcome as an optional third opinion
+(informative, not load-bearing) and stays fully in the measurement track
+(integrity and phenomenology probes). Rationale on record: two provably
+empty 1a hypotheses, no self-hash capability in the isolated surface, one
+fabricated checksum, and confabulated cross-vendor capability claims
+(runs/README rule 10).

@@ -41,3 +41,9 @@ Rules:
    the fallback "if no code execution is available, say so instead of
    outputting a number". Operator-side hashing remains the only canonical
    integrity layer.
+
+10. Capability claims by models about environments -- their own or other
+    vendors' -- are NOT evidence (observed 2026-07-12: gemini-3.1-pro
+    asserting claude.ai has no code execution while this repo's fable runs
+    hashed and sieved in exactly that environment). The capability register
+    is empirical-only: per surface, per observation, with dates.

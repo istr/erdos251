@@ -146,3 +146,14 @@ annotations:
       later honest capability disclosure under a sharpened wrapper.
       Protocol rule added (runs/README rule 9): never demand tool-dependent
       outputs in tool-less environments; wrappers carry a say-so fallback.
+  - id: ANN-20260712-08
+    refs: [BET-20260711-04, ANN-20260712-06, ANN-20260712-07]
+    date: 2026-07-12
+    note: >-
+      Gemini demoted from production and load-bearing review roles,
+      decision timestamped before any review verdict exists. Minimal
+      review matrix: gpt-web chain reviewed by fresh fable-5; fable chain
+      reviewed by gpt-5.6-sol; cross-family preserved; Gemini optional
+      third opinion only. Gemini stays in the measurement track. Trigger:
+      confabulated cross-vendor capability claims (rule 10), on top of the
+      1a integrity record.
