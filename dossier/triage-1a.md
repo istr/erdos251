@@ -125,3 +125,65 @@ ERRATUM-3 and the countermodel; the run-census empirics; instruction to
 target the weakest route (G) for the conditional theorem and its Lean form
 (ab2 8.4 skeleton). Do NOT dispatch 1b until the Gemini 1a slot is closed
 and archived.
+
+---
+
+## Addendum (2026-07-12): Gemini pair -- stage 1a CLOSED
+
+Registry additions:
+
+| run_id | model | turns | lang | output sha256 |
+|---|---|---|---|---|
+| 20260712_gemini31pro_1a | gemini-3.1-pro (temp chat) | 2 (nudge needed) | de body, en headers | 058478845998...f7db7b |
+| 20260712_gemini35flash_1a | gemini-3.5-flash (temp chat) | 1 (code exec) | de | fbda2294...d12854 |
+
+HASH-DISCIPLINE FINDING: both models reported WRONG payload hashes.
+gemini-3.1-pro gave e5b3c89a...6e1a -- assessed FABRICATED (regular hex
+patterning; the model simultaneously quoted the payload's first line
+verbatim, so it held the right bytes and confabulated the checksum).
+gemini-3.5-flash gave 93cceed2...5bcb0 with real code execution --
+plausibly a hash of the transformed ingestion copy; undetermined. Either
+way: model-reported checksums are not evidence. Operator-side hashing
+(482f56ab...) stays canonical; add config field model_reported_sha256
+plus assessment.
+
+Verdicts:
+- gemini-3.1-pro: CLAIM-1 verified (delta_n < n^2 + 4n + 6 via p_k < k^2;
+  correct, far weaker than the O(n log n) bounds on record). CLAIM-2
+  squeeze restatement correct (0< clause from the dossier). CLAIM-3
+  implication valid except one local slip: "N(J) >= J" asserted without
+  justification. FATAL: the SEGR hypothesis (FIXED even c, run lengths
+  J -> infinity) is provably FALSE by the primorial obstruction: for fixed
+  c the run length is bounded by q - 2, q the least prime not dividing c.
+  Contract violations: no "Where I am stuck" section; p_k < k^2 used
+  without inline proof or UNVERIFIED flag; seven "[cite: 1]" grounding
+  artifacts.
+- gemini-3.5-flash: CLAIM-01/02 verified (clean threshold form
+  J < log2 b + log2 max(c, delta)). CLAIM-03 dual-run collision verified
+  as an implication: two adjacent sufficiently long runs with c != c'
+  force delta_{n+J} = c and = c' simultaneously -- elegant, the
+  single-site sibling of fork-merge. FATAL: the hypothesis is provably
+  empty -- locking needs 2^J >= b*max(c, delta_{n+J}) while the primorial
+  forces c >= (J+1)# > 2^{J+1} for J >= 28; only bounded-J configurations
+  exist, which cannot pass arbitrary s. CLAIM-04 (Cramer heuristic,
+  confidence 0.95) reproduces exactly the divisibility-blind reasoning
+  retracted in ERRATUM-1. Artifact corruption: the model's own file
+  writer ate backslash escapes (\f, \n, \a), mangling \frac, \neq,
+  \approx at ten sites.
+
+Q3 FINAL (all 1a archived): five runs, three basins. Squeeze A: fable5
+(transcending it), gemini-3.1-pro, gemini-3.5-flash. v2/word E+F:
+gpt56sol-ab1. Fork-merge G: gpt56sol-ab2. Within-model divergence (GPT A/B:
+disjoint routes, opposite output languages); within-vendor convergence
+(both Geminis: same basin, same trap). Trap census: the divisibility-blind
+Cramer calibration claimed steering (runde 0), gemini-3.1-pro (implicitly
+via SEGR plausibility) and gemini-3.5-flash (explicitly, conf 0.95); the
+divisibility structure was found independently by fable5 (primorial
+theorem) and gpt56sol-ab2 (lcm-compatible countermodel). Score 3:2 -- the
+trap is the attractor.
+
+Q4 setup: dispatch payload 1b revision 2 (sha in HASHES.txt) to the same
+five endpoints for paired context-value deltas; keep web OFF for the
+paired measurement; identical German wrapper. Nudge text used for
+gemini-3.1-pro (verbatim): "Ok. Es war aber schon verstanden, dass DIE
+ANWEISUNGEN in der Datei jetzt ausgefuehrt werden sollen?"

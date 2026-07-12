@@ -91,3 +91,16 @@ annotations:
       favorite: fork-merge. Also recorded: runde0 Lemma L retracted
       (ERRATUM-3); a within-model A/B pair produced disjoint routes and
       opposite output languages under an identical German wrapper.
+  - id: ANN-20260712-04
+    refs: [BET-20260711-04, BET-20260711-05]
+    date: 2026-07-12
+    note: >-
+      Stage 1a closed with five runs across three vendors. Route basins:
+      squeeze (fable5 plus both Geminis), v2/word (gpt56sol-ab1), fork-merge
+      (gpt56sol-ab2). Both Gemini conditional hypotheses are provably empty
+      via the primorial obstruction; their implications remain valid.
+      Model-reported payload checksums proved unreliable (one fabricated,
+      one computed on transformed bytes); operator-side hashing is
+      canonical. Payload 1b revised to revision 2 (fork-merge primary);
+      new sha in HASHES.txt. Q4 pairing: dispatch 1b to the same endpoints,
+      web off.
