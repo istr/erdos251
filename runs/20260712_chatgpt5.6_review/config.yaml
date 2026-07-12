@@ -1,0 +1,14 @@
+run_id: 20260712_chatgpt5.6_review
+stage: review
+model: ChatGPT 5.6
+provider: OpenAI
+thinking_budget: ""
+temperature: null
+payload_file: payloads/review_1b.md
+payload_sha256: ""
+web_access: false
+tools: []
+started: ""
+finished: ""
+operator: istr
+notes: ""
