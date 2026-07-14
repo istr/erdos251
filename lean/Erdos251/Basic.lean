@@ -69,15 +69,28 @@ theorem delta_recursion (n : ℕ) :
     delta (n + 1) = 2 * delta n - (gap n : ℝ) := by
   sorry
 
+/-- `q` is strictly monotone (Nat.nth on the infinite prime predicate). -/
+theorem q_strictMono : StrictMono q :=
+  Nat.nth_strictMono Nat.infinite_setOf_prime
+
+/-- Each `q n` is prime. -/
+theorem q_prime (n : ℕ) : (q n).Prime := Nat.prime_nth_prime n
+
 /-- Gaps are positive (`Nat.nth` is strictly monotone on the infinite
 predicate `Nat.Prime`). -/
 theorem gap_pos (n : ℕ) : 0 < gap n := by
-  sorry
+  have h : q n < q (n + 1) := q_strictMono (Nat.lt_succ_self n)
+  simpa [gap] using Nat.sub_pos_of_lt h
 
 /-- Gaps are even from index 1 on (differences of odd primes);
 `gap 0 = 1` is the unique odd gap. -/
 theorem gap_even {n : ℕ} (hn : 1 ≤ n) : Even (gap n) := by
-  sorry
+  have h0 : q 0 < q n := q_strictMono (by omega)
+  have h1 : q n < q (n + 1) := q_strictMono (Nat.lt_succ_self n)
+  have hle : 2 ≤ q 0 := (q_prime 0).two_le
+  have hodd_n : Odd (q n) := (q_prime n).odd_of_ne_two (by omega)
+  have hodd_n1 : Odd (q (n + 1)) := (q_prime (n + 1)).odd_of_ne_two (by omega)
+  simpa [gap] using Nat.Odd.sub_odd hodd_n1 hodd_n
 
 /-- `2 ≤ delta n` for `n ≥ 1` (all summed gaps are `≥ 2`). The guard is
 sharp: `delta 0 = S - 2 ≈ 1.6746 < 2`. Chain-v1 Lemma 2.1. -/
