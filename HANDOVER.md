@@ -1,16 +1,16 @@
-# HANDOVER -- erdos251 (state after round 1 + item-0002, 2026-07-12)
+# HANDOVER -- erdos251 (state after item-0003 session 1 milestone, 2026-07-15)
 
 Mission: public experiment attacking Erdos #251 (irrationality of
 S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only decisions ANN-01..13, bets).
+1. This file. 2. ledger.yaml (append-only decisions ANN-01..18, bets).
 3. dossier/chain-v1.md (THE round-1 result). 4. dossier/triage-1b.md then
 triage-1a.md (verdicts, review trail, methodology register).
-5. runs/README.md rules 1-10. 6. roadmap: python3
+5. runs/README.md rules 1-11. 6. roadmap: python3
 /mnt/skills/user/roadmap-items/scripts/roadmap.py list --arc research.
-7. lean/README.md (bring-up state, sorry inventory, egress findings).
+7. lean/README.md (implication-cone state, sorry inventory, egress findings).
 
 ## State
 - Round 1 CLOSED analytically. 5 blind 1a runs (fable, gpt56sol A/B pair,
@@ -34,46 +34,55 @@ triage-1a.md (verdicts, review trail, methodology register).
   v4.16.0 == mathlib v4.16.0 rev a6276f4c, lake-manifest.json committed.
   CI checks compilation only (sorries allowed); repair loops per
   runs/README rule 3 (only the compiler error travels back).
+- item-0003 session 1 MILESTONE landed 2026-07-15 (PR #1, rebased onto
+  main, tip 46abc8b): Basic + ForkMerge + new Chebyshev.lean sorry-free;
+  #print axioms erdos_251_of_small_tail_fork_merge = the classical
+  three, no sorryAx -- the deterministic half of chain-v1 (sections 2-3)
+  is machine-checked. Inventory now 4 NAMED residuals (Conditional 1 =
+  the analytic heart, Hypotheses 2, Statement 1); per-file map in
+  lean/README.md. Items 0012/0013 closed; steering static review,
+  gates verbatim, and three new elaboration traps: ANN-18.
 - BET-05 resolve_by (end of round 1) passed BEFORE the green build
   landed: scoring is an operator call (p 0.45). BET-06/07 open.
 - Gemini: demoted to measurement track (ANN-08, pre-registered before
   review verdicts). Review matrix ran without it.
 - Steering blind-spot register (3 entries) and checklist: triage-1b end.
 
-## Next item: item-0003 (ratified, next in order)
-Conditional theorem: precise hypothesis statement + complete informal
-proof + Lean formalization of the implication. Acceptance intent:
-non-circularity check; proof survives blind cross-review; implication
-file builds sorry-free modulo the stated hypothesis. Profile:
-class=largest, reasoning=high (advisory). Sources: chain-v1 (spine and
-8.2 interface) plus the landed lean/ tree -- the 15-sorry map IS the
-work plan. Scope CONFIRMED by operator (2026-07-12, ANN-14, option
-ii-a = floor, not fiat-out): acceptance floor = the 12 implication-cone
-sorries (Basic 9 + ForkMerge 2 + Conditional 1). Machine gates:
-(A) #print axioms erdos_251_conditional shows no sorryAx, axiom set
-within propext / Classical.choice / Quot.sound; (B) sorry inventory =
-exactly the 3 named residuals (singularSeries_multipliable,
-singularSeries_pos, erdos_251_irrational), no new sorried declarations.
-The Hypotheses faithfulness pair MAY be proved as an early stretch
-(definition-layer canary; discharge the public lemmata if inline
-counting-layer work yields them -- no private twins); the unconditional
-Statement target stays open. Statement shapes of all sorried
-declarations are frozen; deviations stop-and-report, never silent.
-Kickoff instruction authored ephemerally against pin 302df37, not
-stored (skill convention); it stays valid while
-git diff 302df37..HEAD -- lean/ roadmap/ is empty, so bookkeeping
-commits (ledger/HANDOVER) do not invalidate it.
+## Next: skeleton path for the analytic heart (operator decision (a))
+item-0003 stays ratified and open as INTEGRATOR: its floor (ANN-14,
+option ii-a) is met except fork_merge_of_hypotheses -- chain-v1 sections
+4-6, deliberately unstarted. The ANN-14 gates still govern its eventual
+closure: (A) #print axioms erdos_251_conditional without sorryAx, (B)
+inventory = the 3 named residuals. Kickoff v2 was RETIRED by design at
+the merge (its validity predicate covers lean/, which moved); heart work
+gets a fresh ephemeral instruction when it starts. Chosen path (ANN-18):
+item-0014 (proposed, rank 0009) freezes the section 4-5 interfaces --
+counting Lemmata 4.1-4.4 plus deletion-construction -- as sorried
+statements in Erdos251/Counting.lean, then a BLIND CROSS-REVIEW of the
+statement set before any proof investment (item-0002 precedent: the
+round-0 constant was caught at statement level). The multi-session proof
+item is created only with the review verdict. To start: ratify
+item-0014, reorder it before item-0003, author the kickoff ephemerally
+against the then-current pin. Faithfulness pair stays owned by
+item-0011 (contingent, unscheduled) and is a natural co-target of the
+same review.
 
 ## Pending decisions (operator)
-1. Sign-off on chain-v1 -> BET-04 resolution and Brier scoring (see the
-   two ANN-12 flags above; amendment patch v1.1 on request).
+1. Sign-off on chain-v1 -> BET-04 resolution and Brier scoring. Flags
+   now THREE: Def 3.1 n<m ordering vs section-6 name swap; vestigial
+   C_A in Hypothesis A (both ANN-12); vestigial hb : 0 < b in
+   repeated_block_quantization (ANN-18). Amendment patch v1.1 plus a
+   statement-unfreeze batch on request.
 2. BET-05 scoring (resolve_by passed pre-green).
-3. Round-2 sequencing after item-0003: item-0004 literature verification
+3. Ratify item-0014 + reorder before item-0003 (skeleton path, ANN-18);
+   round-2 sequencing afterwards: item-0004 literature verification
    (list below); two-word variance sub-target = item-0007 (remark 8.3);
    optional thread post AFTER item-0004.
-4. Optional: allowlist the mathlib cache hosts (list in lean/README.md)
+4. CI gate split shipped as the LAST followup18 commit (droppable):
+   confirm keep/drop after the first Actions run on main.
+5. Optional: allowlist the mathlib cache hosts (list in lean/README.md)
    to enable in-sandbox green builds.
-5. Whether to re-review the repaired gpt-web chain (not needed for bets).
+6. Whether to re-review the repaired gpt-web chain (not needed for bets).
 
 ## item-0004 verification list (accumulated)
 ScPu11 identifiers (Acta Arith 126 (2007) vs arXiv:1105.1451 -- reviewer
@@ -100,6 +109,10 @@ CPAP-3 status (still assumed open).
   s.image f / s.filter p elaborates f/p BEFORE s, so unannotated lambda
   binders can be captured by ascriptions instead of inserting coercions;
   use explicitly typed functions like (Nat.cast : Nat -> ZMod p).
+- Three more traps from item-0003 session 1 (details ANN-18):
+  summable_nat_add_iff .mpr needs (f := ...); nlinarith heartbeats are
+  cumulative in assembled proofs; congr 1 auto-reduces Nat-subtraction
+  exponents -- prefer explicit omega rewrites.
 
 ## Protocol essentials (learned the hard way)
 - Operator-side sha256 is the ONLY canonical integrity layer. Model
@@ -115,7 +128,7 @@ CPAP-3 status (still assumed open).
   assignment; web OFF (public repo now contains answer keys).
 - Multi-turn continuations allowed; feed back only the model's own
   trace, record its sha (fable pattern; fs resets happen).
-- Patches: git am -3, mboxes erdos251-followup2..14 in order; roadmap
+- Patches: git am -3, mboxes erdos251-followup2..18 in order; roadmap
   changes via the skill's emit-patch against a baseline snapshot taken
   BEFORE the move; steering author string
   "Claude Fable 5 (steering) <fable5-steering@localhost>".

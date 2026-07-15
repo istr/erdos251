@@ -343,3 +343,46 @@ annotations:
       produced late: steering container outage 2026-07-13/14,
       provider-confirmed (runs/README rule 9 register entry
       2026-07-15).
+  - id: ANN-20260715-18
+    refs: [ANN-20260715-17, BET-20260711-04]
+    date: 2026-07-15
+    note: >-
+      item-0003 session 1 closed at the milestone; PR #1 landed on main
+      (rebased) at 46abc8b -- the ratifying handover. Items 0012 and
+      0013 ratified and done. Gates verbatim from the executor report:
+      Gate 0 PASS (lake build exit 0; CI build green on push and
+      pull_request, ~1m = mathlib cache hit). Gate A milestone PASS:
+      erdos_251_of_small_tail_fork_merge depends on axioms [propext,
+      Classical.choice, Quot.sound]; erdos_251_conditional and
+      fork_merge_of_hypotheses carry sorryAx solely via the held heart
+      sorry. Gate B: inventory 0/0/0/1/0/2/1 (root, Basic, Chebyshev,
+      Conditional, ForkMerge, Hypotheses, Statement); every remaining
+      hit a named residual or docstring. Steering static review:
+      Hypotheses.lean and Statement.lean byte-identical, Conditional
+      untouched, only ADDITIVE declaration heads (six new proved
+      helpers), no axiom declarations, no native_decide, .lake
+      untracked, Chebyshev.lean imports Mathlib only. M2 report shape
+      paid on first use; three elaboration traps recorded: (1)
+      summable_nat_add_iff .mpr -- the LHS function (fun m => f (m + k))
+      sits outside the higher-order pattern fragment, so unification
+      against an ascribed type times out in whnf; pass (f := ...)
+      explicitly; .mp unaffected. (2) nlinarith heartbeat cost is
+      cumulative in assembled proofs even when every sub-block passes in
+      isolation; two calls replaced by mul_le_mul_of_nonneg_* + linarith,
+      no maxHeartbeats bump. (3) congr 1 silently auto-reduces
+      Nat-subtraction exponents (J+1-1), shifting subgoal counts; prefer
+      explicit omega rewrites. Statement flag: vestigial hb : 0 < b in
+      repeated_block_quantization (linter-confirmed unused, left frozen)
+      joins the BET-04 family (vestigial C_A); batch at a future
+      statement-unfreeze. Kickoff v2 retired by design (its validity
+      predicate tripped at the merge); the remaining item-0003 work
+      receives a fresh instruction after the skeleton path. Operator
+      decision: option (a), statements first -- item-0014 created
+      (proposed, rank 0009): chain-v1 sections 4-5 as frozen sorried
+      statements in Erdos251/Counting.lean, blind cross-review before
+      proof investment; the multi-session proof item is created with the
+      review verdict. Repo hygiene: .gitignore .lake/ -> .lake
+      (symlink-safe, executor incident). CI gate split ships as the
+      final followup18 commit (droppable): required axiom gate on the
+      milestone theorem, informational full-cone report that stays
+      honest-red until the heart lands.
