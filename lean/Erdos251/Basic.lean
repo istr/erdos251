@@ -1,4 +1,5 @@
 import Mathlib
+import Erdos251.Chebyshev
 
 /-!
 # Elementary layer (chain-v1 sections 2-3 interface)
@@ -53,7 +54,41 @@ def SameBlock (n m J : ℕ) : Prop := ∀ i, i < J → gap (n + i) = gap (m + i)
 (review-1 A04/A12). -/
 theorem summable_erdosSeries :
     Summable (fun n : ℕ => (q n : ℝ) / 2 ^ n) := by
-  sorry
+  have hnorm : ‖(1 / 2 : ℝ)‖ < 1 := by
+    rw [Real.norm_of_nonneg (by norm_num : (0 : ℝ) ≤ 1 / 2)]; norm_num
+  have h0 : Summable (fun n : ℕ => (1 / 2 : ℝ) ^ n) :=
+    summable_geometric_of_lt_one (by norm_num) (by norm_num)
+  have h1 : Summable (fun n : ℕ => (n : ℝ) ^ 1 * (1 / 2) ^ n) :=
+    summable_pow_mul_geometric_of_norm_lt_one 1 hnorm
+  have h2 : Summable (fun n : ℕ => (n : ℝ) ^ 2 * (1 / 2) ^ n) :=
+    summable_pow_mul_geometric_of_norm_lt_one 2 hnorm
+  -- majorant `(n+7)^2 / 2^(n+5)` is summable (polynomial × geometric)
+  have hg : Summable (fun n : ℕ => ((n : ℝ) + 7) ^ 2 * (1 / 2) ^ n) := by
+    have e : (fun n : ℕ => ((n : ℝ) + 7) ^ 2 * (1 / 2) ^ n)
+        = (fun n : ℕ => (n : ℝ) ^ 2 * (1 / 2) ^ n
+            + 14 * ((n : ℝ) ^ 1 * (1 / 2) ^ n) + 49 * (1 / 2) ^ n) := by
+      funext n; ring
+    rw [e]; exact (h2.add (h1.mul_left 14)).add (h0.mul_left 49)
+  have hmaj : Summable (fun n : ℕ => ((n : ℝ) + 7) ^ 2 / 2 ^ (n + 5)) := by
+    have e : (fun n : ℕ => ((n : ℝ) + 7) ^ 2 / 2 ^ (n + 5))
+        = (fun n : ℕ => (1 / 2 : ℝ) ^ 5 * (((n : ℝ) + 7) ^ 2 * (1 / 2) ^ n)) := by
+      funext n; ring
+    rw [e]; exact hg.mul_left _
+  -- pointwise domination on the shifted tail, then unshift
+  have hbound : ∀ n : ℕ,
+      (q (n + 5) : ℝ) / 2 ^ (n + 5) ≤ ((n : ℝ) + 7) ^ 2 / 2 ^ (n + 5) := by
+    intro n
+    have hden : (0 : ℝ) < 2 ^ (n + 5) := by positivity
+    have hlt : q (n + 5) < (n + 5 + 2) ^ 2 := nth_prime_lt_sq (by omega)
+    have hcast : (q (n + 5) : ℝ) ≤ ((n : ℝ) + 7) ^ 2 := by
+      have h : (q (n + 5) : ℝ) ≤ (((n + 5 + 2) ^ 2 : ℕ) : ℝ) :=
+        Nat.cast_le.mpr (Nat.le_of_lt hlt)
+      push_cast at h; nlinarith [h]
+    rw [div_le_div_iff hden hden]
+    exact mul_le_mul_of_nonneg_right hcast hden.le
+  have key : Summable (fun n : ℕ => (q (n + 5) : ℝ) / 2 ^ (n + 5)) :=
+    Summable.of_nonneg_of_le (fun n => by positivity) hbound hmaj
+  exact (summable_nat_add_iff 5).mp key
 
 /-- Warm-up 2 (constant CORRECTED from the round-0 skeleton): gap series
 identity, paper `∑ g_n 2^{-n} = S - 2`. Exact-arithmetic check 2026-07-12:
