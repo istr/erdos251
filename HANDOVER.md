@@ -76,14 +76,16 @@ item-0011 (contingent, unscheduled) and is a natural co-target of the
 same review.
 
 ## Pending decisions (operator)
-1. Dispatch the targeted blind re-review of chain-v1 v1.1 sections 4-6
-   (ANN-20): cross-family (ChatGPT temp chat, web OFF), review_1b
-   payload pattern, object sha = operator hash of dossier/chain-v1.md
-   at the followup20 tip. Steering supplies the wrapper on request.
-   item-0014 kickoff v2 follows the verdict. Round-2 sequencing
-   afterwards: item-0004 literature verification (list below);
-   two-word variance sub-target = item-0007 (remark 8.3); optional
-   thread post AFTER item-0004.
+1. Dispatch the targeted blind re-review of chain-v1 v1.1 (ANN-20/21).
+   INSTRUMENT IS STAGED: runs/_staging_review2a -- payload
+   payloads/review_2a.md, anchor-stripped object + deterministic strip
+   script + verbatim wrapper + config with TODO fields. Rollout: rename
+   the dir to the dated run_id, fill the TODOs, hash payload and object
+   canonically, paste wrapper + two attachments into a ChatGPT temp
+   chat, web OFF. item-0014 kickoff v2 follows the verdict. Round-2
+   sequencing afterwards: item-0004 literature verification (list
+   below); two-word variance sub-target = item-0007 (remark 8.3);
+   optional thread post AFTER item-0004.
 2. Sign-off on chain-v1 v1.1 -> BET-04 resolution and Brier scoring,
    gated on 1. Scoring context: review-1 (0.94, zero fatal) carries two
    post-hoc misses in exactly the amended layer (ANN-20). The Lean

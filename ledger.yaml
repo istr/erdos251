@@ -449,3 +449,34 @@ annotations:
       the executor model from now on. Vindication note: option (a)
       caught all of this at the cost of one skeleton session, before
       any proof investment in sections 4-6.
+  - id: ANN-20260715-21
+    refs: [ANN-20260715-20]
+    date: 2026-07-15
+    note: >-
+      Re-review instrument staged (runs/_staging_review2a; executes
+      HANDOVER pending decision 1). Payload payloads/review_2a.md keeps
+      the review_1b two-phase contract with two deliberate deltas:
+      computation is MANDATORY (checklist rule iv exported -- claims
+      not re-executed grade at most "plausible"), and Phase-B probes
+      P1-P8 cover the load-bearing surface at uniform intensity so no
+      probe localizes a previously defective site. Review object =
+      anchor-stripped derivation of chain-v1 v1.1
+      (object_conditional_chain.md): prior-review verdicts and the 0.94
+      STATUS anchor, per-claim review tags, all v1.1 amendment brackets
+      and version markers, process vocabulary, and the provenance
+      section removed -- motive is the documented Q5
+      anchor-propagation failure mode; a primed reviewer cannot
+      re-derive findings, only confirm repairs. Derivation is
+      deterministic (strip_review_copy.py, committed; assertion-
+      enforced banned/required token lists; double-run byte-identical);
+      steering shas in HASHES.steering.txt, operator hashing canonical.
+      Wrapper verbatim (German per house convention) with the rule-9
+      hash fallback and the rule-7 continuation clause. Internal
+      calibration aid recorded in the config notes only: the object's
+      sections 2-3 arithmetic is machine-checked in lean/, so findings
+      there estimate the reviewer false-positive rate; live signal is
+      sections 4-6. Rollout (operator): rename the staging dir to the
+      dated run_id, fill the TODO fields, hash payload and object
+      canonically, dispatch wrapper plus the two attachments in a
+      ChatGPT temp chat with web OFF. item-0014 kickoff v2 follows the
+      verdict.
