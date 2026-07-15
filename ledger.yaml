@@ -304,3 +304,42 @@ annotations:
       operator into the session, trace_artifact_layer: undetermined.
       Blind-arm validity untouched: steering surface is class C+ per
       rule 8; phenomenology corpus only.
+  - id: ANN-20260715-17
+    refs: [ANN-20260713-15, ANN-20260712-14]
+    date: 2026-07-15
+    note: >-
+      item-0003 session 1 fork report (2026-07-13, branch
+      item-0003-implication-cone, local to the operator; anchor commit
+      f5ff417 operator-communicated, not on origin at ANN time --
+      executor-reported: gap_pos and gap_even proven, build green;
+      steering branch review deferred to the milestone PR). Findings:
+      F1 mathlib v4.16 gap -- no nth-prime upper bound / pi lower
+      bound in the needed direction; a Chebyshev-type bound must be
+      built (route: Nat.four_pow_lt_mul_centralBinom +
+      pow_factorization_choose_le). F2 Bertrand q(n+1) <= 2 q(n) is
+      exactly borderline for base-2 geometric decay, unusable
+      (steering-confirmed). F3 seven of the ten remaining
+      elementary/fork-merge sorries route through summable_erdosSeries;
+      with tsum defaulting to 0 for non-summable series, summability is
+      load-bearing for the whole delta layer (consistent with review-1
+      A04/A12). Steering scope-shaver ratified into the plan: the sharp
+      n log n bound is NOT required; any eventual polynomial bound
+      feeds Lemma 2.1; target eventually q n <= (n+2)^2, summability by
+      comparison with n^2 (1/2)^n. Session steer: Chebyshev pillar in
+      an Erdos251-free file (upstream candidate, gap filed under
+      Observations) -> summable_erdosSeries -> bottom-up per kickoff
+      order; chain-v1 sections 4-6 are NOT started; hold at the
+      milestone Basic + ForkMerge sorry-free with #print axioms clean
+      on erdos_251_of_small_tail_fork_merge. Kickoff v2 remains valid:
+      proved helpers are expected, statements unchanged, validity
+      predicate empty on main at 5a01598 (verified 2026-07-15).
+      Sub-structure: item-0012 (Chebyshev pillar, rank 0008) and
+      item-0013 (deterministic-half milestone, rank 0009) created
+      proposed and unscheduled; item-0003 stays ratified integrator
+      owning the analytic heart; the heart's funding is decided at the
+      item-0013 milestone (statement-skeleton item per the item-0002
+      pattern plus a multi-session proof item, or pause in favor of
+      0004/0007). Item-scale is decoupled from session-scale. ANN
+      produced late: steering container outage 2026-07-13/14,
+      provider-confirmed (runs/README rule 9 register entry
+      2026-07-15).

@@ -41,6 +41,16 @@ Rules:
    the fallback "if no code execution is available, say so instead of
    outputting a number". Operator-side hashing remains the only canonical
    integrity layer.
+   Register entry (2026-07-15): claude.ai steering surface -- container
+   tools (bash, file view/create) can be UNAVAILABLE across whole turns;
+   observed over two consecutive steering turns 2026-07-13/14,
+   provider-confirmed as a partial outage of container creation
+   (status.claude.com incident 89rcltb8qg63, posted 2026-07-14 21:31
+   UTC), recovered by 2026-07-15 18:44 UTC. Effect: steering patch
+   production and repo verification blocked for the duration; executor
+   and operator lanes unaffected. Discipline: probe once, then stop --
+   repeated probing of a dead container is noise; stage content
+   textually for operator pre-review and ship on recovery.
 
 10. Capability claims by models about environments -- their own or other
     vendors' -- are NOT evidence (observed 2026-07-12: gemini-3.1-pro
