@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only decisions ANN-01..24, bets).
+1. This file. 2. ledger.yaml (append-only decisions ANN-01..25, bets).
 3. dossier/chain-v1.md (THE round-1 result, v1.3 after ANN-23). 4. dossier/triage-1b.md then
 triage-1a.md (verdicts, review trail, methodology register).
 5. runs/README.md rules 1-11. 6. roadmap: python3
@@ -71,6 +71,11 @@ triage-1a.md (verdicts, review trail, methodology register).
   CI milestone axiom gate CONFIRMED GREEN on main (check-runs;
   ANN-24). item-0014 kickoff v2 issued against 17cdd052 (v1.3
   transcription notes; ANN-24).
+- BETS BOOKED (operator declaration 2026-07-15 = formal v1.3
+  sign-off): BET-04 YES, brier 0.1225; BET-05 NO, brier 0.2025.
+  Mean brier over the four scored binary bets: 0.183 (baseline 0.25).
+  Open: BET-06 (gates any public claim; item-0004) and BET-07
+  (to 2026-08-08). ANN-25.
 - BET-05 resolve_by (end of round 1) passed BEFORE the green build
   landed: scoring is an operator call (p 0.45). BET-06/07 open.
 - Gemini: demoted to measurement track (ANN-08, pre-registered before
@@ -104,13 +109,10 @@ same review.
    review_report_turn2.md in, layer note: turn-2 continuation artifact
    (rule 7), above-hash-line self-hash convention; canonical hashes
    for payload/object/both reports.
-2. Sign-off on chain-v1 v1.3 -> BET-04 resolution and Brier scoring.
-   Table is CLEAN: THREE blind reviews (round-1, R2a, R2b) plus one
-   formalization pass, all known repairs executed, cross-arm
-   disagreement set empty (triage-2a/2b). Scoring context: review-1
-   (0.94) missed F1/F2 and the 4.2 sketch constants; R2a (0.90) and
-   R2b (0.88) found the latter independently and confirmed the
-   repairs by computation. The Lean
+2. RESOLVED (ANN-25): chain-v1 v1.3 signed off; BET-04 YES (0.1225),
+   BET-05 NO (0.2025). Remaining from this thread: the Lean
+   statement-unfreeze batch (unused hb, ANN-18) is now on-request;
+   BET-06 literature check (item-0004) still gates any public claim. The Lean
    statement-unfreeze batch (unused hb, ANN-18) rides after sign-off.
    Then: item-0014 kickoff v2 against the post-followup22 pin
    (steering delivers on your landing ping). Round-2 sequencing
@@ -168,7 +170,7 @@ CPAP-3 status (still assumed open).
   assignment; web OFF (public repo now contains answer keys).
 - Multi-turn continuations allowed; feed back only the model's own
   trace, record its sha (fable pattern; fs resets happen).
-- Patches: git am -3, mboxes erdos251-followup2..24 in order; roadmap
+- Patches: git am -3, mboxes erdos251-followup2..25 in order; roadmap
   changes via the skill's emit-patch against a baseline snapshot taken
   BEFORE the move; steering author string
   "Claude Fable 5 (steering) <fable5-steering@localhost>".

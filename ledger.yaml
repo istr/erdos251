@@ -31,7 +31,6 @@ scored:
     outcome: false  # construction is elementary, no gap theorems
     brier: 0.25
 
-open:
   - id: BET-20260711-04
     registered: 2026-07-11
     claim: round 1 produces a complete informal proof of "uniform quantitative
@@ -39,6 +38,17 @@ open:
     p: 0.65
     resolution: blind cross-review by a second model plus operator finds no gap
     resolve_by: end of round 1
+    outcome: true   # operator declaration 2026-07-15 = formal sign-off on chain-v1 v1.3
+    brier: 0.1225
+    note: >-
+      Resolved YES under the pre-registered survives-reading (annotation
+      trail 2026-07-12: "BET-04 resolves if any chain survives"; later
+      "repairs plus operator sign-off pending"). Three blind reviews,
+      zero fatal: review-1 0.94, R2a 0.90, R2b 0.88; every found gap was
+      repairable-class and is EXECUTED (v1.1-v1.3, ANN-20/22/23).
+      Timing wrinkle on record: resolve_by passed while v1.0 carried two
+      then-unknown repairable defects (F1/F2); the ledger kept the bet
+      open pending sign-off rather than voiding. Scoring booked ANN-25.
   - id: BET-20260711-05
     registered: 2026-07-11
     claim: the same implication is Lean-verified (sorry-free modulo the stated
@@ -46,6 +56,15 @@ open:
     p: 0.45
     resolution: lake build green on the implication file
     resolve_by: end of round 1
+    outcome: false  # budget closed with the 15-sorry statement layer; the analytic heart is still open
+    brier: 0.2025
+    note: >-
+      Strict-claim reading: sorry-free-modulo never landed in budget (a
+      compile-green statement layer is not the claim); at scoring time
+      fork_merge_of_hypotheses remains open. Well-calibrated NO, priced
+      below coin flip. Scoring booked ANN-25.
+
+open:
   - id: BET-20260711-06
     registered: 2026-07-11
     claim: the implication already exists in prior literature or preprints
@@ -577,3 +596,18 @@ annotations:
       necessity notes may inform docstrings. Formal BET-04 resolution
       and Brier scoring remain the outstanding operator declaration
       (pending decision 2); the ratification landing is recorded here.
+  - id: ANN-20260715-25
+    refs: [BET-20260711-04, BET-20260711-05, ANN-20260715-24]
+    date: 2026-07-15
+    note: >-
+      Operator declaration books the round-1 bets: BET-04 YES
+      (brier 0.1225) -- this declaration IS the formal chain-v1 v1.3
+      sign-off, closing pending decision 2; BET-05 NO (brier 0.2025),
+      strict-claim reading. Both moved from open to scored with full
+      original fields preserved (append-only lifecycle). Aggregate
+      calibration over the four scored binary bets: mean brier 0.183
+      vs 0.25 coin-flip baseline. Unblocked by the sign-off: the Lean
+      statement-unfreeze batch (unused hb, ANN-18) is now an
+      on-request operator item. Still gating any public claim:
+      BET-06 (literature, p 0.10) via item-0004. BET-07 (unconditional
+      progress, p 0.03) runs to 2026-08-08.
