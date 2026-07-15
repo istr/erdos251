@@ -121,7 +121,7 @@ theorem fork_merge_contradiction {b n m J K γ : ℕ} (hb : 0 < b)
     have h3 : (b : ℝ) * (((γ : ℝ) + 4) / 4) < 2 ^ (J + 1) := by
       have hpow : (2 : ℝ) ^ (J + 3) = 4 * 2 ^ (J + 1) := by ring
       have he : (b : ℝ) * (((γ : ℝ) + 4) / 4) = ((b : ℝ) * ((γ : ℝ) + 4)) / 4 := by ring
-      rw [he, div_lt_iff (by norm_num : (0 : ℝ) < 4)]
+      rw [he, div_lt_iff₀ (by norm_num : (0 : ℝ) < 4)]
       linarith [hsmall, hpow]
     linarith [h1, h2, h3]
   have hz0 : z = 0 := by
@@ -168,7 +168,7 @@ theorem erdos_251_of_small_tail_fork_merge (hFM : SmallTailForkMerge) :
   have hnN : N ≤ n r := le_trans hr3 (min_le_left _ _)
   have hmN : N ≤ m r := le_trans hr3 (min_le_right _ _)
   have hsmall : (b : ℝ) * ((γ r : ℝ) + 4) < 2 ^ (J r + 3) := by
-    rw [div_lt_div_iff (by positivity) hb_pos] at hr2
+    rw [div_lt_div_iff₀ (by positivity) hb_pos] at hr2
     have hpow : (2 : ℝ) ^ (J r + 3) = 8 * 2 ^ (J r) := by ring
     linarith [hr2, hpow]
   exact fork_merge_contradiction hb (hlat (n r) hnN) (hlat (m r) hmN) (hfm r) hsmall

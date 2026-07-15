@@ -18,9 +18,14 @@ false by exactly 1): `∑' n, gap n / 2^(n+1) = erdosSeries/2 - 2`.
 
 Names and statement shapes follow the gpt-iso 9.x index template
 (runs/20260712_chatgpt5.6sol_1b_noweb section 9); content follows
-dossier/chain-v1.md. Every `sorry` is intentional open work (the
-statements are the item-0002 deliverable; proofs are rounds 2+).
+dossier/chain-v1.md. The statements are the item-0002 deliverable and are
+FROZEN; item-0003 discharges all nine of this file's proofs as stated.
 No `True` placeholders exist anywhere in this project.
+
+`summable_erdosSeries` rests on `Erdos251/Chebyshev.lean` (chain-v1
+Lemma 2.1 / repair R1): a sub-geometric prime bound is genuinely needed
+here, since `p_n ≤ 2^n` -- and equally Bertrand's `q(n+1) ≤ 2 q n` -- is
+exactly borderline for `∑ q n / 2^n`.
 -/
 
 namespace Erdos251
@@ -94,7 +99,7 @@ theorem summable_erdosSeries :
       have h : (q (n + 5) : ℝ) ≤ (((n + 5 + 2) ^ 2 : ℕ) : ℝ) :=
         Nat.cast_le.mpr (Nat.le_of_lt hlt)
       push_cast at h; nlinarith [h]
-    rw [div_le_div_iff hden hden]
+    rw [div_le_div_iff₀ hden hden]
     exact mul_le_mul_of_nonneg_right hcast hden.le
   have key : Summable (fun n : ℕ => (q (n + 5) : ℝ) / 2 ^ (n + 5)) :=
     Summable.of_nonneg_of_le (fun n => by positivity) hbound hmaj
