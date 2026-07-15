@@ -1,4 +1,4 @@
-# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1.2
+# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1.3
 
 STATUS: conditional theorem. Hypotheses A and B below are open, standard-
 shaped conjectures; everything else is proved here or cited as classical.
@@ -10,8 +10,8 @@ repairs are EXECUTED here (mapping in section 9). Design rationale absorbs
 the fatal finding of review 2 (fresh fable-5 on the gpt-web chain, sha
 50efe768...236e64): no clause of this document demands relative counting
 accuracy at consecutive-gap level, where model masses drop below 1.
-Consolidation: steering (Claude Fable 5), 2026-07-12; amendments v1.1 and
-v1.2 2026-07-15 (changelog in section 9; ANN-20, ANN-22). Erdos #251.
+Consolidation: steering (Claude Fable 5), 2026-07-12; amendments v1.1,
+v1.2, v1.3 2026-07-15 (changelog in section 9; ANN-20/22/23). Erdos #251.
 
 ## 1. Main statement
 
@@ -101,6 +101,9 @@ USES exact equality; strictness comes from delta >= 2, not from any
 [v1.1: the v1.0 order requirement n_r < m_r is dropped -- it conflicted
 with the section-6 name swap (ANN-12 flag 1); no step of Theorem 3.2
 uses an order, and FM-F with gamma_r >= 2 already forces n_r != m_r.]
+[v1.3: gamma's evenness is not load-bearing in Theorem 3.2 (only
+gamma >= 2 enters); it is automatic in section 5 and kept here for
+construction fidelity. Re-review R2b.]
 
 THEOREM 3.2 (FM implies irrationality). Assume FM. Then S is irrational.
 Proof. Suppose S = a/(2^s b), b odd, s >= 1 (Lemma 2.3). By (FM-2) and
@@ -154,8 +157,10 @@ factors p/(p-1) is e^{O_kappa(1)}; primes <= 2(k+1) contribute
 (H = {0, 10014}, t = 10010 = 2*5*7*11*13 has four colliding primes at
 k = 1; a highly composite t drives the collision product past e^2 --
 prod_{5<=p<=10^6} p/(p-1) = 8.202... > e^2 = 7.389...). Found by the
-blind re-review R2, steering-re-executed; the lemma STATEMENT is
-unaffected. ANN-22.]
+blind re-review R2a, steering-re-executed; the lemma STATEMENT is
+unaffected. A sharper witness needs only kappa >= 405: H = {0, 444},
+t = 70, colliding primes {5, 7, 11, 17} (independent find of re-review
+R2b, steering-re-executed). ANN-22/23.]
 [v1.1/F2: the span hypothesis is NECESSARY, not cosmetic. For H = {0, D}
 (k = 1) every admissible even t has ratio >= 1.2 (the p = 2 factor alone
 is 2) and there are ~D/2 such t, so the sum grows like D against a
@@ -276,6 +281,11 @@ gives irrationality of 2S. QED
 - Hypothesis A's truth and Hypothesis B's truth are open; A is
   standard-shaped (uniform Hardy-Littlewood with modest window growth),
   B is the classical Cramer-Granville conjecture.
+- No effective threshold is claimed. The section-5 budget
+  L + 2 <= 4 lnln x first holds near lnln x ~ 31 (C_g = 1; at x = e^100
+  the construction is OUT of budget), and 5(iv)'s O(1) is ~ 32. The
+  theorem is purely asymptotic and declared as such (re-review R2b,
+  v1.3).
 
 ## 8. Remarks and open targets
 
@@ -296,7 +306,13 @@ variance); this would move the package to pure tuple-type statements.
 8.4 The empirical layer (primes below 3e7) is consistent with abundance
 of the constructed configurations; finite exclusions on record:
 denominator > 10^298; no denominator 2^s b with s <= 1,857,459 and odd
-b <= 99,999.
+b <= 99,999. [v1.3: both records independently re-executed in blind
+re-review R2b -- the exclusion CONFIRMED (n* = pi(3e7) - 400 margin
+resolved; zero candidates among odd b <= 99,999, certified distance
+2^{-18.2} at width <= b*32*2^{-2000}) and the denominator bound
+STRENGTHENED to > 10^1050 by the reviewer's own exact interval /
+Stern-Brocot computation. pi(3e7) = 1,857,859 steering-spot-checked.
+ANN-23.]
 
 ## 9. Provenance and repair mapping
 
@@ -355,3 +371,20 @@ steering-re-executed before amending. Repairs:
 Not executed by design: full write-ups of the 4.1/4.2 sketches --
 their honest closure is the Lean counting layer (item-0014 path),
 which supersedes prose sketches.
+
+AMENDMENT v1.3 (2026-07-15, ANN-23). Source: blind re-review R2b
+(second arm, same anchor-stripped object, same payload; verdict SOUND
+with repairable issues, 0.88, zero fatal); findings
+steering-re-executed. Repairs and notes:
+- Section 7: explicit ineffectivity declaration (budget threshold
+  lnln x ~ 31; out of budget at x = e^100).
+- Lemma 4.2 note: R2b's sharper 3k-witness recorded (kappa >= 405).
+- Definition 3.1 note: gamma's evenness not load-bearing in 3.2.
+- Section 8.4: R2b's independent re-execution recorded (exclusion
+  confirmed, denominator bound strengthened to > 10^1050).
+Cross-arm datum: the two arms' fork-orientation readings differ only
+in difference direction (w - w' vs w' - w) -- the pre-v1.2 claim (i)
+was genuinely ambiguous; the v1.2 fix stands. Convergent across arms:
+the 4.2 sketch defect (independent witnesses), span-hypothesis
+necessity (independent linear families), zero fatal, zero false
+gap-claims against the machine-checked sections.
