@@ -318,3 +318,17 @@ families); reading the claim is not verification. Corollary datum
 (Q4/Q5): the statement-formalization pass with numeric checking
 (item-0014 executor) caught in one session what prose review missed
 twice -- formalization pressure is itself a review instrument.
+
+STEERING METHODOLOGY REGISTER, ADDENDUM 2 (2026-07-15, post re-review
+R2; blind spots now FIVE). The v1.1 amendment threaded kappa through
+Lemma 4.2's statement but did not re-derive the sketch's internal
+constants ("<= 3k", "product <= e^2"); the explicit kappa exposed both
+as false for large fixed kappa (R2 findings A35/A36; counterexamples
+steering-re-executed, triage-2a). Class: amendment-adjacent lines were
+not re-executed. Rule (iv) scope extended: the re-execution duty covers
+every quantitative claim in lines an amendment touches or newly
+exposes, not only the flagged findings themselves. Positive datum: the
+computation-mandatory payload (review_2a) produced both findings via
+the mandated exhaustive search and counterexample construction, and
+the anchor-stripped object held blind (no prior-review reference in
+the report) -- instrument deltas measurably paid.

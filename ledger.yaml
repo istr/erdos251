@@ -480,3 +480,39 @@ annotations:
       canonically, dispatch wrapper plus the two attachments in a
       ChatGPT temp chat with web OFF. item-0014 kickoff v2 follows the
       verdict.
+  - id: ANN-20260715-22
+    refs: [ANN-20260715-21, ANN-20260715-20, BET-20260711-04]
+    date: 2026-07-15
+    note: >-
+      Re-review R2 returned and adjudicated (dossier/triage-2a.md).
+      Verdict: SOUND with repairable issues, 0.90, ZERO fatal; phase
+      discipline confirmed; 11 computations performed including two
+      full deletion cases and an exhaustive 267-set Lemma-4.2 search.
+      Decisive confirmations: claim (i) under i_0 = J+1 (v1.1/F1)
+      verified by full computation; FM-1 hits the exact 2^K target;
+      Theorem 3.2 steps, exact-hit immunity, elementary layer all
+      pass. Findings, all adjudicated valid and steering-re-executed
+      (t = 10010 gives 4 colliding primes vs the sketch's 3k = 3;
+      prod p/(p-1) to 10^6 = 8.2025 > e^2): the Lemma 4.2 SKETCH's
+      kappa-uniform collision bounds are false for large fixed kappa
+      (statement unaffected; reviewer supplied the O_kappa repair);
+      claim (i) fork orientation is (-gamma, +gamma) in natural order
+      (section-6 swap absorbs); 0-based normalization handoff made
+      explicit; C_g >= 1 and C_1 >= 1 made explicit; 5(iv)
+      cardinalities cleaned. ALL EXECUTED as chain-v1 v1.2 in this
+      followup (changelog section 9); 4.1/4.2 full write-ups
+      deliberately not executed -- the Lean counting layer supersedes
+      prose sketches. Calibration (internal aid): zero false
+      gap-claims against the machine-checked sections; all gap-class
+      findings sit in unformalized 4-5 prose; both new findings were
+      produced BY the mandated computations and the anchor-stripped
+      object held blind -- the instrument deltas measurably paid.
+      Register entry 5 (triage-1b addendum 2): amendment-adjacent
+      lines were not re-derived at v1.1; rule (iv) scope extended
+      accordingly. Reviewer model: ChatGPT (operator temp chat; exact
+      model string to the run config at archive time). BET-04
+      sign-off is now an operator decision with a clean table,
+      targeting v1.2. Next: operator archives the run (rename staging
+      dir, finish config, canonical hashes, trace_artifact_layer
+      note: report file carries ChatGPT UI citation tokens), lands
+      this followup, then item-0014 kickoff v2 against the new pin.

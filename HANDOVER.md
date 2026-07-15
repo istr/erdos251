@@ -5,8 +5,8 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only decisions ANN-01..20, bets).
-3. dossier/chain-v1.md (THE round-1 result, v1.1 after ANN-20). 4. dossier/triage-1b.md then
+1. This file. 2. ledger.yaml (append-only decisions ANN-01..22, bets).
+3. dossier/chain-v1.md (THE round-1 result, v1.2 after ANN-22). 4. dossier/triage-1b.md then
 triage-1a.md (verdicts, review trail, methodology register).
 5. runs/README.md rules 1-11. 6. roadmap: python3
 /mnt/skills/user/roadmap-items/scripts/roadmap.py list --arc research.
@@ -50,6 +50,13 @@ triage-1a.md (verdicts, review trail, methodology register).
   sections 4-6 prose. Targeted blind re-review of v1.1 sections 4-6
   ORDERED; item-0014 kickoff v2 follows the verdict. Blind-spot
   register entry 4 + checklist rule (iv): triage-1b end.
+- Re-review R2 RETURNED and adjudicated (triage-2a): SOUND with
+  repairable issues, 0.90, zero fatal; claim (i) and the exact 2^K
+  FM-1 target confirmed BY COMPUTATION; four valid findings (4.2
+  sketch kappa-uniform constants false for large kappa; orientation;
+  normalization handoff; constant hygiene) ALL EXECUTED as chain-v1
+  v1.2 (ANN-22). Calibration: zero false gap-claims against the
+  machine-checked sections. Register entry 5: triage-1b addendum 2.
 - BET-05 resolve_by (end of round 1) passed BEFORE the green build
   landed: scoring is an operator call (p 0.45). BET-06/07 open.
 - Gemini: demoted to measurement track (ANN-08, pre-registered before
@@ -76,20 +83,22 @@ item-0011 (contingent, unscheduled) and is a natural co-target of the
 same review.
 
 ## Pending decisions (operator)
-1. Dispatch the targeted blind re-review of chain-v1 v1.1 (ANN-20/21).
-   INSTRUMENT IS STAGED: runs/_staging_review2a -- payload
-   payloads/review_2a.md, anchor-stripped object + deterministic strip
-   script + verbatim wrapper + config with TODO fields. Rollout: rename
-   the dir to the dated run_id, fill the TODOs, hash payload and object
-   canonically, paste wrapper + two attachments into a ChatGPT temp
-   chat, web OFF. item-0014 kickoff v2 follows the verdict. Round-2
-   sequencing afterwards: item-0004 literature verification (list
-   below); two-word variance sub-target = item-0007 (remark 8.3);
-   optional thread post AFTER item-0004.
-2. Sign-off on chain-v1 v1.1 -> BET-04 resolution and Brier scoring,
-   gated on 1. Scoring context: review-1 (0.94, zero fatal) carries two
-   post-hoc misses in exactly the amended layer (ANN-20). The Lean
+1. Archive the R2 run: rename runs/_staging_review2a to the dated
+   run_id, move the report file in, fill config TODOs (model string,
+   dates, canonical hashes of payload/object/report),
+   trace_artifact_layer note: the report file carries ChatGPT UI
+   citation tokens (rule 11).
+2. Sign-off on chain-v1 v1.2 -> BET-04 resolution and Brier scoring.
+   Table is CLEAN: two blind reviews plus one formalization pass, all
+   known repairs executed (triage-2a). Scoring context: review-1
+   (0.94) missed F1/F2 and the 4.2 sketch constants; R2 (0.90) found
+   the latter and confirmed the repairs by computation. The Lean
    statement-unfreeze batch (unused hb, ANN-18) rides after sign-off.
+   Then: item-0014 kickoff v2 against the post-followup22 pin
+   (steering delivers on your landing ping). Round-2 sequencing
+   afterwards: item-0004 literature verification (list below);
+   two-word variance sub-target = item-0007 (remark 8.3); optional
+   thread post AFTER item-0004.
 3. BET-05 scoring (resolve_by passed pre-green).
 4. CI gate split shipped as the LAST followup18 commit (droppable):
    confirm keep/drop after the first Actions run on main.
@@ -141,7 +150,7 @@ CPAP-3 status (still assumed open).
   assignment; web OFF (public repo now contains answer keys).
 - Multi-turn continuations allowed; feed back only the model's own
   trace, record its sha (fable pattern; fs resets happen).
-- Patches: git am -3, mboxes erdos251-followup2..20 in order; roadmap
+- Patches: git am -3, mboxes erdos251-followup2..22 in order; roadmap
   changes via the skill's emit-patch against a baseline snapshot taken
   BEFORE the move; steering author string
   "Claude Fable 5 (steering) <fable5-steering@localhost>".
