@@ -261,7 +261,65 @@ WLOG `s ≥ 1` (repair R2) is automatic and `N = σ + 2` works. -/
 theorem rational_delta_eventually_lattice (hS : IsRationalReal S) :
     ∃ b : ℕ, 0 < b ∧ Odd b ∧
       ∃ N : ℕ, ∀ n, N ≤ n → ∃ z : ℤ, (b : ℝ) * delta n = 2 * (z : ℝ) := by
-  sorry
+  obtain ⟨rr, hrr⟩ := hS
+  have hS_eq : (rr : ℝ) = erdosSeries / 2 := hrr
+  -- `delta 0 = S - 2` (gap_series_identity), hence rational
+  have hdelta0 : delta 0 = ((rr - 2 : ℚ) : ℝ) := by
+    have h1 : delta 0 = ∑' j : ℕ, (gap j : ℝ) / 2 ^ (j + 1) := by
+      show (∑' j : ℕ, (gap (0 + j) : ℝ) / 2 ^ (j + 1)) = _
+      simp
+    rw [h1, gap_series_identity, ← hS_eq]
+    push_cast; ring
+  set r : ℚ := rr - 2 with hr_def
+  -- 2-adic decomposition of the denominator: `r.den = 2^σ * B`, `B` odd
+  obtain ⟨σ, B, hB_odd, hden_eq⟩ := Nat.exists_eq_two_pow_mul_odd r.den_nz
+  have hB_pos : 0 < B := by
+    rcases Nat.eq_zero_or_pos B with h | h
+    · rw [h, mul_zero] at hden_eq; exact absurd hden_eq r.den_nz
+    · exact h
+  refine ⟨B, hB_pos, hB_odd, σ + 2, ?_⟩
+  -- integrality of `B * delta J` for `J ≥ σ` (delta_block at 0 + 2-adic bound)
+  have hint : ∀ J : ℕ, σ ≤ J → ∃ z : ℤ, (B : ℝ) * delta J = (z : ℝ) := by
+    intro J hJ
+    have hblk : delta J
+        = (2 : ℝ) ^ J * delta 0
+          - ∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - 1 - i) * (gap i : ℝ) := by
+      have h := delta_block 0 J
+      simpa using h
+    have hMcast : ∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - 1 - i) * (gap i : ℝ)
+        = ((∑ i ∈ Finset.range J, 2 ^ (J - 1 - i) * gap i : ℕ) : ℝ) := by
+      push_cast; ring
+    have hQ : (B : ℚ) * (2 ^ J * r) = ((2 ^ (J - σ) * r.num : ℤ) : ℚ) := by
+      have hnum : r * ((r.den : ℕ) : ℚ) = (r.num : ℚ) := Rat.mul_den_eq_num r
+      have hdenQ : ((r.den : ℕ) : ℚ) = 2 ^ σ * (B : ℚ) := by
+        rw [hden_eq]; push_cast; ring
+      have hsplit : (2 : ℚ) ^ J = 2 ^ (J - σ) * 2 ^ σ := by
+        rw [← pow_add]; congr 1; omega
+      calc (B : ℚ) * (2 ^ J * r) = 2 ^ (J - σ) * (r * (2 ^ σ * (B : ℚ))) := by
+            rw [hsplit]; ring
+        _ = 2 ^ (J - σ) * (r * ((r.den : ℕ) : ℚ)) := by rw [hdenQ]
+        _ = 2 ^ (J - σ) * (r.num : ℚ) := by rw [hnum]
+        _ = ((2 ^ (J - σ) * r.num : ℤ) : ℚ) := by push_cast; ring
+    have hR : (B : ℝ) * (2 ^ J * (r : ℝ)) = ((2 ^ (J - σ) * r.num : ℤ) : ℝ) := by
+      exact_mod_cast hQ
+    refine ⟨2 ^ (J - σ) * r.num
+        - ((B * ∑ i ∈ Finset.range J, 2 ^ (J - 1 - i) * gap i : ℕ) : ℤ), ?_⟩
+    rw [hblk, hMcast, hdelta0, mul_sub, hR]
+    push_cast
+    ring
+  -- evenness: one recursion step, using that `gap` is even from index 1 on
+  intro n hn
+  obtain ⟨n', rfl⟩ : ∃ n', n = n' + 1 := ⟨n - 1, by omega⟩
+  have hn'σ : σ ≤ n' := by omega
+  have hn'1 : 1 ≤ n' := by omega
+  obtain ⟨z', hz'⟩ := hint n' hn'σ
+  obtain ⟨k, hk⟩ := gap_even hn'1
+  refine ⟨z' - (B * k : ℕ), ?_⟩
+  have hgap : ((gap n' : ℕ) : ℝ) = 2 * (k : ℝ) := by rw [hk]; push_cast; ring
+  have hmain : (B : ℝ) * delta (n' + 1) = 2 * ((z' : ℝ) - (B : ℝ) * (k : ℝ)) := by
+    rw [delta_recursion n', hgap]
+    linear_combination 2 * hz'
+  rw [hmain]; push_cast; ring
 
 /-- Chain-v1 Lemma 2.4 in template-9.4 shape: a shared length-`J` gap
 prefix quantizes the `delta` difference into `2^(J+1) ℤ / b` (the block
@@ -272,7 +330,24 @@ theorem repeated_block_quantization {b n m J : ℕ} (hb : 0 < b)
     (hblock : SameBlock n m J) :
     ∃ z : ℤ,
       (b : ℝ) * (delta (n + J) - delta (m + J)) = 2 ^ (J + 1) * (z : ℝ) := by
-  sorry
+  obtain ⟨zn, hzn⟩ := hn
+  obtain ⟨zm, hzm⟩ := hm
+  refine ⟨zn - zm, ?_⟩
+  -- the block codes cancel: a shared prefix makes the two sums identical
+  have hsum : ∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - 1 - i) * (gap (n + i) : ℝ)
+      = ∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - 1 - i) * (gap (m + i) : ℝ) := by
+    apply Finset.sum_congr rfl
+    intro i hi
+    rw [Finset.mem_range] at hi
+    rw [hblock i hi]
+  have hdiff : delta (n + J) - delta (m + J) = 2 ^ J * (delta n - delta m) := by
+    rw [delta_block n J, delta_block m J, hsum]; ring
+  rw [hdiff]
+  have hexp : (b : ℝ) * (2 ^ J * (delta n - delta m))
+      = 2 ^ J * ((b : ℝ) * delta n - (b : ℝ) * delta m) := by ring
+  rw [hexp, hzn, hzm]
+  push_cast
+  ring
 
 end
 
