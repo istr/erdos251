@@ -1,0 +1,30 @@
+run_id: 20260715_chatgpt5.6sol_review2a_noweb
+stage: review
+model: ChatGPT 5.6 SOL
+provider: OpenAI
+thinking_budget: "30k"
+temperature: null
+payload_file: payloads/review_2a.md
+payload_sha256: "8973f1d1808d56725423e74e3f555f8ddafb82a230f17d23492056600faa7163"
+object_file: object_conditional_chain.md
+object_sha256: "be11a26238c7176941e8fca85eaa021f0ef3318c8fd0971f21309c11050e95ff"
+object_derivation: >-
+  Deterministic derivation: strip_review_copy.py applied to dossier/chain-v1.md
+  at followup21 tip commit. Assertions enforce removal of prior-review verdicts,
+  per-claim review tags, v1.1 amendment brackets, process vocabulary, and the
+  provenance section; required-content assertions guard the mathematics.
+  Re-run reproduces the object byte-identically.
+web_access: false
+tools: [local_code_execution]
+contamination_class: "R (temp chat, memory OFF)"
+wrapper_file: wrapper.md
+trace_artifact_layer: "raw"
+started: "2026-07-15T23:56:36CET"
+finished: "2026-07-16T00:08:00CET"
+operator: istr
+notes: >-
+  Instrument deltas vs review_1b (ANN-21): computation is MANDATORY.
+  Phase-B probes P1-P8 cover load-bearing surface at uniform intensity.
+  INTERNAL: sections 2-3 arithmetic machine-checked in lean/ (ANN-18).
+  Live signal is sections 4-6. Object anchor-stripped per Q5 record.
+  Cross-family track: OpenAI model per ANN-08.
