@@ -1,6 +1,0 @@
-# steering-side shas; operator-side hashing remains canonical (HASHES.txt convention)
-be11a26238c7176941e8fca85eaa021f0ef3318c8fd0971f21309c11050e95ff  object_conditional_chain.md
-9c306bb297c3b97801e080abbf50889ae0b65168925775585ae22081162d868a  strip_review_copy.py
-bcff79229cda0a0726cc63770387ed60d699a00f461b66f6ad2f678d0ab9a994  wrapper.md
-f4f1cf58d3df2b89188a62bac1cd7f440c6937d1b554903cdf8afbb52899f131  config.yaml
-8973f1d1808d56725423e74e3f555f8ddafb82a230f17d23492056600faa7163  payloads/review_2a.md
