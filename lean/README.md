@@ -1,4 +1,4 @@
-# Lean project -- implication-cone state (item-0003, 2026-07-15)
+# Lean project -- implication-cone state (item-0014, 2026-07-16)
 
 Statement layer SETTLED from dossier/chain-v1.md (sections 1-3 and 8.2)
 using the gpt-iso 9.x index conventions
@@ -8,14 +8,34 @@ All 15 statements are FROZEN (item-0002 deliverable); item-0003 proves
 them without reformulation. CI checks compilation, not sorry-freeness.
 Track the sorry count in HANDOVER.md.
 
-## Layout (sorry inventory: 4, was 15 at item-0002 close)
+## Layout (sorry inventory: 16 = 4 cone + 12 skeleton)
 - Erdos251/Statement.lean   target theorem (vendored, unchanged)  [1]
-- Erdos251/Chebyshev.lean   nth-prime upper bound (NEW, item-0003)[0]
+- Erdos251/Chebyshev.lean   nth-prime upper bound (item-0003)     [0]
 - Erdos251/Basic.lean       elementary layer, chain-v1 sec. 2     [0]
 - Erdos251/ForkMerge.lean   fork-merge, chain-v1 sec. 3           [0]
 - Erdos251/Hypotheses.lean  HLQuantA + CramerGranville, sec. 1    [2]
+- Erdos251/Counting.lean    counting + construction skeleton,
+                            chain-v1 v1.3 sec. 4-5 (NEW, item-0014) [12]
 - Erdos251/Conditional.lean assembly interface, sec. 4-6          [1]
   plus the machine-checked composition `erdos_251_conditional`.
+
+The 4 implication-cone residuals are unchanged by item-0014; Counting.lean
+is a STATEMENT SKELETON that nothing in the cone imports yet, so it cannot
+affect the milestone axiom gate (verified: `erdos_251_of_small_tail_fork_merge`
+still depends only on [propext, Classical.choice, Quot.sound]).
+
+## Erdos251/Counting.lean (item-0014 statement skeleton)
+Chain-v1 v1.3 sections 4-5 transcribed as real definitions plus 12 named,
+intentional sorries: Lemmata 4.1-4.4 (4 decls; 4.2/4.3 kappa-parametrized
+per v1.1/F2) and 8 section-5 construction properties (word prefix/fork/
+suffix, admissibility-in-budget, span, FM-2 limit, budgets, and the chain
+down to `N_cons >= 1`). Zero True stubs. The traceability table
+(Lean decl <-> chain-v1 ref <-> constants) lives in the module docstring
+and is the review input. One flagged glue proof, `q_eq_of_count`
+(Nat.count -> Nat.nth bridge), used only by four `example` smoke tests
+that reproduce the review-verified tables at (J,K) = (3,4) and (2,3)
+by decide/norm_num (no native_decide -- axiom gate).
+Statement-set review pending; the proof item is created with its verdict.
 
 ## item-0003 milestone (elementary + fork-merge layer CLOSED)
 11 of the 12 implication-cone sorries are discharged. Verified:
