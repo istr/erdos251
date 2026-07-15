@@ -48,6 +48,16 @@ def IsRationalReal (x : ℝ) : Prop := ∃ r : ℚ, (r : ℝ) = x
 /-- Two indices carry the same length-`J` gap word (template 9.1). -/
 def SameBlock (n m J : ℕ) : Prop := ∀ i, i < J → gap (n + i) = gap (m + i)
 
+/-- `q` is strictly monotone (Nat.nth on the infinite prime predicate). -/
+theorem q_strictMono : StrictMono q :=
+  Nat.nth_strictMono Nat.infinite_setOf_prime
+
+/-- Each `q n` is prime. -/
+theorem q_prime (n : ℕ) : (q n).Prime := Nat.prime_nth_prime n
+
+/-- `q n < q (n+1)`. -/
+theorem q_lt_succ (n : ℕ) : q n < q (n + 1) := q_strictMono (Nat.lt_succ_self n)
+
 /-- Warm-up 1: the series converges. Needs the Chebyshev bound
 `p_n ≤ C n log n` (chain-v1 Lemma 2.1, repair R1); the trivial
 `p_n ≤ 2^n` would NOT suffice for the rearrangements downstream
@@ -90,32 +100,94 @@ theorem summable_erdosSeries :
     Summable.of_nonneg_of_le (fun n => by positivity) hbound hmaj
   exact (summable_nat_add_iff 5).mp key
 
+/-- Summability of the shifted prime tail `q(n+k)/2^k` (each `n`). -/
+theorem summable_q_shift (n : ℕ) :
+    Summable (fun k : ℕ => (q (n + k) : ℝ) / 2 ^ k) := by
+  have hshift : Summable (fun k : ℕ => (q (k + n) : ℝ) / 2 ^ (k + n)) :=
+    (summable_nat_add_iff (f := fun m : ℕ => (q m : ℝ) / 2 ^ m) n).mpr summable_erdosSeries
+  have e : (fun k : ℕ => (q (n + k) : ℝ) / 2 ^ k)
+      = (fun k : ℕ => (2 : ℝ) ^ n * ((q (k + n) : ℝ) / 2 ^ (k + n))) := by
+    funext k
+    rw [show n + k = k + n from by ring, pow_add]
+    field_simp
+    ring
+  rw [e]; exact hshift.mul_left _
+
+/-- Summability of the `delta`-defining gap tail (each `n`). -/
+theorem summable_gap_shift (n : ℕ) :
+    Summable (fun j : ℕ => (gap (n + j) : ℝ) / 2 ^ (j + 1)) := by
+  -- dominated by `q(n+1+j)/2^(j+1)`, itself a scaled shift of `summable_q_shift`
+  have hmaj : Summable (fun j : ℕ => (q (n + 1 + j) : ℝ) / 2 ^ (j + 1)) := by
+    have e : (fun j : ℕ => (q (n + 1 + j) : ℝ) / 2 ^ (j + 1))
+        = (fun j : ℕ => (1 / 2 : ℝ) * ((q (n + 1 + j) : ℝ) / 2 ^ j)) := by
+      funext j; rw [pow_succ]; ring
+    rw [e]; exact (summable_q_shift (n + 1)).mul_left _
+  refine Summable.of_nonneg_of_le (fun j => by positivity) (fun j => ?_) hmaj
+  have hle : gap (n + j) ≤ q (n + j + 1) := by
+    rw [gap]; omega
+  have : (gap (n + j) : ℝ) ≤ (q (n + 1 + j) : ℝ) := by
+    have : (gap (n + j) : ℝ) ≤ (q (n + j + 1) : ℝ) := Nat.cast_le.mpr hle
+    rwa [show n + j + 1 = n + 1 + j from by ring] at this
+  gcongr
+
+/-- Head split of `delta` (one step of chain-v1 Lemma 2.2):
+`delta n = gap n / 2 + delta (n+1) / 2`. -/
+theorem delta_eq_head_add (n : ℕ) :
+    delta n = (gap n : ℝ) / 2 + (1 / 2) * delta (n + 1) := by
+  have hsum := summable_gap_shift n
+  have hd : delta n = ∑' j : ℕ, (gap (n + j) : ℝ) / 2 ^ (j + 1) := rfl
+  have hd1 : delta (n + 1) = ∑' j : ℕ, (gap (n + 1 + j) : ℝ) / 2 ^ (j + 1) := rfl
+  rw [hd, tsum_eq_zero_add hsum, hd1, ← tsum_mul_left]
+  congr 1
+  · norm_num
+  · apply tsum_congr
+    intro j
+    rw [show n + (j + 1) = n + 1 + j from by ring]
+    ring
+
 /-- Warm-up 2 (constant CORRECTED from the round-0 skeleton): gap series
 identity, paper `∑ g_n 2^{-n} = S - 2`. Exact-arithmetic check 2026-07-12:
 the finite identity `∑_{n<T} gap n/2^{n+1} = SL_{T+1} - SL_T/2 - 2` holds
 exactly for all tested `T`; the round-0 constant `-1` is off by 1. -/
 theorem gap_series_identity :
     (∑' n : ℕ, (gap n : ℝ) / 2 ^ (n + 1)) = erdosSeries / 2 - 2 := by
-  sorry
+  have hq : Summable (fun n : ℕ => (q n : ℝ) / 2 ^ n) := summable_erdosSeries
+  have hA : Summable (fun n : ℕ => (q (n + 1) : ℝ) / 2 ^ (n + 1)) :=
+    (summable_nat_add_iff (f := fun m : ℕ => (q m : ℝ) / 2 ^ m) 1).mpr hq
+  have hB : Summable (fun n : ℕ => (q n : ℝ) / 2 ^ (n + 1)) := by
+    refine (hq.mul_left (1 / 2)).congr (fun n => ?_)
+    rw [pow_succ]; ring
+  have hsplit : (∑' n : ℕ, (gap n : ℝ) / 2 ^ (n + 1))
+      = (∑' n, (q (n + 1) : ℝ) / 2 ^ (n + 1)) - (∑' n, (q n : ℝ) / 2 ^ (n + 1)) := by
+    rw [← tsum_sub hA hB]
+    apply tsum_congr
+    intro n
+    rw [← sub_div, gap, Nat.cast_sub (q_lt_succ n).le]
+  have hAval : (∑' n, (q (n + 1) : ℝ) / 2 ^ (n + 1)) = erdosSeries - 2 := by
+    have h := tsum_eq_zero_add hq
+    have hq0 : (q 0 : ℝ) / 2 ^ 0 = 2 := by simp [q, Nat.nth_prime_zero_eq_two]
+    have he : erdosSeries = ∑' n : ℕ, (q n : ℝ) / 2 ^ n := rfl
+    rw [hq0] at h
+    rw [he]; linarith
+  have hBval : (∑' n, (q n : ℝ) / 2 ^ (n + 1)) = erdosSeries / 2 := by
+    have e : (∑' n, (q n : ℝ) / 2 ^ (n + 1)) = ∑' n, (1 / 2 : ℝ) * ((q n : ℝ) / 2 ^ n) := by
+      apply tsum_congr; intro n; rw [pow_succ]; ring
+    rw [e, tsum_mul_left]
+    show (1 / 2 : ℝ) * erdosSeries = erdosSeries / 2
+    ring
+  rw [hsplit, hAval, hBval]; ring
 
 /-- Warm-up 3: tail recursion, paper `delta_{n+1} = 2 delta_n - g_{n+1}`
 (the Lean gap index absorbs the shift). -/
 theorem delta_recursion (n : ℕ) :
     delta (n + 1) = 2 * delta n - (gap n : ℝ) := by
-  sorry
-
-/-- `q` is strictly monotone (Nat.nth on the infinite prime predicate). -/
-theorem q_strictMono : StrictMono q :=
-  Nat.nth_strictMono Nat.infinite_setOf_prime
-
-/-- Each `q n` is prime. -/
-theorem q_prime (n : ℕ) : (q n).Prime := Nat.prime_nth_prime n
+  have h := delta_eq_head_add n
+  linarith
 
 /-- Gaps are positive (`Nat.nth` is strictly monotone on the infinite
 predicate `Nat.Prime`). -/
 theorem gap_pos (n : ℕ) : 0 < gap n := by
-  have h : q n < q (n + 1) := q_strictMono (Nat.lt_succ_self n)
-  simpa [gap] using Nat.sub_pos_of_lt h
+  simpa [gap] using Nat.sub_pos_of_lt (q_lt_succ n)
 
 /-- Gaps are even from index 1 on (differences of odd primes);
 `gap 0 = 1` is the unique odd gap. -/
@@ -130,7 +202,24 @@ theorem gap_even {n : ℕ} (hn : 1 ≤ n) : Even (gap n) := by
 /-- `2 ≤ delta n` for `n ≥ 1` (all summed gaps are `≥ 2`). The guard is
 sharp: `delta 0 = S - 2 ≈ 1.6746 < 2`. Chain-v1 Lemma 2.1. -/
 theorem two_le_delta {n : ℕ} (hn : 1 ≤ n) : 2 ≤ delta n := by
-  sorry
+  have hsum := summable_gap_shift n
+  have hgeom : Summable (fun j : ℕ => (1 / 2 : ℝ) ^ j) :=
+    summable_geometric_of_lt_one (by norm_num) (by norm_num)
+  have hle : ∀ j : ℕ, (1 / 2 : ℝ) ^ j ≤ (gap (n + j) : ℝ) / 2 ^ (j + 1) := by
+    intro j
+    have h2 : 2 ≤ gap (n + j) := by
+      have hev : Even (gap (n + j)) := gap_even (by omega)
+      have hpos : 0 < gap (n + j) := gap_pos _
+      rcases hev with ⟨k, hk⟩; omega
+    have heq : (1 / 2 : ℝ) ^ j = 2 / 2 ^ (j + 1) := by
+      rw [div_pow, one_pow, pow_succ]; ring
+    rw [heq]
+    gcongr
+    exact_mod_cast h2
+  calc (2 : ℝ) = ∑' j : ℕ, (1 / 2 : ℝ) ^ j := by
+        rw [tsum_geometric_of_lt_one (by norm_num) (by norm_num)]; norm_num
+    _ ≤ ∑' j : ℕ, (gap (n + j) : ℝ) / 2 ^ (j + 1) := tsum_le_tsum hle hgeom hsum
+    _ = delta n := rfl
 
 /-- Block identity (chain-v1 Lemma 2.2, in template-9.2 orientation;
 verified exactly on truncations for `n < 25`, `J < 12`). -/
@@ -138,7 +227,31 @@ theorem delta_block (n J : ℕ) :
     delta (n + J)
       = (2 : ℝ) ^ J * delta n
         - ∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - 1 - i) * (gap (n + i) : ℝ) := by
-  sorry
+  induction J with
+  | zero => simp
+  | succ J ih =>
+    have hrec : delta (n + (J + 1)) = 2 * delta (n + J) - (gap (n + J) : ℝ) := by
+      rw [show n + (J + 1) = (n + J) + 1 from by ring]; exact delta_recursion (n + J)
+    have hsum : (2 : ℝ) * ∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - 1 - i) * (gap (n + i) : ℝ)
+        = ∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - i) * (gap (n + i) : ℝ) := by
+      rw [Finset.mul_sum]
+      apply Finset.sum_congr rfl
+      intro i hi
+      rw [Finset.mem_range] at hi
+      rw [← mul_assoc, ← pow_succ', show J - 1 - i + 1 = J - i from by omega]
+    have htarget : ∑ i ∈ Finset.range (J + 1), (2 : ℝ) ^ (J + 1 - 1 - i) * (gap (n + i) : ℝ)
+        = (∑ i ∈ Finset.range J, (2 : ℝ) ^ (J - i) * (gap (n + i) : ℝ)) + (gap (n + J) : ℝ) := by
+      rw [Finset.sum_range_succ]
+      have e1 : ∀ i ∈ Finset.range J,
+          (2 : ℝ) ^ (J + 1 - 1 - i) * (gap (n + i) : ℝ)
+            = (2 : ℝ) ^ (J - i) * (gap (n + i) : ℝ) := by
+        intro i hi; rw [Finset.mem_range] at hi
+        rw [show J + 1 - 1 - i = J - i from by omega]
+      rw [Finset.sum_congr rfl e1]
+      congr 1
+      rw [show J + 1 - 1 - J = 0 from by omega, pow_zero, one_mul]
+    rw [hrec, ih, htarget, pow_succ', mul_sub, hsum]
+    ring
 
 /-- Chain-v1 Lemma 2.3 in template-9.3 shape: if `S` is rational, then for
 some odd `b > 0` the even lattice `b * delta n ∈ 2ℤ` holds eventually.
