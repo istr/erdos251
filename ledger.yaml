@@ -551,3 +551,29 @@ annotations:
       targets v1.3 with zero open repairables from three blind reviews
       plus the formalization pass. Next unchanged: archive runs, land,
       then item-0014 kickoff v2 against the new pin.
+  - id: ANN-20260715-24
+    refs: [ANN-20260715-23, ANN-20260715-19]
+    date: 2026-07-15
+    note: >-
+      chain-v1 v1.3 RATIFIED and landed: main 17cdd052 carries
+      followups 22/23 plus an operator cleanup commit; the sign-off
+      object dossier/chain-v1.md is byte-identical to the
+      steering-verified state (sha 1dda542d...59cf1c). CI milestone
+      axiom gate CONFIRMED GREEN independently for the first time:
+      check-runs on 17cdd052 report build success with the gate steps
+      present in lean.yml -- pending decision 4 resolves to KEEP
+      (operator may still drop). item-0014 kickoff v2 authored
+      ephemerally against pin 17cdd052 (supersedes v1; predicate had
+      tripped by design at the amendments). Deltas vs v1, all from the
+      v1.2/v1.3 amendments: Lemmata 4.2/4.3 transcribed
+      kappa-parametrized with the assembly instantiating kappa = C_1;
+      claim (i) in natural (-gamma, +gamma) orientation with the swap
+      in assembly; handoff objects are the 0-based sets H(w) = A - q_0;
+      the frozen CramerGranville stays untouched -- proof-side
+      normalization C' = max C 1 (prose WLOG v1.2); computable
+      construction defs with decide/rfl smoke tests reproducing the
+      review-verified tables encouraged, native_decide banned.
+      Amendment brackets are provenance context, never Lean content;
+      necessity notes may inform docstrings. Formal BET-04 resolution
+      and Brier scoring remain the outstanding operator declaration
+      (pending decision 2); the ratification landing is recorded here.

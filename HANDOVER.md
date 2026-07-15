@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only decisions ANN-01..23, bets).
+1. This file. 2. ledger.yaml (append-only decisions ANN-01..24, bets).
 3. dossier/chain-v1.md (THE round-1 result, v1.3 after ANN-23). 4. dossier/triage-1b.md then
 triage-1a.md (verdicts, review trail, methodology register).
 5. runs/README.md rules 1-11. 6. roadmap: python3
@@ -66,6 +66,11 @@ triage-1a.md (verdicts, review trail, methodology register).
   disagreement set after adjudication: EMPTY (triage-2b; ANN-23).
   Calibration both arms: zero false gap-claims vs machine-checked
   sections.
+- chain-v1 v1.3 RATIFIED and landed (main 17cdd052; object sha
+  1dda542d...59cf1c byte-identical to the steering-verified state).
+  CI milestone axiom gate CONFIRMED GREEN on main (check-runs;
+  ANN-24). item-0014 kickoff v2 issued against 17cdd052 (v1.3
+  transcription notes; ANN-24).
 - BET-05 resolve_by (end of round 1) passed BEFORE the green build
   landed: scoring is an operator call (p 0.45). BET-06/07 open.
 - Gemini: demoted to measurement track (ANN-08, pre-registered before
@@ -113,8 +118,8 @@ same review.
    two-word variance sub-target = item-0007 (remark 8.3); optional
    thread post AFTER item-0004.
 3. BET-05 scoring (resolve_by passed pre-green).
-4. CI gate split shipped as the LAST followup18 commit (droppable):
-   confirm keep/drop after the first Actions run on main.
+4. CI gate split: CONFIRMED GREEN on main at 17cdd052 (check-runs,
+   ANN-24) -- resolved to KEEP; dropping remains available.
 5. Optional: allowlist the mathlib cache hosts (list in lean/README.md)
    to enable in-sandbox green builds.
 6. Whether to re-review the repaired gpt-web chain (not needed for bets).
@@ -163,7 +168,7 @@ CPAP-3 status (still assumed open).
   assignment; web OFF (public repo now contains answer keys).
 - Multi-turn continuations allowed; feed back only the model's own
   trace, record its sha (fable pattern; fs resets happen).
-- Patches: git am -3, mboxes erdos251-followup2..23 in order; roadmap
+- Patches: git am -3, mboxes erdos251-followup2..24 in order; roadmap
   changes via the skill's emit-patch against a baseline snapshot taken
   BEFORE the move; steering author string
   "Claude Fable 5 (steering) <fable5-steering@localhost>".
