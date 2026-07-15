@@ -302,3 +302,19 @@ chain is locally repairable but would need re-review post-repair; not
 required for the bet. Next artifact: the consolidated chain document
 (item-0007 deliverable) -- fable spine, mixed-error clause A, all seven
 review-1 repairs executed, both reviews ingested -- then operator sign-off.
+
+STEERING METHODOLOGY REGISTER, ADDENDUM (2026-07-15, post item-0014
+skeleton pass; blind spots now FOUR). The section-5 word-combinatorics
+off-by-one (i_0 = J+2, chain-v1 F1) and the unrestricted Lemma 4.2
+(chain-v1 F2) survived the chain author, review-1 (A53 "direct
+computation", A41-A43), AND steering consolidation -- which had even
+LOGGED section 5 as "verification complete" (overclaim, corrected in
+the v1.1 changelog). Class: claimed direct computations were read, not
+re-executed. New checklist rule (iv): every "direct computation" or
+"elementary verification" claim in a load-bearing chain is re-executed
+before consolidation or sign-off -- numerically wherever the object is
+finite (word combinatorics, index arithmetic, small counterexample
+families); reading the claim is not verification. Corollary datum
+(Q4/Q5): the statement-formalization pass with numeric checking
+(item-0014 executor) caught in one session what prose review missed
+twice -- formalization pressure is itself a review instrument.

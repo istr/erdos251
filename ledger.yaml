@@ -407,3 +407,45 @@ annotations:
       faithfulness pair, item-0011). Validity: git diff de82803..HEAD
       -- lean/ dossier/chain-v1.md empty AND item-0014 status ratified;
       bookkeeping commits do not invalidate.
+  - id: ANN-20260715-20
+    refs: [ANN-20260715-19, ANN-20260712-12, BET-20260711-04]
+    date: 2026-07-15
+    note: >-
+      item-0014 session 1 STOP-AND-REPORT, verified and amended. The
+      executor surfaced two chain-v1 defects before writing any Lean;
+      steering re-verified both numerically. F1: section 5 with
+      i_0 = J+2 breaks claim (i) -- prefix J+1, suffix K-1, fork one
+      slot late, shared suffix collapsing to 0 at K = 1 -- and costs
+      FM-1 a factor 2 that section 6 cannot supply; i_0 = J+1 makes (i)
+      true as written (verified over four (J,K) pairs with real
+      primes). F2: Lemma 4.2 unrestricted is FALSE -- for H = {0, D}
+      every admissible even t has ratio >= 1.22 and the sum tracks D
+      (sum/D -> 0.99 at D = 960) against a D-free bound; Lemma 4.3 over
+      the full (ln x)^3 span is heuristically false (Cramer thinning).
+      Operator decisions, all as steering recommended: i_0 = J+1; span
+      hypotheses D <= kappa k ln(k+2) on 4.2 and kappa L ln(L+2) on
+      4.3, section 6 instantiating kappa = C_1 via 5(iii); targeted
+      blind re-review of the amended sections 4-6 ORDERED
+      (cross-family, ChatGPT temp chat, web OFF, review_1b payload
+      pattern; object sha = operator hash of dossier/chain-v1.md at
+      this followup's tip). chain-v1 amended to v1.1 in this followup
+      (changelog section 9); ANN-12 flags resolved in passing (Def 3.1
+      order dropped; vestigial C_A removed, re-syncing with the Lean
+      HLQuantA which never bound it); the hb unfreeze stays deferred.
+      v1.0's section-9 line "verification complete for section 5" was
+      itself an overclaim, now corrected -- blind-spot register entry 4
+      and checklist rule (iv) added (triage-1b): re-execute claimed
+      direct computations; reading is not verification. Blast radius:
+      zero landed Lean affected (findings live in unformalized 4-6
+      prose; ForkMergeAt and SmallTailForkMerge are
+      construction-agnostic, verified). BET-04 sign-off now targets
+      v1.1 and gates on the re-review verdict; review-1's
+      0.94/zero-fatal carries two post-hoc misses in exactly the
+      amended layer (Brier context, operator scoring). item-0014
+      HOLDS: its kickoff v1 predicate trips by design when v1.1 lands;
+      kickoff v2 follows the re-review verdict. Attribution: item-0003
+      session 1 executor was Claude Opus (operator-stated,
+      non-frontier tier), recorded retroactively; closure ANNs carry
+      the executor model from now on. Vindication note: option (a)
+      caught all of this at the cost of one skeleton session, before
+      any proof investment in sections 4-6.

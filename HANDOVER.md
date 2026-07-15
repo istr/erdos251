@@ -5,8 +5,8 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only decisions ANN-01..18, bets).
-3. dossier/chain-v1.md (THE round-1 result). 4. dossier/triage-1b.md then
+1. This file. 2. ledger.yaml (append-only decisions ANN-01..20, bets).
+3. dossier/chain-v1.md (THE round-1 result, v1.1 after ANN-20). 4. dossier/triage-1b.md then
 triage-1a.md (verdicts, review trail, methodology register).
 5. runs/README.md rules 1-11. 6. roadmap: python3
 /mnt/skills/user/roadmap-items/scripts/roadmap.py list --arc research.
@@ -42,6 +42,14 @@ triage-1a.md (verdicts, review trail, methodology register).
   the analytic heart, Hypotheses 2, Statement 1); per-file map in
   lean/README.md. Items 0012/0013 closed; steering static review,
   gates verbatim, and three new elaboration traps: ANN-18.
+- item-0014 session 1: STOP-AND-REPORT (correct per contract). Two
+  chain-v1 defects found pre-Lean and steering-verified numerically:
+  section-5 i_0 off-by-one (F1) and Lemma 4.2 false unrestricted (F2).
+  chain-v1 amended to v1.1 (changelog in its section 9; ANN-20); the
+  landed Lean is untouched -- both findings live in unformalized
+  sections 4-6 prose. Targeted blind re-review of v1.1 sections 4-6
+  ORDERED; item-0014 kickoff v2 follows the verdict. Blind-spot
+  register entry 4 + checklist rule (iv): triage-1b end.
 - BET-05 resolve_by (end of round 1) passed BEFORE the green build
   landed: scoring is an operator call (p 0.45). BET-06/07 open.
 - Gemini: demoted to measurement track (ANN-08, pre-registered before
@@ -68,16 +76,19 @@ item-0011 (contingent, unscheduled) and is a natural co-target of the
 same review.
 
 ## Pending decisions (operator)
-1. Sign-off on chain-v1 -> BET-04 resolution and Brier scoring. Flags
-   now THREE: Def 3.1 n<m ordering vs section-6 name swap; vestigial
-   C_A in Hypothesis A (both ANN-12); vestigial hb : 0 < b in
-   repeated_block_quantization (ANN-18). Amendment patch v1.1 plus a
-   statement-unfreeze batch on request.
-2. BET-05 scoring (resolve_by passed pre-green).
-3. Ratify item-0014 + reorder before item-0003 (skeleton path, ANN-18);
-   round-2 sequencing afterwards: item-0004 literature verification
-   (list below); two-word variance sub-target = item-0007 (remark 8.3);
-   optional thread post AFTER item-0004.
+1. Dispatch the targeted blind re-review of chain-v1 v1.1 sections 4-6
+   (ANN-20): cross-family (ChatGPT temp chat, web OFF), review_1b
+   payload pattern, object sha = operator hash of dossier/chain-v1.md
+   at the followup20 tip. Steering supplies the wrapper on request.
+   item-0014 kickoff v2 follows the verdict. Round-2 sequencing
+   afterwards: item-0004 literature verification (list below);
+   two-word variance sub-target = item-0007 (remark 8.3); optional
+   thread post AFTER item-0004.
+2. Sign-off on chain-v1 v1.1 -> BET-04 resolution and Brier scoring,
+   gated on 1. Scoring context: review-1 (0.94, zero fatal) carries two
+   post-hoc misses in exactly the amended layer (ANN-20). The Lean
+   statement-unfreeze batch (unused hb, ANN-18) rides after sign-off.
+3. BET-05 scoring (resolve_by passed pre-green).
 4. CI gate split shipped as the LAST followup18 commit (droppable):
    confirm keep/drop after the first Actions run on main.
 5. Optional: allowlist the mathlib cache hosts (list in lean/README.md)
@@ -128,7 +139,7 @@ CPAP-3 status (still assumed open).
   assignment; web OFF (public repo now contains answer keys).
 - Multi-turn continuations allowed; feed back only the model's own
   trace, record its sha (fable pattern; fs resets happen).
-- Patches: git am -3, mboxes erdos251-followup2..18 in order; roadmap
+- Patches: git am -3, mboxes erdos251-followup2..20 in order; roadmap
   changes via the skill's emit-patch against a baseline snapshot taken
   BEFORE the move; steering author string
   "Claude Fable 5 (steering) <fable5-steering@localhost>".
