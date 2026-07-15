@@ -5,8 +5,8 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only decisions ANN-01..22, bets).
-3. dossier/chain-v1.md (THE round-1 result, v1.2 after ANN-22). 4. dossier/triage-1b.md then
+1. This file. 2. ledger.yaml (append-only decisions ANN-01..23, bets).
+3. dossier/chain-v1.md (THE round-1 result, v1.3 after ANN-23). 4. dossier/triage-1b.md then
 triage-1a.md (verdicts, review trail, methodology register).
 5. runs/README.md rules 1-11. 6. roadmap: python3
 /mnt/skills/user/roadmap-items/scripts/roadmap.py list --arc research.
@@ -57,6 +57,15 @@ triage-1a.md (verdicts, review trail, methodology register).
   normalization handoff; constant hygiene) ALL EXECUTED as chain-v1
   v1.2 (ANN-22). Calibration: zero false gap-claims against the
   machine-checked sections. Register entry 5: triage-1b addendum 2.
+- R2 SECOND ARM returned (R2b, Fable, same object/payload; deliberate
+  same-family test of ANN-10 on the review side): SOUND with
+  repairable issues, 0.88, zero fatal; convergent on the 4.2 sketch
+  defect (sharper independent witness) and span necessity; NEW valid
+  findings executed as chain-v1 v1.3 (effectivity declaration; 8.4
+  independently CONFIRMED and strengthened to > 10^1050). Cross-arm
+  disagreement set after adjudication: EMPTY (triage-2b; ANN-23).
+  Calibration both arms: zero false gap-claims vs machine-checked
+  sections.
 - BET-05 resolve_by (end of round 1) passed BEFORE the green build
   landed: scoring is an operator call (p 0.45). BET-06/07 open.
 - Gemini: demoted to measurement track (ANN-08, pre-registered before
@@ -83,16 +92,20 @@ item-0011 (contingent, unscheduled) and is a natural co-target of the
 same review.
 
 ## Pending decisions (operator)
-1. Archive the R2 run: rename runs/_staging_review2a to the dated
-   run_id, move the report file in, fill config TODOs (model string,
-   dates, canonical hashes of payload/object/report),
-   trace_artifact_layer note: the report file carries ChatGPT UI
-   citation tokens (rule 11).
-2. Sign-off on chain-v1 v1.2 -> BET-04 resolution and Brier scoring.
-   Table is CLEAN: two blind reviews plus one formalization pass, all
-   known repairs executed (triage-2a). Scoring context: review-1
-   (0.94) missed F1/F2 and the 4.2 sketch constants; R2 (0.90) found
-   the latter and confirmed the repairs by computation. The Lean
+1. Archive BOTH R2 runs (rule 11): R2a -- rename runs/_staging_review2a
+   to the dated run_id, move the ChatGPT report in, fill config TODOs,
+   layer note: report carries ChatGPT UI citation tokens. R2b -- new
+   dated run dir (copy the staged config as template), Fable report
+   review_report_turn2.md in, layer note: turn-2 continuation artifact
+   (rule 7), above-hash-line self-hash convention; canonical hashes
+   for payload/object/both reports.
+2. Sign-off on chain-v1 v1.3 -> BET-04 resolution and Brier scoring.
+   Table is CLEAN: THREE blind reviews (round-1, R2a, R2b) plus one
+   formalization pass, all known repairs executed, cross-arm
+   disagreement set empty (triage-2a/2b). Scoring context: review-1
+   (0.94) missed F1/F2 and the 4.2 sketch constants; R2a (0.90) and
+   R2b (0.88) found the latter independently and confirmed the
+   repairs by computation. The Lean
    statement-unfreeze batch (unused hb, ANN-18) rides after sign-off.
    Then: item-0014 kickoff v2 against the post-followup22 pin
    (steering delivers on your landing ping). Round-2 sequencing
@@ -150,7 +163,7 @@ CPAP-3 status (still assumed open).
   assignment; web OFF (public repo now contains answer keys).
 - Multi-turn continuations allowed; feed back only the model's own
   trace, record its sha (fable pattern; fs resets happen).
-- Patches: git am -3, mboxes erdos251-followup2..22 in order; roadmap
+- Patches: git am -3, mboxes erdos251-followup2..23 in order; roadmap
   changes via the skill's emit-patch against a baseline snapshot taken
   BEFORE the move; steering author string
   "Claude Fable 5 (steering) <fable5-steering@localhost>".

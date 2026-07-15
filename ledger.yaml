@@ -516,3 +516,38 @@ annotations:
       dir, finish config, canonical hashes, trace_artifact_layer
       note: report file carries ChatGPT UI citation tokens), lands
       this followup, then item-0014 kickoff v2 against the new pin.
+  - id: ANN-20260715-23
+    refs: [ANN-20260715-22, BET-20260711-04]
+    date: 2026-07-15
+    note: >-
+      Re-review round R2 second arm returned: R2b, Fable on the
+      identical anchor-stripped object and payload (same-family arm,
+      DELIBERATE: tests ANN-10 role-not-family on the review side; two
+      turns per rule 7, phase discipline attested). Verdict SOUND with
+      repairable issues, 0.88, zero fatal; computation volume exceeds
+      R2a (exact Fractions, sieve to 7e7, 200 synthetic FM instances,
+      rational surrogates certifying the 2.3/2.4 threshold sharpness,
+      full independent re-execution of section 8.4). Adjudication
+      (dossier/triage-2b.md), all steering-re-executed: convergent
+      with R2a on the 4.2 sketch defect with an INDEPENDENT sharper
+      witness (H = {0,444}, t = 70, kappa_min = 404.15 -- verified to
+      the digit) and on span necessity ({0,2,6,D}: sum ~ 0.98 D); NEW
+      valid: budget-ineffectivity declaration (threshold lnln x ~ 31,
+      out of budget at x = e^100) EXECUTED in v1.3 section 7; gamma
+      evenness not load-bearing in 3.2 (steering-verified, noted);
+      section 8.4 empirical records independently CONFIRMED and the
+      denominator bound STRENGTHENED to > 10^1050 (pi(3e7) = 1,857,859
+      steering-spot-checked by sieve) -- recorded in v1.3. The
+      cross-arm fork-orientation "conflict" dissolves: R2b computed
+      w' - w, labeled as such; the pre-v1.2 claim (i) was genuinely
+      ambiguous and the v1.2 fix stands. Disagreement set after
+      adjudication: EMPTY. Calibration second measurement: zero false
+      gap-claims against machine-checked sections in BOTH arms.
+      chain-v1 amended to v1.3 in this followup (changelog section 9).
+      Reviewer model: Fable (operator; exact string to the run config
+      at archive time -- TWO run dirs to archive now, R2a and R2b;
+      R2b report layer note: turn-2 continuation artifact,
+      above-hash-line self-hash convention). BET-04 sign-off now
+      targets v1.3 with zero open repairables from three blind reviews
+      plus the formalization pass. Next unchanged: archive runs, land,
+      then item-0014 kickoff v2 against the new pin.
