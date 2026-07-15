@@ -10,3 +10,17 @@ jobs:
       - uses: leanprover/lean-action@v1
         with:
           lake-package-directory: lean
+      - name: Axiom gate (milestone theorem, required)
+        working-directory: lean
+        run: |
+          printf 'import Erdos251.ForkMerge\n#print axioms Erdos251.erdos_251_of_small_tail_fork_merge\n' > /tmp/gate.lean
+          lake env lean /tmp/gate.lean | tee /tmp/gate.out
+          ! grep -q sorryAx /tmp/gate.out
+          grep -q 'depends on axioms' /tmp/gate.out
+      - name: Axiom report (full cone, informational)
+        working-directory: lean
+        continue-on-error: true
+        run: |
+          printf 'import Erdos251.Conditional\n#print axioms Erdos251.erdos_251_conditional\n' > /tmp/cone.lean
+          lake env lean /tmp/cone.lean
+          echo "informational: red-by-design until fork_merge_of_hypotheses lands"
