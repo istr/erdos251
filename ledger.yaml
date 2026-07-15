@@ -611,3 +611,39 @@ annotations:
       on-request operator item. Still gating any public claim:
       BET-06 (literature, p 0.10) via item-0004. BET-07 (unconditional
       progress, p 0.03) runs to 2026-08-08.
+  - id: ANN-20260715-26
+    refs: [ANN-20260715-24, ANN-20260715-19]
+    date: 2026-07-15
+    note: >-
+      item-0014 session 2 completion report adjudicated; skeleton
+      LANDED on main (d166aee, tip 5144918 with followup25). Gates
+      independently re-verified by steering: inventory 12 sorries in
+      Counting.lean with every other count unchanged (16 total on
+      main), freeze diff over the six frozen files empty, zero stubs,
+      lean/README updated in the PR, CI build+axiom-gate green at
+      5144918 (check-runs). Steering TRANSCRIPTION-FIDELITY REVIEW:
+      PASS -- all 12 statements faithful to v1.3 sections 4-5;
+      accepted documented deviations: shared C across 4.1's two
+      clauses via a single existential (the "Consequently" reading,
+      correct), 0 < C added and flagged (monotone-equivalent), an
+      exists-x0 on 4.1's second clause (weaker-or-equal, the budget
+      reading), evenness omitted from 4.3 with a correct derivability
+      argument (0 in H(w) plus an odd offset defeats admissibility
+      mod 2), the deletion encoded as monotone enumerations whose ifs
+      skip exactly q_{i0+1} / q_{i0} (verified), natural (-gamma,
+      +gamma) orientation stated subtraction-free. Fourth independent
+      F1 confirmation: executor re-derived 5(i) symbolically, 121/121
+      over (J,K) in [1,11]^2. Report quality: M2 shape held; four
+      prose ambiguities recorded without stopping (correct call
+      post-three-reviews); interface decisions for the proof item
+      logged as follow-ups (concrete form of x^{1-o(1)} feeding 4.3;
+      the O_kappa collision count replacing the retracted 3k/e^2).
+      Register addition (sandbox notes): `open scoped Classical in`
+      must PRECEDE the docstring, not sit between docstring and
+      declaration. item-0014 stays OPEN on its ratified acceptance
+      letter (blind cross-review of the statement set before proof
+      investment); closure path = round-2 pending decision 1
+      (recommended: light table-driven blind fidelity arm, a natural
+      Sonnet debut). Round-2 HANDOVER issued in this followup.
+      Executor model: operator confirms at done-move (Opus per
+      item-0003 precedent).
