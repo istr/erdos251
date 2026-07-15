@@ -386,3 +386,24 @@ annotations:
       final followup18 commit (droppable): required axiom gate on the
       milestone theorem, informational full-cone report that stays
       honest-red until the heart lands.
+  - id: ANN-20260715-19
+    refs: [ANN-20260715-18]
+    date: 2026-07-15
+    note: >-
+      item-0014 ratified and scheduled before item-0003 (this apply IS
+      the ratification; the reorder rides the same commit). Kickoff
+      authored ephemerally against pin de82803. Contract essentials:
+      statement skeleton only -- REAL definitions for the section-5
+      deletion construction, SORRIED lemmata for 4.1-4.4 and the
+      construction properties, zero True stubs (round-0 failure class),
+      chain-v1 constants and quantifier structure transcribed verbatim,
+      mandatory traceability table (Lean decl <-> chain-v1 ref <->
+      constants) in report and file header, stop-and-report on any
+      chain-v1 prose ambiguity (surfacing those is a purpose of the
+      item, not a failure). Freeze gate: the six existing Erdos251
+      lean files byte-identical; root Erdos251.lean gains only the
+      Counting import. No proofs; the item closes only after the blind
+      cross-review of the statement set (which also covers the frozen
+      faithfulness pair, item-0011). Validity: git diff de82803..HEAD
+      -- lean/ dossier/chain-v1.md empty AND item-0014 status ratified;
+      bookkeeping commits do not invalidate.
