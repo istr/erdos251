@@ -1,4 +1,4 @@
-# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1.1
+# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1.2
 
 STATUS: conditional theorem. Hypotheses A and B below are open, standard-
 shaped conjectures; everything else is proved here or cited as classical.
@@ -10,8 +10,8 @@ repairs are EXECUTED here (mapping in section 9). Design rationale absorbs
 the fatal finding of review 2 (fresh fable-5 on the gpt-web chain, sha
 50efe768...236e64): no clause of this document demands relative counting
 accuracy at consecutive-gap level, where model masses drop below 1.
-Consolidation: steering (Claude Fable 5), 2026-07-12; amendment v1.1
-2026-07-15 (changelog in section 9; ANN-20). Erdos problem #251.
+Consolidation: steering (Claude Fable 5), 2026-07-12; amendments v1.1 and
+v1.2 2026-07-15 (changelog in section 9; ANN-20, ANN-22). Erdos #251.
 
 ## 1. Main statement
 
@@ -35,8 +35,9 @@ document therefore DERIVES consecutiveness (Lemma 4.3) instead of assuming
 counts for it. If one prefers an error form, |pi_H - M_H| <= (1/3)M_H + x^t
 with fixed t < 1 also suffices verbatim.
 
-HYPOTHESIS B (Cramer-Granville). There exist C_g and nu_B such that
-g_nu <= C_g (ln p_nu)^2 for all nu >= nu_B.
+HYPOTHESIS B (Cramer-Granville). There exist C_g >= 1 and nu_B such that
+g_nu <= C_g (ln p_nu)^2 for all nu >= nu_B (C_g >= 1 is WLOG by
+monotonicity; section 5 takes log2(4 C_g)).
 
 THEOREM. Assume A and B. Then S is irrational, and so is the 0-indexed
 variant sum_{n>=0} (Nat.nth Prime n)/2^n = 2S.
@@ -142,9 +143,19 @@ D = h_k <= kappa k ln(k+2): the sum over even t in (0, D), t not in H,
 H u {t} admissible, of S(H u {t})/S(H) is <= C_2 k (ln(k+2))^2.
 Proof sketch (review-1 A41-A43): the local ratio at non-colliding p is
 (1-(nu+1)/p)/((1-nu/p)(1-1/p)) <= 1 - (p-1)^{-2} < 1; colliding primes
-p > 2(k+1) divide some t - h_i, so number <= 3k and their product is
-<= e^2; primes <= 2(k+1) contribute <= C ln(k+2) by Mertens; there are
+p > 2(k+1) divide some t - h_i, each difference is <= D, so there are
+at most (k+1) ln D / ln(2k+2) = O_kappa(k) of them, their reciprocals
+sum to O_kappa(1) (each p - 1 > 2k+1), and their product of local
+factors p/(p-1) is e^{O_kappa(1)}; primes <= 2(k+1) contribute
+<= C ln(k+2) by Mertens; there are
 <= D/2 <= (kappa/2) k ln(k+2) values of t, now BY HYPOTHESIS. QED-sketch
+[v1.2: the earlier sketch asserted the kappa-uniform bounds "number
+<= 3k" and "product <= e^2"; both FAIL for large fixed kappa
+(H = {0, 10014}, t = 10010 = 2*5*7*11*13 has four colliding primes at
+k = 1; a highly composite t drives the collision product past e^2 --
+prod_{5<=p<=10^6} p/(p-1) = 8.202... > e^2 = 7.389...). Found by the
+blind re-review R2, steering-re-executed; the lemma STATEMENT is
+unaffected. ANN-22.]
 [v1.1/F2: the span hypothesis is NECESSARY, not cosmetic. For H = {0, D}
 (k = 1) every admissible even t has ratio >= 1.2 (the p = 2 factor alone
 is 2) and there are ~D/2 such t, so the sum grows like D against a
@@ -203,10 +214,15 @@ J, K >= 1), gamma = q_{i_0+1} - q_{i_0} (even),
 and define the two point sets
     A  = {q_0, ..., q_{L+1}} minus {q_{i_0+1}},
     A' = {q_0, ..., q_{L+1}} minus {q_{i_0}},
-with gap words w, w' (each of length L). Then:
-(i) w and w' share the length-J prefix and the length-K suffix, and their
-middle two entries differ by (+gamma, -gamma) as in (FM-F) -- direct
-computation (review-1 A53).
+with gap words w, w' (each of length L); the 0-based point sets that
+Lemma 4.3 and Hypothesis A receive are H(w) = A - q_0 and
+H(w') = A' - q_0 (translation changes neither gaps nor
+admissibility; re-review R2, v1.2). Then:
+(i) w and w' share the length-J prefix and the length-K suffix, and
+their middle two entries differ by (-gamma, +gamma) in the natural
+order (w, w'); section 6 swaps the names to give FM-F's (+gamma,
+-gamma) orientation -- direct computation (review-1 A53; orientation
+corrected v1.2, re-review R2).
 [v1.1/F1: i_0 corrected from the v1.0 value J + 2, under which the words
 share a length-(J+1) prefix and only a length-(K-1) suffix, the fork
 sits one slot late, claim (i) fails (at K = 1 the shared suffix even
@@ -217,12 +233,16 @@ pairs (ANN-20). Review-1 A53 had passed the v1.0 value.]
 (ii) Both point sets are admissible: for p <= L+2 the residue class of 0
 is unoccupied before translation (all q_j > L+3 > p), and for p > L+2
 there are only L+1 < p points (review-1 A54).
-(iii) span <= q_{L+1} - q_0 <= C_1 L ln L (Chebyshev upper bound on
+(iii) span <= q_{L+1} - q_0 <= C_1 L ln L, C_1 >= 1 fixed (Chebyshev
+upper bound on
 p_{2L+4}; classical), hence gamma <= C_1 L ln L and, since
 L <= 2(K+20) and ln L <= K+20 for large x,
     (gamma + 4)/2^J <= 3 C_1 / (K+20)^2 -> 0.
-(iv) Budgets: L + 2 <= 3 lnln x + O(1) points, plus one extension point in
-Lemma 4.3, stays under 4 lnln x; span <= (ln x)^3 easily.
+(iv) Budgets: the words have L + 1 points with
+L + 1 = (2/ln 2) lnln x + O(lnlnln x) < 3 lnln x eventually, meeting
+Lemma 4.3's L + 1 <= 4 lnln x - 1 with room; one-point extensions then
+have L + 2 <= 4 lnln x; span <= (ln x)^3 easily (the operative span
+bound is (iii)).
 
 ## 6. Assembly: proof of the Theorem
 
@@ -314,3 +334,24 @@ before amending; review-1 had passed both v1.0 forms.
   it. The one remaining Lean-side statement flag (unused hb : 0 < b in
   repeated_block_quantization, ANN-18) stays deferred to a Lean
   statement-unfreeze batch after sign-off.
+
+AMENDMENT v1.2 (2026-07-15, ANN-22). Source: blind re-review R2
+(anchor-stripped object, computation-mandatory payload review_2a;
+verdict SOUND with repairable issues, 0.90, zero fatal); all findings
+steering-re-executed before amending. Repairs:
+- Lemma 4.2 sketch: the kappa-uniform collision bounds ("<= 3k",
+  "product <= e^2") replaced by O_kappa(k) / e^{O_kappa(1)} with the
+  reviewer-supplied argument; counterexamples recorded in the lemma
+  note. Statement unaffected (exhaustive small search consistent).
+- Section 5 claim (i): fork orientation corrected to (-gamma, +gamma)
+  in the natural word order; section 6's name swap supplies FM-F.
+- Section 5: explicit 0-based normalization H(w) = A - q_0 for the
+  handoff to Lemma 4.3 / Hypothesis A.
+- Hypothesis B: C_g >= 1 made explicit (WLOG; section 5 takes
+  log2(4 C_g)). Section 5(iii): C_1 >= 1 fixed, so section 6's
+  kappa = C_1 is licit.
+- Section 5(iv): base/extension cardinalities stated precisely
+  (L + 1 word points; L + 2 with the extension).
+Not executed by design: full write-ups of the 4.1/4.2 sketches --
+their honest closure is the Lean counting layer (item-0014 path),
+which supersedes prose sketches.
