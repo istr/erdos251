@@ -1,4 +1,4 @@
-# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1
+# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1.1
 
 STATUS: conditional theorem. Hypotheses A and B below are open, standard-
 shaped conjectures; everything else is proved here or cited as classical.
@@ -10,7 +10,8 @@ repairs are EXECUTED here (mapping in section 9). Design rationale absorbs
 the fatal finding of review 2 (fresh fable-5 on the gpt-web chain, sha
 50efe768...236e64): no clause of this document demands relative counting
 accuracy at consecutive-gap level, where model masses drop below 1.
-Consolidation: steering (Claude Fable 5), 2026-07-12. Erdos problem #251.
+Consolidation: steering (Claude Fable 5), 2026-07-12; amendment v1.1
+2026-07-15 (changelog in section 9; ANN-20). Erdos problem #251.
 
 ## 1. Main statement
 
@@ -21,8 +22,8 @@ M_H(x) = S(H) x / (ln x)^{k+1} with S(H) the singular series. H is
 admissible if for every prime q the offsets do not cover all residues
 mod q.
 
-HYPOTHESIS A (uniform two-sided tuple counts). There exist x_A and C_A >= 1
-such that for all x >= x_A and every admissible H with k+1 <= 4 lnln x and
+HYPOTHESIS A (uniform two-sided tuple counts). There exists x_A such that
+for all x >= x_A and every admissible H with k+1 <= 4 lnln x and
 h_k <= (ln x)^3:
     (1/2) M_H(x) <= pi_H(x) <= 2 M_H(x).
 Design note (review-2 lesson): all in-budget masses satisfy
@@ -84,7 +85,7 @@ is 0.
 
 ## 3. Fork-merge and its contradiction
 
-DEFINITION 3.1 (FM). There exist sequences n_r < m_r, J_r >= 1, K_r >= 1,
+DEFINITION 3.1 (FM). There exist sequences n_r, m_r, J_r >= 1, K_r >= 1,
 even gamma_r >= 2, such that with L_r = J_r + 2 + K_r:
 (FM-P) g_{n_r+i} = g_{m_r+i} for 1 <= i <= J_r;
 (FM-F) g_{n_r+J_r+1} = g_{m_r+J_r+1} + gamma_r and
@@ -96,6 +97,9 @@ even gamma_r >= 2, such that with L_r = J_r + 2 + K_r:
 The statement is b-free; exact-hit immunity is structural (step 4 below
 USES exact equality; strictness comes from delta >= 2, not from any
 "tail differs from an integer" clause -- confirmed by both reviews, P7).
+[v1.1: the v1.0 order requirement n_r < m_r is dropped -- it conflicted
+with the section-6 name swap (ANN-12 flag 1); no step of Theorem 3.2
+uses an order, and FM-F with gamma_r >= 2 already forces n_r != m_r.]
 
 THEOREM 3.2 (FM implies irrationality). Assume FM. Then S is irrational.
 Proof. Suppose S = a/(2^s b), b odd, s >= 1 (Lemma 2.3). By (FM-2) and
@@ -132,19 +136,27 @@ Mertens' theorems (classical: Mertens 1874; Rosser-Schoenfeld 1962) --
 repair R3: these are now CITED, not asserted bare; exact-constant
 verification tracked in item-0004. QED-sketch
 
-LEMMA 4.2 (one-point extension sum). For admissible H as above with span
-D = h_k: sum over even t in (0, D), t not in H, H u {t} admissible, of
-S(H u {t})/S(H) <= C_2 k (ln(k+2))^2.
+LEMMA 4.2 (one-point extension sum; v1.1). For any fixed kappa >= 1 there
+is C_2 = C_2(kappa) such that for admissible H as above with span
+D = h_k <= kappa k ln(k+2): the sum over even t in (0, D), t not in H,
+H u {t} admissible, of S(H u {t})/S(H) is <= C_2 k (ln(k+2))^2.
 Proof sketch (review-1 A41-A43): the local ratio at non-colliding p is
 (1-(nu+1)/p)/((1-nu/p)(1-1/p)) <= 1 - (p-1)^{-2} < 1; colliding primes
 p > 2(k+1) divide some t - h_i, so number <= 3k and their product is
 <= e^2; primes <= 2(k+1) contribute <= C ln(k+2) by Mertens; there are
-<= D/2 <= C_1' k ln(k+2) values of t. QED-sketch
+<= D/2 <= (kappa/2) k ln(k+2) values of t, now BY HYPOTHESIS. QED-sketch
+[v1.1/F2: the span hypothesis is NECESSARY, not cosmetic. For H = {0, D}
+(k = 1) every admissible even t has ratio >= 1.2 (the p = 2 factor alone
+is 2) and there are ~D/2 such t, so the sum grows like D against a
+D-free right side; the unrestricted v1.0 claim is FALSE. Surfaced by the
+item-0014 skeleton pass and steering-verified numerically (ANN-20);
+review-1 A41-A43 had passed the v1.0 form.]
 
-LEMMA 4.3 (consecutive lower bound; the transfer). Let w be a gap word
-whose point set H(w) is admissible, |H(w)| = L+1 <= 4 lnln x - 1, span
-<= (ln x)^3. Under Hypothesis A, for all large x the number of consecutive
-realizations of w with p_{n+1} in (sqrt x, x] is
+LEMMA 4.3 (consecutive lower bound; the transfer; v1.1). Let w be a gap
+word whose point set H(w) is admissible, |H(w)| = L+1 <= 4 lnln x - 1,
+span <= kappa L ln(L+2) for a fixed kappa >= 1 (hence far inside the
+(ln x)^3 budget of A). Under Hypothesis A, for all large x the number of
+consecutive realizations of w with p_{n+1} in (sqrt x, x] is
     N_cons(w; x) >= (1/4) M_{H(w)}(x) >= 1.
 Proof. A realization of the point set fails to be consecutive iff some
 extra prime sits at an interior even offset t (odd offsets and p > D make
@@ -156,9 +168,17 @@ L+2, and the budget constant 4 in A leaves slack; 3 would asymptotically
 suffice). Union bound (exact, first Bonferroni level):
 N_cons >= pi_H(x) - sum_t pi_{H u t}(x) - pi_H(sqrt x)
        >= (1/2) M_H - 2 sum_t M_{H u t} - sqrt x
-       >= (1/2) M_H - 2 C_2 k (ln(k+2))^2 M_H / l - sqrt x >= (1/4) M_H,
-using Lemma 4.2, M_{H u t} = S(H u t) x/l^{k+2}, and M_H >= x^{1-o(1)}
->> sqrt x (Lemma 4.1). QED
+       >= (1/2) M_H - 2 C_2(kappa) k (ln(k+2))^2 M_H / l - sqrt x
+       >= (1/4) M_H,
+using Lemma 4.2 (k = L; the span hypothesis here is exactly 4.2's),
+M_{H u t} = S(H u t) x/l^{k+2}, and M_H >= x^{1-o(1)} >> sqrt x
+(Lemma 4.1). QED
+[v1.1/F2: the span hypothesis is narrowed from the v1.0 form
+span <= (ln x)^3. The wide form is unprovable by this route (Lemma 4.2's
+sum genuinely grows with the span) and heuristically false outright for
+span >> ln x, where consecutive realizations carry a Cramer-type
+e^{-span/ln x} thinning absent from M_H. Section 5(iii) supplies exactly
+the narrow form.]
 [EXPLICIT one-line lemma per review-2 P2, stated here for the record even
 though this architecture does not need a T_x identity: every start index
 carries exactly one length-L gap word; only budget filters remove indices.]
@@ -178,7 +198,8 @@ Fix x large. Set
     K = ceil(log2(4 C_g) + 2 log2 ln x),   J = ceil(4 log2(K + 20)),
     L = J + 2 + K,   H_x = 4 C_g (ln x)^2  (so 2^K >= H_x).
 Let q_0 < q_1 < ... < q_{L+1} be the first L+2 primes exceeding L+3, put
-i_0 = J + 2 (interior since K >= 1), gamma = q_{i_0+1} - q_{i_0} (even),
+i_0 = J + 1 (v1.1; interior with slack: 1 <= i_0 and i_0 + 1 <= L since
+J, K >= 1), gamma = q_{i_0+1} - q_{i_0} (even),
 and define the two point sets
     A  = {q_0, ..., q_{L+1}} minus {q_{i_0+1}},
     A' = {q_0, ..., q_{L+1}} minus {q_{i_0}},
@@ -186,6 +207,13 @@ with gap words w, w' (each of length L). Then:
 (i) w and w' share the length-J prefix and the length-K suffix, and their
 middle two entries differ by (+gamma, -gamma) as in (FM-F) -- direct
 computation (review-1 A53).
+[v1.1/F1: i_0 corrected from the v1.0 value J + 2, under which the words
+share a length-(J+1) prefix and only a length-(K-1) suffix, the fork
+sits one slot late, claim (i) fails (at K = 1 the shared suffix even
+collapses to 0), and FM-1 downstream loses a factor 2 that section 6
+cannot supply (its tails are <= H_x <= 2^K only). With i_0 = J + 1
+claim (i) is true as written; verified numerically over several (J, K)
+pairs (ANN-20). Review-1 A53 had passed the v1.0 value.]
 (ii) Both point sets are admissible: for p <= L+2 the residue class of 0
 is unoccupied before translation (all q_j > L+3 > p), and for p > L+2
 there are only L+1 < p points (review-1 A54).
@@ -199,7 +227,8 @@ Lemma 4.3, stays under 4 lnln x; span <= (ln x)^3 easily.
 ## 6. Assembly: proof of the Theorem
 
 Assume A and B. For each large x build w, w' as in section 5. By
-Lemma 4.3 there are consecutive realizations of w at some n_x and of w'
+Lemma 4.3 (span hypothesis met with kappa = C_1 via section 5(iii)) there
+are consecutive realizations of w at some n_x and of w'
 at some m_x, both with anchor prime in (sqrt x, x]; the words differ at
 position J+1, so n_x differs from m_x; swap names so the (+gamma, -gamma)
 orientation matches (FM-F). Conditions:
@@ -259,6 +288,29 @@ design rationale in section 1); gpt-iso chain d60b460c...c8eefa
 R2 -> Lemma 2.3 (wlog s >= 1); R3 -> citations in Lemmas 4.1/4.2 and
 Bertrand/Chebyshev uses (verification item-0004); R4 -> section 7;
 R5 -> Lemma 4.3 and section 5(iv); R6 -> section 8.2; R7 -> sections 1
-and 7. Steering verification: complete for sections 2, 3, 5, 6; sketch-
-level with reviewer concurrence for 4.1/4.2. Blind-review trail and
-adjudications: dossier/triage-1b.md; append-only decisions: ledger.yaml.
+and 7. Steering verification: complete for sections 2, 3, 6; section 5
+was CLAIMED complete in v1.0 yet contained F1 (see changelog) -- the
+claim itself was an overclaim, logged as blind-spot register entry 4;
+sketch-level with reviewer concurrence for 4.1/4.2. Blind-review trail
+and adjudications: dossier/triage-1b.md; append-only decisions:
+ledger.yaml.
+
+AMENDMENT v1.1 (2026-07-15, ANN-20). Both F-findings were surfaced by
+the item-0014 statement-skeleton pass and steering-verified numerically
+before amending; review-1 had passed both v1.0 forms.
+- F1: section 5 deletion index corrected to i_0 = J + 1 (v1.0: J + 2,
+  which broke claim (i) by one slot -- prefix J+1, suffix K-1 -- and
+  cost FM-1 a factor 2 that section 6 cannot supply).
+- F2: span hypotheses added. Lemma 4.2 now requires
+  D <= kappa k ln(k+2) (the unrestricted form is FALSE: H = {0, D}
+  family, sum ~ D/2); Lemma 4.3 now requires span <= kappa L ln(L+2)
+  (the (ln x)^3 form is unprovable by this route and heuristically
+  false under Cramer-type thinning). Section 6 instantiates kappa = C_1
+  via section 5(iii).
+- ANN-12 flag 1 resolved: Definition 3.1's order requirement n_r < m_r
+  dropped (conflicted with the section-6 name swap; nothing uses it).
+- ANN-12 flag 2 resolved: vestigial C_A removed from Hypothesis A,
+  re-syncing the text with the frozen Lean HLQuantA, which never bound
+  it. The one remaining Lean-side statement flag (unused hb : 0 < b in
+  repeated_block_quantization, ANN-18) stays deferred to a Lean
+  statement-unfreeze batch after sign-off.
