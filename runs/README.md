@@ -72,3 +72,16 @@ Rules:
     provenance depth; model self-reports about the underlying
     computation remain non-evidence (rule 10 applies to introspection
     too).
+
+12. Error-landing check for route proposals (2026-07-16). When a proposed
+    route carries an O(1) error term through a divergent summation,
+    determine WHERE the error lands BEFORE building: leading coefficient
+    vs additive constant is the whole question. Coupling the error to a
+    divergent index sum (dyadic blocks: once per block over j log r,
+    summed harmonically) inflates the leading coefficient by C/log r for
+    every fixed ratio r; coupling the SAME error to a bounded telescoping
+    variation (discrete Abel: sum (w i - w (i+1)) = w 2 - w P <= 1/log 2)
+    keeps it additive. The check is cheap to settle numerically in
+    advance and is exactly what caught the item-0015 s3 dyadic MP-M2
+    defect (coefficient 4 vs the required exactly-1; ANN-37) before any
+    Lean investment.
