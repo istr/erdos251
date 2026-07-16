@@ -1284,3 +1284,64 @@ annotations:
       in Counting.lean per ANN-40; LARGE the substantial piece;
       (d) assembly; T3 five-term Bonferroni ledger; fork_merge
       stays s4/s5).
+  - id: ANN-20260716-42
+    refs: [ANN-20260716-37, ANN-20260716-41]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s4: LEMMA 4.2 CLOSED. `oneExtension_sum_le` is
+      machine-checked -- [propext, Classical.choice, Quot.sound], no
+      sorryAx; the frozen statement is BYTE-IDENTICAL to the pin
+      (diffed against HEAD, all three survivors, nothing
+      reformulated to fit the proof). Strict sorry inventory 5 -> 4
+      (Counting 3 -> 2 + Conditional 1 + Statement 1); the landed
+      implication cone's axiom gate
+      (erdos_251_of_small_tail_fork_merge) unchanged.
+      RULE-12 CHECK FIRST, and it CLEARED THE ROUTE, not merely the
+      appendix: the kickoff's synthetic-H appendix was re-run
+      in-session on the ACTUAL frozen span formula
+      (D <= kappa (|H|-1) log(|H|+1); note this IS the appendix's
+      kappa k log(k+2) under k = |H|-1, so the two agree by
+      construction, not by luck) at kappa in {1, 10, 48} -- 48 being
+      the C_1 that constr_consCount_pos will feed in, which the
+      appendix did NOT test. Zero violations at every scale; the
+      observed worst-case LARGE log-sum SHRINKS as k grows. Error
+      lands ADDITIVE, as booked.
+      ROUTE AS BUILT (kickoff v4 sections b/c/d, all four steps as
+      designed; no route deviation): (b) `collision_dvd` +
+      `collision_prime_le_span` -- the kickoff's "TEST THIS FIRST"
+      is DISCHARGED, nuMod_insert's collision branch does give
+      (t : ZMod p) in H.image cast in exactly the needed form, no
+      re-derivation. FINDING: primality of p is NOT needed for (b)
+      -- p | |t-h| and |t-h| != 0 already force p <= D; the
+      hypothesis was dropped, leaving the lemma strictly stronger
+      than the kickoff's shape. (c) SMALL `sum_primesLe_neg_log_le`:
+      a DIRECT instantiation of mertens_third_upper across the
+      ANN-39 primesLe/primesUpto bridge (sum_primesLe_eq applied to
+      n |-> -log(1-1/n)); no new argument, exactly as scoped, spends
+      one log(k+2). (c) LARGE `card_primeFactors_gt_le` +
+      `card_bigCollPrimes_pow_le`: the kickoff's route verbatim --
+      P^|S| <= prod S | prod primeFactors | n via
+      Nat.prod_primeFactors_dvd, applied to n = prod_{h in H} |t-h|,
+      with n <= D^|H|. No induction needed;
+      Finset.prod_dvd_prod_of_subset existed ready-made as the
+      kickoff hoped. (d) assembly via `log_span_le` (the
+      kappa-constant: log D <= (2 + log kappa/log 4) log P, the
+      Lean form of the rule-12 landing) and `singularSeries_ratio_le`.
+      SIMPLIFICATION vs kickoff: the "#oneExtensions H <= D/2 (evens
+      in a bounded range)" step was NOT needed -- the crude
+      #oneExtensions H <= D (card_filter_le o card_range) already
+      closes, since D <= kappa (|H|-1) log(|H|+1) supplies the
+      (k-1) factor and log(2|H|) <= 2 log(|H|+1) the second log. The
+      evens-counting lemma is unbuilt and unneeded.
+      CONSTANTS, as instructed not pre-committed and let to fall out:
+      threshold P = 2|H| (chain-v1's, kept; the H.card+2 variant was
+      never needed), and
+      C_2(kappa) = 2 kappa mertensC3 exp((2 + log kappa/log 4)/2).
+      The T1 precedent (naive constant fails, tuned one closes) did
+      NOT recur here: the first choice closed.
+      OPEN, NOT STARTED: T3 (`consCount_lower_bound`) and hence
+      `constr_consCount_pos`, which is downstream of it. Scope
+      finding for the next kickoff: the five-term cut of kickoff v4
+      is SOUND as mathematics but is NOT a one-session item
+      alongside T2 -- see HANDOVER for the itemized residual.
+      fork_merge_of_hypotheses untouched, as scoped OUT.
