@@ -80,14 +80,24 @@ residuals + 12 skeleton statements).
 - chain-v1 at v1.4 (ANN-31, citation hygiene only; sha
   6bcb1425...78ec0b); the ANN-28 queue item is discharged.
   Sorry inventory unchanged: 16.
+- item-0015 session 1 COMPLETE on branch item-0015-counting-proofs
+  (f4cc82b, ANN-33): T1-T5 proved, Counting 12 -> 7, statements
+  steering-verified byte-identical; canary positive (both Hypotheses
+  sorries reduce to one summability obligation; one bridge lemma
+  verified at pin, one unverified-at-pin). Inventory after merge: 11.
+- s2 Chebyshev risk resolved in-tree: Chebyshev.lean has
+  centralBinom_le (hard half); s2 extracts pi(x) >= c x/log x.
 
 ## Pending decisions and gates (operator), round 2
-1. item-0015 RATIFICATION -- the only remaining gate: both execution
-   gates are satisfied (item-0014 closed ANN-30; BET-06 NO ANN-28).
-   On ratification, steering issues kickoff v1 (ephemeral) against the
-   then-current pin; suggested first session = 4.4 + section-5 word
-   lemmata, item-0011 canary co-funded.
-2. BET-07 resolution by 2026-08-08 (operator judgment).
+1. MERGE the session-1 PR (branch item-0015-counting-proofs, f4cc82b)
+   -- the merge is the ratification of the session-1 work (steering
+   adjudication: ANN-33, all checks PASS). CI on the merge is the
+   compile gate.
+2. Request kickoff v2 (session 2). Proposed scope: cspan_le (in-tree
+   Chebyshev route), cfm2_tendsto, cbudget; plus the item-0011
+   summability arm -- folded into s2 or as its own small arm
+   (operator choice signals with the request).
+3. BET-07 resolution by 2026-08-08 (operator judgment).
 3. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
    do NOT inherit the problem page's [Er58b] all-k attribution; the
    thread already carries AI-assisted mathematics, ANN-29) and/or set

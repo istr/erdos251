@@ -876,3 +876,46 @@ annotations:
       a live, contribution-accepting collection of LLM attempts on
       #251; any web-ON run touching the problem treats it as a
       public LLM-generated source.
+  - id: ANN-20260716-33
+    refs: [ANN-20260716-30, ANN-20260716-27]
+    date: 2026-07-16
+    note: >-
+      item-0015 session-1 ADJUDICATION: report received in full M2
+      shape (follow-up channel non-empty). Deliverable: executor
+      branch item-0015-counting-proofs, single commit f4cc82b,
+      Counting.lean only (-5/+291). Executor-attested gates: lake
+      build green at the pin, no lake update, axioms on T1-T5 =
+      [propext, Classical.choice, Quot.sound], four smoke examples
+      unchanged. Steering INDEPENDENT verification: sorry inventory
+      Counting 12 -> 7 (project 16 -> 11 post-merge, strict
+      decrease); precise byte-identity PASS for all 13 theorem
+      headers with docstrings, all 17 definition blocks and all four
+      smoke examples (substring extraction against the f84e25e
+      baseline; an earlier naive regex over-span produced false
+      FAILs, method corrected and documented); diff touches only
+      Counting.lean, frozen files untouched; claimed helpers present
+      in marked proof-layer sections. T1-T5 PROVED (word lemmata,
+      cword_admissible, delta_le_of_gap_bound with the ANN-30
+      inertness used as an internal two-liner as planned). T6 canary
+      STOPPED inside its box with a POSITIVE finding: both Hypotheses
+      sorries reduce to ONE summability obligation (log factor =
+      O(|H|^2/p^2) over Nat.Primes, vs summable_rpow r = -2); factor
+      positivity cheap. API-name verification (confabulation guard):
+      Real.multipliable_of_summable_log VERIFIED at mathlib pin
+      a6276f4c (used Log/Summable.lean:50);
+      Real.rexp_tsum_eq_tprod NOT located at the pin after targeted
+      raw greps and docs search -- flagged UNVERIFIED-at-pin, may
+      postdate v4.16.0, resolve at compile time (fallback: manual
+      exp/HasProd derivation). SESSION-2 DE-RISKING: the kickoff-v1
+      Chebyshev risk is resolved in-tree -- Chebyshev.lean (item-0003
+      era, dfb221a) already proves centralBinom_le, the hard
+      factorization half of the lower Chebyshev bound; its quadratic
+      nth_prime_lt_sq does NOT meet cspan_le's C1 * L * log L shape,
+      so s2 extracts pi(x) >= c x / log x and p_n <= C n log n from
+      centralBinom_le. RECOMMENDATION: operator merges the PR (the
+      merge is the ratification); steering cuts kickoff v2 on request
+      -- proposed scope cspan_le, cfm2_tendsto, cbudget, plus the
+      item-0011 summability arm folded in or separate (operator
+      choice). Note: executor saved the canary finding to its local
+      project memory; the durable record is this ledger and the
+      roadmap bodies.
