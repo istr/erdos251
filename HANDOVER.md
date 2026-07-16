@@ -89,15 +89,15 @@ residuals + 12 skeleton statements).
   centralBinom_le (hard half); s2 extracts pi(x) >= c x/log x.
 
 ## Pending decisions and gates (operator), round 2
-1. MERGE the session-1 PR (branch item-0015-counting-proofs, f4cc82b)
-   -- the merge is the ratification of the session-1 work (steering
-   adjudication: ANN-33, all checks PASS). CI on the merge is the
-   compile gate.
-2. Request kickoff v2 (session 2). Proposed scope: cspan_le (in-tree
-   Chebyshev route), cfm2_tendsto, cbudget; plus the item-0011
-   summability arm -- folded into s2 or as its own small arm
-   (operator choice signals with the request).
-3. BET-07 resolution by 2026-08-08 (operator judgment).
+1. Session 2 DISPATCHED: session-1 PR merged at cad61bb (CI green,
+   inventory 11); kickoff v2 issued ephemerally against that pin
+   (steering sha256 87633345...a803d0). Scope: cspan_le (in-tree
+   Chebyshev extraction with the log bootstrap), cfm2_tendsto,
+   cbudget (2/log-2 slack structure documented), plus the item-0011
+   summability as BOXED T4 (2h) -- the fold-in is the flagged
+   steering default; the operator may strike T4 without touching
+   T1-T3. Next gate: session-2 M2 report -> steering adjudication.
+2. BET-07 resolution by 2026-08-08 (operator judgment).
 3. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
    do NOT inherit the problem page's [Er58b] all-k attribution; the
    thread already carries AI-assisted mathematics, ANN-29) and/or set
