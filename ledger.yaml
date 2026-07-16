@@ -1027,3 +1027,54 @@ annotations:
       contribution candidate after project close (the gap is real on
       master). Session 3 proceeds on the stable pin; steering
       continues in a fresh session from HANDOVER.
+  - id: ANN-20260716-37
+    refs: [ANN-20260716-34, ANN-20260716-35, ANN-20260716-36]
+    date: 2026-07-16
+    note: >-
+      item-0015 session-3 MID-SESSION ADJUDICATION (executor-caught
+      route defect, reported before proof investment -- the
+      stop-and-report channel working as designed, second instance
+      after ANN-34). Naming here: MP-M1/M2/M3 are the Mertens-pack
+      lemmata, distinct from the report-shape discipline. FINDING:
+      kickoff v3's integral-free DYADIC route to MP-M2
+      (sum_{p<=P} 1/p <= lnln P + c2) is DEFECTIVE. On a block
+      p in (r^j, r^(j+1)] the two-sided MP-M1 error C = a + b enters
+      once per block over the denominator j log r, so the summed
+      bound is (1 + C/log r) lnln P + O(1) for EVERY fixed ratio r:
+      the error lands in the LEADING coefficient because it couples
+      to the divergent harmonic sum over block indices; with the
+      crude primorial input C = 3 log 2 the coefficient is exactly 4
+      (executor numerics; steering re-executed, true block sums
+      approach 1/j). T2 = oneExtension_sum_le (Counting.lean:467-472
+      at pin b7259038) spends one log of its frozen
+      C2 k (log(k+2))^2 budget on MP-M3 and one on the span, so
+      MP-M3 needs exponent exactly 1, i.e. MP-M2 leading coefficient
+      exactly 1 -- unreachable dyadically. ADJUDICATION: defect
+      CONFIRMED (steering re-derivation plus numerics); dyadic route
+      RETIRED; statements untouched (kickoff-layer defect, not
+      statement-layer; the item's stop-and-report acceptance clause
+      worked one layer down). KICKOFF v3.1 issued superseding v3
+      (delta: MP-M2 route section only): discrete partial summation
+      via Finset.sum_Ico_by_parts (BigOperators/Module.lean:21 at
+      the pin; integral-free -- mathlib's AbelSummation, present at
+      the pin, stays unused), weights w n = (log n)^(-1). Structural
+      fix: the SAME MP-M1 error now couples to the telescoping total
+      weight variation sum (w n - w(n+1)) = w2 - wP <= 1/log 2
+      (bounded) instead of the harmonic block sum (divergent). One
+      log inequality (log t >= 1 - 1/t via log_le_sub_one_of_pos +
+      log_inv) turns the main term into the lnln telescope exactly;
+      result sum_{p<=P} 1/p <= lnln P + c2 with
+      c2 = 1 + b/log 2 - lnln 2, P-uniform (the two 1/log P boundary
+      pieces cancel exactly). REFINEMENT over the session report:
+      only MP-M1 UPPER is consumed (nonnegative weight differences
+      keep the lower constant out); MP-M1-lower stays pack-complete
+      but off the 4.2 critical path. Steering verification: Abel
+      identity machine-precision at five P values; telescope and
+      final bound verified against true prime sums to P = 250000;
+      every cited name full-tree verified at mathlib pin a6276f4c
+      (ANN-34 method; "mertens" zero hits re-confirmed). BOOKED:
+      MP-M1 is mathlib-only and relocatable to Chebyshev.lean --
+      relocation plus the ANN-36 upstream candidacy routed to the
+      s3 completion-report follow-up channel, decision at s3
+      adjudication; no mid-session relocation. Kickoff v3.1 steering
+      sha256 f2976d93...d2d67.
