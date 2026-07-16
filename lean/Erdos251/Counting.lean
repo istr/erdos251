@@ -885,6 +885,83 @@ theorem mertens_third_upper {P : ℕ} (hP : 2 ≤ P) :
             = (mertensC2 + 1) + Real.log (Real.log (P:ℝ)) by ring,
           Real.exp_add, Real.exp_log hlogP]
 
+/-! ### Proof-layer helpers for Lemma 4.2 (item-0015 s3; not statements)
+
+T2 step (a) of kickoff v3 section 4: the per-prime ratio analysis, which is
+4.2's foundation. The remaining steps (b)-(d) -- collision primes are `< span`,
+the split at `k+2` (SMALL via MP-M3, LARGE via the squarefree-divisor
+expansion), and the assembly -- are session 4's.
+
+The `k = 0` edge flagged "TEST THIS FIRST" by the kickoff is DISCHARGED:
+`offsetSpan {0} = 0` (by `decide`), so `oneExtensions {0} = ∅` and the frozen
+statement reads `0 ≤ 0` there. The frozen 4.2 is not false at `k = 0`.
+-/
+
+/-- T2 step (a), the dichotomy: adding one point moves `ν` by `0` or `1`. -/
+theorem nuMod_insert (H : Finset ℕ) (t p : ℕ) :
+    nuMod (insert t H) p = nuMod H p ∨ nuMod (insert t H) p = nuMod H p + 1 := by
+  unfold nuMod
+  rw [Finset.image_insert]
+  by_cases h : (t : ZMod p) ∈ H.image (Nat.cast : ℕ → ZMod p)
+  · left; rw [Finset.insert_eq_self.mpr h]
+  · right; rw [Finset.card_insert_of_not_mem h]
+
+/-- T2 step (a): the per-prime log-ratio of the singular-series factors.
+COLLISION (`ν' = ν`) contributes exactly `-log(1-1/p) = log(1 + 1/(p-1))`;
+NEW (`ν' = ν+1`) contributes `≤ 0`. The NEW algebra is
+`(1-ν/p)(1-1/p) - (1-(ν+1)/p) = ν/p² ≥ 0`. -/
+theorem log_singularFactor_insert_sub_le {H : Finset ℕ} {t : ℕ}
+    (hins : IsAdmissible (insert t H)) (hH : IsAdmissible H) (ht : t ∉ H) (p : Nat.Primes) :
+    Real.log ((1 - (nuMod (insert t H) (p:ℕ) : ℝ) / ((p:ℕ):ℝ)) /
+        (1 - 1/((p:ℕ):ℝ)) ^ (insert t H).card)
+      - Real.log ((1 - (nuMod H (p:ℕ) : ℝ) / ((p:ℕ):ℝ)) /
+        (1 - 1/((p:ℕ):ℝ)) ^ H.card)
+      ≤ (if nuMod (insert t H) (p:ℕ) = nuMod H (p:ℕ)
+          then -Real.log (1 - 1/((p:ℕ):ℝ)) else 0) := by
+  have hp : (p : ℕ).Prime := p.2
+  set P : ℝ := ((p : ℕ) : ℝ) with hPdef
+  have hP2 : (2:ℝ) ≤ P := by rw [hPdef]; exact_mod_cast hp.two_le
+  have hP0 : (0:ℝ) < P := by linarith
+  have hcard : (insert t H).card = H.card + 1 := Finset.card_insert_of_not_mem ht
+  -- positivity of both numerators (admissibility) and of the common denominator
+  have hnum : (0:ℝ) < 1 - (nuMod H (p:ℕ) : ℝ) / P := by
+    have h : (nuMod H (p:ℕ) : ℝ) < P := by rw [hPdef]; exact_mod_cast hH _ hp
+    rw [sub_pos, div_lt_one hP0]; exact h
+  have hnum' : (0:ℝ) < 1 - (nuMod (insert t H) (p:ℕ) : ℝ) / P := by
+    have h : (nuMod (insert t H) (p:ℕ) : ℝ) < P := by rw [hPdef]; exact_mod_cast hins _ hp
+    rw [sub_pos, div_lt_one hP0]; exact h
+  have hden : (0:ℝ) < 1 - 1 / P := by rw [sub_pos, div_lt_one hP0]; linarith
+  -- split both logs; the `(1-1/p)` powers collapse to a single factor
+  rw [Real.log_div (ne_of_gt hnum') (by positivity), Real.log_div (ne_of_gt hnum) (by positivity),
+    Real.log_pow, Real.log_pow, hcard]
+  push_cast
+  have hkey : Real.log (1 - (nuMod (insert t H) (p:ℕ) : ℝ) / P)
+      - ((H.card : ℝ) + 1) * Real.log (1 - 1/P)
+      - (Real.log (1 - (nuMod H (p:ℕ) : ℝ) / P) - (H.card : ℝ) * Real.log (1 - 1/P))
+      = (Real.log (1 - (nuMod (insert t H) (p:ℕ) : ℝ) / P)
+          - Real.log (1 - (nuMod H (p:ℕ) : ℝ) / P)) - Real.log (1 - 1/P) := by ring
+  rw [hkey]
+  rcases nuMod_insert H t (p:ℕ) with hcoll | hnew
+  · -- COLLISION: exact equality
+    rw [if_pos hcoll, hcoll]
+    simp
+  · -- NEW: the ratio is `≤ 1`, i.e. the log-difference is `≤ 0`
+    rw [if_neg (by omega)]
+    have hnu0 : (0:ℝ) ≤ (nuMod H (p:ℕ) : ℝ) := Nat.cast_nonneg _
+    have hstep : (1:ℝ) - (nuMod (insert t H) (p:ℕ) : ℝ) / P
+        ≤ (1 - (nuMod H (p:ℕ) : ℝ) / P) * (1 - 1/P) := by
+      rw [hnew]
+      push_cast
+      have hdiff : (1 - (nuMod H (p:ℕ) : ℝ) / P) * (1 - 1/P)
+          - (1 - ((nuMod H (p:ℕ) : ℝ) + 1) / P) = (nuMod H (p:ℕ) : ℝ) / P ^ 2 := by
+        field_simp
+        ring
+      have hq : (0:ℝ) ≤ (nuMod H (p:ℕ) : ℝ) / P ^ 2 := by positivity
+      linarith [hdiff, hq]
+    have hlog := Real.log_le_log hnum' hstep
+    rw [Real.log_mul (ne_of_gt hnum) (ne_of_gt hden)] at hlog
+    linarith
+
 /-! ## Section 4: the counting lemmata (conditional on A; classical citations) -/
 
 /-- LEMMA 4.1 (singular series lower bound). For admissible `H` of even
