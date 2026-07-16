@@ -811,6 +811,75 @@ theorem four_logb_le {y : ℝ} (hy : 0 < y) : 4 * Real.logb 2 y ≤ y + 17 := by
   rw [Real.logb, ← mul_div_assoc, div_le_iff₀ (by linarith : (0:ℝ) < Real.log 2)]
   nlinarith [h, hl2, hy, mul_pos hy (by linarith : (0:ℝ) < Real.log 2 - 0.5)]
 
+/-- `1 ≤ J` UNCONDITIONALLY: `K + 20 ≥ 20 > 1`, so `logb 2 (K+20) > 0`
+and the `ceil` of a positive real is at least 1. -/
+theorem one_le_cJ {Cg : ℝ} (x : ℕ) : 1 ≤ cJ Cg x := by
+  rw [cJ]
+  apply Nat.lt_ceil.mpr
+  have hK0 : (0:ℝ) ≤ (cK Cg x : ℝ) := Nat.cast_nonneg _
+  have hpos : (0:ℝ) < Real.logb 2 ((cK Cg x : ℝ) + 20) :=
+    Real.logb_pos (by norm_num) (by linarith)
+  push_cast
+  linarith
+
+/-- `J = O(log K) ≪ K`, in the crude form `J ≤ K + 38` that 5(iii) needs
+(via `four_logb_le` and `⌈y⌉₊ < y + 1`). -/
+theorem cJ_le {Cg : ℝ} (x : ℕ) : (cJ Cg x : ℝ) ≤ (cK Cg x : ℝ) + 38 := by
+  have hK0 : (0:ℝ) ≤ (cK Cg x : ℝ) := Nat.cast_nonneg _
+  have hpos : (0:ℝ) ≤ 4 * Real.logb 2 ((cK Cg x : ℝ) + 20) := by
+    have := Real.logb_pos (b := 2) (x := (cK Cg x : ℝ) + 20) (by norm_num) (by linarith)
+    linarith
+  have hceil := Nat.ceil_lt_add_one hpos
+  have hfl := four_logb_le (y := (cK Cg x : ℝ) + 20) (by linarith)
+  rw [cJ]
+  linarith
+
+/-- `L ≤ 2(K+20)` (from `cJ_le`). -/
+theorem cL_le {Cg : ℝ} (x : ℕ) :
+    (cL (cJ Cg x) (cK Cg x) : ℝ) ≤ 2 * ((cK Cg x : ℝ) + 20) := by
+  have h := cJ_le (Cg := Cg) x
+  rw [cL]; push_cast; linarith
+
+/-- `ln L ≤ K + 20` (from `cL_le`, `ln 2 ≤ 1` and `ln u ≤ u - 1`). -/
+theorem log_cL_le {Cg : ℝ} (x : ℕ) :
+    Real.log (cL (cJ Cg x) (cK Cg x) : ℝ) ≤ (cK Cg x : ℝ) + 20 := by
+  have hK0 : (0:ℝ) ≤ (cK Cg x : ℝ) := Nat.cast_nonneg _
+  have hL2 : (2:ℝ) ≤ (cL (cJ Cg x) (cK Cg x) : ℝ) := by
+    rw [cL]; push_cast
+    have : (0:ℝ) ≤ (cJ Cg x : ℝ) := Nat.cast_nonneg _
+    linarith
+  have hstep : Real.log (cL (cJ Cg x) (cK Cg x) : ℝ)
+      ≤ Real.log (2 * ((cK Cg x : ℝ) + 20)) :=
+    Real.log_le_log (by linarith) (cL_le x)
+  have hmul : Real.log (2 * ((cK Cg x : ℝ) + 20))
+      = Real.log 2 + Real.log ((cK Cg x : ℝ) + 20) :=
+    Real.log_mul (by norm_num) (by linarith)
+  have hlog2 : Real.log 2 ≤ 1 := by
+    have := Real.log_le_sub_one_of_pos (by norm_num : (0:ℝ) < 2); linarith
+  have hlogu : Real.log ((cK Cg x : ℝ) + 20) ≤ ((cK Cg x : ℝ) + 20) - 1 :=
+    Real.log_le_sub_one_of_pos (by linarith)
+  rw [hmul] at hstep
+  linarith
+
+/-- `K → ∞` as `x → ∞`: its `logb`-of-`log` argument diverges and `ceil`
+is monotone. Unconditional in `C_g` (the `logb 2 (4 C_g)` term is an
+additive constant). Supplies both `1 ≤ K` eventually and FM-2's decay. -/
+theorem cK_tendsto {Cg : ℝ} :
+    Filter.Tendsto (fun x : ℕ => (cK Cg x : ℝ)) Filter.atTop Filter.atTop := by
+  have hlogx : Filter.Tendsto (fun x : ℕ => Real.log x) Filter.atTop Filter.atTop :=
+    Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop
+  have hloglog : Filter.Tendsto (fun x : ℕ => Real.log (Real.log x))
+      Filter.atTop Filter.atTop := Real.tendsto_log_atTop.comp hlogx
+  have hlogb : Filter.Tendsto (fun x : ℕ => Real.logb 2 (Real.log x))
+      Filter.atTop Filter.atTop := by
+    unfold Real.logb
+    exact Filter.Tendsto.atTop_div_const (by positivity) hloglog
+  have harg : Filter.Tendsto
+      (fun x : ℕ => Real.logb 2 (4 * Cg) + 2 * Real.logb 2 (Real.log x))
+      Filter.atTop Filter.atTop :=
+    Filter.tendsto_atTop_add_const_left _ _ (hlogb.const_mul_atTop (by norm_num))
+  exact Filter.tendsto_atTop_mono (fun x => Nat.le_ceil _) harg
+
 /-! ### Section 5 property lemmata -/
 
 /-- Section 5(i), prefix: `w` and `w'` share the length-`J` prefix. -/
@@ -914,7 +983,50 @@ theorem cfm2_tendsto {Cg : ℝ} (hCg : 1 ≤ Cg) :
     Filter.Tendsto
       (fun x : ℕ => ((cgamma (cJ Cg x) (cK Cg x) : ℝ) + 4) / 2 ^ cJ Cg x)
       Filter.atTop (nhds 0) := by
-  sorry
+  obtain ⟨C₁, hC₁, hspan⟩ := cspan_le
+  have hcK : Filter.Tendsto (fun x : ℕ => (cK Cg x : ℝ)) Filter.atTop Filter.atTop :=
+    cK_tendsto
+  have hden : Filter.Tendsto (fun x : ℕ => ((cK Cg x : ℝ) + 20) ^ 2)
+      Filter.atTop Filter.atTop := by
+    refine Filter.tendsto_atTop_mono (fun x => ?_)
+      (Filter.tendsto_atTop_add_const_right _ 20 hcK)
+    have hK0 : (0:ℝ) ≤ (cK Cg x : ℝ) := Nat.cast_nonneg _
+    nlinarith
+  -- the majorant `3 C₁ / (K+20)^2 → 0`
+  have hmaj : Filter.Tendsto (fun x : ℕ => 3 * C₁ / ((cK Cg x : ℝ) + 20) ^ 2)
+      Filter.atTop (nhds 0) := Filter.Tendsto.div_atTop tendsto_const_nhds hden
+  refine tendsto_of_tendsto_of_tendsto_of_le_of_le' tendsto_const_nhds hmaj ?_ ?_
+  · -- nonnegativity of the LHS is free
+    filter_upwards with x
+    positivity
+  · filter_upwards [hcK.eventually_ge_atTop 1] with x hx1
+    have hK1 : 1 ≤ cK Cg x := by exact_mod_cast hx1
+    have hJ1 : 1 ≤ cJ Cg x := one_le_cJ x
+    obtain ⟨-, hgam, -, -⟩ := hspan (cJ Cg x) (cK Cg x) hJ1 hK1
+    set K : ℝ := (cK Cg x : ℝ) with hKdef
+    have hK20 : (21:ℝ) ≤ K + 20 := by rw [hKdef]; linarith
+    have hL2 : (2:ℝ) ≤ (cL (cJ Cg x) (cK Cg x) : ℝ) := by
+      rw [cL]; push_cast
+      have h1 : (0:ℝ) ≤ (cJ Cg x : ℝ) := Nat.cast_nonneg _
+      have h2 : (0:ℝ) ≤ (cK Cg x : ℝ) := Nat.cast_nonneg _
+      linarith
+    have hlognn : 0 ≤ Real.log (cL (cJ Cg x) (cK Cg x) : ℝ) :=
+      Real.log_nonneg (by linarith)
+    -- `gamma ≤ C₁ L ln L ≤ C₁ · 2(K+20) · (K+20) = 2 C₁ (K+20)^2`
+    have hgam2 : (cgamma (cJ Cg x) (cK Cg x) : ℝ) ≤ 2 * C₁ * (K + 20) ^ 2 := by
+      calc (cgamma (cJ Cg x) (cK Cg x) : ℝ)
+          ≤ C₁ * (cL (cJ Cg x) (cK Cg x) : ℝ) * Real.log (cL (cJ Cg x) (cK Cg x) : ℝ) := hgam
+        _ ≤ C₁ * (2 * (K + 20)) * (K + 20) := by
+            apply mul_le_mul _ (log_cL_le x) hlognn (by nlinarith)
+            exact mul_le_mul_of_nonneg_left (cL_le x) (by linarith)
+        _ = 2 * C₁ * (K + 20) ^ 2 := by ring
+    have h4 : (4:ℝ) ≤ C₁ * (K + 20) ^ 2 := by nlinarith
+    have hnum : (cgamma (cJ Cg x) (cK Cg x) : ℝ) + 4 ≤ 3 * C₁ * (K + 20) ^ 2 := by linarith
+    have hpow : (K + 20) ^ 4 ≤ 2 ^ cJ Cg x := pow_le_two_pow_cJ x
+    calc ((cgamma (cJ Cg x) (cK Cg x) : ℝ) + 4) / 2 ^ cJ Cg x
+        ≤ (3 * C₁ * (K + 20) ^ 2) / (K + 20) ^ 4 :=
+          div_le_div₀ (by nlinarith) hnum (by positivity) hpow
+      _ = 3 * C₁ / (K + 20) ^ 2 := by field_simp; ring
 
 /-- Section 5 "Fix x large" together with section 5(iv) (budgets):
 eventually `J, K ≥ 1` (which section 5 needs for `i_0` to be interior),
