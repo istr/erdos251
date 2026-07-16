@@ -1,0 +1,14 @@
+run_id: 20260716_opus4.8_item-0015-s3
+stage: executor
+model: claude-opus-4-8
+provider: Anthropic
+thinking_budget: ""
+temperature: null
+payload_file: "ephemeral kickoffs, never committed: item-0015-kickoff-v3.md; kickoff-v3.1-delta-m2-abel.md"
+payload_sha256: "v3 385c1e91...d463d (ANN-35); v3.1 f2976d93...d2d67 (ANN-37); steering hashes, operator sha256 canonical"
+web_access: false
+tools: [lean, lake, git]
+started: ""
+finished: "2026-07-16"
+operator: istr
+notes: "item-0015 session-3 completion report (M2 shape), verbatim as received; adjudicated ANN-39; report sha256 3fc8e757bcd6c40c4deb7bddec8b29309c1d2d97a94705940ed739d15598bfe3; branch item-0015-s3 at 2dc3f65"
