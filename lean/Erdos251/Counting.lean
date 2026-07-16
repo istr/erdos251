@@ -1193,6 +1193,306 @@ theorem mem_oneExtensions_of_prime_shift {H : Finset ℕ} {a m : ℕ}
   refine admissible_of_primes hains (fun p hp hpc => hbig p hp ?_)
   exact le_trans hpc (Finset.card_insert_le _ _)
 
+/-! ### Proof-layer helpers for Lemma 4.3, the counting/analytic layers (item-0015 s5)
+
+The five-term additive Bonferroni cut of the kickoff, completed above the s4
+structural core. Three layers, in dependency order:
+
+* `consCount_bonferroni` (step 1): the Finset card inequality, ADDITIVE by design
+  (no `Nat` subtraction anywhere). `π_H(x)` splits three ways -- anchors below
+  `√x`, anchors with a prime one-point extension, and the good anchors, which
+  `isConsecRealization_of_primes` transfers into `N_cons` injectively via
+  `Nat.count`.
+* `modelMass_insert` (step 2): the one clean insert-algebra equation, kept
+  division-shaped.
+* `mul_log_sq_le` / `mul_log_le` (step 5's uniformity): the budget
+  `|H| = L+1 ≤ 4 lnln x - 1` eliminates `L` in favour of `t = lnln x` ALONE, so
+  every threshold below is independent of `(w, L)` as the kickoff requires. Both
+  bound `ln (L+2) ≤ L+1 ≤ 4t` (`Real.log_le_sub_one_of_pos`), which collapses the
+  kickoff's `ln(4t+2)` factors to pure powers of `t`; this is why one limit
+  (`tendsto_pow_loglog_div_log`) serves the whole basket. The `L = 0` corner needs
+  no case split, exactly as booked.
+
+Rule-12 landing (steering, PRE-CLEARED): both closing clauses are monotone in `x`
+and `x₀` is astronomical; the assembly is `Tendsto`/`eventually` extraction only
+and never materializes an explicit `x₀`.
+-/
+
+/-- Bridge from `Nat.count` (computable) to `Nat.nth` (not), used only by
+the smoke tests below. Flagged as glue in the traceability table. -/
+theorem q_eq_of_count {n p : ℕ} (hp : p.Prime) (hc : Nat.count Nat.Prime p = n) :
+    q n = p := by
+  rw [q, ← hc, Nat.nth_count hp]
+
+/-- `0 ∈ H(w)` always: the empty prefix sum. -/
+theorem zero_mem_wordPointSet {w : ℕ → ℕ} {L : ℕ} : 0 ∈ wordPointSet w L :=
+  mem_wordPointSet.mpr ⟨0, Nat.zero_le _, by simp⟩
+
+/-- `Nat.count Nat.Prime a < a` for prime `a`: the count misses `0 ∈ range a`,
+which is not prime. Feeds the good branch's `n < x + 1`. -/
+theorem count_lt_self_of_prime {a : ℕ} (ha : a.Prime) : Nat.count Nat.Prime a < a := by
+  rw [Nat.count_eq_card_filter_range]
+  have h0 : a ≠ 0 := ha.ne_zero
+  have hsub : (Finset.range a).filter (fun x => Nat.Prime x) ⊂ Finset.range a :=
+    Finset.ssubset_iff_of_subset (Finset.filter_subset _ _) |>.mpr
+      ⟨0, Finset.mem_range.mpr (by omega), by simp [Nat.not_prime_zero]⟩
+  simpa using Finset.card_lt_card hsub
+
+/-- T3 STEP 1: the additive Bonferroni card inequality. Every admissible tuple
+anchor `a ≤ x` is either small (`a ≤ √x`), or carries a prime one-point extension
+(the offsets Lemma 4.2 sums over), or is the anchor of a consecutive realization
+of `w`. The threshold `L + 2 ≤ √x` is the cheap one flagged by the s4 core: it
+feeds `mem_oneExtensions_of_prime_shift`'s `hbig`. -/
+theorem consCount_bonferroni {w : ℕ → ℕ} {L x : ℕ}
+    (hcard : (wordPointSet w L).card = L + 1)
+    (hthr : ((L : ℝ) + 2) ≤ Real.sqrt x) :
+    tupleCount (wordPointSet w L) x
+      ≤ consCount w L x + (Nat.sqrt x + 1)
+        + ∑ m ∈ oneExtensions (wordPointSet w L), tupleCount (insert m (wordPointSet w L)) x := by
+  classical
+  set H := wordPointSet w L with hHdef
+  have h0 : 0 ∈ H := zero_mem_wordPointSet
+  rw [tupleCount]
+  set S := (Finset.range (x+1)).filter (fun a => ∀ h ∈ H, (a+h).Prime) with hSdef
+  set P1 : ℕ → Prop := fun a => ((a:ℝ) ≤ Real.sqrt x) with hP1def
+  set P2 : ℕ → Prop := fun a => ∃ m ∈ oneExtensions H, (a+m).Prime with hP2def
+  have hsplit1 : (S.filter P1).card + (S.filter (fun a => ¬ P1 a)).card = S.card :=
+    Finset.filter_card_add_filter_neg_card_eq_card _
+  set T := S.filter (fun a => ¬ P1 a) with hTdef
+  have hsplit2 : (T.filter P2).card + (T.filter (fun a => ¬ P2 a)).card = T.card :=
+    Finset.filter_card_add_filter_neg_card_eq_card _
+  have hmemS : ∀ a, a ∈ S ↔ (a ≤ x ∧ ∀ h ∈ H, (a+h).Prime) := by
+    intro a; rw [hSdef, Finset.mem_filter, Finset.mem_range]
+    constructor
+    · rintro ⟨h1, h2⟩; exact ⟨by omega, h2⟩
+    · rintro ⟨h1, h2⟩; exact ⟨by omega, h2⟩
+  -- BRANCH 1: the small anchors inject into `range (Nat.sqrt x + 1)`
+  have hsmall : (S.filter P1).card ≤ Nat.sqrt x + 1 := by
+    have hsub : S.filter P1 ⊆ Finset.range (Nat.sqrt x + 1) := by
+      intro a ha
+      rw [Finset.mem_filter] at ha
+      have hle : (a:ℝ) ≤ Real.sqrt x := ha.2
+      have hnat : a * a ≤ x := by
+        have hsq := Real.sq_sqrt (by positivity : (0:ℝ) ≤ (x:ℝ))
+        have : ((a*a : ℕ) : ℝ) ≤ ((x:ℕ):ℝ) := by
+          push_cast
+          nlinarith [Real.sqrt_nonneg (x:ℝ), Nat.cast_nonneg (α := ℝ) a]
+        exact_mod_cast this
+      exact Finset.mem_range.mpr (by have := Nat.le_sqrt.mpr hnat; omega)
+    calc (S.filter P1).card ≤ (Finset.range (Nat.sqrt x + 1)).card := Finset.card_le_card hsub
+      _ = Nat.sqrt x + 1 := Finset.card_range _
+  -- BRANCH 2: the anchors with a prime one-point extension
+  have hext : (T.filter P2).card ≤ ∑ m ∈ oneExtensions H, tupleCount (insert m H) x := by
+    have hsub : T.filter P2 ⊆ (oneExtensions H).biUnion
+        (fun m => (Finset.range (x+1)).filter (fun a => ∀ h ∈ insert m H, (a+h).Prime)) := by
+      intro a ha
+      rw [Finset.mem_filter] at ha
+      obtain ⟨m, hm, hmp⟩ := ha.2
+      have haT : a ∈ T := ha.1
+      rw [hTdef, Finset.mem_filter] at haT
+      obtain ⟨hax, hall⟩ := (hmemS a).mp haT.1
+      refine Finset.mem_biUnion.mpr ⟨m, hm, ?_⟩
+      rw [Finset.mem_filter, Finset.mem_range]
+      exact ⟨by omega, (Finset.forall_mem_insert _ _ _).mpr ⟨hmp, hall⟩⟩
+    calc (T.filter P2).card
+        ≤ ((oneExtensions H).biUnion
+            (fun m => (Finset.range (x+1)).filter
+              (fun a => ∀ h ∈ insert m H, (a+h).Prime))).card := Finset.card_le_card hsub
+      _ ≤ ∑ m ∈ oneExtensions H, ((Finset.range (x+1)).filter
+            (fun a => ∀ h ∈ insert m H, (a+h).Prime)).card := Finset.card_biUnion_le
+      _ = ∑ m ∈ oneExtensions H, tupleCount (insert m H) x := by
+            refine Finset.sum_congr rfl (fun m _ => ?_); rw [tupleCount]
+  -- BRANCH 3: the good anchors ARE consecutive realizations
+  have hgood : (T.filter (fun a => ¬ P2 a)).card ≤ consCount w L x := by
+    rw [consCount]
+    have key : ∀ a ∈ T.filter (fun a => ¬ P2 a),
+        a.Prime ∧ q (Nat.count Nat.Prime a) = a ∧ a ≤ x ∧ Real.sqrt x < (a:ℝ)
+          ∧ IsConsecRealization w L (Nat.count Nat.Prime a) := by
+      intro a ha
+      rw [Finset.mem_filter] at ha
+      obtain ⟨haT, hnP2⟩ := ha
+      rw [hTdef, Finset.mem_filter] at haT
+      obtain ⟨haS, hnP1⟩ := haT
+      obtain ⟨hax, hall⟩ := (hmemS a).mp haS
+      have hap : a.Prime := by simpa using hall 0 h0
+      have hqn : q (Nat.count Nat.Prime a) = a := q_eq_of_count hap rfl
+      have hsqlt : Real.sqrt x < (a:ℝ) := by
+        simp only [hP1def, not_le] at hnP1; exact hnP1
+      have hbig : ∀ p : ℕ, p.Prime → p ≤ H.card + 1 → p < a := by
+        intro p hp hpc
+        have hpR : (p:ℝ) ≤ (L:ℝ) + 2 := by
+          rw [hcard] at hpc
+          have : (p:ℝ) ≤ ((L+2 : ℕ) : ℝ) := by exact_mod_cast hpc
+          push_cast at this; linarith
+        have : (p:ℝ) < (a:ℝ) := by linarith
+        exact_mod_cast this
+      have hnone : ∀ m, 0 < m → m < offsetSpan H → m ∉ H → ¬ (a+m).Prime := by
+        intro m hm0 hmD hmH ham
+        exact hnP2 ⟨m, mem_oneExtensions_of_prime_shift h0 hm0 hmD hmH hall ham hbig, ham⟩
+      exact ⟨hap, hqn, hax, hsqlt, isConsecRealization_of_primes hcard hqn hall hnone⟩
+    refine Finset.card_le_card_of_injOn (fun a => Nat.count Nat.Prime a) ?_ ?_
+    · intro a ha
+      obtain ⟨hap, hqn, hax, hsqlt, hreal⟩ := key a ha
+      rw [Finset.mem_filter, Finset.mem_range]
+      show Nat.count Nat.Prime a < x + 1 ∧ _
+      refine ⟨?_, hreal, ?_, ?_⟩
+      · have := count_lt_self_of_prime hap; omega
+      · rw [hqn]; exact hsqlt
+      · rw [hqn]; exact hax
+    · intro a ha b hb hab
+      obtain ⟨hap, hqa, _⟩ := key a ha
+      obtain ⟨hbp, hqb, _⟩ := key b hb
+      simp only at hab
+      rw [← hqa, ← hqb, hab]
+  omega
+
+/-- T3 STEP 2: the insert algebra of `M_H(x)`. Kept division-shaped (the kickoff's
+"no `field_simp` storms"): the extra point costs exactly one power of `ln x` and
+one singular-series ratio. -/
+theorem modelMass_insert {H : Finset ℕ} {m x : ℕ} (hm : m ∉ H)
+    (hS : singularSeries H ≠ 0) (hs : Real.log x ≠ 0) :
+    modelMass (insert m H) x
+      = modelMass H x * (singularSeries (insert m H) / singularSeries H) / Real.log x := by
+  classical
+  rw [modelMass, modelMass, Finset.card_insert_of_not_mem hm, pow_succ]
+  field_simp
+  ring
+
+/-- Step 5's uniformity, the 4.2 side: at the budget maximum `L + 2 ≤ 4t` the
+extension factor `L ln(L+2)²` is bounded by `64 t³`, free of `(w, L)`. -/
+theorem mul_log_sq_le {Lr t : ℝ} (hL0 : 0 ≤ Lr) (ht : 1 ≤ t) (hLt : Lr + 2 ≤ 4 * t) :
+    Lr * Real.log (Lr + 2) ^ 2 ≤ 64 * t ^ 3 := by
+  have hlog0 : 0 ≤ Real.log (Lr + 2) := Real.log_nonneg (by linarith)
+  have hlog : Real.log (Lr + 2) ≤ 4 * t := by
+    have := Real.log_le_sub_one_of_pos (show (0:ℝ) < Lr + 2 by linarith)
+    linarith
+  have h1 : Real.log (Lr + 2) ^ 2 ≤ (4*t)^2 := by nlinarith
+  nlinarith [sq_nonneg t]
+
+/-- Step 5's uniformity, the 4.1 side: the whole exponent of `modelMass_ge_exp`
+is bounded by `196 t²` inside the budget, free of `(w, L)`. -/
+theorem mul_log_le {Lr t : ℝ} (hL0 : 0 ≤ Lr) (ht : 1 ≤ t) (hLt : Lr + 2 ≤ 4 * t) :
+    12 * Lr * Real.log (Lr + 2) + (Lr + 1) * t ≤ 196 * t ^ 2 := by
+  have hlog0 : 0 ≤ Real.log (Lr + 2) := Real.log_nonneg (by linarith)
+  have hlog : Real.log (Lr + 2) ≤ 4 * t := by
+    have := Real.log_le_sub_one_of_pos (show (0:ℝ) < Lr + 2 by linarith)
+    linarith
+  nlinarith
+
+/-- `√(e^y) = e^{y/2}`; the ONE Real/Nat-free sqrt bridge of the mass clause. -/
+theorem sqrt_exp (y : ℝ) : Real.sqrt (Real.exp y) = Real.exp (y / 2) := by
+  rw [show y = y/2 + y/2 by ring, Real.exp_add, Real.sqrt_mul_self (Real.exp_nonneg _)]
+  ring_nf
+
+section Lemma43Limits
+
+open Filter
+
+/-- Step 5's ONE limit: `(lnln x)^n / ln x → 0` for every `n`. With `s = ln x` this
+is `(ln s)^n = o(s)` (`Real.isLittleO_pow_log_id_atTop`) composed with `ln x → ∞`.
+Both closing clauses of 4.3 reduce to this, at `n = 3` (the 4.2 extension fraction)
+and `n = 2` (the 4.1 mass margin). -/
+theorem tendsto_pow_loglog_div_log (n : ℕ) :
+    Tendsto (fun x : ℕ => (Real.log (Real.log x))^n / Real.log x) atTop (nhds 0) := by
+  have h1 : Tendsto (fun s : ℝ => (Real.log s)^n / s) atTop (nhds 0) :=
+    (Real.isLittleO_pow_log_id_atTop (n := n)).tendsto_div_nhds_zero
+  exact h1.comp (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop)
+
+/-- The eventual form of the limit: any fixed multiple of `(lnln x)^n` is
+eventually below any fixed positive multiple of `ln x`. `c` is NOT assumed
+nonnegative -- Lemma 4.2 exports `C₂` with no sign. -/
+theorem eventually_pow_loglog_le (n : ℕ) (c : ℝ) {ε : ℝ} (hε : 0 < ε) :
+    ∀ᶠ x : ℕ in atTop, c * (Real.log (Real.log x))^n ≤ ε * Real.log x := by
+  have hlog : ∀ᶠ x : ℕ in atTop, (1:ℝ) ≤ Real.log x :=
+    (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop).eventually_ge_atTop 1
+  have h := (tendsto_pow_loglog_div_log n).eventually
+    (gt_mem_nhds (show (0:ℝ) < ε / (|c| + 1) by positivity))
+  filter_upwards [h, hlog] with x hx hs
+  have hs0 : (0:ℝ) < Real.log x := by linarith
+  rw [div_lt_iff₀ hs0] at hx
+  have hT0 : (0:ℝ) ≤ (Real.log (Real.log x))^n := pow_nonneg (Real.log_nonneg hs) n
+  have hcabs : (0:ℝ) < |c| + 1 := by positivity
+  calc c * (Real.log (Real.log x))^n
+      ≤ (|c| + 1) * (Real.log (Real.log x))^n := by
+        refine mul_le_mul_of_nonneg_right ?_ hT0
+        have := le_abs_self c; linarith
+    _ ≤ (|c| + 1) * (ε / (|c| + 1) * Real.log x) :=
+        mul_le_mul_of_nonneg_left hx.le hcabs.le
+    _ = ε * Real.log x := by field_simp
+
+/-- The mass margin (step 5, LIMIT B), in the `(w, L)`-free shape the budget
+supplies: `x e^{-196 (lnln x)²} ≥ 8(√x + 1)` eventually. Reduces to
+`s/2 - 196 (ln s)² → ∞`, i.e. `(ln s)² = o(s)`. -/
+theorem eventually_mass_margin :
+    ∀ᶠ x : ℕ in atTop, 8 * (Real.sqrt x + 1)
+      ≤ (x:ℝ) * Real.exp (-(196 * (Real.log (Real.log x))^2)) := by
+  have hlog12 : ∀ᶠ x : ℕ in atTop, (12:ℝ) ≤ Real.log x :=
+    (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop).eventually_ge_atTop 12
+  filter_upwards [eventually_pow_loglog_le 2 196 (show (0:ℝ) < 1/4 by norm_num),
+    hlog12, eventually_ge_atTop 1] with x hxe hs hx1
+  have hx0 : (0:ℝ) < (x:ℝ) := by exact_mod_cast Nat.lt_of_lt_of_le Nat.zero_lt_one hx1
+  have hx1R : (1:ℝ) ≤ (x:ℝ) := by exact_mod_cast hx1
+  have hsqrt : Real.sqrt (x:ℝ) = Real.exp (Real.log x / 2) := by
+    conv_lhs => rw [← Real.exp_log hx0]
+    exact sqrt_exp _
+  have hxexp : (x:ℝ) * Real.exp (-(196 * (Real.log (Real.log x))^2))
+      = Real.exp (Real.log x - 196 * (Real.log (Real.log x))^2) := by
+    rw [show Real.log x - 196 * (Real.log (Real.log x))^2
+        = Real.log x + (-(196 * (Real.log (Real.log x))^2)) by ring,
+      Real.exp_add, Real.exp_log hx0]
+  have hsq1 : (1:ℝ) ≤ Real.sqrt x := by
+    rw [show (1:ℝ) = Real.sqrt 1 by simp]; exact Real.sqrt_le_sqrt hx1R
+  have hlog16 : Real.log 16 < 3 := by
+    rw [show (16:ℝ) = 2^4 by norm_num, Real.log_pow]
+    have := Real.log_two_lt_d9
+    push_cast; linarith
+  rw [hxexp]
+  calc 8 * (Real.sqrt x + 1) ≤ 16 * Real.sqrt x := by linarith
+    _ = Real.exp (Real.log 16) * Real.exp (Real.log x / 2) := by
+        rw [Real.exp_log (by norm_num), hsqrt]
+    _ = Real.exp (Real.log 16 + Real.log x / 2) := by rw [Real.exp_add]
+    _ ≤ Real.exp (Real.log x - 196 * (Real.log (Real.log x))^2) := by
+        rw [Real.exp_le_exp]; linarith
+
+/-- Step 5's threshold basket (E1)-(E6), `Eventually.and`-ed for the single
+`Filter.eventually_atTop` extraction of 4.3's `x₀`. Every clause is free of
+`(w, L)`: the uniformity discipline of the kickoff. The pattern is `cbudget`'s. -/
+theorem consCount_basket (κ : ℝ) (C₄ : ℝ) (xA : ℕ) :
+    ∀ᶠ x : ℕ in atTop,
+      3 ≤ x ∧ xA ≤ x ∧ (1:ℝ) ≤ Real.log (Real.log x)
+      ∧ 128 * C₄ * (Real.log (Real.log x))^3 ≤ (1/8) * Real.log x
+      ∧ 8 * (Real.sqrt x + 1) ≤ (x:ℝ) * Real.exp (-(196 * (Real.log (Real.log x))^2))
+      ∧ 16 * κ * (Real.log (Real.log x))^2 ≤ Real.log x ^ 3
+      ∧ 4 * Real.log (Real.log x) ≤ Real.sqrt x := by
+  have hlog1 : ∀ᶠ x : ℕ in atTop, (1:ℝ) ≤ Real.log x :=
+    (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop).eventually_ge_atTop 1
+  have ht1 : ∀ᶠ x : ℕ in atTop, (1:ℝ) ≤ Real.log (Real.log x) :=
+    ((Real.tendsto_log_atTop.comp
+      (Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop))).eventually_ge_atTop 1
+  filter_upwards [eventually_ge_atTop 3, eventually_ge_atTop xA, ht1,
+    eventually_pow_loglog_le 3 (128*C₄) (show (0:ℝ) < 1/8 by norm_num),
+    eventually_mass_margin,
+    eventually_pow_loglog_le 2 (16*κ) (show (0:ℝ) < 1 by norm_num),
+    eventually_pow_loglog_le 1 8 (show (0:ℝ) < 1 by norm_num),
+    hlog1] with x h3 hxA htt hB4 hB5 hB6 hB7 hs1
+  refine ⟨h3, hxA, htt, hB4, hB5, ?_, ?_⟩
+  · -- (E5): `16 κ t² ≤ s ≤ s³`
+    have hsq : (1:ℝ) ≤ Real.log x ^ 2 := by nlinarith
+    have : Real.log x ≤ Real.log x ^ 3 := by nlinarith
+    linarith
+  · -- (E6): `4t ≤ s/2 ≤ √x`, via `ln √x ≤ √x - 1`
+    have hx0 : (0:ℝ) < (x:ℝ) := by
+      have : (3:ℝ) ≤ (x:ℝ) := by exact_mod_cast h3
+      linarith
+    have hsq : Real.log (Real.sqrt x) ≤ Real.sqrt x - 1 :=
+      Real.log_le_sub_one_of_pos (Real.sqrt_pos.mpr hx0)
+    rw [Real.log_sqrt hx0.le] at hsq
+    simp only [pow_one] at hB7
+    linarith
+
+end Lemma43Limits
+
+set_option maxHeartbeats 400000 in
 /-- LEMMA 4.3 (consecutive lower bound; the transfer; v1.1). Let `w` be a
 gap word whose point set `H(w)` is admissible, `|H(w)| = L+1 ≤ 4 lnln x - 1`,
 span `≤ κ L ln(L+2)` for a fixed `κ ≥ 1` (hence far inside A's `(ln x)^3`
@@ -1220,7 +1520,139 @@ theorem consCount_lower_bound (hA : HLQuantA) (κ : ℝ) (hκ : 1 ≤ κ) :
       (offsetSpan (wordPointSet w L) : ℝ) ≤ κ * (L : ℝ) * Real.log ((L : ℝ) + 2) →
       modelMass (wordPointSet w L) x / 4 ≤ (consCount w L x : ℝ)
         ∧ 1 ≤ consCount w L x := by
-  sorry
+
+  classical
+  obtain ⟨xA, hA'⟩ := hA
+  obtain ⟨C₂, hC₂⟩ := oneExtension_sum_le κ hκ
+  obtain ⟨x₀, hx₀⟩ := Filter.eventually_atTop.mp (consCount_basket κ (max C₂ 1) xA)
+  refine ⟨x₀, fun x hx w L hadm hcard hbudget hspan => ?_⟩
+  obtain ⟨h3, hxA, ht1, hB4, hB5, hB6, hB7⟩ := hx₀ x hx
+  set C₄ := max C₂ 1 with hC₄def
+  have hC₄1 : (1:ℝ) ≤ C₄ := le_max_right _ _
+  have hC₄2 : C₂ ≤ C₄ := le_max_left _ _
+  set H := wordPointSet w L with hHdef
+  have hbonf : ((L:ℝ)+2) ≤ Real.sqrt x → tupleCount H x
+      ≤ consCount w L x + (Nat.sqrt x + 1)
+        + ∑ m ∈ oneExtensions H, tupleCount (insert m H) x := by
+    rw [hHdef]; exact fun hthr => consCount_bonferroni hcard hthr
+  have h0 : 0 ∈ H := by rw [hHdef]; exact zero_mem_wordPointSet
+  clear_value H
+  set s := Real.log x with hsdef
+  set t := Real.log s with htdef
+  -- basic positivity
+  have hx3R : (3:ℝ) ≤ (x:ℝ) := by exact_mod_cast h3
+  have hx0 : (0:ℝ) < (x:ℝ) := by linarith
+  have hs0 : (0:ℝ) < s := Real.log_pos (by linarith)
+  have heven : ∀ h ∈ H, Even h := even_of_admissible h0 hadm
+  have hcardR : ((H.card : ℝ)) = (L:ℝ) + 1 := by rw [hcard]; push_cast; ring
+  have hLt : (L:ℝ) + 2 ≤ 4 * t := by linarith
+  have hL0 : (0:ℝ) ≤ (L:ℝ) := Nat.cast_nonneg _
+  have hS0 : (0:ℝ) < singularSeries H := singularSeries_pos hadm
+  have hM0 : (0:ℝ) < modelMass H x := by rw [modelMass]; positivity
+  -- span control
+  have hlog0 : (0:ℝ) ≤ Real.log ((L:ℝ)+2) := Real.log_nonneg (by linarith)
+  have hlogL : Real.log ((L:ℝ)+2) ≤ 4*t := by
+    have := Real.log_le_sub_one_of_pos (show (0:ℝ) < (L:ℝ)+2 by linarith); linarith
+  have hspanS3 : (offsetSpan H : ℝ) ≤ s^3 := by
+    have h1 : κ * (L:ℝ) * Real.log ((L:ℝ)+2) ≤ 16 * κ * t^2 := by
+      have hL4t : (L:ℝ) ≤ 4*t := by linarith
+      have step1 : (L:ℝ) * Real.log ((L:ℝ)+2) ≤ (4*t)*(4*t) :=
+        mul_le_mul hL4t hlogL hlog0 (by linarith)
+      nlinarith [mul_le_mul_of_nonneg_left step1 (show (0:ℝ) ≤ κ by linarith)]
+    linarith
+  have hoffH : ∀ h ∈ H, (h:ℝ) ≤ s^3 := by
+    intro h hh
+    have : (h:ℝ) ≤ (offsetSpan H : ℝ) := by exact_mod_cast Finset.le_sup (f := id) hh
+    linarith
+  have hcardA : ((H.card:ℝ)) ≤ 4*t := by rw [hcardR]; linarith
+  -- HLQuantA lower on H
+  have hlow := (hA' x hxA H h0 heven hadm hcardA hoffH).1
+  -- the ratio sum
+  have hratio : ∑ m ∈ oneExtensions H, singularSeries (insert m H) / singularSeries H
+      ≤ 64 * C₄ * t^3 := by
+    have hsp : (offsetSpan H : ℝ) ≤ κ * ((H.card : ℝ) - 1) * Real.log ((H.card : ℝ) + 1) := by
+      rw [hcardR, show ((L:ℝ)+1)-1 = (L:ℝ) by ring, show ((L:ℝ)+1)+1 = (L:ℝ)+2 by ring]
+      exact hspan
+    have h := hC₂ H h0 heven hadm hsp
+    rw [hcardR, show ((L:ℝ)+1)-1 = (L:ℝ) by ring, show ((L:ℝ)+1)+1 = (L:ℝ)+2 by ring] at h
+    have hfac0 : (0:ℝ) ≤ (L:ℝ) * Real.log ((L:ℝ)+2)^2 := by positivity
+    have hmono := mul_log_sq_le hL0 ht1 hLt
+    calc ∑ m ∈ oneExtensions H, singularSeries (insert m H) / singularSeries H
+        ≤ C₂ * (L:ℝ) * Real.log ((L:ℝ)+2)^2 := h
+      _ = C₂ * ((L:ℝ) * Real.log ((L:ℝ)+2)^2) := by ring
+      _ ≤ C₄ * ((L:ℝ) * Real.log ((L:ℝ)+2)^2) := mul_le_mul_of_nonneg_right hC₄2 hfac0
+      _ ≤ C₄ * (64 * t^3) := mul_le_mul_of_nonneg_left hmono (by linarith)
+      _ = 64 * C₄ * t^3 := by ring
+  -- the extension sum
+  have hsum : ∑ m ∈ oneExtensions H, (tupleCount (insert m H) x : ℝ)
+      ≤ modelMass H x / 8 := by
+    have hstep : ∀ m ∈ oneExtensions H, (tupleCount (insert m H) x : ℝ)
+        ≤ 2 * (modelMass H x * (singularSeries (insert m H) / singularSeries H) / s) := by
+      intro m hm
+      rw [oneExtensions, Finset.mem_filter, Finset.mem_range] at hm
+      obtain ⟨hmD, hmeven, hm0, hmH, hmadm⟩ := hm
+      have h0' : 0 ∈ insert m H := Finset.mem_insert_of_mem h0
+      have heven' : ∀ h ∈ insert m H, Even h :=
+        (Finset.forall_mem_insert _ _ _).mpr ⟨hmeven, heven⟩
+      have hcard' : ((insert m H).card : ℝ) = (L:ℝ)+2 := by
+        rw [Finset.card_insert_of_not_mem hmH, hcard]; push_cast; ring
+      have hcardA' : ((insert m H).card:ℝ) ≤ 4*t := by rw [hcard']; linarith
+      have hoff' : ∀ h ∈ insert m H, (h:ℝ) ≤ s^3 := by
+        intro h hh
+        rcases Finset.mem_insert.mp hh with rfl | hh
+        · have : (h:ℝ) ≤ (offsetSpan H : ℝ) := by exact_mod_cast hmD.le
+          linarith
+        · exact hoffH h hh
+      have hup := (hA' x hxA (insert m H) h0' heven' hmadm hcardA' hoff').2
+      rwa [modelMass_insert hmH (ne_of_gt hS0) (ne_of_gt hs0)] at hup
+    calc ∑ m ∈ oneExtensions H, (tupleCount (insert m H) x : ℝ)
+        ≤ ∑ m ∈ oneExtensions H, 2 * (modelMass H x
+            * (singularSeries (insert m H) / singularSeries H) / s) := Finset.sum_le_sum hstep
+      _ = (2 * modelMass H x / s)
+            * ∑ m ∈ oneExtensions H, singularSeries (insert m H) / singularSeries H := by
+          rw [Finset.mul_sum]
+          refine Finset.sum_congr rfl (fun m _ => ?_)
+          ring
+      _ ≤ (2 * modelMass H x / s) * (64 * C₄ * t^3) := by
+          refine mul_le_mul_of_nonneg_left hratio ?_
+          positivity
+      _ ≤ modelMass H x / 8 := by
+          have hkey : (2 * modelMass H x / s) * (64 * C₄ * t^3)
+              = (modelMass H x * (128 * C₄ * t^3)) / s := by ring
+          rw [hkey, div_le_iff₀ hs0]
+          nlinarith [mul_le_mul_of_nonneg_left hB4 hM0.le]
+  -- the mass margin
+  have hmass : 8 * (Real.sqrt x + 1) ≤ modelMass H x := by
+    have hge := modelMass_ge_exp h3 h0 hadm
+    rw [hcardR, show ((L:ℝ)+1)-1 = (L:ℝ) by ring, show ((L:ℝ)+1)+1 = (L:ℝ)+2 by ring] at hge
+    have hexp : (x:ℝ) * Real.exp (-(196*t^2))
+        ≤ (x:ℝ) * Real.exp (-(12*(L:ℝ)*Real.log ((L:ℝ)+2)) - ((L:ℝ)+1)*t) := by
+      refine mul_le_mul_of_nonneg_left ?_ hx0.le
+      rw [Real.exp_le_exp]
+      have := mul_log_le hL0 ht1 hLt
+      linarith
+    linarith
+  -- Bonferroni, cast to ℝ
+  have hthr : ((L:ℝ)+2) ≤ Real.sqrt x := by linarith
+  have hbonR : (tupleCount H x : ℝ) ≤ (consCount w L x : ℝ) + ((Nat.sqrt x:ℝ) + 1)
+      + ∑ m ∈ oneExtensions H, (tupleCount (insert m H) x : ℝ) := by
+    have hb := hbonf hthr
+    have hc : ((tupleCount H x : ℕ) : ℝ) ≤ ((consCount w L x + (Nat.sqrt x + 1)
+        + ∑ m ∈ oneExtensions H, tupleCount (insert m H) x : ℕ) : ℝ) := by exact_mod_cast hb
+    push_cast at hc
+    linarith
+  have hnatsq : (Nat.sqrt x : ℝ) ≤ Real.sqrt x := by
+    refine (Real.le_sqrt (by positivity) (by positivity)).mpr ?_
+    have h := Nat.sqrt_le' x
+    have h' : ((Nat.sqrt x ^ 2 : ℕ):ℝ) ≤ ((x:ℕ):ℝ) := by exact_mod_cast h
+    push_cast at h'
+    exact h'
+  -- FINAL BALANCE
+  have hfinal : modelMass H x / 4 ≤ (consCount w L x : ℝ) := by linarith
+  refine ⟨hfinal, ?_⟩
+  have h1 : (1:ℝ) ≤ (consCount w L x : ℝ) := by
+    have := Real.sqrt_nonneg (x:ℝ); linarith
+  exact_mod_cast h1
 
 /-! ### Proof-layer helpers for Lemma 4.4 (item-0015; not statements) -/
 
@@ -1445,13 +1877,13 @@ def cword' (J K : ℕ) (j : ℕ) : ℕ := cElem' J K (j + 1) - cElem' J K j
 /-- Section 5: `gamma = q_{i_0+1} - q_{i_0}` (even). -/
 def cgamma (J K : ℕ) : ℕ := cprime (cL J K) (cI J + 1) - cprime (cL J K) (cI J)
 
-/-! ### Glue (PROVED, flagged) -/
+/-! ### Glue (PROVED, flagged): `q_eq_of_count` relocated
 
-/-- Bridge from `Nat.count` (computable) to `Nat.nth` (not), used only by
-the smoke tests below. Flagged as glue in the traceability table. -/
-theorem q_eq_of_count {n p : ℕ} (hp : p.Prime) (hc : Nat.count Nat.Prime p = n) :
-    q n = p := by
-  rw [q, ← hc, Nat.nth_count hp]
+Moved UP to the Lemma 4.3 proof-layer helpers (item-0015 s5) with statement,
+docstring and proof unchanged: `consCount_bonferroni` is its first consumer and
+Lean requires it declared earlier. It remains the project's ONLY glue proof, as
+the traceability table records; the smoke tests below still consume it. Same
+discipline as the ANN-38/39/40 relocation note above. -/
 
 /-! ### Proof-layer helpers (item-0015; not statements) -/
 
