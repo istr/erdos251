@@ -431,6 +431,157 @@ theorem modelMass_ge_exp {x : ℕ} (hx : 3 ≤ x) {H : Finset ℕ} (h0 : 0 ∈ H
   apply mul_le_mul_of_nonneg_right _ (by positivity)
   exact mul_le_mul_of_nonneg_right hclause1 hxnn
 
+/-! ### Proof-layer helpers: the Mertens pack (item-0015 s3; not statements)
+
+Mathlib has NO Mertens theorems at the pin (steering-verified by full-tree
+grep; re-verified this session). M1 below is the first piece: it depends
+only on mathlib (no erdos251 definitions), so it is relocatable to
+`Chebyshev.lean` and is an upstream candidate.
+
+ROUTE DEFECT FOUND (session 3, reported to steering): the kickoff's
+integral-free DYADIC route to M2 does NOT reach `∑_{p≤P} 1/p ≤ lnln P + c₂`.
+On the block `p ∈ (2^j, 2^{j+1}]` it can only give `∑ 1/p ≤ (log 2 + C)/(j log 2)`,
+where `C > 0` is the sum of M1's two error constants, so the summed
+coefficient is `1 + C/log 2 > 1` — with the crude primorial input, `4`
+(numerically confirmed against the true block sums). T2's frozen
+`log(k+2)^2` budget spends one log on M3 and one on the span, so it needs
+M3's exponent `≤ 1`, i.e. M2's coefficient EXACTLY 1. The dyadic method
+cannot deliver it at any block ratio; the sharp constant needs partial
+summation (M1 in BOTH directions + Abel). See the session report.
+-/
+
+/-- The primes `≤ N`, as a `Finset ℕ` (mathlib's primorial index set). -/
+abbrev primesUpto (N : ℕ) : Finset ℕ := (Finset.range (N + 1)).filter Nat.Prime
+
+/-- Chebyshev's factorial factorization, restricted to the primes that
+actually occur: `N! = ∏_{p ≤ N} p^{v_p(N!)}`. Primes `p > N` do not divide
+`N!`, so they contribute `p^0 = 1`. -/
+theorem prod_primesUpto_pow_padicValNat (N : ℕ) :
+    ∏ p ∈ primesUpto N, p ^ padicValNat p (Nat.factorial N) = Nat.factorial N := by
+  have hfac : Nat.factorial N ≠ 0 := Nat.factorial_ne_zero N
+  have hbig := Nat.prod_pow_prime_padicValNat (Nat.factorial N) hfac
+    (Nat.factorial N + 1) (by omega)
+  have hsub : ∏ p ∈ primesUpto N, p ^ padicValNat p (Nat.factorial N)
+      = ∏ p ∈ (Finset.range (Nat.factorial N + 1)).filter Nat.Prime,
+          p ^ padicValNat p (Nat.factorial N) := by
+    refine Finset.prod_subset ?_ ?_
+    · intro p hp
+      rw [Finset.mem_filter, Finset.mem_range] at hp ⊢
+      exact ⟨by have := Nat.self_le_factorial N; omega, hp.2⟩
+    · intro p hp hnot
+      rw [Finset.mem_filter, Finset.mem_range] at hp hnot
+      have hpp : p.Prime := hp.2
+      have hpN : N < p := by
+        by_contra hc
+        exact hnot ⟨by omega, hpp⟩
+      have hnd : ¬ (p ∣ Nat.factorial N) := by
+        rw [Nat.Prime.dvd_factorial hpp]; omega
+      rw [padicValNat.eq_zero_of_not_dvd hnd, pow_zero]
+  rw [hsub, hbig]
+
+/-- Log form: `log N! = ∑_{p ≤ N} v_p(N!) log p`. -/
+theorem log_factorial_eq (N : ℕ) :
+    Real.log (Nat.factorial N : ℝ)
+      = ∑ p ∈ primesUpto N, (padicValNat p (Nat.factorial N) : ℝ) * Real.log p := by
+  have h := prod_primesUpto_pow_padicValNat N
+  have hcast : ((∏ p ∈ primesUpto N, p ^ padicValNat p (Nat.factorial N) : ℕ) : ℝ)
+      = ∏ p ∈ primesUpto N, ((p : ℝ) ^ padicValNat p (Nat.factorial N)) := by
+    push_cast; ring
+  calc Real.log (Nat.factorial N : ℝ)
+      = Real.log ((∏ p ∈ primesUpto N, p ^ padicValNat p (Nat.factorial N) : ℕ) : ℝ) := by
+        rw [h]
+    _ = Real.log (∏ p ∈ primesUpto N, ((p : ℝ) ^ padicValNat p (Nat.factorial N))) := by
+        rw [hcast]
+    _ = ∑ p ∈ primesUpto N, Real.log ((p : ℝ) ^ padicValNat p (Nat.factorial N)) := by
+        refine Real.log_prod _ _ (fun p hp => ?_)
+        rw [Finset.mem_filter] at hp
+        have : (0:ℝ) < (p:ℝ) := by exact_mod_cast hp.2.pos
+        positivity
+    _ = ∑ p ∈ primesUpto N, (padicValNat p (Nat.factorial N) : ℝ) * Real.log p :=
+        Finset.sum_congr rfl (fun p _ => by rw [Real.log_pow])
+
+/-- The `i = 1` term of Legendre's formula: `v_p(N!) ≥ ⌊N/p⌋`. -/
+theorem padicValNat_factorial_ge_div {p N : ℕ} (hp : p.Prime) (hpN : p ≤ N) :
+    N / p ≤ padicValNat p (Nat.factorial N) := by
+  haveI : Fact p.Prime := ⟨hp⟩
+  rw [padicValNat_factorial (b := Nat.log p N + 1) (by omega)]
+  have h1 : (1:ℕ) ∈ Finset.Ico 1 (Nat.log p N + 1) := by
+    rw [Finset.mem_Ico]
+    exact ⟨le_rfl, by have := Nat.log_pos hp.one_lt hpN; omega⟩
+  have := Finset.single_le_sum (f := fun i => N / p ^ i) (fun i _ => Nat.zero_le _) h1
+  simpa using this
+
+/-- `∑_{p ≤ N} log p = log N# ≤ N log 4` (ℕ-indexed form, for the Mertens pack). -/
+theorem sum_log_primesUpto_le (N : ℕ) :
+    ∑ p ∈ primesUpto N, Real.log p ≤ (N : ℝ) * Real.log 4 := by
+  have hprod : ∑ p ∈ primesUpto N, Real.log (p : ℝ) = Real.log ((primorial N : ℕ) : ℝ) := by
+    rw [primorial]
+    push_cast
+    rw [Real.log_prod]
+    intro p hp
+    rw [Finset.mem_filter] at hp
+    have : (0:ℝ) < (p:ℝ) := by exact_mod_cast hp.2.pos
+    exact ne_of_gt this
+  rw [hprod]
+  have h4R : ((primorial N : ℕ) : ℝ) ≤ (4:ℝ) ^ N := by exact_mod_cast primorial_le_4_pow N
+  calc Real.log ((primorial N : ℕ) : ℝ) ≤ Real.log ((4:ℝ) ^ N) :=
+        Real.log_le_log (by exact_mod_cast (primorial_pos N)) h4R
+    _ = (N : ℝ) * Real.log 4 := by rw [Real.log_pow]
+
+/-- MERTENS 1 (upper): `∑_{p ≤ N} (log p)/p ≤ log N + log 4`.
+
+Chebyshev's log-factorial identity: `log N! = ∑_{p ≤ N} v_p(N!) log p`
+(Legendre, `padicValNat_factorial`), `v_p(N!) ≥ ⌊N/p⌋ > N/p - 1`, and
+`N! ≤ N^N`. Rearranged against `∑_{p ≤ N} log p ≤ N log 4`
+(`primorial_le_4_pow`). Constant `c₁ = log 4`, explicit. No integrals. -/
+theorem mertens_one_upper {N : ℕ} (hN : 1 ≤ N) :
+    ∑ p ∈ primesUpto N, Real.log p / p ≤ Real.log N + Real.log 4 := by
+  have hNR : (0:ℝ) < (N:ℝ) := by exact_mod_cast hN
+  -- pointwise minorant of each Legendre term
+  have hpt : ∀ p ∈ primesUpto N,
+      ((N:ℝ)/(p:ℝ) - 1) * Real.log p
+        ≤ (padicValNat p (Nat.factorial N) : ℝ) * Real.log p := by
+    intro p hp
+    rw [Finset.mem_filter, Finset.mem_range] at hp
+    have hpp : p.Prime := hp.2
+    have hpN : p ≤ N := by omega
+    have hpR : (0:ℝ) < (p:ℝ) := by exact_mod_cast hpp.pos
+    have hlogp : 0 ≤ Real.log p := Real.log_nonneg (by exact_mod_cast hpp.one_lt.le)
+    have hdm := Nat.div_add_mod N p
+    have hmod : N % p < p := Nat.mod_lt _ hpp.pos
+    have hnat : N < p * (N / p) + p := by omega
+    have hR : (N:ℝ) < (p:ℝ) * ((N / p : ℕ) : ℝ) + (p:ℝ) := by exact_mod_cast hnat
+    have hfloor : (N:ℝ)/(p:ℝ) - 1 ≤ ((N / p : ℕ) : ℝ) := by
+      rw [sub_le_iff_le_add, div_le_iff₀ hpR]
+      linarith
+    have hv : ((N / p : ℕ) : ℝ) ≤ (padicValNat p (Nat.factorial N) : ℝ) := by
+      exact_mod_cast padicValNat_factorial_ge_div hpp hpN
+    nlinarith [hlogp, hfloor, hv]
+  -- assemble the two-sided squeeze on `log N!`
+  have hsumeq : ∑ p ∈ primesUpto N, ((N:ℝ)/(p:ℝ) - 1) * Real.log p
+      = (N:ℝ) * (∑ p ∈ primesUpto N, Real.log p / p) - ∑ p ∈ primesUpto N, Real.log p := by
+    rw [Finset.mul_sum, ← Finset.sum_sub_distrib]
+    exact Finset.sum_congr rfl (fun p _ => by ring)
+  have hlow : (N:ℝ) * (∑ p ∈ primesUpto N, Real.log p / p) - ∑ p ∈ primesUpto N, Real.log p
+      ≤ Real.log (Nat.factorial N : ℝ) := by
+    rw [log_factorial_eq N, ← hsumeq]
+    exact Finset.sum_le_sum hpt
+  have hhigh : Real.log (Nat.factorial N : ℝ) ≤ (N:ℝ) * Real.log N := by
+    have h1 : ((Nat.factorial N : ℕ) : ℝ) ≤ ((N:ℝ)) ^ N := by
+      exact_mod_cast Nat.factorial_le_pow N
+    calc Real.log (Nat.factorial N : ℝ) ≤ Real.log ((N:ℝ) ^ N) :=
+          Real.log_le_log (by exact_mod_cast Nat.factorial_pos N) h1
+      _ = (N:ℝ) * Real.log N := by rw [Real.log_pow]
+  have hprim := sum_log_primesUpto_le N
+  -- divide by `N > 0`
+  have hkey : (N:ℝ) * (∑ p ∈ primesUpto N, Real.log p / p)
+      ≤ (N:ℝ) * (Real.log N + Real.log 4) := by
+    have hexp : (N:ℝ) * (Real.log N + Real.log 4)
+        = (N:ℝ) * Real.log N + (N:ℝ) * Real.log 4 := by ring
+    rw [hexp]
+    linarith [hlow, hhigh, hprim]
+  exact le_of_mul_le_mul_left hkey hNR
+
 /-! ## Section 4: the counting lemmata (conditional on A; classical citations) -/
 
 /-- LEMMA 4.1 (singular series lower bound). For admissible `H` of even
