@@ -1113,3 +1113,94 @@ annotations:
       granularity. Decision timing UNCHANGED: relocation executes
       at s3 adjudication as a mechanical move; no mid-session
       relocation; executor keeps building in the v3.1 layout.
+  - id: ANN-20260716-39
+    refs: [ANN-20260716-35, ANN-20260716-36, ANN-20260716-37, ANN-20260716-38]
+    date: 2026-07-16
+    note: >-
+      item-0015 SESSION 3 ADJUDICATED: ACCEPTED. Branch item-0015-s3
+      at 2dc3f654...ddcfe; chain verified against origin: main
+      b3b445c -> 1776014 (T1) -> b7259038 (ANN-36, v3.1 anchor) ->
+      a40f7ad (M1 + dyadic STOP) -> e779e85 (ANN-37 applied) ->
+      dfa3f91 (roadmap) -> bea34c5 (M2 + M3) -> 2dc3f65 (T2 step a);
+      executor commits authored under the operator git identity
+      (established convention, checked at 1776014). STEERING
+      RE-VERIFICATION (fetched origin; nothing taken on the report's
+      word): (i) lean/ diff anchor..tip touches exactly
+      Counting.lean, +531/-0 -- zero deleted lines, freeze gate
+      holds; (ii) lean/ diff main..tip is +852/-1, the single
+      deletion being T1's discharged sorry -- confirms the report's
+      807b6b7 claim on the byte-identical main tree (807b6b7 itself
+      is unreachable from any current ref; s2 was rebased onto main
+      as e8b743b..4d3503f); (iii) strict sorry grep at tip: 5 =
+      Counting 3 + Conditional 1 + Statement 1, survivors exactly
+      oneExtension_sum_le, consCount_lower_bound,
+      constr_consCount_pos; (iv) the new declarations present, MP
+      and 4.2 helpers in marked proof-layer sections;
+      (v) mertens_second_upper as landed: sum over primesUpto P of
+      1/p <= lnln P + mertensC2 with abbrev primesUpto = filter
+      Prime (range (N+1)) -- coefficient EXACTLY 1 as T2's frozen
+      budget requires. Axiom gate and local build accepted on the
+      executor record (in-sandbox builds remain blocked); NO CI
+      check-runs exist for the branch tip -- the merge to main is
+      the CI compile gate (s2 pattern). LANDED: T1
+      singularSeries_lower_bound with C = 12 (C = 10 does not close
+      under log_two_gt_d9-only numerics; the k = 0 corner needs the
+      exact singularSeries_singleton_zero, the generic bound is
+      useless there); Mertens pack M1-M3 sorry-free and sharp (M1
+      mertens_one_upper c1 = log 4 for N >= 1 via
+      padicValNat_factorial + primorial_le_4_pow; M2 coefficient
+      EXACTLY 1, c2 = 1 + b/log 2 - lnln 2 symbolic in M1's b; M3
+      exponent EXACTLY 1, c3 = exp(c2 + 1); AbelSummation unused,
+      integral-free as specified); T2 step (a) proved (nuMod_insert;
+      log_singularFactor_insert_sub_le: COLLISION contributes
+      exactly log(1 + 1/(p-1)), NEW contributes <= 0) and the k = 0
+      edge discharged IN LEAN (offsetSpan {0} = 0 by decide; frozen
+      4.2 reads 0 <= 0 there). The v3.1 refinement CONFIRMED in the
+      build: only M1-upper consumed, M1-lower never built; the
+      factorial lower bound N! >= (N/e)^N is off the critical path
+      and mathlib has no elementary form of it -- a real saving.
+      STEERING CORRECTION to ANN-38 (flagged, not silent):
+      Legendre's formula DOES exist at the mathlib pin as
+      padicValNat_factorial
+      (NumberTheory/Padics/PadicVal/Basic.lean:575); ANN-38's "no
+      named Legendre route" clause was a steering grep blind spot
+      (pattern factorization_factorial only). ANN-38's operative
+      conclusions stand (zero coupling to Chebyshev.lean; target
+      dedicated Mertens.lean; mathlib-only), and the landed M1 in
+      fact runs on the Legendre route. Executor kickoff corrections
+      verified at the pin and accepted: padicValNat_factorial as
+      above; inv_le_inv_of_le deprecated -> inv_anti0
+      (Algebra/Order/GroupWithZero/Unbundled.lean:1521). FOLLOW-UP
+      DISPOSITIONS: (1)+(3) MP relocation to dedicated
+      Erdos251/Mertens.lean (ANN-38) and primesLe/primesUpto
+      unification scheduled TOGETHER as a standalone mechanical
+      refactor with its own gate shape -- build green, axiom sets
+      identical, declaration names stable modulo the unification
+      map, moves + imports only; the per-session byte-identity gate
+      does not bind a sanctioned refactor -- operator decides
+      timing, steering recommends BEFORE session 4 so kickoff v4
+      anchors the final layout. (2) Unfreeze candidates booked to
+      the BET-04 statement-flag basket for chain-v1 sign-off: 4.1
+      clause-2 budget hypotheses x2 unused AND evenness unused in
+      BOTH 4.1 clauses -- notable asymmetry, evenness is a genuine
+      HLQuantA hypothesis; no mid-arc unfreeze. (4) HANDOVER
+      staleness fixed in this commit (stale pending-decision 1
+      struck; v3 pin sha claim corrected). (5) Methodology rule 12
+      (error-landing check) added to runs README in the companion
+      commit. (6) Report archival: the runs/ register already holds
+      run reports (dated model-track dirs with config.yaml);
+      steering recommends committing executor session reports there
+      and has prepared runs/20260716_opus4.8_item-0015-s3/ as an
+      OPTIONAL separate mbox (report verbatim, ASCII-clean, sha256
+      3fc8e757...8bfe3, plus register-conform config.yaml citing
+      both ephemeral kickoff hashes); the operator ratifies the
+      convention by applying it, or skips. MERGE: recommended --
+      item-0015-s3 into main is a fast-forward (main = b3b445c is
+      an ancestor, verified); the merge is the ratification and
+      fires the CI compile gate. NEXT: kickoff v4 on operator green
+      light against the post-merge (and, if so decided,
+      post-refactor) pin -- scope T2 (b) collision primes < span,
+      (c) split at k+2 (SMALL trivial via M3; LARGE = the
+      sieve-theoretic squarefree-divisor expansion with omega(d)
+      counting, the substantial piece), (d) assembly; T3 five-term
+      Bonferroni ledger; fork_merge stays s4/s5 as scoped.

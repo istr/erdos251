@@ -87,28 +87,48 @@ residuals + 12 skeleton statements).
   verified at pin, one unverified-at-pin). Inventory after merge: 11.
 - s2 Chebyshev risk resolved in-tree: Chebyshev.lean has
   centralBinom_le (hard half); s2 extracts pi(x) >= c x/log x.
+- item-0015 session 3 COMPLETE on branch item-0015-s3 (2dc3f65,
+  ANN-39): T1 (C = 12) + Mertens pack M1-M3 sharp + T2 step (a) +
+  k = 0 edge; Counting 4 -> 3; inventory after merge: 5.
 
 ## Pending decisions and gates (operator), round 2
-1. MERGE branch item-0015-s2 at 807b6b7 (adjudicated PASS, ANN-35;
-   the merge is the ratification; CI compile gate). Inventory after
-   merge: 6 = Counting 4 (exactly 4.1, 4.2, 4.3, assembly) +
-   Conditional 1 + Statement 1. item-0011 closed by co-funding.
-2. Session 3 DISPATCHED against the post-merge pin: kickoff v3 issued
-   ephemerally (steering sha256 385c1e91...d463d). Scope: 4.1
-   (Mertens-free route), Mertens pack M1-M3 (mathlib has none at the
-   pin), 4.2, 4.3 (Bonferroni ledger), assembly; fork_merge stays
-   s4/s5. MID-SESSION: 4.1 landed (1776014, C = 12); the dyadic
-   MP-M2 route was executor-caught DEFECTIVE (leading coefficient
-   1 + C/log r > 1 at every fixed block ratio vs the exactly-1 that
-   T2's frozen log^2 budget needs) and RETIRED; adjudicated ANN-37;
-   kickoff v3.1 issued ephemerally (delta: MP-M2 via discrete
-   Finset.sum_Ico_by_parts, integral-free, only MP-M1-upper
-   consumed, c2 = 1 + b/log 2 - lnln 2; steering sha256
-   f2976d93...d2d67). Next gate unchanged: session-3 completion
-   report (M2 shape) -> steering adjudication (carry MP-M1
-   relocation -- target: dedicated Mertens.lean per operator
-   preference, ANN-38; Chebyshev.lean fallback iff tight coupling
-   shows -- + ANN-36 upstream candidacy in the follow-up channel).
+1. MERGE branch item-0015-s3 at 2dc3f65 into main (fast-forward;
+   main = b3b445c is an ancestor, verified 2026-07-16; adjudicated
+   ACCEPTED, ANN-39; the merge is the ratification; the CI compile
+   gate fires on main -- no check-runs exist on the branch tip).
+   Inventory after merge: 5 = Counting 3 (exactly 4.2, 4.3,
+   constr_consCount_pos) + Conditional 1 + Statement 1. [The old
+   decision 1 -- merge s2 at 807b6b7 -- was already discharged: s2
+   was rebased onto main as e8b743b..4d3503f; 807b6b7 never was
+   main's tip and is unreachable from any current ref (ANN-39).]
+2. Session 3 CLOSED: ACCEPTED (ANN-39) at 2dc3f65. Kickoffs v3
+   (sha256 385c1e91...d463d) and v3.1 delta (sha256
+   f2976d93...d2d67) both ephemeral, never committed. Landed: T1
+   (C = 12, k = 0 exact via singularSeries_singleton_zero); Mertens
+   pack M1-M3 sorry-free sharp (M1 c1 = log 4 via
+   padicValNat_factorial + primorial_le_4_pow, N >= 1; M2
+   coefficient EXACTLY 1, c2 = 1 + b/log 2 - lnln 2; M3 exponent
+   EXACTLY 1, c3 = exp(c2 + 1); AbelSummation unused); T2 step (a)
+   (nuMod_insert, log_singularFactor_insert_sub_le) and the k = 0
+   edge discharged in Lean. Steering re-verified: lean/ diff
+   anchor..tip = Counting.lean only, +531/-0; vs main +852/-1 (the
+   one deletion = T1's sorry); strict inventory 5. NEXT GATES:
+   (a) merge = decision 1; (b) standalone MP refactor -- relocation
+   to dedicated Mertens.lean (ANN-38) + primesLe/primesUpto
+   unification -- own gate shape (build green, axiom sets
+   identical, names stable modulo unification, moves + imports
+   only), timing operator's, steering recommends BEFORE s4;
+   (c) kickoff v4 on operator green light against the post-merge,
+   post-refactor pin: T2 (b) collision primes < span, (c) split at
+   k+2 (SMALL trivial via M3; LARGE = sieve-theoretic
+   squarefree-divisor expansion with omega(d) counting, the
+   substantial piece), (d) assembly; T3 five-term Bonferroni
+   ledger; fork_merge stays s4/s5. Unfreeze candidates (4.1
+   clause-2 budget x2, evenness x2 -- evenness is a genuine
+   HLQuantA hypothesis, asymmetric drop) booked to the BET-04
+   basket; no mid-arc unfreeze. Report archival: optional runs/
+   mbox prepared (applying ratifies the convention; report sha256
+   3fc8e757...8bfe3).
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
