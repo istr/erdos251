@@ -85,3 +85,20 @@ Rules:
     advance and is exactly what caught the item-0015 s3 dyadic MP-M2
     defect (coefficient 4 vs the required exactly-1; ANN-37) before any
     Lean investment.
+13. Scratch-file probing against the built olean (2026-07-17). When
+    iterating inside a heavy module, develop candidate proofs in an
+    untracked scratch file that imports the module and states the
+    target under a scratch name; transplant once when it compiles.
+    A sorried original inside the imported .olean is only sorryAx and
+    does not interfere. This turned item-0015 s5's five-minute rebuild
+    cycles into seconds, and its corollary shaped s6: when a session
+    can live one layer downstream (Conditional against the cached
+    Counting olean), scope it there and the cycle never appears.
+14. Post-refine beta-reduction trap (2026-07-17). After `refine` with
+    lambda witnesses, per-index goals keep un-beta-reduced
+    applications like `(fun r => f (X + r)) r`; `set` silently fails
+    to fold them, omega then sees distinct atoms and fails with large
+    counterexamples that name nothing. One `show <target type>`
+    beta-reduces the goal and fixes all downstream matches. Same
+    family as the s5 isDefEq sinks (ANN-44/47): the cost is in what
+    the tactic silently does NOT match.

@@ -301,6 +301,22 @@ residuals + 12 skeleton statements).
    three reviews, so the done-move is an operator call, not new work);
    runs/README rule-13 candidate rides the same batch. The ONLY
    remaining sorry in the tree is the unconditional target itself.
+2e. POST-s6 BOOKKEEPING (steering batch, followup28 + roadmap mbox;
+   operator apply = ratification): steering re-executed G1-G4 on the
+   diff -- lean/ = Conditional.lean only, both frozen blocks
+   sha256-identical across pin/c6c0b98/HEAD (4805b8c3... /
+   ab0d99ec...), inventory 1 at Statement.lean:21, zero native_decide
+   in lean/ additions -- and verified the milestone print wording in
+   ANN-47. item-0015 DONE and item-0003 DONE via the roadmap mbox
+   (item-0003's blind-cross-review clause met by chain-v1 v1.3's three
+   reviews, ANN-25). runs/README gains rule 13 (scratch-file probing
+   against the built olean) and rule 14 (post-refine beta-reduction
+   trap), both from s5/s6 executor practice. Open on main: exactly
+   Statement.lean's erdos_251_irrational. Next research fronts per
+   _order: item-0007 (refined A2 at loglog windows), item-0005 (TaTe
+   transfer to growing numerators); item-0016 (Counting split) sits in
+   its post-heart slot alongside the pin-bump and the MP
+   upstream-port preparation.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
