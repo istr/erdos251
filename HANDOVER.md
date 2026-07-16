@@ -107,7 +107,8 @@ residuals + 12 skeleton statements).
    operator-attested). Main is the pin lineage; no branch merge
    pending. Inventory on main was 5 = Counting 3 (exactly 4.2, 4.3,
    constr_consCount_pos) + Conditional 1 + Statement 1; session 4
-   took it to 4 by closing 4.2 (see 2b).
+   took it to 4 by closing 4.2 (see 2b), and session 5 took it to 2
+   by closing 4.3 + constr_consCount_pos (see 2c).
 2. Session 3 CLOSED: ACCEPTED (ANN-39) at 2dc3f65. Kickoffs v3
    (sha256 385c1e91...d463d) and v3.1 delta (sha256
    f2976d93...d2d67) both ephemeral, never committed. Landed: T1
@@ -180,6 +181,64 @@ residuals + 12 skeleton statements).
    that remains the kickoff's ESTIMATE -- it sits behind a sorry and
    was not exercised. RECOMMEND: kickoff v5 scopes T3 alone.
    fork_merge_of_hypotheses untouched, as scoped OUT.
+2c. SESSION 5 (executor, this HEAD): LEMMA 4.3 CLOSED (gate) AND
+   constr_consCount_pos CLOSED (stretch). COUNTING.LEAN IS SORRY-FREE.
+   Two commits, ANN-44 (T3 gate, 0ed44b4) and ANN-45 (stretch,
+   6055300); ANN-46 records one structural flag. Inventory 4 -> 2 =
+   Conditional 1 (fork_merge_of_hypotheses, s6) + Statement 1.
+   Executor model: Claude Opus 4.8 (claude-opus-4-8[1m]).
+   Gates: G1 lean/ diff pin..HEAD = Counting.lean ONLY (+439/-7, no
+   import change); G2 all three frozen blocks byte-identical vs the
+   ORIGINAL pin c6c0b98 (2a/2b minus their deleted sorries, which are
+   the deliverable; 2c bystander untouched whole); G3 strict inventory
+   2; G4 classical three on every new declaration AND on
+   erdos_251_of_small_tail_fork_merge, no sorryAx in either target, no
+   native_decide; G5 lake build green locally.
+   Kickoff v5's route was built AS DESIGNED -- no deviation, so the
+   pre-cleared rule-12 landing was not re-run, and no numeric smoke
+   test of the balance was attempted (section 3 forbids it; x_0 is
+   astronomical and nothing materializes it).
+   ROUND'S FINDING (a simplification, not a repair): bounding
+   ln(L+2) <= L+1 <= 4t ONCE collapses every ln(4t+2) factor the
+   kickoff carried into a pure power of t = lnln x. The booked TWO
+   limits + the y ln(y+2) monotonicity helper collapse into ONE
+   limit, tendsto_pow_loglog_div_log ((ln s)^n = o(s), from
+   Real.isLittleO_pow_log_id_atTop), used at n = 3 (ext fraction) and
+   n = 2 (mass margin). No cfm2-style plumbing needed; L = 0 needed no
+   case split, as booked. Step 4 needed no lemma (it lives in step 1).
+   STRETCH RESOLVES ANN-43'S OPEN QUESTION: "near-free" was correct
+   and understated -- 12 lines, no helpers, first try. cspan_le(3,4),
+   cbudget(5) and cword_admissible plug into 4.3 VERBATIM. Retrospective
+   vindication of v1.1/F2: the narrowed span is exactly what makes
+   5(iii) plug in without adaptation.
+   TWO ITEMS FOR STEERING (flagged, not repaired -- both unfreeze
+   candidates for the BET-04 basket):
+     (i) `oneExtension_sum_le` exports C_2 with NO SIGN (bare
+         exists C_2). The assembly must clamp to max C_2 1 before any
+         monotonicity step. Costless, but 4.2's proof builds
+         C_2 > 0 and could export it; that is the cleaner statement.
+     (ii) `q_eq_of_count` was RELOCATED upward (statement/docstring/
+         proof byte-unchanged, pointer note left at the old site per
+         the ANN-38/39/40 convention) because consCount_bonferroni is
+         its first consumer and Lean needs it declared earlier. A
+         second inline Nat.nth_count bridge was the one-line
+         alternative and was REJECTED: the module docstring asserts
+         "Glue proofs (flagged): q_eq_of_count only", and duplicating
+         would have silently falsified a traceability claim. Residual
+         nit: that docstring's "used only by the smoke tests below" is
+         now stale in its "only" (the "below" still holds).
+   COST NOTE: consCount_lower_bound needs set_option maxHeartbeats
+   400000 -- the tree's first. Heartbeats are cumulative per
+   declaration and this is one large assembly; the set_option precedes
+   the frozen docstring per the ANN-26 `... in` convention, so the
+   frozen block is untouched. Two isDefEq sinks were removed rather
+   than papered over first (nlinarith on 3-way products -> explicit
+   calc; let-bound H -> clear_value, since linarith atom comparison
+   was unfolding wordPointSet into a Finset.image).
+   NEXT: fork_merge_of_hypotheses (s6) is now the ONLY counting-layer
+   consumer left -- the whole section 4-5 interface beneath it is
+   machine-checked. item-0003's floor (ANN-14, ii-a) is met except
+   exactly this one theorem.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an

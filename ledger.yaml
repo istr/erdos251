@@ -1399,3 +1399,100 @@ annotations:
       constr_consCount_pos stays booked as near-free downstream of it
       (unverified -- it is downstream of a sorry, so its "near-free"
       status remains the kickoff's estimate, not a finding).
+  - id: ANN-20260716-44
+    refs: [ANN-20260716-42, ANN-20260716-43]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s5: LEMMA 4.3 CLOSED (the T3 gate). `consCount_lower_bound`
+      is machine-checked -- [propext, Classical.choice, Quot.sound], no
+      sorryAx; the frozen docstring+signature is BYTE-IDENTICAL to the
+      ORIGINAL statement pin c6c0b98 (only the trailing `sorry` line is
+      gone, which IS the deliverable). Strict sorry inventory 4 -> 3.
+      Landed implication cone's axiom gate unchanged.
+      ANN-43's capacity finding is VINDICATED: T3 alone, booked alone,
+      closed in one session. The five-term cut needed no repair -- it was
+      built as designed, confirming s4's "SOUND, no defect found".
+      ROUTE AS BUILT (kickoff v5 section 4; no route deviation, so the
+      pre-cleared rule-12 landing was not re-run): step 1
+      `consCount_bonferroni` additive throughout (zero Nat subtraction, as
+      booked); the three branches are the kickoff's verbatim -- small
+      anchors via Nat.le_sqrt (the ONE Real/Nat sqrt bridge, crossed once
+      as instructed), extension anchors via card_le_card + card_biUnion_le,
+      good anchors injected by Nat.count on top of the s4 structural core.
+      Step 2 `modelMass_insert` one equation. Step 4 needed no separate
+      lemma (it lives inside step 1), as the kickoff anticipated.
+      SIMPLIFICATION vs kickoff, the round's main finding: the kickoff's
+      step-5 shape carried `ln(4t+2)` factors and booked TWO limits
+      (LIMIT A ext, LIMIT B mass) plus a `y ln(y+2)`-monotonicity helper.
+      Bounding `ln(L+2) <= L+1 <= 4t` ONCE (Real.log_le_sub_one_of_pos)
+      collapses every such factor to a pure power of t = lnln x. The whole
+      basket then reduces to ONE limit, `tendsto_pow_loglog_div_log`:
+      (ln s)^n = o(s) via Real.isLittleO_pow_log_id_atTop, composed with
+      ln x -> infinity, instantiated at n = 3 (the 4.2 extension fraction,
+      64 C_4 t^3) and n = 2 (the 4.1 mass margin, 196 t^2). No cfm2-style
+      filter plumbing was needed; the L = 0 corner needed no case split,
+      exactly as booked. Constants fell out as 128 C_4 t^3 <= s/8 and
+      8(sqrt x + 1) <= x exp(-196 t^2).
+      FINDING (a real gap in the frozen statement set, not a defect):
+      `oneExtension_sum_le` exports C_2 with NO SIGN -- its statement is a
+      bare `exists C_2`. The assembly must clamp to `max C_2 1` before any
+      monotonicity step, since C_2 * L ln(L+2)^2 <= C_2 * 64 t^3 needs
+      C_2 >= 0. Costless here, but 4.2's `0 < C_2` is exportable (its proof
+      builds C_2 = 2 kappa mertensC3 Ex > 0) and would be the cleaner
+      statement. Unfreeze candidate, NOT repaired in passing.
+      COST NOTE: the assembly needs `set_option maxHeartbeats 400000` (the
+      tree's first). Heartbeats are cumulative per declaration and this is
+      one large assembled proof; the ANN-26-era `... in` convention places
+      the set_option BEFORE the frozen docstring, so the frozen block is
+      untouched. Two isDefEq sinks were removed first rather than papered
+      over: nlinarith on 3-way products (replaced by explicit calc chains)
+      and let-bound `H := wordPointSet w L` (clear_value'd, since linarith
+      atom comparison was unfolding it into a Finset.image).
+  - id: ANN-20260716-45
+    refs: [ANN-20260716-43, ANN-20260716-44]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s5 STRETCH: `constr_consCount_pos` CLOSED. Counting.lean is
+      now SORRY-FREE; project strict inventory 3 -> 2 (Conditional
+      `fork_merge_of_hypotheses` = s6, Statement residual). Machine-checked,
+      classical three, no sorryAx. Attempted only after the T3 gate closed
+      and G1-G5 passed locally, per kickoff v5's no-gate discipline.
+      ANN-43's OPEN QUESTION IS RESOLVED. s4 booked constr_consCount_pos as
+      "near-free downstream" but explicitly flagged that status as the
+      kickoff's ESTIMATE, not a finding, since it sat downstream of a sorry.
+      It is now a finding: near-free was CORRECT, and if anything
+      understated. 12 lines, no new helpers, compiled first try. The three
+      interfaces line up VERBATIM with no glue whatsoever -- cspan_le's
+      third/fourth clauses ARE 4.3's span hypothesis at kappa := C_1;
+      cbudget's fifth clause IS 4.3's window `L+1 <= 4 lnln x - 1`;
+      cword_admissible supplies IsAdmissible + card = L+1 for both words.
+      This is a retrospective vindication of the v1.1/F1 and v1.1/F2
+      amendments: the narrowed span (F2) is exactly what made 5(iii)'s
+      output plug into 4.3 without adaptation.
+      The kickoff's own estimate of the x_0 bottleneck is confirmed
+      structurally: kappa = C_1 here is 12 * C from q_le_mul_log, and 4.3's
+      x_0 at that kappa is astronomical -- irrelevant, as steering booked,
+      because the statement is a bare exists-x_0 and nothing materializes it.
+  - id: ANN-20260716-46
+    refs: [ANN-20260716-44]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s5 STRUCTURAL, flagged not repaired: the glue lemma
+      `q_eq_of_count` was RELOCATED upward (statement, docstring and proof
+      byte-unchanged) from the section-5 "Glue (PROVED, flagged)" block to
+      the Lemma 4.3 proof-layer helpers. Reason: `consCount_bonferroni` is
+      its first consumer and Lean requires it declared earlier. A pointer
+      note replaces it at the old site, mirroring the ANN-38/39/40
+      "relocated to Mertens.lean" convention already in this file.
+      WHY A MOVE AND NOT A SECOND BRIDGE: `q` IS `Nat.nth Nat.Prime`, so
+      inlining `Nat.nth_count` at the use site would have been one line --
+      but the module docstring asserts "Glue proofs (flagged):
+      `q_eq_of_count` only", and a second raw Nat.nth/Nat.count bridge would
+      have silently falsified a traceability claim the review object makes.
+      The move preserves that invariant exactly.
+      RESIDUAL NIT (unfreeze candidate): q_eq_of_count's docstring says
+      "used only by the smoke tests below". The "below" is still true (the
+      smoke tests remain at the file's end) but the "only" is now stale --
+      the T3 proof consumes it. Docstrings were out of scope this session,
+      so this is flagged, never silent, per the kickoff's own rule. One-word
+      fix whenever the statement set is next unfrozen.
