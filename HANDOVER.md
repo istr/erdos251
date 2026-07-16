@@ -97,7 +97,17 @@ residuals + 12 skeleton statements).
    ephemerally (steering sha256 385c1e91...d463d). Scope: 4.1
    (Mertens-free route), Mertens pack M1-M3 (mathlib has none at the
    pin), 4.2, 4.3 (Bonferroni ledger), assembly; fork_merge stays
-   s4/s5. Next gate: session-3 M2 report -> steering adjudication.
+   s4/s5. MID-SESSION: 4.1 landed (1776014, C = 12); the dyadic
+   MP-M2 route was executor-caught DEFECTIVE (leading coefficient
+   1 + C/log r > 1 at every fixed block ratio vs the exactly-1 that
+   T2's frozen log^2 budget needs) and RETIRED; adjudicated ANN-37;
+   kickoff v3.1 issued ephemerally (delta: MP-M2 via discrete
+   Finset.sum_Ico_by_parts, integral-free, only MP-M1-upper
+   consumed, c2 = 1 + b/log 2 - lnln 2; steering sha256
+   f2976d93...d2d67). Next gate unchanged: session-3 completion
+   report (M2 shape) -> steering adjudication (carry MP-M1
+   relocation to Chebyshev.lean + ANN-36 upstream candidacy in the
+   follow-up channel).
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
