@@ -1005,3 +1005,25 @@ annotations:
       385c1e91...d463d. BET-07 note: 6 sorries remain, three
       sessions in one day; the 2026-08-08 deadline is comfortably
       inside the current cadence (operator judgment unchanged).
+  - id: ANN-20260716-36
+    refs: [ANN-20260716-35]
+    date: 2026-07-16
+    note: >-
+      Pin-bump question resolved (operator query, steering evidence,
+      operator ack): mathlib MASTER (fetched 2026-07-16) also lacks
+      quantitative Mertens theorems under any name -- the only grep
+      hit is the unrelated Dedekind-Mertens polynomial lemma;
+      SumPrimeReciprocals carries divergence + the rpow criterion
+      only; PrimeCounting still has upper pi bounds only. Toolchain
+      gap at a bump would be v4.16.0 -> v4.33.0-rc1 (17 minor
+      versions; deprecation-deleted names; unfreeze risk if a renamed
+      identifier sits in a frozen statement). DECISION: keep the pin;
+      the Mertens pack is built in-session per kickoff v3; a
+      controlled pin-bump is a POST-HEART roadmap item to be proposed
+      on operator word (acceptance sketch booked: statements
+      byte-identical or ratified unfreeze batch, proofs green on the
+      new pin, steering re-runs the byte-identity extraction as
+      gate). Side option booked: MP is an upstream mathlib
+      contribution candidate after project close (the gap is real on
+      master). Session 3 proceeds on the stable pin; steering
+      continues in a fresh session from HANDOVER.
