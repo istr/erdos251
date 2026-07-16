@@ -89,16 +89,19 @@ residuals + 12 skeleton statements).
   centralBinom_le (hard half); s2 extracts pi(x) >= c x/log x.
 
 ## Pending decisions and gates (operator), round 2
-1. Session 2 DISPATCHED: session-1 PR merged at cad61bb (CI green,
-   inventory 11); kickoff v2 issued ephemerally against that pin
-   (superseded by kickoff v2.1 after an executor-caught bridge-lemma
-   correction, ANN-34; steering sha256 96369efe...a62398). Scope:
-   cspan_le (in-tree
-   Chebyshev extraction with the log bootstrap), cfm2_tendsto,
-   cbudget (2/log-2 slack structure documented), plus the item-0011
-   summability as BOXED T4 (2h) -- the fold-in is the flagged
-   steering default; the operator may strike T4 without touching
-   T1-T3. Next gate: session-2 M2 report -> steering adjudication.
+1. MERGE branch item-0015-s2 at 807b6b7 (adjudicated PASS, ANN-35;
+   the merge is the ratification; CI compile gate). Inventory after
+   merge: 6 = Counting 4 (exactly 4.1, 4.2, 4.3, assembly) +
+   Conditional 1 + Statement 1. item-0011 closed by co-funding.
+2. Session 3 DISPATCHED against the post-merge pin: kickoff v3 issued
+   ephemerally (steering sha256 385c1e91...d463d). Scope: 4.1
+   (Mertens-free route), Mertens pack M1-M3 (mathlib has none at the
+   pin), 4.2, 4.3 (Bonferroni ledger), assembly; fork_merge stays
+   s4/s5. Next gate: session-3 M2 report -> steering adjudication.
+3. Infrastructure (suggested, from the s2 incident): pre-seed agent
+   worktrees with .lake/packages -> shared read-only +
+   private .lake/build; consider write-protecting
+   /opt/erdos251-lake/packages.
 2. BET-07 resolution by 2026-08-08 (operator judgment).
 3. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
    do NOT inherit the problem page's [Er58b] all-k attribution; the

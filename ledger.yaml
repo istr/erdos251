@@ -953,3 +953,55 @@ annotations:
       Credit: the contradiction was surfaced by the session-2
       executor before proof investment -- the M2 channel working as
       designed.
+  - id: ANN-20260716-35
+    refs: [ANN-20260716-33, ANN-20260716-34, ANN-20260716-30]
+    date: 2026-07-16
+    note: >-
+      item-0015 session-2 ADJUDICATION -- PASS, merge of 807b6b7
+      recommended. Report in full M2 shape; deliverable branch
+      item-0015-s2, four commits against pin b3edbc6, +721/-5, two
+      lean files. Steering verification: the report's diff claim
+      verified LITERALLY (git diff -U0 over lean/ deletes exactly
+      five lines, all sorry -- the strongest byte-identity evidence,
+      covering T2/T3 beyond the interim check of the first two
+      commits); inventory 11 -> 6 (Counting 4, Hypotheses 0,
+      Conditional 1, Statement 1); survivors are exactly the declared
+      non-goals; native_decide scan clean; executor-attested gates
+      (build green, classical three on all five targets, smoke
+      examples passing). ALL FIVE targets proved: cspan_le (C1 = 48),
+      cfm2_tendsto, cbudget (m = 9 scaling, L+1 coefficient
+      2.9304 < 3 -- the kickoff's 0.1146 lnln slack confirmed
+      numerically), singularSeries_multipliable + _pos (T4, well
+      inside its box). item-0011 CLOSED by co-funding (done-move this
+      followup; acceptance met: proved as frozen, classical axioms,
+      C >= 1 question documented inert). Adjudicated findings: (1)
+      cfm2_tendsto never uses its hCg -- the new hb: an unused binder
+      in a frozen statement, INERT (ANN-30 class), statement
+      untouched, lint warning accepted; unfreeze candidate for a
+      future operator-ratified batch. (2) T4 stronger than routed:
+      nuMod_eq_card_of_sup_lt needs span < p only (no primality), and
+      the log-series converges unconditionally -- admissibility is
+      needed only for head-factor positivity; both facts feed 4.1.
+      (3) 4.1-reusable inventory booked (abs_add_log_one_sub_le is
+      general; abs_log_singularFactor_le is 4.1's tail half). (4)
+      Method register: reduce numeric log facts to
+      Real.log_two_gt_d9 via exact 2^m scaling; explicit product
+      hints for nlinarith. (5) Infrastructure incident, no damage
+      (operator-verified): agent worktrees initially symlinked all of
+      .lake to the shared store (three trees, one build dir) and one
+      editor LSP triggered a re-clone; fixed mid-session to shared
+      read-only packages + private build; suggestions booked in
+      HANDOVER (pre-seed layout, write-protect shared packages).
+      SESSION-3 INTELLIGENCE (steering, pre-verified by full-tree
+      grep at the pin): mathlib has NO Mertens theorems;
+      AbelSummation exists. 4.1 is provable Mertens-FREE (primorial
+      head via primorial_le_4_pow + one-sided quadratic tail
+      cancellation with nu <= card); 4.2's log^2 target NEEDS
+      Mertens-3-upper -- kickoff v3 carries an integral-free
+      elementary route (M1 via Legendre factorization_factorial +
+      log-factorial; M2 dyadic blocks; M3 as exp) plus the five-term
+      Bonferroni ledger for 4.3 and the assembly mapping for
+      constr_consCount_pos. Kickoff v3 issued, steering sha256
+      385c1e91...d463d. BET-07 note: 6 sorries remain, three
+      sessions in one day; the 2026-08-08 deadline is comfortably
+      inside the current cadence (operator judgment unchanged).
