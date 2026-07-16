@@ -98,7 +98,11 @@ residuals + 12 skeleton statements).
    (Mertens-free route), Mertens pack M1-M3 (mathlib has none at the
    pin), 4.2, 4.3 (Bonferroni ledger), assembly; fork_merge stays
    s4/s5. Next gate: session-3 M2 report -> steering adjudication.
-3. Infrastructure (suggested, from the s2 incident): pre-seed agent
+3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
+   lacks Mertens (verified 2026-07-16); MP is built in-session;
+   post-heart pin-bump item proposed on operator word; MP is an
+   upstream-contribution candidate after close.
+4. Infrastructure (suggested, from the s2 incident): pre-seed agent
    worktrees with .lake/packages -> shared read-only +
    private .lake/build; consider write-protecting
    /opt/erdos251-lake/packages.
