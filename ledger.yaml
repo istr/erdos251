@@ -1496,3 +1496,45 @@ annotations:
       the T3 proof consumes it. Docstrings were out of scope this session,
       so this is flagged, never silent, per the kickoff's own rule. One-word
       fix whenever the statement set is next unfrozen.
+  - id: ANN-20260717-47
+    refs: [ANN-20260716-14, ANN-20260716-45, ANN-20260716-46]
+    date: 2026-07-17
+    note: >-
+      ITEM-0015 s6 GATE: `fork_merge_of_hypotheses` CLOSED. Conditional.lean
+      is sorry-free; project strict inventory 2 -> 1 (survivor:
+      Statement.lean's `erdos_251_irrational`, open by design). THE
+      ITEM-0003 FLOOR (ANN-14, ii-a) IS MET: `#print axioms
+      erdos_251_conditional` = [propext, Classical.choice, Quot.sound] --
+      the classical three, NO sorryAx. Hypotheses A + B => irrationality of
+      the 0-indexed Erdos #251 series is now machine-checked end to end,
+      chain-v1 sections 2-6 complete. Both frozen section-2 blocks re-diffed
+      BYTE-IDENTICAL against BOTH the pin 93efb35 and the original c6c0b98;
+      lean/ diff = Conditional.lean only (+223/-1, the deletion = the
+      sorry); axiom gate on erdos_251_of_small_tail_fork_merge unchanged.
+      Zero native_decide. Landed in one commit, 0b831d7.
+      DISPATCH DEVIATION, operator-ratified for the 2026-07-19 window and
+      recorded here per the v6 kickoff header: v6 was written by the SAME
+      steering session as v5, NOT a fresh session. This departs from the
+      ANN-41 fresh-session convention (v4's dispatch precedent). No
+      contamination surfaced in execution -- the route as written held with
+      zero deviations -- but the convention's whole point is that a
+      same-session kickoff cannot audit its own blind spots, so this is
+      logged as a deviation, not as evidence the convention is unnecessary.
+      ROUTE FIDELITY: the v6 route was followed exactly; all three predicted
+      ~10-line helpers were needed and sufficient, and rule-12 exposure FM-1
+      landed as pre-cleared symbolically (3*(23/20)^2 = 3.9675 < 4, the
+      margin 4.4's factor 3 was designed to buy). No numeric run, no smoke
+      test, no maxHeartbeats event. Two helpers beyond the three predicted
+      were extracted for reuse rather than inlined (`count_sqrt_le_of_anchor`
+      -- the anchor/count bridge, consumed 4x by the two tails and FM-3; and
+      `ctail_le` -- the FM-1 chain itself, consumed by tail_n and tail_m).
+      THE NAME SWAP (kickoff trap 1, BET-04-flagged) cost ZERO: binding
+      n_FM := b (w'-anchor), m_FM := a (w-anchor) as instructed made
+      cword_fork's two clauses land as `.symm` on both fork goals, first try.
+      The trap the kickoff did NOT predict is where the time went: after
+      `refine` with five lambdas, the per-r goal retains un-beta-reduced
+      `(fun r => cJ Cg (X + r)) r`, so `set J := cJ Cg (X + r)` silently
+      fails to fold it and omega sees TWO distinct atoms for J -- four
+      position side-goals fail with unreadable counterexamples. One `show`
+      to beta-reduce fixes all four. Cheap once seen, opaque until then;
+      candidate for the runs/README trap register alongside rule 13.

@@ -239,6 +239,68 @@ residuals + 12 skeleton statements).
    consumer left -- the whole section 4-5 interface beneath it is
    machine-checked. item-0003's floor (ANN-14, ii-a) is met except
    exactly this one theorem.
+2d. SESSION 6 (executor, this HEAD): FORK_MERGE_OF_HYPOTHESES CLOSED.
+   THE ITEM-0003 FLOOR (ANN-14, ii-a) IS MET. Conditional.lean is
+   sorry-free; chain-v1 sections 2-6 are machine-checked end to end.
+   One commit, ANN-47 (0b831d7). Inventory 2 -> 1 = Statement 1
+   (erdos_251_irrational, open by design -- the unconditional target).
+   Executor model: Claude Opus 4.8 (claude-opus-4-8[1m]).
+   THE MILESTONE PRINT:
+     'Erdos251.erdos_251_conditional' depends on axioms:
+       [propext, Classical.choice, Quot.sound]
+   Hypotheses A + B => Irrational (sum_n p_n/2^n), no sorryAx.
+   Gates: G1 lean/ diff pin..HEAD = Conditional.lean ONLY (+223/-1,
+   the one deletion = the deliverable sorry; sole import change
+   +import Erdos251.Counting, no cycle); G2 BOTH frozen section-2
+   blocks byte-identical (sha256-compared) vs BOTH the pin 93efb35 and
+   the ORIGINAL c6c0b98 -- an `open Filter in` line precedes 2a's
+   docstring per the ANN-26 `... in` convention, so the block itself is
+   untouched; G3 strict inventory 1; G4 classical three on
+   fork_merge_of_hypotheses, erdos_251_conditional AND (unchanged)
+   erdos_251_of_small_tail_fork_merge, no sorryAx, zero native_decide
+   (the only two tree hits are prose saying "no native_decide");
+   G5 lake build green locally.
+   Kickoff v6's route was built AS DESIGNED -- zero deviations. The
+   pre-cleared rule-12 landing (FM-1) was therefore not re-run, and no
+   numeric smoke test of any x_0 was attempted (section 3 forbids it).
+   FM-1 landed exactly as pre-cleared: 3*(23/20)^2 = 3.9675 < 4, i.e.
+   the margin Lemma 4.4's factor 3 (vs 4) was designed to buy is real
+   and is consumed here, with the one extra eventual threshold
+   20 lnln x <= ln x (via the s5 dividend tendsto_pow_loglog_div_log
+   at n = 1 -- that ONE limit now serves 4.2, 4.3 AND section 6).
+   All three predicted ~10-line helpers were needed and sufficient.
+   Two more were extracted for reuse rather than inlined:
+   `count_sqrt_le_of_anchor` (the anchor/count bridge: sqrt x < q idx
+   forces count(sqrt x + 1) <= idx; consumed 4x -- both tails, both
+   FM-3 arms) and `ctail_le` (the FM-1 chain itself; consumed by
+   tail_n and tail_m). Counting.lean untouched, so its .olean stayed
+   cached and every probe built in ~5s: the s5 5-minute cycle did not
+   apply, as the kickoff designed.
+   THE NAME SWAP (kickoff trap 1, BET-04-flagged) COST ZERO: binding
+   n_FM := b (the w'-anchor), m_FM := a (the w-anchor) as instructed
+   made cword_fork's two clauses land as `.symm` on both fork goals,
+   first try. Being told the orientation is what made it free; the
+   trap register earned its keep.
+   THE TRAP THE KICKOFF DID NOT PREDICT (candidate for runs/README,
+   alongside the rule-13 scratch-file convention): after `refine` with
+   five lambdas, the per-r goal keeps un-beta-reduced
+   `(fun r => cJ Cg (X + r)) r`, so `set J := cJ Cg (X + r)` silently
+   fails to fold it -- omega then sees TWO distinct atoms for J and
+   four word-position side-goals fail with ~20-atom counterexamples
+   that name nothing. One `show ForkMergeAt ...` to beta-reduce fixes
+   all four. Opaque until seen, one line after. Same family as s5's
+   isDefEq sinks: the cost is always in what the tactic silently does
+   NOT match.
+   NOTHING IS FLAGGED FOR UNFREEZE this session -- no statement,
+   docstring or Counting.lean line was touched, and no ANN-46-style
+   structural move was needed.
+   NEXT (steering/operator, post-verification): re-execute G1-G4 on
+   the diff; verify the milestone print; item-0015 done-move and the
+   item-0003 floor-closure bookkeeping (item-0003's remaining
+   acceptance clause -- blind cross-review -- was met by chain-v1's
+   three reviews, so the done-move is an operator call, not new work);
+   runs/README rule-13 candidate rides the same batch. The ONLY
+   remaining sorry in the tree is the unconditional target itself.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
