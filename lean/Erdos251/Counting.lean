@@ -11,8 +11,9 @@ statement set is the deliverable and the review object. Nothing in this
 file is used by the landed implication cone, and nothing here touches the
 frozen files.
 
-Source of truth: `dossier/chain-v1.md` v1.3, sha256
-`1dda542dc0558394b56832d4d222551f89136838af782351016259fdda59cf1c`,
+Source of truth: `dossier/chain-v1.md` v1.4 (citation-hygiene amendment
+of v1.3, ANN-31; statements and mathematics unchanged), sha256
+`6bcb1425271a3d55db955f1c63c3b7b205c2fc7a6a93625bc688afdea778ec0b`,
 sections 4 (Lemmata 4.1-4.4) and 5 (deletion construction); interface
 conventions from section 8.2 and the landed `Hypotheses.lean`.
 

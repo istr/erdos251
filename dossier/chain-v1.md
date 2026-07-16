@@ -1,4 +1,4 @@
-# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1.3
+# Conditional irrationality of S = sum p_n/2^n -- consolidated chain, v1.4
 
 STATUS: conditional theorem. Hypotheses A and B below are open, standard-
 shaped conjectures; everything else is proved here or cited as classical.
@@ -51,8 +51,9 @@ estimate of section 8.3.
 
 LEMMA 2.1 (convergence; repair R1). p_n <= C_0 n ln(n+2) for all n, with an
 absolute C_0 (Chebyshev; classical, e.g. Hardy-Wright, An Introduction to
-the Theory of Numbers, Thm 8 area; citation verification tracked in
-item-0004). Hence sum p_n 2^{-n} converges absolutely, as do all tails
+the Theory of Numbers, 6th ed., OUP 2008, Thm 8 area; publisher data
+verified item-0004, exact theorem number pending a physical-volume
+check). Hence sum p_n 2^{-n} converges absolutely, as do all tails
 u_n = sum_{k>=1} p_{n+k} 2^{-k}, and
     delta_n := u_n - p_{n+1} = sum_{j>=1} g_{n+j} 2^{-j},
     delta_{n+1} = 2 delta_n - g_{n+1},  delta_n >= 2 for n >= 1.
@@ -136,9 +137,11 @@ Proof sketch (review-1 A36-A40): local factors at p <= k+2 are >= 1/p by
 admissibility; at k+2 < p <= 2(k+1) crude bounds give a factor e^{-O(k)};
 at 2(k+1) < p <= D the exponential estimates apply since nu/p < 1/2; at
 p > D all offsets are distinct mod p and log-factors sum to o(k). Uses
-Mertens' theorems (classical: Mertens 1874; Rosser-Schoenfeld 1962) --
-repair R3: these are now CITED, not asserted bare; exact-constant
-verification tracked in item-0004. QED-sketch
+Mertens' theorems (Mertens 1874, J. reine angew. Math. 77, 289-338;
+Rosser-Schoenfeld 1962, Illinois J. Math. 6, 64-94) -- repair R3: these
+are CITED, not asserted bare; verified item-0004, dossier/literature.md.
+[v1.4: precise volumes added; the 1874 Mertens paper in Band 78 is a
+different work.] QED-sketch
 
 LEMMA 4.2 (one-point extension sum; v1.1). For any fixed kappa >= 1 there
 is C_2 = C_2(kappa) such that for admissible H as above with span
@@ -322,7 +325,7 @@ Sources: fable-5 1b chain e5f818af...c7a6560 (primary); reviews
 design rationale in section 1); gpt-iso chain d60b460c...c8eefa
 (architecture comparison). Repairs executed: R1 -> Lemma 2.1;
 R2 -> Lemma 2.3 (wlog s >= 1); R3 -> citations in Lemmas 4.1/4.2 and
-Bertrand/Chebyshev uses (verification item-0004); R4 -> section 7;
+Bertrand/Chebyshev uses (verified item-0004); R4 -> section 7;
 R5 -> Lemma 4.3 and section 5(iv); R6 -> section 8.2; R7 -> sections 1
 and 7. Steering verification: complete for sections 2, 3, 6; section 5
 was CLAIMED complete in v1.0 yet contained F1 (see changelog) -- the
