@@ -329,7 +329,7 @@ theorem rational_delta_eventually_lattice (hS : IsRationalReal S) :
 /-- Chain-v1 Lemma 2.4 in template-9.4 shape: a shared length-`J` gap
 prefix quantizes the `delta` difference into `2^(J+1) ℤ / b` (the block
 codes of `delta_block` cancel; the base difference lies in `2ℤ / b`). -/
-theorem repeated_block_quantization {b n m J : ℕ} (hb : 0 < b)
+theorem repeated_block_quantization {b n m J : ℕ}
     (hn : ∃ zn : ℤ, (b : ℝ) * delta n = 2 * (zn : ℝ))
     (hm : ∃ zm : ℤ, (b : ℝ) * delta m = 2 * (zm : ℝ))
     (hblock : SameBlock n m J) :

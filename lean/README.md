@@ -74,6 +74,12 @@ upstream candidate; the mathlib gap is recorded in the item-0003
 completion report.
 
 ## Corrections and deviations (flagged, never silent)
+- Statement-unfreeze batch (round-2 decision 4, operator-ratified;
+  resolves the ANN-18 deferral): the unused binder `hb : 0 < b` is
+  removed from `repeated_block_quantization`; the single call site in
+  ForkMerge.lean drops the argument. `b` stays inferable from `hn`'s
+  type. No sorry-count change; compile gate is CI plus the executor's
+  local build (the sandbox cannot build, see below).
 - Round-0 warm-up 2 constant was FALSE (`erdosSeries/2 - 1`); corrected
   to `erdosSeries/2 - 2`, verified by exact Fraction arithmetic.
 - gpt-iso field names `prefix`/`suffix` are Lean keywords; renamed

@@ -111,7 +111,7 @@ theorem fork_merge_contradiction {b n m J K γ : ℕ} (hb : 0 < b)
   have hfork4 : 4 * |delta (n + J) - delta (m + J)| < 1 + (γ : ℝ) :=
     (mul_lt_mul_left h2Kpos).mp habs2
   -- Step 4: lattice lock. `|b Δfork| < 2^(J+1)` forces the quantized `z` to vanish.
-  obtain ⟨z, hz⟩ := repeated_block_quantization hb hlat_n hlat_m hpre
+  obtain ⟨z, hz⟩ := repeated_block_quantization hlat_n hlat_m hpre
   have hbfork : |(b : ℝ) * (delta (n + J) - delta (m + J))| < 2 ^ (J + 1) := by
     rw [abs_mul, abs_of_nonneg (le_of_lt hbpos)]
     have h1 : (b : ℝ) * |delta (n + J) - delta (m + J)| ≤ (b : ℝ) * ((1 + (γ : ℝ)) / 4) :=
