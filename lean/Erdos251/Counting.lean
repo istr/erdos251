@@ -161,7 +161,14 @@ The span hypothesis is 4.2's, with `k = L` (v1.1/F2): the wide v1.0 form
 outright for `span ≫ ln x` (Cramer-type thinning absent from `M_H`).
 Evenness of the offsets is not hypothesised: it follows from
 admissibility, since `0 ∈ H(w)` and an odd offset would occupy both
-classes mod 2. -/
+classes mod 2.
+
+Disclosure (blind fidelity arm R3fid): the conclusion pair is strictly
+WEAKER than the prose chain `N_cons ≥ (1/4) M ≥ 1`, which additionally
+exports `M ≥ 4`. The pair is exactly what `constr_consCount_pos`
+consumes; the `M ≥ 4` step becomes part of this lemma's proof
+obligation via 4.1's in-budget mass bound. Accepted deviation-weaker
+(ANN-30). -/
 theorem consCount_lower_bound (hA : HLQuantA) (κ : ℝ) (hκ : 1 ≤ κ) :
     ∃ x₀ : ℕ, ∀ x : ℕ, x₀ ≤ x → ∀ (w : ℕ → ℕ) (L : ℕ),
       IsAdmissible (wordPointSet w L) →
@@ -181,7 +188,12 @@ as an explicit parameter rather than re-existentialised, which is what
 keeps the factor `3` meaningful (`∃ C, delta ≤ 3 * C * ...` would be
 vacuous). The hypothesis is exactly the body of the frozen
 `CramerGranville`, which binds `∃ C : ℝ` with no sign or size constraint;
-the frozen definition is not touched. -/
+the frozen definition is not touched. The missing `1 ≤ Cg` (which prose's
+"Under Hypothesis B" supplies) is INERT: `gap n ≥ 1` always, while
+`Cg * log (q n)^2 < 0` for `Cg < 0`, so `hB` is unsatisfiable there and
+the broadened statement licenses nothing false (proved by the R3fid arm,
+ANN-30). The `C ≥ 1` faithfulness question for the frozen definition
+itself is item-0011's. -/
 theorem delta_le_of_gap_bound {Cg : ℝ} {n₀ : ℕ}
     (hB : ∀ n : ℕ, n₀ ≤ n → (gap n : ℝ) ≤ Cg * Real.log (q n) ^ 2) :
     ∃ n₁ : ℕ, ∀ n : ℕ, n₁ ≤ n → delta (n + 1) ≤ 3 * Cg * Real.log (q n) ^ 2 := by

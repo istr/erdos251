@@ -74,6 +74,14 @@ upstream candidate; the mathlib gap is recorded in the item-0003
 completion report.
 
 ## Corrections and deviations (flagged, never silent)
+- Blind fidelity arm R3fid (runs/20260716_sonnet5_review3fid, ledger
+  ANN-30): two post-review docstring disclosures added to
+  Counting.lean -- Lemma 4.3's conclusion pair is deviation-weaker vs
+  the prose chain (`M >= 4` not re-exported; the consumed shape is
+  unchanged and the step moves into the proof obligation), and Lemma
+  4.4's missing `1 <= Cg` is proved inert (`hB` unsatisfiable for
+  `Cg < 0`). Statements byte-identical; no unfreeze. The frozen
+  `CramerGranville` `C >= 1` question is routed to item-0011.
 - Statement-unfreeze batch (round-2 decision 4, operator-ratified;
   resolves the ANN-18 deferral): the unused binder `hb : 0 < b` is
   removed from `repeated_block_quantization`; the single call site in
