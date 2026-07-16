@@ -1204,3 +1204,36 @@ annotations:
       sieve-theoretic squarefree-divisor expansion with omega(d)
       counting, the substantial piece), (d) assembly; T3 five-term
       Bonferroni ledger; fork_merge stays s4/s5 as scoped.
+  - id: ANN-20260716-40
+    refs: [ANN-20260716-38, ANN-20260716-39]
+    date: 2026-07-16
+    note: >-
+      ANN-39 FOLLOW-UP (1)+(3) EXECUTED between s3 and s4, on operator
+      instruction, so kickoff v4 anchors the final layout. Both halves
+      landed together as the sanctioned mechanical refactor; gates as
+      booked: build green (lake build exit 0; the 5 sorry survivors are
+      unchanged -- Counting 3 + Conditional 1 + Statement 1), axiom sets
+      identical (all 17 relocated declarations plus the 4 unification
+      declarations and their consumers singularSeries_ge_exp /
+      modelMass_ge_exp on [propext, Classical.choice, Quot.sound]; no
+      sorryAx), declaration names stable modulo the unification map.
+      (1) RELOCATION: the MP pack moved VERBATIM out of Counting.lean
+      into lean/Erdos251/Mertens.lean (diff against the s3 tip: the
+      moved region is byte-identical, the only new text is the module
+      header). The file imports Mathlib alone; namespace Erdos251 is its
+      one remaining project coupling, so the upstream port is that line
+      plus a Mathlib.NumberTheory.Mertens rename. Imports added to
+      Counting.lean (T2 (c) SMALL will consume M3) and Erdos251.lean.
+      (3) UNIFICATION: direction FORCED, not chosen -- primesLe is built
+      on finite_primes_le (Hypotheses.lean) so it cannot follow the pack
+      out, and singularSeries is a tprod over Nat.Primes so its head
+      cannot be re-indexed; both index sets are necessary. primesUpto is
+      canonical, primesLe_image is the stated bridge (RHS now reads
+      primesUpto N), and the new sum_primesLe_eq transports any
+      N-indexed summand across it. The duplication removed is the PROOF:
+      sum_log_primesLe_le no longer re-derives primorial -> 4^N (16
+      lines -> 2), it transports sum_log_primesUpto_le. prod_primesLe
+      DELETED (orphaned once the bridge landed; operator: "code is
+      liability"). Net Counting.lean -478 lines. NOTE for kickoff v4:
+      MP declarations remain visible unqualified in Counting.lean via
+      the import, so s4 call sites are unaffected by the move.
