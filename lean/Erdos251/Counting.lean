@@ -956,6 +956,243 @@ theorem oneExtension_sum_le (κ : ℝ) (hκ : 1 ≤ κ) :
             (mul_le_mul_of_nonneg_left (log_two_card_le hk2) hC3.le) hEx0.le
       _ = _ := by ring
 
+/-! ### Proof-layer helpers for Lemma 4.3 (item-0015 s4; not statements)
+
+The STRUCTURAL CORE of T3 step 1 (kickoff v4's "combinatorial bound"), landed
+verified ahead of the counting/analytic layers. Two halves, and they confirm the
+kickoff's reconstruction on both of its flagged sub-claims:
+
+* `isConsecRealization_of_primes` (via `q_add_eq_of_primes` and the next-prime
+  characterization `q_succ_eq_of_no_prime_between`): if every point of `H(w)` is
+  prime-shifted from the anchor `a = q n` and NO other offset in `(0, D)` is,
+  then `n` realizes `w` consecutively. The induction runs on `Nat.count`, so the
+  `Nat.nth`/`Nat.count` bridge is the only glue needed.
+* `mem_oneExtensions_of_prime_shift`: the "bad" offsets are EXACTLY the ones
+  Lemma 4.2 sums over. Parity kills the odd offsets (`even_of_prime_shift` --
+  the kickoff's "no case needed"), and `admissible_of_primes` forces
+  admissibility, needing only `a > |H| + 1` -- confirming the kickoff's estimate
+  that this `x₀` is cheap (`√x > L + 2` suffices).
+
+`even_of_admissible` discharges the 4.3 docstring's claim that evenness is not
+hypothesised but follows from admissibility plus `0 ∈ H(w)`.
+
+STILL OPEN above these (see HANDOVER): step 1's Finset card inequality, the
+HLQuantA instantiations (steps 2-3, consuming this session's Lemma 4.2), the
+crude `√x` bound (step 4), and the `x₀` assembly (step 5, two growth-rate
+limits). The five-term cut is confirmed SOUND; it is not a one-session item.
+-/
+
+/-- The next-prime characterization of `q`: if `b` is prime, `b > q n`, and no
+prime lies strictly between, then `b = q (n+1)`. -/
+theorem q_succ_eq_of_no_prime_between {n a b : ℕ} (hqn : q n = a) (hb : b.Prime)
+    (hab : a < b) (hgap : ∀ m, a < m → m < b → ¬ m.Prime) : q (n + 1) = b := by
+  have ha : a.Prime := hqn ▸ q_prime n
+  have hca : Nat.count Nat.Prime a = n := by
+    rw [← hqn]; simpa [q] using Nat.count_nth_of_infinite Nat.infinite_setOf_prime n
+  have hcb : Nat.count Nat.Prime b = n + 1 := by
+    have key : ∀ m, a + 1 ≤ m → m ≤ b → Nat.count Nat.Prime m = n + 1 := by
+      intro m
+      induction m with
+      | zero => omega
+      | succ k ih =>
+        intro hm1 hm2
+        rcases Nat.lt_or_ge (a + 1) (k + 1) with h | h
+        · have hnp : ¬ k.Prime := hgap k (by omega) (by omega)
+          rw [Nat.count_succ, ih (by omega) (by omega), if_neg hnp]
+        · have hk : k = a := by omega
+          subst hk
+          rw [Nat.count_succ, hca, if_pos ha]
+    exact key b (by omega) le_rfl
+  rw [q, ← hcb, Nat.nth_count hb]
+
+/-- Evenness is not a hypothesis of Lemma 4.3: it FOLLOWS from admissibility.
+`ν_H(2) < 2` means `H` occupies a single class mod 2, and `0 ∈ H` says it is
+the even one. -/
+theorem even_of_admissible {H : Finset ℕ} (h0 : 0 ∈ H) (hH : IsAdmissible H) :
+    ∀ h ∈ H, Even h := by
+  intro h hh
+  have h2 := hH 2 Nat.prime_two
+  rw [nuMod] at h2
+  have hcast : (h : ZMod 2) = ((0 : ℕ) : ZMod 2) := by
+    by_contra hne
+    have hsub : ({((0 : ℕ) : ZMod 2), (h : ZMod 2)} : Finset (ZMod 2))
+        ⊆ H.image (Nat.cast : ℕ → ZMod 2) := by
+      intro z hz
+      rw [Finset.mem_insert, Finset.mem_singleton] at hz
+      rcases hz with rfl | rfl
+      · exact Finset.mem_image.mpr ⟨0, h0, rfl⟩
+      · exact Finset.mem_image.mpr ⟨h, hh, rfl⟩
+    have hc : ({((0 : ℕ) : ZMod 2), (h : ZMod 2)} : Finset (ZMod 2)).card = 2 := by
+      rw [Finset.card_insert_of_not_mem (by simpa [eq_comm] using hne), Finset.card_singleton]
+    have := Finset.card_le_card hsub
+    omega
+  rw [Nat.cast_zero, ZMod.natCast_zmod_eq_zero_iff_dvd] at hcast
+  exact Nat.even_iff.mpr (by omega)
+
+/-- The prefix-sum enumeration of `wordPointSet` is monotone (no hypothesis). -/
+theorem wordPointSet_sum_mono {w : ℕ → ℕ} {i j : ℕ} (hij : i ≤ j) :
+    (∑ m ∈ Finset.range i, w m) ≤ ∑ m ∈ Finset.range j, w m :=
+  Finset.sum_le_sum_of_subset (Finset.range_subset.mpr hij)
+
+/-- `|H(w)| = L+1` forces the prefix sums to be STRICTLY increasing on `[0,L]`
+(they are monotone, and the cardinality says they are injective). -/
+theorem wordPointSet_sum_strictMono {w : ℕ → ℕ} {L : ℕ}
+    (hcard : (wordPointSet w L).card = L + 1) {i j : ℕ} (hj : j ≤ L) (hij : i < j) :
+    (∑ m ∈ Finset.range i, w m) < ∑ m ∈ Finset.range j, w m := by
+  have hinj : Set.InjOn (fun j : ℕ => ∑ m ∈ Finset.range j, w m) (Finset.range (L + 1)) := by
+    rw [← Finset.card_image_iff, ← wordPointSet, hcard, Finset.card_range]
+  refine lt_of_le_of_ne (wordPointSet_sum_mono hij.le) (fun he => ?_)
+  have := hinj (by simp; omega : i ∈ Finset.range (L + 1))
+    (by simp; omega : j ∈ Finset.range (L + 1)) he
+  omega
+
+theorem mem_wordPointSet {w : ℕ → ℕ} {L : ℕ} {y : ℕ} :
+    y ∈ wordPointSet w L ↔ ∃ j ≤ L, (∑ m ∈ Finset.range j, w m) = y := by
+  rw [wordPointSet, Finset.mem_image]
+  constructor
+  · rintro ⟨j, hj, rfl⟩
+    exact ⟨j, by simpa [Nat.lt_succ_iff] using hj, rfl⟩
+  · rintro ⟨j, hj, rfl⟩
+    exact ⟨j, Finset.mem_range.mpr (by omega), rfl⟩
+
+/-- The span of `H(w)` is the LAST prefix sum. (The `e`-parametrized
+`offsetSpan_wordPointSet` is the section-5 sibling of this; this form takes no
+enumeration.) -/
+theorem offsetSpan_wordPointSet_eq_sum {w : ℕ → ℕ} {L : ℕ} :
+    offsetSpan (wordPointSet w L) = ∑ m ∈ Finset.range L, w m := by
+  refine le_antisymm (Finset.sup_le (fun y hy => ?_)) ?_
+  · obtain ⟨j, hj, rfl⟩ := mem_wordPointSet.mp hy
+    exact wordPointSet_sum_mono hj
+  · exact Finset.le_sup (f := id) (mem_wordPointSet.mpr ⟨L, le_rfl, rfl⟩)
+
+/-- T3 step 1, the CORE transfer (induction half): if every point of `H(w)` is
+prime-shifted from `a = q n` and no OTHER offset in `(0, D)` is, then the primes
+following `a` are exactly `a + H(w)`, in order. -/
+theorem q_add_eq_of_primes {w : ℕ → ℕ} {L n a : ℕ}
+    (hcard : (wordPointSet w L).card = L + 1) (hqn : q n = a)
+    (hprime : ∀ h ∈ wordPointSet w L, (a + h).Prime)
+    (hnone : ∀ m, 0 < m → m < offsetSpan (wordPointSet w L) → m ∉ wordPointSet w L →
+      ¬ (a + m).Prime) :
+    ∀ j ≤ L, q (n + j) = a + ∑ m ∈ Finset.range j, w m := by
+  intro j
+  induction j with
+  | zero => intro _; simpa using hqn
+  | succ i ih =>
+    intro hiL
+    have hqi : q (n + i) = a + ∑ m ∈ Finset.range i, w m := ih (by omega)
+    have hsi : (∑ m ∈ Finset.range i, w m) < ∑ m ∈ Finset.range (i + 1), w m :=
+      wordPointSet_sum_strictMono hcard hiL (by omega)
+    have hstep : q (n + i + 1) = a + ∑ m ∈ Finset.range (i + 1), w m := by
+      refine q_succ_eq_of_no_prime_between hqi ?_ (by omega) ?_
+      · exact hprime _ (mem_wordPointSet.mpr ⟨i + 1, hiL, rfl⟩)
+      · intro y hy1 hy2
+        obtain ⟨m, rfl⟩ : ∃ m, y = a + m := ⟨y - a, by omega⟩
+        refine hnone m (by omega) ?_ ?_
+        · rw [offsetSpan_wordPointSet_eq_sum]
+          have hle : (∑ m ∈ Finset.range (i + 1), w m) ≤ ∑ m ∈ Finset.range L, w m :=
+            wordPointSet_sum_mono hiL
+          omega
+        · intro hm
+          obtain ⟨j, hj, hjm⟩ := mem_wordPointSet.mp hm
+          -- `s i < s j < s (i+1)` is impossible for a strictly monotone `s`
+          rcases Nat.lt_trichotomy j (i + 1) with h | h | h
+          · have hle : (∑ m ∈ Finset.range j, w m) ≤ ∑ m ∈ Finset.range i, w m :=
+              wordPointSet_sum_mono (by omega)
+            omega
+          · rw [h] at hjm; omega
+          · have hle : (∑ m ∈ Finset.range (i + 1), w m) ≤ ∑ m ∈ Finset.range j, w m :=
+              wordPointSet_sum_mono (by omega)
+            omega
+    rwa [show n + (i + 1) = n + i + 1 by ring]
+
+/-- T3 step 1, the CORE transfer. -/
+theorem isConsecRealization_of_primes {w : ℕ → ℕ} {L n a : ℕ}
+    (hcard : (wordPointSet w L).card = L + 1) (hqn : q n = a)
+    (hprime : ∀ h ∈ wordPointSet w L, (a + h).Prime)
+    (hnone : ∀ m, 0 < m → m < offsetSpan (wordPointSet w L) → m ∉ wordPointSet w L →
+      ¬ (a + m).Prime) :
+    IsConsecRealization w L n := by
+  have key := q_add_eq_of_primes hcard hqn hprime hnone
+  intro i hi
+  rw [Finset.mem_range] at hi
+  have h1 : q (n + i) = a + ∑ m ∈ Finset.range i, w m := key i (by omega)
+  have h2 : q (n + i + 1) = a + ∑ m ∈ Finset.range (i + 1), w m := by
+    have := key (i + 1) (by omega)
+    rwa [show n + (i + 1) = n + i + 1 by ring] at this
+  have hsucc : (∑ m ∈ Finset.range (i + 1), w m) = (∑ m ∈ Finset.range i, w m) + w i :=
+    Finset.sum_range_succ w i
+  rw [gap, h1, h2, hsucc]
+  omega
+
+/-- If every shift `a + h` is prime and the anchor `a` exceeds every prime that
+could cover a residue class, then `H` is admissible: a covering prime `p` would
+divide the prime `a + h > p`. This is the `x₀` the kickoff flags as "cheap":
+`a > √x > |H|+1` suffices. -/
+theorem admissible_of_primes {H : Finset ℕ} {a : ℕ}
+    (hprime : ∀ h ∈ H, (a + h).Prime)
+    (hbig : ∀ p : ℕ, p.Prime → p ≤ H.card → p < a) :
+    IsAdmissible H := by
+  intro p hp
+  by_contra hcon
+  haveI : Fact p.Prime := ⟨hp⟩
+  haveI : NeZero p := ⟨hp.pos.ne'⟩
+  have hle : nuMod H p ≤ p := by
+    rw [nuMod]
+    have h := Finset.card_le_univ (H.image (Nat.cast : ℕ → ZMod p))
+    rwa [ZMod.card p] at h
+  have hnu : nuMod H p = p := by omega
+  have huniv : H.image (Nat.cast : ℕ → ZMod p) = Finset.univ := by
+    apply Finset.eq_univ_of_card
+    rw [← nuMod, hnu, ZMod.card]
+  have hmem : (-(a : ZMod p)) ∈ H.image (Nat.cast : ℕ → ZMod p) := by
+    rw [huniv]; exact Finset.mem_univ _
+  obtain ⟨h, hh, hcast⟩ := Finset.mem_image.mp hmem
+  have hdvd : p ∣ a + h := by
+    have hz : ((a + h : ℕ) : ZMod p) = 0 := by push_cast [hcast]; ring
+    exact (ZMod.natCast_zmod_eq_zero_iff_dvd _ _).mp hz
+  have heq : p = a + h := ((hprime h hh).eq_one_or_self_of_dvd p hdvd).resolve_left hp.ne_one
+  -- `p` covers a class, so `p ≤ ν_H(p) = |image| ≤ |H|`, whence `p < a ≤ a + h = p`
+  have hpH : p ≤ H.card := by
+    have : nuMod H p ≤ H.card := Finset.card_image_le
+    omega
+  have := hbig p hp hpH
+  omega
+
+/-- The anchor is odd (it exceeds 2 and is prime), so a prime shift forces the
+offset even. This is the kickoff's "odd `j` needs no case". -/
+theorem even_of_prime_shift {a m : ℕ} (ha : a.Prime) (ha2 : 2 < a)
+    (ham : (a + m).Prime) : Even m := by
+  by_contra hodd
+  rw [Nat.not_even_iff_odd] at hodd
+  have haodd : Odd a := ha.odd_of_ne_two (by omega)
+  have heven : Even (a + m) := haodd.add_odd hodd
+  have := (Nat.Prime.even_iff ham).mp heven
+  omega
+
+/-- T3 step 1, the classification: an offset in `(0, D)` that is NOT a point of
+`H` but whose shift is prime is necessarily a ONE-EXTENSION of `H`. Parity kills
+the odd offsets; admissibility is forced by `admissible_of_primes`. So the only
+"bad" offsets are the ones Lemma 4.2 sums over. -/
+theorem mem_oneExtensions_of_prime_shift {H : Finset ℕ} {a m : ℕ}
+    (h0 : 0 ∈ H) (hm0 : 0 < m) (hmD : m < offsetSpan H) (hmH : m ∉ H)
+    (hprime : ∀ h ∈ H, (a + h).Prime) (ham : (a + m).Prime)
+    (hbig : ∀ p : ℕ, p.Prime → p ≤ H.card + 1 → p < a) :
+    m ∈ oneExtensions H := by
+  classical
+  have hains : ∀ h ∈ insert m H, (a + h).Prime := by
+    intro h hh
+    rcases Finset.mem_insert.mp hh with rfl | hh
+    · exact ham
+    · exact hprime h hh
+  have ha : a.Prime := by simpa using hprime 0 h0
+  have ha2 : 2 < a := by
+    have := hbig 2 Nat.prime_two (by have := Finset.card_pos.mpr ⟨0, h0⟩; omega)
+    omega
+  rw [oneExtensions, Finset.mem_filter, Finset.mem_range]
+  refine ⟨hmD, even_of_prime_shift ha ha2 ham, hm0, hmH, ?_⟩
+  refine admissible_of_primes hains (fun p hp hpc => hbig p hp ?_)
+  exact le_trans hpc (Finset.card_insert_le _ _)
+
 /-- LEMMA 4.3 (consecutive lower bound; the transfer; v1.1). Let `w` be a
 gap word whose point set `H(w)` is admissible, `|H(w)| = L+1 ≤ 4 lnln x - 1`,
 span `≤ κ L ln(L+2)` for a fixed `κ ≥ 1` (hence far inside A's `(ln x)^3`

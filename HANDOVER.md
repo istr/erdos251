@@ -105,8 +105,9 @@ residuals + 12 skeleton statements).
    preserved byte-wise, steering-verified ANN-41) and the ANN-39
    follow-up refactor landed at c5103a9 (CI green on main,
    operator-attested). Main is the pin lineage; no branch merge
-   pending. Inventory on main: 5 = Counting 3 (exactly 4.2, 4.3,
-   constr_consCount_pos) + Conditional 1 + Statement 1.
+   pending. Inventory on main was 5 = Counting 3 (exactly 4.2, 4.3,
+   constr_consCount_pos) + Conditional 1 + Statement 1; session 4
+   took it to 4 by closing 4.2 (see 2b).
 2. Session 3 CLOSED: ACCEPTED (ANN-39) at 2dc3f65. Kickoffs v3
    (sha256 385c1e91...d463d) and v3.1 delta (sha256
    f2976d93...d2d67) both ephemeral, never committed. Landed: T1
@@ -132,6 +133,53 @@ residuals + 12 skeleton statements).
    HLQuantA hypothesis, asymmetric drop) booked to the BET-04
    basket; no mid-arc unfreeze. Report archival convention
    RATIFIED (3855c9e; report sha256 3fc8e757...8bfe3).
+2b. SESSION 4 (executor, this HEAD): LEMMA 4.2 CLOSED, T3 OPEN.
+   Two commits, ANN-42 (T2) and ANN-43 (T3 core). Inventory 5 -> 4 =
+   Counting 2 (4.3, constr_consCount_pos) + Conditional 1 +
+   Statement 1. All three frozen statements re-diffed BYTE-IDENTICAL
+   against the original pin c6c0b98 after both commits; axiom gate on
+   erdos_251_of_small_tail_fork_merge unchanged (classical three).
+   Rule 12 ran FIRST and cleared the route on the ACTUAL span formula
+   at kappa in {1,10,48} (48 = the C_1 constr_consCount_pos feeds in,
+   which the kickoff appendix never tested): zero violations, LARGE
+   log-sum shrinks in k, error lands additive as booked.
+   LANDED: 4.2 whole (b/c/d as designed, no route deviation);
+   C_2(kappa) = 2 kappa mertensC3 exp((2 + log kappa/log 4)/2), let
+   to fall out. Two kickoff steps proved UNNEEDED: (b) does not need
+   p prime, and (d) does not need the evens-counting
+   #oneExtensions <= D/2 -- the crude <= D closes. T1's
+   "naive constant fails" precedent did NOT recur.
+   ALSO LANDED (proof-layer, NOT a closure): T3 step 1's structural
+   core -- isConsecRealization_of_primes, the next-prime
+   characterization q_succ_eq_of_no_prime_between, the wordPointSet
+   prefix-sum structure, and mem_oneExtensions_of_prime_shift with
+   its parity/admissibility inputs. Both of the kickoff's flagged
+   step-1 sub-claims are now machine-checked rather than asserted
+   (odd offsets need no case; the inadmissible-t x_0 is cheap --
+   a > |H|+1, i.e. sqrt x > L+2, suffices).
+   T3 RESIDUAL, itemized for kickoff v5 (the five-term cut is
+   CONFIRMED SOUND -- no defect; it is simply not a one-session item
+   alongside T2, which is a capacity finding, not a route error):
+     (1) step 1's Finset card inequality: consCount >= tupleCount H x
+         - tupleCount H (sqrt x) - sum_t tupleCount (insert t H) x.
+         The anchor map a |-> Nat.count Nat.Prime a is injective on
+         the good set; the structural core above supplies the rest.
+     (2) steps 2-3: HLQuantA both directions + this session's 4.2 +
+         the modelMass (insert t H) x -> modelMass H x algebra (ratio
+         of singularSeries, one power of log x shifted). Note 4.2's
+         span/conclusion shapes line up with 4.3's hypotheses
+         VERBATIM under k = L -- no bridging needed, confirmed.
+     (3) step 4: tupleCount H (sqrt x) <= sqrt x + 1. No content.
+     (4) step 5: the x_0 assembly. Needs TWO growth-rate limits --
+         (lnln x)(lnlnln x)^2 / log x -> 0 and
+         x exp(-c (lnln x)^2) >> sqrt x. Neither is hard mathematics;
+         both are real Lean work. No hidden-coefficient risk (|H| is
+         O(lnln x) here, not coupled to the summation the way MP-M2's
+         dyadic blocks were).
+   constr_consCount_pos: still booked near-free downstream of T3, but
+   that remains the kickoff's ESTIMATE -- it sits behind a sorry and
+   was not exercised. RECOMMEND: kickoff v5 scopes T3 alone.
+   fork_merge_of_hypotheses untouched, as scoped OUT.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an

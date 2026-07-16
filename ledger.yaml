@@ -1345,3 +1345,57 @@ annotations:
       is SOUND as mathematics but is NOT a one-session item
       alongside T2 -- see HANDOVER for the itemized residual.
       fork_merge_of_hypotheses untouched, as scoped OUT.
+  - id: ANN-20260716-43
+    refs: [ANN-20260716-42]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s4 (cont.): T3 STRUCTURAL CORE LANDED, T3 ITSELF
+      OPEN. `consCount_lower_bound` and `constr_consCount_pos`
+      REMAIN SORRIED -- this entry books proof-layer helpers, not a
+      closure. Inventory unchanged at 4. All new declarations on
+      [propext, Classical.choice, Quot.sound]; the three frozen
+      statements re-diffed byte-identical against the ORIGINAL pin
+      c6c0b98 (not merely against the s4 parent), so two commits of
+      proof investment have moved no statement.
+      LANDED (step 1's mathematically load-bearing half, i.e. the
+      part carrying route risk; the rest of T3 is bookkeeping):
+      `q_succ_eq_of_no_prime_between` (next-prime characterization,
+      by induction on Nat.count -- the Nat.nth/Nat.count bridge is
+      the only glue needed, as item-0014's q_eq_of_count anticipated);
+      `q_add_eq_of_primes` + `isConsecRealization_of_primes` (the
+      transfer: all-shifts-prime + no-other-prime-in-(0,D) => n
+      realizes w consecutively); `wordPointSet_sum_mono` /
+      `_strictMono` / `mem_wordPointSet` /
+      `offsetSpan_wordPointSet_eq_sum` (the |H(w)| = L+1 hypothesis
+      is what forces the prefix sums strictly increasing -- w i > 0
+      is NOT free, it is bought by the cardinality hypothesis);
+      `even_of_admissible`; `even_of_prime_shift`;
+      `admissible_of_primes`; `mem_oneExtensions_of_prime_shift`.
+      KICKOFF RECONSTRUCTION CONFIRMED on both flagged sub-claims of
+      step 1, now machine-checked rather than asserted: (i) the odd
+      offsets need "no case" -- parity alone kills them
+      (even_of_prime_shift); (ii) the inadmissible-t x_0 is indeed
+      "cheap" -- admissible_of_primes needs only a > |H|+1, so
+      sqrt x > L+2 suffices, exactly as estimated. The 4.3
+      docstring's claim that evenness follows from admissibility
+      rather than being hypothesised is likewise discharged
+      (even_of_admissible).
+      SCOPE FINDING (the answer to the kickoff's own request to
+      confirm the cut against Lean experience): the five-term cut is
+      SOUND -- no defect found, the decomposition survives contact --
+      but T3 is NOT a one-session item alongside T2, and the kickoff
+      booking both was an overestimate of session capacity, not a
+      route error. Residual, itemized in HANDOVER: step 1's Finset
+      card inequality; steps 2-3 (HLQuantA both directions +
+      this session's 4.2 + the modelMass(insert t H) -> modelMass H
+      algebra); step 4 (crude sqrt x bound, no content); step 5 (the
+      x_0 assembly, which needs TWO growth-rate limits --
+      (lnln x)(lnlnln x)^2 / log x -> 0 and x exp(-c (lnln x)^2) >>
+      sqrt x -- neither hard mathematically, both real Lean work).
+      No hidden-coefficient risk found in step 5, consistent with the
+      kickoff's own growth-rate argument (|H| is O(lnln x) here, not
+      a free parameter coupled to the summation as in the s3 dyadic
+      defect). RECOMMEND: kickoff v5 scopes T3 alone;
+      constr_consCount_pos stays booked as near-free downstream of it
+      (unverified -- it is downstream of a sorry, so its "near-free"
+      status remains the kickoff's estimate, not a finding).
