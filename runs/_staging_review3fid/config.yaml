@@ -1,0 +1,43 @@
+run_id: 2026MMDD_sonnet4.6_review3fid_noweb
+stage: review
+model: claude-sonnet-4.6 (PLANNED; exact model string at archive time)
+provider: Anthropic
+thinking_budget: ""
+temperature: null
+payload_file: payloads/review_3_fidelity.md
+payload_sha256: "4a8d51d005d7e301312f748d5b26bcb27887d630b7a614e5e5fb3c7143e2308f"
+object_file: object_fidelity_counting.md
+object_sha256: "7bf5bebe0d1da236dbff22d964381084b34b2e629632291f1a854bf555b6e4ca"
+object_derivation: >-
+  Deterministic derivation: strip_fidelity_object.py applied to
+  dossier/chain-v1.md, lean/Erdos251/Counting.lean,
+  lean/Erdos251/Hypotheses.lean and lean/Erdos251/Basic.lean at the
+  followup27 tip commit. Assertions enforce removal of prior-verdict and
+  per-claim tags, amendment brackets and version markers, and
+  process/item/ledger vocabulary; required-content assertions guard the
+  mathematics (12 sorried statements, all declaration names, the
+  necessity notes). Brackets mixing mathematics with process are
+  rewritten to keep exactly the mathematics. Re-run at the pin
+  reproduces the object byte-identically (steering hashes in
+  HASHES.steering.txt; operator sha256 canonical).
+web_access: false
+tools: [local_code_execution]
+contamination_class: "R (temp/incognito chat or API, memory OFF)"
+wrapper_file: wrapper.md
+trace_artifact_layer: ""
+started: ""
+finished: ""
+operator: istr
+notes: >-
+  item-0014 closure arm (round-2 decision 1, ratified): blind
+  transcription-fidelity review of the Counting.lean statement set
+  against the anchor-stripped prose, closing the acceptance-letter
+  requirement "statement set passes a blind cross-review before any
+  proof investment". Computation is MANDATORY (tables at (3,4), (2,3)
+  and one fresh pair). Sonnet debut on low-silent-cost work per the
+  model-ladder plan. Two turns permitted per runs/README rule 7
+  (STOP-CONTINUE convention in the wrapper). Wrapper verbatim from the
+  R2 arms. INTERNAL (not for the reviewer): the steering
+  transcription-fidelity pass (ledger ANN-20260715-26) is the
+  convergence baseline; its accepted deviations are the expected
+  rediscovery set.
