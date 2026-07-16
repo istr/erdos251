@@ -846,3 +846,33 @@ annotations:
       convention the operator's application of this followup extends
       the ANN-25 sign-off to v1.4; the diff is one commit and
       citation-only, reviewable in isolation.
+  - id: ANN-20260716-32
+    refs: [ANN-20260716-28, ANN-20260716-29, BET-20260711-06]
+    date: 2026-07-16
+    note: >-
+      Post-sweep venue check (operator-supplied URL): the
+      Erdosproblems-llm-hunter site (mehmetmars7.github.io, Apache
+      2.0). READABILITY: rendered page is a JS shell, empty to
+      server-side fetchers; content sits in docs/data/erdos_data.js
+      (13.5 MB) -- read raw by steering; the item-0004 sweep could not
+      have indexed it, and future watching must poll the repo
+      (attacks/erdos/ path and the data file), not the page. Entry
+      251: status unresolved, completion 55, two attacks by "gpt pro
+      5.2" (2026-01-17 v1 completion 45; 2026-01-27 v2 completion 55).
+      Assessment against the BET-06 reversal threshold: NOT MET --
+      the Tao route (quantitative prime tuples, entropy) appears only
+      as an unexecuted "top next moves" sketch citing "a remark
+      attributed to Terence Tao"; zero Cramer-type content; no
+      statistical step executed; no solution claim. Strongest
+      rigorous output is v2's lowest-terms denominator bound
+      b > 10^748 by convergents (the project's machine-checked
+      deterministic half gives b > 10^1050), plus an
+      obstruction-correction (target eventual periodicity, not
+      integrality) that independently matches the project's
+      exact-locking countermodel. BET-06 = NO stands; evidence
+      inventory extended post hoc (literature.md Addendum 2).
+      Register consequences: (a) watch-list extension booked in
+      HANDOVER optional item; (b) CONTAMINATION note -- the venue is
+      a live, contribution-accepting collection of LLM attempts on
+      #251; any web-ON run touching the problem treats it as a
+      public LLM-generated source.

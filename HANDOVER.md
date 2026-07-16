@@ -94,7 +94,13 @@ residuals + 12 skeleton statements).
    the could-be-formalisable / working-on-formalising flags on the
    problem page (both currently None -- minimal-footprint public
    claim); alerts per report recommendation 1 (arXiv math.NT
-   irrationality+prime+2^n; erdosproblems.com/251 watch).
+   irrationality+prime+2^n; erdosproblems.com/251 watch) PLUS the
+   LLM-hunter repo (ANN-32): poll
+   github.com/mehmetmars7/Erdosproblems-llm-hunter for commits
+   touching attacks/erdos/ or docs/data/erdos_data.js on id 251 --
+   the rendered page is a JS shell, blind to fetchers. Contamination
+   note: that venue is public LLM-generated #251 material; web-ON
+   runs must treat it as such.
 
 ## item-0004 RESOLVED (2026-07-16)
 Full report: dossier/literature.md (ANN-28; original artifact
