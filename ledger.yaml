@@ -781,3 +781,68 @@ annotations:
       Residual UNVERIFIED now only: Hardy-Wright theorem number
       (physical volume), Pratt Conjecture 1.2 numeric window
       (full-text check).
+  - id: ANN-20260716-30
+    refs: [ANN-20260716-27, ANN-20260715-26]
+    date: 2026-07-16
+    note: >-
+      item-0014 CLOSED. The blind transcription-fidelity arm ran
+      2026-07-16 11:17-11:55 CET on claude-sonnet-5 (Sonnet debut
+      landed one model higher than planned; exact string archived),
+      web OFF, code execution ON, payload/object hashes matching the
+      staging byte-for-byte; run archived by the operator at 72e32ff
+      (runs/20260716_sonnet5_review3fid), report self-hash
+      c83b0a38...136537 above-the-line per the R2b convention.
+      Verdict: FAITHFUL with documented deviations, confidence 0.85,
+      ZERO unfaithful rows over 29 ledger entries (12 statements + 17
+      definitions). Computation mandate exemplary: dual code paths
+      (Lean-literal vs prose-literal) at (3,4), (2,3) and fresh (4,6);
+      18 assertions on the proved examples; admissibility by literal
+      residue enumeration; offsetSpan = q_{L+1}-q_0 shown EXACT at six
+      pairs. Convergence with the ANN-26 steering baseline: all six
+      accepted deviations independently rediscovered or verified,
+      twice with proofs the docstrings only asserted (0<C inert via
+      monotonicity; evenness derivability proved by hand). Divergence
+      set (the arm's value-add, both adjudicated ACCEPTED): (1) Lemma
+      4.3's conclusion pair is strictly WEAKER than the prose chain --
+      M >= 4 not re-exported -- undeclared until now; harmless by
+      design (constr_consCount_pos consumes 1 <= N only; the M >= 4
+      step moves into the proof obligation via 4.1); docstring flag
+      added this followup. (2) Lemma 4.4 / frozen CramerGranville lack
+      prose's C_g >= 1; the arm PROVED inertness (gap n >= 1 makes hB
+      unsatisfiable for Cg < 0); disclosure completed in the
+      docstring, frozen-definition faithfulness question routed to
+      item-0011 (body updated). Also booked: docstring self-reporting
+      gaps on the non-exported (K+20)^-2 rate and the tight ln L span
+      form (defensible, low severity); the reviewer's honest
+      phase-compliance caveat -- single-document payload delivery
+      makes Phase-A/B blinding an attestation of composition order,
+      not of non-exposure; INSTRUMENT LESSON: future two-phase arms
+      should deliver Phase B in turn 2 via the STOP-CONTINUE channel.
+      Roadmap: item-0014 done (executor Claude Opus, operator-stated,
+      confirmed by this apply; reviewer claude-sonnet-5; adjudication
+      steering). item-0015's remaining gate is RATIFICATION only --
+      both execution gates (item-0014 closure, BET-06) now satisfied.
+  - id: ANN-20260716-31
+    refs: [ANN-20260716-30, ANN-20260716-28, ANN-20260715-25]
+    date: 2026-07-16
+    note: >-
+      chain-v1 v1.4 SIGN-OFF REFRESH (citation hygiene; discharges the
+      ANN-28 queue item, which was gated on item-0014 closure to keep
+      the fidelity object's source byte-stable). Delta over signed
+      v1.3, statements and mathematics untouched: title bump;
+      Hardy-Wright completed to 6th ed. OUP 2008 with the theorem
+      number still pending a physical-volume check; Mertens and
+      Rosser-Schoenfeld given precise volumes (J. reine angew. Math.
+      77 (1874) 289-338 -- v1.4 bracket warns off the same-year Band
+      78 paper -- and Illinois J. Math. 6 (1962) 64-94); the three
+      "tracked in item-0004" phrases resolved to verified state.
+      Kuperberg and the remaining report citations live in
+      dossier/literature.md and are not cited by the chain; dissektion
+      already carries the correct ScPu11 single-paper pairing, no edit
+      needed. New sha256
+      6bcb1425271a3d55db955f1c63c3b7b205c2fc7a6a93625bc688afdea778ec0b
+      (old 1dda542d...59cf1c); Counting.lean's source-of-truth
+      docstring line follows. Per the established ratify-by-apply
+      convention the operator's application of this followup extends
+      the ANN-25 sign-off to v1.4; the diff is one commit and
+      citation-only, reviewable in isolation.

@@ -71,25 +71,24 @@ residuals + 12 skeleton statements).
   research-mode steering session; report at dossier/literature.md;
   BET-06 scored NO (brier 0.01) -- no prior art, niche unoccupied;
   item-0015 gate (b) cleared.
+- item-0014 CLOSED 2026-07-16 (ANN-30): blind fidelity arm
+  (claude-sonnet-5, runs/20260716_sonnet5_review3fid) FAITHFUL with
+  documented deviations, 0.85, zero unfaithful; two new findings
+  adjudicated (4.3 conclusion deviation-weaker flagged; 4.4 missing
+  1<=Cg proved inert, C>=1 question routed to item-0011). Instrument
+  lesson booked: deliver Phase B in turn 2 on future two-phase arms.
+- chain-v1 at v1.4 (ANN-31, citation hygiene only; sha
+  6bcb1425...78ec0b); the ANN-28 queue item is discharged.
+  Sorry inventory unchanged: 16.
 
 ## Pending decisions and gates (operator), round 2
-1. DISPATCH the staged fidelity arm (Sonnet debut; operator sha256 of
-   payload + object and exact model string into the config at archive
-   time; web OFF, code execution ON, two turns per rule 7). Verdict
-   returns to steering for adjudication against the ANN-26 baseline;
-   then item-0014 done-move + closure ANN with executor model
-   attribution (Opus per item-0003 precedent -- operator confirms).
-2. item-0015 ratification (proposed in followup27). Gate (b) is
-   SATISFIED by BET-06 = NO; execution now waits on item-0014 closure
-   only.
-3. BET-07 resolution by 2026-08-08 (operator judgment).
-4. QUEUED after item-0014 closes: citation-hygiene amendment chain-v1
-   v1.4 + dissektion (ScPu11 single-paper form, anachronism flag off;
-   Mertens -> J. reine angew. Math. 77 (1874) 289-338; Kuperberg
-   journal ref QJM 74 (2023) 1457-1479; Hardy-Wright stays flagged
-   until volume check). Deferred deliberately: keeps the staged
-   fidelity object's source byte-stable; new sign-off sha to ledger.
-5. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
+1. item-0015 RATIFICATION -- the only remaining gate: both execution
+   gates are satisfied (item-0014 closed ANN-30; BET-06 NO ANN-28).
+   On ratification, steering issues kickoff v1 (ephemeral) against the
+   then-current pin; suggested first session = 4.4 + section-5 word
+   lemmata, item-0011 canary co-funded.
+2. BET-07 resolution by 2026-08-08 (operator judgment).
+3. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
    do NOT inherit the problem page's [Er58b] all-k attribution; the
    thread already carries AI-assisted mathematics, ANN-29) and/or set
    the could-be-formalisable / working-on-formalising flags on the
