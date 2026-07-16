@@ -919,3 +919,37 @@ annotations:
       choice). Note: executor saved the canary finding to its local
       project memory; the durable record is this ledger and the
       roadmap bodies.
+  - id: ANN-20260716-34
+    refs: [ANN-20260716-33]
+    date: 2026-07-16
+    note: >-
+      CORRECTION of ANN-33 (steering error, executor-caught):
+      Real.rexp_tsum_eq_tprod DOES exist at the mathlib pin a6276f4c
+      -- Mathlib/Analysis/SpecialFunctions/Complex/Log.lean:271,
+      defined beside Real.multipliable_of_summable_log (:265) with
+      identical hypotheses (pointwise 0 < f n, Summable of the logs);
+      signature rexp (tsum log f) = tprod f, so singularSeries
+      positivity is a one-liner via Real.exp_pos once the single
+      summability obligation lands. Steering's not-located flag rested
+      on two compounding inference errors, both owned: (1) a NEGATIVE
+      existence claim from six targeted file greps plus a docs search
+      -- not exhaustive; the lemma sits in the Complex log file, a
+      counterintuitive location targeted search predictably misses;
+      (2) an empty grep over LogBounds.lean was misread as the file
+      possibly not existing, when the pattern simply did not match.
+      BLIND-SPOT REGISTER addition (method upgrade, now standard):
+      name-existence checks against the pin use the full-tree method
+      -- codeload tarball of mathlib at the rev (17 MB, seconds in
+      the sandbox) plus recursive grep; negative claims require the
+      exhaustive pass or must be scoped to the searched locations.
+      Applied retroactively to every kickoff-v2 name: summable_rpow
+      (SumPrimeReciprocals.lean:87), four_pow_lt_mul_centralBinom
+      (Bertrand.lean, Choose/Central.lean), log-bound neighborhood
+      (Complex/LogBounds.lean:182 norm_log_one_add_le) -- all
+      confirmed. KICKOFF v2.1 issued superseding v2 (delta: section 5
+      only; corrected bridges with file/line/signatures, fallback
+      paragraph dropped, T4 simplified); steering sha256
+      96369efe...a62398. item-0011 body corrected in this followup.
+      Credit: the contradiction was surfaced by the session-2
+      executor before proof investment -- the M2 channel working as
+      designed.

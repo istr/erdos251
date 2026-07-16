@@ -91,7 +91,9 @@ residuals + 12 skeleton statements).
 ## Pending decisions and gates (operator), round 2
 1. Session 2 DISPATCHED: session-1 PR merged at cad61bb (CI green,
    inventory 11); kickoff v2 issued ephemerally against that pin
-   (steering sha256 87633345...a803d0). Scope: cspan_le (in-tree
+   (superseded by kickoff v2.1 after an executor-caught bridge-lemma
+   correction, ANN-34; steering sha256 96369efe...a62398). Scope:
+   cspan_le (in-tree
    Chebyshev extraction with the log bootstrap), cfm2_tendsto,
    cbudget (2/log-2 slack structure documented), plus the item-0011
    summability as BOXED T4 (2h) -- the fold-in is the flagged
