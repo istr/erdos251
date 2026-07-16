@@ -2698,7 +2698,18 @@ theorem constr_consCount_pos (hA : HLQuantA) {Cg : ℝ} (hCg : 1 ≤ Cg) :
     ∃ x₀ : ℕ, ∀ x : ℕ, x₀ ≤ x →
       1 ≤ consCount (cword (cJ Cg x) (cK Cg x)) (cL (cJ Cg x) (cK Cg x)) x ∧
         1 ≤ consCount (cword' (cJ Cg x) (cK Cg x)) (cL (cJ Cg x) (cK Cg x)) x := by
-  sorry
+  obtain ⟨C₁, hC₁, hspan⟩ := cspan_le
+  obtain ⟨x₃, h43⟩ := consCount_lower_bound hA C₁ hC₁
+  obtain ⟨x₄, hbud⟩ := cbudget hCg
+  refine ⟨max x₃ x₄, fun x hx => ?_⟩
+  -- `cbudget` bundles 4.3's window clause `L + 1 ≤ 4 lnln x - 1` verbatim
+  obtain ⟨hJ, hK, -, -, hbudget, -, -, -⟩ := hbud x (le_trans (le_max_right _ _) hx)
+  obtain ⟨⟨hadm, hcard⟩, ⟨hadm', hcard'⟩⟩ := cword_admissible (cJ Cg x) (cK Cg x) hJ hK
+  -- 5(iii)'s last two clauses ARE 4.3's span hypothesis at `κ := C₁`
+  obtain ⟨-, -, hsp, hsp'⟩ := hspan (cJ Cg x) (cK Cg x) hJ hK
+  have hx3 : x₃ ≤ x := le_trans (le_max_left _ _) hx
+  exact ⟨(h43 x hx3 _ _ hadm hcard hbudget hsp).2,
+    (h43 x hx3 _ _ hadm' hcard' hbudget hsp').2⟩
 
 /-! ### Smoke tests (ENCOURAGED by the kickoff; review-verified tables)
 
