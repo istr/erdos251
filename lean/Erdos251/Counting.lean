@@ -535,6 +535,221 @@ theorem wordPointSet_admissible {L : ℕ} {w e : ℕ → ℕ} (he : StrictMono e
     rw [Finset.card_erase_of_mem (Finset.mem_univ _), Finset.card_univ, ZMod.card] at hle
     omega
 
+/-- `clog₂((n+2)^2) ≤ 2 clog₂(n+2)`: squaring at most doubles the
+binary ceiling logarithm (`(n+2)^2 ≤ (2^{clog₂(n+2)})^2 = 2^{2 clog₂(n+2)}`). -/
+private theorem clog_sq_le (n : ℕ) :
+    Nat.clog 2 ((n + 2) ^ 2) ≤ 2 * Nat.clog 2 (n + 2) := by
+  apply (Nat.le_pow_iff_clog_le (by norm_num)).mp
+  calc (n + 2) ^ 2 ≤ (2 ^ Nat.clog 2 (n + 2)) ^ 2 :=
+        Nat.pow_le_pow_left (Nat.le_pow_clog (by norm_num) _) 2
+    _ = 2 ^ (2 * Nat.clog 2 (n + 2)) := by rw [← pow_mul, Nat.mul_comm]
+
+/-- Chebyshev extraction, ℕ form (the log bootstrap). For `n ≥ 5`:
+`q n ≤ 2 clog₂(n+2) (n+1)`.
+
+Write `N = q n = 2m+1` (`N ≥ q 5 = 13` is an odd prime). Chebyshev's
+`two_mul_lt_clog_mul` at `m` gives `N - 1 < clog₂(N-1) (π(N-1) + 1)`, and
+`π(N-1) = count Prime N = n` by `Nat.count_nth_of_infinite`. The crude
+bound `nth_prime_lt_sq` (`N < (n+2)^2`) is fed back in to replace
+`clog₂(N-1)` by `2 clog₂(n+2)` -- this is what breaks the circularity. -/
+private theorem q_le_clog_mul {n : ℕ} (hn : 5 ≤ n) :
+    q n ≤ 2 * Nat.clog 2 (n + 2) * (n + 1) := by
+  have hq5 : q 5 = 13 := q_eq_of_count (by norm_num) (by decide)
+  have hN13 : 13 ≤ q n := by
+    calc (13 : ℕ) = q 5 := hq5.symm
+      _ ≤ q n := q_strictMono.monotone hn
+  have hodd : q n % 2 = 1 := by
+    rcases (q_prime n).eq_two_or_odd with h | h
+    · omega
+    · exact h
+  obtain ⟨m, hm2⟩ : ∃ m, 2 * m + 1 = q n := ⟨q n / 2, by omega⟩
+  have hm4 : 4 ≤ m := by omega
+  have hcheb := two_mul_lt_clog_mul m hm4
+  have hcount : Nat.primeCounting (2 * m) = n := by
+    have e : Nat.primeCounting (2 * m) = Nat.count Nat.Prime (2 * m + 1) := rfl
+    rw [e, hm2]
+    simpa [q] using Nat.count_nth_of_infinite Nat.infinite_setOf_prime n
+  rw [hcount] at hcheb
+  have hsq : q n < (n + 2) ^ 2 := nth_prime_lt_sq hn
+  have hclog : Nat.clog 2 (2 * m) ≤ 2 * Nat.clog 2 (n + 2) := by
+    calc Nat.clog 2 (2 * m) ≤ Nat.clog 2 ((n + 2) ^ 2) := Nat.clog_mono_right 2 (by omega)
+      _ ≤ 2 * Nat.clog 2 (n + 2) := clog_sq_le n
+  have hkey : 2 * m < 2 * Nat.clog 2 (n + 2) * (n + 1) :=
+    lt_of_lt_of_le hcheb (Nat.mul_le_mul hclog (le_refl (n + 1)))
+  omega
+
+/-- The single ℕ→ℝ bridge: `clog₂ m ≤ 2 ln m` for `m ≥ 8`.
+
+`Nat.pow_pred_clog_lt_self` gives `2^{c-1} < m`, i.e. `c < ln m / ln 2 + 1`;
+`m ≥ 8` gives `ln m ≥ 3 ln 2`, which absorbs the `+1` with room to spare
+(`c < 1.925 ln m`). Reduced to `Real.log_two_gt_d9`. -/
+private theorem clog_le_two_log {m : ℕ} (hm : 8 ≤ m) :
+    (Nat.clog 2 m : ℝ) ≤ 2 * Real.log m := by
+  have hl0 : (0 : ℝ) < Real.log 2 := by linarith [Real.log_two_gt_d9]
+  have hc1 : 1 ≤ Nat.clog 2 m := Nat.clog_pos (by norm_num) (by omega)
+  have hlt : 2 ^ (Nat.clog 2 m - 1) < m := Nat.pow_pred_clog_lt_self (by norm_num) (by omega)
+  have hltR : (2 : ℝ) ^ (Nat.clog 2 m - 1) < (m : ℝ) := by exact_mod_cast hlt
+  have hlog : ((Nat.clog 2 m : ℝ) - 1) * Real.log 2 < Real.log m := by
+    have h := Real.log_lt_log (by positivity : (0 : ℝ) < 2 ^ (Nat.clog 2 m - 1)) hltR
+    rw [Real.log_pow, Nat.cast_sub hc1] at h
+    push_cast at h
+    linarith
+  have hlog8 : 3 * Real.log 2 ≤ Real.log m := by
+    have h8 : Real.log 8 ≤ Real.log m :=
+      Real.log_le_log (by norm_num) (by exact_mod_cast hm)
+    have he : Real.log 8 = 3 * Real.log 2 := by
+      rw [show (8 : ℝ) = 2 ^ 3 by norm_num, Real.log_pow]; push_cast; ring
+    linarith
+  have h2l1 : (0 : ℝ) ≤ 2 * Real.log 2 - 1 := by linarith [Real.log_two_gt_d9]
+  have h3l2 : (0 : ℝ) ≤ 3 * Real.log 2 - 2 := by linarith [Real.log_two_gt_d9]
+  have hp1 : (0 : ℝ) ≤ (Real.log m - 3 * Real.log 2) * (2 * Real.log 2 - 1) :=
+    mul_nonneg (by linarith) h2l1
+  have hp2 : (0 : ℝ) ≤ Real.log 2 * (3 * Real.log 2 - 2) := mul_nonneg hl0.le h3l2
+  have hLl : Real.log m + Real.log 2 ≤ 2 * Real.log m * Real.log 2 := by nlinarith [hp1, hp2]
+  have key : (Nat.clog 2 m : ℝ) * Real.log 2 < (2 * Real.log m) * Real.log 2 := by
+    nlinarith [hlog, hLl]
+  exact (lt_of_mul_lt_mul_right key hl0.le).le
+
+/-- Chebyshev extraction (the `q n = O(n ln n)` upper bound), in the shape
+section 5(iii) consumes: `q n ≤ 4 (n+1) ln(n+2)` for all `n ≥ 4`.
+
+`n ≥ 6` is `q_le_clog_mul` composed with `clog_le_two_log` at `m = n+2 ≥ 8`;
+`n = 4, 5` are the numeric values `q 4 = 11`, `q 5 = 13` against
+`ln(n+2) ≥ ln 4 = 2 ln 2 > 1.386`. The constant `4` is not sharp
+(the truth is `~1`); slack is deliberate. -/
+theorem q_le_mul_log : ∃ C : ℝ, 1 ≤ C ∧ ∀ n : ℕ, 4 ≤ n →
+    (q n : ℝ) ≤ C * ((n : ℝ) + 1) * Real.log ((n : ℝ) + 2) := by
+  refine ⟨4, by norm_num, ?_⟩
+  intro n hn
+  have hlog2 : (1.386 : ℝ) < 2 * Real.log 2 := by linarith [Real.log_two_gt_d9]
+  rcases Nat.lt_or_ge n 6 with hn6 | hn6
+  · have hlog4 : 2 * Real.log 2 ≤ Real.log ((n : ℝ) + 2) := by
+      have hle : (4 : ℝ) ≤ (n : ℝ) + 2 := by
+        have : (4 : ℝ) ≤ (n : ℝ) := by exact_mod_cast hn
+        linarith
+      have h := Real.log_le_log (by norm_num : (0 : ℝ) < 4) hle
+      rw [show (4 : ℝ) = 2 ^ 2 by norm_num, Real.log_pow] at h
+      push_cast at h
+      linarith
+    interval_cases n
+    · have h4 : q 4 = 11 := q_eq_of_count (by norm_num) (by decide)
+      rw [h4]; norm_num at hlog4 ⊢; linarith [hlog4, hlog2]
+    · have h5 : q 5 = 13 := q_eq_of_count (by norm_num) (by decide)
+      rw [h5]; norm_num at hlog4 ⊢; linarith [hlog4, hlog2]
+  · have h1 : q n ≤ 2 * Nat.clog 2 (n + 2) * (n + 1) := q_le_clog_mul (by omega)
+    have h2 : (Nat.clog 2 (n + 2) : ℝ) ≤ 2 * Real.log ((n : ℝ) + 2) := by
+      have h := clog_le_two_log (m := n + 2) (by omega)
+      push_cast at h
+      exact h
+    have h1R : (q n : ℝ) ≤ 2 * (Nat.clog 2 (n + 2) : ℝ) * ((n : ℝ) + 1) := by
+      have h := (Nat.cast_le (α := ℝ)).mpr h1
+      push_cast at h
+      linarith
+    have hn1 : (0 : ℝ) ≤ (n : ℝ) + 1 := by positivity
+    have h3 := mul_le_mul_of_nonneg_right h2 hn1
+    nlinarith [h1R, h3]
+/-- Endpoint lemma (section 5(iii) input): the span of the point set of a
+gap word coming from a strictly monotone enumeration `e` is the full
+endpoint difference `e L - e 0`. The point set is the `L+1` prefix sums
+`P_0, ..., P_L`; `P_0 = 0` is the min and `P_j = e j - e 0` telescopes
+(`psum_telescope`), so the sup is attained at `j = L`. -/
+theorem offsetSpan_wordPointSet {L : ℕ} {w e : ℕ → ℕ} (he : StrictMono e)
+    (hw : ∀ j, w j = e (j + 1) - e j) :
+    offsetSpan (wordPointSet w L) = e L - e 0 := by
+  have hfun : (fun j => ∑ i ∈ Finset.range j, w i) = (fun j => e j - e 0) := by
+    funext j
+    rw [show (∑ i ∈ Finset.range j, w i) = ∑ i ∈ Finset.range j, (e (i + 1) - e i) from
+        Finset.sum_congr rfl (fun i _ => hw i)]
+    exact psum_telescope he.monotone j
+  have hset : wordPointSet w L
+      = Finset.image (fun j => e j - e 0) (Finset.range (L + 1)) := by
+    unfold wordPointSet; rw [hfun]
+  rw [offsetSpan, hset, Finset.sup_image]
+  apply le_antisymm
+  · apply Finset.sup_le
+    intro j hj
+    rw [Finset.mem_range] at hj
+    have : e j ≤ e L := he.monotone (by omega)
+    simp only [Function.comp_apply, id_eq]
+    omega
+  · exact Finset.le_sup (f := id ∘ (fun j => e j - e 0))
+      (Finset.mem_range.mpr (Nat.lt_succ_self L))
+
+/-- `cElem J K 0 = q_0` (the `if` takes its `then` branch at `t = 0`). -/
+theorem cElem_zero (J K : ℕ) : cElem J K 0 = cprime (cL J K) 0 := by
+  simp [cElem, cI]
+
+/-- `cElem J K L = q_{L+1}` (the `if` takes its `else` branch at `t = L`,
+since `L = J+2+K > J+1 = i_0`): the deletion does not move the top point. -/
+theorem cElem_top (J K : ℕ) : cElem J K (cL J K) = cprime (cL J K) (cL J K + 1) := by
+  simp only [cElem, cI, cL]
+  rw [if_neg (by omega)]
+
+/-- `cElem' J K 0 = q_0` (`0 < i_0`). -/
+theorem cElem'_zero (J K : ℕ) : cElem' J K 0 = cprime (cL J K) 0 := by
+  simp [cElem', cI]
+
+/-- `cElem' J K L = q_{L+1}` (`L ≥ i_0`). -/
+theorem cElem'_top (J K : ℕ) : cElem' J K (cL J K) = cprime (cL J K) (cL J K + 1) := by
+  simp only [cElem', cI, cL]
+  rw [if_neg (by omega)]
+
+/-- Section 5(iii): the span of `w` is the full prime window `q_{L+1} - q_0`
+-- the deleted interior point moves neither endpoint. -/
+theorem cspan_eq (J K : ℕ) :
+    offsetSpan (wordPointSet (cword J K) (cL J K))
+      = cprime (cL J K) (cL J K + 1) - cprime (cL J K) 0 := by
+  rw [offsetSpan_wordPointSet (w := cword J K) (e := cElem J K) (cElem_strictMono J K)
+      (fun j => rfl), cElem_zero, cElem_top]
+
+/-- Section 5(iii): the span of `w'` is the same window `q_{L+1} - q_0`. -/
+theorem cspan'_eq (J K : ℕ) :
+    offsetSpan (wordPointSet (cword' J K) (cL J K))
+      = cprime (cL J K) (cL J K + 1) - cprime (cL J K) 0 := by
+  rw [offsetSpan_wordPointSet (w := cword' J K) (e := cElem' J K) (cElem'_strictMono J K)
+      (fun j => rfl), cElem'_zero, cElem'_top]
+
+/-- Index arithmetic: the top of the section-5 prime window sits at
+`q`-index `primeIdxAbove L + (L+1) ≤ 2L+5`, since
+`primeIdxAbove L = Nat.count Nat.Prime (L+4) ≤ L+4` (`Nat.count_le`). -/
+theorem cprime_top_le_q (L : ℕ) : cprime L (L + 1) ≤ q (2 * L + 5) := by
+  have hidx : primeIdxAbove L ≤ L + 4 := by
+    unfold primeIdxAbove; exact Nat.count_le _
+  unfold cprime
+  exact q_strictMono.monotone (by omega)
+
+/-- The Chebyshev extraction in window shape: `q_{2L+5} ≤ 12 C L ln L` for
+`L ≥ 4`. Absorbs the two edge estimates `2L+6 ≤ 4L` and
+`ln(2L+7) ≤ 3 ln L` (the latter from `2L+7 ≤ L^3`, valid at `L = 4`:
+`15 ≤ 64`); both are deliberately slack, per the section's constant
+budget (`C₁` absorbs everything). -/
+theorem q_window_le {C : ℝ} (hC : 1 ≤ C)
+    (hq : ∀ n : ℕ, 4 ≤ n → (q n : ℝ) ≤ C * ((n : ℝ) + 1) * Real.log ((n : ℝ) + 2))
+    (L : ℕ) (hL : 4 ≤ L) :
+    (q (2 * L + 5) : ℝ) ≤ 12 * C * (L : ℝ) * Real.log (L : ℝ) := by
+  have hLR : (4 : ℝ) ≤ (L : ℝ) := by exact_mod_cast hL
+  have hlogL : 0 < Real.log (L : ℝ) := Real.log_pos (by linarith)
+  have h1 := hq (2 * L + 5) (by omega)
+  push_cast at h1
+  have hcube : (2 * (L:ℝ) + 5 + 2) ≤ (L : ℝ) ^ 3 := by
+    have h16 : 16 * (L : ℝ) ≤ (L : ℝ) ^ 3 := by
+      nlinarith [hLR, mul_nonneg (mul_nonneg (by linarith : (0:ℝ) ≤ (L:ℝ))
+        (by linarith : (0:ℝ) ≤ (L:ℝ) - 4)) (by linarith : (0:ℝ) ≤ (L:ℝ) + 4)]
+    linarith
+  have hlog3 : Real.log (2 * (L:ℝ) + 5 + 2) ≤ 3 * Real.log (L : ℝ) := by
+    calc Real.log (2 * (L:ℝ) + 5 + 2) ≤ Real.log ((L : ℝ) ^ 3) :=
+          Real.log_le_log (by linarith) hcube
+      _ = 3 * Real.log (L : ℝ) := by rw [Real.log_pow]; push_cast; ring
+  have hlin : 2 * (L:ℝ) + 5 + 1 ≤ 4 * (L : ℝ) := by linarith
+  calc (q (2 * L + 5) : ℝ) ≤ C * (2 * (L:ℝ) + 5 + 1) * Real.log (2 * (L:ℝ) + 5 + 2) := h1
+    _ ≤ C * (4 * (L:ℝ)) * (3 * Real.log (L : ℝ)) := by
+        apply mul_le_mul
+        · exact mul_le_mul_of_nonneg_left hlin (by linarith)
+        · exact hlog3
+        · exact Real.log_nonneg (by linarith)
+        · positivity
+    _ = 12 * C * (L : ℝ) * Real.log (L : ℝ) := by ring
+
 /-! ### Section 5 property lemmata -/
 
 /-- Section 5(i), prefix: `w` and `w'` share the length-`J` prefix. -/
@@ -594,7 +809,42 @@ theorem cspan_le :
           ≤ C₁ * (cL J K : ℝ) * Real.log ((cL J K : ℝ) + 2)) ∧
         ((offsetSpan (wordPointSet (cword' J K) (cL J K)) : ℝ)
           ≤ C₁ * (cL J K : ℝ) * Real.log ((cL J K : ℝ) + 2)) := by
-  sorry
+  obtain ⟨C, hC1, hq⟩ := q_le_mul_log
+  refine ⟨12 * C, by linarith, fun J K hJ hK => ?_⟩
+  set L := cL J K with hLdef
+  have hL4 : 4 ≤ L := by simp only [hLdef, cL]; omega
+  have hLR : (4 : ℝ) ≤ (L : ℝ) := by exact_mod_cast hL4
+  have hlogL : 0 < Real.log (L : ℝ) := Real.log_pos (by linarith)
+  -- the master bound: the top of the prime window, via index `≤ 2L+5`
+  have htop : (cprime L (L + 1) : ℝ) ≤ 12 * C * (L : ℝ) * Real.log (L : ℝ) := by
+    have hnat : cprime L (L + 1) ≤ q (2 * L + 5) := cprime_top_le_q L
+    have hc : (cprime L (L + 1) : ℝ) ≤ (q (2 * L + 5) : ℝ) := by exact_mod_cast hnat
+    exact hc.trans (q_window_le hC1 hq L hL4)
+  have hzero_nn : (0 : ℝ) ≤ (cprime L 0 : ℝ) := by positivity
+  have hlogmono : Real.log (L : ℝ) ≤ Real.log ((L : ℝ) + 2) :=
+    Real.log_le_log (by linarith) (by linarith)
+  have hCL_nn : (0 : ℝ) ≤ 12 * C * (L : ℝ) := by nlinarith
+  refine ⟨by linarith, ?_, ?_, ?_⟩
+  · -- conjunct 2: `gamma` is one gap inside the window, so `≤ q_{L+1}`
+    have h1 : cgamma J K ≤ cprime L (L + 1) := by
+      have hstep : cprime (cL J K) (cI J + 1) ≤ cprime L (L + 1) := by
+        rcases Nat.lt_or_ge (cI J + 1) (L + 1) with h | h
+        · exact (cprime_lt_cprime _ h).le
+        · have he : cI J + 1 = L + 1 := by simp only [hLdef, cL, cI] at h ⊢; omega
+          rw [← hLdef] at *; rw [he]
+      exact le_trans (by simp only [cgamma, ← hLdef]; exact Nat.sub_le _ _) hstep
+    have h2 : (cgamma J K : ℝ) ≤ (cprime L (L + 1) : ℝ) := by exact_mod_cast h1
+    linarith
+  · -- conjunct 3: the span of `w`, via the endpoint lemma, then `ln L ≤ ln (L+2)`
+    rw [cspan_eq J K, ← hLdef]
+    have hsub : ((cprime L (L + 1) - cprime L 0 : ℕ) : ℝ) ≤ (cprime L (L + 1) : ℝ) := by
+      exact_mod_cast Nat.sub_le (cprime L (L + 1)) (cprime L 0)
+    nlinarith [hsub, htop, hlogmono, hCL_nn]
+  · -- conjunct 4: identical, for `w'`
+    rw [cspan'_eq J K, ← hLdef]
+    have hsub : ((cprime L (L + 1) - cprime L 0 : ℕ) : ℝ) ≤ (cprime L (L + 1) : ℝ) := by
+      exact_mod_cast Nat.sub_le (cprime L (L + 1)) (cprime L 0)
+    nlinarith [hsub, htop, hlogmono, hCL_nn]
 
 /-- Section 5(iii), the limit: `(gamma + 4)/2^J ≤ 3 C_1/(K+20)^2 → 0`,
 using `L ≤ 2(K+20)` and `ln L ≤ K+20` for large `x`. Stated in the shape
