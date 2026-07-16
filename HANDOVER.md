@@ -67,6 +67,10 @@ residuals + 12 skeleton statements).
   dropped from repeated_block_quantization, ANN-18 deferral resolved,
   inventory unchanged); R2 archive gap CLOSED (a70390f transcript,
   b32759d strip-script restore).
+- item-0004 DONE 2026-07-16 (ANN-28): literature verification via
+  research-mode steering session; report at dossier/literature.md;
+  BET-06 scored NO (brier 0.01) -- no prior art, niche unoccupied;
+  item-0015 gate (b) cleared.
 
 ## Pending decisions and gates (operator), round 2
 1. DISPATCH the staged fidelity arm (Sonnet debut; operator sha256 of
@@ -75,22 +79,29 @@ residuals + 12 skeleton statements).
    returns to steering for adjudication against the ANN-26 baseline;
    then item-0014 done-move + closure ANN with executor model
    attribution (Opus per item-0003 precedent -- operator confirms).
-2. item-0015 ratification (proposed in followup27); execution stays
-   double-gated on item-0014 closure and the item-0004 verdict.
-3. item-0004: steering session WITH web research mode ON (ratified
-   round-2 decision 3); deliverable = verification report plus BET-06
-   resolution proposal, as a patch. List below.
-4. BET-07 resolution by 2026-08-08 (operator judgment).
+2. item-0015 ratification (proposed in followup27). Gate (b) is
+   SATISFIED by BET-06 = NO; execution now waits on item-0014 closure
+   only.
+3. BET-07 resolution by 2026-08-08 (operator judgment).
+4. QUEUED after item-0014 closes: citation-hygiene amendment chain-v1
+   v1.4 + dissektion (ScPu11 single-paper form, anachronism flag off;
+   Mertens -> J. reine angew. Math. 77 (1874) 289-338; Kuperberg
+   journal ref QJM 74 (2023) 1457-1479; Hardy-Wright stays flagged
+   until volume check). Deferred deliberately: keeps the staged
+   fidelity object's source byte-stable; new sign-off sha to ledger.
+5. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
+   do NOT inherit the problem page's [Er58b] all-k attribution);
+   alerts per report recommendation 1 (arXiv math.NT
+   irrationality+prime+2^n; erdosproblems.com/251 watch).
 
-## item-0004 verification list (accumulated)
-ScPu11 identifiers (Acta Arith 126 (2007) vs arXiv:1105.1451 --
-anachronism-suspicious); Kuperberg arXiv:2210.09775; Mertens /
-Rosser-Schoenfeld / Hardy-Wright / Bertrand citations in chain-v1;
-Cramer-Granville standard formulation; Erdos #251 problem-number
-mapping; CPAP-3 status (still assumed open). Mathlib names
-Nat.nth/Nat.count/Mathlib.Data.Real.Irrational are now empirically
-confirmed in-tree; the R2 arms marked all external citations
-UNVERIFIED (web OFF), so this item is the designated closure.
+## item-0004 RESOLVED (2026-07-16)
+Full report: dossier/literature.md (ANN-28; original artifact
+operator-held). All ten list items verdicted; BET-06 scored NO
+(brier 0.01, binary mean 0.183 -> 0.149). Still UNVERIFIED: Tao/Alfaiz
+forum comment verbatims (bot lock -- manual browser check before
+quoting), Hardy-Wright theorem number (physical volume), Pratt
+Conjecture 1.2 numeric window (full-text check). CPAP-3 and Erdos #251
+confirmed OPEN; no prior art for the target implication.
 
 ## Steering sandbox notes (empirical)
 - Background processes do NOT survive tool-call boundaries; container

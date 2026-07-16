@@ -64,13 +64,30 @@ scored:
       fork_merge_of_hypotheses remains open. Well-calibrated NO, priced
       below coin flip. Scoring booked ANN-25.
 
-open:
   - id: BET-20260711-06
     registered: 2026-07-11
     claim: the implication already exists in prior literature or preprints
     p: 0.10
     resolution: item A1 literature verification
     resolve_by: before any public claim
+    outcome: false  # prior-art sweep NOT-FOUND (dossier/literature.md, item 9)
+    brier: 0.01
+    note: >-
+      Resolved by the item-0004 research-mode sweep (2026-07-16): no
+      journal paper, preprint, blog, forum post or slides state the
+      target implication (uniform HL tuples + Cramer-type gaps ==>
+      irrationality of sum p_n/2^n) or anything materially equivalent,
+      and no stronger unconditional result exists; #251 is open on its
+      problem page with no post-2026-04-15 activity; the only near
+      neighbors (Pratt 2024/2025, Tao-Teravainen 2025) treat bounded
+      omega(n) and explicitly place growing numerators outside current
+      technique. Nine months after Tao's forum sketch the niche is
+      unoccupied. Reversal threshold (booked): an arXiv preprint or
+      forum/blog post stating the implication, or an unconditional
+      #251 proof. Scoring booked ANN-28; binary mean brier moves
+      0.183 -> 0.149 over five scored.
+
+open:
   - id: BET-20260711-07
     registered: 2026-07-11
     claim: unconditional progress on the original within 4 weeks
@@ -684,3 +701,45 @@ annotations:
       same-day). Open: BET-06 via item-0004 (gates any public claim);
       BET-07 to 2026-08-08; fidelity verdict, then item-0014 done-move
       with executor model attribution.
+  - id: ANN-20260716-28
+    refs: [ANN-20260716-27, BET-20260711-06]
+    date: 2026-07-16
+    note: >-
+      item-0004 DONE (research-mode steering session per ANN-27
+      decision 3): verification report landed as dossier/literature.md
+      (ASCII transliteration; original UTF-8 artifact operator-held,
+      sha256 8c095e5c...852fb4). Verdicts: ScPu11 anachronism suspicion
+      REFUTED -- Acta Arith. 126 (2007) 295-303 and arXiv:1105.1451
+      are the same paper (2011 retro-upload, DOI 10.4064/aa126-4-1),
+      the project citation pairing was correct and the flag comes off;
+      dissektion 3.4 content claims verified from the PDF including
+      the Erdos-printed-only-k=1 history, and the erdosproblems.com
+      page misattribution (all k>=1 to [Er58b]) is CONFIRMED -- do not
+      inherit it in any public text. Mertens CORRECTED to J. reine
+      angew. Math. 77 (1874) 289-338 (not 78, 46-62);
+      Rosser-Schoenfeld and Bertrand confirmed; Hardy-Wright theorem
+      number stays UNVERIFIED pending a physical-volume check.
+      Kuperberg completed (Quart. J. Math. 74 (2023) 1457-1479, DOI
+      10.1093/qmath/haad030); Gallagher 1976 pages exact; Pratt also
+      in print (J. Number Theory 276 (2025) 270-285);
+      Montgomery-Soundararajan CMP 252 (2004) 589-617 verified.
+      Cramer-Granville naming and Hypothesis B faithfulness CONFIRMED.
+      CPAP-3 STILL-OPEN (Shiu and Banks-Freiberg-Turnage-Butterbaugh
+      give constant residue-class patterns, not equal gaps); FGKMT
+      long-gaps ref confirmed (JAMS 31 (2018) 65-105). Erdos #251 OPEN
+      per 2026-07-16, no solution claims; the Tao (2025-10-07) and
+      Alfaiz (2026-04-15) forum comments remain UNVERIFIED verbatim
+      (bot lock) -- manual browser check before quoting them anywhere.
+      BET-06 scored NO, brier 0.01, entry moved open -> scored; binary
+      mean brier 0.183 -> 0.149. Consequences: item-0015 gate (b)
+      SATISFIED, execution now waits on item-0014 closure only; the
+      public-claim gate is OPEN (thread post is an operator option;
+      attribution caveat above applies); citation amendments to
+      chain-v1 (a v1.4 with new sign-off sha) and dissektion are
+      QUEUED until after item-0014 closes so the staged fidelity
+      object's source stays byte-stable; operator MAY set the report's
+      recommended alerts (arXiv math.NT irrationality+prime+2^n;
+      erdosproblems.com/251 watch). item-0005 body now carries the
+      Tao-Teravainen bounded-numerator obstruction quote as
+      motivation. Residual UNVERIFIED set booked in the item-0004
+      closure summary (completed/item-0004.md).
