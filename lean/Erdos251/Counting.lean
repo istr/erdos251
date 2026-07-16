@@ -750,6 +750,67 @@ theorem q_window_le {C : ℝ} (hC : 1 ≤ C)
         · positivity
     _ = 12 * C * (L : ℝ) * Real.log (L : ℝ) := by ring
 
+/-! #### Constants layer: the `Nat.ceil ∘ logb 2` idiom of section 5 -/
+
+/-- The defining property of the `ceil ∘ logb 2` idiom used by both
+section-5 constants: rounding the exact base-2 exponent UP makes the
+power dominate. Supplies 5(iv)'s `2^K ≥ H_x` and 5(iii)'s `2^J ≥ (K+20)^4`. -/
+theorem le_two_pow_ceil_logb {z : ℝ} (hz : 0 < z) :
+    z ≤ 2 ^ (Nat.ceil (Real.logb 2 z)) := by
+  calc z = (2:ℝ) ^ (Real.logb 2 z) :=
+        (Real.rpow_logb (by norm_num) (by norm_num) hz).symm
+    _ ≤ (2:ℝ) ^ ((Nat.ceil (Real.logb 2 z) : ℕ) : ℝ) :=
+        (Real.rpow_le_rpow_left_iff (by norm_num)).mpr (Nat.le_ceil _)
+    _ = 2 ^ (Nat.ceil (Real.logb 2 z)) := Real.rpow_natCast _ _
+
+/-- `K = ceil(log2(4 C_g) + 2 log2 ln x)` is exactly `ceil(log2 H_x)`: the
+two `logb` terms recombine into the single tail budget `H_x = 4 C_g (ln x)^2`. -/
+theorem cK_eq_ceil_logb {Cg : ℝ} (hCg : 1 ≤ Cg) {x : ℕ} (hx : Real.log x ≠ 0) :
+    cK Cg x = Nat.ceil (Real.logb 2 (tailBudget Cg x)) := by
+  have h4Cg : (4 : ℝ) * Cg ≠ 0 := by positivity
+  have hsq : Real.log x ^ 2 ≠ 0 := pow_ne_zero _ hx
+  have he : Real.logb 2 (tailBudget Cg x)
+      = Real.logb 2 (4 * Cg) + 2 * Real.logb 2 (Real.log x) := by
+    unfold tailBudget Real.logb
+    rw [show (4 : ℝ) * Cg * Real.log x ^ 2 = (4 * Cg) * Real.log x ^ 2 by ring,
+      Real.log_mul h4Cg hsq, Real.log_pow]
+    push_cast; ring
+  rw [cK, he]
+
+/-- Section 5(iv)'s tail-budget clause: `H_x ≤ 2^K`, direct from the
+`ceil ≥ exact exponent` property. -/
+theorem tailBudget_le_two_pow_cK {Cg : ℝ} (hCg : 1 ≤ Cg) {x : ℕ}
+    (hx : Real.log x ≠ 0) : tailBudget Cg x ≤ 2 ^ cK Cg x := by
+  rw [cK_eq_ceil_logb hCg hx]
+  refine le_two_pow_ceil_logb ?_
+  have hsq : Real.log x ^ 2 > 0 := by positivity
+  unfold tailBudget; nlinarith
+
+/-- The FM-2 input: `2^J ≥ (K+20)^4`, since `J = ceil(4 log2(K+20))` and
+`4 log2 y = log2 (y^4)`. -/
+theorem pow_le_two_pow_cJ {Cg : ℝ} (x : ℕ) :
+    ((cK Cg x : ℝ) + 20) ^ 4 ≤ 2 ^ cJ Cg x := by
+  have he : 4 * Real.logb 2 ((cK Cg x : ℝ) + 20)
+      = Real.logb 2 (((cK Cg x : ℝ) + 20) ^ 4) := by
+    unfold Real.logb
+    rw [Real.log_pow]; push_cast; ring
+  rw [cJ, he]
+  exact le_two_pow_ceil_logb (by positivity)
+
+/-- `4 log2 y ≤ y + 17` for `y > 0`: the crude `J = O(log K) ≪ K` estimate
+of 5(iii). Via `log (y/8) ≤ y/8 - 1` (`Real.log_le_sub_one_of_pos`) and
+`log 8 = 3 log 2`; reduced to `Real.log_two_gt_d9` (only `log 2 > 1/2` is
+used, so the slack is large). -/
+theorem four_logb_le {y : ℝ} (hy : 0 < y) : 4 * Real.logb 2 y ≤ y + 17 := by
+  have hl2 : (0.5 : ℝ) < Real.log 2 := by linarith [Real.log_two_gt_d9]
+  have h := Real.log_le_sub_one_of_pos (show (0:ℝ) < y / 8 by positivity)
+  rw [Real.log_div hy.ne' (by norm_num),
+    show Real.log 8 = 3 * Real.log 2 by
+      rw [show (8:ℝ) = 2 ^ 3 by norm_num, Real.log_pow]; push_cast; ring] at h
+  -- `log y ≤ y/8 + 3 log 2 - 1`; multiply out against `log 2 > 1/2`
+  rw [Real.logb, ← mul_div_assoc, div_le_iff₀ (by linarith : (0:ℝ) < Real.log 2)]
+  nlinarith [h, hl2, hy, mul_pos hy (by linarith : (0:ℝ) < Real.log 2 - 0.5)]
+
 /-! ### Section 5 property lemmata -/
 
 /-- Section 5(i), prefix: `w` and `w'` share the length-`J` prefix. -/
