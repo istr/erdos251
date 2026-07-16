@@ -1237,3 +1237,50 @@ annotations:
       liability"). Net Counting.lean -478 lines. NOTE for kickoff v4:
       MP declarations remain visible unqualified in Counting.lean via
       the import, so s4 call sites are unaffected by the move.
+  - id: ANN-20260716-41
+    refs: [ANN-20260716-39, ANN-20260716-40]
+    date: 2026-07-16
+    note: >-
+      REFACTOR STEERING-VERIFIED + SESSION-4 DISPATCH DECISION.
+      Verification at main c5103a9 (fetched origin; independent of
+      the ANN-40 record): (i) lean/ diff s3-tip(2dc3f65)..main
+      touches EXACTLY Erdos251.lean (+1: import Erdos251.Mertens),
+      Counting.lean (+38/-478), Mertens.lean (+483 new) -- numbers
+      match ANN-40, and since nothing else differs, the operator
+      rebase of the s3 chain onto main preserved the lean tree
+      byte-wise; (ii) the three frozen Counting survivors
+      (oneExtension_sum_le, consCount_lower_bound,
+      constr_consCount_pos) are byte-identical across the refactor;
+      statement-layer modules untouched; (iii) MP body VERBATIM:
+      428/428 lines byte-identical, the only additions are the
+      module header and 7 wrapper lines (namespace Erdos251,
+      noncomputable section, matching ends) -- "moves + imports
+      only" holds literally; (iv) strict sorry inventory 5 unchanged
+      (Counting 3 + Conditional 1 + Statement 1); (v) prod_primesLe:
+      zero references remain, orphan deletion clean; (vi) CI green
+      on main operator-attested; the unauthenticated API exposes
+      neither check-runs nor workflow runs for c5103a9, so steering
+      books the attestation, not an independent CI read. Axiom-set
+      identity accepted on the ANN-40 record (in-sandbox builds
+      remain blocked). Report-archival convention RATIFIED by the
+      operator apply of the runs mbox (3855c9e on main). DISPATCH
+      DECISION (operator delegated the call): kickoff v4 is written
+      in a FRESH steering session from HANDOVER, not in the s3
+      context. Grounds: (a) the designed cold-start pattern --
+      HANDOVER is current to this commit and exists for exactly this
+      hand-off; (b) the s3 steering context is long and already
+      once-compacted, while T2 (c)-LARGE (the sieve-theoretic
+      squarefree-divisor expansion with omega(d) counting) is the
+      mathematically substantial route design of the round and
+      should get a full fresh reasoning budget; (c) the byte-exact
+      kickoff must be read off the post-refactor pin regardless, so
+      the hot context holds no residual advantage -- its
+      pre-refactor knowledge was spent here, on this verification;
+      (d) fresh-eyes precedent: ANN-34 and ANN-37 both came from
+      eyes not invested in the route under review. ANCHOR: kickoff
+      v4 anchors the operator-side HEAD after this apply; scope as
+      booked (T2 (b) collision primes < span; (c) split at k+2 --
+      SMALL trivial via mertens_third_upper, importable unqualified
+      in Counting.lean per ANN-40; LARGE the substantial piece;
+      (d) assembly; T3 five-term Bonferroni ledger; fork_merge
+      stays s4/s5).

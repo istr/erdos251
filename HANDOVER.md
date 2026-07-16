@@ -90,17 +90,23 @@ residuals + 12 skeleton statements).
 - item-0015 session 3 COMPLETE on branch item-0015-s3 (2dc3f65,
   ANN-39): T1 (C = 12) + Mertens pack M1-M3 sharp + T2 step (a) +
   k = 0 edge; Counting 4 -> 3; inventory after merge: 5.
+- ANN-39 follow-ups (1)+(3) DONE (c5103a9 on main, ANN-40;
+  steering-verified ANN-41): MP relocated verbatim to Mertens.lean
+  (mathlib-only; upstream port = drop the namespace line + rename),
+  primesUpto canonical with bridge primesLe_image / sum_primesLe_eq,
+  prod_primesLe deleted (orphan); Counting -478; inventory 5
+  unchanged; MP stays visible unqualified in Counting.lean via the
+  import.
+- runs/ report-archival convention RATIFIED (operator applied
+  3855c9e).
 
 ## Pending decisions and gates (operator), round 2
-1. MERGE branch item-0015-s3 at 2dc3f65 into main (fast-forward;
-   main = b3b445c is an ancestor, verified 2026-07-16; adjudicated
-   ACCEPTED, ANN-39; the merge is the ratification; the CI compile
-   gate fires on main -- no check-runs exist on the branch tip).
-   Inventory after merge: 5 = Counting 3 (exactly 4.2, 4.3,
-   constr_consCount_pos) + Conditional 1 + Statement 1. [The old
-   decision 1 -- merge s2 at 807b6b7 -- was already discharged: s2
-   was rebased onto main as e8b743b..4d3503f; 807b6b7 never was
-   main's tip and is unreachable from any current ref (ANN-39).]
+1. DISCHARGED: the s3 chain is on main (operator rebase; lean tree
+   preserved byte-wise, steering-verified ANN-41) and the ANN-39
+   follow-up refactor landed at c5103a9 (CI green on main,
+   operator-attested). Main is the pin lineage; no branch merge
+   pending. Inventory on main: 5 = Counting 3 (exactly 4.2, 4.3,
+   constr_consCount_pos) + Conditional 1 + Statement 1.
 2. Session 3 CLOSED: ACCEPTED (ANN-39) at 2dc3f65. Kickoffs v3
    (sha256 385c1e91...d463d) and v3.1 delta (sha256
    f2976d93...d2d67) both ephemeral, never committed. Landed: T1
@@ -112,23 +118,20 @@ residuals + 12 skeleton statements).
    (nuMod_insert, log_singularFactor_insert_sub_le) and the k = 0
    edge discharged in Lean. Steering re-verified: lean/ diff
    anchor..tip = Counting.lean only, +531/-0; vs main +852/-1 (the
-   one deletion = T1's sorry); strict inventory 5. NEXT GATES:
-   (a) merge = decision 1; (b) standalone MP refactor -- relocation
-   to dedicated Mertens.lean (ANN-38) + primesLe/primesUpto
-   unification -- own gate shape (build green, axiom sets
-   identical, names stable modulo unification, moves + imports
-   only), timing operator's, steering recommends BEFORE s4;
-   (c) kickoff v4 on operator green light against the post-merge,
-   post-refactor pin: T2 (b) collision primes < span, (c) split at
+   one deletion = T1's sorry); strict inventory 5. NEXT GATE:
+   kickoff v4 -- gates (a) merge and (b) refactor are DONE (c5103a9,
+   ANN-40/41). DISPATCH DECISION (ANN-41): v4 is written in a FRESH
+   steering session from this HANDOVER, anchored at the
+   operator-side HEAD after the ANN-41 apply. Scope:
+   T2 (b) collision primes < span, (c) split at
    k+2 (SMALL trivial via M3; LARGE = sieve-theoretic
    squarefree-divisor expansion with omega(d) counting, the
    substantial piece), (d) assembly; T3 five-term Bonferroni
    ledger; fork_merge stays s4/s5. Unfreeze candidates (4.1
    clause-2 budget x2, evenness x2 -- evenness is a genuine
    HLQuantA hypothesis, asymmetric drop) booked to the BET-04
-   basket; no mid-arc unfreeze. Report archival: optional runs/
-   mbox prepared (applying ratifies the convention; report sha256
-   3fc8e757...8bfe3).
+   basket; no mid-arc unfreeze. Report archival convention
+   RATIFIED (3855c9e; report sha256 3fc8e757...8bfe3).
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
