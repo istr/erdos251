@@ -192,3 +192,57 @@ project dissection. New meta-fact on record: the write-up of this
 negative answer was produced by an LLM (ChatGPT 5.4 Pro) under
 "minimal orchestration" -- AI-assisted mathematics is already on this
 thread.
+
+---
+
+## Addendum 2: LLM-hunter venue check (operator-supplied URL, 2026-07-16)
+
+Venue: mehmetmars7.github.io/Erdosproblems-llm-hunter, problem page for
+erdos id 251 (GitHub repo mehmetmars7/Erdosproblems-llm-hunter, Apache
+2.0). READABILITY FINDING: the rendered page is a JavaScript shell --
+server-side fetchers and crawlers see empty "Problem Statement" / "LLM
+Claims" / "Comments" sections. The content lives in
+docs/data/erdos_data.js (13.5 MB) on branch main and was read raw by
+steering. This double-explains why the item-0004 sweep did not surface
+the venue (unindexable shell + data buried in a JS blob) and dictates
+the watch method below.
+
+Entry 251 state (read 2026-07-16): status "unresolved", completion
+55.0, TWO attacks, both by model "gpt pro 5.2":
+
+1. v1, date_posted 2026-01-17, completion 45, UNRESOLVED. Cites "a
+   remark attributed to Terence Tao" (the forum comment, see Addendum
+   1) and lists a "conditional entropy route" under "a quantitative
+   prime tuples conjecture" among its "Top 3 next moves" -- i.e. the
+   Tao route appears as an UNEXECUTED plan item. No Cramer-type gap
+   hypothesis appears anywhere (keyword count zero); no statistical
+   step is carried out. Rigorous outputs are elementary: tail bound,
+   the gap-series reformulation, and a lowest-terms denominator bound
+   b > 2*10^7.
+
+2. v2, date_posted 2026-01-27, completion 55, UNRESOLVED ("BUT
+   STRICTLY ADVANCED" per its own final section). Strongest rigorous
+   output: any rational S = a/b in lowest terms needs b > 10^748 (a
+   convergents/Legendre argument through N = 5000). Also corrects an
+   obstruction: contradictions must target eventual periodicity of
+   the tail sequence, not integrality -- independently the same
+   insight as the project's exact-locking countermodel. References:
+   Hardy-Wright, Khinchin only.
+
+BET-06 THRESHOLD CHECK: NOT MET. Neither attack states the target
+implication (uniform HL tuples + Cramer-type gaps ==> irrationality),
+executes any tuples-based statistical step, or claims a solution; the
+route exists there only as a next-move sketch derived from Tao's
+public remark. The resolution BET-06 = NO stands unchanged; the
+evidence inventory gains this venue post hoc.
+
+Comparative note (steering): the v2 denominator bound b > 10^748 by
+convergents is independent confirmation of the elementary layer's
+shape; the project's machine-checked deterministic half gives
+b > 10^1050. The venue is a live collection point for LLM attempts
+(contributions accepted), hence BOTH a watch target and a
+contamination source: any future web-ON run touching #251 must treat
+this site's content as public LLM-generated material about the
+problem. Watch method: poll the repo path attacks/erdos/ and
+docs/data/erdos_data.js for commits touching 251 -- not the rendered
+page, which is blind to fetchers.
