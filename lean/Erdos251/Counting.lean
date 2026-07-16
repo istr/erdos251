@@ -431,23 +431,30 @@ theorem modelMass_ge_exp {x : ℕ} (hx : 3 ≤ x) {H : Finset ℕ} (h0 : 0 ∈ H
   apply mul_le_mul_of_nonneg_right _ (by positivity)
   exact mul_le_mul_of_nonneg_right hclause1 hxnn
 
-/-! ### Proof-layer helpers: the Mertens pack (item-0015 s3; not statements)
+/-! ### Proof-layer helpers: the Mertens pack M1-M3 (item-0015 s3; not statements)
 
-Mathlib has NO Mertens theorems at the pin (steering-verified by full-tree
-grep; re-verified this session). M1 below is the first piece: it depends
-only on mathlib (no erdos251 definitions), so it is relocatable to
-`Chebyshev.lean` and is an upstream candidate.
+Mathlib has NO Mertens theorems at the pin, nor on master (steering-verified
+full-tree, ANN-36); this pack is the project's first reusable
+analytic-number-theory toolkit beyond `Chebyshev.lean`. It depends only on
+mathlib (no erdos251 definitions), so it is relocatable there and is an
+upstream candidate (ANN-36; routed through the report, not moved mid-session).
 
-ROUTE DEFECT FOUND (session 3, reported to steering): the kickoff's
-integral-free DYADIC route to M2 does NOT reach `∑_{p≤P} 1/p ≤ lnln P + c₂`.
-On the block `p ∈ (2^j, 2^{j+1}]` it can only give `∑ 1/p ≤ (log 2 + C)/(j log 2)`,
-where `C > 0` is the sum of M1's two error constants, so the summed
-coefficient is `1 + C/log 2 > 1` — with the crude primorial input, `4`
-(numerically confirmed against the true block sums). T2's frozen
-`log(k+2)^2` budget spends one log on M3 and one on the span, so it needs
-M3's exponent `≤ 1`, i.e. M2's coefficient EXACTLY 1. The dyadic method
-cannot deliver it at any block ratio; the sharp constant needs partial
-summation (M1 in BOTH directions + Abel). See the session report.
+Route history (ANN-37). The v3 DYADIC route to M2 is RETIRED: on a block
+`p ∈ (r^j, r^(j+1)]` the two-sided M1 error `C` enters once per block over
+`j log r`, and couples to the divergent harmonic sum over block indices, so it
+lands in the LEADING coefficient -- `(1 + C/log r) lnln P` for every fixed
+ratio `r` (coefficient 4 with the crude primorial input). T2's frozen
+`log(k+2)^2` budget spends one log on M3 and one on the span, so M3 needs
+exponent EXACTLY 1, i.e. M2 leading coefficient EXACTLY 1.
+
+The route below (kickoff v3.1) is discrete Abel summation
+(`Finset.sum_Ico_by_parts`): the same M1 error couples instead to the
+telescoping total weight variation `∑ (w i - w (i+1)) = w 2 - w P ≤ 1/log 2`,
+which is bounded, so the error stays ADDITIVE and the leading coefficient is
+exactly 1. Integral-free: `Mathlib.NumberTheory.AbelSummation` is unused.
+Only M1's UPPER clause is consumed -- the nonnegative weight differences keep
+any lower constant out entirely, so no M1-lower (hence no factorial lower
+bound) is needed.
 -/
 
 /-- The primes `≤ N`, as a `Finset ℕ` (mathlib's primorial index set). -/
@@ -581,6 +588,302 @@ theorem mertens_one_upper {N : ℕ} (hN : 1 ≤ N) :
     rw [hexp]
     linarith [hlow, hhigh, hprim]
   exact le_of_mul_le_mul_left hkey hNR
+
+/-- MP-M2 weights `w i = (log i)⁻¹`. Junk values are load-bearing zeros:
+`log 0 = log 1 = 0` and `(0:ℝ)⁻¹ = 0`, so `w 0 = w 1 = 0`. -/
+def mw (i : ℕ) : ℝ := (Real.log i)⁻¹
+
+/-- MP-M2 summand `g i = log i / i` on primes, `0` off them. -/
+def mg (i : ℕ) : ℝ := if Nat.Prime i then Real.log i / i else 0
+
+/-- `G (n+1) = A n = ∑_{p ≤ n} log p / p`: the partial sums of `g` ARE MP-M1's
+left-hand side. -/
+theorem sum_range_mg (n : ℕ) :
+    ∑ i ∈ Finset.range (n + 1), mg i = ∑ p ∈ primesUpto n, Real.log p / p := by
+  rw [primesUpto, Finset.sum_filter]
+  exact Finset.sum_congr rfl (fun i _ => rfl)
+
+/-- `G 2 = g 0 + g 1 = 0` kills the boundary term of the by-parts identity. -/
+theorem sum_range_two_mg : ∑ i ∈ Finset.range 2, mg i = 0 := by
+  norm_num [mg, Finset.sum_range_succ, Nat.not_prime_one]
+
+/-- On a prime, `w i * g i = 1/i`; off a prime both sides vanish. -/
+theorem mw_mul_mg (i : ℕ) : mw i * mg i = if Nat.Prime i then (1:ℝ) / i else 0 := by
+  unfold mw mg
+  split_ifs with h
+  · have h2 : (2:ℝ) ≤ (i:ℝ) := by exact_mod_cast h.two_le
+    have hlog : Real.log i ≠ 0 := ne_of_gt (Real.log_pos (by linarith))
+    field_simp
+  · ring
+
+/-- Step 0: the target sum in Abel shape. -/
+theorem sum_inv_primes_eq {P : ℕ} :
+    ∑ p ∈ primesUpto P, (1:ℝ) / p = ∑ i ∈ Finset.Ico 2 (P + 1), mw i * mg i := by
+  rw [primesUpto, Finset.sum_filter]
+  rw [show (∑ i ∈ Finset.range (P+1), if Nat.Prime i then (1:ℝ)/i else 0)
+      = ∑ i ∈ Finset.range (P+1), mw i * mg i from
+    Finset.sum_congr rfl (fun i _ => (mw_mul_mg i).symm)]
+  refine (Finset.sum_subset ?_ ?_).symm
+  · intro i hi
+    rw [Finset.mem_Ico] at hi
+    rw [Finset.mem_range]
+    omega
+  · intro i hi hni
+    rw [Finset.mem_range] at hi
+    rw [Finset.mem_Ico] at hni
+    have : i = 0 ∨ i = 1 := by omega
+    rcases this with rfl | rfl <;> simp [mw_mul_mg, Nat.not_prime_one]
+
+/-- STEP 1 (IDENT), discrete Abel summation via `Finset.sum_Ico_by_parts`.
+Integral-free: `Mathlib.NumberTheory.AbelSummation` stays unused.
+
+  `S(P) = A P / log P + ∑_{i ∈ Ico 2 P} (w i - w (i+1)) * A i` -/
+theorem mertens_ident {P : ℕ} (hP : 2 ≤ P) :
+    ∑ p ∈ primesUpto P, (1:ℝ) / p
+      = mw P * (∑ p ∈ primesUpto P, Real.log p / p)
+        + ∑ i ∈ Finset.Ico 2 P, (mw i - mw (i + 1)) * (∑ p ∈ primesUpto i, Real.log p / p) := by
+  rw [sum_inv_primes_eq]
+  have h := Finset.sum_Ico_by_parts mw mg (m := 2) (n := P + 1) (by omega)
+  simp only [smul_eq_mul, Nat.add_sub_cancel] at h
+  rw [h, sum_range_two_mg, sum_range_mg P]
+  rw [show (∑ i ∈ Finset.Ico 2 P, (mw (i + 1) - mw i) * (∑ j ∈ Finset.range (i + 1), mg j))
+      = ∑ i ∈ Finset.Ico 2 P, -((mw i - mw (i + 1)) * (∑ p ∈ primesUpto i, Real.log p / p)) from
+    Finset.sum_congr rfl (fun i _ => by rw [sum_range_mg i]; ring)]
+  rw [Finset.sum_neg_distrib]
+  ring
+
+/-- Generic `Ico` telescope in the `(F i - F (i+1))` orientation
+(`Finset.sum_range_sub'` after the `Ico -> range` shift). -/
+theorem telescope_Ico_sub' (F : ℕ → ℝ) {m n : ℕ} (h : m ≤ n) :
+    ∑ i ∈ Finset.Ico m n, (F i - F (i + 1)) = F m - F n := by
+  rw [Finset.sum_Ico_eq_sum_range]
+  rw [show (∑ k ∈ Finset.range (n - m), (F (m + k) - F (m + k + 1)))
+      = ∑ k ∈ Finset.range (n - m),
+          ((fun j => F (m + j)) k - (fun j => F (m + j)) (k + 1)) from
+    Finset.sum_congr rfl (fun k _ => by simp only []; rw [← Nat.add_assoc])]
+  rw [Finset.sum_range_sub' (fun j => F (m + j))]
+  simp only [Nat.add_zero]
+  congr 2
+  omega
+
+/-- Generic `Ico` telescope in the `(F (i+1) - F i)` orientation. -/
+theorem telescope_Ico_sub (F : ℕ → ℝ) {m n : ℕ} (h : m ≤ n) :
+    ∑ i ∈ Finset.Ico m n, (F (i + 1) - F i) = F n - F m := by
+  have h' := telescope_Ico_sub' F h
+  rw [show (∑ i ∈ Finset.Ico m n, (F (i + 1) - F i))
+      = -∑ i ∈ Finset.Ico m n, (F i - F (i + 1)) from by
+    rw [← Finset.sum_neg_distrib]; exact Finset.sum_congr rfl (fun i _ => by ring)]
+  rw [h']; ring
+
+/-- STEP 2: the weights are antitone, so the `A i` coefficients are `≥ 0` --
+this is what keeps MP-M1's error ADDITIVE (and its lower clause unused). -/
+theorem mw_sub_nonneg {i : ℕ} (hi : 2 ≤ i) : 0 ≤ mw i - mw (i + 1) := by
+  have h2 : (2:ℝ) ≤ (i:ℝ) := by exact_mod_cast hi
+  have hlogi : 0 < Real.log i := Real.log_pos (by linarith)
+  have hle : Real.log (i:ℝ) ≤ Real.log ((i:ℝ) + 1) := Real.log_le_log (by linarith) (by linarith)
+  have hinv := inv_anti₀ hlogi hle
+  unfold mw
+  push_cast
+  linarith
+
+/-- STEP 5: the main-term inequality. `log i * (w i - w (i+1)) = 1 - 1/t` with
+`t = log(i+1)/log i ≥ 1`, and `log t ≥ 1 - 1/t` (`Real.log_le_sub_one_of_pos`
+at `1/t`, then `Real.log_inv`), while `log t` IS the `lnln` increment
+(`Real.log_div`). -/
+theorem mertens_main_step {i : ℕ} (hi : 2 ≤ i) :
+    Real.log i * (mw i - mw (i + 1))
+      ≤ Real.log (Real.log ((i:ℝ) + 1)) - Real.log (Real.log (i:ℝ)) := by
+  have h2 : (2:ℝ) ≤ (i:ℝ) := by exact_mod_cast hi
+  have hlogi : 0 < Real.log (i:ℝ) := Real.log_pos (by linarith)
+  have hlogi1 : 0 < Real.log ((i:ℝ) + 1) := Real.log_pos (by linarith)
+  have hle : Real.log (i:ℝ) ≤ Real.log ((i:ℝ) + 1) := Real.log_le_log (by linarith) (by linarith)
+  set t : ℝ := Real.log ((i:ℝ) + 1) / Real.log (i:ℝ) with ht
+  have ht1 : 1 ≤ t := by rw [ht, le_div_iff₀ hlogi]; linarith
+  have ht0 : (0:ℝ) < t := by linarith
+  have hlogt : 1 - 1/t ≤ Real.log t := by
+    have h := Real.log_le_sub_one_of_pos (show (0:ℝ) < t⁻¹ by positivity)
+    rw [Real.log_inv] at h
+    have hinv : t⁻¹ = 1/t := (one_div t).symm
+    rw [hinv] at h
+    linarith
+  have hlogteq : Real.log t = Real.log (Real.log ((i:ℝ) + 1)) - Real.log (Real.log (i:ℝ)) := by
+    rw [ht, Real.log_div (ne_of_gt hlogi1) (ne_of_gt hlogi)]
+  have hLHS : Real.log (i:ℝ) * (mw i - mw (i + 1)) = 1 - 1/t := by
+    unfold mw
+    push_cast
+    rw [ht]
+    field_simp
+    ring
+  rw [hLHS, ← hlogteq]
+  exact hlogt
+
+/-- MP-M1's upper constant `b`, as landed (`mertens_one_upper`). -/
+def mertensB : ℝ := Real.log 4
+
+/-- MP-M2's constant, SYMBOLIC in MP-M1's `b`:
+`c₂ = 1 + b/log 2 - lnln 2`. Numerically `≈ 3.3665` (`lnln 2 ≈ -0.3665`). -/
+def mertensC2 : ℝ := 1 + mertensB / Real.log 2 - Real.log (Real.log 2)
+
+/-- MERTENS 2 (upper), LEADING COEFFICIENT EXACTLY 1:
+`∑_{p ≤ P} 1/p ≤ lnln P + c₂` for `P ≥ 2`.
+
+Discrete Abel summation (kickoff v3.1, ANN-37; the v3 dyadic route is retired
+because its per-block MP-M1 error lands in the LEADING coefficient). Here the
+same error couples instead to the telescoping total weight variation
+`∑ (w i - w (i+1)) = w 2 - w P ≤ 1/log 2`, so it stays ADDITIVE. Only MP-M1's
+UPPER clause is consumed: the nonnegative weight differences keep any lower
+constant out entirely. Integral-free -- `Mathlib.NumberTheory.AbelSummation`
+is unused. -/
+theorem mertens_second_upper {P : ℕ} (hP : 2 ≤ P) :
+    ∑ p ∈ primesUpto P, (1:ℝ) / p ≤ Real.log (Real.log P) + mertensC2 := by
+  have hPR : (2:ℝ) ≤ (P:ℝ) := by exact_mod_cast hP
+  have hlogP : 0 < Real.log (P:ℝ) := Real.log_pos (by linarith)
+  have hb0 : (0:ℝ) ≤ mertensB := Real.log_nonneg (by norm_num)
+  have hA : ∀ i : ℕ, 1 ≤ i → (∑ p ∈ primesUpto i, Real.log p / p) ≤ Real.log i + mertensB :=
+    fun i hi => mertens_one_upper hi
+  rw [mertens_ident hP]
+  -- STEP 3, first term: `w P * A P ≤ 1 + b/log P`
+  have hfirst : mw P * (∑ p ∈ primesUpto P, Real.log p / p)
+      ≤ 1 + mertensB * (Real.log (P:ℝ))⁻¹ := by
+    have hmwP : mw P = (Real.log (P:ℝ))⁻¹ := rfl
+    have hmw0 : (0:ℝ) < mw P := by rw [hmwP]; positivity
+    calc mw P * (∑ p ∈ primesUpto P, Real.log p / p) ≤ mw P * (Real.log P + mertensB) :=
+          mul_le_mul_of_nonneg_left (hA P (by omega)) hmw0.le
+      _ = 1 + mertensB * (Real.log (P:ℝ))⁻¹ := by rw [hmwP]; field_simp
+  -- STEP 3, sum term: coefficients are `≥ 0`, so insert MP-M1 UPPER termwise
+  have hsum : ∑ i ∈ Finset.Ico 2 P, (mw i - mw (i + 1)) * (∑ p ∈ primesUpto i, Real.log p / p)
+      ≤ ∑ i ∈ Finset.Ico 2 P, (mw i - mw (i + 1)) * (Real.log i + mertensB) := by
+    refine Finset.sum_le_sum (fun i hi => ?_)
+    rw [Finset.mem_Ico] at hi
+    exact mul_le_mul_of_nonneg_left (hA i (by omega)) (mw_sub_nonneg hi.1)
+  have hsplit : ∑ i ∈ Finset.Ico 2 P, (mw i - mw (i + 1)) * (Real.log i + mertensB)
+      = (∑ i ∈ Finset.Ico 2 P, Real.log i * (mw i - mw (i + 1)))
+        + mertensB * (∑ i ∈ Finset.Ico 2 P, (mw i - mw (i + 1))) := by
+    rw [Finset.mul_sum, ← Finset.sum_add_distrib]
+    exact Finset.sum_congr rfl (fun i _ => by ring)
+  -- STEP 4: the error telescope (exact, P-uniform)
+  have htel1 : ∑ i ∈ Finset.Ico 2 P, (mw i - mw (i + 1)) = mw 2 - mw P :=
+    telescope_Ico_sub' mw hP
+  -- STEP 5: the main-term telescope
+  have htel2 : ∑ i ∈ Finset.Ico 2 P, Real.log i * (mw i - mw (i + 1))
+      ≤ Real.log (Real.log P) - Real.log (Real.log 2) := by
+    calc ∑ i ∈ Finset.Ico 2 P, Real.log i * (mw i - mw (i + 1))
+        ≤ ∑ i ∈ Finset.Ico 2 P, ((fun j : ℕ => Real.log (Real.log j)) (i + 1)
+            - (fun j : ℕ => Real.log (Real.log j)) i) := by
+          refine Finset.sum_le_sum (fun i hi => ?_)
+          rw [Finset.mem_Ico] at hi
+          have h := mertens_main_step hi.1
+          simp only []
+          push_cast
+          exact h
+      _ = Real.log (Real.log P) - Real.log (Real.log 2) := by
+          rw [telescope_Ico_sub (fun j : ℕ => Real.log (Real.log j)) hP]
+          norm_num
+  have hmw2 : mw 2 = (Real.log 2)⁻¹ := by unfold mw; norm_num
+  have hmwP : mw P = (Real.log (P:ℝ))⁻¹ := rfl
+  have hbdiv : mertensB / Real.log 2 = mertensB * (Real.log 2)⁻¹ := div_eq_mul_inv _ _
+  unfold mertensC2
+  rw [hsplit] at hsum
+  rw [htel1, hmw2, hmwP] at hsum
+  rw [hbdiv]
+  nlinarith [hfirst, hsum, htel2, hb0]
+
+/-- MP-M3's constant, symbolic. Numerically `exp(4.3665) ≈ 78.8`. -/
+def mertensC3 : ℝ := Real.exp (mertensC2 + 1)
+
+/-- The `-log(1-1/p) - 1/p` tail, telescoped: `∑_{p ≤ P} 1/(p(p-1)) ≤ 1`
+(compare with `∑_{m ≥ 2} 1/(m(m-1)) = 1`, which telescopes as
+`1/(m-1) - 1/m`). -/
+theorem sum_tail_le_one {P : ℕ} (hP : 2 ≤ P) :
+    ∑ p ∈ primesUpto P, 1 / ((p:ℝ) * ((p:ℝ) - 1)) ≤ 1 := by
+  have hsub : primesUpto P ⊆ Finset.Ico 2 (P + 1) := by
+    intro p hp
+    rw [primesUpto, Finset.mem_filter, Finset.mem_range] at hp
+    rw [Finset.mem_Ico]
+    exact ⟨hp.2.two_le, hp.1⟩
+  have hnn : ∀ i ∈ Finset.Ico 2 (P + 1), i ∉ primesUpto P →
+      0 ≤ 1 / ((i:ℝ) * ((i:ℝ) - 1)) := by
+    intro i hi _
+    rw [Finset.mem_Ico] at hi
+    have h2 : (2:ℝ) ≤ (i:ℝ) := by exact_mod_cast hi.1
+    have h1 : (0:ℝ) < (i:ℝ) - 1 := by linarith
+    positivity
+  refine le_trans (Finset.sum_le_sum_of_subset_of_nonneg hsub hnn) ?_
+  -- telescope `1/(m(m-1)) = F m - F (m+1)` with `F m = 1/(m-1)`
+  have hcong : ∑ i ∈ Finset.Ico 2 (P + 1), 1 / ((i:ℝ) * ((i:ℝ) - 1))
+      = ∑ i ∈ Finset.Ico 2 (P + 1),
+          ((fun j : ℕ => ((j:ℝ) - 1)⁻¹) i - (fun j : ℕ => ((j:ℝ) - 1)⁻¹) (i + 1)) := by
+    refine Finset.sum_congr rfl (fun i hi => ?_)
+    rw [Finset.mem_Ico] at hi
+    have h2 : (2:ℝ) ≤ (i:ℝ) := by exact_mod_cast hi.1
+    have hi0 : (i:ℝ) ≠ 0 := by linarith
+    have hi1 : (i:ℝ) - 1 ≠ 0 := by linarith
+    simp only []
+    push_cast
+    rw [show ((i:ℝ) + 1 - 1) = (i:ℝ) by ring]
+    field_simp
+    ring
+  rw [hcong, telescope_Ico_sub' (fun j : ℕ => ((j:ℝ) - 1)⁻¹) (by omega)]
+  have hP1 : (1:ℝ) ≤ (P:ℝ) := by
+    have : (2:ℝ) ≤ (P:ℝ) := by exact_mod_cast hP
+    linarith
+  have hPinv : (0:ℝ) ≤ ((P:ℝ))⁻¹ := by positivity
+  push_cast
+  rw [show ((P:ℝ) + 1 - 1) = (P:ℝ) by ring]
+  norm_num
+
+/-- MERTENS 3 (upper), EXPONENT EXACTLY 1 on `log P`:
+`∏_{p ≤ P} (1 - 1/p)⁻¹ ≤ c₃ log P` for `P ≥ 2`.
+
+`log` of the product is `∑ -log(1-1/p) ≤ ∑ 1/(p-1) = ∑ 1/p + ∑ 1/(p(p-1))`
+via `Real.log_le_sub_one_of_pos`; MP-M2 gives the first sum with coefficient 1
+and `sum_tail_le_one` the second. Exponentiating, `exp(lnln P) = log P`, so the
+exponent is 1 -- which is exactly what T2's frozen `log(k+2)^2` budget needs
+(one log here, one from the span). -/
+theorem mertens_third_upper {P : ℕ} (hP : 2 ≤ P) :
+    ∏ p ∈ primesUpto P, (1 - 1 / (p:ℝ))⁻¹ ≤ mertensC3 * Real.log P := by
+  have hPR : (2:ℝ) ≤ (P:ℝ) := by exact_mod_cast hP
+  have hlogP : 0 < Real.log (P:ℝ) := Real.log_pos (by linarith)
+  have hfac : ∀ p ∈ primesUpto P, (0:ℝ) < (1 - 1 / (p:ℝ))⁻¹ := by
+    intro p hp
+    rw [primesUpto, Finset.mem_filter] at hp
+    have h2 : (2:ℝ) ≤ (p:ℝ) := by exact_mod_cast hp.2.two_le
+    have : (0:ℝ) < 1 - 1 / (p:ℝ) := by rw [sub_pos, div_lt_one (by linarith)]; linarith
+    positivity
+  have hprodpos : (0:ℝ) < ∏ p ∈ primesUpto P, (1 - 1 / (p:ℝ))⁻¹ := Finset.prod_pos hfac
+  -- pointwise: `-log(1-1/p) ≤ 1/p + 1/(p(p-1))`
+  have hpt : ∀ p ∈ primesUpto P, Real.log ((1 - 1 / (p:ℝ))⁻¹)
+      ≤ 1 / (p:ℝ) + 1 / ((p:ℝ) * ((p:ℝ) - 1)) := by
+    intro p hp
+    have hp' := hp
+    rw [primesUpto, Finset.mem_filter] at hp'
+    have h2 : (2:ℝ) ≤ (p:ℝ) := by exact_mod_cast hp'.2.two_le
+    have h := Real.log_le_sub_one_of_pos (hfac p hp)
+    have heq : (1 - 1 / (p:ℝ))⁻¹ - 1 = 1 / (p:ℝ) + 1 / ((p:ℝ) * ((p:ℝ) - 1)) := by
+      have hp0 : (p:ℝ) ≠ 0 := by linarith
+      have hp1 : (p:ℝ) - 1 ≠ 0 := by linarith
+      field_simp
+    linarith [h, heq.le, heq.ge]
+  have hkey : Real.log (∏ p ∈ primesUpto P, (1 - 1 / (p:ℝ))⁻¹)
+      ≤ Real.log (Real.log P) + mertensC2 + 1 := by
+    rw [Real.log_prod _ _ (fun p hp => ne_of_gt (hfac p hp))]
+    calc ∑ p ∈ primesUpto P, Real.log ((1 - 1 / (p:ℝ))⁻¹)
+        ≤ ∑ p ∈ primesUpto P, (1 / (p:ℝ) + 1 / ((p:ℝ) * ((p:ℝ) - 1))) :=
+          Finset.sum_le_sum hpt
+      _ = (∑ p ∈ primesUpto P, 1 / (p:ℝ))
+            + ∑ p ∈ primesUpto P, 1 / ((p:ℝ) * ((p:ℝ) - 1)) := Finset.sum_add_distrib
+      _ ≤ (Real.log (Real.log P) + mertensC2) + 1 :=
+          add_le_add (mertens_second_upper hP) (sum_tail_le_one hP)
+      _ = Real.log (Real.log P) + mertensC2 + 1 := by ring
+  calc ∏ p ∈ primesUpto P, (1 - 1 / (p:ℝ))⁻¹
+      = Real.exp (Real.log (∏ p ∈ primesUpto P, (1 - 1 / (p:ℝ))⁻¹)) :=
+        (Real.exp_log hprodpos).symm
+    _ ≤ Real.exp (Real.log (Real.log P) + mertensC2 + 1) := Real.exp_le_exp.mpr hkey
+    _ = mertensC3 * Real.log P := by
+        unfold mertensC3
+        rw [show Real.log (Real.log (P:ℝ)) + mertensC2 + 1
+            = (mertensC2 + 1) + Real.log (Real.log (P:ℝ)) by ring,
+          Real.exp_add, Real.exp_log hlogP]
 
 /-! ## Section 4: the counting lemmata (conditional on A; classical citations) -/
 
