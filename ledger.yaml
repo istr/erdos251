@@ -1078,3 +1078,38 @@ annotations:
       s3 completion-report follow-up channel, decision at s3
       adjudication; no mid-session relocation. Kickoff v3.1 steering
       sha256 f2976d93...d2d67.
+  - id: ANN-20260716-38
+    refs: [ANN-20260716-36, ANN-20260716-37]
+    date: 2026-07-16
+    note: >-
+      MP relocation TARGET revised by operator preference
+      (mid-session chat 2026-07-16): a dedicated
+      Erdos251/Mertens.lean (import Mathlib only, upstream-shaped),
+      NOT folding into Chebyshev.lean. Steering dependency check at
+      the pin backs this: Erdos251/Chebyshev.lean (127 lines)
+      carries ONLY the pi lower-bound chain (centralBinom_le,
+      two_mul_lt_clog_mul, sq_le_two_pow, nth_prime_lt_sq; sole
+      downstream consumer summable_erdosSeries) -- no theta upper
+      bound, nothing MP-M1 needs; coupling is ZERO. The
+      Chebyshev.lean option was thematic (same central-binomial
+      method), not dependency-driven. The classical MP-M1 inputs
+      live in mathlib at the pin: primorial_le_4_pow
+      (NumberTheory/Primorial.lean:63; the b = log 4 upper side),
+      Nat.four_pow_lt_mul_centralBinom
+      (Data/Nat/Choose/Central.lean) and
+      Nat.pow_factorization_choose_le
+      (Data/Nat/Choose/Factorization.lean; the lower side) --
+      consistent with the executor's mathlib-only report and the
+      session constants. No named Legendre log-factorial route
+      exists at the pin (factorization_factorial appears only as
+      the vanishing lemma), so the binomial route is also the
+      natural one. Import discipline is target-neutral: either
+      target costs the consuming module exactly one new import
+      line. Upstream contrast at the pin: divergence of sum 1/p is
+      present (SumPrimeReciprocals.lean,
+      not_summable_one_div_on_primes) but no quantitative Mertens
+      form anywhere ("mertens" zero hits full-tree, pin AND master
+      per ANN-36) -- a dedicated Mertens.lean matches mathlib PR
+      granularity. Decision timing UNCHANGED: relocation executes
+      at s3 adjudication as a mechanical move; no mid-session
+      relocation; executor keeps building in the v3.1 layout.

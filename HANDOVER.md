@@ -106,8 +106,9 @@ residuals + 12 skeleton statements).
    consumed, c2 = 1 + b/log 2 - lnln 2; steering sha256
    f2976d93...d2d67). Next gate unchanged: session-3 completion
    report (M2 shape) -> steering adjudication (carry MP-M1
-   relocation to Chebyshev.lean + ANN-36 upstream candidacy in the
-   follow-up channel).
+   relocation -- target: dedicated Mertens.lean per operator
+   preference, ANN-38; Chebyshev.lean fallback iff tight coupling
+   shows -- + ANN-36 upstream candidacy in the follow-up channel).
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
