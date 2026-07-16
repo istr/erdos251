@@ -743,3 +743,41 @@ annotations:
       Tao-Teravainen bounded-numerator obstruction quote as
       motivation. Residual UNVERIFIED set booked in the item-0004
       closure summary (completed/item-0004.md).
+  - id: ANN-20260716-29
+    refs: [ANN-20260716-28, BET-20260711-01]
+    date: 2026-07-16
+    note: >-
+      Forum verbatims RESOLVED by operator manual browser check
+      (thread 251 read in full 2026-07-16; screenshot operator-held,
+      sha256 7150f5b2...b06d35; transcription = literature.md
+      addendum). Tao comment CONFIRMED verbatim (17:17, 07 Oct 2025):
+      summation by parts to the gap series; "a sufficiently
+      quantitative and uniform version of the prime tuples
+      conjecture" giving "statistical control on the binary expansion
+      of about log log n consecutive prime gaps" so that the binary
+      expansion "cannot be periodic"; Shannon entropy pointer --
+      matches the project route posture (lnln-scale uniform-HL
+      window; fork-merge kills the eventual lattice structure that
+      periodicity would require). Alfaiz comment CONFIRMED (03:28,
+      15 Apr 2026); forum credits "D. C. Schlage Puchta" -- initials
+      wrong, author is J.-C. Schlage-Puchta; [ScPu11] pairing stands.
+      NEW verbatim detail on the BET-01 variant: the 2026-04-15
+      negative answer to the [Er88c] g_1...g_n conjecture is by user
+      Vjeko_Kovac (11:13), explicit telescoping c_{n+1} = c_n g_n -
+      p_n with g_n := (c_{n+1}+p_n)/c_n, write-up produced by ChatGPT
+      5.4 Pro under "minimal orchestration"; Nat Sothanaphan reply
+      (17:06) reports a standard check with no issues and calls the
+      result "a bit stronger than g_n = o(p_n)". Steering re-executed
+      the telescoping algebra and a numeric instance (c = 2,4,5,10,13
+      -> partial sum 59/36 = c_1 - c_5/(g_1 g_2 g_3 g_4), exact). No
+      BET rescoring: BET-01 outcome H2 already booked this mechanism.
+      Meta-fact for the public-claim option: AI-assisted mathematics
+      is already on this thread. Page state: 0 claimed proofs;
+      could-be-formalisable / working-on-formalising both None --
+      setting these flags is a minimal-footprint public-claim vector
+      (operator option alongside the thread post). Recommended
+      citation captured: T. F. Bloom, Erdos Problem #251,
+      https://www.erdosproblems.com/251, accessed 2026-07-16.
+      Residual UNVERIFIED now only: Hardy-Wright theorem number
+      (physical volume), Pratt Conjecture 1.2 numeric window
+      (full-text check).

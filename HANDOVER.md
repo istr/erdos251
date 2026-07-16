@@ -90,18 +90,23 @@ residuals + 12 skeleton statements).
    until volume check). Deferred deliberately: keeps the staged
    fidelity object's source byte-stable; new sign-off sha to ledger.
 5. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
-   do NOT inherit the problem page's [Er58b] all-k attribution);
-   alerts per report recommendation 1 (arXiv math.NT
+   do NOT inherit the problem page's [Er58b] all-k attribution; the
+   thread already carries AI-assisted mathematics, ANN-29) and/or set
+   the could-be-formalisable / working-on-formalising flags on the
+   problem page (both currently None -- minimal-footprint public
+   claim); alerts per report recommendation 1 (arXiv math.NT
    irrationality+prime+2^n; erdosproblems.com/251 watch).
 
 ## item-0004 RESOLVED (2026-07-16)
 Full report: dossier/literature.md (ANN-28; original artifact
 operator-held). All ten list items verdicted; BET-06 scored NO
-(brier 0.01, binary mean 0.183 -> 0.149). Still UNVERIFIED: Tao/Alfaiz
-forum comment verbatims (bot lock -- manual browser check before
-quoting), Hardy-Wright theorem number (physical volume), Pratt
-Conjecture 1.2 numeric window (full-text check). CPAP-3 and Erdos #251
-confirmed OPEN; no prior art for the target implication.
+(brier 0.01, binary mean 0.183 -> 0.149). Forum verbatims RESOLVED by
+operator browser check (ANN-29; addendum in literature.md): Tao and
+Alfaiz confirmed, Vjeko_Kovac telescoping post + reply now verbatim,
+steering re-executed the algebra. Still UNVERIFIED: Hardy-Wright
+theorem number (physical volume), Pratt Conjecture 1.2 numeric window
+(full-text check). CPAP-3 and Erdos #251 confirmed OPEN; no prior art
+for the target implication; 0 claimed proofs on the page.
 
 ## Steering sandbox notes (empirical)
 - Background processes do NOT survive tool-call boundaries; container
