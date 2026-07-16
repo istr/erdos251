@@ -7,7 +7,8 @@ Original artifact (UTF-8) held by the operator, sha256
 This copy is an ASCII transliteration (diacritics folded: Erdos,
 Cramer, Teravainen, Turan, Hoelder, "series a valeur"; math symbols
 spelled out); content otherwise verbatim, including the report's own
-verdict vocabulary. Steering disposition: ledger ANN-28.
+verdict vocabulary. Steering disposition: ledger ANN-28. Addendum
+(forum verbatims, below the report): ledger ANN-29.
 
 ---
 
@@ -115,3 +116,79 @@ Mathlib-Namen Nat.nth, Nat.count, Mathlib.Data.Real.Irrational sind vom Projekt 
 - Die erdosproblems.com-Seiten (Problem 251 und Forum-Thread 251) sind bot-gesperrt; Problemwortlaut, Referenzen und Offen-Status wurden ueber Suchindex und einen dedizierten Subagenten bestaetigt, aber die zwei spezifischen Forum-Kommentare (Tao 2025-10-07, Alfaiz 2026-04-15) konnten nicht woertlich abgerufen werden. Sie bleiben UNVERIFIZIERT (plausibel). Eine manuelle, im Browser durchgefuehrte Sichtpruefung der Thread-Seite wird empfohlen, um diese beiden Kommentare zu zitieren.
 - MathSciNet/zbMATH waren nicht direkt zugaenglich; Bibliographie wurde ueber Verlags-/EuDML-/Project-Euclid-/arXiv-/Oxford-Academic-Primaerseiten verifiziert.
 - Bertrand-Postulat und die Hardy-Wright-Groessenordnung wurden nicht aus abgerufenen Primaerbaenden, sondern aus Standard-Sekundaerquellen bewertet; die exakte Hardy-Wright-Theoremnummer bleibt offen.
+
+---
+
+## Addendum: forum thread 251 verbatims (operator browser check, 2026-07-16)
+
+Provenance: the report's caveat "bot-gesperrt / UNVERIFIZIERT" for the
+two forum comments is RESOLVED by an operator manual browser read of
+https://www.erdosproblems.com/forum/thread/251 on 2026-07-16
+(screenshot operator-held, sha256
+7150f5b265f77a2438efce9c9a96f76fef7c23d4f1d3432f9176c4571ab06d35).
+Mathematics transcribed in LaTeX tokens; bracketed [phrases] were
+hyperlinks whose targets the screenshot does not capture.
+
+Page state: "0 claimed proofs for this problem". Likes: ebarschkis,
+Prasannam, qrdl, jizert. Interested in collaborating / currently
+working / looks difficult / looks tractable / could be formalisable /
+working on formalising: all None. Recommended citation format shown on
+page: "T. F. Bloom, Erdos Problem #251,
+https://www.erdosproblems.com/251, accessed 2026-07-16". Footer:
+comments are user responsibility, not verified for correctness.
+
+All four posts, oldest first:
+
+1. TerenceTao -- 17:17 on 07 Oct 2025 (VERIFIED verbatim; report item 6
+   assumed content confirmed exactly):
+   "By summation by parts, this is equivalent to the irrationality of
+   \sum_n \frac{p_{n+1}-p_n}{2^n}. It is possible that a sufficiently
+   quantitative and uniform version of the prime tuples conjecture can
+   resolve this problem, if it gives sufficient statistical control on
+   the binary expansion of about \log\log n consecutive prime gaps
+   p_{n+1}-p_n (which is usually of size \asymp \log n) to show that
+   the binary expansion of \sum_n \frac{p_{n+1}-p_n}{2^n} cannot be
+   periodic. The theory of Shannon entropy may be helpful in this
+   regard."
+
+2. Alfaiz -- 03:28 on 15 Apr 2026 (VERIFIED verbatim):
+   "[ScPu11] by D. C. Schlage Puchta seems related to this problem.
+   (See Theorem 2)."
+   Note: the forum initials "D. C." are wrong; the paper's author is
+   J.-C. (Jan-Christoph) Schlage-Puchta. The [ScPu11] pairing with
+   arXiv:1105.1451 = Acta Arith. 126 (2007) 295-303 stands (report
+   item 1).
+
+3. Vjeko_Kovac -- 11:13 on 15 Apr 2026 (the BET-01 variant solution,
+   now verbatim; red-bordered as recent):
+   "The last conjecture below the main problem statement has an
+   (overly simple) negative answer. The idea is elementary, just make
+   the series telescope by choosing positive integers (c_n) such that
+   \frac{p_n}{g_1 \cdots g_n} = \frac{c_n}{g_1 \cdots g_{n-1}} -
+   \frac{c_{n+1}}{g_1 \cdots g_n}, i.e. c_{n+1} = c_n g_n - p_n.
+   Thus, one can define (c_n) recursively, by only making sure that
+   c_{n+1} \equiv -p_n \pmod{c_n} and that it is bounded from below
+   by something that grows slowly but steadily. Afterwards one just
+   sets g_n := \frac{c_{n+1} + p_n}{c_n}. I got ChatGPT 5.4 Pro
+   [figure out the proof] and [write up the details] with only minimal
+   orchestration from my side. It is possible that Erdos also wanted
+   (g_n) to be increasing, but then it would be weird to emphasize
+   g_n \geq 2 and switch the notation from a_n to g_n for this
+   particular problem in [Er88c]."
+
+4. Nat Sothanaphan -- 17:06 on 15 Apr 2026 (reply to 3; red-bordered):
+   "Thanks! I ran standard [check] which found no issues. It seems
+   this proof is a bit stronger than g_n = o(p_n). It may be of
+   interest to see what the best provable statement is."
+
+Steering verification note: the telescoping identity and a numeric
+instance were re-executed (c = 2, 4, 5, 10, 13 gives g = 3, 2, 3, 2,
+all >= 2, and the partial sum \sum_{n<=4} p_n/(g_1...g_n) = 59/36 =
+c_1 - c_5/(g_1 g_2 g_3 g_4) exactly); with c_n -> infinity slowly the
+series equals c_1 and g_n ~ p_n/c_n = o(p_n), so the [Er88c]
+generalized-denominator conjecture fails as stated -- consistent with
+the ledger's BET-01 outcome H2 (adversarial telescoping) and the
+project dissection. New meta-fact on record: the write-up of this
+negative answer was produced by an LLM (ChatGPT 5.4 Pro) under
+"minimal orchestration" -- AI-assisted mathematics is already on this
+thread.
