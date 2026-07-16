@@ -811,6 +811,135 @@ theorem four_logb_le {y : ℝ} (hy : 0 < y) : 4 * Real.logb 2 y ≤ y + 17 := by
   rw [Real.logb, ← mul_div_assoc, div_le_iff₀ (by linarith : (0:ℝ) < Real.log 2)]
   nlinarith [h, hl2, hy, mul_pos hy (by linarith : (0:ℝ) < Real.log 2 - 0.5)]
 
+/-- Scaled refinement of `four_logb_le`: the linear coefficient can be made
+as small as we like at the cost of an additive `4m`. Via
+`log (y/2^m) ≤ y/2^m - 1` and `log (2^m) = m log 2` (exact, so no numeric
+bound on any log other than `Real.log_two_gt_d9`'s `log 2 > 1/2` is used).
+Used with `m = 9` in `cJ_le`, where `8/2^9 = 1/64` is the slack that makes
+`L + 1 < 3 lnln x` (rather than merely `< 3.03 lnln x`) come out. -/
+theorem four_logb_le_scaled (m : ℕ) {y : ℝ} (hy : 0 < y) :
+    4 * Real.logb 2 y ≤ (8 / 2 ^ m) * y + 4 * m := by
+  have hl2 : (0.5 : ℝ) < Real.log 2 := by linarith [Real.log_two_gt_d9]
+  have hP : (0:ℝ) < 2 ^ m := by positivity
+  have h := Real.log_le_sub_one_of_pos (show (0:ℝ) < y / 2 ^ m by positivity)
+  rw [Real.log_div hy.ne' (by positivity), Real.log_pow] at h
+  -- `log y - m log 2 ≤ y/2^m - 1`; divide by `log 2 > 1/2`
+  rw [Real.logb, ← mul_div_assoc, div_le_iff₀ (by linarith : (0:ℝ) < Real.log 2)]
+  have hkey : 0 ≤ (y / 2 ^ m) * (8 * Real.log 2 - 4) :=
+    mul_nonneg (by positivity) (by linarith)
+  have hexp : (8 / 2 ^ m) * y = (y / 2 ^ m) * 8 := by field_simp; ring
+  rw [hexp]
+  nlinarith [h, hl2, hkey]
+
+/-- `2 log2 z ≤ 2.8854 ln z` for `ln z ≥ 0`: the base change `logb 2 = log / log 2`
+against `2/ln 2 = 2.885390...`, reduced to `Real.log_two_gt_d9`. -/
+theorem two_logb_le_of_nonneg {z : ℝ} (hz : 0 ≤ Real.log z) :
+    2 * Real.logb 2 z ≤ 2.8854 * Real.log z := by
+  have hl2 : (0.6931471803:ℝ) < Real.log 2 := Real.log_two_gt_d9
+  have hl2p : (0:ℝ) < Real.log 2 := by linarith
+  rw [Real.logb, ← mul_div_assoc, div_le_iff₀ hl2p]
+  nlinarith [mul_nonneg hz (by linarith : (0:ℝ) ≤ 2.8854 * Real.log 2 - 2)]
+
+/-- `A := log2 (4 C_g) > 0`, since `C_g ≥ 1` forces `4 C_g ≥ 4 > 1`. This is
+what makes the `K`-ceiling argument nonnegative with no threshold on `x`. -/
+theorem logb_four_Cg_pos {Cg : ℝ} (hCg : 1 ≤ Cg) : 0 < Real.logb 2 (4 * Cg) :=
+  Real.logb_pos (by norm_num) (by linarith)
+
+/-- `K ≤ A + 2.8854 lnln x + 1`, where `A = log2 (4 C_g)`: `Nat.ceil y < y + 1`
+on the (nonnegative) defining argument, then `two_logb_le_of_nonneg`. -/
+theorem cK_le {Cg : ℝ} (hCg : 1 ≤ Cg) {x : ℕ} (hx : 1 ≤ Real.log x) :
+    (cK Cg x : ℝ) ≤ Real.logb 2 (4 * Cg) + 2.8854 * Real.log (Real.log x) + 1 := by
+  have hA := logb_four_Cg_pos hCg
+  have ht0 : 0 ≤ Real.log (Real.log x) := Real.log_nonneg hx
+  have hnn0 : 0 ≤ Real.logb 2 (Real.log x) := Real.logb_nonneg (by norm_num) hx
+  have h2 : 2 * Real.logb 2 (Real.log x) ≤ 2.8854 * Real.log (Real.log x) :=
+    two_logb_le_of_nonneg ht0
+  rw [cK]
+  have hnn : 0 ≤ Real.logb 2 (4 * Cg) + 2 * Real.logb 2 (Real.log x) := by linarith
+  have := (Nat.ceil_lt_add_one hnn).le
+  linarith
+
+/-- Section 5's `K ≥ 1`, for `ln x ≥ 1`: the ceiling argument is `> 0`. -/
+theorem one_le_cK {Cg : ℝ} (hCg : 1 ≤ Cg) {x : ℕ} (hx : 1 ≤ Real.log x) : 1 ≤ cK Cg x := by
+  have hA := logb_four_Cg_pos hCg
+  have hnn0 : 0 ≤ Real.logb 2 (Real.log x) := Real.logb_nonneg (by norm_num) hx
+  rw [cK, Nat.one_le_ceil_iff]
+  linarith
+
+/-- `J ≤ (1/64)(A + 2.8854 lnln x + 21) + 37`: `Nat.ceil y < y + 1`, `logb`
+monotonicity against `cK_le`, then `four_logb_le_scaled` at `m = 9`. -/
+theorem cJ_le_scaled {Cg : ℝ} (hCg : 1 ≤ Cg) {x : ℕ} (hx : 1 ≤ Real.log x) :
+    (cJ Cg x : ℝ)
+      ≤ (1/64) * (Real.logb 2 (4 * Cg) + 2.8854 * Real.log (Real.log x) + 21) + 37 := by
+  have hA := logb_four_Cg_pos hCg
+  have ht0 : 0 ≤ Real.log (Real.log x) := Real.log_nonneg hx
+  have hcK := cK_le hCg hx
+  have hc : (0:ℝ) ≤ (cK Cg x : ℝ) := Nat.cast_nonneg _
+  set u := Real.logb 2 (4 * Cg) + 2.8854 * Real.log (Real.log x) + 21 with hudef
+  have hu0 : (0:ℝ) < u := by rw [hudef]; linarith
+  have hcKu : (cK Cg x : ℝ) + 20 ≤ u := by rw [hudef]; linarith
+  have hcK20 : (0:ℝ) < (cK Cg x : ℝ) + 20 := by linarith
+  have h1 : (cJ Cg x : ℝ) ≤ 4 * Real.logb 2 ((cK Cg x : ℝ) + 20) + 1 := by
+    rw [cJ]
+    refine (Nat.ceil_lt_add_one ?_).le
+    have : (0:ℝ) ≤ Real.logb 2 ((cK Cg x : ℝ) + 20) :=
+      Real.logb_nonneg (by norm_num) (by linarith)
+    linarith
+  have h2 : Real.logb 2 ((cK Cg x : ℝ) + 20) ≤ Real.logb 2 u :=
+    Real.logb_le_logb_of_le (by norm_num) hcK20 hcKu
+  have h3 := four_logb_le_scaled 9 hu0
+  norm_num at h3
+  linarith
+
+/-- 5(iv)'s operative asymptotic, in the crude form the budget needs:
+`L + 1 ≤ 1.015625 A + 2.930484375 lnln x + 41.328125 < 3 lnln x` once
+`lnln x ≥ 16 A + 640`. The coefficient `2.9304... < 3` is the whole point;
+the threshold is taken deliberately late. -/
+theorem cL_lt {Cg : ℝ} (hCg : 1 ≤ Cg) {x : ℕ} (hx : 1 ≤ Real.log x)
+    (ht : 16 * Real.logb 2 (4 * Cg) + 640 ≤ Real.log (Real.log x)) :
+    ((cL (cJ Cg x) (cK Cg x) : ℝ) + 1 < 3 * Real.log (Real.log x)) := by
+  have hA := logb_four_Cg_pos hCg
+  have hcK := cK_le hCg hx
+  have hcJ := cJ_le_scaled hCg hx
+  have hL : ((cL (cJ Cg x) (cK Cg x) : ℕ) : ℝ) = (cJ Cg x : ℝ) + 2 + (cK Cg x : ℝ) := by
+    rw [cL]; push_cast; ring
+  rw [hL]
+  linarith
+
+/-- The ℕ-side crude span bound shared by `cword` and `cword'` (their spans
+are the same expression, by `cspan_eq` / `cspan'_eq`): the prime window sits
+below index `2L+5`, and `p_N < (N+2)^2`. -/
+theorem cspan_lt_sq (J K : ℕ) :
+    cprime (cL J K) (cL J K + 1) - cprime (cL J K) 0 < (2 * cL J K + 7) ^ 2 := by
+  have h1 : cprime (cL J K) (cL J K + 1) - cprime (cL J K) 0
+      ≤ cprime (cL J K) (cL J K + 1) := Nat.sub_le _ _
+  have h2 : cprime (cL J K) (cL J K + 1) ≤ q (2 * cL J K + 5) := cprime_top_le_q _
+  have h3 : q (2 * cL J K + 5) < (2 * cL J K + 5 + 2) ^ 2 := nth_prime_lt_sq (by omega)
+  have h4 : (2 * cL J K + 5 + 2) ^ 2 = (2 * cL J K + 7) ^ 2 := by ring_nf
+  omega
+
+/-- `(2L+7)^2 ≤ (ln x)^3` for `ln x ≥ 44`, given `L + 1 < 3 lnln x`: chain
+`2L+7 ≤ 6 lnln x + 7 ≤ 6 ln x + 1` (via `lnln x ≤ ln x - 1`) and
+`(6s+1)^2 ≤ s^3` for `s ≥ 44`. Deliberately crude — `(lnln x)^2` against
+`(ln x)^3` leaves enormous room. -/
+theorem cube_bound {x : ℕ} (L : ℕ) (hx : (44:ℝ) ≤ Real.log x)
+    (hL : (L : ℝ) + 1 < 3 * Real.log (Real.log x)) :
+    ((2 * L + 7 : ℕ) : ℝ) ^ 2 ≤ Real.log x ^ 3 := by
+  have hs0 : (0:ℝ) < Real.log x := by linarith
+  have hs1 : (1:ℝ) ≤ Real.log x := by linarith
+  have hlog : Real.log (Real.log x) ≤ Real.log x - 1 := Real.log_le_sub_one_of_pos hs0
+  have ht0 : 0 ≤ Real.log (Real.log x) := Real.log_nonneg hs1
+  have hLR : (0:ℝ) ≤ (L : ℝ) := Nat.cast_nonneg _
+  have hcast : ((2 * L + 7 : ℕ) : ℝ) = 2 * (L : ℝ) + 7 := by push_cast; ring
+  rw [hcast]
+  have h1 : 2 * (L : ℝ) + 7 ≤ 6 * Real.log x + 1 := by linarith
+  have h2 : (0:ℝ) ≤ 2 * (L : ℝ) + 7 := by linarith
+  have h3 : (2 * (L : ℝ) + 7) ^ 2 ≤ (6 * Real.log x + 1) ^ 2 := by nlinarith [h1, h2]
+  have h4 : (6 * Real.log x + 1) ^ 2 ≤ Real.log x ^ 3 := by
+    nlinarith [hx, mul_nonneg (by linarith : (0:ℝ) ≤ Real.log x - 44) (sq_nonneg (Real.log x)),
+      mul_nonneg (by linarith : (0:ℝ) ≤ Real.log x - 44) (by linarith : (0:ℝ) ≤ Real.log x)]
+  linarith
+
 /-- `1 ≤ J` UNCONDITIONALLY: `K + 20 ≥ 20 > 1`, so `logb 2 (K+20) > 0`
 and the `ceil` of a positive real is at least 1. -/
 theorem one_le_cJ {Cg : ℝ} (x : ℕ) : 1 ≤ cJ Cg x := by
@@ -1047,7 +1176,45 @@ theorem cbudget {Cg : ℝ} (hCg : 1 ≤ Cg) :
         ≤ Real.log x ^ 3) ∧
       ((offsetSpan (wordPointSet (cword' (cJ Cg x) (cK Cg x)) (cL (cJ Cg x) (cK Cg x))) : ℝ)
         ≤ Real.log x ^ 3) := by
-  sorry
+  have hA := logb_four_Cg_pos hCg
+  -- the two thresholds: `ln x ≥ 44` (span) and `lnln x ≥ 16 A + 640` (the `< 3 lnln x` clause)
+  have hs_top : Filter.Tendsto (fun x : ℕ => Real.log x) Filter.atTop Filter.atTop :=
+    Real.tendsto_log_atTop.comp (tendsto_natCast_atTop_atTop (R := ℝ))
+  have ht_top : Filter.Tendsto (fun x : ℕ => Real.log (Real.log x)) Filter.atTop Filter.atTop :=
+    Real.tendsto_log_atTop.comp hs_top
+  have hev1 := hs_top.eventually_ge_atTop (44:ℝ)
+  have hev2 := ht_top.eventually_ge_atTop (16 * Real.logb 2 (4 * Cg) + 640)
+  rw [Filter.eventually_atTop] at hev1 hev2
+  obtain ⟨x₁, hx₁⟩ := hev1
+  obtain ⟨x₂, hx₂⟩ := hev2
+  refine ⟨max x₁ x₂, fun x hx => ?_⟩
+  have hs : (44:ℝ) ≤ Real.log x := hx₁ x (le_trans (le_max_left _ _) hx)
+  have ht : 16 * Real.logb 2 (4 * Cg) + 640 ≤ Real.log (Real.log x) :=
+    hx₂ x (le_trans (le_max_right _ _) hx)
+  have hs1 : (1:ℝ) ≤ Real.log x := by linarith
+  have ht1 : (1:ℝ) ≤ Real.log (Real.log x) := by linarith
+  have h4 := cL_lt hCg hs1 ht
+  -- the span clause, shared by `w` and `w'` via their common span expression
+  have hspan : ∀ w : ℕ → ℕ,
+      offsetSpan (wordPointSet w (cL (cJ Cg x) (cK Cg x)))
+          = cprime (cL (cJ Cg x) (cK Cg x)) (cL (cJ Cg x) (cK Cg x) + 1)
+            - cprime (cL (cJ Cg x) (cK Cg x)) 0 →
+      ((offsetSpan (wordPointSet w (cL (cJ Cg x) (cK Cg x))) : ℝ) ≤ Real.log x ^ 3) := by
+    intro w hw
+    rw [hw]
+    have hnat := cspan_lt_sq (cJ Cg x) (cK Cg x)
+    have hcast : ((cprime (cL (cJ Cg x) (cK Cg x)) (cL (cJ Cg x) (cK Cg x) + 1)
+        - cprime (cL (cJ Cg x) (cK Cg x)) 0 : ℕ) : ℝ)
+          ≤ ((2 * cL (cJ Cg x) (cK Cg x) + 7 : ℕ) : ℝ) ^ 2 := by
+      have : ((cprime (cL (cJ Cg x) (cK Cg x)) (cL (cJ Cg x) (cK Cg x) + 1)
+          - cprime (cL (cJ Cg x) (cK Cg x)) 0 : ℕ) : ℝ)
+            ≤ (((2 * cL (cJ Cg x) (cK Cg x) + 7) ^ 2 : ℕ) : ℝ) := by
+        exact_mod_cast hnat.le
+      simpa using this
+    exact le_trans hcast (cube_bound _ hs h4)
+  exact ⟨one_le_cJ x, one_le_cK hCg hs1,
+    tailBudget_le_two_pow_cK hCg (by linarith : Real.log x ≠ 0), h4, by linarith, by linarith,
+    hspan _ (cspan_eq _ _), hspan _ (cspan'_eq _ _)⟩
 
 /-- The chain down to the consecutive count being at least 1: Lemma 4.3
 applied to the section-5 words, with `κ := C_1` from 5(iii) and the
