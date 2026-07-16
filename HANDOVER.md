@@ -1,4 +1,4 @@
-# HANDOVER -- erdos251 (round 2 cold start; round 1 closed and scored, 2026-07-15)
+# HANDOVER -- erdos251 (round 2 in motion, 2026-07-16; round 1 closed and scored 2026-07-15)
 
 Mission: public experiment attacking Erdos #251 (irrationality of
 S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
@@ -58,28 +58,29 @@ residuals + 12 skeleton statements).
 - item-0011 (Hypotheses faithfulness pair) contingent, unscheduled.
 - Inventory on main: 16 sorries = 3 pre-existing residuals
   (Conditional 1, Hypotheses 2) + Statement 1 + Counting 12.
+- Round-2 decisions ratified 2026-07-16 (ANN-27, followup27): fidelity
+  arm instrument STAGED in runs/_staging_review3fid (payload
+  review_3_fidelity, deterministic strip script, object Parts I-III,
+  wrapper verbatim, config; steering hashes staged, operator sha256
+  canonical); item-0015 (heart proof item) proposed and ordered after
+  item-0004, double-gated; statement-unfreeze batch LANDED (unused hb
+  dropped from repeated_block_quantization, ANN-18 deferral resolved,
+  inventory unchanged); R2 archive gap CLOSED (a70390f transcript,
+  b32759d strip-script restore).
 
-## Pending decisions (operator), round 2
-1. item-0014 closure: dispatch the blind transcription-fidelity arm
-   (RECOMMENDED: table-driven object = Counting.lean + chain-v1 v1.3
-   sections 4-5; cheap, and the natural Sonnet debut on
-   low-silent-cost work per the model-ladder plan) OR declare the
-   acceptance intent met by R2a/R2b plus the steering pass. Then
-   done-move + closure ANN (executor model attribution).
-2. Heart funding (the ANN-18 successor decision, now concrete):
-   create the multi-session PROOF item for fork_merge_of_hypotheses
-   consuming the skeleton -- interface decisions already logged: a
-   concrete transcribed form of 4.1's x^{1-o(1)} (M_H >= 4 and
-   M_H >> sqrt x at explicit thresholds) and the O_kappa(k) collision
-   count replacing the retracted 3k/e^2 -- OR pause the heart for
-   item-0004 / item-0007.
-3. item-0004 literature verification: resolves BET-06 and gates any
-   public claim; the optional thread post comes AFTER it. List below.
-4. Lean statement-unfreeze batch on request (unused hb in
-   repeated_block_quantization, ANN-18; builds warn on it).
-5. Archive the R2 run dirs if not yet done (R2a: ChatGPT UI citation
-   tokens note; R2b: turn-2 continuation, above-hash-line self-hash).
-6. BET-07 resolution by 2026-08-08 (operator judgment).
+## Pending decisions and gates (operator), round 2
+1. DISPATCH the staged fidelity arm (Sonnet debut; operator sha256 of
+   payload + object and exact model string into the config at archive
+   time; web OFF, code execution ON, two turns per rule 7). Verdict
+   returns to steering for adjudication against the ANN-26 baseline;
+   then item-0014 done-move + closure ANN with executor model
+   attribution (Opus per item-0003 precedent -- operator confirms).
+2. item-0015 ratification (proposed in followup27); execution stays
+   double-gated on item-0014 closure and the item-0004 verdict.
+3. item-0004: steering session WITH web research mode ON (ratified
+   round-2 decision 3); deliverable = verification report plus BET-06
+   resolution proposal, as a patch. List below.
+4. BET-07 resolution by 2026-08-08 (operator judgment).
 
 ## item-0004 verification list (accumulated)
 ScPu11 identifiers (Acta Arith 126 (2007) vs arXiv:1105.1451 --

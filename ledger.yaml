@@ -647,3 +647,40 @@ annotations:
       Sonnet debut). Round-2 HANDOVER issued in this followup.
       Executor model: operator confirms at done-move (Opus per
       item-0003 precedent).
+  - id: ANN-20260716-27
+    refs: [ANN-20260715-26, ANN-20260715-18, BET-20260711-06]
+    date: 2026-07-16
+    note: >-
+      Round-2 opening: the operator ratifies the steering proposals on
+      all round-2 pending decisions. (1) item-0014 closure via the
+      light blind transcription-fidelity arm (Sonnet debut per the
+      model-ladder plan); the full instrument is staged in this
+      followup (runs/_staging_review3fid: payload review_3_fidelity
+      sha 4a8d51d0...e2308f; deterministic assertion-enforced
+      strip_fidelity_object.py; object = Part I prose sections 1/2/4/5
+      + Part II Counting.lean + Part III frozen context, sha
+      7bf5bebe...b6e4ca; wrapper verbatim from the R2 arms; staged
+      config -- operator sha256 and exact model string at dispatch;
+      two turns per rule 7). (2) Heart funding: item-0015 created as
+      proposed in this followup, consuming the item-0014 skeleton (12
+      Counting sorries plus fork_merge_of_hypotheses), execution
+      double-gated on item-0014 closure and the item-0004 verdict,
+      ordered after item-0004; the two logged interface decisions
+      (concrete x^(1-o(1)) form feeding 4.3; O_kappa(k) collision
+      count) are in the item body. (3) item-0004 executes as a
+      STEERING session with web research mode ON -- deliberate
+      deviation from the executor-local pattern: web access is the
+      item's point, and contamination classes bind stage/review runs,
+      not verification work; deliverable is a verification report plus
+      a BET-06 resolution proposal, ratification with the operator.
+      (4) Statement-unfreeze batch LANDED in this followup: unused
+      hb : 0 < b dropped from repeated_block_quantization, single call
+      site adjusted, README correction entry added; resolves the
+      ANN-18 deferral unblocked by ANN-25; sorry inventory unchanged
+      (16). (5, closed) R2 archives complete: a70390f adds the missing
+      R2b turn-2 transcript, b32759d restores strip_review_copy.py
+      into both archived run dirs -- the committed-strip-scripts
+      discipline holds again (steering flagged, operator closed
+      same-day). Open: BET-06 via item-0004 (gates any public claim);
+      BET-07 to 2026-08-08; fidelity verdict, then item-0014 done-move
+      with executor model attribution.
