@@ -4,5 +4,12 @@ import Erdos251.Basic
 import Erdos251.ForkMerge
 import Erdos251.Hypotheses
 import Erdos251.Mertens
+import Erdos251.Counting.Words
+import Erdos251.Counting.SingularSeries
+import Erdos251.Counting.OneExtension
+import Erdos251.Counting.Lemmata
+import Erdos251.Counting.ConsecTransfer
+import Erdos251.Counting.GapTail
+import Erdos251.Counting.Construction
 import Erdos251.Counting
 import Erdos251.Conditional
