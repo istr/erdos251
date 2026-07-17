@@ -13,7 +13,7 @@ and what breaks"; acceptance_intent: "Verdict names the exact
 structural obstruction or a concrete transfer plan".
 
 v2 revision note: this version implements the eight required revisions
-of item-0005-adjudication-v1.md Section 3, adjudicating two adversarial
+of payloads/item-0005-adjudication-v1.md Section 3, adjudicating two adversarial
 reviews of v1 (R1 = Fable, fresh instance, falsification attempt no. 7;
 R2 = ChatGPT, cross-family), both registered as hashed payloads (see
 Section 9). No mathematical result changed: the core computations (EXCH,
@@ -34,7 +34,7 @@ set is preserved UNTRACKED under dossier/item-0005-workpapers/
 
 NO UNCONDITIONAL TRANSFER EXISTS IN THE EVIDENCE BASE, AND THE FAILURE
 IS STRUCTURAL. Scope of this claim (narrowed from v1 under adversarial
-review, item-0005-adjudication-v1.md P1): no verbatim transfer of the
+review, payloads/item-0005-adjudication-v1.md P1): no verbatim transfer of the
 Tao-Teravainen (TaTe, arXiv:2512.01739v2) method is exhibited; the
 linear formal layer of rationality consequences is fully classified
 (rigidity, O2); every examined nonlinear repair architecture funnels
@@ -77,7 +77,7 @@ derived, so the cube, the amplification, and the dichotomy are all
 unreachable.
 
 O2 (formal-layer closure; why the formal linear layer admits no second
-family). SCOPE (item-0005-adjudication-v1.md P6): this rigidity result
+family). SCOPE (payloads/item-0005-adjudication-v1.md P6): this rigidity result
 classifies the LINEAR formal layer only -- linear functionals
 sum_m beta_m g_m of the gap sequence. Polynomial/nonlinear consequences
 of rationality (e.g. products b^2(delta_{n+u}-delta_n)(delta_{n+v}-delta_n)
@@ -116,7 +116,7 @@ windows -- an exact functional equation for n -> p_n under an index
 self-map -- and none exists (p_{2n} - 2 p_n is asymptotic-only, with
 error incompatible with any mod-1 lattice tolerance).
 
-R1 sharpening (adopted, item-0005-adjudication-v1.md P7, steering
+R1 sharpening (adopted, payloads/item-0005-adjudication-v1.md P7, steering
 re-verified): the recursion delta_n = 2 delta_{n-1} - g_n makes
 b delta_s in Z forward-generate the whole family {b delta_n in Z}_{n>=s}
 automatically -- the family is deductively equivalent to the single
@@ -135,7 +135,7 @@ MULTIPLICATIVE functions, shifts h_1 != h_2 up to O(L^c), progression
 restriction W in [L^c], natural averaging outside a log-density L^{-c}
 exceptional-scale set -- used in Section 5 only at (5.42)-(5.45), to
 decorrelate the sieve events "no prime factor in J_l" at two shifts.
-SCOPE (item-0005-adjudication-v1.md P3, sustained against v1): Theorem
+SCOPE (payloads/item-0005-adjudication-v1.md P3, sustained against v1): Theorem
 3.1 itself classifies no numerators, and the interface excludes
 nothing a priori -- TaTe feed it only auxiliary completely multiplicative
 sieve indicators g_l(p) = 1_{p not in J_l} at (5.43)-(5.45), introduced
@@ -159,7 +159,7 @@ prime-COUNT-position objects; the reindexing m = p_n multiplies tails
 by the unbounded factors 2^{m - pi(m)}, so no single denominator makes
 the count lattice commensurable with any value lattice found for the
 examined reductions. Bridge-class definition (replacing the v1
-overclaim, item-0005-adjudication-v1.md P2): call a map a
+overclaim, payloads/item-0005-adjudication-v1.md P2): call a map a
 RATIONALITY-TRANSFERRING bridge if it is an exact identity expressing S
 as a function of a count-indexed quantity (here T = sum_p 2^{-p}) such
 that rationality of S would force rationality of that quantity. Exact
@@ -184,7 +184,7 @@ bullet).
 O4 (the exact unconditional residue). After O1-O3, the stress-test
 localized everything the transfer question still needs to ONE
 configuration statement, now stated in its general (EXCH') form
-(item-0005-adjudication-v1.md P4, CONSTRUCTIVE GAIN adopted from R2).
+(payloads/item-0005-adjudication-v1.md P4, CONSTRUCTIVE GAIN adopted from R2).
 Exchange lemma, general form (EXCH'; the C4 configuration EXCH below is
 its normal form, not its definition; STATED HERE AS A FINDING, not
 adopted into chain-v1): if S = a/(2^s b) (b odd) and a prefix argument
@@ -211,8 +211,9 @@ third time by R1): if there are indices n, m >= s+1 with
 then contradiction. (Proof: (E1) + chain-v1 Lemma 2.4 put
 b(delta_{n+J} - delta_{m+J}) in 2^{J+1}Z; (E4)+(E5) force
 delta_{n+J} = delta_{m+J}; the Lemma 2.2 subtraction at offset K+1
-with (E3) gives 0 = d_1/2 + 2^{-(K+1)}(Delta_end). Gaps are even and
-delta_n = 2 delta_{n-1} - g_n, so delta >= 2 UNCONDITIONALLY; hence
+with (E3) gives 0 = d_1/2 + 2^{-(K+1)}(Delta_end). Gaps are even, and
+delta_n = sum_{i>=1} g_{n+i} 2^{-i} >= 2 UNCONDITIONALLY for n >= 1,
+every contributing gap being >= 2 (chain-v1 two_le_delta); hence
 each of the two end-tails in Delta_end lies in [2, 2^K] and
 |Delta_end| <= 2^K - 2 < 2^K, giving |d_1| <= 2^{-K}(2^K-2) < 1 sharp
 (this closes R2's |d_1| <= 1 observation, sustained against the v1
@@ -233,7 +234,7 @@ sufficiently weighted difference at matched context can be produced
 unconditionally.
 
 THE WALL IS CLAUSE (E2') -- exactness is RELATIVE TO THE LATTICE LAYER,
-not a global necessity claim (item-0005-adjudication-v1.md P4,
+not a global necessity claim (payloads/item-0005-adjudication-v1.md P4,
 R2 sustained: EXCH is proved sufficient; necessity beyond the lattice
 layer is not proved and is not asserted here). R1's contraposition
 gives the correct framing: WITHIN the lattice layer, rationality of S
@@ -599,7 +600,7 @@ The Section 9 (v1) review gate was executed: two adversarial reviews of
 the verdict payload (Section 1 + this document), R1 (Fable, fresh
 instance, falsification attempt no. 7) and R2 (ChatGPT, cross-family),
 both against the same payload, both blind to each other. Full
-adjudication: item-0005-adjudication-v1.md. Disposition, credited by
+adjudication: payloads/item-0005-adjudication-v1.md. Disposition, credited by
 point:
 
 - R1 found NO defect: it independently re-derived EXCH (including the
@@ -624,7 +625,7 @@ point:
   mathematical core (EXCH/EXCH', the rigidity theorem, the
   product-formula lemma) now has three independent confirmations:
   the executor proofs, R1's re-derivations, and steering's own
-  Lean/manual checks (item-0005-adjudication-v1.md preamble).
+  Lean/manual checks (payloads/item-0005-adjudication-v1.md preamble).
 
 Both reviews are registered as hashed payloads: payloads/item-0005-
 review-r1-fable.md, payloads/item-0005-review-r2-chatgpt.md (sha256 in
