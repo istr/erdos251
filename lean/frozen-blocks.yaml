@@ -1,0 +1,37 @@
+# Frozen blocks, addressed by DECLARATION NAME (item-0016).
+#
+# Check with:  python3 lean/scripts/blocks.py check-frozen
+#
+# A "block" is the doc comment plus the declaration.  `open ... in` and
+# `set_option ... in` lines are deliberately OUTSIDE it (ANN-26 convention:
+# they precede the docstring, so adding one leaves the frozen block intact).
+#
+# This manifest replaces the file-path + line-number checks the session
+# kickoffs used to carry: a relocation like item-0016 can no longer
+# invalidate the check, because the anchor is the name, not the path.
+#
+# WHAT IS IN HERE
+#   erdos_251_irrational  the unconditional target (Statement.lean); vendored
+#                         from google-deepmind/formal-conjectures and never to
+#                         be touched -- the only sorry left in the tree.
+#   HLQuantA              Hypothesis A, chain-v1 section 1.
+#   CramerGranville       Hypothesis B, chain-v1 section 1.
+#                         Both are the load-bearing frozen DEFINITIONS: the
+#                         conditional theorem means what the prose says only
+#                         if these two read as the prose reads.  Their
+#                         faithfulness is item-0011's object; the C >= 1
+#                         question (ANN-30) is routed there.
+#
+# WHAT IS DELIBERATELY NOT IN HERE
+#   The proved statements of chain-v1 sections 2-6 (Lemmata 4.1-4.4,
+#   constr_consCount_pos, fork_merge_of_hypotheses, ...).  Their blocks now
+#   contain proofs, so a block hash would fire on every legitimate proof
+#   refactor while saying nothing about the statement.  What pins those is
+#   the axiom gate plus the type of erdos_251_conditional, not a byte hash.
+#
+# DRIFT IS A REPORT, NOT A REPAIR: if check-frozen fires, flag it (the
+# statement layer is operator-ratified), do not adjust the hash.
+
+erdos_251_irrational: d3bcdebe3b033593c3d1323e05837d5293b8519a569b5e0401d5a3fd2dfbe2b6
+HLQuantA:             5d1a63a88356f054cd1ad4600b6cd03686702e36b94a7eb4571710cdb287a762
+CramerGranville:      22421638d77890fe78f2bed3cb822073820f4535a74dc517e4c232b389574a7c
