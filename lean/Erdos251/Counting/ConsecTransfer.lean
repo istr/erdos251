@@ -288,8 +288,9 @@ and `x₀` is astronomical; the assembly is `Tendsto`/`eventually` extraction on
 and never materializes an explicit `x₀`.
 -/
 
-/-- Bridge from `Nat.count` (computable) to `Nat.nth` (not), used only by
-the smoke tests below. Flagged as glue in the traceability table. -/
+/-- Bridge from `Nat.count` (computable) to `Nat.nth` (not), used by
+`consCount_bonferroni` and by the section-5 smoke tests in
+`Counting/Construction.lean`. Flagged as glue in the traceability table. -/
 theorem q_eq_of_count {n p : ℕ} (hp : p.Prime) (hc : Nat.count Nat.Prime p = n) :
     q n = p := by
   rw [q, ← hc, Nat.nth_count hp]
