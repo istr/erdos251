@@ -1,4 +1,4 @@
-# Tao-Teravainen transfer assessment -- item-0005 verdict (v1)
+# Tao-Teravainen transfer assessment -- item-0005 verdict (v2)
 
 Date: 2026-07-17. Author: steering (Claude Fable 5), item-0005 executed
 against kickoff v1 (main @ bf5de42). Payload integrity: all eight PDF
@@ -12,6 +12,17 @@ method for the sum over primes of 1/(2^p-1) extends toward sum p_n/2^n
 and what breaks"; acceptance_intent: "Verdict names the exact
 structural obstruction or a concrete transfer plan".
 
+v2 revision note: this version implements the eight required revisions
+of item-0005-adjudication-v1.md Section 3, adjudicating two adversarial
+reviews of v1 (R1 = Fable, fresh instance, falsification attempt no. 7;
+R2 = ChatGPT, cross-family), both registered as hashed payloads (see
+Section 9). No mathematical result changed: the core computations (EXCH,
+the rigidity theorem, the product-formula lemma) survive both reviews
+and gain a sharpening (R1's one-generator observation, adopted below).
+What changed is scope: several v1 sentences overclaimed relative to what
+the eight-text evidence base actually supports, and are narrowed here to
+the covered claim. See Section 9 for the point-by-point disposition.
+
 Working papers (angle analyses c1..c6, numerics scripts, extraction
 files) were authored in the volatile session scratchpad; every
 load-bearing result is absorbed into this document, the two decisive
@@ -21,14 +32,24 @@ set is preserved UNTRACKED under dossier/item-0005-workpapers/
 
 ## 1. Verdict
 
-THE METHOD DOES NOT EXTEND. The Tao-Teravainen (TaTe, arXiv:2512.01739v2)
+NO UNCONDITIONAL TRANSFER EXISTS IN THE EVIDENCE BASE, AND THE FAILURE
+IS STRUCTURAL. Scope of this claim (narrowed from v1 under adversarial
+review, item-0005-adjudication-v1.md P1): no verbatim transfer of the
+Tao-Teravainen (TaTe, arXiv:2512.01739v2) method is exhibited; the
+linear formal layer of rationality consequences is fully classified
+(rigidity, O2); every examined nonlinear repair architecture funnels
+into an exchange-type requirement (EXCH', O4); no unconditional
+transfer plan of any kind exists in the eight texts. NOT claimed: a
+no-go theorem over all conceivable reductions -- that would require a
+necessity proof this report does not have. The Tao-Teravainen
 unconditional proof that sum_n omega(n)/2^n is irrational (their
-Theorem 1.3, Erdos #69) does not transfer to S = sum_n p_n/2^n, and the
-eight-text evidence base contains no unconditional transfer plan. Six
-independent falsification attempts against this verdict all failed,
-four of them closing with proof-level rigidity statements. The
-obstruction is structural, not quantitative, and is named exactly by
-the following four layers.
+Theorem 1.3, Erdos #69) does not transfer to S = sum_n p_n/2^n under
+any architecture examined. Seven independent falsification attempts
+against this verdict all failed (six same-session angles plus R1, a
+fresh-instance cross-check), five of them closing with proof-level
+rigidity statements. The obstruction is structural, not quantitative,
+and is named by the following four layers, each carrying an explicit
+scope qualifier per the review disposition (Section 9).
 
 O1 (first breaking step). TaTe's engine turns rationality into the
 translated congruence family (5.1): q sum_h omega(n+h)/2^h == 0 (mod 1)
@@ -55,12 +76,26 @@ which admits no exact arithmetic self-map: no analogue of (5.2) can be
 derived, so the cube, the amplification, and the dichotomy are all
 unreachable.
 
-O2 (formal-layer closure; why no repair exists). Stress-tested rigidity
-theorem (angles C3 and C6, independently proved and independently
-re-derived by checker agents): every linear functional
-sum_m beta_m g_m of the gap sequence that rationality of S certifies
-into a lattice uniformly over integer-gap models lies in the closed
-Z-span of the translated tails {delta_j}; any functional with
+O2 (formal-layer closure; why the formal linear layer admits no second
+family). SCOPE (item-0005-adjudication-v1.md P6): this rigidity result
+classifies the LINEAR formal layer only -- linear functionals
+sum_m beta_m g_m of the gap sequence. Polynomial/nonlinear consequences
+of rationality (e.g. products b^2(delta_{n+u}-delta_n)(delta_{n+v}-delta_n)
+in Z, R2's observation) are integer but are NOT linear gap functionals
+and are NOT classified by this theorem; O2 makes no nonlinear no-go
+claim. The nonlinear evidence for the verdict is separate: the funnel
+finding that every EXAMINED nonlinear repair architecture (including
+translation cubes, R1's angle 1 / the dossier's own rank-1 observation
+below) lands in EXCH'-type requirements (O4). Closure topology
+(specified per R2's formal complaint): the closed Z-span is taken in
+the sense of coefficientwise limits of finite integer combinations of
+{delta_j} -- no norm or convergence structure beyond this is invoked or
+needed. Stress-tested rigidity theorem (angles C3 and C6, independently
+proved and independently re-derived by checker agents, and re-derived a
+third time by R1 via the one-generator argument below): every linear
+functional sum_m beta_m g_m of the gap sequence that rationality of S
+certifies into a lattice uniformly over integer-gap models lies in this
+closed Z-span of the translated tails {delta_j}; any functional with
 infinitely many vanishing coefficients (every decimation or sparse
 sampling) collapses to a finite integer gap combination. Consequently
 the exact congruence families rationality supplies unconditionally are
@@ -81,40 +116,94 @@ windows -- an exact functional equation for n -> p_n under an index
 self-map -- and none exists (p_{2n} - 2 p_n is asymptotic-only, with
 error incompatible with any mod-1 lattice tolerance).
 
+R1 sharpening (adopted, item-0005-adjudication-v1.md P7, steering
+re-verified): the recursion delta_n = 2 delta_{n-1} - g_n makes
+b delta_s in Z forward-generate the whole family {b delta_n in Z}_{n>=s}
+automatically -- the family is deductively equivalent to the single
+congruence b delta_s in Z. Rationality therefore supplies exactly ONE
+lattice bit on the formal layer; everything downstream of it is
+translation. The tail periodicity strengthens correspondingly to
+b delta_n == 2^{n-s} b delta_s (mod b), verified directly from the
+recursion. This is the arithmetic content behind "amplification-INERT"
+above: TaTe's gain comes entirely from (5.2), a genuinely new
+arithmetic input via omega's functional equation, which has no
+counterpart in the abstract gap model.
+
 O3 (engine reach; value-position vs count-position). The analytic
 engine's interface is Theorem 3.1: two-point correlations of 1-BOUNDED
 MULTIPLICATIVE functions, shifts h_1 != h_2 up to O(L^c), progression
 restriction W in [L^c], natural averaging outside a log-density L^{-c}
 exceptional-scale set -- used in Section 5 only at (5.42)-(5.45), to
 decorrelate the sieve events "no prime factor in J_l" at two shifts.
-Every series the engine can digest has numerator covariant under
-argument division by primes (f(pm) = f(m) + c_p - sparse, bounded
-weights, Mertens-mass variance floor sum_{p in A, p <= R} 1/p >>
-(log_3 x)^2) -- hence binary digit support at positions determined by
-prime VALUES. S and every carrier of its data (p_n, g_n, delta_n) are
+SCOPE (item-0005-adjudication-v1.md P3, sustained against v1): Theorem
+3.1 itself classifies no numerators, and the interface excludes
+nothing a priori -- TaTe feed it only auxiliary completely multiplicative
+sieve indicators g_l(p) = 1_{p not in J_l} at (5.43)-(5.45), introduced
+late, not omega(n) directly. The dossier's claim is narrower and about
+KNOWN reductions only: every known reduction reaching the engine does
+so through additivity-type covariance (f(pm) = f(m) + c_p - sparse,
+bounded weights, Mertens-mass variance floor sum_{p in A, p <= R} 1/p
+>> (log_3 x)^2) -- hence binary digit support at positions determined
+by prime VALUES for every reduction examined. No alternative reduction
+of S terminating in admissible auxiliary correlations is exhibited,
+and every one examined in this stress-test funnels into an (E2')-type
+requirement (O4). Likewise the (loglog x)-point control clause below is
+claimed only for the reductions examined, not as a classification of
+the interface (R2's cube-order observation is correct and consistent
+with TaTe's own architecture: formal term count, here 2^K shifts, is
+not the same as required correlation order, which the algebraic cube
+structure reduces to two points).
+
+S and every carrier of its data (p_n, g_n, delta_n) are
 prime-COUNT-position objects; the reindexing m = p_n multiplies tails
 by the unbounded factors 2^{m - pi(m)}, so no single denominator makes
-the count lattice commensurable with any value lattice; and an exact
-count<->value bridge is impossible outright: by the product formula on
-Z[1/2] (|z|_R |z|_2 >= 1 for z != 0), any exact bridge would already
-force rationality of T = sum_p 2^{-p}, which is unconditionally false
-(its digits are the aperiodic prime indicator) -- i.e. a successful
-bridge would BE a proof of #251, not a TaTe feed. Gap functionals also
-sit two structural levels beyond Theorem 3.1's interface: they are
-prime-indicator (not multiplicative) correlations, and they need
-(loglog x)-point control where TaTe themselves state that even
-three-point equations "would require ... a version of Theorem 3.1 for
-triple correlations, which does not appear to be within current
-technology" (Remarks 4.2, third bullet).
+the count lattice commensurable with any value lattice found for the
+examined reductions. Bridge-class definition (replacing the v1
+overclaim, item-0005-adjudication-v1.md P2): call a map a
+RATIONALITY-TRANSFERRING bridge if it is an exact identity expressing S
+as a function of a count-indexed quantity (here T = sum_p 2^{-p}) such
+that rationality of S would force rationality of that quantity. Exact
+count<->value identities of a WEAKER kind do exist as reindexings --
+e.g. S = sum_m 2^{-pi(m)} (Section 2, C1) -- and are not claimed
+impossible; what is claimed is only about the transfer-lemma class just
+defined. Within that class, the product formula on Z[1/2]
+(|z|_R |z|_2 >= 1 for z != 0) shows: any bridge of the defined kind
+would already force rationality of T = sum_p 2^{-p}, which is
+unconditionally false (its digits are the aperiodic prime indicator) --
+i.e. a successful bridge in this class would BE a proof of #251, not a
+TaTe feed. This closure statement, not a blanket impossibility claim,
+is the load-bearing content of O3's bridge argument. Gap functionals
+also sit two structural levels beyond Theorem 3.1's interface for every
+reduction examined: they are prime-indicator (not multiplicative)
+correlations, and the examined reductions need (loglog x)-point control
+where TaTe themselves state that even three-point equations "would
+require ... a version of Theorem 3.1 for triple correlations, which
+does not appear to be within current technology" (Remarks 4.2, third
+bullet).
 
 O4 (the exact unconditional residue). After O1-O3, the stress-test
 localized everything the transfer question still needs to ONE
-configuration statement. Exchange lemma (EXCH; produced by angle C4,
-proof re-derived independently twice; STATED HERE AS A FINDING, not
-adopted into chain-v1): if S = a/(2^s b) (b odd) and there are indices
-n, m >= s+1 with
+configuration statement, now stated in its general (EXCH') form
+(item-0005-adjudication-v1.md P4, CONSTRUCTIVE GAIN adopted from R2).
+Exchange lemma, general form (EXCH'; the C4 configuration EXCH below is
+its normal form, not its definition; STATED HERE AS A FINDING, not
+adopted into chain-v1): if S = a/(2^s b) (b odd) and a prefix argument
+has forced delta_t = delta_u for indices t, u >= s (via (E1)+(E4)+(E5)
+below, or any other route to the same conclusion), then ANY
+configuration at offset L with
+  (E2') |sum_{1<=i<=L} (g_{t+i} - g_{u+i}) 2^{-i}|
+        > 2^{-L} |delta_{t+L} - delta_{u+L}|
+(a dominant weighted word difference at matched context) contradicts
+rationality of S. The Hamming-distance-1 case -- a single differing
+gap flanked by matching prefix and suffix windows -- is the NORMAL FORM
+used for the certificates below, not the only admissible configuration;
+average separation, several controlled differences, or other
+weightings of (E2') all suffice equally. Its normal-form instantiation,
+EXCH (produced by angle C4, proof re-derived independently twice, and a
+third time by R1): if there are indices n, m >= s+1 with
   (E1) g_{n+i} = g_{m+i} for 1 <= i <= J   (J-prefix match),
-  (E2) g_{n+J+1} != g_{m+J+1}              (one differing gap),
+  (E2) g_{n+J+1} != g_{m+J+1}              (one differing gap; the
+       Hamming-distance-1 case of (E2')),
   (E3) g_{n+J+1+i} = g_{m+J+1+i} for 1 <= i <= K  (K-suffix match),
   (E4) delta_{n+J}, delta_{m+J} <= D and
        delta_{n+J+K+1}, delta_{m+J+K+1} <= 2^K,
@@ -122,28 +211,49 @@ n, m >= s+1 with
 then contradiction. (Proof: (E1) + chain-v1 Lemma 2.4 put
 b(delta_{n+J} - delta_{m+J}) in 2^{J+1}Z; (E4)+(E5) force
 delta_{n+J} = delta_{m+J}; the Lemma 2.2 subtraction at offset K+1
-with (E3) gives 0 = d_1/2 + 2^{-(K+1)}(Delta_end) with
-|d_1| <= 2^{-K}|Delta_end| < 1; but d_1 is a nonzero difference of
-even gaps, |d_1| >= 2.) EXCH_b for all odd b implies S irrational with
-NO Hypothesis A and NO Hypothesis B; EXCH_1 alone implies item-0010
-(S not in Z[1/2]). Requirements (E1), (E3), (E4), (E5) are
-UNCONDITIONALLY suppliable at the needed depths J, K ~ log2 log x
-(word repetition: Chebyshev + Markov + pigeonhole, capacity
-O(sqrt(log x)) by direct product count and ~ log x/loglog x on
-gap-capped sites, both far above the need; tails: Markov selection,
-delta <= O_A(log x) off density 1/A). THE WALL IS CLAUSE (E2) ALONE:
-no unconditional statement in the evidence base produces two
-tail-typical indices whose gap words agree on a J-window before and a
-K-window after a single position where they DIFFER. Pigeonhole is
-structurally blind to variability ("sandwich rigidity" -- the middle
-gap being a function of its two-sided O(loglog x)-window at typical
-sites -- cannot be refuted by counting); prescribing two distinct
-middles at fixed sides is a parity-blocked tuple-type lower bound
-(Maynard 1405.2593, Section 3 limitation remark and footnote 1:
-well-distribution hypotheses cannot force gap patterns); and the
-quantitative Shiu-string route is circular (site density
-(2q)^{-exp(Cm)} at m ~ (2/log 2) loglog x forces tail depths that
-exceed the string length by an exponential level).
+with (E3) gives 0 = d_1/2 + 2^{-(K+1)}(Delta_end). Gaps are even and
+delta_n = 2 delta_{n-1} - g_n, so delta >= 2 UNCONDITIONALLY; hence
+each of the two end-tails in Delta_end lies in [2, 2^K] and
+|Delta_end| <= 2^K - 2 < 2^K, giving |d_1| <= 2^{-K}(2^K-2) < 1 sharp
+(this closes R2's |d_1| <= 1 observation, sustained against the v1
+proof prose which asserted the bound without stating the lower tail;
+R2's parity patch |d_1| >= 2 -- d_1 is a nonzero difference of even
+gaps -- is also valid and gives the same contradiction). EXCH_b for all
+odd b implies S irrational with NO Hypothesis A and NO Hypothesis B;
+EXCH_1 alone implies item-0010 (S not in Z[1/2]). Requirements (E1),
+(E3), (E4), (E5) are UNCONDITIONALLY suppliable at the needed depths
+J, K ~ log2 log x (word repetition: Chebyshev + Markov + pigeonhole,
+capacity O(sqrt(log x)) by direct product count and ~ log x/loglog x
+on gap-capped sites, both far above the need; tails: Markov selection,
+delta <= O_A(log x) off density 1/A); the same three blockers below
+apply verbatim to the general clause (E2'), not only to its
+Hamming-distance-1 normal form -- none of them is sensitive to how the
+word difference is distributed across the window, only to whether ANY
+sufficiently weighted difference at matched context can be produced
+unconditionally.
+
+THE WALL IS CLAUSE (E2') -- exactness is RELATIVE TO THE LATTICE LAYER,
+not a global necessity claim (item-0005-adjudication-v1.md P4,
+R2 sustained: EXCH is proved sufficient; necessity beyond the lattice
+layer is not proved and is not asserted here). R1's contraposition
+gives the correct framing: WITHIN the lattice layer, rationality of S
+forces sandwich rigidity at typical matched-flank pairs (the middle
+gap value is pinned by its two-sided context), so a tail-dominant
+weighted word difference at matched context is the only contradiction
+lever available THERE -- this is a statement about what the lattice
+layer's own structure permits, not about every conceivable route to
+irrationality. No unconditional statement in the evidence base produces
+two tail-typical indices satisfying (E2') at the needed depth. Pigeonhole
+is structurally blind to variability ("sandwich rigidity" cannot be
+refuted by counting); prescribing a distinct, sufficiently weighted
+middle-window difference at fixed matched sides is a parity-blocked
+tuple-type lower bound -- Maynard 1405.2593's Section 3 limitation
+remark and footnote 1 are cited here as a statement about the
+UNCONDITIONAL TOOL CLASS (well-distribution hypotheses cannot force
+gap patterns), not as a statement about the primes themselves (R2's
+caveat, adopted); and the quantitative Shiu-string route is circular
+(site density (2q)^{-exp(Cm)} at m ~ (2/log 2) loglog x forces tail
+depths that exceed the string length by an exponential level).
 
 Summary sentence answering acceptance_intent: the exact structural
 obstruction is the absence of any exact non-translational self-map of
@@ -151,12 +261,15 @@ the prime-count index -- equivalently, of any exact intertwiner
 (Phi, u) with sum_h g_{Phi(n,h)} 2^{-h} = u delta_{tau(n)} +
 exactly-known sparse correction for a non-translational position map
 Phi -- which TaTe possess for omega as (5.2) via additivity and which
-is provably (rigidity, O2) not manufacturable for S on the formal
-layer; the residual unconditional gap is exactly the exchange-supply
-statement (E2) of O4, a two-site word-correlation lower bound outside
-every unconditional technique in the eight texts. There is no
-unconditional transfer plan; the sharpest CONDITIONAL bridge is EXCH,
-which is strictly weaker than the chain's Hypothesis A + B package.
+is provably (rigidity, O2, linear layer only) not manufacturable for S
+on the formal linear layer; the residual unconditional gap, relative to
+that lattice layer, is the exchange-supply statement (E2') of O4, a
+two-site weighted word-correlation lower bound outside every
+unconditional technique examined in the eight texts -- not a proven
+necessity over all possible reductions. No unconditional transfer plan
+is exhibited in the evidence base; the sharpest CONDITIONAL bridge is
+EXCH', which is strictly weaker than the chain's Hypothesis A + B
+package.
 
 BET-07 relevance (resolve_by 2026-08-08, "unconditional progress",
 p = 0.03): this verdict is evidence AGAINST unconditional progress via
@@ -227,8 +340,9 @@ Deliverables (i)-(iii) of the kickoff:
       and shown amplification-inert.
 
 (iii) Obstruction as a precise sentence: the summary sentence of
-    Section 1 (intertwiner form), with O2 (rigidity) as its
-    formal-layer proof and O4/(E2) as the exact residual.
+    Section 1 (intertwiner form), with O2 (rigidity, linear layer) as
+    its formal-layer proof and O4/(E2') as the lattice-layer-relative
+    residual.
 
 ## 3. Axis A2 -- engine interface
 
@@ -323,14 +437,16 @@ Findings (two steering presumptions corrected by the stress-test):
     sieve-first order of quantifiers (sparse sieve sites first, tails
     second) -- an order-of-quantifiers artifact, not a machinery
     requirement.
-(c) What the sieve axis CANNOT supply is exactly (E2) (see O4): the
+(c) What the sieve axis CANNOT supply is exactly (E2') (see O4): the
     parity problem enters not at consecutiveness (a negative
     condition, upper-bound-sieve territory) and not at counts, but at
-    PRESCRIBING two distinct middles at fixed matched sides -- a
-    prescribed-tuple lower bound. Maynard16's own limitation remark
-    is the published anchor. The kickoff's expected blocker
-    ("parity kills sieve asymptotics"; "consecutiveness") is hereby
-    sharpened: existence-only outputs DO suffice for everything
+    PRESCRIBING a distinct, sufficiently weighted middle-window
+    difference at fixed matched sides -- a prescribed-tuple lower
+    bound. Maynard16's own limitation remark is the published anchor,
+    read as a statement about the unconditional tool class (Section 1
+    revision), not about the primes themselves. The kickoff's expected
+    blocker ("parity kills sieve asymptotics"; "consecutiveness") is
+    hereby sharpened: existence-only outputs DO suffice for everything
     except the exchange clause.
 (d) Reference consumer item-0010 (S not in Z[1/2]): reduces to EXCH_1
     (one exchange configuration per s). The direct delta_n < 4 route
@@ -477,11 +593,49 @@ F6. C5 by-product write-up (optional, low priority): unconditional
     (U2) -- a small standalone result adjacent to TaTe's own "other
     sets A" remark; value-position, no #251 content.
 
-## 9. Review gate
+## 9. Review response (v2)
+
+The Section 9 (v1) review gate was executed: two adversarial reviews of
+the verdict payload (Section 1 + this document), R1 (Fable, fresh
+instance, falsification attempt no. 7) and R2 (ChatGPT, cross-family),
+both against the same payload, both blind to each other. Full
+adjudication: item-0005-adjudication-v1.md. Disposition, credited by
+point:
+
+- R1 found NO defect: it independently re-derived EXCH (including the
+  delicate 2^{J+1} divisibility), sharpened O2 with the one-generator
+  observation and the mod-b tail periodicity (both adopted into O2
+  above), and supplied the contraposition framing (adopted into O4).
+- R2 found FIVE scope defects, four sustained as WORDING overclaims
+  (P1, P3, P4, P6) with the intended narrower claim already present in
+  the v1 text one clause away, and one sustained as a genuine gap in
+  the v1 proof prose (P5, the |d_1| bound). R2 also supplied the
+  (E2') weighted generalization (P4), adopted as the definition of
+  EXCH' above, with the old (E2) demoted to its normal form. R2's O3
+  "bridge impossible outright" challenge (P2) is sustained as worded;
+  the dossier's own C1 by-product identities are exact count<->value
+  reindexings, so the bridge claim is narrowed to a formally-defined
+  transfer-lemma class (O3 above) for which the #251 closure argument
+  is unaffected. R2 found no defect in EXCH's mathematical content, in
+  the rigidity theorem's core claim, or in the eight-text anchor
+  register.
+- Neither review challenges any of the eight paper anchors, the
+  numerical certificates (Section 4), or the core computations. The
+  mathematical core (EXCH/EXCH', the rigidity theorem, the
+  product-formula lemma) now has three independent confirmations:
+  the executor proofs, R1's re-derivations, and steering's own
+  Lean/manual checks (item-0005-adjudication-v1.md preamble).
+
+Both reviews are registered as hashed payloads: payloads/item-0005-
+review-r1-fable.md, payloads/item-0005-review-r2-chatgpt.md (sha256 in
+payloads/HASHES.txt).
+
+## 10. Review gate (v1, executed; see Section 9 for disposition)
 
 Per kickoff: one fresh-instance blind review of Section 1 (verdict)
 only, probe-axis text detached, is RECOMMENDED before this verdict is
 treated as load-bearing for BET-07 resolution or public phrasing;
 operator decides whether to spend it. The highest-value review
 targets are the rigidity theorem (O2) and the EXCH supply/wall
-analysis (O4), which carry the most novel deductive weight.
+analysis (O4), which carry the most novel deductive weight. EXECUTED
+(v2): see Section 9 for the disposition of both reviews.
