@@ -50,3 +50,26 @@ with strict positivity 0 < |delta_{n+J} - c| (run fable5, Theorems A/B), or
 fork-merge (run ab2, C5/C6), which needs no positivity clause because the
 differing fork gap supplies the nonzero difference combinatorially.
 Status of runde0's Lemma L: RETRACTED as stated; superseded.
+
+## ERRATUM-4 (2026-07-17) -- literature.md item (b), TaTe method attribution
+
+Wrong claim (literature.md, the item-0004 report): the TaTe irrationality
+proof uses the probabilistic method plus a high-dimensional Maynard-type
+sieve, with the Pilatte-based correlation machinery carrying the other
+results; and the limitation quote "unlikely ... at our current level of
+understanding of analytic number theory" attributed to the paper.
+
+Correction: the attribution is swapped -- the irrationality strand
+(Theorem 1.3, Section 5) is SIEVE-FREE (additivity dilation (5.2),
+Hilbert cube via Gowers monotonicity, Erdos-Kac variance layer,
+Pilatte-method correlations consumed only at (5.42)-(5.45)); the
+Maynard-type sieve carries only the Erdos-Straus part (Theorem 1.1,
+Section 2). The limitation quote is not present in v2 (25 Apr 2026);
+v2 states, in the Erdos-Straus context for small k, "of comparable
+difficulty to the prime tuples conjecture". literature.md stays frozen
+as the item-0004 artifact; the binding record is
+dossier/tate-transfer.md, Method corrections block.
+
+Source: item-0005 first-hand full-text read of 2512.01739v2, confirmed
+three ways (executor extraction agents, review R1, steering anchor
+verification); see ANN-49.

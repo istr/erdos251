@@ -27,8 +27,9 @@ Working papers (angle analyses c1..c6, numerics scripts, extraction
 files) were authored in the volatile session scratchpad; every
 load-bearing result is absorbed into this document, the two decisive
 numerical certificates are inlined in full, and the complete working
-set is preserved UNTRACKED under dossier/item-0005-workpapers/
-(operator disposition: keep/commit per F5, or delete).
+set is COMMITTED under dossier/item-0005-workpapers/ (operator
+disposition at the branch merge: keep -- this settles the Section 8 F5
+keep/commit question; the dossier itself carries the lemma bank).
 
 ## 1. Verdict
 

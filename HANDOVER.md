@@ -1,13 +1,15 @@
-# HANDOVER -- erdos251 (round 2 in motion, 2026-07-16; round 1 closed and scored 2026-07-15)
+# HANDOVER -- erdos251 (round 2 in motion, 2026-07-17; round 1 closed and scored 2026-07-15)
 
 Mission: public experiment attacking Erdos #251 (irrationality of
 S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..26; bets: 5 scored,
-2 open). 3. dossier/chain-v1.md (v1.3, SIGNED OFF -- the round-1
-result). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
+1. This file. 2. ledger.yaml (append-only; ANN-01..49; bets: 6 scored,
+1 open -- BET-07 to 2026-08-08). 3. dossier/chain-v1.md (v1.4, SIGNED
+OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
+round-2 unconditional-front verdict; adjudication at
+payloads/item-0005-adjudication-v1.md). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
 then triage-1b.md end (methodology register: blind spots 1-5, checklist
 rules i-iv) and triage-1a.md. 5. runs/README.md rules 1-11.
 6. roadmap: python3 /mnt/skills/user/roadmap-items/scripts/roadmap.py
@@ -335,6 +337,31 @@ its later sections carry a STALE banner, HANDOVER is the record).
    templates: cite the decl name, never Counting.lean:NNN.
    The G2 gate shape for future relocations is the concatenation check, not
    a path diff.
+2g. ITEM-0005 COMPLEX CLOSED (2026-07-17; full record ANN-49). Paper
+   payload layer first (bf5de42): eight arXiv full texts sha256-anchored
+   by URL in payloads/HASHES.txt, local PDFs gitignored under dossier/.
+   Verdict dossier/tate-transfer.md: v1 3185181 -> two blind adversarial
+   reviews (R1 Fable fresh-role: zero defects, sharpenings contributed;
+   R2 ChatGPT cross-family: four scope overclaims sustained, the EXCH'
+   generalization contributed) -> adjudication
+   payloads/item-0005-adjudication-v1.md -> v2 8517b8b -> fixup 7293d75
+   -> item-0005 done 25859d1. Result: NO unconditional TaTe transfer in
+   the eight-text evidence base, failure structural; O1-O4 with scope
+   qualifiers; one-generator rigidity; unconditional residue localized
+   to (E2') (EXCH' sufficient, necessity lattice-layer-relative;
+   EXCH_1 => item-0010); blocker register pigeonhole/parity/Shiu;
+   certificates (5,5,34) and (6,6,64). Roadmap consolidation d97d40a:
+   item-0007 (bd1480f), item-0008, item-0009 retired as subsumed
+   (summaries carry the evidence); item-0017 created ratified ((E2')
+   supply, successor of item-0008 / adjudication-F1); order
+   item-0017 -> item-0010 -> item-0006. NOTE the two F-numberings:
+   verdict Section 8 F1-F6 (follow-up basket; F3 = item-0010 re-scope,
+   F2 = anti-rigidity counting target inside item-0017's frame, F5 =
+   lemma bank, settled) vs adjudication F1-F3 (F1 -> item-0017).
+   Steering blind-spot register grew by B1 (kickoff language-discipline
+   deferral) and B2 (review-role complementarity) -- adjudication
+   Section 5. Workpapers COMMITTED under dossier/item-0005-workpapers/;
+   literature.md item (b) superseded, ERRATUM-4.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
@@ -343,7 +370,13 @@ its later sections carry a STALE banner, HANDOVER is the record).
    worktrees with .lake/packages -> shared read-only +
    private .lake/build; consider write-protecting
    /opt/erdos251-lake/packages.
-2. BET-07 resolution by 2026-08-08 (operator judgment).
+2. BET-07 resolution by 2026-08-08 (operator judgment); evidence base
+   COMPLETE: tate-transfer.md Section 1 BET-07 paragraph, both blind
+   reviews concur AGAINST (understanding progress, not theorem
+   progress).
+2b. item-0010 re-scope to EXCH_1 (verdict Section 8, F3): strictly
+   easier target, certificate-backed at small depth -- operator word
+   pending; steering emits the roadmap update on ratification.
 3. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
    do NOT inherit the problem page's [Er58b] all-k attribution; the
    thread already carries AI-assisted mathematics, ANN-29) and/or set
