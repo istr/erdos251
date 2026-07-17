@@ -1538,3 +1538,89 @@ annotations:
       position side-goals fail with unreadable counterexamples. One `show`
       to beta-reduce fixes all four. Cheap once seen, opaque until then;
       candidate for the runs/README trap register alongside rule 13.
+  - id: ANN-20260717-48
+    refs: [ANN-20260716-40, ANN-20260716-41, ANN-20260716-46, ANN-20260716-47]
+    date: 2026-07-17
+    note: >-
+      ITEM-0016 EXECUTED AND EMITTED BY STEERING (Claude Opus 4.8;
+      dispatch option (a), operator decision -- the operator apply plus
+      the local/CI build is the gate). Counting.lean split into seven
+      themed modules under lean/Erdos251/Counting/ behind a thin
+      umbrella; Conditional.lean and Erdos251.lean's existing import of
+      Erdos251.Counting are unaffected by construction.
+      DISPATCH RATIONALE: unlike ANN-40 (which carried real proof work),
+      this is purely textual, so the byte-exactness can be guaranteed AT
+      THE SOURCE and verified without Lean; the only residual risk is
+      compile-level (import/elaboration), which the build catches. First
+      steering-authored lean/ commit in the project -- flagged as a
+      precedent, not smuggled: previous lean/ commits are executor work
+      committed by the operator.
+      CUT A, RATIFIED AFTER A STEERING FINDING: the item's indicative cut
+      (each statement with its own machinery) is NOT contiguously
+      realizable. The item-0014 statement set clustered the 4.1 and 4.2
+      STATEMENTS under one heading (old lines 866-958), after both
+      machinery blocks, while 4.3 and 4.4 sit with theirs. Options put to
+      the operator: (A) strictly order-preserving, zero moves, gate exactly
+      as the item words it, at the cost of a small Lemmata.lean holding
+      both statements; (B) one sanctioned upward relocation of
+      singularSeries_lower_bound on the ANN-46 precedent, buying the
+      per-lemma layout at the cost of a gate carve-out and a stranded
+      section marker. Operator ratified A. The asymmetry is documented in
+      Lemmata.lean's header and the umbrella's module map rather than
+      silently normalized.
+      GATES (steering-executed at the emitted tip; the build is the
+      operator's). G1 lean/ diff pin..tip touches only Counting.lean, the
+      seven new Counting/*.lean, Erdos251.lean, README.md, scripts/ and
+      frozen-blocks.yaml; Conditional.lean NULL diff. G2 (the item's
+      concatenation gate) the seven bodies concatenated in the umbrella's
+      import order reproduce the pre-split body byte-for-byte: 2680 lines,
+      sha256 f14032eb...507c86 on both sides at the split commit; 2681
+      lines, af4615e1...5ea4388 once the one declared amendment applies.
+      G3 the umbrella's module docstring (old lines 6-71, traceability
+      table included) is byte-identical and the umbrella declares nothing.
+      G4 strict sorry inventory unchanged: 1, Statement.lean:21. G5 zero
+      native_decide added. G6 lake build + axiom gate: OPERATOR/CI, the
+      sandbox cannot build (lean/README egress findings).
+      DECLARED EXCEPTION, ONE, IN ITS OWN COMMIT so the split commit stays
+      a byte-exact relocation: q_eq_of_count's docstring said "used only by
+      the smoke tests below". ANN-46 had already flagged the "only" as
+      stale (consCount_bonferroni consumes it since s5); the split breaks
+      the "below" as well, since the smoke tests land in
+      Counting/Construction.lean. Steering's plan misreported the location
+      as the umbrella docstring; the correction (it is a body docstring,
+      hence a gate carve-out rather than a header edit) was flagged before
+      the emit, and the carve-out is machine-declared in blocks.py's
+      DECLARED_AMENDMENTS rather than left to prose.
+      NEW STANDING RULE (the item's path-independence clause):
+      lean/scripts/blocks.py + lean/frozen-blocks.yaml address frozen
+      blocks BY DECLARATION NAME, never by path+line, so no future
+      relocation can silently void a frozen check; `open ... in` /
+      `set_option ... in` lines stay outside the block per ANN-26. Pinned:
+      erdos_251_irrational, HLQuantA, CramerGranville. The proved section
+      2-6 statements are deliberately NOT pinned by hash -- their blocks
+      carry proofs now, so a hash would fire on legitimate refactors and
+      pin nothing about the statement; the axiom gate is what pins those.
+      CI wiring deferred by operator decision (scope = the split).
+      TIMING ARGUMENT, RECORDED: the item's primary motivation
+      (probe latency during Counting-internal iteration) was SPENT when
+      Counting.lean went sorry-free at s5/s6. It revives for the pin-bump,
+      which will drive mathlib-API drift through 2300 lines, so the split
+      belongs BEFORE the bump, not bundled with it -- the bump's breakage
+      then lands module-local and reviewable. Surviving motivations:
+      review legibility, upstream-port preparation, incremental rebuilds.
+      FOLLOW-UP CANDIDATES (flagged, NOT repaired): (1) the umbrella's
+      module docstring opens "STATEMENT SKELETON (item-0014) ... the
+      lemmata are intentional, named sorrys ... Nothing in this file is
+      used by the landed implication cone" -- every clause of that is now
+      false (sorry-free since ANN-45; Conditional imports it since
+      ANN-47), and it was kept byte-identical only because the operator
+      scoped this item to a pure split. It is the tree's most misleading
+      prose and wants its own bookkeeping pass. (2) lean/README.md's
+      post-layout sections still describe the item-0014 skeleton state;
+      a STALE banner was added, the rewrite deferred. (3) The CI job
+      "Axiom report (full cone, informational -- red-by-design until
+      fork_merge_of_hypotheses lands)" has been green since ANN-47 and is
+      a required-gate candidate. (4) GapTail.lean is a dependency island
+      (Basic only) whose q-growth helpers q_succ_le_two_mul /
+      q_add_le_two_pow are generic; upstream candidates alongside
+      Chebyshev.lean.

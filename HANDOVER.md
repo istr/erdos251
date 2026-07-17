@@ -11,8 +11,8 @@ result). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
 then triage-1b.md end (methodology register: blind spots 1-5, checklist
 rules i-iv) and triage-1a.md. 5. runs/README.md rules 1-11.
 6. roadmap: python3 /mnt/skills/user/roadmap-items/scripts/roadmap.py
-list --arc research. 7. lean/README.md (16-sorry map: 4 implication
-residuals + 12 skeleton statements).
+list --arc research. 7. lean/README.md (layout map; inventory 1 --
+its later sections carry a STALE banner, HANDOVER is the record).
 
 ## Round-1 record (closed, scored)
 - Result: chain-v1 v1.3 -- conditional theorem "Hypothesis A (uniform
@@ -317,6 +317,24 @@ residuals + 12 skeleton statements).
    transfer to growing numerators); item-0016 (Counting split) sits in
    its post-heart slot alongside the pin-bump and the MP
    upstream-port preparation.
+2f. ITEM-0016 LANDED (steering-emitted mbox, dispatch (a); operator apply
+   = ratification). Counting.lean is now a thin umbrella (module docstring
+   and traceability table byte-identical) over seven themed modules in
+   lean/Erdos251/Counting/: Words, SingularSeries, OneExtension, Lemmata,
+   ConsecTransfer, GapTail, Construction. PURE relocation, cut A
+   (order-preserving, zero moves): the seven bodies concatenated in the
+   umbrella's import order reproduce the pre-split body byte-for-byte
+   (f14032eb...507c86 at the split commit; af4615e1...5ea4388 once the one
+   declared docstring amendment is applied). Re-checkable any time:
+   `python3 lean/scripts/blocks.py relocation-check`.
+   NEW STANDING RULE, replacing the kickoffs' path+line frozen checks:
+   frozen blocks are addressed BY DECLARATION NAME via
+   lean/scripts/blocks.py check-frozen against lean/frozen-blocks.yaml
+   (erdos_251_irrational, HLQuantA, CramerGranville). `open ... in` /
+   `set_option ... in` lines sit outside the block (ANN-26). Kickoff
+   templates: cite the decl name, never Counting.lean:NNN.
+   The G2 gate shape for future relocations is the concatenation check, not
+   a path diff.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an

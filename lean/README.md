@@ -8,21 +8,42 @@ All 15 statements are FROZEN (item-0002 deliverable); item-0003 proves
 them without reformulation. CI checks compilation, not sorry-freeness.
 Track the sorry count in HANDOVER.md.
 
-## Layout (sorry inventory: 16 = 4 cone + 12 skeleton)
+## Layout (sorry inventory: 1 -- the unconditional target, by design)
 - Erdos251/Statement.lean   target theorem (vendored, unchanged)  [1]
 - Erdos251/Chebyshev.lean   nth-prime upper bound (item-0003)     [0]
 - Erdos251/Basic.lean       elementary layer, chain-v1 sec. 2     [0]
 - Erdos251/ForkMerge.lean   fork-merge, chain-v1 sec. 3           [0]
-- Erdos251/Hypotheses.lean  HLQuantA + CramerGranville, sec. 1    [2]
-- Erdos251/Counting.lean    counting + construction skeleton,
-                            chain-v1 v1.3 sec. 4-5 (NEW, item-0014) [12]
-- Erdos251/Conditional.lean assembly interface, sec. 4-6          [1]
+- Erdos251/Hypotheses.lean  HLQuantA + CramerGranville, sec. 1    [0]
+- Erdos251/Mertens.lean     Mertens pack M1-M3, mathlib-only
+                            (ANN-40; upstream candidate)          [0]
+- Erdos251/Counting.lean    UMBRELLA (item-0016): module docstring,
+                            traceability table, module map; imports only
+- Erdos251/Counting/        counting layer + deletion construction,
+                            chain-v1 v1.4 sec. 4-5                [0]
+    Words.lean              sec. 4 preamble definitions
+    SingularSeries.lean     Lemma 4.1 layer
+    OneExtension.lean       Lemma 4.2 layer
+    Lemmata.lean            Lemmata 4.1 + 4.2 (the statements)
+    ConsecTransfer.lean     Lemma 4.3 layer + statement
+    GapTail.lean            Lemma 4.4 (imports Basic only -- an island)
+    Construction.lean       sec. 5, constr_consCount_pos, smoke tests
+- Erdos251/Conditional.lean assembly, sec. 4-6                    [0]
   plus the machine-checked composition `erdos_251_conditional`.
+- scripts/blocks.py, frozen-blocks.yaml  relocation check and frozen-block
+  check, both addressed by declaration name (item-0016).
 
-The 4 implication-cone residuals are unchanged by item-0014; Counting.lean
-is a STATEMENT SKELETON that nothing in the cone imports yet, so it cannot
-affect the milestone axiom gate (verified: `erdos_251_of_small_tail_fork_merge`
-still depends only on [propext, Classical.choice, Quot.sound]).
+chain-v1 sections 2-6 are machine-checked end to end (ANN-47):
+
+    #print axioms Erdos251.erdos_251_conditional
+    => [propext, Classical.choice, Quot.sound]      -- no sorryAx
+
+The single remaining `sorry` is `Statement.erdos_251_irrational`, the
+unconditional Erdos target, which is out of reach by design.
+
+> STALE BELOW (flagged, not repaired): the sections that follow describe the
+> item-0014 statement-skeleton state and the item-0003 floor as they stood
+> before sessions 1-6 closed them. They are queued for a refresh; HANDOVER.md
+> is the current record.
 
 ## Erdos251/Counting.lean (item-0014 statement skeleton)
 Chain-v1 v1.3 sections 4-5 transcribed as real definitions plus 12 named,
