@@ -7,6 +7,19 @@
 import sys, re
 
 TABLE = [
+    # most-specific first (applied sequentially; earlier entries must not
+    # be substrings of later needs)
+    ("Sessions A-B", "[PHASES-1-2]"), ("Sessions B-C", "[PHASES-2-3]"),
+    ("Session A", "[PHASE-1]"), ("Session B", "[PHASE-2]"),
+    ("Session C", "[PHASE-3]"), ("Session D", "[PHASE-4]"),
+    ("kickoff", "[MANDATE-DOC]"), ("chain-v1", "[CHAIN-DOC-ID]"),
+    ("lean/", "[PROOF-TREE]/"), ("Lean", "[PROOF-ASSISTANT]"),
+    ("steering", "[STEERING-ROLE]"),
+    ("Erdos251", "[PROJECT-NS]"), ("erdos251", "[PROJECT]"),
+    ("96dc30c", "[PIN-1]"), ("f812fdc", "[PIN-1A]"),
+    ("7ca2388", "[PIN-1B]"), ("66adc54", "[PIN-2]"),
+    ("dcc3f63", "[PIN-3]"), ("a7b9f19", "[PIN-4]"),
+    ("fb80f44", "[PIN-5]"), ("ANN-50", "[LEDGER-2]"),
     # arXiv ids / papers -> neutral tokens (longest first)
     ("S0002-9939-1988-0958032-5", "[TEXT-J]"),
     ("Maier-Primes-in-short-intervals", "[TEXT-K]"),

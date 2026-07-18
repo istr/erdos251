@@ -1,17 +1,17 @@
-# (E2') supply -- item-0017 working dossier (v0 DRAFT, Session A)
+# (E2') supply -- [ITEM-SELF-ID] working dossier (v0 DRAFT, [PHASE-1])
 
-Date: 2026-07-18. Author: steering (Claude Fable 5), item-0017 executed
-against kickoff v1 (operator-ratified, ephemeral, never committed).
-Pin: 96dc30c, re-pinned to 66adc54 at session A start by operator
-ratification after a STOP-AND-REPORT (anchor roadmap/item-0010.md
+[IDENTITY LINE STRIPPED]
+[IDENTITY LINE STRIPPED]
+[IDENTITY LINE STRIPPED]
+[IDENTITY LINE STRIPPED]
 changed by the append-only M1+M2 landing note, the event anticipated by
-the kickoff's faithfulness watch; all other anchors byte-identical; all
+the [MANDATE-DOC]'s faithfulness watch; all other anchors byte-identical; all
 14 literature hashes verified, the three formerly unbooked lines now
-committed at 7ca2388 verbatim). STATUS: DRAFT under construction;
+[IDENTITY LINE STRIPPED]
 Section 1 verdict PENDING until D1-D5 close. Mandate
-(roadmap/item-0017.md @ 66adc54): produce unconditionally two
+[IDENTITY LINE STRIPPED]
 tail-typical indices with matched J-prefix and K-suffix windows and a
-dominant weighted middle difference ((E2'), dossier/tate-transfer.md
+dominant weighted middle difference ((E2'), [VERDICT-DOC]
 O4) at depths J,K ~ log2 log x -- or prove a precise obstruction
 extending the O4 blocker register.
 
@@ -19,12 +19,12 @@ Discipline: B1 obstruction-language from sentence one (located
 obstruction, never impossibility; scope qualifiers inline). Checklist
 rules i-iv of the triage-1b register. Findings F17.n, UNVERIFIED
 register U17.n (Sections 9/8), never emptied silently. Read-only
-anchors: dossier/chain-v1.md (Lemmas 2.1-2.5), dossier/tate-transfer.md
-(O4, A3), payloads/item-0005-adjudication-v1.md (B1/B2, F1). No edits
-under lean/ this window; no edits to chain-v1.md or tate-transfer.md.
+anchors: dossier/[CHAIN-DOC-ID].md (Lemmas 2.1-2.5), [VERDICT-DOC]
+(O4, A3), [ADJUDICATION] (B1/B2, F1). No edits
+under [PROOF-TREE]/ this window; no edits to [CHAIN-DOC-ID].md or [VERDICT-DOC-ID].md.
 
-## 1. Verdict (v1, Sessions B-C; all pending slots closed; awaiting
-## the Section 11 review gate before any operator ratification)
+## 1. Verdict (v1, [PHASES-2-3]; all pending slots closed; awaiting
+[IDENTITY LINE STRIPPED]
 
 NO UNCONDITIONAL (E2')-SUPPLY THEOREM IS PRODUCED; THE ITEM DELIVERS
 THE OBSTRUCTION BRANCH OF THE MANDATE -- a named obstruction per
@@ -32,7 +32,7 @@ blocker with exact quantitative gaps -- plus the statement layer, a
 checked model gate, and an extended certificate layer. Scope
 qualifiers (B1 discipline, binding for every clause below): all
 obstruction claims are LOCATED and corpus-relative (the 14 anchored
-texts plus the chain-v1/tate-transfer infrastructure); no
+texts plus the [CHAIN-DOC-ID]/[VERDICT-DOC-ID] infrastructure); no
 impossibility over all conceivable routes is claimed; model
 statements are about Model M only; heuristic constants are labeled
 as such and never load-bearing for provability claims.
@@ -41,7 +41,7 @@ V1 (architecture sound; D2 gate). GATE: PASS WITH AMENDMENTS
 (Section 3.4). In Model M the SUP'_1-analogue holds a.s. along
 dyadic scales with x^{2-o(1)} ordered and x^{1-o(1)} disjoint
 (E2')-pairs (Theorem M1, independently checked); the balance closes
-with relative room (2 ln x)^M (M2, F17.2 correcting the kickoff's
+with relative room (2 ln x)^M (M2, F17.2 correcting the [MANDATE-DOC]'s
 (log x)^2 orientation). The failure of unconditional supply is
 primes-specific, not architectural.
 
@@ -67,10 +67,10 @@ width M: the weighted clause relocates no burden. Blocker 1
 (pigeonhole): strictly finer blindness at M >= 2 (the E-invariant
 degeneracy); the normal form M = 1 is pigeonhole-optimal. Blocker
 2 (parity-blocked prescription): burden M-invariant; T1-transplant
-form in V4. Blocker 3 (Shiu): exact killing inequality
+form in V4. Blocker 3 ([AUTH-S]): exact killing inequality
 (ln x)^{(2C/ln 2)(1+o(1))} <= (1+o(1)) log2 ln x, false at every M
 and every difference distribution. Uniformly behind every
-tail-typicality failure in the corpus: the sparse-site Markov cost
+tail-typicality failure in the corpus: the sparse-site [PROB-5] cost
 (F17.8; density rho costs log2(1/rho) in J). Corrected
 expectation: T5 transport dies at exactness + tail-typicality, NOT
 at the (E5) b-D coupling (F17.6). Under a Hypothesis-B-shaped
@@ -78,11 +78,11 @@ pointwise bound the T3 trap route closes (scope-qualified) -- the
 entire unconditional content of supply-by-construction is the
 sparse-site tail clause.
 
-V4 (the sharpest residual, successor target). F17.7: Pintz's Thm 5
+V4 (the sharpest residual, successor target). F17.7: [AUTH-A]'s Thm 5
 exclusion pattern, transplanted to one matched-flank word class,
 derives (E2)-supply from a SINGLE missing input -- an HL-type lower
 bound for the class count of one matched-flank family at
-k ~ L = (2+o(1)) log2 ln x. The summed-Selberg exclusion side is
+k ~ L = (2+o(1)) log2 ln x. The summed-[SIEVE-1] exclusion side is
 quantitatively AVAILABLE at our depths: D1-L (Section 4.1) is
 k-uniform precisely in-regime, so excluding a rigid middle over
 all <= A' L ln x/2 candidate values costs a factor the exclusion
@@ -115,21 +115,21 @@ exact quantitative gap" -- DELIVERED (V2/V3, with V4 the residual);
 "certificate layer extended beyond the two inlined sites" --
 DELIVERED (V6: new inline b = 3 certificate + the b = 5 and 1e9
 b = 1 layers; this alone discharges the acceptance clause's
-certificate sentence, per the kickoff, independently of D1-D4
+certificate sentence, per the [MANDATE-DOC], independently of D1-D4
 outcomes).
 
 Gate-order record: D2 completed and checked before any D1
 execution; D5.c's empirical landing preceded D1-route trust
-(Section 7); the kickoff's binding order was honored.
+(Section 7); the [MANDATE-DOC]'s binding order was honored.
 
 ## 2. D0 -- statement layer
 
 All definitions here are FIXED and used verbatim by every later
-section. Paper-side notation follows chain-v1: p_1 = 2 < p_2 = 3 < ...,
+section. Paper-side notation follows [CHAIN-DOC-ID]: p_1 = 2 < p_2 = 3 < ...,
 g_n = p_{n+1} - p_n, S = sum_{n>=1} p_n 2^{-n},
 delta_n = sum_{j>=1} g_{n+j} 2^{-j}, delta_{n+1} = 2 delta_n - g_{n+1}.
-Anchors consumed read-only: chain-v1 Lemma 2.1 (convergence;
-p_n <= C_0 n ln(n+2), Chebyshev; delta_n >= 2 for n >= 1 --
+Anchors consumed read-only: [CHAIN-DOC-ID] Lemma 2.1 (convergence;
+p_n <= C_0 n ln(n+2), [CLASSIC-1]; delta_n >= 2 for n >= 1 --
 "two_le_delta"), Lemma 2.2 (block identity), Lemma 2.3 (lattice and
 parity), Lemma 2.4 (quantization), Lemma 2.5 (small lattice element is
 0). Gaps g_k are even for k >= 2; g_1 = 1.
@@ -146,7 +146,7 @@ and the middle block is mid(w) = (w_{J+1}, ..., w_{J+M}). The item's
 default is M = 1 (the O4 normal-form width); every statement carrying
 general M says so explicitly. pi with no subscript means pi_1.
 
-DEFINITION D0.2 (site filter; kickoff-verbatim, selection order
+DEFINITION D0.2 (site filter; [MANDATE-DOC]-verbatim, selection order
 A3(a)/(b): filters FIRST, counting SECOND). For x >= 3 and integer
 parameters A >= 1, D >= 3:
     S_x(A, D) = { n >= 1 : p_n <= x,
@@ -162,10 +162,10 @@ delta_{n+L} <= D; the filter is stated with 2^K to stay verbatim with
 O4's (E4).
 
 The selection ORDER is part of the definition: the filter events are
-Chebyshev/Markov-cheap (P3) and are imposed BEFORE any counting or
+[CLASSIC-1]/[PROB-5]-cheap (P3) and are imposed BEFORE any counting or
 collision argument runs; no construction is permitted to demand tail
 bounds at sites it first constructed by sieving (that order triggers
-the Cramer-type requirement, tate-transfer A3(b)).
+the [MODEL-C]-type requirement, [VERDICT-DOC-ID] A3(b)).
 
 DEFINITION D0.3 (realized sets and pair counts). For a finite index set
 T with word map w and projection pi_M:
@@ -181,14 +181,14 @@ cancels in the difference). Default T = S_x^{(s)}(A,D).
 ### 2.2 Targets
 
 DEFINITION D0.4 (SUP'_b, (E2')-supply at odd modulus b >= 1;
-kickoff-verbatim). SUP'_b: for every s >= 0 there exist x and indices
+[MANDATE-DOC]-verbatim). SUP'_b: for every s >= 0 there exist x and indices
 t, u in S_x^{(s)}(A, D) (parameters per the P3 map Par(b,x)) with
 pi_M-matched words, w(t) != w(u) on the middle block, and
     (E2')  | sum_{1<=i<=L} (g_{t+i} - g_{u+i}) 2^{-i} |
            >  2^{-L} | delta_{t+L} - delta_{u+L} |,
 with (E5) b(D-2) < 2^{J+1} honored by the parameter choice
 J = ceil(log2(b D)), K = ceil(log2 D). SUP'_1 is the b = 1 case
-feeding item-0010.
+feeding [ITEM-CONSUMER-ID].
 
 DEFINITION D0.5 (SUP_b^norm, normal form, M = 1). As D0.4 with M = 1
 and the (E2') clause replaced by the bare collision clause
@@ -232,13 +232,13 @@ LEMMA P1. Let T be a finite index set, w its word map, pi = pi_M.
     is determined by its side pair ("sandwich rigidity" on T).
 (c) Cardinality form: |W_L(T)| > |P(T)| implies a pi-collision pair
     with differing middles exists in T.
-(d) Cauchy-Schwarz floor: C_sides(T) >= |T|^2 / |P(T)|.
+(d) [INEQ-1] floor: C_sides(T) >= |T|^2 / |P(T)|.
 Proof. (a) The pi-matched ordered pairs split into word-equal and
 word-different; the first class is counted by C_words since word-equal
 implies pi-matched. (b) is (a) with the difference set empty. (c) The
 restriction of pi to the realized set W_L(T) is non-injective, so two
 realized words share sides; any two preimage sites form the pair.
-(d) Cauchy-Schwarz on the fibers of the map n -> pi(w(n)):
+(d) [INEQ-1] on the fibers of the map n -> pi(w(n)):
 sum_P M_P^2 >= (sum_P M_P)^2 / #{realized P} = |T|^2/|P(T)|. QED
 
 Remark P1.R (what P1 does NOT give). P1 converts supply into the
@@ -298,23 +298,23 @@ a complete EXCH' configuration with no further conditions.
 
 ### 2.5 P3 (depth accounting; the exact constants, recorded once)
 
-Standing constants: C_0 is chain-v1 Lemma 2.1's Chebyshev constant
+Standing constants: C_0 is [CHAIN-DOC-ID] Lemma 2.1's [CLASSIC-1] constant
 (p_n <= C_0 n ln(n+2) for all n >= 1, C_0 >= 1 absolute). All numbered
 constants below are explicit functions of C_0 alone. N := pi(x), so
 {n : p_n <= x} = {1, ..., N}, and ln N <= ln p_N = ln x.
 
-LEMMA P3.1 (mean gap window; Markov). For 1 <= i <= L and N >= L+16:
+LEMMA P3.1 (mean gap window; [PROB-5]). For 1 <= i <= L and N >= L+16:
     sum_{n<=N} g_{n+i} <= 2.4 C_0 N ln N,
     #{ n <= N : g_{n+i} > A ln x } <= 2.4 C_0 N / A.
 Proof. sum_{n<=N} g_{n+i} = p_{N+i+1} - p_{i+1} <= C_0 (N+L+1)
 ln(N+L+3). For N >= max(L+16, 32): N+L+1 <= 2N, and
 ln(N+L+3) <= ln(2N) = ln N + ln 2 <= 1.2 ln N since
 ln 2 <= 0.2 ln N iff N >= 2^5 = 32. So the sum is
-<= 2.4 C_0 N ln N; Markov at threshold A ln x >= A ln N. (The
+<= 2.4 C_0 N ln N; [PROB-5] at threshold A ln x >= A ln N. (The
 lemma's N >= L+16 is read with this absolute floor N >= 32
 throughout; P3.3's x_1(b) absorbs it.) QED
 
-LEMMA P3.2 (mean tail; Markov). For 0 <= r <= L and N >= L + 16:
+LEMMA P3.2 (mean tail; [PROB-5]). For 0 <= r <= L and N >= L + 16:
     sum_{n<=N} delta_{n+r} <= 13 C_0 N ln N,
 hence with D >= 13 C_0 A ln x:
     #{ n <= N : delta_{n+r} > D } <= N / A.
@@ -330,7 +330,7 @@ The m > N'+1 block contributes < sum_{j>=1} g_{N'+1+j} 2^{-j}
 using (N'+j+2) <= (N'+2)(j+1), ln(N'+j+4) <= ln(N'+4)(1 + ln(j+1))
 for N' >= 3, and sum_{j>=1} (j+1)^2 2^{-j} = 11 as the majorant.
 Total < 12 C_0 (N'+2) ln(N'+4) <= 13 C_0 N ln N for N >= L+16.
-Markov at threshold D >= 13 C_0 A ln x >= 13 C_0 A ln N. QED
+[PROB-5] at threshold D >= 13 C_0 A ln x >= 13 C_0 A ln N. QED
 [Constants deliberately loose; only explicitness is load-bearing.
 D5.c measures the true empirical means (~ ln x for both), so every
 downstream consumer uses the SYMBOLIC forms with these named
@@ -351,9 +351,9 @@ Then for x >= x_1(b) (an explicit threshold from the display below):
       and |S_x^{(s)}(A,D)| >= N/2 - s.
 (iv)  Depth: L = 2 log2 ln x + 2 log2 log2 ln x + log2 b + O(1),
       with the envelope 2 log2 ln x <= L <= 4 log2 ln x for
-      x >= x_1(b). DEVIATION NOTE vs kickoff P3 ("L(b,x) ~
+      x >= x_1(b). DEVIATION NOTE vs [MANDATE-DOC] P3 ("L(b,x) ~
       2 log2 log2 x + O_b(1)"): the second-order term is
-      2 log2 log2 ln x, which is unbounded, not O_b(1); the kickoff's
+      2 log2 log2 ln x, which is unbounded, not O_b(1); the [MANDATE-DOC]'s
       "~" clause is correct, its "+O_b(1)" is not exact. Cause: the
       per-position gap filter over L positions forces A to grow like
       L (density loss L/A per P3.1), and A feeds back into D, J, K
@@ -384,63 +384,63 @@ attempt to optimize it is made anywhere in this item (the mandate is
 asymptotic). Every later section states its own x-threshold as
 x >= x_i(b) with x_i absorbing x_1.
 
-### 2.6 Faithfulness watch: D0 vs the landed Lean ExchangeSupply1
+### 2.6 Faithfulness watch: D0 vs the landed [PROOF-ASSISTANT] ExchangeSupply1
 
-Executed this session against lean/Erdos251/Exchange.lean @ 66adc54
+[IDENTITY LINE STRIPPED]
 (read-only). The landed statement layer is:
 ExchangeAt n m J K D (clauses 1<=J, 1<=K, (E1) SameBlock n m J, (E2)
 gap(n+J) != gap(m+J), (E3) SameBlock (n+J+1) (m+J+1) K, (E4) near caps
 delta(.+J) <= D and far caps delta(.+J+1+K) <= 2^K), and
 ExchangeSupply1 : forall t, exists n m J K D, t <= n and t <= m and
-ExchangeAt n m J K D and (D - 2 < 2^{J+1}). Index conventions: Lean
-gap k = paper g_{k+1}, Lean delta k = paper delta_k; the far-cap index
+ExchangeAt n m J K D and (D - 2 < 2^{J+1}). Index conventions: [PROOF-ASSISTANT]
+gap k = paper g_{k+1}, [PROOF-ASSISTANT] delta k = paper delta_k; the far-cap index
 n+J+1+K is the paper n+L. Divergence register (FLAGGED, not absorbed,
 in either direction):
 
-FW-1 (substantive, direction: Lean stricter). ExchangeSupply1 demands
+FW-1 (substantive, direction: [PROOF-ASSISTANT] stricter). ExchangeSupply1 demands
 the M = 1 normal form (single differing gap); the mandate's general
 (E2') clause (any M with E != 0, P2) does NOT literally instantiate
 ExchangeAt. Consequence, binding for this item: only SUP_1^norm
 (D0.5) feeds the landed Prop verbatim; a general-(E2') supply theorem
-would additionally need either a Lean-side generalization of
-ExchangeAt (out of scope this window: no lean/ edits) or a
+would additionally need either a [PROOF-ASSISTANT]-side generalization of
+ExchangeAt (out of scope this window: no [PROOF-TREE]/ edits) or a
 normal-form post-processing step (extract a Hamming-1 pair), which is
 NOT automatic. All supply attempts in this item therefore state which
 of SUP_1^norm / SUP'_1 they produce.
 
-FW-2 (direction: Lean weaker; no conflict). ExchangeSupply1
+FW-2 (direction: [PROOF-ASSISTANT] weaker; no conflict). ExchangeSupply1
 quantifies J, K, D existentially per threshold with NO depth scaling;
 the mandate fixes J, K ~ log2 log x via Par(b,x). Paper supply at the
-mandated depths instantiates the Lean existential a fortiori.
+mandated depths instantiates the [PROOF-ASSISTANT] existential a fortiori.
 
-FW-3 (bookkeeping). Lean's threshold semantics (t <= n, m with the
+FW-3 (bookkeeping). [PROOF-ASSISTANT]'s threshold semantics (t <= n, m with the
 s-uniformization t = s+2 for the b = 1 even lattice,
 dyadic_delta_even_lattice) vs the paper's t, u >= s+1 (Lemma 2.3, odd
 b): the forall-threshold form absorbs the offset; no divergence in
 strength. Paper Theorem D0.6 keeps s+1 (general odd b); the b = 1
 consumer needs s+2 -- SUP'_b's "for every s" covers both.
 
-FW-4 (proof-level only). Lean's exchange_contradiction derives
+FW-4 (proof-level only). [PROOF-ASSISTANT]'s exchange_contradiction derives
 |d| >= 1 from bare distinctness of naturals (no parity); the paper
 normal form has |d_1| >= 2 by evenness (P2). No statement divergence;
 the paper's factor-2 margin is extra room, not a requirement.
 
 FINDING F17.1 (from FW-1, consequential): the landed consumption
 interface is strictly normal-form. Item-0017's supply target set is
-therefore ordered: SUP_1^norm (feeds Lean verbatim) > SUP'_1 (paper
+therefore ordered: SUP_1^norm (feeds [PROOF-ASSISTANT] verbatim) > SUP'_1 (paper
 EXCH', Theorem D0.6) > SUP'_b all odd b (full irrationality); the
 mandate's acceptance clause "feeding EXCH'_b (EXCH'_1 suffices for
-item-0010)" is met by any of the three, but only the first closes the
-Lean gap without further statement-layer work.
-[Convergence note, discovered at the Session C ledger read: ledger
-ANN-50's handshake finding K1 ("item-0017 targets width 1 primarily
+[ITEM-CONSUMER-ID])" is met by any of the three, but only the first closes the
+[PROOF-ASSISTANT] gap without further statement-layer work.
+[Convergence note, discovered at the [PHASE-3] ledger read: ledger
+[LEDGER-2]'s handshake finding K1 ("[ITEM-SELF-ID] targets width 1 primarily
 and treats weighted width > 1 as an extension layer") states the
 same ordering; F17.1 was derived here independently from the module
-text before reading ANN-50 -- recorded as mutual confirmation, and
-the kickoff sha256 was re-verified against ANN-50's canonical value
+text before reading [LEDGER-2] -- recorded as mutual confirmation, and
+the [MANDATE-DOC] sha256 was re-verified against [LEDGER-2]'s canonical value
 (match).]
 
-### 2.7 ADDENDUM (Session B, carried by finding F17.3): aggregate
+### 2.7 ADDENDUM ([PHASE-2], carried by finding F17.3): aggregate
 ### filter D0.2' and parameter map Par'(b,x)
 
 D0.2 stays pinned and unchanged; the following VARIANT is added
@@ -455,16 +455,16 @@ A'' >= 1, and D = D''(x) := ceil(13 C_0 A'' ln x):
                          delta_{n+J} <= D,  delta_{n+L} <= 2^K }.
 Selection order unchanged (filters first, counting second).
 
-LEMMA P3.1' (window-sum Markov at the PNT-sharp mean). By the prime
+LEMMA P3.1' (window-sum [PROB-5] at the PNT-sharp mean). By the prime
 number theorem (classical, unconditional), sum_{n<=N} g_{n+i} =
 p_{N+i+1} - p_{i+1} = (1+o(1)) N ln N, hence
     sum_{n<=N} sum_{1<=i<=L} g_{n+i} = (1+o(1)) L N ln N
-and Markov at threshold A' L ln x (>= A' L ln N) removes density at
+and [PROB-5] at threshold A' L ln x (>= A' L ln N) removes density at
 most (1+o(1))/A'. [PNT enters ONLY here and only to make fixed
-A' < 4 sqrt(2)/e usable; with Chebyshev's C_0 the same lemma holds
+A' < 4 sqrt(2)/e usable; with [CLASSIC-1]'s C_0 the same lemma holds
 with A' rescaled by C_0-dependent constants, which would break the
 Section 3.3 threshold -- recorded, not absorbed. Classical citation
-duty: PNT, Hadamard / de la Vallee Poussin 1896; no effective form
+duty: PNT, [CLASSIC-3]; no effective form
 needed.]
 
 LEMMA P3.3' (parameter map Par'(b,x) and properties). Fix
@@ -476,7 +476,7 @@ L = J + 1 + K (M = 1):
       a positive proportion of pi(x) for A' > 1 strict (P3.1' +
       P3.2 twice).
 (iii) Depth: L = 2 log2 ln x + log2 b + 2 log2(13 C_0 A'') + O(1)
-      = 2 log2 ln x + O_b(1): the kickoff's O_b(1) form HOLDS on
+      = 2 log2 ln x + O_b(1): the [MANDATE-DOC]'s O_b(1) form HOLDS on
       this variant (the P3.3(iv) deviation was per-position-filter
       specific).
 (iv)  Capacity (simplex count): side tuples are even positive
@@ -484,25 +484,25 @@ L = J + 1 + K (M = 1):
       |P(S'_x)| <= C(floor(A' L ln x / 2), J+K)
                 <= ((e A'/2)(L/(J+K)) ln x)^{J+K}
                  = ((e A'/2 + o(1)) ln x)^{J+K} = x^{o(1)}.
-Proofs: (i) as P3.3; (ii) union of the three Markov filters;
+Proofs: (i) as P3.3; (ii) union of the three [PROB-5] filters;
 (iii) direct substitution (A', A'' no longer feed J, K through a
 growing A); (iv) stars-and-bars with even parts, C(m, r) <=
 (e m/r)^r, and L/(J+K) = 1 + o(1). QED
 
-## 3. D2 -- Cramer-model gate (M1 drafted Session A; M2 Session B)
+## 3. D2 -- [MODEL-C]-model gate (M1 drafted [PHASE-1]; M2 [PHASE-2])
 
-[Draft in Session A; the gate decision is recorded ONLY after M1+M2
-are complete and checked (Session B). Model-language discipline: every
+[Draft in [PHASE-1]; the gate decision is recorded ONLY after M1+M2
+are complete and checked ([PHASE-2]). Model-language discipline: every
 statement in this section is about the MODEL; no claim about the
 primes is made or implied. Frame citations (heuristic status, per
-kickoff): Lau 2604.15042 Section 7 format; Gallagher / Granville-
-Lumley 2009.05000 as the heuristic frame; the model definition below
+[MANDATE-DOC]): Lau 2604.15042 Section 7 format; [AUTH-G1] / Granville-
+Lumley [TEXT-H] as the heuristic frame; the model definition below
 is verbatim GL p. 19 (anchors resolved, U17.4).]
 
 ### 3.1 The model
 
-MODEL M (Bernoulli/Cramer). Fix x >= 16 and work on the integer
-interval (x/2, x]. Let (X_n)_{n > 2} be independent Bernoulli with
+MODEL M ([PROB-4]/[MODEL-C]). Fix x >= 16 and work on the integer
+interval (x/2, x]. Let (X_n)_{n > 2} be independent [PROB-4] with
 P(X_n = 1) = 1/ln n. Model "primes" are {n : X_n = 1} in increasing
 order q_1 < q_2 < ...; model gaps h_i = q_{i+1} - q_i; model tails
 delta^M_i = sum_{j>=1} h_{i+j} 2^{-j}; model words, side projections,
@@ -512,9 +512,9 @@ verbatim (same A, D, J, K, L as the b = 1 primes case). No parity:
 model gaps may be odd; the E-invariant of P2 loses its factor-2
 margin, nothing else (P2's |E| >= 1 case). [The parity-corrected
 model variant is NOT needed for M1/M2; recorded as an M2 sensitivity
-check, Session B.]
+check, [PHASE-2].]
 
-### 3.2 M1 (model supply; COMPLETE, Session B)
+### 3.2 M1 (model supply; COMPLETE, [PHASE-2])
 
 Notation for this section: p := 1/ln x; over anchors in (x/2, x] the
 per-integer hit probability is p(1+O(1/ln x)) and every per-position
@@ -542,17 +542,17 @@ x^{2-o(1)}. Interpretation fixed once; a precision, not a deviation.]
 Proof.
 (a) Site abundance. #model primes in (x/2, 3x/4] concentrates at
     mu := sum_{x/2 < n <= 3x/4} 1/ln n = (1+o(1)) x/(4 ln x)
-    (Chernoff for independent Bernoulli sums: deviation
+    ([PROB-2] for independent [PROB-4] sums: deviation
     P(|S - mu| > mu/2) <= 2 exp(-mu/10)). Filters: a model gap
     exceeds A ln x with probability <= (1-p)^{A ln x} <= e^{-A} =
     (ln x)^{-32 C_0/ln 2} (union over L positions: o(1) density);
     the model tails delta^M have mean E[delta^M] = E[h](1+o(1)) =
-    (1+o(1)) ln x (the 2^{-j}-weights sum to 1), so Markov at
+    (1+o(1)) ln x (the 2^{-j}-weights sum to 1), so [PROB-5] at
     D = ceil(13 C_0 A ln x) and at 2^K >= D removes density o(1).
     Hence a.s. eventually N_S >= x/(8 ln x) =: N_1 at every dyadic
-    scale (Chernoff + Borel-Cantelli; filter events are functions of
+    scale ([PROB-2] + [PROB-1]; filter events are functions of
     disjoint gap blocks, so the filtered count is a Lipschitz
-    function of independent blocks and McDiarmid applies; crude
+    function of independent blocks and [PROB-3] applies; crude
     bounds suffice at the stated density).
 (b) Per-position collision. Two gaps at disjoint sites are
     independent near-Geometric(p): q_2 := P(h = h') =
@@ -581,15 +581,15 @@ Proof.
     other's by 1... sharpened: bound E[YY'] <= q_2^{J+K} and count
     <= 4 N_S^2 (L+2) N_S pairs), giving / E[T]^2 <=
     4(L+2)/(N_S q_2^{J+K}) = x^{-1+o(1)}. Total Var(T)/E[T]^2 =
-    x^{-1+o(1)}; Chebyshev gives P(T < E[T]/2) = x^{-1+o(1)}, and
-    sum over dyadic x_r converges: Borel-Cantelli yields (i).
+    x^{-1+o(1)}; [CLASSIC-1] gives P(T < E[T]/2) = x^{-1+o(1)}, and
+    sum over dyadic x_r converges: [PROB-1] yields (i).
 (e) Disjointification. deg(i) := #{j in S^M : side(j) = side(i)}.
     Conditional on side(i) = v, deg(i) is a sum of side-match
     indicators with q_v <= (max_t P(h=t))^{J+K} = p^{J+K} =: q_max,
     and N_S q_max = x^{1-o(1)}. The indicators over j are not
     mutually independent (adjacent sites share gaps): split the
     sites into L+3 residue classes mod L+3 -- within a class the
-    windows are disjoint, hence independent -- apply Chernoff per
+    windows are disjoint, hence independent -- apply [PROB-2] per
     class and union over classes and sites (dilution step; absorbed
     from the Section 3.5 check). A.s. eventually max_i deg(i) <=
     2 N_S q_max. Greedy matching: each
@@ -601,7 +601,7 @@ Proof.
     [U17.6 discharged: the covariance table is (d), the matching
     floor is (e).]
 
-### 3.3 M2 (balance in the model; COMPLETE, Session B) + GATE
+### 3.3 M2 (balance in the model; COMPLETE, [PHASE-2]) + GATE
 
 All statements remain about Model M; primes-side conclusions are
 drawn ONLY as architecture decisions (gate rule), not as theorems.
@@ -617,7 +617,7 @@ terms. The RELATIVE room is
     E[C^M_sides,off]/E[C^M_words,off] = q_2^{-M} = (2 ln x)^{M}
 per middle position; at the normal form M = 1 this is
 (2 ln x)^{1} = (log x)^{1+o(1)}.
-FINDING F17.2 (kickoff orientation corrected): the kickoff's M2
+FINDING F17.2 ([MANDATE-DOC] orientation corrected): the [MANDATE-DOC]'s M2
 expectation "closes with (log x)^{2-o(1)} room" is NOT reproduced;
 the model room at M = 1 is (2 ln x)^{1+o(1)}. The architecture
 consequence is unchanged (the balance closes), but every D1 budget
@@ -633,12 +633,12 @@ h_{i+1} = h_{i+2} = ... : probability q_2^{L} per adjacent pair].
 Hence a.s. along dyadic scales C^M_sides - C^M_words > 0 eventually:
 the model analogue of the P1 positivity holds a.s.
 
-M2.3 (route audit: the Cauchy-Schwarz floor as D1.a would run it).
+M2.3 (route audit: the [INEQ-1] floor as D1.a would run it).
 D1.a's unconditional skeleton is floor := |S|^2/|P| vs C_words with
 the worst-case capacity |P| <= cap. Audited IN THE MODEL, where the
 per-word constant is perfect (1+o(1)):
 (i) Under the PINNED per-position filter (D0.2, all L gaps <=
-    A ln x): unconditional Markov forces A >= 8 C_0 L (P3.3), so
+    A ln x): unconditional [PROB-5] forces A >= 8 C_0 L (P3.3), so
     cap = (A ln x/2)^{J+K} and
       floor / E[C^M_words,off]
         = (2/(A ln x))^{J+K} (2 ln x)^{L} = (2 ln x)(4/A)^{J+K},
@@ -647,13 +647,13 @@ per-word constant is perfect (1+o(1)):
     IN THE MODEL, killed by CAPACITY SLACK alone, before any sieve
     constant enters. In the model the per-position filter could be
     run at A ~ ln(2L) (exponential gap tails), but then the slack
-    (A/4)^{J+K} is still superpolylog; for the primes, Markov-only
+    (A/4)^{J+K} is still superpolylog; for the primes, [PROB-5]-only
     tails force A asymp L outright. The per-position formulation is
     dead on this route in either world.
 (ii) AGGREGATE-FILTER FIX (definition D0.2', Section 2.7): replace
     the per-position caps by the single window-sum cap
         sum_{1<=i<=L} g_{n+i} <= A' L ln x,   A' > 1 fixed.
-    One Markov application loses site density <= (1+o(1))/A'
+    One [PROB-5] application loses site density <= (1+o(1))/A'
     [primes: P3.1' with the PNT-sharp mean; model: E[h] =
     (1+o(1)) ln x]; capacity becomes the simplex count
         |P| <= #{even (J+K)-tuples, sum <= A' L ln x}
@@ -670,26 +670,26 @@ per-word constant is perfect (1+o(1)):
     theta(4/e = 1.4715...) = 1 exactly. [Decimals corrected per the
     Section 3.5 check.] Site-density cost 1/A' (need A' > 1;
     the window sum concentrates at (1+o(1)) L ln x in the model by
-    CLT, and for the primes Markov at fixed A' > 1 suffices).
+    CLT, and for the primes [PROB-5] at fixed A' > 1 suffices).
     In the model, with A' in (1, 2.081) the floor route CLOSES with
     room (ln x)^{theta(A')}.
 FINDING F17.3 (constructive, model-derived; binds D1): the
-kickoff's D1 balance display carries the per-position capacity
+[MANDATE-DOC]'s D1 balance display carries the per-position capacity
 (A log x/2)^{J+K} with A forced asymp L; that route is dead
 independently of the sieve constant (capacity slack (A/4)^{J+K}).
 The aggregate window-sum filter D0.2' at fixed A' in (1, 4 sqrt(2)/e)
-is the repair; it also restores the kickoff's L = 2 log2 log x +
+is the repair; it also restores the [MANDATE-DOC]'s L = 2 log2 log x +
 O_b(1) depth form (the P3.3(iv) deviation was an artifact of the
 per-position filter). D1.a MUST run on D0.2'.
 
 M2.4 (what remains for D1 after the fix; pre-shape of D1.a). With
 D0.2' at fixed A', room (ln x)^{theta(A')} = exp(theta lnln x) =
 2^{(theta/2)(1+o(1)) L} [lnln x = (ln 2/2) L (1+o(1))]. The
-unconditional per-word Selberg constant to beat is C_sel(L) ~ 2^L L!
+unconditional per-word [SIEVE-1] constant to beat is C_sel(L) ~ 2^L L!
 (U17.2, to be re-derived in D1.a): even its 2^L factor alone
 exceeds the room 2^{theta L/2} (theta < 1), before L!. EXPECTED
 D1.a outcome, now precisely budgeted: deficit factor
-~ 2^{L(1 - theta/2)} L! at the critical spot; the kickoff's
+~ 2^{L(1 - theta/2)} L! at the critical spot; the [MANDATE-DOC]'s
 "fails by a factor traceable to 2^L L!" is confirmed as the
 post-fix residual -- the capacity slack (i) would otherwise mask it.
 
@@ -699,11 +699,11 @@ x = 2e6 (parity ~2x + singular-series clumping ~1.7x): model-M
 numbers are compared to primes data ONLY through those measured
 correction factors; no primes-side conclusion is drawn from raw
 model constants. [Asymptotically the parity factor is the model's
-missing evenness; the clumping factor is the Hardy-Littlewood
+missing evenness; the clumping factor is the [HL]
 pair-correlation mass, both irrelevant to the (2 ln x)^M ROOM
 structure, which is scale-free.]
 
-### 3.4 GATE DECISION (recorded Session B)
+### 3.4 GATE DECISION (recorded [PHASE-2])
 
 M1 + M2 are written and checked (independent re-derivation pass:
 Section 3.5). The D2 gate rule evaluates as follows:
@@ -716,9 +716,9 @@ Section 3.5). The D2 gate rule evaluates as follows:
       A' in (1, 4 sqrt(2)/e), NOT on the pinned per-position filter.
 - D1.a-d are hereby UNBLOCKED (gate order honored: this section
   precedes any D1 execution; D5.c's empirical landing (Section 7)
-  ran before D1-route trust per the kickoff rule).
+  ran before D1-route trust per the [MANDATE-DOC] rule).
 
-### 3.5 Independent re-derivation (review pass, Session B; EXECUTED)
+### 3.5 Independent re-derivation (review pass, [PHASE-2]; EXECUTED)
 
 Two independent checker agents re-derived the section's
 computations from the setup + claimed answers only (derivations
@@ -727,8 +727,8 @@ withheld). Results:
   p^2/(3-3p+p^2), q_3/q_2^2 -> 4/3 with O(p^2) correction,
   (2/ln 2) ln(4/3) = 2 log2(4/3) = 0.83007..., matching floor at
   the /16 level, 2^{J+K} = (ln x)^{2+o(1)} with constant exactly 2,
-  dyadic Borel-Cantelli summability). Two absorbed refinements:
-  (i) the degree-concentration Chernoff needs the residue-class
+  dyadic [PROB-1] summability). Two absorbed refinements:
+  (i) the degree-concentration [PROB-2] needs the residue-class
   dilution step (adjacent sites share gaps) -- absorbed into
   M1(e); (ii) within the x^{o(1)} slack the overlapping-window
   variance block dominates the shared-one-site block -- noted, both
@@ -747,8 +747,8 @@ withheld). Results:
 No discrepancy affects any conclusion of Sections 3.3-3.4; the
 gate decision stands as recorded.
 
-## 4. D1 -- the second-moment balance (UNBLOCKED Session B by the
-## Section 3.4 gate; a/b this session, c/d Session C)
+## 4. D1 -- the second-moment balance (UNBLOCKED [PHASE-2] by the
+## Section 3.4 gate; a/b this session, c/d [PHASE-3])
 
 ### 4.0 Route bookkeeping after the gate
 
@@ -773,13 +773,13 @@ positive. Model instance: gamma_2 = 1/2, A'_crit = 4 sqrt(2)/e =
 A' -> 1+, the route is open iff gamma_2 < gamma_2^crit :=
 2 sqrt(2)/e = 1.0405...
 
-### 4.1 D1.a -- max-S version with the self-proved Selberg constant
+### 4.1 D1.a -- max-S version with the self-proved [SIEVE-1] constant
 ### (COMPLETE)
 
-Inline lemma D1-L (workpaper item-0017-workpapers/d1a-selberg.md,
-618 lines, self-contained; steering-verified this session by
+Inline lemma D1-L (workpaper [ITEM-SELF-ID]-workpapers/d1a-selberg.md,
+618 lines, self-contained; [STEERING-ROLE]-verified this session by
 re-execution of the core steps -- the Rankin tail bound (10.2)-(10.4)
-with Delta >= 0.7543, the Mertens/singular-series assembly (10.6),
+with Delta >= 0.7543, the [CLASSIC-2]/singular-series assembly (10.6),
 and the constant-gap ratios): for admissible H with |H| = k,
 k <= (lnln X)^2, span <= (ln X)^2, X >= exp(exp(30)):
     N(X;H) <= C(k) (1 + err) S(H) X/(ln X)^k,
@@ -788,11 +788,11 @@ k <= (lnln X)^2, span <= (ln X)^2, X >= exp(exp(30)):
 with the optimized Corollary D1-L' (k >= 5):
     C*(k) = 2e (4 e^{-gamma} k)^k e^{1.45 sqrt k}
           <= (6.11)^k k! e^{1.45 sqrt k}.
-External inputs: four Rosser-Schoenfeld inequalities only (their
+External inputs: four [CLASSIC-4] inequalities only (their
 exact 1962 equation numbers are memory-cited by the executor --
 U17.10; the inequalities as stated are standard R-S facts); PNT and
-Halberstam-Richert NOT used. No citation is taken for the constant;
-the qualitative shape matches Pintz 1305.6289 Lemma 3 (whose own
+[BOOK-1] NOT used. No citation is taken for the constant;
+the qualitative shape matches [AUTH-A] [TEXT-A] Lemma 3 (whose own
 constant and "H << log N" note are asserted there, not relied on
 here). HONESTY layer (workpaper Section 13): the self-contained
 route's constant exceeds the classical 2^k k! by (2e^{1-gamma})^k
@@ -808,7 +808,7 @@ fixed A' in (1, 4 sqrt(2)/e), the max-S balance needs
       < room = (ln x)^{theta(A')},  theta(A') < 1;
 already at S-term = 1 the per-word constant alone gives deficit
     C*(L+1) / (ln x)^{theta} = exp( (1+o(1)) L ln L ),
-super-polylogarithmic -- the kickoff's predicted failure "by a
+super-polylogarithmic -- the [MANDATE-DOC]'s predicted failure "by a
 factor traceable to 2^L L!", now documented with a self-proved
 constant, and robust: the classical 2^k k! (were it citable) fails
 identically, since 2^L L! = exp((1+o(1)) L ln L) as well; the
@@ -830,14 +830,14 @@ over sites, i.e. (in the HL calculus) a SECOND moment over the word
 box, since sites realize w at rate proportional to S(H_w).
 Available tools, with their exact regimes (anchors re-verified this
 session, extraction files cited):
-(i) Kuperberg 2210.09775 Thm 1.1: T_k(h) = h^k + O(h^{k-beta})
+(i) [AUTH-D] [TEXT-D] Thm 1.1: T_k(h) = h^k + O(h^{k-beta})
     REQUIRES delta > 1/2 in k = O((log h)^{1-delta}) (U17.3
     correction), i.e. k below (log h)^{1/2}. Our regime: span
     budget h = A' L ln x gives log h = (1+o(1)) lnln x, and
     k = L+1 = (2/ln 2 + o(1)) lnln x = (2/ln 2 + o(1)) log h:
     k is LINEAR in log h -- the regime gap to Thm 1.1 is a full
     square, not a refinement. REGIME GAP STATED.
-(ii) Kuperberg Thm 1.2 (growth-condition-free): T_k(h) <<
+(ii) [AUTH-D] Thm 1.2 (growth-condition-free): T_k(h) <<
     h^k (3 log k)^k-type box bounds (exact display in
     extract/kuperberg22-singseries.md; re-verified at use). This
     gives box-average of S <= (3 log k)^k = exp(k ln(3 log k)):
@@ -845,7 +845,7 @@ session, extraction files cited):
     (ln x)^{(2/ln 2) ln(3 ln k)} -- superpolylog (the exponent
     grows like 2.885 ln ln ln ... x), vs polylog room: even the
     box-average bound exceeds ANY (ln x)^theta budget.
-(iii) Pintz 1004.1084 Thm 1/1' (via 1305.6289 Lemma 4): one-point
+(iii) [AUTH-A] [TEXT-I] Thm 1/1' (via [TEXT-A] Lemma 4): one-point
     extension averages (1/H) sum_h S(H u h)/S(H) = 1 + O(eta)
     require H >= exp(k^{1/eta}); meaningful accuracy (eta < 1)
     needs log H >= k^{1/eta} > k, while our log H = (1+o(1)) lnln x
@@ -855,8 +855,8 @@ session, extraction files cited):
     direction. Direction split recorded.
 CONCLUSION D1.b: first-moment averaging replaces max_w S by a box
 average, and the best growth-free box average available
-((3 log k)^k, Kuperberg Thm 1.2) still exceeds every polylog room
-budget; the asymptotic-average tools (Kuperberg Thm 1.1, Pintz
+((3 log k)^k, [AUTH-D] Thm 1.2) still exceeds every polylog room
+budget; the asymptotic-average tools ([AUTH-D] Thm 1.1, [AUTH-A]
 Lemma 4 upper direction) sit a full square outside the regime. The
 precise missing estimate is registered for D1.c: upper bounds of
 S-moments at k ~ (2/ln 2) lnln x with span ~ ln x.
@@ -868,7 +868,7 @@ The threshold calculus of 4.0 depends only on gamma_2. For the
 primes (measurements: balance_stats.py, d1c_gamma2.py; committed):
 - Marginal (single-position) collision constant: empirical
   gamma_2 = (sum over even d of P-hat(g = d)^2) ln x = 1.2005 at
-  x = 2e6, 1.1808 at 2e7, declining toward the HL/Gallagher-frame
+  x = 2e6, 1.1808 at 2e7, declining toward the HL/[AUTH-G1]-frame
   heuristic asymptote
       gamma_2 = E_even[S_2^2]/4,
       E_even[S_2^2] = 4 C_2^2 prod_{p>2} (1 + ((p-1)^2/(p-2)^2
@@ -901,11 +901,11 @@ floor route. Obstruction statement (B1 discipline, scope exact):
 This closure is INDEPENDENT of the sieve constant (it binds even at
 C_per = 1) and is invisible in Model M (gamma_2 = 1/2 <
 gamma_2^crit): it is a genuinely primes-side obstruction, created
-by Hardy-Littlewood clumping -- the same mass that makes exchange
+by [HL] clumping -- the same mass that makes exchange
 configurations ABUNDANT (D5's superlinear class growth) makes the
 unweighted capacity floor too weak to certify them. The three
 surviving routes, each meeting a named blocker, are pre-shaped for
-Session C: (1) S-weighted floors -- need HL LOWER bounds at matched
+[PHASE-3]: (1) S-weighted floors -- need HL LOWER bounds at matched
 sides (parity-blocked prescription, O4 blocker 2) plus S-second
 moments at growing k (D1.c register target); (2) typical-set
 capacity restriction -- needs upper-sieve control of rare side
@@ -930,17 +930,17 @@ optimizing choice w_P = HL side-mass needs
     at k = J+K = (2/ln 2 + o(1)) lnln x, span <= A' L ln x, of
     quality Sigma_2 <= (1+o(1))^k E[S]^2 |simplex| -- i.e.
     per-position second-moment constant 1 + o(1).
-REGISTER ENTRY (the kickoff's candidate, now precise): "S second
+REGISTER ENTRY (the [MANDATE-DOC]'s candidate, now precise): "S second
 moment at growing k" = estimate (ii). Status in the tool base:
-- MoSo 0409258 computes the CENTERED moments R_k(h) =
+- [AUTH-E] [TEXT-E] computes the CENTERED moments R_k(h) =
   sum_{distinct d_i <= h} S_0(D) = mu_k (-h log h + Ah)^{k/2}
   + O_k(h^{k/2 - 1/(7k) + eps}) (Thm 2; definitions (7)-(12)) at
   FIXED k, box (not simplex) domain, S_0 (not S^2) products; its
-  only uniformity remark defers to the Granville-Soundararajan
+  only uniformity remark defers to the [AUTH-Q]
   uncertainty-principle restrictions "on the uniformity (in k)
   with which (15) can possibly hold" (p. 4). NOT the needed form
   on any of the three axes (centering, k-range, domain).
-- Kuperberg 2210.09775: first moments only (T_k), k << (log h)^{1/2}
+- [AUTH-D] [TEXT-D]: first moments only (T_k), k << (log h)^{1/2}
   for asymptotics, (3 log k)^k growth-free; explicitly NO second
   moment in the text (anatomy Section "FOCUS 4": NOT FOUND).
 - k = 2 ground truth: THE SECOND MOMENT IS LARGE, NOT 1+o(1). The
@@ -956,50 +956,50 @@ merely missing a tool; at the two-point level the tool's true
 constant is exactly the one that closes the unweighted route.
 What remains open is only whether HL LOWER bounds at matched
 flanks (input (i), parity-blocked) could beat the second-moment
-denominator by the Cauchy-Schwarz slack -- i.e., the counting
+denominator by the [INEQ-1] slack -- i.e., the counting
 route funnels back into blocker 2 with no constant to spare.
 
-### 4.5 D1.d -- Chen substitution mapped (COMPLETE)
+### 4.5 D1.d -- [SIEVE-2] substitution mapped (COMPLETE)
 
-Merikoski's substitution point (1811.03008 eq. (1.6) p. 6; "In
-[2, Section 4], Selberg's upper bound sieve is used to show this
-for A = 4. We improve this to A = 3.99 by using Chen's sieve [4],
+[AUTH-L]'s substitution point ([TEXT-L] eq. (1.6) p. 6; "In
+[2, Section 4], [SIEVE-1]'s upper bound sieve is used to show this
+for A = 4. We improve this to A = 3.99 by using [SIEVE-2]'s sieve [4],
 [13] (cf. Proposition 12 below)"): a two-point prime-pair sum
-against squared Maynard-Tao weights, constant 4 -> 3.99 (0.25%).
+against squared [AUTH-MT] weights, constant 4 -> 3.99 (0.25%).
 Mapping onto D1's critical spots:
 (a) The floor-closure margin (F17.5) is NOT a sieve constant: it
     is the true two-point mass E_even[S_2^2]/4 = 1.1505, exactly
     computable -- no upper-sieve improvement changes a true
-    constant. Chen-type switching does not apply.
+    constant. [SIEVE-2]-type switching does not apply.
 (b) The per-word constant (F17.4 deficit 2^{L(1-theta/2)} L!):
-    Chen switching improves two-point upper sieves by fixed
+    [SIEVE-2] switching improves two-point upper sieves by fixed
     percentages; the needed improvement is super-exponential in
     L. Category mismatch; reach bounded.
 BEST CURRENT VALUE at the pairwise upper-sieve spot: 3.99
-(Merikoski Prop 12), recorded as the corpus optimum; its reach
+([AUTH-L] Prop 12), recorded as the corpus optimum; its reach
 toward (E2')-supply is a bounded factor at a spot whose deficit
 is exp(Theta(L log L)). D1.d closes with a located non-lever.
 
 ## 5. D3 -- tool cartography (the parity gray zone, mapped; drafted
-## Session B from the 14 anatomies, to be finalized Session C)
+## [PHASE-2] from the 14 anatomies, to be finalized [PHASE-3])
 
 Column legend per mechanism: which of (E1)/(E3) exact flank match,
 (E2)/(E2') middle variability, (E4) tail caps at the produced sites,
 (E5)-compatible depth (J,K ~ log2 log x), TT = tail-typicality
-(positive-density sites so Markov selection applies), and the EXACT
+(positive-density sites so [PROB-5] selection applies), and the EXACT
 missing ingredient. Standing structural fact used repeatedly: on a
-site set of relative density rho, unconditional Markov tail
+site set of relative density rho, unconditional [PROB-5] tail
 selection costs the factor 1/rho in the tail budget D, which feeds
 J >= log2(bD): sparse-site constructions self-defeat once
 log2(1/rho) exceeds the depth budget O(log2 log x) ("sparse-site
-Markov cost"; the A3(b) order-of-quantifiers artifact made
+[PROB-5] cost"; the A3(b) order-of-quantifiers artifact made
 quantitative).
 
-T1 Pintz Thm 5 pattern (1305.6289 Sec 6; anatomy
+T1 [AUTH-A] Thm 5 pattern ([TEXT-A] Sec 6; anatomy
 pintz13-polignac.md). Supplies: two-site NEXT-GAP variability at a
 constructed core -- if all sites of the constructed
 consecutive-pair event continued with the same next gap, summed
-Selberg bounds ((6.9)-(6.11)) contradict the Maynard-type lower
+[SIEVE-1] bounds ((6.9)-(6.11)) contradict the [AUTH-O]-type lower
 bound (6.6): the ONLY corpus mechanism that certifies
 anti-rigidity of a continuation. Reach: variability is at the
 EVENT class (tuple positions + almost-primality), not at matched
@@ -1007,7 +1007,7 @@ realized gap words; sites are sieve-weighted (density
 S(H) N/log^k N: log-power sparse), k fixed (>= 3.5e6). Missing
 EXACTLY: (a) class-count LOWER bounds for word-level flank classes
 (replacing (6.6)) -- a prescribed-tuple lower bound at k ~ L, the
-parity-blocked class; (b) (E4) at log-power-sparse sites: Markov
+parity-blocked class; (b) (E4) at log-power-sparse sites: [PROB-5]
 cost log^k x inflates D by log^k x, hence J by ~ k log2 log x --
 self-defeat by factor k. TRANSPLANT SHAPE (recorded as the sharpest
 positive lead of the corpus): T1's exclusion argument applied to a
@@ -1015,10 +1015,10 @@ flank class would derive (E2)-supply from HL-type lower bounds for
 ONE matched-flank family -- the wall is exactly the lower bound,
 nothing else in the pattern breaks.
 
-T2 BFM bins + uniform Maynard-Tao (1404.5094; anatomy
+T2 BFM bins + uniform [AUTH-MT] ([TEXT-B]; anatomy
 bfm14-limitpoints.md). Supplies: chains of consecutive normalized
 gaps at prescribed reals up to o(1), k = 8m^2+8m (verified
-verbatim), along scale subsequences. NOTE (kickoff wording
+verbatim), along scale subsequences. NOTE ([MANDATE-DOC] wording
 corrected): the uniform engine's modulus is W = prod_{p <= w} p
 with w = eps log N, i.e. W is a small POWER of N, not "W up to
 eps log N". Missing EXACTLY: exact integer gap values ((E1)/(E3)
@@ -1026,9 +1026,9 @@ need entrywise equality; limit-point approximation has o(1)-
 normalized slack ~ o(log x) absolute -- infinitely too coarse);
 depth (chains of length ~ loglog x need k ~ (loglog x)^2 with
 value prescription -- outside every uniform range in the corpus);
-TT fails (Maynard-Tao-weighted sites, log-power sparse).
+TT fails ([AUTH-MT]-weighted sites, log-power sparse).
 
-T3 BFTB composite-forcing trap (1311.7003; anatomy
+T3 BFTB composite-forcing trap ([TEXT-C]; anatomy
 bftb14-consecutive.md). Supplies: EXACT consecutive realization of
 admissible tuples (dedicated prime q_t kills each non-tuple offset
 along one AP mod Q = prod q_t) -- realizing two tuples H, H' with
@@ -1036,35 +1036,35 @@ equal flank point-sets and different middles would give exact
 (E1)+(E2)+(E3) pairs: the only corpus mechanism reaching exact
 matched flanks. Missing EXACTLY: (E4)/TT. The trap modulus is
 exponential in the tuple span; for span s the AP density is
-e^{-(1+o(1)) s}-level, so the sparse-site Markov cost inflates D by
+e^{-(1+o(1)) s}-level, so the sparse-site [PROB-5] cost inflates D by
 e^{s}, J by ~ s -- and (E1)/(E3) at depth J,K need s >= 2(J+K):
-J >= s >= 2J, quantitative self-defeat (the Shiu-circularity
+J >= s >= 2J, quantitative self-defeat (the [AUTH-S]-circularity
 blocker in trap form). Conditional note (scope-qualified): under a
-Cramer-Granville pointwise bound (Hypothesis-B shape) the (E4)
+[MODEL-CG] pointwise bound (Hypothesis-B shape) the (E4)
 caps hold pointwise with D ~ log^2 x, K ~ 2 log2 log x, and the
 trap route CLOSES -- consistent with EXCH' being strictly weaker
-than the chain's A+B package (tate-transfer O4); the entire
+than the chain's A+B package ([VERDICT-DOC-ID] O4); the entire
 unconditional content is the sparse-site tail clause.
 
-T4 Pintz DHL*(k,2) almost-prime consecutivization (1305.6289
+T4 [AUTH-A] DHL*(k,2) almost-prime consecutivization ([TEXT-A]
 Sec 3; anatomy pintz13-polignac.md). Supplies: consecutive prime
 PAIRS inside tuples at the cheapest density in the corpus
 (c_2(k) S(H) N/log^k N; the P^- clause certifies compositeness
 between hits with no trap modulus). Missing EXACTLY: word-level
 flanks (other tuple components are almost-primes, their positions
-free); sparse-site Markov cost log^k x -> J inflated by
+free); sparse-site [PROB-5] cost log^k x -> J inflated by
 ~ k log2 log x (k >= 3.5e6 fixed): self-defeat by factor k, milder
 in form than T3 but same shape. Cheapest consecutivization,
 still flankless.
 
-T5 scale flexibility (Pintz 1407.2213 normalizer class; BF15
-1510.08054 R-scale chains + window confinement; anatomies
+T5 scale flexibility ([AUTH-A] [TEXT-G] normalizer class; BF15
+[TEXT-M] R-scale chains + window confinement; anatomies
 pintz14-gapdist.md, bf15-erdosrankin.md). The class-F cap is
-exactly the Erdos-Rankin scale g(x) log x (verified); BF15's
+exactly the [SCALE-ER] scale g(x) log x (verified); BF15's
 Corollary 4.2/(6.8) confinement P cap (n+x, n+y] = P cap (n+H)
 holds for EVERY n == b (W) -- exact upper-set control of a whole
 window, the strongest prescription device in the corpus. FINDING
-F17.6 (kickoff expectation corrected): the transport does NOT die
+F17.6 ([MANDATE-DOC] expectation corrected): the transport does NOT die
 at (E5)'s b-D coupling -- at R-scale sites the caps take D ~ R(x),
 J, K ~ log2 R(x) = (1+o(1)) log2 log x, which is (E5)-compatible.
 It dies at: (a) exactness (normalized prescription has o(f(x))
@@ -1073,28 +1073,28 @@ confinement, which controls the prime SET only from above, so
 which skeleton points are prime varies and matched-flank
 variability again needs an anti-concentration input (pigeonhole-
 blind otherwise); and (b) TT: W = e^{(1+o(1)) C x}, sites
-astronomically sparse, Markov cost e^{Cx} -- the worst in the
+astronomically sparse, [PROB-5] cost e^{Cx} -- the worst in the
 corpus. Verified and recorded in place of the expected b-D
 failure.
 
-T6 Merikoski refinements (1811.03008; anatomy
+T6 [AUTH-L] refinements ([TEXT-L]; anatomy
 merikoski18-limitpoints.md). Syndeticity of the limit-point set:
 verified verbatim (Cor 3 + rephrasing sentence; the paper notes it
-follows already from BFM). Chen substitution at the pairwise
+follows already from BFM). [SIEVE-2] substitution at the pairwise
 upper-sieve constant (A = 4 -> 3.99, eq (1.6), Prop 12): feeds
 D1.d. Reach class: T2 (normalized/limit-point level); adds no new
 (E)-clause reach; its constant datum is the corpus's only
 improvement lever at an upper-sieve spot.
 
-Maier matrix (fourth tool type, from D4; Maier 1985 +
-Hildebrand-Maier 1988; anatomies maier85-matrix.md,
+[AUTH-K] matrix (fourth tool type, from D4; [AUTH-K] 1985 +
+[AUTH-J] 1988; anatomies maier85-matrix.md,
 hm88-chains.md). Supplies: COUNT oscillations in translated
 intervals (both selection steps verbatim averaging pigeonholes);
 prescribes only the average gap ratio (HM88), never values --
 pigeonhole-blind for (E2'); columns are APs mod P(z) with
-P(z) = x^{1/D}: polynomially sparse, Markov cost x^{1/D} -> J ~
+P(z) = x^{1/D}: polynomially sparse, [PROB-5] cost x^{1/D} -> J ~
 (log x)/D >> L: self-defeat. Both D4 reduction options of the
-kickoff hold simultaneously: prescription-free (parity-safe but
+[MANDATE-DOC] hold simultaneously: prescription-free (parity-safe but
 variability-blind) AND sparse-sited.
 
 TABLE SUMMARY (unconditional reach): exact flanks -- only T3, at
@@ -1105,19 +1105,19 @@ sets (this dossier's D0.2/D0.2' selection layer); depth
 (E5)-compatibility -- generic (even R-scale transports pass, F17.6).
 No mechanism or composition in the corpus supplies all clauses
 simultaneously; each composition meets at least one of: class
-lower bounds (parity-blocked), sparse-site Markov cost
-(Shiu-circularity shape), pigeonhole variability-blindness. The
+lower bounds (parity-blocked), sparse-site [PROB-5] cost
+([AUTH-S]-circularity shape), pigeonhole variability-blindness. The
 three O4 blockers are confirmed EXHAUSTIVE for this corpus, with
-the sparse-site Markov cost now quantified as the uniform
+the sparse-site [PROB-5] cost now quantified as the uniform
 mechanism behind every TT failure.
 
 ## 6. D4 -- blocker hardening at the weighted clause (drafted
-## Session B; each O4 blocker gets a WEIGHTED-CLAUSE addendum)
+## [PHASE-2]; each O4 blocker gets a WEIGHTED-CLAUSE addendum)
 
-### 6.1 Blocker 3 addendum: Shiu circularity vs many-small-
+### 6.1 Blocker 3 addendum: [AUTH-S] circularity vs many-small-
 ### difference configurations
 
-The kickoff asks for the exact inequality deciding whether spread
+The [MANDATE-DOC] asks for the exact inequality deciding whether spread
 differences (M >= 2, small d_j, E != 0) evade the string-density
 penalty. They do not; the exact accounting:
 (a) Depth floor is M-invariant. (E4) tail caps at tail-typical
@@ -1126,10 +1126,10 @@ penalty. They do not; the exact accounting:
     the middle width M or the difference pattern: the weighted
     clause cannot shrink the flank depth below the (E4)/(E5) floor
     J + K >= (2+o(1)) log2 ln x.
-(b) The penalty is flank-driven. A Shiu-string prescription of a
+(b) The penalty is flank-driven. A [AUTH-S]-string prescription of a
     matched-flank configuration needs string length m >= J + K + M
-    >= (2+o(1)) log2 ln x; Maynard 1405.2593 Thm 3.3's site density
-    >> pi(x)/(2q)^{exp(Cm)} then costs, by the sparse-site Markov
+    >= (2+o(1)) log2 ln x; [AUTH-O] [TEXT-O] Thm 3.3's site density
+    >> pi(x)/(2q)^{exp(Cm)} then costs, by the sparse-site [PROB-5]
     mechanism (F17.8), a tail-budget inflation
     D -> (2q)^{exp(Cm)} D, i.e.
         J >= log2(b D) + exp(C m) log2(2q)
@@ -1171,22 +1171,22 @@ The prescription length cannot drop below the (E4)/(E5) depth
 floor (6.1(a)): any prescriptive route must pin >= J + K =
 (2+o(1)) log2 ln x consecutive gap values (or their point-set
 equivalent), i.e. a prescribed-tuple event of k ~ L points with
-consecutiveness -- Maynard 1405.2593's own limitation remark
+consecutiveness -- [AUTH-O] [TEXT-O]'s own limitation remark
 (read per the adjudication as a statement about the unconditional
 tool class) applies at every M. The weighted clause relocates
 NOTHING of the prescription burden into the middle: F17.7's
 transplant lead shows the burden can be shifted to a class-count
 LOWER bound for one matched-flank family, which is the same
-blocked class in counting form. Maier-matrix as a fourth tool
+blocked class in counting form. [AUTH-K]-matrix as a fourth tool
 type: mapped in the D3 table -- both selection steps are averaging
 pigeonholes (variability-blind) and its columns are x^{1/D}-sparse
 (F17.8 cost); it joins, not escapes, the register.
 
-## 7. D5 -- certificate layer extension (D5.c STARTED Session A; seed
+## 7. D5 -- certificate layer extension (D5.c STARTED [PHASE-1]; seed
 ## scripts exch_scan.py, exch_cert.py, exch_growth.py,
-## pc_wordcount2.py at dossier/item-0005-workpapers/stress/)
+## pc_wordcount2.py at dossier/[ITEM-PRIOR-ID]-workpapers/stress/)
 
-D5.c script: item-0017-workpapers/stress/balance_stats.py (committed
+D5.c script: [ITEM-SELF-ID]-workpapers/stress/balance_stats.py (committed
 with this dossier), measuring on S_x(A,D) per D0.2/D0.3: |S_x|,
 |W_L|, |P|, C_words, C_sides, the P1 pair count C_sides - C_words,
 exchange class counts, singular-series site moments (D1.c), and the
@@ -1194,7 +1194,7 @@ per-word ratio lambda_w = N_w (ln x)^{L+1}/(S(H_w) x) (D1.a), on the
 seed grid (J,K,D0) in {(4,5,30),(5,5,34),(6,6,64),(7,7,67),(8,8,67)}
 with gap-cap variants A in {none, 8, 4}. Validation at x = 2e6:
 exchange-class counts REPRODUCE the committed record (12 at (4,5,30),
-2 at (5,5,34); tate-transfer Section 4). First calibration data
+2 at (5,5,34); [VERDICT-DOC-ID] Section 4). First calibration data
 (x = 2e6, to be re-measured at 2e7/1e8):
 (a) the naive independent-model side-collision rate underestimates
     the empirical off-diagonal C_sides by ~3.4x PER POSITION
@@ -1202,7 +1202,7 @@ exchange-class counts REPRODUCE the committed record (12 at (4,5,30),
     model 1/(2 ln x) ~ 0.034): parity (factor ~2) plus
     singular-series clumping. M2's model M must carry this
     correction before its numbers are compared to the primes
-    (D5.c's calibration role, kickoff).
+    (D5.c's calibration role, [MANDATE-DOC]).
 (b) singular-series site moments are tame: S2nd/(S1st)^2 in
     [1.32, 1.51] across the grid at 2e6 -- empirical support that
     S-averaging (D1.b/c) is not where the balance dies.
@@ -1263,7 +1263,7 @@ a fortiori zero exchange classes). Quantitatively consistent with
 the collision calculus: expected side collisions at J+K = 14 are
 N^2 (gamma_2^vec/ln x)^{14} ~ 0.5 at 1e9. First (7,7) pairs are
 expected near x ~ 5e9-1e10; recorded as an executor-slot candidate
-after item-0010 (kickoff D5.a discipline).
+after [ITEM-CONSUMER-ID] ([MANDATE-DOC] D5.a discipline).
 
 FIRST b > 1 CERTIFICATES OF THE PROJECT (E5 honored; verified by
 hand this session, gap-by-gap from the printed primes):
@@ -1293,9 +1293,9 @@ the superlinear class growth persists one scale deeper; the first
 class found pairs anchors 267,737 and 979,591,577 (matched flanks
 across three orders of magnitude of scale).
 
-NOTE (seed-script census vs kickoff): the kickoff lists
+NOTE (seed-script census vs [MANDATE-DOC]): the [MANDATE-DOC] lists
 pc_wordcount.py among the committed seed scripts; the committed tree
-at 66adc54 carries only pc_wordcount2.py (plus the three exch_*.py).
+at [PIN-2] carries only pc_wordcount2.py (plus the three exch_*.py).
 git log finds no pc_wordcount.py at any commit. Recorded as U17.5;
 if the v1 script is needed it must be reconstructed from
 pc_wordcount2.py, not assumed.
@@ -1304,11 +1304,11 @@ pc_wordcount2.py, not assumed.
 ## emptied silently)
 
 U17.1 Secondary-source claims pending primary location: (a) the
-      "9 -> 5/4 blocks" reduction attributed to the Pintz
-      1510.04577 / Merikoski line; (b) Merikoski syndeticity.
-      RESOLVED Session A against the primary texts:
+      "9 -> 5/4 blocks" reduction attributed to the [AUTH-A]
+      [TEXT-N] / [AUTH-L] line; (b) [AUTH-L] syndeticity.
+      RESOLVED [PHASE-1] against the primary texts:
       (a) NOT FOUND as phrased -- the secondary phrase conflates two
-      separate printed facts in Pintz 1510.04577: the k = 9 -> k = 5
+      separate printed facts in [AUTH-A] [TEXT-N]: the k = 9 -> k = 5
       reduction is in VALUES beta_i, not blocks ("it is sufficient to
       work with k = 5 values of beta_i in (1.4) instead of k = 9
       values", Section 2 p. 2), and the measure constant improves
@@ -1316,54 +1316,54 @@ U17.1 Secondary-source claims pending primary location: (a) the
       to "5/4"; the proof's actual block count is 4m+1 blocks with
       >= m+1 forced prime-containing ((3.5)-(3.6) p. 4). Anatomy:
       extract/pintz15-quarter.md Section 5.
-      (b) VERIFIED VERBATIM -- Merikoski 1811.03008 Corollary 3
+      (b) VERIFIED VERBATIM -- [AUTH-L] [TEXT-L] Corollary 3
       (Section 1 p. 2: "L cap [T, T + C] != emptyset", C absolute
       ineffective) plus the explicit sentence "Corollary 3 can be
       rephrased as saying that the set of limit points L is
       syndetic"; the paper notes it "actually follows already from
       [2, Theorem 1.1]". Anatomy: extract/merikoski18-limitpoints.md
       Section 1-2.
-U17.2 Kickoff steering heuristic (D1 display): classical per-word
+U17.2 Kickoff [STEERING-ROLE] heuristic (D1 display): classical per-word
       bound N_w <= C_sel(L) S(H_w) x/(log x)^{L+1} with
       C_sel(L) ~ 2^L L!, and the reduction of the balance to
       (log x)^2 > C_sel(L) * S-term * (A/2)^{J+K}. UNVERIFIED,
       orientation only; every constant re-derived in D1.a before use.
-U17.3 Kuperberg regime claims (Thm 1.1 k = O((log h)^{1-delta});
+U17.3 [AUTH-D] regime claims (Thm 1.1 k = O((log h)^{1-delta});
       Thm 1.2 T_k(h) << h^k (3 log k)^k with no growth condition):
       pending extraction verification against the PDF.
-      RESOLVED Session A with a CORRECTION to the kickoff phrasing:
+      RESOLVED [PHASE-1] with a CORRECTION to the [MANDATE-DOC] phrasing:
       Thm 1.1 (p. 2, verbatim) is "Fix delta > 1/2, and let h,k in N
       with k = O((log h)^{1-delta}) ... T_k(h) = h^k + O(h^{k-beta})"
       -- the constraint delta > 1/2 is essential (Rankin-trick
       constraint (1-delta)(2+2alpha)+alpha < 1, p. 7), so the
       asymptotic regime is k below (log h)^{1/2}, NOT any
-      (log h)^{1-delta}; the kickoff line omitted delta > 1/2.
+      (log h)^{1-delta}; the [MANDATE-DOC] line omitted delta > 1/2.
       T_k(h) is the ORDERED distinct-tuple sum (eq (4), p. 2).
       Thm 1.2's growth-condition-free upper bound stands (exact
       display in extract/kuperberg22-singseries.md; re-verify at
       first D1.b use). CRT-method barrier at larger k stated p. 11
       verbatim. Anatomy: extract/kuperberg22-singseries.md.
-U17.4 D2 frame citations (Lau Section 7 format; Gallagher;
-      Granville-Lumley model definitions): exact anchors pending the
-      Session A extraction anatomies. RESOLVED Session A: the model
-      of Section 3.1 is verbatim Granville-Lumley 2009.05000 p. 19
+U17.4 D2 frame citations (Lau Section 7 format; [AUTH-G1];
+      [AUTH-H] model definitions): exact anchors pending the
+      [PHASE-1] extraction anatomies. RESOLVED [PHASE-1]: the model
+      of Section 3.1 is verbatim [AUTH-H] [TEXT-H] p. 19
       ("Consider an infinite sequence of independent random variables
       (X_n)_{n>=3} for which Prob(X_n = 1) = 1/log n ...",
       extract/gl20-heuristics.md Section 7, including the flaw
       discussion used for model-language discipline); the Lau
-      Section 7 usage-pattern anchor stays tate-transfer.md Section 5
-      (item-0005 extraction, unchanged this window).
+      Section 7 usage-pattern anchor stays [VERDICT-DOC-ID].md Section 5
+      ([ITEM-PRIOR-ID] extraction, unchanged this window).
 U17.5 pc_wordcount.py absent from the committed tree (Section 7
-      note); kickoff seed-script list is inexact on this point.
+      note); [MANDATE-DOC] seed-script list is inexact on this point.
 U17.6 Model M1 skeleton items (Section 3.2 (d)): covariance table and
-      greedy-matching floor; Session B obligations. DISCHARGED
-      Session B: Theorem M1 proof steps (d)/(e); independent
+      greedy-matching floor; [PHASE-2] obligations. DISCHARGED
+      [PHASE-2]: Theorem M1 proof steps (d)/(e); independent
       re-derivation pass Section 3.5.
 U17.7 PNT-sharp window-sum mean (P3.1'): the o(1) rate in
       p_N = (1+o(1)) N ln N is used qualitatively only (fixed A'
       strictly inside the threshold absorbs it for x large); no
-      effective PNT form is invoked. Flagged because chain-v1's
-      elementary layer deliberately used only Chebyshev; this
+      effective PNT form is invoked. Flagged because [CHAIN-DOC-ID]'s
+      elementary layer deliberately used only [CLASSIC-1]; this
       dossier's D0.2' layer is the first project use of PNT.
 U17.8 Vector-level collision constant: the D5.c pair counts imply
       per-position rates (1.68/1.58) ABOVE the marginal product
@@ -1371,12 +1371,12 @@ U17.8 Vector-level collision constant: the D5.c pair counts imply
       derivation of the asymptotic vector constant is attempted;
       the F17.5 closure already binds at the (smaller) marginal
       asymptote, so the vector excess only widens the margin.
-U17.9 The gamma_2 asymptote uses the Gallagher-frame gap law
+U17.9 The gamma_2 asymptote uses the [AUTH-G1]-frame gap law
       P(g = d) ~ S_2(d) e^{-d/ln x}/ln x (heuristic; frame anchors
       in extract/gl20-heuristics.md). The F17.5 TRUTH face is
       explicitly heuristic+empirical; the PROVABILITY face does not
       use it.
-U17.10 D1-L's Rosser-Schoenfeld citations (RS1-RS4): the
+U17.10 D1-L's [CLASSIC-4] citations (RS1-RS4): the
       inequalities as stated (with validity ranges) are standard
       R-S 1962 facts, but the executor cited the equation/theorem
       numbers from memory; double-check against the 1962 paper
@@ -1385,18 +1385,18 @@ U17.10 D1-L's Rosser-Schoenfeld citations (RS1-RS4): the
 
 ## 9. Findings register (F17.n)
 
-F17.1 (Section 2.6): the landed Lean consumption interface
+F17.1 (Section 2.6): the landed [PROOF-ASSISTANT] consumption interface
       (ExchangeSupply1) is strictly normal-form (M = 1); the supply
       target set is ordered SUP_1^norm > SUP'_1 > SUP'_b, and only
-      the first closes the Lean gap without further statement-layer
-      work. [Faithfulness watch executed at 66adc54.]
+      the first closes the [PROOF-ASSISTANT] gap without further statement-layer
+      work. [Faithfulness watch executed at [PIN-2].]
 F17.2 (Section 3.3, M2.1): model-balance room is (2 ln x)^M per
       middle position ((log x)^{1+o(1)} at the normal form M = 1);
-      the kickoff's "(log x)^{2-o(1)}" orientation is not
+      the [MANDATE-DOC]'s "(log x)^{2-o(1)}" orientation is not
       reproduced. All D1 budgets recalibrated accordingly.
 F17.3 (Section 3.3, M2.3): capacity-slack obstruction and repair.
       The pinned per-position gap filter forces A asymp L
-      (Markov-only tails), and the D1 Cauchy-Schwarz floor route
+      ([PROB-5]-only tails), and the D1 [INEQ-1] floor route
       then fails EVEN IN THE MODEL by the capacity slack
       (A/4)^{J+K}, independently of any sieve constant. Repair:
       aggregate window-sum filter D0.2' at fixed A'; the floor
@@ -1406,7 +1406,7 @@ F17.3 (Section 3.3, M2.3): capacity-slack obstruction and repair.
       D0.2'.
 F17.4 (Section 3.3, M2.4): post-fix D1.a budget: room 2^{theta L/2}
       vs unconditional per-word constant C_sel(L) ~ 2^L L! (U17.2)
-      -- expected deficit 2^{L(1-theta/2)} L!, the kickoff's "2^L L!
+      -- expected deficit 2^{L(1-theta/2)} L!, the [MANDATE-DOC]'s "2^L L!
       failure" confirmed as the post-fix residual (it would
       otherwise be masked by the capacity slack).
 F17.5 (Section 4.3): collision-constant closure of the unweighted
@@ -1421,25 +1421,25 @@ F17.5 (Section 4.3): collision-constant closure of the unweighted
       M (gamma_2 = 1/2). HL clumping both supplies the exchange
       configurations and defeats the max-entropy capacity floor.
 F17.6 (Section 5, T5): the cross-normalization transport does NOT
-      fail at (E5)'s b-D coupling (the kickoff's expected outcome):
+      fail at (E5)'s b-D coupling (the [MANDATE-DOC]'s expected outcome):
       R-scale caps give J,K ~ (1+o(1)) log2 log x, (E5)-compatible.
       It fails at exactness (o(f) normalized slack vs exact integer
       flank equality) and at tail typicality (W = e^{(1+o(1))Cx}
       site sparsity). Corrected expectation recorded.
-F17.7 (Section 5, T1): transplant shape -- Pintz's Thm 5 exclusion
+F17.7 (Section 5, T1): transplant shape -- [AUTH-A]'s Thm 5 exclusion
       argument, applied to a matched-flank word class, derives
       (E2)-supply from ONE missing input: an HL-type lower bound
       for the class count of a single matched-flank family
       (prescribed-tuple lower bound at k ~ L, the parity-blocked
-      class). Every other step of the pattern (summed Selberg
+      class). Every other step of the pattern (summed [SIEVE-1]
       exclusion of the rigid middle) survives at our depths. The
       sharpest positive lead in the corpus.
-F17.8 (Section 5, standing fact + T3): the sparse-site Markov cost
+F17.8 (Section 5, standing fact + T3): the sparse-site [PROB-5] cost
       -- unconditional tail selection on a density-rho site set
       inflates the tail budget D by 1/rho, hence J by log2(1/rho);
       every TT failure in the corpus is this mechanism (T1/T4:
       log-power rho, self-defeat by factor k; T3: e^{-span},
-      J >= span >= 2J self-defeat; T5: e^{-Cx}; Maier matrix:
+      J >= span >= 2J self-defeat; T5: e^{-Cx}; [AUTH-K] matrix:
       x^{1/D}-sparse columns). Under a Hypothesis-B-shaped
       pointwise bound the T3 trap route CLOSES (scope-qualified,
       consistent with EXCH' < A+B) -- the entire unconditional
@@ -1452,25 +1452,7 @@ F17.8 (Section 5, standing fact + T3): the sparse-site Markov cost
 
 ## 11. Review section
 
-Architecture per B2: R1 same-family fresh-role (computation audit)
-+ R2 cross-family (scope audit), blind, anchor-stripped object
-built with the committed deterministic strip script
-(item-0017-workpapers/strip_payload.py); web OFF; reviewer receives
-exactly payload + object.
-
-R1 (EXECUTED Session D, this run): fresh-instance same-family
-agent; object = payloads/item-0017-review-object-v1.md (sha256
-5a7a2647d11ec40d00b2d2ae2473bfdfd2a32a22ab731b7fe93dfe97b85fbb63,
-deterministic strip of this dossier at the Session C state,
-leak-audited); payload = payloads/item-0017-review-r1-payload-v1.md
-(sha256 43294a706f134a0ef1dcc7c67c053df3f268bbece0b8737984d40acc8fe
-ce250; computation-MANDATORY: C1-C7 re-executions). Review file and
-disposition land below when the reviewer returns.
-
-R2 (OPERATOR-SIDE, pending): cross-family review cannot be launched
-from this environment (B2 requires a different model family); the
-operator receives the same object + a scope-audit payload variant.
-The STOP-AND-REPORT at the end of Session D carries the request.
-Adjudication and any v2 revision follow both reviews; closure
-(roadmap emit-patch, ledger ANN) only after operator ratification
-of the verdict.
+[[PHASE-4]: R1 same-family fresh-role (computation audit) + R2
+cross-family (scope audit), blind, anchor-stripped payload via a
+committed deterministic strip script; web OFF; reviewer receives
+exactly payload + object.]
