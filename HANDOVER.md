@@ -427,10 +427,11 @@ its later sections carry a STALE banner, HANDOVER is the record).
    (steering sha256
    57655d5ab0aeb0b317ab1a53dbb5d22f31e1466d060351570d6401d5dd91669f,
    ephemeral, never committed; scope M1 only; pin 8cb5086). OPEN
-   OPERATOR: BET-07 to 2026-08-08 (evidence against booked in
-   ANN-51); BET-08 candidate (averaged relative extension constant
-   proved o(log x) by a chosen date) offered, not opened -- the
-   prior is the operator's call.
+   OPERATOR: BET-07 runs to the full resolve_by 2026-08-08 --
+   decision ANN-52: no early scoring (evidence against booked in
+   ANN-51). BET-08 OPENED as BET-20260718-08 (item-0020 target
+   proved at dossier grade; p = 0.07 and resolve_by 2026-09-30
+   steering-proposed, registered at the ANN-52 apply).
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
