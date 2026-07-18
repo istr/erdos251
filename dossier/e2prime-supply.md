@@ -1,4 +1,4 @@
-# (E2') supply -- item-0017 working dossier (v0 DRAFT, Session A)
+# (E2') supply -- item-0017 dossier (v2 -- post-R1+R2 revision)
 
 Date: 2026-07-18. Author: steering (Claude Fable 5), item-0017 executed
 against kickoff v1 (operator-ratified, ephemeral, never committed).
@@ -23,90 +23,133 @@ anchors: dossier/chain-v1.md (Lemmas 2.1-2.5), dossier/tate-transfer.md
 (O4, A3), payloads/item-0005-adjudication-v1.md (B1/B2, F1). No edits
 under lean/ this window; no edits to chain-v1.md or tate-transfer.md.
 
-## 1. Verdict (v1, Sessions B-C; all pending slots closed; awaiting
-## the Section 11 review gate before any operator ratification)
+## 1. Verdict (v2, revised under the Section 11 review gate: R1
+## computation audit + R2 cross-family scope audit, adjudicated in
+## payloads/item-0017-adjudication-v1.md; awaiting operator
+## ratification)
 
 NO UNCONDITIONAL (E2')-SUPPLY THEOREM IS PRODUCED; THE ITEM DELIVERS
 THE OBSTRUCTION BRANCH OF THE MANDATE -- a named obstruction per
-blocker with exact quantitative gaps -- plus the statement layer, a
-checked model gate, and an extended certificate layer. Scope
-qualifiers (B1 discipline, binding for every clause below): all
-obstruction claims are LOCATED and corpus-relative (the 14 anchored
-texts plus the chain-v1/tate-transfer infrastructure); no
-impossibility over all conceivable routes is claimed; model
-statements are about Model M only; heuristic constants are labeled
-as such and never load-bearing for provability claims.
+blocker with exact quantitative gaps, each obstruction scoped to
+its route, corpus, and evidence class INLINE below -- plus the
+statement layer, a model gate (proved-with-appendix, U17.12), and
+an extended certificate layer. Standing scope (B1 discipline): all
+obstruction claims are LOCATED, route- and corpus-relative (the 14
+anchored texts plus the chain-v1/tate-transfer infrastructure); no
+impossibility over all conceivable routes, statistics, or filter
+shapes is claimed anywhere in this document; model statements are
+about Model M only; heuristic constants are labeled at each use.
 
-V1 (architecture sound; D2 gate). GATE: PASS WITH AMENDMENTS
-(Section 3.4). In Model M the SUP'_1-analogue holds a.s. along
-dyadic scales with x^{2-o(1)} ordered and x^{1-o(1)} disjoint
-(E2')-pairs (Theorem M1, independently checked); the balance closes
-with relative room (2 ln x)^M (M2, F17.2 correcting the kickoff's
-(log x)^2 orientation). The failure of unconditional supply is
-primes-specific, not architectural.
+V1 (D2 gate). GATE: PASS WITH AMENDMENTS (Section 3.4). In Model M
+the SUP'_1-analogue holds a.s. along dyadic scales with x^{2-o(1)}
+ordered and x^{1-o(1)} disjoint (E2')-pairs (Theorem M1; the
+concentration layer's truncation/indexing repairs are Section 3.2a,
+sketch-grade, registered U17.12; constants independently checked,
+Section 3.5); the balance closes with relative room (2 ln x)^M
+(M2, F17.2 correcting the kickoff's (log x)^2 orientation). The
+tested obstruction is absent in Model M: the model gate finds no
+architectural contradiction at this level [v2 narrowing of v1's
+"primes-specific, not architectural", per R2 MINOR-4].
 
-V2 (the counting route, exactly closed). P1 fixes the battleground
-(C_sides - C_words > 0). The unconditional floor is
-capacity-limited twice over: (a) per-position filters force
-A asymp L and die by capacity slack (A/4)^{J+K} even in the model
-(F17.3); (b) after the aggregate-filter repair D0.2' (threshold
-A' < 4 sqrt(2)/e = 2.08104, room theta(A') = 1 - (2/ln 2)
-ln(e A'/4)), the primes close the route through the
-exactly-computed two-point HL mass: gamma_2 -> E_even[S_2^2]/4 =
-1.150481 > gamma_2^crit = 2 sqrt(2)/e = 1.040520 (F17.5) -- a
-sieve-constant-independent closure with a strikingly thin margin
-(ratio 1.106), invisible in the model (gamma_2 = 1/2), measured
-above threshold at every reachable x. The S-weighted repair's own
-tool constant at k = 2 IS the same 1.1505 (D1.c): the counting
-route funnels into HL lower bounds at matched flanks -- blocker 2
--- with no constant to spare.
+V2 (the unweighted max-entropy floor route: closed route-
+relatively, heuristically-and-by-measurement). P1 fixes the
+battleground for THIS statistic (C_sides - C_words > 0; other
+counting statistics are not classified). Two results, each scoped:
+(a) PROVED (route-relative, model-checked): per-position filters
+force A asymp L and the capacity floor dies by slack (A/4)^{J+K}
+even in Model M (F17.3); the aggregate repair D0.2' has threshold
+A' < 4 sqrt(2)/e = 2.08104 with room theta(A') = 1 - (2/ln 2)
+ln(e A'/4). (b) MEASURED + HEURISTIC (primes side): the reported
+prime data lie above the critical collision threshold at every
+reported measurement scale and grid point (marginal gamma_2 =
+1.2005/1.1808/1.1711 at 2e6/2e7/1e8; vector-level 1.68/1.58/1.55),
+and the HL-frame marginal asymptote E_even[S_2^2]/4 = 1.150481 >
+gamma_2^crit = 2 sqrt(2)/e = 1.040520 (margin ratio 1.106)
+predicts the obstruction persists; the closure is
+sieve-constant-independent and invisible in the model (gamma_2 =
+1/2). NO UNCONDITIONAL ASYMPTOTIC CLOSURE IS PROVED: the
+load-bearing growing-window collision law (tensorization of the
+marginal constant) is open and registered (U17.11(a)), as is the
+growing-k compounding of the k = 2 second-moment identity that
+scopes the S-weighted repair (U17.11(b)). The S-weighted floor and
+typical-set capacity refinements remain open routes, each meeting
+a named blocker as analyzed in Sections 4.3-4.4 [v2 rewording per
+R2 FATAL-1; the v1 headline "exactly closed" overclaimed relative
+to this body].
 
-V3 (blockers hardened, M-invariant; D4). The depth floor
-J + K >= (2+o(1)) log2 ln x is (E4)/(E5)-forced for every middle
-width M: the weighted clause relocates no burden. Blocker 1
-(pigeonhole): strictly finer blindness at M >= 2 (the E-invariant
-degeneracy); the normal form M = 1 is pigeonhole-optimal. Blocker
-2 (parity-blocked prescription): burden M-invariant; T1-transplant
-form in V4. Blocker 3 (Shiu): exact killing inequality
-(ln x)^{(2C/ln 2)(1+o(1))} <= (1+o(1)) log2 ln x, false at every M
-and every difference distribution. Uniformly behind every
+V3 (blockers hardened at the weighted clause; D4). For
+positive-density routes controlled through the D0/Markov selection
+layer (tail-typical sites, D >= typical delta ~ ln x), the depth
+floor J + K >= (2+o(1)) log2 ln x is (E4)/(E5)-forced for every
+middle width M: the weighted clause relocates no burden there; a
+route using atypically-small-tail sites exits this floor and
+instead owes a separate density-versus-depth analysis (F17.8's
+sparse-site cost) [v2 qualifier per R2 MAJOR-3]. Blocker 1
+(pigeonhole): for the ungraded P1 side-collision statistic, M >= 2
+adds the E = 0 degeneracy -- a strictly finer blindness for THAT
+statistic; E-sensitive statistics are not classified (6.2).
+Blocker 2 (parity-blocked prescription): burden M-invariant for
+the mapped tool class; T1-transplant analysis in V4. Blocker 3
+(Shiu): exact killing inequality (ln x)^{(2C/ln 2)(1+o(1))} <=
+(1+o(1)) log2 ln x, false at every M and every difference
+distribution, for the string-prescription mechanism and
+Markov-tail selection as displayed. Behind every MAPPED
 tail-typicality failure in the corpus: the sparse-site Markov cost
-(F17.8; density rho costs log2(1/rho) in J). Corrected
-expectation: T5 transport dies at exactness + tail-typicality, NOT
-at the (E5) b-D coupling (F17.6). Under a Hypothesis-B-shaped
-pointwise bound the T3 trap route closes (scope-qualified) -- the
-entire unconditional content of supply-by-construction is the
-sparse-site tail clause.
+(F17.8). Corrected expectation: T5 transport dies at exactness +
+tail-typicality, NOT at the (E5) b-D coupling (F17.6). Under a
+Hypothesis-B-shaped pointwise bound the mapped T3 trap
+implementation closes (scope-qualified); for that implementation
+the remaining unconditional gap is the sparse-site tail clause.
 
-V4 (the sharpest residual, successor target). F17.7: Pintz's Thm 5
-exclusion pattern, transplanted to one matched-flank word class,
-derives (E2)-supply from a SINGLE missing input -- an HL-type lower
-bound for the class count of one matched-flank family at
-k ~ L = (2+o(1)) log2 ln x. The summed-Selberg exclusion side is
-quantitatively AVAILABLE at our depths: D1-L (Section 4.1) is
-k-uniform precisely in-regime, so excluding a rigid middle over
-all <= A' L ln x/2 candidate values costs a factor the exclusion
-budget absorbs; only the class-count lower bound is missing.
-Equivalently (P1): the anti-rigidity counting statement of
-adjudication-F2 form. All roads of this dossier terminate at this
-one input.
+V4 (the residual, successor target; v2 REWRITE per R2 FATAL-2,
+adjudication Section 2). The T1 exclusion pattern, transplanted to
+one matched-flank word class, needs THREE inputs, none supplied by
+this dossier or its corpus:
+(i)   an HL-type LOWER bound for the class count of one
+      matched-flank family at k ~ L = (2+o(1)) log2 ln x
+      (parity-blocked prescription class);
+(ii)  an extension UPPER bound whose constant is o(ln x) at
+      k ~ lnln x: the rigidity exclusion needs C_per(k+1) *
+      S-ratio < c ln x, and EVERY displayed sieve input fails it
+      -- the self-proved C*(k+1) and the classical 2^k k! alike
+      carry exp((1+o(1)) k ln k) >> ln x (FINDING F17.9, credit
+      R2: the v1 claim that D1-L's budget absorbs the exclusion
+      was FALSE and is retracted; the T1 pattern's exclusion step
+      works at Pintz's fixed k and breaks at growing k on the
+      constant, independently of which admissible bound is used);
+(iii) a tail-intersection statement: the class lower bound must
+      survive the (E4) caps in the filters-first order (the T1
+      anatomy's own clause (b), restored to the verdict).
+The P1-equivalent anti-rigidity target (adjudication-F2 form)
+remains the natural successor-item core, now with the exclusion
+side known to need new technology beyond any k-uniform Selberg
+constant.
 
 V5 (consumption interface, faithfulness). F17.1 + ledger-K1
 convergence: only SUP_1^norm feeds the landed ExchangeSupply1
-verbatim; supply order SUP_1^norm > SUP'_1 > SUP'_b. FW-1..4
-divergence register in Section 2.6; no silent absorption either
-direction.
+verbatim; supply priority order SUP_1^norm > SUP'_1 > SUP'_b
+(">" = consumer-fit priority, NOT logical strength -- SUP'_b over
+all odd b is the logically strongest of the family; R2 NOTE-2
+gloss adopted). FW-1..4 divergence register in Section 2.6; no
+silent absorption either direction.
 
-V6 (certificates; acceptance clause). D5.c grid reproduces the
-committed class counts (12/178/1287, 2/21/143, first (6,6,64) at
-1e8) and lands the calibration constants (vector gamma_2
-1.68/1.58/1.55; marginal 1.2005/1.1808; Euler product = direct
-sum). D5.b at 1e9 (Section 7.2): the project's FIRST b > 1
-certificates -- inline (7,6,44,3) with d_1 = -24 (hand-verified),
-plus (7,6,27,5) on the same sites; one constellation kills
-b in {1,3,5}; (7,7)/(8,8) frontier located (zero side collisions
-at 1e9, consistent with the collision calculus); (6,6,64) grows
-1 -> 29 classes from 1e8 to 1e9.
+V6 (certificates; acceptance clause; v2 evidence-class split per
+R2 MAJOR-7/MINOR-3). D5.c grid outputs match the class counts of
+the prior committed record (12/178/1287, 2/21/143, first (6,6,64)
+at 1e8 -- a project-history statement, in-repo verifiable, and
+independently recomputed by R1) and land the calibration constants
+(vector gamma_2 1.68/1.58/1.55; marginal 1.2005/1.1808/1.1711; the
+D = 2e6 direct sum agrees with the Euler-product value to 8.1e-5).
+D5.b at 1e9 (Section 7.2): b > 1 certificates -- inline (7,6,44,3)
+with d_1 = -24, whose finite word data (gaps, flank match, middle
+difference, (E5) gates) are hand-verified from the printed primes,
+whose delta tails and scan totals are script outputs (d5b_deep.py;
+independently recomputed by R1), and which are the first b > 1
+certificates in the searched project record; plus (7,6,27,5) on
+the same sites; one constellation kills b in {1,3,5}; (7,7)/(8,8)
+frontier located (zero side collisions at 1e9, consistent with the
+collision calculus); (6,6,64) grows 1 -> 29 classes from 1e8 to
+1e9.
 
 Acceptance-intent check: "unconditional theorem feeding EXCH'_b" --
 NOT delivered (obstruction branch taken, as the mandate's
@@ -567,23 +610,46 @@ Proof.
     the model tails delta^M have mean E[delta^M] = E[h](1+o(1)) =
     (1+o(1)) ln x (the 2^{-j}-weights sum to 1), so Markov at
     D = ceil(13 C_0 A ln x) and at 2^K >= D removes density o(1).
+    Concentration layer [v2 REPAIR per R2 MAJOR-1; sketch-grade,
+    write-out debt U17.12]:
+    (a1) TRUNCATION: replace each delta^M_i by its truncation to
+    the first J_0 := K + ceil(4 log2 ln x) tail positions; the
+    discarded mass is <= 2^{-J_0} sum_{j>J_0} h 2^{J_0-j}-type and
+    exceeds 1 only if some gap among the next O(ln x) positions
+    exceeds 2^{J_0/2}-scale -- probability o(x^{-2}) per site; all
+    filter events are then functions of FINITELY many gaps, and
+    the filter thresholds move by at most 1 (absorbed in D's
+    ceiling). The v1 parenthesis "functions of disjoint gap
+    blocks" was asserted without this step (R2 MAJOR-1 sustained).
+    (a2) INSERTION-LIPSCHITZ: the filtered-site count is a
+    function of the independent (X_n); flipping one X_n inserts or
+    deletes one model prime, which splits or merges one gap; every
+    other site's gap WINDOW is a shifted copy with unchanged
+    content, so only the O(L) truncated windows containing the
+    edit point change value: single-flip difference <= c(L+J_0).
+    McDiarmid over n in (x/2, 2x] gives deviation
+    2 exp(-mu^2/(2 x c^2 (L+J_0)^2)) = exp(-x^{1-o(1)}).
     Hence a.s. eventually N_S >= x/(8 ln x) =: N_1 at every dyadic
-    scale (Chernoff + Borel-Cantelli; filter events are functions of
-    disjoint gap blocks, so the filtered count is a Lipschitz
-    function of independent blocks and McDiarmid applies; crude
-    bounds suffice at the stated density).
+    scale (Borel-Cantelli).
 (b) Per-position collision. Two gaps at disjoint sites are
     independent near-Geometric(p): q_2 := P(h = h') =
     sum_t (p(1-p)^{t-1})^2 = p/(2-p) = (1+o(1))/(2 ln x). Similarly
     q_3 := P(h = h' = h'') = p^2/(3 - 3p + p^2) = (1+o(1)) p^2/3,
     and max_t P(h = t) = p.
-(c) Ordered pair count. For disjoint sites (index distance > L+2),
-    side-match probability is q_2^{J+K}; conditional on the side
-    match, the two middles differ with probability 1 - q_2 =
-    1 - O(1/ln x); the four cap events change all displayed
-    probabilities by 1+o(1) factors (their failure probabilities are
-    o(1) even conditionally on any window values under the cap, since
-    tails are dominated by the geometric mass beyond the window).
+(c) Ordered pair count. For disjoint sites (index distance >
+    L+J_0+2 after the (a1) truncation -- truncated windows
+    disjoint, hence independent), side-match probability is
+    q_2^{J+K}; conditional on the side match, the two middles
+    differ with probability 1 - q_2 = 1 - O(1/ln x); the cap
+    events change all displayed probabilities by 1+o(1) factors
+    [v2 REPAIR per R2 MAJOR-1: explicitly, conditional on ANY
+    admissible values of the L window gaps under the aggregate
+    cap, each cap event is determined by the truncated tail beyond
+    the window, whose conditional distribution is that of fresh
+    independent gaps; its failure probability is o(1) uniformly in
+    the conditioning by the same Markov bounds as in (a), giving
+    the two-sided estimate 1 - o(1) <= P(caps | windows) <= 1
+    uniformly].
     With T := #ordered disjoint qualifying pairs:
     E[T] = (1+o(1)) N_S^2 q_2^{J+K}, and
     (2 ln x)^{J+K} = exp((2/ln 2 + o(1)) (lnln x)^2) = x^{o(1)}
@@ -905,16 +971,22 @@ primes (measurements: balance_stats.py, d1c_gamma2.py; committed):
   (2e7) -- ABOVE the marginal product, i.e. consecutive-gap
   correlations add clumping beyond independent marginals (U17.8).
 - Critical value: gamma_2^crit = 2 sqrt(2)/e = 1.040520...
-CONSEQUENCE: gamma_2 > gamma_2^crit in every measurement and in the
-heuristic asymptote (margin ratio 1.106 at the asymptote -- a
-remarkably thin, but strict, closure). Hence A'_crit < 1 for the
-primes: NO admissible aggregate cap A' > 1 opens the unweighted
-floor route. Obstruction statement (B1 discipline, scope exact):
+CONSEQUENCE: gamma_2 > gamma_2^crit at every reported measurement
+scale and grid point, and at the heuristic asymptote (margin ratio
+1.106 -- a remarkably thin, but strict, margin). Hence, UNDER THE
+HL-FRAME COLLISION ASYMPTOTE AND AT THE REPORTED SCALES, no fixed
+aggregate cap A' > 1 opens this D0.2' max-entropy floor
+[v2 scoping per R2; the asymptotic persistence rests on the
+tensorization step U17.11(a), open]. Obstruction statement (B1
+discipline, scope exact):
 (a) PROVABILITY face: the floor's capacity term is the max-entropy
-    simplex count; tightening it to the primes' true side-support
-    requires exactly a two-point HL-type input (the collision
-    constant), unavailable unconditionally -- the route cannot be
-    completed by counting alone.
+    simplex count; the DISPLAYED tightening to the primes' true
+    side-support amounts to a two-point HL-type input (the
+    collision constant), unavailable unconditionally -- this
+    max-entropy implementation cannot be completed with the
+    supplied unconditional counting inputs. Other capacity/entropy
+    refinements (e.g. typical-set supports) are not classified
+    here (route (2) below).
 (b) TRUTH face (heuristic + empirical, model-language discipline):
     the target inequality floor > C_words is FALSE for the primes
     at every A' > 1 if gamma_2 > 1.0405, as all measurements and
@@ -945,8 +1017,9 @@ per-position multiplicative: no fixed M escapes.
 ### 4.4 D1.c -- the S second moment at growing k (COMPLETE:
 ### named as the precise missing estimate)
 
-The S-weighted floor (the only repair of F17.5's closure that
-stays on the counting route) is, for any nonnegative side weights
+The S-weighted floor (one repair of F17.5's closure on the
+counting route, alongside the typical-set capacity route of
+4.3(2); v2 wording per R2) is, for any nonnegative side weights
 w_P, C_sides >= (sum_{sites} w_{P(site)})^2 / sum_P w_P^2; the
 optimizing choice w_P = HL side-mass needs
 (i) LOWER bounds on sum_{sites} S_side(P(site)) -- HL-type lower
@@ -979,13 +1052,17 @@ moment at growing k" = estimate (ii). Status in the tool base:
   quality is FALSE as stated, and the honest form of (ii) must
   carry the exact constant (1.1505...)^k -- which then re-enters
   the floor calculus as gamma_2 and reproduces the F17.5 closure.
-CONCLUSION (obstruction-language): the S-weighted repair is not
-merely missing a tool; at the two-point level the tool's true
-constant is exactly the one that closes the unweighted route.
-What remains open is only whether HL LOWER bounds at matched
-flanks (input (i), parity-blocked) could beat the second-moment
-denominator by the Cauchy-Schwarz slack -- i.e., the counting
-route funnels back into blocker 2 with no constant to spare.
+CONCLUSION (obstruction-language, v2 scope): the S-weighted repair
+is not merely missing a tool; at the two-point level the tool's
+true constant is exactly the one that closes the unweighted route.
+What remains open for THIS repair is twofold [v2 per R2 FATAL-1]:
+(1) whether HL LOWER bounds at matched flanks (input (i),
+parity-blocked) could beat the second-moment denominator by the
+Cauchy-Schwarz slack, AND (2) the growing-k compounding of the
+k = 2 constant on the relevant simplex (U17.11(b)), which the
+k = 2 identity makes plausible but does not prove. For the mapped
+inputs, this repair funnels into blocker 2; other counting
+statistics and floors are outside this analysis.
 
 ### 4.5 D1.d -- Chen substitution mapped (COMPLETE)
 
@@ -1125,19 +1202,24 @@ P(z) = x^{1/D}: polynomially sparse, Markov cost x^{1/D} -> J ~
 kickoff hold simultaneously: prescription-free (parity-safe but
 variability-blind) AND sparse-sited.
 
-TABLE SUMMARY (unconditional reach): exact flanks -- only T3, at
-self-defeating trap sparsity; middle variability certificate --
-only T1, at event (not word) level, blocked by the class lower
-bound; tail typicality -- only unfiltered positive-density site
-sets (this dossier's D0.2/D0.2' selection layer); depth
-(E5)-compatibility -- generic (even R-scale transports pass, F17.6).
-No mechanism or composition in the corpus supplies all clauses
-simultaneously; each composition meets at least one of: class
-lower bounds (parity-blocked), sparse-site Markov cost
-(Shiu-circularity shape), pigeonhole variability-blindness. The
-three O4 blockers are confirmed EXHAUSTIVE for this corpus, with
-the sparse-site Markov cost now quantified as the uniform
-mechanism behind every TT failure.
+TABLE SUMMARY (unconditional reach; v2 scope per R2 MAJOR-4):
+among the MAPPED mechanisms -- exact flanks: only T3, at
+self-defeating trap sparsity; middle variability certificate: only
+T1, at event (not word) level, blocked by the class lower bound
+(and, post-F17.9, by the growing-k exclusion constant); tail
+typicality: only unfiltered positive-density site sets (this
+dossier's D0.2/D0.2' selection layer); depth (E5)-compatibility:
+generic (even R-scale transports pass, F17.6). Every individually
+mapped mechanism (T1-T6, Maier matrix), in its displayed
+implementation, meets at least one of: class lower bounds
+(parity-blocked), sparse-site Markov cost (Shiu-circularity
+shape), pigeonhole variability-blindness; and no composition
+EXAMINED here supplies all clauses simultaneously. Exhaustiveness
+over all possible compositions of the corpus is NOT established
+(no composition-closure argument is supplied); the three-blocker
+register is confirmed for the mapped implementations, with the
+sparse-site Markov cost quantified as the common mechanism behind
+every MAPPED TT failure.
 
 ## 6. D4 -- blocker hardening at the weighted clause (drafted
 ## Session B; each O4 blocker gets a WEIGHTED-CLAUSE addendum)
@@ -1187,10 +1269,12 @@ model only): conditional on a side match with differing middles,
 P(E = 0) is a single lattice condition on the middle-difference
 vector, of probability O(1/ln x) at M = 2 -- so the degeneracy is
 measure-thin in the model, but certifying THAT for the primes is
-once more HL-type information. Net: the general (E2') clause makes
-pigeonhole-blindness strictly worse, never better; the normal form
-M = 1 is the pigeonhole-optimal instance (one more reason the
-supply order of F17.1 puts SUP_1^norm first).
+once more HL-type information. Net (v2 scope per R2): for the
+UNGRADED P1 side-collision statistic, M >= 2 adds the E = 0
+degeneracy -- blindness strictly finer for THAT statistic, and the
+normal form M = 1 is its optimal instance (one more reason the
+supply order of F17.1 puts SUP_1^norm first); E-sensitive counting
+statistics are not classified by this addendum.
 
 ### 6.3 Blocker 2 addendum: parity-blocked prescription at the
 ### weighted clause
@@ -1417,6 +1501,24 @@ U17.10 D1-L's Rosser-Schoenfeld citations (RS1-RS4): the
       numbers from memory; double-check against the 1962 paper
       before any external circulation. The proof consumes only the
       four stated inequalities.
+U17.11 (v2, from R2 FATAL-1; load-bearing open steps behind the
+      F17.5 TRUTH face): (a) TENSORIZATION -- no theorem bounds
+      the (J+K)-window consecutive-gap collision constant below by
+      the marginal gamma_2, nor keeps its geometric mean above
+      gamma_2^crit as J+K grows; the closure's asymptotic
+      persistence is exactly this open step (the finite-scale
+      measurements and the marginal asymptote are evidence, not
+      proof). (b) GROWING-k COMPOUNDING -- the k = 2 second-moment
+      identity 1.1505 does not prove the (1.1505 - o(1))^k lower
+      compounding on the growing simplex used in D1.c's honest
+      form.
+U17.12 (v2, from R2 MAJOR-1): M1's concentration layer (delta
+      truncation a1; insertion-Lipschitz a2; caps-conditioning in
+      (c)) is repaired at sketch grade in Section 3.2; a
+      referee-grain write-out (explicit constants in the
+      truncation error, the McDiarmid bounded-difference table,
+      and the uniform conditional estimate) is registered debt.
+      M2.2's a.s. clause inherits the same appendix.
 
 ## 9. Findings register (F17.n)
 
@@ -1450,25 +1552,42 @@ F17.5 (Section 4.3): collision-constant closure of the unweighted
       gamma_2 exceeds it in every measurement (1.20/1.18 marginal
       at 2e6/2e7; 1.68/1.58 vector-level) and at the heuristic
       asymptote E_even[S_2^2]/4 = 1.1505 (Euler product =
-      4.601923/4, confirmed by direct summation). The route is
-      closed for the primes at every admissible A' > 1,
-      independently of the sieve constant, and invisibly to Model
-      M (gamma_2 = 1/2). HL clumping both supplies the exchange
-      configurations and defeats the max-entropy capacity floor.
+      4.601923/4, confirmed by direct summation to 8.1e-5). Under
+      the HL-frame asymptote and at every reported measurement,
+      no fixed A' > 1 opens this max-entropy floor -- the closure
+      is sieve-constant-independent and invisible to Model M
+      (gamma_2 = 1/2); its asymptotic persistence rests on the
+      open tensorization step U17.11(a) [v2 scope per R2]. HL
+      clumping both supplies the exchange configurations and
+      defeats this capacity floor.
 F17.6 (Section 5, T5): the cross-normalization transport does NOT
       fail at (E5)'s b-D coupling (the kickoff's expected outcome):
       R-scale caps give J,K ~ (1+o(1)) log2 log x, (E5)-compatible.
       It fails at exactness (o(f) normalized slack vs exact integer
       flank equality) and at tail typicality (W = e^{(1+o(1))Cx}
       site sparsity). Corrected expectation recorded.
-F17.7 (Section 5, T1): transplant shape -- Pintz's Thm 5 exclusion
-      argument, applied to a matched-flank word class, derives
-      (E2)-supply from ONE missing input: an HL-type lower bound
-      for the class count of a single matched-flank family
-      (prescribed-tuple lower bound at k ~ L, the parity-blocked
-      class). Every other step of the pattern (summed Selberg
-      exclusion of the rigid middle) survives at our depths. The
-      sharpest positive lead in the corpus.
+F17.7 (Section 5, T1; v2 REWRITE per R2 FATAL-2): transplant shape
+      -- Pintz's Thm 5 exclusion argument, applied to a
+      matched-flank word class, would derive (E2)-supply from
+      THREE inputs: (i) an HL-type class-count lower bound at
+      k ~ L (parity-blocked class); (ii) an extension upper bound
+      with constant o(ln x) at growing k (NOT available: F17.9);
+      (iii) tail-intersection in the filters-first order. The v1
+      form of this entry claimed (ii) was supplied by D1-L; that
+      claim was FALSE and is retracted (adjudication Section 2,
+      FATAL-2). Still a structurally informative lead; no longer
+      "one missing input".
+F17.9 (v2, credit R2 FATAL-2; steering-re-executed): the
+      growing-k exclusion-constant wall. The T1 rigidity exclusion
+      needs C_per(k+1) * S-ratio < c ln x; every displayed sieve
+      constant -- the self-proved C*(k+1) AND the classical
+      2^k k! -- carries exp((1+o(1)) k ln k) >> ln x at
+      k ~ (2/ln 2) lnln x. The exclusion step of the T1 pattern is
+      fixed-k technology: at exchange depths it fails on the
+      constant regardless of which admissible per-word bound is
+      used. Any successor item pursuing the transplant needs a
+      structurally different exclusion device, not a better
+      Selberg constant.
 F17.8 (Section 5, standing fact + T3): the sparse-site Markov cost
       -- unconditional tail selection on a density-rho site set
       inflates the tail budget D by 1/rho, hence J by log2(1/rho);
@@ -1476,10 +1595,12 @@ F17.8 (Section 5, standing fact + T3): the sparse-site Markov cost
       log-power rho, self-defeat by factor k; T3: e^{-span},
       J >= span >= 2J self-defeat; T5: e^{-Cx}; Maier matrix:
       x^{1/D}-sparse columns). Under a Hypothesis-B-shaped
-      pointwise bound the T3 trap route CLOSES (scope-qualified,
-      consistent with EXCH' < A+B) -- the entire unconditional
-      content of (E2')-supply-by-construction is the sparse-site
-      tail clause.
+      pointwise bound the mapped T3 trap implementation CLOSES
+      (scope-qualified, consistent with EXCH' < A+B) -- for that
+      implementation, the remaining unconditional gap is the
+      sparse-site tail clause [v2 scope per R2 MAJOR-5; the v1
+      "entire unconditional content of supply-by-construction"
+      read beyond the mapped implementations].
 
 ## 10. Follow-up candidates (described only; never silently executed)
 
@@ -1532,10 +1653,34 @@ workpaper internals; the extraction anatomies) -- both in-repo and
 steering-verified; the operator may widen the R2 object to include
 them.
 
-R2 (OPERATOR-SIDE, pending): cross-family review cannot be launched
-from this environment (B2 requires a different model family); the
-operator receives the same object + a scope-audit payload variant.
-The STOP-AND-REPORT at the end of Session D carries the request.
-Adjudication and any v2 revision follow both reviews; closure
-(roadmap emit-patch, ledger ANN) only after operator ratification
-of the verdict.
+R2 (EXECUTED OPERATOR-SIDE): GPT-5.6 Sol, cross-family, scope
+audit against the same object/payload hashes; review registered as
+payloads/item-0017-review-r2-v1.md. VERDICT "UNSOUND", confidence
+0.96: 2 FATAL + 7 MAJOR + 4 MINOR + 2 NOTE, all scope/entitlement
+class except FATAL-2.
+
+ADJUDICATION (payloads/item-0017-adjudication-v1.md; every
+disposition steering-re-executed): R2's verdict SUSTAINED against
+the v1 VERDICT LAYER, not against the computational body (which R1
+independently reproduced in full). FATAL-2 sustained
+SUBSTANTIVELY -- the v1 V4 claim that D1-L's budget absorbs the
+rigid-middle exclusion was FALSE (C_per(k+1) = exp((1+o(1)) k
+ln k) >> ln x for every displayed sieve bound, classical included);
+V4/F17.7 rewritten, new finding F17.9. FATAL-1 sustained as the
+central wording overclaim (v1 "exactly closed" promoted the
+body's labeled heuristic+measured closure to an unconditional
+primes-side claim); V2 rewritten, tensorization + growing-k
+compounding registered as U17.11. MAJOR-1 sustained
+(proof-completeness): M1's concentration layer repaired at sketch
+grade (truncation a1, insertion-Lipschitz a2, caps-conditioning),
+write-out debt U17.12. MAJOR-2/-6 and MINOR-2 CONVERGENT with R1
+m-3/M-1/m-1 (three independent cross-family convergences on
+identical defects; already repaired post-R1). MAJOR-3/4/5/7,
+MINOR-1/3/4, NOTE-2: sustained as wording/scope, all executed in
+this v2 (V3, Section 5 summary, S2-sweep sentences, certificate
+evidence-class split, V5 gloss). Two minor corrections to R2
+recorded in the adjudication (Euler-product exactness; the
+body-vs-headline locus of the "inconsistency"). This document is
+v2; the mandate outcome is unchanged in kind (obstruction branch),
+with every strong clause now carrying its route/corpus/evidence
+scope inline. Operator ratification decision pending on this v2.

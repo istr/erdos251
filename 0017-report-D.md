@@ -124,3 +124,59 @@ The mandate's disjunction is discharged on the obstruction branch:
   sieve).
 - Lean extension layer (only if ever needed for consumption):
   weighted-(E2') generalization of ExchangeAt (per K1 and FW-1).
+
+## 6. ADDENDUM (post-R2 adjudication + v2, same date)
+
+R2 (GPT-5.6 Sol, cross-family) delivered operator-side:
+payloads/item-0017-review-r2-v1.md, sha256
+6fc1f7f7a469fa44e2b5b3154f3c2fa0c11f8cf0137914a8e598026c490889c0.
+Verdict UNSOUND (0.96), 2 FATAL + 7 MAJOR, scope-audit class.
+
+Adjudication executed (payloads/item-0017-adjudication-v1.md),
+every disposition steering-re-executed:
+- FATAL-2 SUSTAINED SUBSTANTIVELY (the one content error): v1-V4's
+  claim that D1-L's exclusion budget absorbs the rigid-middle
+  exclusion was FALSE (needs C_per(k+1) < c ln x; every displayed
+  constant, classical 2^k k! included, is exp((1+o(1)) k ln k)
+  >> ln x). V4/F17.7 rewritten; new finding F17.9 (growing-k
+  exclusion-constant wall; a successor item needs a structurally
+  different exclusion device, not a better Selberg constant).
+- FATAL-1 SUSTAINED AS WORDING (item-0005 P1 pattern recurred):
+  V2's "exactly closed" promoted the body's labeled
+  heuristic+measured closure to an unconditional primes claim;
+  rewritten; tensorization + growing-k compounding registered
+  (U17.11).
+- MAJOR-1 sustained (M1 concentration layer): repaired at sketch
+  grade (truncation, insertion-Lipschitz, caps-conditioning);
+  write-out debt U17.12.
+- MAJOR-2/-6, MINOR-2: CONVERGENT with R1 m-3/M-1/m-1 -- three
+  independent cross-family convergences on identical defects
+  (process finding B3), all already repaired post-R1.
+- MAJOR-3/4/5/7, MINOR-1/3/4, NOTE-2: sustained as wording; all
+  executed in v2.
+- Two minor corrections to R2 recorded (Euler-product exactness;
+  headline-vs-body locus of the alleged inconsistency).
+
+Dossier is now v2. Mandate outcome unchanged in kind (obstruction
+branch; acceptance clause still discharged: named obstructions
+with exact gaps, now honestly scoped, + certificate layer). The
+verdict's strongest clauses now carry route/corpus/evidence scope
+inline; the residual (V4) is a TRIPLE requirement.
+
+OPERATOR DECISIONS NOW DUE:
+(1) Ratification decision on the v2 verdict (or further revision
+    instructions).
+(2) Whether to show R2's reviewer the v2 delta for a closing
+    comment (adjudication Section 6 option).
+(3) Closure on ratification: roadmap emit-patch + ledger ANN
+    (draft in Section 4(c) above, now also citing R2, the
+    adjudication, F17.9, U17.11/12, and process findings B3-B5).
+(4) payloads/HASHES.txt booking for: review object, R1/R2
+    payloads, R1 review, R2 review, adjudication (sha256 list in
+    Sections 4(a)/6 and the adjudication preamble).
+(5) Untracked operator file deep-research-report.md (German
+    literature survey on the S-weighted repair's input (ii);
+    corroborates the D1.c gap beyond the corpus): left uncommitted
+    and NOT absorbed into the dossier -- out-of-corpus evidence
+    under the identification duty; absorb only after
+    item-0004-style primary verification, at operator discretion.
