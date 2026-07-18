@@ -432,6 +432,32 @@ its later sections carry a STALE banner, HANDOVER is the record).
    ANN-51). BET-08 OPENED as BET-20260718-08 (item-0020 target
    proved at dossier grade; p = 0.07 and resolve_by 2026-09-30
    steering-proposed, registered at the ANN-52 apply).
+2j. ITEM-0018 M1 ON BRANCH (2026-07-19; record ANN-53). Branch
+   item-0018 at d0cde9b (base main 32b91ea), one additive commit:
+   dossier/relext-statements.md v1 (8 candidates, rule-15 sheets,
+   six-question audits, reuse audit, D4 design, D5 verdict),
+   budget workpapers, 0018-report-M1.md. Steering re-verified:
+   gates green at d0cde9b, writes-scope exact, zero lean/ edits,
+   budget_sheet.py reproduces its tables BYTE-IDENTICALLY, the
+   T4/c*/pin arithmetic re-checked, firewall clean. In-run
+   nine-agent audit: 3F/17M/44m/27n raised, 2 FATAL sustained
+   (false worst-case rho cap -- CRT-aligned classes reach
+   (ln x)^(1-o(1)), witnesses 82.24/221.66/1060.34, the rule-15
+   target class caught at statement stage; the c* necessity
+   promoted to sufficiency), all repaired in place (Section 9a);
+   D5 triple = A3 + B2.reduced + C2; item-0020 target = B2.reduced
+   at C_F = o(ln x) via global pair counting (= the BET-08 shape);
+   item-0021 re-scoped to the C1 aggregate + (n1)/(n2) over the
+   C2/F17.8 spine; M2 Props fixed, no Lean written. KICKOFF HASH:
+   the dispatched operator revision, sha256 44c07d99...f818 (full
+   value in ANN-53 and the run report), SUPERSEDES ANN-51's
+   57655d5a...; the v1 Section 7 was unsatisfiable as authored
+   (steering defect; rule 17 codified). NOT merged; pending:
+   operator review-gate decision (steering recommends a blind R2
+   cross-family scope audit on the 9a-amended object + the
+   rule-16(a) pass; R1-light discharged by the steering
+   re-execution), then merge, then M2 kickoff v2. Registers:
+   U18.1-U18.7 open, FU1-FU4 parked.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an

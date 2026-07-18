@@ -126,3 +126,18 @@ Rules:
     beyond constant re-execution: same-run checkers verified every
     constant yet could not audit dependency structure (R2 MAJOR-1;
     process finding B5).
+17. Single-source pin in kickoffs (2026-07-19). A kickoff states
+    its pin literal exactly once (Section 0); every other
+    reference, validity predicates included, points at "the
+    Section 0 pin" symbolically. Any kickoff revision bumps the
+    version marker, re-runs an internal consistency pass (all pin
+    references; every predicate satisfiable at the new pin), and
+    the superseding sha256 is re-booked in the ledger -- the
+    recorded hash of a superseded version stays as history.
+    Provenance: the item-0018 M1 dispatch. The v1 kickoff
+    duplicated the pin literal into its predicate list AND was
+    unsatisfiable as authored (the HEAD pin predated an object
+    another predicate required); the operator revision fixed
+    Section 0 but the stale literal survived, costing the run a
+    deviation resolution (resolved correctly per the item-0017
+    anchors-unchanged precedent; ANN-53).

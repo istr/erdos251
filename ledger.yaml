@@ -1854,3 +1854,108 @@ annotations:
       operator amends the lines before applying if credence differs
       -- the apply is the registration, and the append-only
       discipline starts after it. HANDOVER 2i amended accordingly.
+  - id: ANN-20260719-53
+    refs: [ANN-20260718-51, ANN-20260718-52, BET-20260718-08]
+    date: 2026-07-19
+    note: >-
+      ITEM-0018 M1 LANDED ON BRANCH item-0018 (operator commit
+      d0cde9bd9b137527ef0128fba7318dc3bb434922, base = main 32b91ea;
+      one purely additive commit, four files, +1976 lines; NOT yet
+      reviewed, ratified or merged). Runner: steering lineage fresh
+      instance (claude-fable-5, ultracode + workflows), web OFF,
+      corpus-only; out-of-corpus firewall over the two 2026-07-18
+      operator reports honored (steering grep-verified: zero
+      citations; the k = 2 constant enters via in-repo F17.5 only).
+      Deliverables: dossier/relext-statements.md v1 (1270 lines; 8
+      primary candidates A1/A2/A3, B1/B1'/B2+B2.reduced/B3, C1/C2
+      with full quantifier prefixes, normalizations, rule-15 budget
+      sheets, written six-question no-go audits, reuse audit over
+      the eleven named Counting decls, D4 consumer design with the
+      displayed pigeonhole and slack ledger, D5 selection verdict);
+      dossier/item-0018-workpapers/ (budget_sheet.py + tables);
+      0018-report-M1.md. STEERING RE-VERIFIED at d0cde9b: frozen
+      blocks byte-identical, relocation PASSED, strict inventory 1
+      (Statement.lean), ASCII-clean, writes-scope = kickoff Section
+      6 exactly, zero lean/ edits; budget_sheet.py re-executed with
+      BYTE-IDENTICAL table reproduction; T4 rho witnesses
+      (82.24/221.66/1060.34) present in the committed tables, the
+      1e20 row = 4.8 ln x (G1-failing) re-read; the c* algebra
+      (c/ln 2 < 4 - 2/ln 2 <=> c < 4 ln 2 - 2 = 0.7726) and the
+      TailIntersection pin arithmetic (A' = 1.5, A'' = 48 ->
+      retention 7/24 > 1/4; A'' = 12 -> 1/6; no A'' at A' <= 4/3)
+      re-checked; deliverable sha256s match the report's recorded
+      values. HEADLINE FINDINGS F18.1-F18.5: (1) reuse audit SPLIT
+      -- consCount_lower_bound consumes the A-layer verbatim at
+      small span; two quantified walls (w1 span hypothesis, w2
+      Theta(L)-oversized extension term vs the ln x/8 reserve,
+      sieve-constant-independent) block it at exchange span; (2)
+      C-layer window: inside the frozen HLQuantA card budget the
+      truncated-tail transfer REQUIRES family density (ln x)^-c,
+      c < c* = 4 ln 2 - 2 (NECESSITY only; closure inputs (n1)
+      middle/near-word profile cap, (n2) true-vs-model mass
+      comparability); tau(A') >= 2.885 > c*, so C-layer viability
+      is a family property; (3) the family-averaged B-form must be
+      stated in the reduced (N-1)+ form -- the plain form smuggles
+      abundance (forces mean multiplicity >= ln x/C_F); (4) F17.9
+      locus sharpened: the o(ln x) statement gate is passable by
+      selection-gated forms whose constants never reference rho;
+      the superpolylog wall is a property of per-word-sieve PROOF
+      ROUTES (the absolute-normalized sub-shape); (5) the pointwise
+      B-form is FALSE without a multiplicity floor and post-audit
+      also carries a mandatory rho-cap. IN-RUN NINE-AGENT
+      ADVERSARIAL AUDIT: 3 FATAL / 17 MAJOR / 44 MINOR / 27 NOTE
+      raised; sustained core after in-run steering re-execution: 2
+      FATAL -- (i) the draft worst-case two-block quotient cap was
+      FALSE (the insert telescope bounds S(H_d)/S(H_pre) only;
+      CRT-aligned classes reach rho = (ln x)^(1-o(1)); witnesses
+      82.24/221.66/1060.34, 5-of-9-agent convergence; EXACTLY the
+      rule-15 target class -- a fixed-k per-insert constant
+      silently promoted to a growing-k two-block setting -- caught
+      at statement stage, pre-proof, by the adversarial layer rule
+      15 prescribes), (ii) the c* NECESSITY budget had been
+      promoted to sufficiency; plus convergent MAJORs (A3 model
+      provenance downgraded to derivable-from-toolkit, write-out
+      debt U18.6; TailIntersection pin repair A'' = 48; a
+      count-vs-size misread; exactly one in-budget middle at
+      k = 24 gating A1's two-word route, U18.7). ALL repaired in
+      place with marked amendments (deliverable Section 9a); the
+      D5 selection, 7.2 pigeonhole, 7.3 instantiation and the M2
+      design survived every finding; the item-0017 B3 convergence
+      signal reproduced. D5 TRIPLE: A3 (with A2 as its proved
+      denominator layer) + B2.reduced + C2 base form; M2 Props
+      fixed (MatchedFlankLower / RelExtensionUpper /
+      TailIntersection, 7.1 shapes, Lean patterns 7.6, hazards
+      register, NO Lean written); measurement spec m1-m5 fixed for
+      item-0019; item-0020 proof target = B2.reduced at any
+      C_F = o(ln x) by a global pair-counting / AR-side device
+      that never instantiates a per-word sieve constant (the
+      BET-20260718-08 registered shape resolves to exactly this
+      via its deferential clause); item-0021 target
+      audit-re-scoped to the C1 AGGREGATE form on polylog-dense
+      families with (n1)/(n2) as named conditions over the
+      C2/F17.8 spine. KICKOFF HASH RECONCILIATION: the dispatched
+      kickoff was an operator revision (Section 0 re-pin to
+      32b91ea after the three 2026-07-18 mbox applies); its sha256
+      44c07d99a1f00730d58a643469042b2f155a798990b61a987388c684b960f818
+      (recorded in the committed run report) SUPERSEDES the ANN-51
+      steering value 57655d5a... as the operator-canonical kickoff
+      hash -- this apply is the confirmation. The v1 Section 7 was
+      additionally UNSATISFIABLE as authored (its HEAD pin 8cb5086
+      predates roadmap/item-0018.md, which the same predicate list
+      requires) -- steering authoring defect, logged; the run's
+      re-pin to 32b91ea per the item-0017 anchors-unchanged
+      precedent was the only satisfiable reading and is RATIFIED
+      by this entry. Codified as runs/README rule 17 this commit
+      (single-source pin; revision consistency pass; superseding
+      hashes re-booked). Kickoff provenance slip also logged
+      (report O5): the anti-rigidity counting form is item-0005 P4
+      + item-0017 FATAL-2 content, not item-0005 Section-6 F2;
+      fold into kickoff-v2 hygiene. NEXT GATES (operator): M1
+      review-gate decision -- steering recommends a BLIND R2
+      cross-family scope audit on the 9a-amended deliverable
+      (strip withholding the 9a narrative, per the report Section
+      6 prep) plus the rule-16(a) dedicated pass pre-gate; the
+      R1-light lane is discharged by the steering re-execution
+      booked here. Merge decision after the gate; M2 kickoff v2
+      after verdict stabilization. Registers carried: U18.1-U18.7
+      open; FU1-FU4 parked as successor candidates.
