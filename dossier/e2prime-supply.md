@@ -314,7 +314,14 @@ ln 2 <= 0.2 ln N iff N >= 2^5 = 32. So the sum is
 lemma's N >= L+16 is read with this absolute floor N >= 32
 throughout; P3.3's x_1(b) absorbs it.) QED
 
-LEMMA P3.2 (mean tail; Markov). For 0 <= r <= L and N >= L + 16:
+LEMMA P3.2 (mean tail; Markov). For 0 <= r <= L and N >= 40(L+2)
+[REPAIRED post-R1: the v1 threshold N >= L+16 was FALSE for the
+final constant chain (R1 finding M-1, counterexamples
+steering-re-executed: e.g. N = 1000, L = 100 gives 92657 > 89801);
+at N >= 40(L+2) the chain closes for all L >= 1 (R1-verified
+exhaustively to L = 1999, steering-spot-checked at L = 1, 100);
+every consumer applies this at N = pi(x) >> 40(L+2), so no
+downstream statement changes]:
     sum_{n<=N} delta_{n+r} <= 13 C_0 N ln N,
 hence with D >= 13 C_0 A ln x:
     #{ n <= N : delta_{n+r} > D } <= N / A.
@@ -472,9 +479,17 @@ A' in (1, 4 sqrt(2)/e), A'' = 16. For x >= x_1'(b), with
 D = ceil(13 C_0 A'' ln x), J = ceil(log2(b D)), K = ceil(log2 D),
 L = J + 1 + K (M = 1):
 (i)   (E5) with room, and 2^K >= D (far cap implied), as in P3.3.
-(ii)  Site abundance: |S'_x| >= N (1 - (1+o(1))/A' - 2/A'') - o(N),
-      a positive proportion of pi(x) for A' > 1 strict (P3.1' +
-      P3.2 twice).
+(ii)  Site abundance: |S'_x| >= N (1 - (1+o(1))/A' - 2/A'') - o(N)
+      (P3.1' + P3.2 twice). [REPAIRED post-R1 (finding m-3): at the
+      fixed A'' = 16 this is vacuous for A' <= 8/7; the correct
+      clause is: a positive proportion of pi(x) for every FIXED
+      A' > 1 PROVIDED A'' > 2A'/(A'-1) (e.g. A'' = ceil(4A'/
+      (A'-1))), at the cost of an extra additive
+      2 log2 A'' = O(log(1/(A'-1))) in J and K -- bounded for each
+      fixed A', so P3.3'(iii)'s O_b(1) depth form is preserved.
+      Every "A' -> 1+" locution in Sections 4.0/4.3 reads with
+      this A''-scaling; the F17.5 closure itself is A'-uniform and
+      does not consume site abundance.]
 (iii) Depth: L = 2 log2 ln x + log2 b + 2 log2(13 C_0 A'') + O(1)
       = 2 log2 ln x + O_b(1): the kickoff's O_b(1) form HOLDS on
       this variant (the P3.3(iv) deviation was per-position-filter
@@ -532,8 +547,11 @@ site set S^M_{x_r}(A,D) contains
      middles -- all of them (E2')-pairs by P2 (|E| >= 1; no parity in
      the model), and
 (ii) a DISJOINT family of at least x_r^{1-o(1)} such pairs; the
-     explicit disjoint floor is N_S/(8 (2-p)^{J+K})
-     = N_S (ln x_r)^{-2+o(1)}.
+     explicit disjoint floor is N_S/(16 (2-p)^{J+K})
+     = N_S (ln x_r)^{-2+o(1)} [REPAIRED post-R1 (finding m-1): the
+     v1 statement said /8 while the proof and both checkers give
+     /16; factor-2 statement/proof mismatch, asymptotics
+     unaffected].
 Consequently the model analogue of SUP'_1 holds a.s. with x^{1-o(1)}
 qualifying disjoint pairs per dyadic scale. [Kickoff's "x^{1-o(1)}
 qualifying pairs" is the disjoint-pair count; the ordered count is
@@ -574,7 +592,8 @@ Proof.
     window overlap: (identical or swapped) <= 2 E[T]; (one shared
     site) <= 4 N_S^3 q_3^{J+K} with
     q_3^{J+K}/q_2^{2(J+K)} = ((p^2/3)/(p^2/(2-p)^2))^{J+K}
-    = (1+o(1)) (4/3)^{J+K} = (ln x)^{0.831+o(1)},
+    = (1+o(1)) (4/3)^{J+K} = (ln x)^{0.830075+o(1)}
+    [exponent 2 log2(4/3); v1's 0.831 rounded stale, R1 n-1],
     so this block / E[T]^2 <= 4 (4/3)^{J+K}/N_S = x^{-1+o(1)};
     (overlapping windows, no shared site) <= 4 N_S^3 (L+2) q_2^{J+K}
     crudely (bound one pair's indicator by its side-match, the
@@ -629,7 +648,11 @@ M2.2 (concentration). Var(C^M_sides,off) / E[...]^2 = x^{-1+o(1)}
 (same table as M1(d) with the middle clause dropped); likewise for
 C^M_words,off, whose overlapping block is again o(main) [runs of
 equal gaps: an adjacent pair i, i+1 with word(i) = word(i+1) needs
-h_{i+1} = h_{i+2} = ... : probability q_2^{L} per adjacent pair].
+h_{i+1} = ... = h_{i+L+1}: probability sum_t P(h=t)^{L+1} =
+p^{L+1}/(1-(1-p)^{L+1}) ~ p^L/(L+1) per adjacent pair; REPAIRED
+post-R1 (finding m-4): v1 wrote q_2^L, understating by
+(2-p)^L/(L+1) = (ln x)^{2+o(1)}/L -- conclusion unchanged, the
+block is still o(main) by x^{1-o(1)}].
 Hence a.s. along dyadic scales C^M_sides - C^M_words > 0 eventually:
 the model analogue of the P1 positivity holds a.s.
 
@@ -666,9 +689,10 @@ per-word constant is perfect (1+o(1)):
     THRESHOLD: the route survives iff
         (2/ln 2) ln(e A'/4) < 1  iff  A' < 4 sqrt(2)/e = 2.08104...,
     with room exponent theta(A') = 1 - (2/ln 2) ln(e A'/4):
-    theta(2) = 0.1146, theta(1.9) = 0.2628, theta(1.5) = 0.9447,
+    theta(2) = 0.1146, theta(1.9) = 0.2626, theta(1.5) = 0.9447,
     theta(4/e = 1.4715...) = 1 exactly. [Decimals corrected per the
-    Section 3.5 check.] Site-density cost 1/A' (need A' > 1;
+    Section 3.5 check; theta(1.9) re-corrected 0.2628 -> 0.2626 per
+    R1 n-2, steering-re-executed.] Site-density cost 1/A' (need A' > 1;
     the window sum concentrates at (1+o(1)) L ln x in the model by
     CLT, and for the primes Markov at fixed A' > 1 suffices).
     In the model, with A' in (1, 2.081) the floor route CLOSES with
@@ -897,7 +921,11 @@ floor route. Obstruction statement (B1 discipline, scope exact):
     the HL asymptote indicate; the deficit factor is
     (e A' gamma_2/2)^{J+K}/(ln x/gamma_2)
     = (ln x)^{(2/ln 2) ln(e A' gamma_2/2) - 1 + o(1)}, e.g.
-    (ln x)^{0.35+o(1)} at A' -> 1+, gamma_2 = 1.1505.
+    (ln x)^{0.290+o(1)} at A' -> 1+, gamma_2 = 1.1505 (and
+    (ln x)^{0.365+o(1)} at the 2e7 empirical gamma_2 = 1.1808)
+    [REPAIRED post-R1 (finding m-2): v1 printed 0.35 -- a
+    value-substitution slip, the asymptote gives 0.290;
+    steering-re-executed].
 This closure is INDEPENDENT of the sieve constant (it binds even at
 C_per = 1) and is invisible in Model M (gamma_2 = 1/2 <
 gamma_2^crit): it is a genuinely primes-side obstruction, created
@@ -1246,7 +1274,14 @@ actual/naive-model off-diagonal side-collision ratios):
   x = 1e8: (4,5): (5232/1.982e-1)^{1/9}/2 -> 1.55 ; (5,5): 1.60
 declining toward, and consistently above, the marginal asymptote
 1.1505 and the critical 1.0405 (F17.5; marginal empirical values
-1.2005/1.1808 at 2e6/2e7 from d1c_gamma2.py).
+1.2005/1.1808 at 2e6/2e7 from d1c_gamma2.py; 1.1711 at 1e8,
+R1-measured in the blind audit and adopted here -- the decline
+toward 1.1505 continues one scale further).
+[R1 n-4 note: R1's independent pipeline reproduces every
+collision-layer number EXACTLY (off-diagonal counts, P1 pairs,
+class counts at all x, incl. the full 1e9 census) with site
+counts ~0.13% higher -- a site-admission boundary convention
+(filter-edge indexing), zero effect on any committed record.]
 
 S-site sample moments (A = None rows): S2nd/S1st^2 stable in
 [1.32, 1.51] across the grid and across x -- the S-site
@@ -1464,8 +1499,38 @@ agent; object = payloads/item-0017-review-object-v1.md (sha256
 deterministic strip of this dossier at the Session C state,
 leak-audited); payload = payloads/item-0017-review-r1-payload-v1.md
 (sha256 43294a706f134a0ef1dcc7c67c053df3f268bbece0b8737984d40acc8fe
-ce250; computation-MANDATORY: C1-C7 re-executions). Review file and
-disposition land below when the reviewer returns.
+ce250; computation-MANDATORY: C1-C7 re-executions).
+
+R1 DISPOSITION (executed; review registered as
+payloads/item-0017-review-r1-v1.md): VERDICT "SOUND WITH REPAIRABLE
+ISSUES", confidence 0.89, ZERO FATAL. The reviewer independently
+reproduced the ENTIRE numeric spine: the Euler product 4.6019231
+(exact match), the direct summation 4.601842 at D = 2e6, the
+threshold algebra to machine precision, both inline certificates
+(32/32 printed numbers primality- and consecutiveness-checked, all
+words, deltas, gates, the (E2') inequality, machine-epsilon
+identity residuals), a FULL independent 1e9 census (29/3/3/0/0),
+and every committed grid record at 2e6/2e7/1e8. Five substantive
+findings, ALL steering-re-executed before absorption and ALL
+repaired in place with marked amendments: M-1 (P3.2 threshold
+N >= L+16 FALSE; repaired to N >= 40(L+2); R1 checked the repair
+exhaustively to L = 1999, steering spot-checked L = 1, 100; no
+downstream statement changes), m-1 (M1(ii) statement /8 vs proof
+/16; repaired to /16), m-2 (F17.5(b) exponent 0.35 -> 0.290,
+value-substitution slip), m-3 (P3.3'(ii) abundance gloss vacuous on
+(1, 8/7] at fixed A'' = 16; repaired with the A''(A') scaling
+clause), m-4 (M2.2 run-probability intermediate; conclusion
+unchanged). Notes n-1/n-2 absorbed (0.830075; theta(1.9) = 0.2626);
+n-3 noted (2e^{1-gamma} = 3.0524); n-4 recorded in 7.1 (boundary
+convention; collision layers exact); n-5/n-6 are scope records
+consistent with U17.10 and the workpaper X-floor. R1's independent
+1e8 marginal gamma_2 = 1.1711 adopted into 7.1. NO verdict clause
+of Section 1 changed under repair (R1's own assessment, confirmed
+clause-by-clause after the repairs). R1's confidence cap (0.89) is
+attributed to the two layers outside its permitted files (the D1-L
+workpaper internals; the extraction anatomies) -- both in-repo and
+steering-verified; the operator may widen the R2 object to include
+them.
 
 R2 (OPERATOR-SIDE, pending): cross-family review cannot be launched
 from this environment (B2 requires a different model family); the
