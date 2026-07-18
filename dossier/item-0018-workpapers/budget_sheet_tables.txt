@@ -1,0 +1,164 @@
+item-0018 budget sheets (rule 15) -- exponent convention:
+expo(F) = ln F / lnln x, i.e. F = (ln x)^expo.  Gate (G1)
+[B-layer, o(ln x)] requires expo < 1 with decay or a limit < 1.
+
+== T0. Regime lock (D0) ==
+x        ln x        lnln x     L=(2/ln2)lnlnx   k=L+1
+1e8          18.42    2.9135         8.41       9.41
+1e20         46.05    3.8298        11.05      12.05
+1e100       230.26    5.4392        15.69      16.69
+1e1000     2302.59    7.7418        22.34      23.34
+
+== T1. Universal factor ledger (exponents expo = ln F/lnln x) ==
+Rows: the constant classes rule 15 names, plus the D1-L' self-
+proved constant.  F17.9 wall: exclusion needs C_per(k+1) *
+S-ratio < c ln x, i.e. expo < 1.
+
+factor                 x=1e8        x=1e20       x=1e100      x=1e1000    class / verdict vs (G1)
+2^k                        2.238       2.181       2.127       2.090  POLYLOG expo->2: FAILS (G1); (ln x)^2 at rank (2/ln2)lnlnx (the sheet's k = L+1 adds a factor 2: expo = 2 + ln2/lnlnx)
+k!                         4.711       5.252       6.000       6.804  SUPERPOLYLOG ~2.885 lnlnln x: FAILS (G1) [F17.9]
+exp(k ln k)                7.237       7.832       8.640       9.496  SUPERPOLYLOG: FAILS (G1) [F17.9 wall class]
+2^k k! (classical)         6.949       7.433       8.127       8.894  SUPERPOLYLOG: FAILS (G1) [U17.2/D1.a]
+C*(k+1) (D1-L')           13.443      13.320      13.412      13.721  SUPERPOLYLOG: FAILS (G1) [D1-L' self-proved; F17.9]
+gamma_2^k  (U17.11b)       0.453       0.441       0.430       0.423  POLYLOG expo->0.405 const: PASSES (G1) alone
+
+FATAL-2 display check (adjudication Section 2): k ln k =
+  1e8     k ln k =    21.08   2.885*lnlnx*(lnlnlnx+1.0596) =    17.90
+  1e20    k ln k =    29.99   2.885*lnlnx*(lnlnlnx+1.0596) =    26.55
+  1e100   k ln k =    47.00   2.885*lnlnx*(lnlnlnx+1.0596) =    43.21
+  1e1000  k ln k =    73.52   2.885*lnlnx*(lnlnlnx+1.0596) =    69.39
+
+== T2. Rooms and gates (G3) ==
+AR-shape room exponent theta(A') = 1 - (2/ln2) ln(e A'/4)
+(dossier M2.3/4.0); A'_crit = 4 sqrt(2)/e = 2.08104.
+  A' =  1.05   theta =   1.9738
+  A' =  1.50   theta =   0.9447
+  A' =  2.00   theta =   0.1146
+F17.2 room at M = 1: (2 ln x)^1  [expo -> 1].
+F17.5 AR-deficit at A'->1+, gamma_2 = 1.150481: expo =
+  (2/ln2) ln(e*gamma_2/2) - 1 =   0.2899  (in-repo 0.290 check)
+
+== T3. Even-conditioning normalization (D0 parity lock) ==
+Independent recomputation of the F17.5 Euler product
+E_even[S_2^2] = 4 C_2^2 prod_{p>2} (1 + ((p-1)^2/(p-2)^2 - 1)/p)
+  partial product over p < 1e6 (float; tail error ~1e-7):
+  E_even[S_2^2] = 4.601923   (in-repo value 4.601923; F17.5)
+  gamma_2 asymptote = E_even/4 = 1.150481  (crit 2 sqrt2/e = 1.040520)
+  Even-conditioned mean E_even[S_2] = 2 exactly (D0 lock);
+  every candidate constant states its normalization.
+
+== T4. B-layer local quotient rho: exact factors and worst case ==
+[REPAIRED after the v1-draft adversarial audit pass: the draft's
+cap 2*prod_{first T odd primes}(1+1/(p-1)) = O(lnlnln x) was
+FALSE -- the one-insert dichotomy factor bounds S(H_d)/S(H_pre)
+only; dividing by S(H_suf) amplifies block-aligned primes.  All
+witnesses below were audit-found and steering-re-executed.]
+Exact identity: rho(P,d) = 2 * prod over odd p of
+  (1 - nu_H/p) / ((1 - nu_pre/p)(1 - nu_suf/p))
+(the (1-1/p)-powers cancel: |H_d| = (J+1)+(K+1); p = 2 gives
+exactly 2, the even lock).  Per odd prime the factor is <=
+(1 - nu_min/p)^{-1} with nu_min = min(nu_pre, nu_suf, p-1) -- up
+to p at full two-block alignment (nu_pre = nu_suf = nu_H = p-1),
+which CRT-aligned middles realize inside the window budget for
+all odd p with p-1 <= min(J,K)+1 and primorial <= A'L ln x:
+  sup rho over the full in-window (P,d) range = (ln x)^{1-o(1)},
+POLYLOG with exponent -> 1: the worst case FAILS gate (G1) at
+finite scales (witness CE2 below has rho = 4.8 ln x).  Only the
+TYPICAL/mean rho (even-conditioned mean 2; U18.2 heuristic) is
+subpolylog; B1-type pointwise candidates must carry an explicit
+rho-cap clause, and F18.4's statement-level gate claim is scoped
+to the selection-gated forms B2/B3.
+
+Audit witnesses (admissible, all-even, inside the D0 window at
+the named grid depth; truncated exact-factor product, p < 1e6):
+depth    span     rho       (ln x)-expo   v1-draft cap (FALSE)
+1e8        222     82.24      1.514           9.80
+1e20       388    221.66      1.410          11.90
+1e1000   30072   1060.34      0.900          17.60
+(CE at 1e20 depths: rho = 221.66 = 4.8 ln x -- (G1) fails
+ outright on the unconstrained pointwise range.)
+
+== T5. A-layer sheet ==
+(a) Lemma 4.1 mass floor (decl singularSeries_lower_bound,
+    in-repo constant C = 12; reference C = 1): x-exponent of
+    M_H(x) = S(H) x/(ln x)^k >= x^(1 - v), decl-indexed
+    v = (C (k-1) ln(k+1) + k lnln x)/ln x  (the decl's exponent
+    is C(|H|-1)ln(|H|+1) at |H| = k).  VACUOUS when v >= 1.
+x         v(C=12)   v(C=1)    verdict(C=12)
+1e8        14.316     2.557    VACUOUS (v >= 1)
+1e20        8.399     1.619    VACUOUS (v >= 1)
+1e100       2.744     0.590    VACUOUS (v >= 1)
+1e1000      0.450     0.109    nonvacuous
+    -> nonvacuity crossings (v = 1), decl-indexed: C = 12 at x ~ 1e371; C = 1 at x ~ 1e45.
+       [v1-draft prose said ~1e300 and ~1e30: audit-corrected.]
+       Finite-scale honesty row (kickoff D3(vi)).
+
+(b) Bonferroni consecutiveness transfer (decl consCount_bonferroni
+    + oneExtension_sum_le): the subtracted extension sum vs the
+    ln x/8 reserve.  At exchange-typical span W = A' L ln x the
+    weighted extension count is Theta(W/ln x) = Theta(L) times
+    the reserve [reuse-audit wall w2]; at the small-span budget
+    span <= kappa L ln(L+2) (the decl's own hypothesis, NECESSARY
+    per its docstring) the ratio is C2 L ln(L+2)^2/(ln x/8) -> 0.
+x        exch-span ratio ~ 8 A' L    small-span ratio (C2=1)
+1e8              100.9                     20.03
+1e20             132.6                     12.67
+1e100            188.3                      4.50
+1e1000           268.1                      0.79
+    -> exchange-span transfer FAILS by Theta(L) even at perfect
+       HL constants; small-span transfer closes for x >~ 1e1000
+       at C2 = 1 (in-repo C2 is larger: finite-scale vacuity).
+
+(c) Cramer thinning of consecutive vs nonconsecutive counts at
+    window W = A' L ln x: factor exp(-(1+o(1)) W/ln x)
+    = (ln x)^-tau, tau(A') = 2A'/ln 2 [Gallagher-frame heuristic,
+    U17.9-class; enters A-layer honest forms only].
+    A' =  1.05  tau =   3.030
+    A' =  1.50  tau =   4.328
+    A' =  2.00  tau =   5.771
+
+== T6. C-layer sheet (F17.8 ledger) ==
+(a) Depth feedback of family density eta: Markov tail selection
+    at density eta inflates D by 1/eta, hence J and K each by
+    log2(1/eta): L -> L + 2 log2(1/eta) (F17.8).  Ledger:
+    eta = (ln x)^-c: L inflation factor (1 + c); admissible
+    (bounded re-budget); eta = exp(-(lnln x)^2)-class (HL-thin
+    class density, T5(a)): inflation factor ~ lnln x:
+    SELF-DEFEAT (all T1 ledger rows re-inflate superpolylog).
+x        L      +2log2(1/eta), eta=(lnx)^-1   HL-thin: 2*(lnlnx)^2/ln2  ratio-to-L
+1e8        8.4                8.4                      24.5        2.91
+1e20      11.1               11.1                      42.3        3.83
+1e100     15.7               15.7                      85.4        5.44
+1e1000    22.3               22.3                     172.9        7.74
+
+(b) Truncated-tail transfer window (C1 via HL first moments):
+    tail rank J_0 = log2(1/eta) + O(1) needed so that the
+    truncation error 2^-J_0 T* <= eps ln x with the global-Markov
+    subtraction threshold T* ~ ln x/eta.  HLQuantA card headroom:
+    4 lnln x - k = (4 - 2/ln2) lnln x.  Admissible iff
+    c/ln2 < 4 - 2/ln2, i.e.  c < c* = 4 ln 2 - 2 = 0.7726.
+x        headroom(=4lnlnx-k)   J_0 at c=0.5   J_0 at c=0.7726  J_0 at c=1
+1e8               2.25           2.10           3.25           4.20
+1e20              3.27           2.76           4.27           5.53
+1e100             5.06           3.92           6.06           7.85
+1e1000            7.63           5.58           8.63          11.17
+    -> C1-via-frozen-HLQuantA admissibility window:
+       family density (ln x)^-c with c < 4 ln 2 - 2 = 0.7726;
+       the A-side thinning tau(A') >= 2/ln2 = 2.885 > c* --
+       a thinned single class NEVER fits; only polylog-dense
+       families (small c) do.  [New datum this item.]
+
+== T7. Consumption sheet (T5 slack sink; D4) ==
+Exclusion reserve ln x / C_F after the B-layer constant:
+x         C_F=O(1)   C_F=(lnx)^0.405   C_F=(lnx)^2
+1e8      (lnx)^1.00    (lnx)^0.59       NEGATIVE: dead
+1e20     (lnx)^1.00    (lnx)^0.59       NEGATIVE: dead
+1e100    (lnx)^1.00    (lnx)^0.59       NEGATIVE: dead
+1e1000   (lnx)^1.00    (lnx)^0.59       NEGATIVE: dead
+    -> the o(ln x) slack is consumed by, in order: the A-side
+       proportionality c_A, the C-side retention (1-o(1)), the
+       threshold-t truncation, and the B3 exceptional mass; the
+       item-0020 target constant is C_F <= (1-eps) c_A c_C ln x
+       (all named in dossier/relext-statements.md D4).
+
+END OF SHEETS
