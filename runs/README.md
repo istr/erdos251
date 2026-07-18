@@ -102,3 +102,27 @@ Rules:
     beta-reduces the goal and fixes all downstream matches. Same
     family as the s5 isDefEq sinks (ANN-44/47): the cost is in what
     the tactic silently does NOT match.
+15. Asymptotic budget sheet for exchange-regime candidates
+    (2026-07-18). Before any proof investment in a candidate theorem
+    or route targeting the exchange regime, evaluate EVERY constant
+    and factor mechanically at k = (2/ln 2 + o(1)) loglog x against
+    log x, x^eps and the pigeonhole reserve; script the sheet where
+    possible and commit it with the workpapers. Hidden k!, 2^k or
+    exp((1+o(1)) k log k) factors are immediate no-gos: they exceed
+    every power of log x at exchange depths. Provenance: item-0017 R2
+    FATAL-2 / F17.9 -- a fixed-k exclusion constant silently promoted
+    to growing k survived drafting, an in-run checker pass and R1,
+    and would have been caught by this sheet at statement time.
+    Rule 12 is the special case where the landing slot of one error
+    term decides; this rule is the general per-candidate ledger.
+16. Verdict-body clause diff and dependency audit (2026-07-18).
+    (a) Before a dossier enters its review gate, its verdict section
+    is diffed clause by clause against the body's support classes
+    (proved / measured / heuristic / model-only) by a dedicated pass;
+    scope qualifiers present in the body must survive promotion into
+    the verdict verbatim. Recurrence pattern: item-0005 P1 and
+    item-0017 FATAL-1 (process finding B4). (b) Computation-audit
+    payloads carry an explicit dependency/conditioning checklist item
+    beyond constant re-execution: same-run checkers verified every
+    constant yet could not audit dependency structure (R2 MAJOR-1;
+    process finding B5).

@@ -30,3 +30,9 @@ df9614f464611eb4e83b43320c3b9ae8742c11bd5cb9706d2c15e28669b26efc  Maier-Primes-i
 059582d17c1b01c352ffb626bc6d95af7bb5f7634ba49a06255da4f8ed7935da  https://arxiv.org/pdf/1811.03008v3
 fe1e7bc9faed07c648472afa030268e947b6f8108ccb280e07d20624875179de  https://arxiv.org/pdf/1510.08054v1
 d9197b8f4b3ac31c2bfa130e9aedf39ce54e50709b352edf4930628cce8ae1ea  https://arxiv.org/pdf/1510.04577v1
+5a7a2647d11ec40d00b2d2ae2473bfdfd2a32a22ab731b7fe93dfe97b85fbb63  payloads/item-0017-review-object-v1.md
+43294a706f134a0ef1dcc7c67c053df3f268bbece0b8737984d40acc8fece250  payloads/item-0017-review-r1-payload-v1.md
+0b8d07f7c878a8f821e4e072120911f16f4b2b44ce4e349a909259673418a526  payloads/item-0017-review-r1-v1.md
+f18f0bc02cc9808dbccb05ffbf014b2430d250bdce3be1c98da4a68805fdbdf6  payloads/item-0017-review-r2-payload-v1.md
+6fc1f7f7a469fa44e2b5b3154f3c2fa0c11f8cf0137914a8e598026c490889c0  payloads/item-0017-review-r2-v1.md
+305096e507885add096b9d2d1c5e3445c1cf169d9f93ee09547a6516372959b8  payloads/item-0017-adjudication-v1.md

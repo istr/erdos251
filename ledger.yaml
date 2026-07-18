@@ -1743,3 +1743,75 @@ annotations:
       ASCII-clean, ephemeral, never committed); kickoff read-only
       anchors unchanged 96dc30c -> 7ca2388a, so session A pins to
       7ca2388a; operator ratification of the kickoff pending.
+  - id: ANN-20260718-51
+    refs: [ANN-20260718-50, BET-20260711-07]
+    date: 2026-07-18
+    note: >-
+      ITEM-0017 CLOSED; DOSSIER v2 RATIFIED; BRANCH FF-MERGED (main =
+      8cb50860c15491dbc6a982cb179ef7cba6416b3f). Sessions A-D executed
+      by steering lineage (Claude Fable 5, claude-fable-5, ultracode +
+      workflows) in one run against kickoff v1 (sha 45591703...c76155,
+      operator-ratified; the session-A STOP-AND-REPORT on the
+      item-0010.md anchor delta was ratified as re-pin to 66adc54).
+      Branch payload (6 commits, purely additive, zero lean/ changes):
+      dossier e2prime-supply.md v2 (obstruction branch; D2 model gate
+      PASS; F17.1-F17.9; U17.1-U17.12), 14 anchored extraction
+      anatomies, committed workpapers (balance_stats, d1c_gamma2,
+      d5b_deep, d1a-selberg self-contained k-uniform Selberg bound,
+      strip_payload), D5 grid 2e6..1e9 with the project's first b > 1
+      certificates. REVIEWS: R1 same-family fresh computation audit
+      SOUND WITH REPAIRABLE ISSUES (0.89, zero fatal; full numeric
+      spine independently reproduced; five findings repaired in
+      place); R2 cross-family GPT-5.6 Sol scope audit UNSOUND (0.96);
+      adjudication payloads/item-0017-adjudication-v1.md, every
+      disposition steering-re-executed. FATAL-2 SUSTAINED
+      SUBSTANTIVELY: the v1-V4 single-missing-input claim was FALSE --
+      the rigid-middle exclusion needs C_per(k+1) * S-ratio < c ln x
+      while every displayed sieve bound (self-proved C* and classical
+      2^k k! alike) carries exp((1+o(1)) k ln k) >> ln x at
+      k ~ (2/ln 2) lnln x; V4/F17.7 rewritten as the TRIPLE
+      requirement, new F17.9 (growing-k exclusion-constant wall,
+      credit R2). FATAL-1 sustained as wording (verdict rewritten
+      route/corpus/evidence-scoped; U17.11 tensorization + growing-k
+      compounding registered); MAJOR-1 repaired sketch-grade (U17.12
+      write-out debt); convergence set {P3.2, /16, A''} = process
+      finding B3. Operator ratified v2 2026-07-18; the optional R2
+      closing-comment round was declined; ff-only merge. MANDATE:
+      obstruction branch of the disjunction delivered (named
+      obstructions with exact quantitative gaps + certificate layer
+      beyond the two inlined sites); K1 handshake honored. PROCESS
+      CODIFICATION this commit: runs/README rule 15 (asymptotic
+      budget sheet -- would have caught FATAL-2 ex ante) and rule 16
+      (B4 verdict-vs-body clause diff before the review gate; B5
+      dependency/conditioning item in computation-audit payloads).
+      HASHES booked this commit (steering-computed from the committed
+      tree; the four review-time hashes match byte-identically;
+      operator sha256 canonical on apply): object 5a7a2647, r1
+      payload 43294a70, r1 review 0b8d07f7, r2 payload f18f0bc0, r2
+      review 6fc1f7f7, adjudication 305096e5. BET-20260711-07
+      EVIDENCE reinforced AGAINST unconditional progress (obstruction
+      branch; the model gate and the certificate layer are
+      understanding progress, not theorem progress); resolution stays
+      operator judgment to 2026-08-08. SUCCESSOR PACKAGE via the
+      companion roadmap mbox (items created ratified; the operator
+      apply is the ratifying commit, plan ratified in the steering
+      session of 2026-07-18): item-0018 relative-extension statement
+      layer + abstract Lean supply integrator (M2 Lean deferred
+      behind M1 statement stabilization); item-0019 local quotient
+      census + relative-extension empirics (S-weighting demoted to
+      diagnostic; (7,7) hunt folded as stretch); item-0020 averaged
+      relative one-position extension sieve (o(log x) gate;
+      structurally different exclusion device per F17.9); item-0021
+      tail-capped filters-first transfer (F17.8 loss ledger);
+      item-0022 corpus absorption (primary verification of the two
+      2026-07-18 operator reports; Kowalski note un-anchored; Pintz
+      citation discrepancy 1004.1072 vs 1004.1084 flagged; precedent
+      layer P1 arXiv:2605.22763 / P3 arXiv:2601.07421 steering
+      spot-verified against the arXiv abstract pages 2026-07-18).
+      Execution order: 0018 -> 0019 -> 0022 -> 0020 -> 0021 -> 0010
+      -> 0006; the item-0010 body notes the target handover. Both
+      operator reports remain OPERATOR-HELD uncommitted pending
+      item-0022 (identification duty; report-D decision 5 extended).
+      item-0018 kickoff v1 authored this session (steering sha256
+      57655d5ab0aeb0b317ab1a53dbb5d22f31e1466d060351570d6401d5dd91669f,
+      ephemeral, never committed; scope M1 only; pin 8cb5086).

@@ -1,11 +1,11 @@
-# HANDOVER -- erdos251 (round 2 in motion, 2026-07-17; round 1 closed and scored 2026-07-15)
+# HANDOVER -- erdos251 (round 2 in motion, 2026-07-18; round 1 closed and scored 2026-07-15)
 
 Mission: public experiment attacking Erdos #251 (irrationality of
 S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..49; bets: 6 scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..51; bets: 6 scored,
 1 open -- BET-07 to 2026-08-08). 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
@@ -397,6 +397,40 @@ its later sections carry a STALE banner, HANDOVER is the record).
    45591703...c76155, ephemeral, never committed; operator
    ratification pending); kickoff read-only anchors unchanged
    96dc30c -> 7ca2388a, so session A pins to 7ca2388a.
+2i. ITEM-0017 CLOSED, v2 RATIFIED, FF-MERGED (2026-07-18; full record
+   ANN-51; main = 8cb5086). Verdict: obstruction branch, no
+   unconditional supply theorem; the V4 residual is a TRIPLE
+   requirement (matched-flank class lower bound; relative extension
+   upper bound with constant o(log x) at k ~ loglog x -- F17.9: every
+   k-uniform sieve constant fails it; tail intersection
+   filters-first). R1 computation audit 0.89 zero-fatal + R2
+   cross-family scope audit (GPT-5.6 Sol) + adjudication; the
+   optional R2 closing-comment round was declined. SUCCESSOR PACKAGE
+   (ratified via the companion roadmap mbox): item-0018 statement
+   layer + abstract Lean supply integrator (M1 prose first; M2 Lean
+   only after M1 stabilization), item-0019 local quotient census +
+   relative-extension empirics (executor local, rational arithmetic,
+   primes to 1e9, (7,7) hunt as stretch), item-0022 corpus
+   absorption of the two 2026-07-18 operator reports (both
+   OPERATOR-HELD uncommitted until then; Kowalski note un-anchored;
+   Pintz citation discrepancy 1004.1072 vs 1004.1084 flagged),
+   item-0020 averaged relative one-position extension sieve
+   (o(log x) gate, structurally different exclusion device),
+   item-0021 tail-capped filters-first transfer (F17.8 loss ledger).
+   Execution order: 0018 -> 0019 -> 0022 -> 0020 -> 0021 -> 0010 ->
+   0006; the item-0010 body notes the target handover. PROCESS:
+   rules 15 (asymptotic budget sheet) and 16 (verdict-body clause
+   diff + dependency audit) codified in runs/README; the five review
+   artifacts + the adjudication booked in payloads/HASHES.txt
+   (steering hashes match the review-time records byte-identically;
+   operator sha256 canonical). item-0018 kickoff v1 authored
+   (steering sha256
+   57655d5ab0aeb0b317ab1a53dbb5d22f31e1466d060351570d6401d5dd91669f,
+   ephemeral, never committed; scope M1 only; pin 8cb5086). OPEN
+   OPERATOR: BET-07 to 2026-08-08 (evidence against booked in
+   ANN-51); BET-08 candidate (averaged relative extension constant
+   proved o(log x) by a chosen date) offered, not opened -- the
+   prior is the operator's call.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
