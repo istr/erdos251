@@ -1680,3 +1680,66 @@ annotations:
       item-0006 (d97d40a). Workpapers COMMITTED under
       dossier/item-0005-workpapers/ (disposition settled at the branch
       merge).
+  - id: ANN-20260718-50
+    refs: [ANN-20260717-49]
+    date: 2026-07-18
+    note: >-
+      ITEM-0010 MILESTONES 1+2 LANDED (Exchange layer). Executor branch
+      item-0010-exchange delivered the EXCH_1 reduction; operator rebase
+      to main f812fdc (lean/ diff = Erdos251/Exchange.lean +319 plus the
+      one-line umbrella import; 7ca2388 books the last three literature
+      hashes on the same push -- base complete at 21 anchors, all
+      steering-verified against the project PDFs). Module contents:
+      IsDyadic; ExchangeAt n m J K D = O4 clauses (E1)-(E4) in
+      Hamming-distance-1 normal form, (E5) as a separate gate hypothesis
+      so one bundle serves every odd b; ExchangeSupply1 (named Prop,
+      NEVER proved -- item-0017's b=1 consumption target) = forall t,
+      exists n m J K D, t <= n and t <= m and ExchangeAt n m J K D and
+      (D - 2 < 2^(J+1)); exchange_contradiction (general odd b via
+      even-lattice hypotheses), exchange_contradiction_1 (b = 1;
+      s-uniformization s+2 <= min n m, forced by gap 0 = 1 odd at the
+      s = 0 boundary, consistent with the registered parity corner),
+      dyadic_of_exchange_supply : ExchangeSupply1 -> not IsDyadic S
+      (consumes supply at t = s+2), certificate schema
+      exchange_site_excludes (one site kills every a/2^s with
+      s+2 <= min n m). STEERING RE-EXECUTED GATES on main: lean/ diff
+      scope confirmed; strict sorry inventory 1 = Statement.lean:21
+      (before = after); check-frozen all three blocks byte-identical;
+      relocation-check PASSED; zero native_decide (three prose mentions
+      only); lean-toolchain trailing newline intact.
+      Executor/operator-attested (not sandbox-checkable): lake build
+      green; print-axioms = classical three on all five declarations,
+      no sorryAx. STATEMENT FIDELITY: PASS clause-by-clause against O4
+      under the documented index convention (Lean gap k = paper
+      g_{k+1}); the proof is the O4 proof (prefix quantization; gate
+      pins the base difference to 0; block identity with suffix
+      collapse Delta_end = -(2^K d); far caps with two_le_delta give
+      the strict |Delta_end| <= 2^K - 2 < 2^K; |d| < 1 against d != 0).
+      DECLARED DEVIATIONS ACCEPTED: direct sibling proof, no bridge
+      ExchangeAt -> ForkMergeAt (a bridge forces gamma = 0 against
+      2 <= gamma); threshold s+2; new in-module
+      dyadic_delta_even_lattice (zero Basic.lean edits); ExchangeAt as
+      its own bundle. CERTIFICATE LEDGER: 0 sites landed in-kernel; two
+      budget walls recorded -- (i) Nat.nth Nat.Prime at index ~5e6 (a
+      prime count below ~8.7e7) not kernel-reducible; this wall alone
+      carries the out-of-kernel-reach verdict; (ii) delta caps are
+      infinite tails. Steering nuance K2 on (ii): budget, not principle
+      -- the in-tree Chebyshev lower half yields p_j <= C' j log j and
+      hence an explicit finite tail remainder after M observed gaps;
+      the docstring nuance is a BET-04-basket unfreeze candidate, not
+      required. HANDSHAKE FINDING K1 (binds item-0017 D0):
+      ExchangeSupply1 is the Hamming-1 NORMAL-FORM supply, not the
+      weighted (E2') form; with middle-window width 1 every side-pair
+      collision is automatically Hamming-1, so item-0017 targets width
+      1 primarily and treats weighted width > 1 as an extension layer
+      needing a small Lean generalization if ever used for consumption.
+      Executor completion report vE1 archived operator-side. EXECUTOR
+      MODEL (operator-supplied, closing the vE1 gap): Claude Opus 4.8,
+      ultracode, reasoning xhigh, + workflows. item-0010 stays
+      ratified/open: the full target (supplying ExchangeSupply1) is
+      item-0017; the M1+M2 note rides the companion roadmap mbox.
+      item-0017 kickoff v1 authored (steering-side sha256
+      45591703cc1dd2f7fae47e4e64cede02ea449fecc0ceb65c7bde2474f6c76155,
+      ASCII-clean, ephemeral, never committed); kickoff read-only
+      anchors unchanged 96dc30c -> 7ca2388a, so session A pins to
+      7ca2388a; operator ratification of the kickoff pending.

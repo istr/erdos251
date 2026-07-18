@@ -362,6 +362,41 @@ its later sections carry a STALE banner, HANDOVER is the record).
    deferral) and B2 (review-role complementarity) -- adjudication
    Section 5. Workpapers COMMITTED under dossier/item-0005-workpapers/;
    literature.md item (b) superseded, ERRATUM-4.
+2h. ITEM-0010 M1+M2 LANDED (2026-07-18; full record ANN-50). Exchange
+   layer on main at f812fdc (operator rebase; lean/ diff =
+   Erdos251/Exchange.lean +319 and the one-line umbrella import;
+   7ca2388 books the last three literature hashes -- base complete at
+   21 anchors). Contents: ExchangeAt (O4 (E1)-(E4), Hamming-1 normal
+   form; (E5) a separate gate hypothesis), ExchangeSupply1 (named
+   Prop, NEVER proved -- item-0017's b=1 target; forall t, exists
+   n m J K D with t <= n, t <= m, ExchangeAt, D-2 < 2^(J+1); consumed
+   at t = s+2), exchange_contradiction(_1),
+   dyadic_of_exchange_supply : supply -> not IsDyadic S, and the
+   schema exchange_site_excludes (one site kills every a/2^s with
+   s+2 <= min n m). Steering re-executed gates on main (diff scope;
+   strict inventory 1 = Statement.lean:21; check-frozen; relocation;
+   zero native_decide; toolchain newline); lake build + axiom prints
+   executor/operator-attested. Statement fidelity PASS
+   clause-by-clause; declared deviations accepted (direct sibling
+   proof, no ExchangeAt -> ForkMergeAt bridge -- it would force
+   gamma = 0 against 2 <= gamma; threshold s+2 from the s = 0 parity
+   corner; in-module b=1 lattice lemma, zero Basic.lean edits).
+   Certificates: 0 in-kernel sites; walls (i) Nat.nth at ~5e6
+   (carries the verdict alone) and (ii) infinite delta tails --
+   steering nuance K2: (ii) is kernel budget, not principle (in-tree
+   Chebyshev gives p_j <= C' j log j, hence an explicit finite tail
+   remainder); docstring nuance = BET-04-basket candidate. K1
+   HANDSHAKE (binds item-0017 D0): the supply Prop is Hamming-1;
+   middle-width-1 side-pair collisions are automatically Hamming-1,
+   so 0017 targets width 1 primarily and treats weighted (E2')
+   width > 1 as an extension layer. Executor model (operator-supplied;
+   vE1 omitted it): Claude Opus 4.8, ultracode, reasoning xhigh,
+   + workflows. item-0010 stays
+   ratified (full target = item-0017; M1+M2 note in the roadmap
+   body). item-0017: kickoff v1 authored (steering sha256
+   45591703...c76155, ephemeral, never committed; operator
+   ratification pending); kickoff read-only anchors unchanged
+   96dc30c -> 7ca2388a, so session A pins to 7ca2388a.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
@@ -374,9 +409,10 @@ its later sections carry a STALE banner, HANDOVER is the record).
    COMPLETE: tate-transfer.md Section 1 BET-07 paragraph, both blind
    reviews concur AGAINST (understanding progress, not theorem
    progress).
-2b. item-0010 re-scope to EXCH_1 (verdict Section 8, F3): strictly
-   easier target, certificate-backed at small depth -- operator word
-   pending; steering emits the roadmap update on ratification.
+2b. DISCHARGED (e5561b7 rescope ratified and committed; M1+M2
+   delivered, see 2h): item-0010 re-scope to EXCH_1 (verdict
+   Section 8, F3) -- strictly easier target, certificate-backed at
+   small depth.
 3. OPTIONAL (operator): public thread post now unblocked (BET-06 NO;
    do NOT inherit the problem page's [Er58b] all-k attribution; the
    thread already carries AI-assisted mathematics, ANN-29) and/or set
