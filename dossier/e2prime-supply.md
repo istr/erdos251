@@ -23,18 +23,104 @@ anchors: dossier/chain-v1.md (Lemmas 2.1-2.5), dossier/tate-transfer.md
 (O4, A3), payloads/item-0005-adjudication-v1.md (B1/B2, F1). No edits
 under lean/ this window; no edits to chain-v1.md or tate-transfer.md.
 
-## 1. Verdict
+## 1. Verdict (v1, Sessions B-C; all pending slots closed; awaiting
+## the Section 11 review gate before any operator ratification)
 
-PENDING. Gate state (D2 Cramer-model gate, Session B): M1 + M2
-COMPLETE (Sections 3.2-3.3); GATE: PASS WITH AMENDMENTS (Section
-3.4) -- the model balance closes (a.s. positivity along dyadic
-scales, x^{2-o(1)} ordered / x^{1-o(1)} disjoint model pairs), so D1
-is not architecturally dead and D1.a-d are unblocked, BINDINGLY
-amended by F17.2 (room budget is (2 ln x)^M per middle position, not
-(log x)^2) and F17.3 (D1 runs on the aggregate filter D0.2',
-A' in (1, 4 sqrt(2)/e); the pinned per-position filter's floor route
-is dead in the model by capacity slack alone). D5.c's empirical
-landing ran first (Section 7), per the kickoff's order.
+NO UNCONDITIONAL (E2')-SUPPLY THEOREM IS PRODUCED; THE ITEM DELIVERS
+THE OBSTRUCTION BRANCH OF THE MANDATE -- a named obstruction per
+blocker with exact quantitative gaps -- plus the statement layer, a
+checked model gate, and an extended certificate layer. Scope
+qualifiers (B1 discipline, binding for every clause below): all
+obstruction claims are LOCATED and corpus-relative (the 14 anchored
+texts plus the chain-v1/tate-transfer infrastructure); no
+impossibility over all conceivable routes is claimed; model
+statements are about Model M only; heuristic constants are labeled
+as such and never load-bearing for provability claims.
+
+V1 (architecture sound; D2 gate). GATE: PASS WITH AMENDMENTS
+(Section 3.4). In Model M the SUP'_1-analogue holds a.s. along
+dyadic scales with x^{2-o(1)} ordered and x^{1-o(1)} disjoint
+(E2')-pairs (Theorem M1, independently checked); the balance closes
+with relative room (2 ln x)^M (M2, F17.2 correcting the kickoff's
+(log x)^2 orientation). The failure of unconditional supply is
+primes-specific, not architectural.
+
+V2 (the counting route, exactly closed). P1 fixes the battleground
+(C_sides - C_words > 0). The unconditional floor is
+capacity-limited twice over: (a) per-position filters force
+A asymp L and die by capacity slack (A/4)^{J+K} even in the model
+(F17.3); (b) after the aggregate-filter repair D0.2' (threshold
+A' < 4 sqrt(2)/e = 2.08104, room theta(A') = 1 - (2/ln 2)
+ln(e A'/4)), the primes close the route through the
+exactly-computed two-point HL mass: gamma_2 -> E_even[S_2^2]/4 =
+1.150481 > gamma_2^crit = 2 sqrt(2)/e = 1.040520 (F17.5) -- a
+sieve-constant-independent closure with a strikingly thin margin
+(ratio 1.106), invisible in the model (gamma_2 = 1/2), measured
+above threshold at every reachable x. The S-weighted repair's own
+tool constant at k = 2 IS the same 1.1505 (D1.c): the counting
+route funnels into HL lower bounds at matched flanks -- blocker 2
+-- with no constant to spare.
+
+V3 (blockers hardened, M-invariant; D4). The depth floor
+J + K >= (2+o(1)) log2 ln x is (E4)/(E5)-forced for every middle
+width M: the weighted clause relocates no burden. Blocker 1
+(pigeonhole): strictly finer blindness at M >= 2 (the E-invariant
+degeneracy); the normal form M = 1 is pigeonhole-optimal. Blocker
+2 (parity-blocked prescription): burden M-invariant; T1-transplant
+form in V4. Blocker 3 (Shiu): exact killing inequality
+(ln x)^{(2C/ln 2)(1+o(1))} <= (1+o(1)) log2 ln x, false at every M
+and every difference distribution. Uniformly behind every
+tail-typicality failure in the corpus: the sparse-site Markov cost
+(F17.8; density rho costs log2(1/rho) in J). Corrected
+expectation: T5 transport dies at exactness + tail-typicality, NOT
+at the (E5) b-D coupling (F17.6). Under a Hypothesis-B-shaped
+pointwise bound the T3 trap route closes (scope-qualified) -- the
+entire unconditional content of supply-by-construction is the
+sparse-site tail clause.
+
+V4 (the sharpest residual, successor target). F17.7: Pintz's Thm 5
+exclusion pattern, transplanted to one matched-flank word class,
+derives (E2)-supply from a SINGLE missing input -- an HL-type lower
+bound for the class count of one matched-flank family at
+k ~ L = (2+o(1)) log2 ln x. The summed-Selberg exclusion side is
+quantitatively AVAILABLE at our depths: D1-L (Section 4.1) is
+k-uniform precisely in-regime, so excluding a rigid middle over
+all <= A' L ln x/2 candidate values costs a factor the exclusion
+budget absorbs; only the class-count lower bound is missing.
+Equivalently (P1): the anti-rigidity counting statement of
+adjudication-F2 form. All roads of this dossier terminate at this
+one input.
+
+V5 (consumption interface, faithfulness). F17.1 + ledger-K1
+convergence: only SUP_1^norm feeds the landed ExchangeSupply1
+verbatim; supply order SUP_1^norm > SUP'_1 > SUP'_b. FW-1..4
+divergence register in Section 2.6; no silent absorption either
+direction.
+
+V6 (certificates; acceptance clause). D5.c grid reproduces the
+committed class counts (12/178/1287, 2/21/143, first (6,6,64) at
+1e8) and lands the calibration constants (vector gamma_2
+1.68/1.58/1.55; marginal 1.2005/1.1808; Euler product = direct
+sum). D5.b at 1e9 (Section 7.2): the project's FIRST b > 1
+certificates -- inline (7,6,44,3) with d_1 = -24 (hand-verified),
+plus (7,6,27,5) on the same sites; one constellation kills
+b in {1,3,5}; (7,7)/(8,8) frontier located (zero side collisions
+at 1e9, consistent with the collision calculus); (6,6,64) grows
+1 -> 29 classes from 1e8 to 1e9.
+
+Acceptance-intent check: "unconditional theorem feeding EXCH'_b" --
+NOT delivered (obstruction branch taken, as the mandate's
+disjunction allows); "a named obstruction per blocker with the
+exact quantitative gap" -- DELIVERED (V2/V3, with V4 the residual);
+"certificate layer extended beyond the two inlined sites" --
+DELIVERED (V6: new inline b = 3 certificate + the b = 5 and 1e9
+b = 1 layers; this alone discharges the acceptance clause's
+certificate sentence, per the kickoff, independently of D1-D4
+outcomes).
+
+Gate-order record: D2 completed and checked before any D1
+execution; D5.c's empirical landing preceded D1-route trust
+(Section 7); the kickoff's binding order was honored.
 
 ## 2. D0 -- statement layer
 
@@ -346,6 +432,13 @@ EXCH', Theorem D0.6) > SUP'_b all odd b (full irrationality); the
 mandate's acceptance clause "feeding EXCH'_b (EXCH'_1 suffices for
 item-0010)" is met by any of the three, but only the first closes the
 Lean gap without further statement-layer work.
+[Convergence note, discovered at the Session C ledger read: ledger
+ANN-50's handshake finding K1 ("item-0017 targets width 1 primarily
+and treats weighted width > 1 as an extension layer") states the
+same ordering; F17.1 was derived here independently from the module
+text before reading ANN-50 -- recorded as mutual confirmation, and
+the kickoff sha256 was re-verified against ANN-50's canonical value
+(match).]
 
 ### 2.7 ADDENDUM (Session B, carried by finding F17.3): aggregate
 ### filter D0.2' and parameter map Par'(b,x)
@@ -681,15 +774,50 @@ A' -> 1+, the route is open iff gamma_2 < gamma_2^crit :=
 2 sqrt(2)/e = 1.0405...
 
 ### 4.1 D1.a -- max-S version with the self-proved Selberg constant
+### (COMPLETE)
 
-[IN EXECUTION: inline lemma D1-L (k-uniform Selberg upper bound with
-explicit constant, no Halberstam-Richert citation for the constant;
-qualitative shape citable secondhand as Pintz 1305.6289 Lemma 3, eq.
-(3.12), including its "H << log N" span note, asserted there and
-therefore NOT relied on here) is being derived as a max-effort
-workpaper (item-0017-workpapers/d1a-selberg.md) with independent
-verification; the balance run against C_sel(L) lands here when it
-completes. Expected per F17.4: deficit 2^{L(1-theta/2)} L!.]
+Inline lemma D1-L (workpaper item-0017-workpapers/d1a-selberg.md,
+618 lines, self-contained; steering-verified this session by
+re-execution of the core steps -- the Rankin tail bound (10.2)-(10.4)
+with Delta >= 0.7543, the Mertens/singular-series assembly (10.6),
+and the constant-gap ratios): for admissible H with |H| = k,
+k <= (lnln X)^2, span <= (ln X)^2, X >= exp(exp(30)):
+    N(X;H) <= C(k) (1 + err) S(H) X/(ln X)^k,
+    C(k) = 2 ((8k+2) e^{-gamma})^k,
+    err <= 20 k^2 lnln X / ln X = o(1) in-regime,
+with the optimized Corollary D1-L' (k >= 5):
+    C*(k) = 2e (4 e^{-gamma} k)^k e^{1.45 sqrt k}
+          <= (6.11)^k k! e^{1.45 sqrt k}.
+External inputs: four Rosser-Schoenfeld inequalities only (their
+exact 1962 equation numbers are memory-cited by the executor --
+U17.10; the inequalities as stated are standard R-S facts); PNT and
+Halberstam-Richert NOT used. No citation is taken for the constant;
+the qualitative shape matches Pintz 1305.6289 Lemma 3 (whose own
+constant and "H << log N" note are asserted there, not relied on
+here). HONESTY layer (workpaper Section 13): the self-contained
+route's constant exceeds the classical 2^k k! by (2e^{1-gamma})^k
+e^{O(sqrt k)} ~ (3.06)^k (Corollary) resp. ~ (6.11)^k (clean
+Theorem); the gap is inherent to the Rankin-truncation lower bound
+for the main quadratic form.
+
+BALANCE RUN (the D1.a documented outcome). Our regime instantiates
+k = L+1 = (2/ln 2 + o(1)) lnln x <= (lnln x)^2 and span <=
+A' L ln x <= (ln x)^2: D1-L applies with err = o(1). On D0.2' at
+fixed A' in (1, 4 sqrt(2)/e), the max-S balance needs
+    C*(L+1) * S-term * [capacity/collision calculus]
+      < room = (ln x)^{theta(A')},  theta(A') < 1;
+already at S-term = 1 the per-word constant alone gives deficit
+    C*(L+1) / (ln x)^{theta} = exp( (1+o(1)) L ln L ),
+super-polylogarithmic -- the kickoff's predicted failure "by a
+factor traceable to 2^L L!", now documented with a self-proved
+constant, and robust: the classical 2^k k! (were it citable) fails
+identically, since 2^L L! = exp((1+o(1)) L ln L) as well; the
+(3.06)^L method loss is asymptotically irrelevant to the failure
+mode. DOUBLE KILL: by F17.5 the balance fails even at the
+counterfactual perfect constant C_per = 1 (the true two-point mass
+closes the floor); the sieve-constant deficit is the second,
+independent closure. D1.a closes as: route dead twice over, each
+death exactly quantified.
 
 ### 4.2 D1.b -- first-moment averaging (COMPLETE)
 
@@ -786,20 +914,71 @@ words at entropy precision (D1.a constant territory, F17.4);
 only linearly in the exponent while the closure deficit is
 per-position multiplicative: no fixed M escapes.
 
-### 4.4 D1.c / D1.d -- Session C (pre-shaped)
+### 4.4 D1.c -- the S second moment at growing k (COMPLETE:
+### named as the precise missing estimate)
 
-D1.c: name and assess "S second moment at growing k": needed form
-    sum over (J+K)-tuples in the aggregate simplex of S(H_side)^2
-    at k ~ (2/ln 2) lnln x, span ~ ln x; MoSo 0409258 proves
-    R_k(h)/V_k asymptotics at FIXED k only (its sole uniformity
-    remark defers to Granville-Soundararajan restrictions);
-    Kuperberg stops at k << (log h)^{1/2}. Candidate register
-    entry confirmed as a genuine gap in the tool base.
-D1.d: Merikoski Chen substitution LOCATED (1811.03008 eq. (1.6)
-    p. 6, A = 4 -> 3.99, Prop 12): a pairwise (k = 2-level)
-    upper-sieve constant improvement of 0.25%; the D1 critical
-    constant is per-word at k ~ lnln x with deficit
-    exp(Theta(L log L)) -- map and exact reach statement Session C.
+The S-weighted floor (the only repair of F17.5's closure that
+stays on the counting route) is, for any nonnegative side weights
+w_P, C_sides >= (sum_{sites} w_{P(site)})^2 / sum_P w_P^2; the
+optimizing choice w_P = HL side-mass needs
+(i) LOWER bounds on sum_{sites} S_side(P(site)) -- HL-type lower
+    bounds at matched flanks: the parity-blocked class (O4
+    blocker 2); and
+(ii) UPPER bounds on the side-mass second moment
+        Sigma_2(J+K; simplex) := sum_{side tuples H in the
+        aggregate simplex} S(H)^2
+    at k = J+K = (2/ln 2 + o(1)) lnln x, span <= A' L ln x, of
+    quality Sigma_2 <= (1+o(1))^k E[S]^2 |simplex| -- i.e.
+    per-position second-moment constant 1 + o(1).
+REGISTER ENTRY (the kickoff's candidate, now precise): "S second
+moment at growing k" = estimate (ii). Status in the tool base:
+- MoSo 0409258 computes the CENTERED moments R_k(h) =
+  sum_{distinct d_i <= h} S_0(D) = mu_k (-h log h + Ah)^{k/2}
+  + O_k(h^{k/2 - 1/(7k) + eps}) (Thm 2; definitions (7)-(12)) at
+  FIXED k, box (not simplex) domain, S_0 (not S^2) products; its
+  only uniformity remark defers to the Granville-Soundararajan
+  uncertainty-principle restrictions "on the uniformity (in k)
+  with which (15) can possibly hold" (p. 4). NOT the needed form
+  on any of the three axes (centering, k-range, domain).
+- Kuperberg 2210.09775: first moments only (T_k), k << (log h)^{1/2}
+  for asymptotics, (3 log k)^k growth-free; explicitly NO second
+  moment in the text (anatomy Section "FOCUS 4": NOT FOUND).
+- k = 2 ground truth: THE SECOND MOMENT IS LARGE, NOT 1+o(1). The
+  F17.5 Euler product IS the k = 2 instance: the per-position
+  (even-normalized) second moment E_even[S_2^2]/E_even[S_2]^2 =
+  4.601923/4 = 1.1505 > 1. Any k-fold product structure
+  compounds this per position; hence the needed (1+o(1))^k
+  quality is FALSE as stated, and the honest form of (ii) must
+  carry the exact constant (1.1505...)^k -- which then re-enters
+  the floor calculus as gamma_2 and reproduces the F17.5 closure.
+CONCLUSION (obstruction-language): the S-weighted repair is not
+merely missing a tool; at the two-point level the tool's true
+constant is exactly the one that closes the unweighted route.
+What remains open is only whether HL LOWER bounds at matched
+flanks (input (i), parity-blocked) could beat the second-moment
+denominator by the Cauchy-Schwarz slack -- i.e., the counting
+route funnels back into blocker 2 with no constant to spare.
+
+### 4.5 D1.d -- Chen substitution mapped (COMPLETE)
+
+Merikoski's substitution point (1811.03008 eq. (1.6) p. 6; "In
+[2, Section 4], Selberg's upper bound sieve is used to show this
+for A = 4. We improve this to A = 3.99 by using Chen's sieve [4],
+[13] (cf. Proposition 12 below)"): a two-point prime-pair sum
+against squared Maynard-Tao weights, constant 4 -> 3.99 (0.25%).
+Mapping onto D1's critical spots:
+(a) The floor-closure margin (F17.5) is NOT a sieve constant: it
+    is the true two-point mass E_even[S_2^2]/4 = 1.1505, exactly
+    computable -- no upper-sieve improvement changes a true
+    constant. Chen-type switching does not apply.
+(b) The per-word constant (F17.4 deficit 2^{L(1-theta/2)} L!):
+    Chen switching improves two-point upper sieves by fixed
+    percentages; the needed improvement is super-exponential in
+    L. Category mismatch; reach bounded.
+BEST CURRENT VALUE at the pairwise upper-sieve spot: 3.99
+(Merikoski Prop 12), recorded as the corpus optimum; its reach
+toward (E2')-supply is a bounded factor at a spot whose deficit
+is exp(Theta(L log L)). D1.d closes with a located non-lever.
 
 ## 5. D3 -- tool cartography (the parity gray zone, mapped; drafted
 ## Session B from the 14 anatomies, to be finalized Session C)
@@ -1075,6 +1254,45 @@ distribution is low-variance at these depths (D1.b/c context);
 lambda_w means (sub-1-mass corner) decline with x as expected
 (e.g. (4,5): 105 -> 47 -> 24).
 
+### 7.2 D5.b -- deeper firsts and b > 1 certificates (x = 1e9;
+### d5b_deep.py, in-core, pi(1e9) = 50,847,534 verified)
+
+FRONTIER DATUM: at x = 1e9, (7,7,67) and (8,8,67) have ZERO side
+collisions among ~5.08e7 filtered sites (every side word distinct;
+a fortiori zero exchange classes). Quantitatively consistent with
+the collision calculus: expected side collisions at J+K = 14 are
+N^2 (gamma_2^vec/ln x)^{14} ~ 0.5 at 1e9. First (7,7) pairs are
+expected near x ~ 5e9-1e10; recorded as an executor-slot candidate
+after item-0010 (kickoff D5.a discipline).
+
+FIRST b > 1 CERTIFICATES OF THE PROJECT (E5 honored; verified by
+hand this session, gap-by-gap from the printed primes):
+INLINE CERTIFICATE (J,K,D0,b) = (7,6,44,3), gate 3*(44-2) = 126 <
+2^8 = 256:
+  site n at gap index t = 7113518: primes 125063227, 125063231,
+  125063233, 125063249, 125063251, 125063261, 125063273, 125063291,
+  125063297, 125063317, 125063329, 125063333, 125063347, 125063353,
+  125063357, 125063369 -- word prefix [4,2,16,2,10,12,18], middle
+  6, suffix [20,12,4,14,6,4]; delta_{t+J} = 10.426, delta_{t+L} =
+  14.562;
+  site m at gap index t = 960168: primes 14824987, 14824991,
+  14824993, 14825009, 14825011, 14825021, 14825033, 14825051,
+  14825081, 14825101, 14825113, 14825117, 14825131, 14825137,
+  14825141, 14825147 -- SAME prefix and suffix, middle 30;
+  delta_{t+J} = 22.477, delta_{t+L} = 21.089;
+  d_1 = -24, identity residual -1.78e-15. Two further (7,6,44)
+  b = 3 classes exist at 1e9 (3 total).
+b = 5: the SAME two sites qualify at (7,6,27,5), gate 5*25 = 125 <
+256 (both near deltas <= 27); 3 classes total.
+SHARED-CONSTELLATION DATUM: the one constellation above carries
+b in {1,3,5} certificates simultaneously -- its 1-shifted form
+(prefix shortened to 6) is a (6,6,64) b = 1 exchange pair. One gap
+constellation, three moduli killed.
+(6,6,64) CONTINUITY: 29 exchange classes at 1e9 (vs 1 at 1e8) --
+the superlinear class growth persists one scale deeper; the first
+class found pairs anchors 267,737 and 979,591,577 (matched flanks
+across three orders of magnitude of scale).
+
 NOTE (seed-script census vs kickoff): the kickoff lists
 pc_wordcount.py among the committed seed scripts; the committed tree
 at 66adc54 carries only pc_wordcount2.py (plus the three exch_*.py).
@@ -1158,6 +1376,12 @@ U17.9 The gamma_2 asymptote uses the Gallagher-frame gap law
       in extract/gl20-heuristics.md). The F17.5 TRUTH face is
       explicitly heuristic+empirical; the PROVABILITY face does not
       use it.
+U17.10 D1-L's Rosser-Schoenfeld citations (RS1-RS4): the
+      inequalities as stated (with validity ranges) are standard
+      R-S 1962 facts, but the executor cited the equation/theorem
+      numbers from memory; double-check against the 1962 paper
+      before any external circulation. The proof consumes only the
+      four stated inequalities.
 
 ## 9. Findings register (F17.n)
 
