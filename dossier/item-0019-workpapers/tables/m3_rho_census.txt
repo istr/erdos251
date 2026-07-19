@@ -1,0 +1,414 @@
+item-0019 m3: local quotient census rho(P,d) per RS.3,
+even-conditioned (p = 2 factor exactly 2), exact rational
+discipline per kickoff 3(d) (per-pair exact over odd
+p <= S0; shared exact band (S0, Q]; certified one-sided
+tail: true rho in [rho_Q e^{-eps_Q}, rho_Q], eps_Q = 0.51
+k^2/Q).  Q reference = 1e6.  Census over realized classes
+in Fam_2 and realized middles only (RS.3 domain clause).
+HEURISTIC lines labeled HEURISTIC/U18.2.
+
+== row (J,K,D) = (4,5,30), k = 11, S0 = 296 ==
+  Q-stability: band factors (S0,Q] and certified tail widths:
+    Q =   10000: band = 0.98538452, eps_Q = 6.17e-03
+    Q =  100000: band = 0.98511794, eps_Q = 6.17e-04
+    Q = 1000000: band = 0.98509624, eps_Q = 6.17e-05
+    stability within printed interval widths: PASS
+         x   pairs    cls |     mean mass-mean | q01 q05 q25 q50 q75 q95 q99
+     2e+06      50     38 |  14.3732   15.1680 |   2.681   3.263   5.792  10.537  19.946  32.787  48.208
+     2e+07     567    389 |  13.0567   14.3568 |   2.432   3.771   6.773  10.414  15.731  31.689  52.912
+     1e+08    3897   2610 |  13.1313   14.1857 |   2.310   3.732   6.827  10.581  16.378  31.075  49.188
+     1e+09   72619  47404 |  13.1600   14.2766 |   2.377   3.669   6.760  10.508  16.395  31.774  50.254
+  top-10 rho at x=2e+06 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  56.601 [6, 4, 12, 8] | 6 | [12, 4, 6, 12, 6] NP=2 NPd=2 span=76 [3:2,2,2 5:4,3,4 7:5,5,5 11:6,4,4 13:7,5,6]
+    rho=  39.473 [6, 2, 4, 8] | 30 | [18, 10, 12, 6, 2] NP=2 NPd=2 span=98 [3:2,2,2 5:4,4,3 7:4,4,4 11:7,5,5 13:8,5,6]
+    rho=  33.679 [24, 18, 2, 4] | 26 | [28, 6, 6, 24, 2] NP=2 NPd=2 span=140 [3:2,2,2 5:4,4,4 7:6,4,5 11:7,4,5 13:8,5,5]
+    rho=  31.697 [16, 2, 4, 14] | 6 | [6, 12, 12, 4, 2] NP=2 NPd=2 span=78 [3:2,2,2 5:4,4,4 7:5,4,5 11:9,4,6 13:8,5,6]
+    rho=  28.726 [4, 14, 4, 2] | 6 | [22, 6, 14, 6, 6] NP=2 NPd=2 span=84 [3:2,2,2 5:4,4,4 7:5,4,4 11:8,4,5 13:7,5,4]
+    rho=  28.043 [4, 2, 4, 8] | 30 | [10, 2, 10, 14, 10] NP=2 NPd=1 span=94 [3:2,2,2 5:4,4,3 7:5,4,5 11:7,5,5 13:8,5,5]
+    rho=  27.637 [10, 2, 6, 10] | 24 | [2, 10, 24, 6, 6] NP=2 NPd=1 span=100 [3:2,2,2 5:4,3,4 7:6,4,5 11:7,5,6 13:7,5,6]
+    rho=  26.452 [12, 12, 10, 2] | 34 | [6, 6, 2, 6, 10] NP=2 NPd=1 span=100 [3:2,2,2 5:4,4,4 7:6,5,4 11:8,4,6 13:9,5,6]
+    rho=  25.532 [10, 2, 6, 10] | 12 | [2, 10, 24, 6, 6] NP=2 NPd=1 span=88 [3:2,2,2 5:4,3,4 7:5,4,5 11:8,5,6 13:9,5,6]
+    rho=  24.959 [8, 6, 10, 6] | 6 | [2, 6, 6, 6, 12] NP=2 NPd=2 span=68 [3:2,2,2 5:4,3,4 7:5,4,5 11:7,4,6 13:9,5,6]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: +0.051 / +0.076
+    vs            min_gap: +0.246 / +0.125
+    vs           coverage: +0.447 / +0.580
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.163 / +0.194
+    vs  concentration_red: +0.198 / +0.191
+    red_P vs rho(P,d*):  +0.254 / +0.258
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.6805, quantiles q5=1.258 q25=1.532 q50=1.613 q75=1.875 q95=2.097
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.02, sd = 1.18, quantiles q5=-0.47 q25=+0.0805 q75=+1.81 q95=+2.64; pred >= 1 on 5 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 76 vs pred 48.8567 (ratio 1.56; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.4743, quantiles q5=0.000 q25=0.000 q50=0.341 q75=0.765 q95=1.296
+  top-10 rho at x=2e+07 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  71.465 [4, 8, 4, 6] | 44 | [16, 2, 16, 6, 8] NP=2 NPd=2 span=114 [3:2,2,2 5:4,4,4 7:6,5,5 11:5,4,5 13:9,5,6]
+    rho=  59.721 [10, 26, 6, 6] | 18 | [4, 8, 10, 24, 6] NP=2 NPd=1 span=118 [3:2,2,2 5:4,4,4 7:5,4,5 11:8,5,5 13:7,4,5]
+    rho=  56.601 [6, 4, 12, 8] | 6 | [12, 4, 6, 12, 6] NP=2 NPd=2 span=76 [3:2,2,2 5:4,3,4 7:5,5,5 11:6,4,4 13:7,5,6]
+    rho=  56.330 [8, 4, 8, 4] | 14 | [4, 6, 2, 4, 6] NP=2 NPd=2 span=60 [3:2,2,2 5:4,4,4 7:6,5,6 11:9,5,5 13:8,5,6]
+    rho=  54.840 [4, 6, 8, 24] | 18 | [12, 12, 10, 14, 6] NP=2 NPd=2 span=114 [3:2,2,2 5:4,4,4 7:4,3,4 11:7,5,5 13:8,5,6]
+    rho=  54.221 [12, 2, 16, 8] | 34 | [26, 10, 2, 4, 30] NP=2 NPd=2 span=144 [3:2,2,2 5:4,4,4 7:5,4,5 11:9,5,6 13:7,4,5]
+    rho=  52.238 [10, 6, 2, 46] | 2 | [12, 6, 16, 6, 8] NP=2 NPd=2 span=114 [3:2,2,2 5:4,4,4 7:5,5,4 11:7,5,4 13:9,5,6]
+    rho=  50.677 [24, 30, 2, 6] | 12 | [10, 6, 6, 8, 18] NP=2 NPd=2 span=122 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,5 13:9,5,5]
+    rho=  48.268 [12, 4, 12, 8] | 12 | [10, 12, 6, 2, 4] NP=2 NPd=2 span=82 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,5 13:10,5,6]
+    rho=  45.095 [2, 6, 18, 4] | 8 | [40, 8, 6, 4, 14] NP=2 NPd=2 span=110 [3:2,2,2 5:4,4,4 7:5,4,4 11:7,4,6 13:8,4,6]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.038 / -0.057
+    vs            min_gap: -0.028 / -0.051
+    vs           coverage: +0.600 / +0.620
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: -0.009 / -0.040
+    vs  concentration_red: +0.371 / +0.367
+    red_P vs rho(P,d*):  +0.395 / +0.441
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7008, quantiles q5=1.366 q25=1.585 q50=1.706 q75=1.816 q95=2.047
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.12, sd = 1.07, quantiles q5=-0.351 q25=+0.391 q75=+1.7 q95=+3.1; pred >= 1 on 35 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 778 vs pred 428.1598 (ratio 1.82; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3915, quantiles q5=0.000 q25=0.000 q50=0.216 q75=0.616 q95=1.349
+  top-10 rho at x=1e+08 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho= 112.465 [16, 2, 6, 12] | 10 | [24, 8, 10, 6, 6] NP=2 NPd=2 span=100 [3:2,2,2 5:4,4,4 7:5,5,5 11:8,5,5 13:7,5,6]
+    rho=  98.093 [34, 6, 6, 12] | 26 | [4, 2, 6, 4, 18] NP=2 NPd=2 span=118 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,5,5 13:9,5,6]
+    rho=  95.884 [6, 16, 38, 28] | 8 | [22, 8, 4, 8, 24] NP=2 NPd=2 span=162 [3:2,2,2 5:4,4,4 7:5,4,5 11:5,3,4 13:7,5,6]
+    rho=  81.421 [6, 10, 6, 2] | 10 | [32, 4, 12, 18, 20] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:6,5,6 11:7,4,5 13:9,5,6]
+    rho=  78.959 [12, 6, 4, 12] | 8 | [6, 12, 4, 6, 12] NP=2 NPd=2 span=82 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,3,3 13:7,5,6]
+    rho=  73.243 [12, 14, 4, 8] | 12 | [6, 10, 2, 4, 20] NP=2 NPd=2 span=92 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,5 13:7,3,5]
+    rho=  72.968 [24, 2, 6, 12] | 10 | [2, 10, 14, 6, 16] NP=2 NPd=2 span=102 [3:2,2,2 5:4,4,4 7:5,5,5 11:7,4,5 13:8,4,5]
+    rho=  71.465 [4, 8, 4, 6] | 44 | [16, 2, 16, 6, 8] NP=2 NPd=2 span=114 [3:2,2,2 5:4,4,4 7:6,5,5 11:5,4,5 13:9,5,6]
+    rho=  68.138 [18, 4, 2, 10] | 14 | [4, 18, 8, 12, 4] NP=2 NPd=2 span=94 [3:2,2,2 5:4,4,4 7:5,5,4 11:7,4,5 13:7,5,5]
+    rho=  66.674 [6, 2, 6, 10] | 42 | [8, 4, 12, 26, 4] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:5,4,4 11:7,5,6 13:8,5,5]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.041 / -0.053
+    vs            min_gap: -0.037 / -0.052
+    vs           coverage: +0.593 / +0.631
+    vs       capfail_near: -0.005 / -0.000
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.001 / +0.012
+    vs  concentration_red: +0.315 / +0.311
+    red_P vs rho(P,d*):  +0.361 / +0.395
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7320, quantiles q5=1.422 q25=1.617 q50=1.725 q75=1.837 q95=2.063
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.18, sd = 1.09, quantiles q5=-0.313 q25=+0.462 q75=+1.77 q95=+3.19; pred >= 1 on 175 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 5223 vs pred 2737.9260 (ratio 1.91; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.4109, quantiles q5=0.000 q25=0.000 q50=0.165 q75=0.648 q95=1.532
+  top-10 rho at x=1e+09 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho= 118.958 [4, 36, 6, 12] | 26 | [24, 6, 10, 2, 4] NP=2 NPd=2 span=130 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,5 13:7,5,6]
+    rho= 114.990 [6, 10, 2, 6] | 22 | [20, 18, 16, 18, 8] NP=2 NPd=2 span=126 [3:2,2,2 5:4,4,4 7:5,5,5 11:7,5,6 13:8,5,4]
+    rho= 112.465 [16, 2, 6, 12] | 10 | [24, 8, 10, 6, 6] NP=2 NPd=2 span=100 [3:2,2,2 5:4,4,4 7:5,5,5 11:8,5,5 13:7,5,6]
+    rho= 112.014 [6, 12, 6, 14] | 18 | [12, 36, 4, 2, 6] NP=2 NPd=2 span=116 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,6 13:7,5,5]
+    rho= 107.004 [20, 4, 2, 6] | 10 | [20, 4, 36, 2, 6] NP=2 NPd=2 span=110 [3:2,2,2 5:4,4,4 7:5,5,5 11:8,5,5 13:7,4,6]
+    rho= 104.978 [12, 4, 6, 2] | 28 | [12, 6, 26, 18, 12] NP=2 NPd=2 span=126 [3:2,2,2 5:4,4,4 7:5,5,5 11:7,4,4 13:7,5,5]
+    rho= 103.048 [2, 6, 12, 6] | 12 | [4, 6, 30, 8, 24] NP=2 NPd=2 span=110 [3:2,2,2 5:4,4,4 7:6,5,6 11:7,5,5 13:8,4,6]
+    rho=  98.093 [34, 6, 6, 12] | 26 | [4, 2, 6, 4, 18] NP=2 NPd=2 span=118 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,5,5 13:9,5,6]
+    rho=  97.903 [20, 46, 6, 2] | 6 | [6, 28, 2, 16, 8] NP=2 NPd=2 span=140 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,4,6 13:8,4,4]
+    rho=  97.040 [4, 44, 48, 4] | 14 | [4, 6, 2, 4, 20] NP=2 NPd=2 span=150 [3:2,2,2 5:4,4,4 7:6,5,6 11:8,4,6 13:7,4,5]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.042 / -0.050
+    vs            min_gap: -0.047 / -0.044
+    vs           coverage: +0.603 / +0.642
+    vs       capfail_near: -0.012 / -0.013
+    vs        capfail_far: -0.013 / -0.013
+    vs          tail_mean: -0.011 / -0.009
+    vs  concentration_red: +0.334 / +0.329
+    red_P vs rho(P,d*):  +0.370 / +0.401
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7540, quantiles q5=1.485 q25=1.649 q50=1.748 q75=1.848 q95=2.047
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.24, sd = 1.05, quantiles q5=-0.219 q25=+0.523 q75=+1.82 q95=+3.14; pred >= 1 on 2471 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 95102 vs pred 46614.3210 (ratio 2.04; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.4148, quantiles q5=0.000 q25=0.000 q50=0.000 q75=0.676 q95=1.605
+  cross-check vs budget_sheet rho_exact (float, p < 1e6): H_pre=[0, 12, 14, 20, 32], d=10, H_suf=[0, 12, 20, 32, 38, 42]: pipeline 23.164775 vs reference 23.164775 (rel 4.2e-14) PASS
+
+== row (J,K,D) = (5,5,34), k = 12, S0 = 260 ==
+  Q-stability: band factors (S0,Q] and certified tail widths:
+    Q =   10000: band = 0.97907015, eps_Q = 7.34e-03
+    Q =  100000: band = 0.97875229, eps_Q = 7.34e-04
+    Q = 1000000: band = 0.97872641, eps_Q = 7.34e-05
+    stability within printed interval widths: PASS
+         x   pairs    cls |     mean mass-mean | q01 q05 q25 q50 q75 q95 q99
+     2e+06      11      9 |  12.3020   12.0099 |   5.698   5.700   6.895   9.889  15.448  24.654  30.081
+     2e+07      75     54 |  16.6202   18.5020 |   4.910   5.731   8.724  11.753  17.654  51.756  62.677
+     1e+08     462    319 |  15.5983   17.0587 |   3.163   4.694   8.205  12.400  18.831  37.196  61.688
+     1e+09    7281   4947 |  16.5602   18.1047 |   2.671   4.230   8.110  12.830  20.835  41.763  63.780
+  top-10 rho at x=2e+06 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  31.438 [4, 26, 4, 2, 12] | 10 | [8, 4, 8, 12, 4] NP=2 NPd=2 span=94 [3:2,2,2 5:4,4,4 7:6,5,5 11:7,5,6 13:10,5,6]
+    rho=  17.871 [14, 12, 12, 10, 2] | 34 | [6, 6, 2, 6, 10] NP=2 NPd=1 span=114 [3:2,2,2 5:4,4,4 7:6,5,4 11:9,5,6 13:9,5,6]
+    rho=  17.507 [14, 12, 12, 10, 2] | 4 | [6, 6, 2, 6, 10] NP=2 NPd=1 span=84 [3:2,2,2 5:4,4,4 7:6,5,4 11:9,5,6 13:9,5,6]
+    rho=  13.390 [12, 4, 14, 10, 6] | 20 | [4, 2, 10, 8, 6] NP=2 NPd=1 span=96 [3:2,2,2 5:3,3,3 7:6,4,5 11:8,6,6 13:7,6,5]
+    rho=  10.557 [14, 4, 26, 4, 2] | 12 | [10, 8, 4, 8, 12] NP=2 NPd=2 span=104 [3:2,2,2 5:4,3,3 7:6,5,5 11:6,5,5 13:9,5,6]
+    rho=   9.889 [14, 10, 2, 4, 6] | 2 | [42, 4, 14, 12, 4] NP=2 NPd=2 span=114 [3:2,2,2 5:4,3,3 7:5,5,4 11:8,5,6 13:9,5,5]
+    rho=   9.480 [6, 14, 4, 26, 4] | 2 | [12, 10, 8, 4, 8] NP=2 NPd=2 span=98 [3:2,2,2 5:4,3,3 7:6,5,5 11:6,5,4 13:9,5,6]
+    rho=   8.048 [10, 6, 6, 6, 2] | 6 | [4, 2, 10, 14, 4] NP=2 NPd=2 span=70 [3:2,2,2 5:4,4,3 7:5,4,4 11:9,5,6 13:8,6,5]
+    rho=   5.743 [14, 6, 10, 2, 12] | 4 | [6, 6, 2, 40, 2] NP=2 NPd=2 span=104 [3:2,2,2 5:4,3,4 7:5,4,3 11:8,5,5 13:11,6,6]
+    rho=   5.704 [2, 6, 4, 2, 4] | 2 | [10, 14, 6, 4, 8] NP=2 NPd=2 span=62 [3:2,2,2 5:4,4,3 7:6,5,4 11:9,6,6 13:10,6,6]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: +0.024 / +0.233
+    vs            min_gap: -0.117 / -0.137
+    vs           coverage: +0.785 / +0.467
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.238 / +0.133
+    vs  concentration_red: -0.113 / -0.311
+    red_P vs rho(P,d*):  -0.214 / -0.518
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.6800, quantiles q5=1.412 q25=1.600 q50=1.722 q75=1.822 q95=1.868
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.11, sd = 0.848, quantiles q5=-0.367 q25=+0.765 q75=+1.65 q95=+2.1; pred >= 1 on 1 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 18 vs pred 9.8215 (ratio 1.83; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.6504, quantiles q5=0.000 q25=0.231 q50=0.734 q75=0.901 q95=1.268
+  top-10 rho at x=2e+07 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  63.807 [24, 30, 2, 6, 12] | 10 | [6, 6, 8, 18, 4] NP=2 NPd=2 span=126 [3:2,2,2 5:4,4,4 7:5,5,4 11:7,6,5 13:9,6,5]
+    rho=  62.279 [12, 18, 4, 2, 4] | 30 | [14, 12, 18, 10, 8] NP=2 NPd=2 span=132 [3:2,2,2 5:4,4,4 7:5,5,4 11:6,5,5 13:10,6,5]
+    rho=  61.711 [6, 4, 6, 8, 24] | 18 | [12, 12, 10, 14, 6] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:5,4,4 11:7,6,5 13:8,6,6]
+    rho=  53.705 [6, 4, 8, 4, 6] | 44 | [16, 2, 16, 6, 8] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:6,5,5 11:5,4,5 13:10,6,6]
+    rho=  50.921 [4, 24, 30, 2, 6] | 12 | [10, 6, 6, 8, 18] NP=2 NPd=2 span=126 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,5 13:9,6,5]
+    rho=  46.523 [30, 4, 6, 18, 18] | 2 | [6, 16, 6, 12, 2] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:5,4,4 11:6,6,4 13:9,6,6]
+    rho=  41.233 [14, 12, 4, 12, 8] | 12 | [10, 12, 6, 2, 4] NP=2 NPd=2 span=96 [3:2,2,2 5:4,4,4 7:5,4,5 11:8,6,5 13:10,5,6]
+    rho=  36.826 [6, 8, 6, 4, 8] | 10 | [12, 6, 6, 14, 4] NP=2 NPd=2 span=84 [3:2,2,2 5:4,4,4 7:5,4,4 11:8,6,6 13:8,5,5]
+    rho=  31.438 [4, 26, 4, 2, 12] | 10 | [8, 4, 8, 12, 4] NP=2 NPd=2 span=94 [3:2,2,2 5:4,4,4 7:6,5,5 11:7,5,6 13:10,5,6]
+    rho=  28.371 [38, 4, 18, 8, 6] | 6 | [4, 6, 12, 2, 6] NP=2 NPd=2 span=110 [3:2,2,2 5:4,4,3 7:5,4,5 11:7,5,5 13:8,5,5]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.001 / -0.079
+    vs            min_gap: +0.063 / -0.044
+    vs           coverage: +0.639 / +0.664
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.087 / +0.139
+    vs  concentration_red: +0.346 / +0.223
+    red_P vs rho(P,d*):  +0.345 / +0.279
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7284, quantiles q5=1.410 q25=1.612 q50=1.732 q75=1.857 q95=2.046
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +0.981, sd = 1.01, quantiles q5=-0.553 q25=+0.28 q75=+1.68 q95=+2.37; pred >= 1 on 10 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 108 vs pred 69.5818 (ratio 1.55; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3817, quantiles q5=0.000 q25=0.000 q50=0.192 q75=0.711 q95=1.130
+  top-10 rho at x=1e+08 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  71.246 [6, 2, 4, 8, 12] | 18 | [12, 4, 12, 20, 12] NP=2 NPd=2 span=110 [3:2,2,2 5:4,4,4 7:6,5,5 11:7,6,5 13:8,5,6]
+    rho=  63.807 [24, 30, 2, 6, 12] | 10 | [6, 6, 8, 18, 4] NP=2 NPd=2 span=126 [3:2,2,2 5:4,4,4 7:5,5,4 11:7,6,5 13:9,6,5]
+    rho=  62.686 [2, 16, 6, 6, 2] | 12 | [6, 28, 2, 4, 18] NP=2 NPd=2 span=102 [3:2,2,2 5:4,4,4 7:5,4,5 11:8,5,5 13:6,6,5]
+    rho=  62.279 [12, 18, 4, 2, 4] | 30 | [14, 12, 18, 10, 8] NP=2 NPd=2 span=132 [3:2,2,2 5:4,4,4 7:5,5,4 11:6,5,5 13:10,6,5]
+    rho=  61.711 [6, 4, 6, 8, 24] | 18 | [12, 12, 10, 14, 6] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:5,4,4 11:7,6,5 13:8,6,6]
+    rho=  61.673 [18, 4, 2, 10, 14] | 4 | [18, 8, 12, 4, 6] NP=2 NPd=2 span=100 [3:2,2,2 5:4,4,4 7:6,5,5 11:7,5,5 13:7,5,5]
+    rho=  56.542 [12, 2, 28, 8, 18] | 4 | [6, 2, 4, 24, 2] NP=2 NPd=2 span=110 [3:2,2,2 5:4,4,4 7:5,3,5 11:7,6,6 13:9,5,5]
+    rho=  55.706 [18, 12, 26, 12, 6] | 36 | [6, 10, 12, 6, 12] NP=2 NPd=1 span=156 [3:2,2,2 5:4,4,4 7:4,4,4 11:7,5,5 13:9,5,6]
+    rho=  54.019 [12, 18, 4, 2, 10] | 14 | [4, 18, 8, 12, 4] NP=2 NPd=2 span=106 [3:2,2,2 5:4,4,4 7:6,6,4 11:8,5,5 13:8,6,5]
+    rho=  53.705 [6, 4, 8, 4, 6] | 44 | [16, 2, 16, 6, 8] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:6,5,5 11:5,4,5 13:10,6,6]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: +0.019 / +0.023
+    vs            min_gap: -0.084 / -0.056
+    vs           coverage: +0.589 / +0.613
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: -0.010 / +0.036
+    vs  concentration_red: +0.355 / +0.341
+    red_P vs rho(P,d*):  +0.416 / +0.445
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7059, quantiles q5=1.346 q25=1.553 q50=1.700 q75=1.834 q95=2.075
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +0.996, sd = 1.1, quantiles q5=-0.458 q25=+0.275 q75=+1.65 q95=+2.95; pred >= 1 on 38 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 638 vs pred 394.0676 (ratio 1.62; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3630, quantiles q5=0.000 q25=0.000 q50=0.223 q75=0.605 q95=1.174
+  top-10 rho at x=1e+09 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho= 189.426 [12, 6, 4, 2, 6] | 22 | [6, 2, 4, 18, 2] NP=2 NPd=2 span=84 [3:2,2,2 5:4,4,4 7:6,6,6 11:8,5,5 13:8,6,5]
+    rho= 155.000 [10, 8, 4, 8, 18] | 4 | [18, 6, 2, 10, 12] NP=2 NPd=2 span=100 [3:2,2,2 5:4,3,4 7:6,6,6 11:6,5,5 13:6,5,5]
+    rho= 120.510 [10, 8, 12, 24, 12] | 22 | [30, 6, 2, 24, 34] NP=2 NPd=2 span=184 [3:2,2,2 5:4,4,4 7:6,5,6 11:6,4,5 13:8,6,5]
+    rho= 115.508 [2, 22, 2, 6, 10] | 12 | [26, 4, 2, 16, 8] NP=2 NPd=2 span=110 [3:2,2,2 5:4,4,4 7:5,5,5 11:7,5,5 13:6,5,4]
+    rho= 110.946 [2, 4, 18, 2, 78] | 6 | [4, 42, 24, 2, 10] NP=2 NPd=1 span=192 [3:2,2,2 5:4,4,4 7:5,5,4 11:5,5,5 13:5,4,4]
+    rho= 110.658 [34, 6, 2, 4, 18] | 2 | [10, 8, 18, 18, 4] NP=2 NPd=2 span=124 [3:2,2,2 5:4,4,4 7:6,5,6 11:7,5,4 13:8,6,5]
+    rho= 109.654 [2, 4, 44, 48, 4] | 14 | [4, 6, 2, 4, 20] NP=2 NPd=2 span=152 [3:2,2,2 5:4,4,4 7:6,5,6 11:8,5,6 13:8,5,5]
+    rho= 105.846 [2, 18, 12, 4, 18] | 50 | [6, 6, 4, 20, 12] NP=2 NPd=2 span=152 [3:2,2,2 5:4,4,4 7:6,6,5 11:8,5,6 13:8,5,6]
+    rho= 102.422 [22, 12, 24, 14, 10] | 2 | [4, 12, 24, 8, 16] NP=2 NPd=2 span=148 [3:2,2,2 5:4,4,4 7:6,5,6 11:6,5,5 13:9,6,6]
+    rho= 101.584 [2, 4, 24, 2, 6] | 18 | [16, 18, 8, 18, 16] NP=2 NPd=2 span=132 [3:2,2,2 5:4,4,4 7:5,5,4 11:7,6,5 13:6,5,4]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.038 / -0.040
+    vs            min_gap: -0.042 / -0.037
+    vs           coverage: +0.619 / +0.667
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.021 / +0.025
+    vs  concentration_red: +0.333 / +0.351
+    red_P vs rho(P,d*):  +0.368 / +0.418
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7427, quantiles q5=1.428 q25=1.614 q50=1.735 q75=1.854 q95=2.095
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.09, sd = 1.12, quantiles q5=-0.492 q25=+0.334 q75=+1.72 q95=+3.13; pred >= 1 on 542 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 9898 vs pred 5870.7253 (ratio 1.69; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3819, quantiles q5=0.000 q25=0.000 q50=0.193 q75=0.597 q95=1.410
+  cross-check vs budget_sheet rho_exact (float, p < 1e6): H_pre=[0, 6, 28, 30, 34, 58], d=8, H_suf=[0, 4, 24, 30, 52, 70]: pipeline 12.161710 vs reference 12.161710 (rel 5.5e-14) PASS
+
+== row (J,K,D) = (6,6,64), k = 14, S0 = 264 ==
+  Q-stability: band factors (S0,Q] and certified tail widths:
+    Q =   10000: band = 0.97222620, eps_Q = 1.00e-02
+    Q =  100000: band = 0.97179656, eps_Q = 1.00e-03
+    Q = 1000000: band = 0.97176159, eps_Q = 1.00e-04
+    stability within printed interval widths: PASS
+         x   pairs    cls |     mean mass-mean | q01 q05 q25 q50 q75 q95 q99
+     2e+06       1      1 |  23.6743   23.6743 |  23.674  23.674  23.674  23.674  23.674  23.674  23.674
+     2e+07       1      1 |  23.6743   23.6743 |  23.674  23.674  23.674  23.674  23.674  23.674  23.674
+     1e+08       4      3 |  15.6533   15.7093 |   8.044   8.345   9.851  15.485  21.287  23.197  23.579
+     1e+09     117     88 |  27.4190   29.4861 |   3.837   5.202  12.618  22.001  34.958  74.145  95.737
+  top-10 rho at x=2e+06 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  23.674 [6, 14, 4, 26, 4, 2] | 12 | [10, 8, 4, 8, 12, 4] NP=2 NPd=2 span=114 [3:2,2,2 5:4,3,4 7:6,5,5 11:7,6,6 13:10,6,7]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: +nan / +nan
+    vs            min_gap: +nan / +nan
+    vs           coverage: +nan / +nan
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +nan / +nan
+    vs  concentration_red: +nan / +nan
+    red_P vs rho(P,d*):  +nan / +nan
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7957, quantiles q5=1.796 q25=1.796 q50=1.796 q75=1.796 q95=1.796
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +0.479, sd = 0, quantiles q5=+0.479 q25=+0.479 q75=+0.479 q95=+0.479; pred >= 1 on 0 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 2 vs pred 1.4272 (ratio 1.4; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3064, quantiles q5=0.306 q25=0.306 q50=0.306 q75=0.306 q95=0.306
+  top-10 rho at x=2e+07 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  23.674 [6, 14, 4, 26, 4, 2] | 12 | [10, 8, 4, 8, 12, 4] NP=2 NPd=2 span=114 [3:2,2,2 5:4,3,4 7:6,5,5 11:7,6,6 13:10,6,7]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: +nan / +nan
+    vs            min_gap: +nan / +nan
+    vs           coverage: +nan / +nan
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +nan / +nan
+    vs  concentration_red: +nan / +nan
+    red_P vs rho(P,d*):  +nan / +nan
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.6416, quantiles q5=1.642 q25=1.642 q50=1.642 q75=1.642 q95=1.642
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +0.528, sd = 0, quantiles q5=+0.528 q25=+0.528 q75=+0.528 q95=+0.528; pred >= 1 on 0 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 2 vs pred 1.3794 (ratio 1.45; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3551, quantiles q5=0.355 q25=0.355 q50=0.355 q75=0.355 q95=0.355
+  top-10 rho at x=1e+08 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho=  23.674 [6, 14, 4, 26, 4, 2] | 12 | [10, 8, 4, 8, 12, 4] NP=2 NPd=2 span=114 [3:2,2,2 5:4,3,4 7:6,5,5 11:7,6,6 13:10,6,7]
+    rho=  20.492 [8, 12, 12, 6, 4, 18] | 38 | [6, 4, 2, 10, 18, 2] NP=2 NPd=1 span=140 [3:2,2,2 5:4,3,3 7:6,5,5 11:6,5,6 13:8,6,7]
+    rho=  10.478 [8, 12, 12, 6, 4, 18] | 8 | [6, 4, 2, 10, 18, 2] NP=2 NPd=1 span=110 [3:2,2,2 5:4,3,3 7:6,5,5 11:8,5,6 13:9,6,7]
+    rho=   7.969 [48, 8, 4, 24, 2, 4] | 6 | [8, 6, 16, 20, 40, 14] NP=2 NPd=2 span=200 [3:2,2,2 5:4,4,3 7:5,4,4 11:10,7,6 13:8,6,6]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.853 / -0.866
+    vs            min_gap: +nan / +nan
+    vs           coverage: +0.676 / +0.500
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: -0.989 / -1.000
+    vs  concentration_red: +0.025 / +0.000
+    red_P vs rho(P,d*):  +0.366 / +0.000
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7275, quantiles q5=1.593 q25=1.643 q50=1.705 q75=1.801 q95=1.878
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +0.991, sd = 0.578, quantiles q5=+0.346 q25=+0.504 q75=+1.45 q95=+1.68; pred >= 1 on 0 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 6 vs pred 2.9843 (ratio 2.01; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.5149, quantiles q5=0.039 q25=0.195 q50=0.389 q75=0.772 q95=1.079
+  top-10 rho at x=1e+09 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho= 115.603 [10, 2, 10, 6, 18, 14] | 6 | [12, 10, 8, 4, 26, 16] NP=2 NPd=2 span=142 [3:2,2,2 5:4,4,4 7:6,5,6 11:7,6,5 13:9,7,6]
+    rho=  97.499 [20, 6, 22, 2, 4, 6] | 104 | [22, 14, 4, 26, 28, 6] NP=2 NPd=1 span=264 [3:2,2,2 5:4,4,4 7:6,5,5 11:7,6,5 13:8,6,5]
+    rho=  86.487 [2, 4, 6, 20, 18, 4] | 32 | [4, 2, 10, 8, 4, 2] NP=2 NPd=2 span=116 [3:2,2,2 5:4,4,4 7:6,6,5 11:8,5,6 13:8,5,6]
+    rho=  81.086 [6, 8, 12, 16, 8, 4] | 6 | [24, 8, 18, 10, 6, 6] NP=2 NPd=2 span=132 [3:2,2,2 5:4,4,4 7:5,4,5 11:8,6,5 13:8,6,6]
+    rho=  77.884 [6, 18, 2, 12, 12, 10] | 6 | [24, 8, 6, 4, 18, 12] NP=2 NPd=2 span=138 [3:2,2,2 5:4,4,4 7:6,6,4 11:7,5,6 13:9,5,7]
+    rho=  74.821 [14, 6, 12, 4, 6, 24] | 20 | [4, 30, 2, 12, 6, 4] NP=2 NPd=2 span=144 [3:2,2,2 5:4,4,4 7:6,5,6 11:7,4,5 13:10,6,7]
+    rho=  73.976 [6, 24, 12, 4, 6, 6] | 12 | [2, 10, 6, 20, 18, 6] NP=2 NPd=2 span=132 [3:2,2,2 5:4,4,4 7:6,5,6 11:8,6,5 13:9,5,6]
+    rho=  69.912 [4, 14, 10, 14, 10, 2] | 18 | [30, 6, 12, 4, 30, 8] NP=2 NPd=1 span=162 [3:2,2,2 5:4,4,4 7:6,4,6 11:8,7,6 13:8,5,5]
+    rho=  65.705 [28, 8, 4, 18, 32, 4] | 14 | [16, 36, 6, 2, 28, 12] NP=2 NPd=2 span=208 [3:2,2,2 5:4,4,4 7:6,6,4 11:8,5,5 13:9,7,6]
+    rho=  62.634 [6, 2, 46, 2, 4, 8] | 6 | [24, 6, 6, 6, 10, 42] NP=2 NPd=2 span=168 [3:2,2,2 5:4,4,4 7:5,5,4 11:8,7,6 13:9,6,5]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.134 / -0.061
+    vs            min_gap: -0.146 / -0.137
+    vs           coverage: +0.603 / +0.635
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: -0.003 / -0.040
+    vs  concentration_red: +0.271 / +0.281
+    red_P vs rho(P,d*):  +0.322 / +0.388
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7274, quantiles q5=1.284 q25=1.552 q50=1.676 q75=1.873 q95=2.236
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +0.755, sd = 1.38, quantiles q5=-1.09 q25=-0.181 q75=+1.47 q95=+3.06; pred >= 1 on 23 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 176 vs pred 155.4578 (ratio 1.13; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3287, quantiles q5=0.000 q25=0.000 q50=0.241 q75=0.555 q95=0.918
+  cross-check vs budget_sheet rho_exact (float, p < 1e6): H_pre=[0, 8, 14, 18, 20, 50, 68], d=28, H_suf=[0, 2, 8, 24, 30, 42, 44]: pipeline 23.055754 vs reference 23.055754 (rel 0.0e+00) PASS
+
+== row (J,K,D) = (7,6,44), k = 15, S0 = 226 ==
+  Q-stability: band factors (S0,Q] and certified tail widths:
+    Q =   10000: band = 0.96036476, eps_Q = 1.15e-02
+    Q =  100000: band = 0.95987973, eps_Q = 1.15e-03
+    Q = 1000000: band = 0.95984024, eps_Q = 1.15e-04
+    stability within printed interval widths: PASS
+         x   pairs    cls |     mean mass-mean | q01 q05 q25 q50 q75 q95 q99
+     1e+09      13     10 |  33.3227   39.8601 |   5.694   7.025  12.982  17.321  37.177  93.901 101.621
+  top-10 rho at x=1e+09 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho= 103.551 [6, 8, 10, 2, 6, 10, 20] | 4 | [8, 36, 6, 4, 12, 8] NP=2 NPd=2 span=140 [3:2,2,2 5:4,4,4 7:6,5,6 11:9,8,4 13:9,6,7]
+    rho=  87.468 [16, 6, 8, 12, 16, 8, 4] | 6 | [24, 8, 18, 10, 6, 6] NP=2 NPd=2 span=148 [3:2,2,2 5:4,4,4 7:5,4,5 11:8,6,5 13:9,7,6]
+    rho=  62.032 [12, 2, 4, 2, 12, 22, 6] | 20 | [4, 14, 4, 6, 2, 12] NP=2 NPd=2 span=122 [3:2,2,2 5:4,4,4 7:5,4,4 11:7,7,6 13:10,8,6]
+    rho=  37.177 [6, 6, 22, 18, 24, 36, 14] | 16 | [12, 26, 10, 30, 2, 4] NP=2 NPd=2 span=226 [3:2,2,2 5:4,4,4 7:6,4,5 11:9,7,6 13:8,6,5]
+    rho=  32.075 [8, 6, 4, 2, 30, 18, 28] | 2 | [6, 16, 6, 12, 2, 16] NP=2 NPd=2 span=156 [3:2,2,2 5:4,4,4 7:6,5,5 11:9,7,5 13:9,7,6]
+    rho=  28.512 [6, 14, 6, 12, 16, 14, 28] | 2 | [22, 14, 6, 18, 10, 8] NP=2 NPd=2 span=176 [3:2,2,2 5:4,4,4 7:6,4,3 11:9,8,6 13:9,7,6]
+    rho=  17.321 [4, 6, 24, 12, 14, 10, 26] | 16 | [12, 2, 40, 6, 14, 6] NP=2 NPd=1 span=192 [3:2,2,2 5:4,3,3 7:5,5,4 11:9,7,6 13:8,6,6]
+    rho=  13.190 [6, 22, 6, 20, 4, 2, 16] | 2 | [10, 12, 6, 8, 4, 2] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:6,5,4 11:9,6,6 13:9,5,6]
+    rho=  13.095 [10, 20, 22, 6, 30, 20, 4] | 8 | [12, 10, 6, 20, 4, 18] NP=2 NPd=1 span=190 [3:2,2,2 5:3,3,3 7:6,4,5 11:8,6,5 13:9,5,5]
+    rho=  12.982 [4, 2, 16, 2, 10, 12, 18] | 6 | [20, 12, 4, 14, 6, 4] NP=2 NPd=1 span=130 [3:2,2,2 5:4,4,3 7:5,5,4 11:10,6,7 13:11,8,7]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.289 / -0.261
+    vs            min_gap: -0.027 / -0.112
+    vs           coverage: +0.583 / +0.745
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.243 / +0.212
+    vs  concentration_red: +0.582 / +0.798
+    red_P vs rho(P,d*):  +0.583 / +0.798
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.5952, quantiles q5=1.209 q25=1.396 q50=1.598 q75=1.756 q95=2.031
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +0.0201, sd = 1.04, quantiles q5=-1.9 q25=-0.315 q75=+0.438 q95=+1.54; pred >= 1 on 5 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 20 vs pred 28.6553 (ratio 0.698; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.2136, quantiles q5=0.000 q25=0.025 q50=0.143 q75=0.312 q95=0.596
+  cross-check vs budget_sheet rho_exact (float, p < 1e6): H_pre=[0, 6, 12, 34, 52, 76, 112, 126], d=16, H_suf=[0, 12, 38, 48, 78, 80, 84]: pipeline 37.177460 vs reference 37.177460 (rel 4.1e-14) PASS
+
+== row (J,K,D) = (4,5,44), k = 11, S0 = 246 ==
+  Q-stability: band factors (S0,Q] and certified tail widths:
+    Q =   10000: band = 0.98161009, eps_Q = 6.17e-03
+    Q =  100000: band = 0.98134453, eps_Q = 6.17e-04
+    Q = 1000000: band = 0.98132291, eps_Q = 6.17e-05
+    stability within printed interval widths: PASS
+         x   pairs    cls |     mean mass-mean | q01 q05 q25 q50 q75 q95 q99
+     1e+08    4256   2791 |  13.1360   14.1344 |   2.370   3.758   6.851  10.614  16.353  30.906  50.516
+  top-10 rho at x=1e+08 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho= 112.465 [16, 2, 6, 12] | 10 | [24, 8, 10, 6, 6] NP=2 NPd=2 span=100 [3:2,2,2 5:4,4,4 7:5,5,5 11:8,5,5 13:7,5,6]
+    rho=  98.093 [34, 6, 6, 12] | 26 | [4, 2, 6, 4, 18] NP=2 NPd=2 span=118 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,5,5 13:9,5,6]
+    rho=  95.884 [6, 16, 38, 28] | 8 | [22, 8, 4, 8, 24] NP=2 NPd=2 span=162 [3:2,2,2 5:4,4,4 7:5,4,5 11:5,3,4 13:7,5,6]
+    rho=  81.421 [6, 10, 6, 2] | 10 | [32, 4, 12, 18, 20] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:6,5,6 11:7,4,5 13:9,5,6]
+    rho=  78.959 [12, 6, 4, 12] | 8 | [6, 12, 4, 6, 12] NP=2 NPd=2 span=82 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,3,3 13:7,5,6]
+    rho=  73.243 [12, 14, 4, 8] | 12 | [6, 10, 2, 4, 20] NP=2 NPd=2 span=92 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,5 13:7,3,5]
+    rho=  72.968 [24, 2, 6, 12] | 10 | [2, 10, 14, 6, 16] NP=2 NPd=2 span=102 [3:2,2,2 5:4,4,4 7:5,5,5 11:7,4,5 13:8,4,5]
+    rho=  71.578 [6, 20, 16, 2] | 66 | [4, 12, 6, 14, 10] NP=2 NPd=1 span=156 [3:2,2,2 5:4,4,4 7:4,4,4 11:7,4,5 13:7,4,6]
+    rho=  71.465 [4, 8, 4, 6] | 44 | [16, 2, 16, 6, 8] NP=2 NPd=2 span=114 [3:2,2,2 5:4,4,4 7:6,5,5 11:5,4,5 13:9,5,6]
+    rho=  68.138 [18, 4, 2, 10] | 14 | [4, 18, 8, 12, 4] NP=2 NPd=2 span=94 [3:2,2,2 5:4,4,4 7:5,5,4 11:7,4,5 13:7,5,5]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.048 / -0.060
+    vs            min_gap: -0.041 / -0.054
+    vs           coverage: +0.589 / +0.627
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.001 / +0.013
+    vs  concentration_red: +0.308 / +0.298
+    red_P vs rho(P,d*):  +0.354 / +0.381
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7304, quantiles q5=1.421 q25=1.616 q50=1.724 q75=1.836 q95=2.059
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.3, sd = 1.29, quantiles q5=-0.306 q25=+0.476 q75=+1.88 q95=+3.66; pred >= 1 on 177 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 5586 vs pred 2858.5994 (ratio 1.95; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3847, quantiles q5=0.000 q25=0.000 q50=0.000 q75=0.619 q95=1.489
+  cross-check vs budget_sheet rho_exact (float, p < 1e6): H_pre=[0, 16, 24, 30, 34], d=6, H_suf=[0, 6, 26, 36, 50, 56]: pipeline 4.986429 vs reference 4.986429 (rel 3.3e-14) PASS
+
+== row (J,K,D) = (4,5,67), k = 11, S0 = 246 ==
+  Q-stability: band factors (S0,Q] and certified tail widths:
+    Q =   10000: band = 0.98161009, eps_Q = 6.17e-03
+    Q =  100000: band = 0.98134453, eps_Q = 6.17e-04
+    Q = 1000000: band = 0.98132291, eps_Q = 6.17e-05
+    stability within printed interval widths: PASS
+         x   pairs    cls |     mean mass-mean | q01 q05 q25 q50 q75 q95 q99
+     1e+08    4316   2821 |  13.1235   14.1142 |   2.365   3.758   6.851  10.612  16.330  30.864  50.218
+  top-10 rho at x=1e+08 (word = prefix | d | suffix; profile p: nu_H,nu_pre,nu_suf; CRT-alignment diagnosis):
+    rho= 112.465 [16, 2, 6, 12] | 10 | [24, 8, 10, 6, 6] NP=2 NPd=2 span=100 [3:2,2,2 5:4,4,4 7:5,5,5 11:8,5,5 13:7,5,6]
+    rho=  98.093 [34, 6, 6, 12] | 26 | [4, 2, 6, 4, 18] NP=2 NPd=2 span=118 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,5,5 13:9,5,6]
+    rho=  95.884 [6, 16, 38, 28] | 8 | [22, 8, 4, 8, 24] NP=2 NPd=2 span=162 [3:2,2,2 5:4,4,4 7:5,4,5 11:5,3,4 13:7,5,6]
+    rho=  81.421 [6, 10, 6, 2] | 10 | [32, 4, 12, 18, 20] NP=2 NPd=2 span=120 [3:2,2,2 5:4,4,4 7:6,5,6 11:7,4,5 13:9,5,6]
+    rho=  78.959 [12, 6, 4, 12] | 8 | [6, 12, 4, 6, 12] NP=2 NPd=2 span=82 [3:2,2,2 5:4,4,4 7:5,5,5 11:6,3,3 13:7,5,6]
+    rho=  73.243 [12, 14, 4, 8] | 12 | [6, 10, 2, 4, 20] NP=2 NPd=2 span=92 [3:2,2,2 5:4,4,4 7:5,4,5 11:7,5,5 13:7,3,5]
+    rho=  72.968 [24, 2, 6, 12] | 10 | [2, 10, 14, 6, 16] NP=2 NPd=2 span=102 [3:2,2,2 5:4,4,4 7:5,5,5 11:7,4,5 13:8,4,5]
+    rho=  71.578 [6, 20, 16, 2] | 66 | [4, 12, 6, 14, 10] NP=2 NPd=1 span=156 [3:2,2,2 5:4,4,4 7:4,4,4 11:7,4,5 13:7,4,6]
+    rho=  71.465 [4, 8, 4, 6] | 44 | [16, 2, 16, 6, 8] NP=2 NPd=2 span=114 [3:2,2,2 5:4,4,4 7:6,5,5 11:5,4,5 13:9,5,6]
+    rho=  68.138 [18, 4, 2, 10] | 14 | [4, 18, 8, 12, 4] NP=2 NPd=2 span=94 [3:2,2,2 5:4,4,4 7:5,5,4 11:7,4,5 13:7,5,5]
+  correlations of per-class mass-weighted rho_bar (Pearson/Spearman):
+    vs         span_flank: -0.049 / -0.062
+    vs            min_gap: -0.042 / -0.055
+    vs           coverage: +0.589 / +0.625
+    vs       capfail_near: +nan / +nan
+    vs        capfail_far: +nan / +nan
+    vs          tail_mean: +0.002 / +0.014
+    vs  concentration_red: +0.307 / +0.296
+    red_P vs rho(P,d*):  +0.355 / +0.381
+  HEURISTIC/U18.2 d-mean line (mean over ALL even in-window d of rho(P,d), per class; reference value 2): mean = 1.7308, quantiles q5=1.422 q25=1.617 q50=1.725 q75=1.836 q95=2.060
+  HEURISTIC/U18.2 middle law N_(P,d)/N_P ~ rho e^(-d/lnx)/ln x: Poisson-normalized residuals (obs-mu)/sqrt(mu) mean = +1.38, sd = 1.65, quantiles q5=-0.304 q25=+0.48 q75=+1.91 q95=+3.82; pred >= 1 on 177 pairs  [z inflated by sub-1-mass cells: every realized cell has N_(P,d) >= 1 vs mu << 1 -- the e2prime 7.1(c) corner; see aggregate line]
+  HEURISTIC/U18.2 middle-law aggregate calibration on realized cells: obs 5646 vs pred 2874.1485 (ratio 1.96; the sub-1-mass corner -- realized-cell selection, not a law test)
+  scale-free collapse y_P = red_P ln x / rho(P,d*): mean = 0.3806, quantiles q5=0.000 q25=0.000 q50=0.000 q75=0.614 q95=1.475
+  cross-check vs budget_sheet rho_exact (float, p < 1e6): H_pre=[0, 16, 24, 30, 34], d=6, H_suf=[0, 6, 26, 36, 50, 56]: pipeline 4.986429 vs reference 4.986429 (rel 3.3e-14) PASS
+

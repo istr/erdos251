@@ -1,0 +1,33 @@
+item-0019 3(a) dictionary smoke test (executed before
+any census row was reported; integer data matched
+byte-for-byte against the e2prime-supply 7.2 record):
+
+Dictionary smoke test (7,6,44,3) at x = 1e9 (D0.2-style filter, seed conventions):
+  t=7113518 primes: PASS
+  t=7113518 prefix: PASS
+  t=7113518 middle: PASS
+  t=7113518 suffix: PASS
+  t=7113518 near delta (3dp): PASS
+  t=7113518 far delta (3dp): PASS
+  t=7113518 near cap <= 44: PASS
+  t=7113518 far cap <= 64: PASS
+  t=7113518 near delta <= 27 (b=5 row): PASS
+  t=960168 primes: PASS
+  t=960168 prefix: PASS
+  t=960168 middle: PASS
+  t=960168 suffix: PASS
+  t=960168 near delta (3dp): PASS
+  t=960168 far delta (3dp): PASS
+  t=960168 near cap <= 44: PASS
+  t=960168 far cap <= 64: PASS
+  t=960168 near delta <= 27 (b=5 row): PASS
+  d1: PASS
+  (E5) gate b=3: 3*(D-2) < 2^(J+1): PASS
+  (E5) gate b=1: (D-2) < 2^(J+1): PASS
+  identity residual = -1.78e-15 (printed record -1.78e-15)
+  t1 in filtered sites: PASS
+  t2 in filtered sites: PASS
+  SMOKE TEST OVERALL: PASS
+
+pi(1e9) = 50847534 (committed: 50847534)
+delta parallel-vs-serial smoke (1e8 prefix, v1.1 delta D3): max abs diff = 0.0e+00 (accept < 1e-12)

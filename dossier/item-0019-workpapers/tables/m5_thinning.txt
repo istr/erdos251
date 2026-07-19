@@ -1,0 +1,42 @@
+item-0019 m5: small-span thinning calibration (v1.1 Section
+8 m5; kickoff 3(f)).  ENTIRELY N^o world (RS.4, consCount
+semantics: anchor prime q_n in (sqrt x, x], NO caps).
+ANCHOR FIREWALL (item-0018 report F3): consCount's anchor
+q n = p[n] differs by one from anchorPrime n = p[n-1]; m5
+tables are NEVER joined with m1-m4 tables on a site index.
+Word set: lexicographically first 3 admissible all-even gap
+words with span <= kappa (k-1) ln(k+1) (budget printed);
+EMPTY = no admissible all-even word within budget (itself a
+datum).  ratio = N^o_consec / N^o_tuple.
+HEURISTIC/U18.1 line: exp(-span/ln x) Cramer thinning; no
+asymptotic exponent is fitted.
+
+     x   k kappa   budget word                    span |  N_consec   N_tuple    ratio | exp(-s/ln x)
+ 1e+08   4     1    4.828 EMPTY                 
+ 1e+08   4     2    9.657 2,4,2                      8 |      4756      4756  1.00000 |      0.64772
+ 1e+08   5     1    7.167 EMPTY                 
+ 1e+08   5     2   14.334 2,4,2,4                   12 |       693       693  1.00000 |      0.52129
+ 1e+08   5     2   14.334 2,4,6,2                   14 |      1013      1013  1.00000 |      0.46766
+ 1e+08   5     2   14.334 2,6,4,2                   14 |      1035      1035  1.00000 |      0.46766
+ 1e+08   6     1    9.730 EMPTY                 
+ 1e+08   6     2   19.459 2,4,2,4,6                 18 |        60        60  1.00000 |      0.37638
+ 1e+08   6     2   19.459 2,6,4,2,4                 18 |       139       139  1.00000 |      0.37638
+ 1e+08   6     2   19.459 4,2,4,2,4                 16 |        80        80  1.00000 |      0.41954
+ 1e+08   8     1   15.381 EMPTY                 
+ 1e+08   8     2   30.761 2,4,2,4,6,2,6             26 |         3         3  1.00000 |      0.24379
+ 1e+08   8     2   30.761 2,4,2,4,6,2,10            30 |         2         2  1.00000 |      0.19620
+ 1e+08   8     2   30.761 2,4,2,4,6,8,4             30 |         2         2  1.00000 |      0.19620
+ 1e+09   4     1    4.828 EMPTY                 
+ 1e+09   4     2    9.657 2,4,2                      8 |     28366     28366  1.00000 |      0.67974
+ 1e+09   5     1    7.167 EMPTY                 
+ 1e+09   5     2   14.334 2,4,2,4                   12 |      3625      3625  1.00000 |      0.56043
+ 1e+09   5     2   14.334 2,4,6,2                   14 |      5406      5406  1.00000 |      0.50887
+ 1e+09   5     2   14.334 2,6,4,2                   14 |      5354      5354  1.00000 |      0.50887
+ 1e+09   6     1    9.730 EMPTY                 
+ 1e+09   6     2   19.459 2,4,2,4,6                 18 |       327       327  1.00000 |      0.41954
+ 1e+09   6     2   19.459 2,6,4,2,4                 18 |       617       617  1.00000 |      0.41954
+ 1e+09   6     2   19.459 4,2,4,2,4                 16 |       313       313  1.00000 |      0.46205
+ 1e+09   8     1   15.381 EMPTY                 
+ 1e+09   8     2   30.761 2,4,2,4,6,2,6             26 |         7         7  1.00000 |      0.28518
+ 1e+09   8     2   30.761 2,4,2,4,6,2,10            30 |         5         8  0.62500 |      0.23512
+ 1e+09   8     2   30.761 2,4,2,4,6,8,4             30 |        10        13  0.76923 |      0.23512
