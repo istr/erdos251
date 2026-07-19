@@ -2102,3 +2102,101 @@ annotations:
       frozen untouched, classical three, width-1 (K1) primary.
       OPEN OPERATOR: rule-16 strengthening (B6); BET-07 to
       2026-08-08; BET-08 to 2026-09-30.
+  - id: ANN-20260719-56
+    refs: [ANN-20260719-55, BET-20260718-08]
+    date: 2026-07-19
+    note: >-
+      ITEM-0019 CLOSED (measurement campaign LANDED). Operator
+      commit 1dd3f46352761e494d8cffe1ea8afd930ab2697d on main
+      (base = c3fc09a, the ANN-55 apply); one purely additive
+      commit, exactly the kickoff Section 5 writes:
+      dossier/item-0019-workpapers/ -- 6 scripts, 10 ASCII tables
+      (~98 KB, inside the caps), item-0019-final-report.md.
+      EXECUTOR run per kickoff v1 (steering sha256 54810fab...,
+      full value in the report Gates) as amended MID-RUN by the
+      v1.1 delta (steering sha256 24265199...;
+      parallel-execution amendment; applied prospectively,
+      amendment record in the report Gates; precedent: the
+      item-0015 v3.1 delta). Both disk hashes steering-verified
+      byte-identical to the authored values; operator sha256
+      canonical at this apply. Pin race: NONE (HEAD == pin
+      exactly; rule 18 not exercised). RESULTS: continuity + V1
+      reproduction 76/76 anchors EXACT (class ladders 12/178/1287
+      and 2/21/143; 29 at 1e9; C_sides; pi(x)); byte-level
+      (7,6,44,3) certificate incl. the printed identity residual;
+      D0.2 -> D0.2' bridge CLASS-INVISIBLE (window cap removes
+      0.4-1.4% of sites, zero exchange classes anywhere). m1:
+      max N_P = 4 vs ln x ~ 20.7 -- candidate B1 DROPPED from
+      the measurable set (F18.5 pending-m1 discharged); Fam_2
+      mass delta_emp GROWS 3.6x/2.6x from 2e7 to 1e9 on the live
+      rows. m2: C_F(x)/ln x declines monotonically to
+      0.236/0.264; C_F flat in [4.56, 5.64], far under the ln x
+      gate; NO exceptional sub-family (B2.reduced needs no B3
+      weakening on the range). m3: exact-rational census per
+      kickoff 3(d) (S0 / shared band / certified one-sided
+      tail); T4 witnesses 3/3; rho_exact cross-checks 6/6
+      (<= 5.5e-14); Q-stability PASS; realized classes
+      CRT-ALIGNMENT-SELECTED (medians ~10.5 vs the U18.2
+      reference 2; top-10 profiles fully aligned at p = 3, 5);
+      PARTIAL scale-free collapse of rho-normalized
+      concentration (q75 stable +/-12% across three decades of
+      x, q95 +24%); in-window d-mean 1.68 -> 1.75 toward 2. m4:
+      eps_C <= 1.9e-3 everywhere measured (retention > 0.998);
+      matched-flank classes tail-typical. m5: kappa = 1 word
+      sets combinatorially EMPTY; span <= 26 consecutiveness
+      FORCED (ratio exactly 1, admissibility blocks interior
+      primes); first strict thinning at k = 8, span 30, 1e9;
+      tau(A') not yet visible. GATE VERDICT (v1.1 7.4; BINDS the
+      item-0020 kickoff): FIXED-DELTA -- RelExtensionUpper with
+      C_F(x) = o(ln x), quantitatively C_F <= (1-eps)(delta/2)
+      (1-eps_C) ln x; the coupled gate C_F = o(delta(x) ln x) is
+      NOT forced by any measured decay; honesty scope carried
+      verbatim (fixed sub-frontier rows; coupled-depth delta(x)
+      unmeasured, frontier-null at (7,7)/(8,8) at 1e9; successor
+      = report F1). Feeds the BET-08 evidence base; no scoring.
+      STRETCH: FIRST (7,7) PAIRS OF THE PROJECT -- 2 exchange
+      classes at 5e9, 3 at 1e10 (pair 3 joins anchors 1.42e9 and
+      8.89e9), inside the e2prime 7.2 forecast window; FU4
+      skipped and declared (~1e13 enumeration, not a small
+      search). STEERING REVIEW at this apply -- capability
+      register first (runs/README rule 9 amended this commit):
+      steering container at 3 GB / 1 core on 2026-07-19 (vs
+      96 GB on 2026-07-13); R1-light therefore executed at
+      DECLARED PARTIAL SCOPE: census.py re-executed serially at
+      {2e6, 2e7, 1e8} -- 282/282 value checks against
+      continuity/m1/m2/d_sensitivity, ZERO deviations (doubling
+      as the delta-D2 worker-count determinism check: 1-core
+      steering vs 8-worker executor); delta-D3 smoke re-executed
+      (0.0); m3 validate 3/3 + (4,5,30) census on three x
+      matching the committed quantiles (S0-invariance of the
+      arithmetic discipline empirically confirmed: S0 = 216 on
+      the 3-x ladder vs 226 full, identical statistics); STRETCH
+      CERTIFICATES INDEPENDENTLY VERIFIED (sympy: 102/102
+      primality, 96/96 consecutiveness via nextprime chains,
+      10/10 words, d_1, (E5) gate; printed-delta identity at
+      display precision). rule-16(a) pass (the BINDING one):
+      PASS -- every r1-r3 / gate-verdict figure re-checked
+      against its table; the MEASURED / DESCRIPTIVE / HEURISTIC
+      support classes survive into the verdicts verbatim. NOT
+      independently re-executed: the 1e9 columns and the
+      5e9/1e10 aggregates (executor-attested; in-run adversarial
+      passes: four-lens script review, 3 defects repaired
+      pre-commit, zero surviving; in-run rule-16(a) clause diff,
+      ~15 prose repairs). GATE DECISION (operator): CLOSED at
+      the declared partial scope; the staged residual program
+      (census 1e9; rho rows; m5_thinning; consolidate
+      core/m3/m5; git diff -- tables/ empty) stays an OPTIONAL,
+      non-blocking follow-up for the next large sandbox. Report
+      follow-ups registered (Section 9, described only): F1
+      matched-depth delta ladder (probes the coupled-depth
+      delta(x) the 7.4 sentence names); F2 alignment-constructed
+      doubly-extendable pairs (the U18.7/FU2 lead); F3 exact rho
+      sup by branch-and-bound (FU4 successor); F4 m5 at
+      thinning-visible spans (k in {12, 16, 24}); F5 Fam_2
+      growth law vs the collision calculus (gamma_2^vec one
+      scale deeper). NEXT in execution order: item-0022 (corpus
+      absorption; kickoff on operator request); the item-0020
+      kickoff binds to the FIXED-DELTA gate and carries the
+      item-0018 report F1 (selection-restriction choice) plus
+      this item's F1. OPEN OPERATOR: rule-16 strengthening (B6);
+      BET-07 to 2026-08-08; BET-08 to 2026-09-30.

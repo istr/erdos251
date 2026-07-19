@@ -51,6 +51,16 @@ Rules:
    and operator lanes unaffected. Discipline: probe once, then stop --
    repeated probing of a dead container is noise; stage content
    textually for operator pre-review and ship on recovery.
+   Register entry (2026-07-19): claude.ai steering surface --
+   container CAPACITY varies per session and is a per-session
+   observation, never a surface property: 3 GB RAM / 1 core at the
+   item-0019 close (ANN-56) vs 96 GB total / 88 GB free at the
+   item-0017 probe (2026-07-13). Consequence: review-gate scopes
+   that assume the large container (e.g. 1e9 in-core re-execution)
+   must carry a declared-partial-scope fallback; exercised at the
+   item-0019 close (steering R1-light at {2e6, 2e7, 1e8} full +
+   independent stretch-certificate verification; residual
+   re-execution program staged, optional, non-blocking).
 
 10. Capability claims by models about environments -- their own or other
     vendors' -- are NOT evidence (observed 2026-07-12: gemini-3.1-pro

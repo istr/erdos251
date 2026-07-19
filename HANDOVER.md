@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..55; bets: 6 scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..56; bets: 6 scored,
 2 open -- BET-07 to 2026-08-08, BET-08 to 2026-09-30). 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
@@ -501,6 +501,51 @@ its later sections carry a STALE banner, HANDOVER is the record).
    semantics under bookkeeping races, report O3, second
    recurrence). OPEN OPERATOR: rule-16 strengthening (B6); BET-07
    to 2026-08-08; BET-08 to 2026-09-30.
+2m. ITEM-0019 CLOSED (2026-07-19; record ANN-56; main = 1dd3f46).
+   Measurement campaign m1-m5 LANDED in one additive commit
+   (dossier/item-0019-workpapers/: 6 scripts, 10 ASCII tables,
+   item-0019-final-report.md). Kickoff v1 (steering sha256
+   54810fab...) + v1.1 parallel-execution delta (24265199...),
+   both ephemeral, delta applied prospectively mid-run (amendment
+   record in the report Gates); HEAD == pin, no rule-18 race.
+   Reproduction 76/76 V1 anchors exact incl. the byte-level
+   (7,6,44,3) certificate; D0.2 -> D0.2' bridge class-invisible.
+   HEADLINES: candidate B1 DROPPED (max N_P = 4 vs ln x ~ 20.7;
+   F18.5 pending-m1 discharged); Fam_2 mass delta_emp GROWS
+   3.6x/2.6x from 2e7 to 1e9 on the live rows; C_F(x)/ln x
+   declines to ~0.24 with C_F flat in [4.6, 5.6]; no exceptional
+   sub-family (B2.reduced needs no B3 weakening); m3
+   exact-rational rho census (T4 witnesses 3/3, rho_exact 6/6,
+   Q-stability PASS) -- realized classes CRT-ALIGNMENT-SELECTED
+   (medians ~10.5 vs U18.2 ref 2), partial scale-free collapse
+   of rho-normalized concentration; eps_C <= 1.9e-3 (retention
+   > 0.998), caps/quotients decorrelated (|corr| <= 0.013); m5
+   kappa = 1 combinatorially EMPTY, span <= 26 ratio FORCED to
+   1, tau(A') not yet visible. GATE VERDICT (binds the item-0020
+   kickoff): FIXED-DELTA -- RelExtensionUpper at C_F = o(ln x);
+   the coupled gate is NOT forced by any measured decay (honesty
+   scope: coupled-depth delta(x) unmeasured, frontier-null at
+   (7,7)/(8,8) at 1e9; successor = report F1). Feeds BET-08
+   evidence, no scoring. STRETCH: FIRST (7,7) PAIRS of the
+   project -- 2 exchange classes at 5e9, 3 at 1e10 (one pairing
+   anchors 1.42e9 with 8.89e9), inside the e2prime 7.2 forecast
+   window; FU4 skipped and declared. STEERING REVIEW at the
+   apply: R1-light at DECLARED PARTIAL SCOPE (steering container
+   3 GB / 1 core that day -- rule-9 register amended): 282/282
+   value checks at {2e6, 2e7, 1e8} (zero deviations; doubles as
+   the delta-D2 worker-count determinism check), delta-D3 smoke
+   0.0, m3 validate 3/3 + census matching (S0-invariance
+   empirically confirmed), stretch certificates INDEPENDENTLY
+   verified (sympy primality + consecutiveness, 10/10 words);
+   rule-16(a) pass (binding) PASS. NOT independently re-executed:
+   the 1e9 columns and 5e9/1e10 aggregates (executor-attested +
+   in-run adversarial passes); residual re-execution program
+   staged in ANN-56, OPTIONAL. Roadmap done-move via companion
+   mbox. NEXT: item-0022 (kickoff on request); the item-0020
+   kickoff binds to the FIXED-DELTA gate and carries the two F1
+   flags (item-0018 selection-restriction; item-0019
+   matched-depth ladder). OPEN OPERATOR: rule-16 strengthening
+   (B6); BET-07 to 2026-08-08; BET-08 to 2026-09-30.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
