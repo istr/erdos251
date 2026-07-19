@@ -1959,3 +1959,70 @@ annotations:
       booked here. Merge decision after the gate; M2 kickoff v2
       after verdict stabilization. Registers carried: U18.1-U18.7
       open; FU1-FU4 parked as successor candidates.
+  - id: ANN-20260719-54
+    refs: [ANN-20260719-53, BET-20260718-08]
+    date: 2026-07-19
+    note: >-
+      ITEM-0018 M1 REVIEW GATE CLOSED; v1.1 RATIFIED; BRANCH
+      FF-MERGED (main = e0f6ee4a1a6e8f4fea1c6dbe1e99b83b30f268b6).
+      Gate artifacts (HASHES this commit): review object 86ddc3c0
+      (four marked redactions r1-r4; committed byte-identical to
+      the steering delivery); R2 payload 54a2e789 -- OPERATOR
+      REVISION of the steering delivery c60941c8..., verified
+      single-line diff (runs/README manifest hash bff65222 at
+      d0cde9b -> fb4dbdc8 at c1b262b; rule-17 supersession; the
+      in-session operator override recorded in the review header
+      matches); R2 review c1d846cc (505 lines); adjudication
+      fef6a0f9. R2: blind cross-family adversarial scope audit per
+      payload S1-S9 (reviewer family not recorded in the artifact;
+      operator may amend this entry at apply with the identity).
+      VERDICT: SOUND WITH REPAIRABLE ISSUES, confidence 0.94, ZERO
+      FATAL, 9 MAJOR / 5 MINOR / 7 NOTE -- ACCEPTED; all findings
+      sustained (MAJOR-9 partial: the pack scoping was steering
+      payload design, the R1-light lane was discharged
+      byte-identically in ANN-53), every MAJOR
+      steering-re-executed before repair. Repairs -> dossier
+      relext-statements.md v1.1 (26 marked [R2 repair] sites;
+      Sections 5a decisive-rows embedding and 9b in-document
+      record): B2/B3 closed eps/rate forms, A1-typ as one exact
+      candidate, C1 ex-ante cap-blind family rule
+      (threshold-explicit N^{w,(s)}), route/heuristic scoping at
+      three sites, w2 qualifier, U18.6 downgraded to
+      plausibly-derivable with four named missing steps, C1''
+      scoped to independently-known density, F18.5 domain
+      qualifier, D5 comparability gloss, single threshold
+      dictionary s := t, RS.3 positivity domain, B1' existential
+      constant. Steering adjudication re-executions: dossier
+      Theorem M1 regime check (Par vs Par' -- MAJOR-7 sustained);
+      the k = 24 middle count re-run with a displayed instance
+      (primes 29..137, J = K = 11, exactly d' = 6 admissible:
+      object claim CONFIRMED) plus a NEW observation -- the
+      near-degenerate splits J in {1, 19, 20, 21} admit 2-4
+      in-budget middles, so doubly-extendable side pairs EXIST at
+      k = 24 at degenerate aspect (U18.7 evidence updated; FU2
+      lead: few-point suffix blocks are weakly
+      shift-constrained). Three-way verification of the 9a rho
+      retraction (in-run audit, steering, R2 NOTE-7). UNCHANGED
+      under all findings: the D5 triple A3 + B2.reduced + C2, the
+      7.1 Props, the 7.2 pigeonhole, the 7.3 instantiation
+      (reviewer-confirmed NOTE-2/3/4; both PROVED tags sustained,
+      NOTE-1) -- the M2 surface is STABLE, and B2.reduced is now a
+      CLOSED proposition, the exact BET-20260718-08 shape. NO
+      second R2 round (item-0017 precedent for wording-class
+      sustained findings). PROCESS: observation B6 -- third
+      recurrence of the verdict-promotion pattern (item-0005 P1,
+      item-0017 FATAL-1, here MAJOR-5/6); both same-family
+      rule-16(a) passes (in-run post-repair and steering pre-gate)
+      missed it, the cross-family audit caught it; a rule-16
+      strengthening (promotion keyword sweep and/or cross-family
+      placement of the dedicated pass) is an OPEN operator
+      decision, not codified here. Gate hygiene g1/g2 booked for
+      future packs: workpapers included; manifests pin their
+      commit. item-0018 M2 kickoff v2 authored this session
+      (steering sha256
+      50d429a4f86091da7c171d1afb3f2bb46090168c189f11a3ac1fe3fbb73ee604,
+      ephemeral, never committed; EXECUTOR lane, target
+      lean/Erdos251/Supply.lean + one root import line +
+      0018-report-M2.md; supply_of_triple sorry-free, classical
+      three, frozen untouched, U18.5 round-trip rule binding;
+      rule-17 single-source pin honored, pin = main e0f6ee4a).

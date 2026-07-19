@@ -5,8 +5,8 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..51; bets: 6 scored,
-1 open -- BET-07 to 2026-08-08). 3. dossier/chain-v1.md (v1.4, SIGNED
+1. This file. 2. ledger.yaml (append-only; ANN-01..54; bets: 6 scored,
+2 open -- BET-07 to 2026-08-08, BET-08 to 2026-09-30). 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
 payloads/item-0005-adjudication-v1.md). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
@@ -458,6 +458,28 @@ its later sections carry a STALE banner, HANDOVER is the record).
    rule-16(a) pass; R1-light discharged by the steering
    re-execution), then merge, then M2 kickoff v2. Registers:
    U18.1-U18.7 open, FU1-FU4 parked.
+2k. ITEM-0018 M1 GATE CLOSED, v1.1 RATIFIED, FF-MERGED
+   (2026-07-19; record ANN-54; main = e0f6ee4). R2 blind
+   cross-family scope audit: SOUND WITH REPAIRABLE ISSUES 0.94,
+   ZERO FATAL, 9 MAJOR / 5 MINOR, all sustained and repaired in
+   place (v1.1, 26 marks, Sections 5a/9b); adjudication
+   payloads/item-0018-adjudication-v1.md with steering
+   re-executions (Theorem M1 regime check; k = 24 instance
+   confirmed + NEW: doubly-extendable in-budget side pairs exist
+   at k = 24 at degenerate aspect, U18.7 note). D5 triple +
+   7.1/7.2/7.3 UNCHANGED -- the M2 surface is stable; B2.reduced
+   is now a closed proposition (= the BET-08 shape). Four gate
+   artifacts hashed (ANN-54); the R2 payload was an operator
+   revision (rule-17 supersession, steering-verified). OPEN:
+   rule-16 strengthening after B6 (third verdict-promotion
+   recurrence) -- operator decision. NEXT: M2 via kickoff v2
+   (steering sha256
+   50d429a4f86091da7c171d1afb3f2bb46090168c189f11a3ac1fe3fbb73ee604,
+   ephemeral; pin = e0f6ee4; EXECUTOR lane: Supply.lean + one
+   root import line + 0018-report-M2.md; supply_of_triple
+   sorry-free, classical three, frozen untouched, inventory
+   unchanged, U18.5 round-trip rule binding; review gate = Lean/CI
+   + steering statement-fidelity diff).
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an

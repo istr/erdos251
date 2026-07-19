@@ -36,3 +36,7 @@ d9197b8f4b3ac31c2bfa130e9aedf39ce54e50709b352edf4930628cce8ae1ea  https://arxiv.
 f18f0bc02cc9808dbccb05ffbf014b2430d250bdce3be1c98da4a68805fdbdf6  payloads/item-0017-review-r2-payload-v1.md
 6fc1f7f7a469fa44e2b5b3154f3c2fa0c11f8cf0137914a8e598026c490889c0  payloads/item-0017-review-r2-v1.md
 305096e507885add096b9d2d1c5e3445c1cf169d9f93ee09547a6516372959b8  payloads/item-0017-adjudication-v1.md
+86ddc3c0968af1663ba9e06a020d4858bc4a39d93f1053c81f3ef2f6918c3efd  payloads/item-0018-review-object-v1.md
+54a2e789d2360c087a428a0b4617d20c73613c2b973a2c37997a880a5a7a843c  payloads/item-0018-review-r2-payload-v1.md
+c1d846ccc4cf42ad6f8e4fc9db3ff27541d3fe4a0364eba9985711dfd46778f0  payloads/item-0018-review-r2-v1.md
+fef6a0f941edf2422f105402866943c96c7c34bc3acf4e01a6ca5a75d005d4fc  payloads/item-0018-adjudication-v1.md
