@@ -1,0 +1,302 @@
+item-0020 budget sheets (rule 15) -- exponent convention:
+expo(F) = ln F / lnln x, i.e. F = (ln x)^expo.  Gate (G1)
+[o(ln x)] requires expo < 1 with decay or a limit < 1.
+Vocabulary: W2 = C_words,off, V2 = C_sides,off, cap_r =
+P3.3'(iv)-pattern simplex capacity (see W0 working notes).
+
+== T0. Regime lock (D0; identical to item-0018 T0) ==
+x        ln x        lnln x     L=(2/ln2)lnlnx   k=L+1
+1e8          18.42    2.9135         8.41       9.41
+1e20         46.05    3.8298        11.05      12.05
+1e100       230.26    5.4392        15.69      16.69
+1e1000     2302.59    7.7418        22.34      23.34
+
+== T1. Factor ledger incl. the MANDATORY M1 trap row ==
+(kickoff W2(b): the rank-2k pair-sieve constant, tabulated so
+no pair-level route imports it silently.  Reference rows from
+the item-0018 T1 ledger repeated for comparison.)
+
+factor                  x=1e8        x=1e20       x=1e100      x=1e1000    class / verdict vs (G1)
+2^k                         2.238       2.181       2.127       2.090  POLYLOG expo->2: FAILS (G1) [item-0018 T1]
+exp(k ln k)                 7.237       7.832       8.640       9.496  SUPERPOLYLOG: FAILS (G1) [F17.9 wall class]
+exp(2k ln 2k) TRAP         18.949      20.026      21.535      23.171  SUPERPOLYLOG, ~2x the k-rank row asymptotically (2.4-2.6x at
+                                                                       the tabulated scales, where the O(1) term dominates the
+                                                                       5.77 lnlnln x term): the rank-2k union-sieve
+                                                                       constant of any pair-level sieve (M1/M6 pair routes);
+                                                                       exceeds the (2 ln x)^1 relative room (F17.2) by
+                                                                       (ln x)^{5.77 lnlnln x + O(1)}: DOA on every G-budget
+gamma_2^k (U17.11b)         0.453       0.441       0.430       0.423  POLYLOG expo->0.405: PASSES (G1) alone [item-0018 T1]
+
+Trap-vs-room display (M1 mandatory line): ln[exp(2k ln 2k)] vs
+ln[2 ln x] (the F17.2 room at M = 1):
+  1e8      2k ln 2k =     55.21    ln(2 ln x) =   3.607   ratio     15.3
+  1e20     2k ln 2k =     76.69    ln(2 ln x) =   4.523   ratio     17.0
+  1e100    2k ln 2k =    117.13    ln(2 ln x) =   6.132   ratio     19.1
+  1e1000   2k ln 2k =    179.39    ln(2 ln x) =   8.435   ratio     21.3
+
+== T2. Capacity and crossover ledger (M3 engine; A3.card and
+==     the M1.a falsity both consume these rows) ==
+cap_r <= ((e A'/2)(L/r) ln x)^r, e A'/2 = 2.0387 at the D0 pin
+(P3.3'(iv) pattern; side capacity r = J+K = L-1, full-word
+capacity r = L).  Exponents expo = ln cap / lnln x, GRID
+convention L = (2/ln2) lnln x (leading order):
+x        expo(cap_{J+K})   expo(cap_L)   lnx-budget: ln N/lnln x
+1e8             9.54          10.46             5.32
+1e20           12.17          13.11            11.02
+1e100          16.80          17.75            41.33
+1e1000         23.43          24.39           296.42
+  -> cap rows are (lnln x)-linear in expo (quasi-polylog,
+     x^{o(1)}); the ln N budget row overtakes them past the
+     marker crossover below (between the 1e20 and 1e100 grid
+     points): the capacity argument's asymptotic regime.
+
+Crossover scales.  Two condition conventions, labeled exactly
+[audit repair: the v1-draft mixed them and mislabeled the
+continuous depth proxy as 'D0-honest']:
+  (m)  scale MARKER:  8 cap <= x/ln x, leading-order depth
+       L = (2/ln2) lnln x (the grid convention; NOT the proof
+       condition);
+  (p)  the PROOF condition of C1/C2 step (4):
+       8 cap <= x/(2 C_0 ln x)  (Chebyshev floor I4), at the
+       CEIL-honest D0 depths J = K = ceil(log2(ceil(13 C_0
+       A'' ln x))), L = J+1+K.
+Each scan verifies a single sign change over ln x in [3, 3000]
+(step 0.05) and prints the first qualifying ln x:
+  (m) A3.card side-cap, marker             ln x ~   58.45  (x ~ 1e25)  sign changes: 1
+  (m) M1.a-falsity full-cap, marker        ln x ~   65.20  (x ~ 1e28)  sign changes: 1
+  (p) A3.card side-cap, ceil D0, C_0 = 1   ln x ~  230.75  (x ~ 1e100)  sign changes: 1
+  (p) A3.card side-cap, ceil D0, C_0 = 2   ln x ~  246.30  (x ~ 1e107)  sign changes: 1
+  (p) M1.a-falsity full-cap, ceil D0, C_0=1 ln x ~  236.90  (x ~ 1e103)  sign changes: 1
+  (p) M1.a-falsity full-cap, ceil D0, C_0=2 ln x ~  252.55  (x ~ 1e110)  sign changes: 1
+  -> finite-scale honesty (D3(vi)): the marker crossings sit
+     at x ~ 1e25-1e28; the PROOF-condition crossings at the
+     ceil-honest D0 depths sit at x ~ 1e100-1e110 (C_0 in
+     {1,2}).  NOTHING at item-0019 scales (<= 1e10) is
+     claimed; the m1 measured delta_emp ~ 2.4e-3 at 1e9 sits
+     far below the asymptotic delta = 1/2 and is cited as
+     direction only.
+
+== T3. M1.a falsity sheet (W2 vs |S'|; W3 claim C2) ==
+Unconditional chain: W2 >= |S'|^2/cap_L - |S'| (Cauchy-Schwarz
+on full-word fibers), |S'| >= N/4 (TailIntersection at pin).
+Ratio ledger; column prints ln(|S'|/cap_L) ~ ln(W2_floor/|S'|)
+once |S'| >> cap_L (negative entries mean the floor is vacuous
+at that scale):
+x        ln(|S'|/cap_L)   i.e. factor
+1e8            -16.4      e^-16
+1e20            -9.4      e^-9
+1e100          126.9      e^+127
+1e1000        2104.6      e^+2105
+  -> negative at 1e8 and 1e20 (vacuous below the T2 crossovers:
+     marker x ~ 1e28, proof-condition x ~ 1e103-1e110), then
+     e^{+127} at 1e100, e^{+2105} at 1e1000: W2/|S'| ->
+     infinity.  The kickoff's M1 sufficient condition
+     W2 = o(|S'|) is FALSE for all large x at the D0 depths.
+Rule-12 landing row (kickoff W2(c)): the two additive terms in
+the chain (-|S'| from the diagonal, -cap_{J+K} from |Fam| in
+the A3.card step) land as ADDITIVE constants against divergent
+main terms (ratios above; x^{o(1)} vs x^{1-o(1)}): no leading-
+coefficient coupling anywhere in this run's chains.  Settled by
+the printed ratios; no dyadic summation appears (contrast the
+ANN-37 pattern rule 12 polices).
+
+== T4. M1.b insufficiency (statement-level counterexample; ==
+==     numeric settlement, exact integers) ==
+Configuration family C(t): t classes of size 2, each middle-
+rigid (both members share one middle), plus ONE class of size
+m = t with all middles distinct.  Exact counts:
+  mass = 3t;  LHS(adversarial argmax selection) = t;
+  W2 = 2t (ordered);  V2 = 2t + t(t-1).
+t          W2/V2        LHS/mass   (M1.b holds at eps if
+10         0.181818     0.333333    W2/V2 <= eps)
+1000       0.001998     0.333333    W2/V2 <= eps)
+1000000    0.000002     0.333333    W2/V2 <= eps)
+  -> W2/V2 -> 0 while the reduced selection sum stays at
+     mass/3: the un-normalized relative pair statement (M1.b)
+     does NOT imply RelExtensionUpper.  (Abstract-configuration
+     counterexample to the IMPLICATION, not a primes claim.)
+     Registered F20.2; repaired by the class-normalized form
+     B2.pairs, whose consumption is exact (W3 claim C3).
+     Check vs B2.pairs on C(t): normalized numerator =
+     t*(2/2) + (1/t)*0 = t = eps-share 1/3 of mass: B2.pairs
+     correctly REFUSES this configuration (no false positive).
+
+== T5. B2.pairs consumption sheet (eps bookkeeping, gate ==
+==     arithmetic, anti-vacuity floor, T7 reserve) ==
+Reduction bookkeeping (W3 claim C3): REU-eps = sqrt(pair-eps),
+i.e. x_4(eps) := x_8(eps^2).  Constants carried by the
+reduction: NONE (Cauchy-Schwarz only; kickoff W2(a) row =
+empty).  FIXED-DELTA gate arithmetic at the ledger value
+delta = 1/2 (A3.card, s-uniform) [audit repair: one eps_C
+convention]:  eps_C provenance: 7.4(s2) applies eps_C ONLY
+when an A- or B-side proof detours through window-only
+counts; the C1 and C3 chains count on S'^{(s)}_x throughout
+(no N^w detour), so eps_C does not enter this run's chain at
+all.  The pigeonhole coupling (supply_of_triple / 7.4)
+consumes REU at eps = delta/4 = 1/8, so
+  pair-eps = (delta/4)^2 = 1/64
+closes the 7.2 pigeonhole against A3.card + TailIntersection.
+(The gate SENTENCE display at the conservative consumption
+eps_C < 1/2 lands in the same class, (1-eps)^2/64; the m4
+measured eps_C ~ 0 is direction only and enters no constant,
+D3(vi).)  Both-readings duty: measured 1e9 stratum-2
+analogues: repeated-middle (W2-grain) mass share ~0.47; the
+class-normalized (Q-grain, B2.pairs) analogue ~0.24 -- both
+DECLINING in x, both far above the 1/64 consumption point at
+reachable scales; direction only, no finite-scale closure
+claim (E3).
+Anti-vacuity floor (statement sanity): every class has
+max_d N_{P,d} >= N_P/m_mid with m_mid = floor(A' L ln x/2)
+in-window even middles, so on classes with N_P >= 2 m_mid the
+adversary gets (max-1)_+ >= N_P/(2 m_mid), hence C_F >=
+(1/(A'L)) * [mass share of classes with N_P >= 2 m_mid]: no
+gate below C_F ~ 1/L is available; B2.reduced's forall-eps
+form is consistent with this floor (eps fixed, x -> infinity).
+x        1/(A'L)      vs (1-eps)/4 gate at eps=0.1
+1e8        0.07930        0.225
+1e20       0.06033        0.225
+1e100      0.04248        0.225
+1e1000     0.02984        0.225
+T7 reserve (item-0018 T7 pattern): C_F = O(1) or o(ln x)
+leaves reserve ln x / C_F = (ln x)^{1-o(1)}: consumption
+unchanged from the anchored sheet; no new sink introduced by
+the reduction (sqrt is monotone: o(1) -> o(1)).
+
+== T6. M2 / M4 / M5 rows ==
+M2(a) wall-w1 span ratio (item-0018 T5(b) pattern): exchange-
+span vs the oneExtension_sum_le budget kappa (k-1) ln(k+1):
+x        A'L lnx / [2(k-1)ln(k+1)]   (kappa = 2)
+1e8                5.9
+1e20              13.4
+1e100             60.1
+1e1000           541.0
+  -> the span budget covers a 1/ratio = o(1) sliver of the
+     window; realized side spans concentrate at Theta(L ln x)
+     (P3.1' mean + m3 span data): route (e1) reaches a
+     vanishing mass share.  M2(b): route (i) constant =
+     exp((1+o(1)) k ln k), T1 row, DOA.  M2(c): route (ii)
+     carrier NI-M2 (class-level equidistribution at growing
+     rank): NOT in the corpus (checked against the Section 2
+     anchor list; frozen HLQuantA has no upper content).
+M4(a): the dispersion cross-term needs a word-grain upper mean
+value theorem (NI-M4); available S-moment tools (D1.b anchors,
+consumed verbatim): Kuperberg Thm 1.1 regime k <= (log h)^{1/2}
+vs ours k = (2/ln2 + o(1)) log h -- a full square out;
+Thm 1.2 box bound (3 log k)^k = superpolylog (expo ~
+2.885 ln(3 ln k)); Pintz Lemma 4 upper direction needs
+log H >= k^{1/eta} > k vs ours log H ~ (ln2/2) k.  All three
+gaps as documented in D1.b; nothing new opens at pair level.
+Against the (2 ln x)^1 relative room (F17.2): every listed
+tool misses it by at least a polylog square or a superpolylog
+factor.
+M3(c) literature-shelf pricing (feeds the C4 barrier SCOPE):
+bounded-gap / clustering inputs (Maynard-class, anchored
+1311.4600) are inputs OUTSIDE the C4 tool list T (they fail
+in the barrier model: all model gaps -> infinity); their
+quantitative cost at growing rank is the T1 superpolylog
+class (exp((1+o(1)) m ln m)-type density losses at cluster
+size m ~ L): they extend T's reach only at bounded rank, not
+at the D0 depths.
+M5: B3 ledger price eps_B3 <= delta/4 = 1/8 at delta = 1/2
+(s-uniform).  NI-M5a (alignment-mass bound at R = o(ln x)):
+OPEN; m3 direction: top-decile-rho classes carry ~10% of Fam_2
+mass at every populated grid point (<= 1/8: DIRECTIONALLY
+compatible), but alignment level GROWS with row depth (E1/O5)
+and the coupled-depth share is unmeasured: no consumption.
+NI-M5b = OI-B1 (capped-domain middle law): OPEN (B1 dropped
+from the measurable set by m1).
+
+== T7. D3(i)-(vi) matrix (kickoff W2(d); one line each, ==
+==     verbatim question order) and verdicts ==
+Answers for the two NEW named statements and the six mechanism
+routes.  Notation: pass / FLAG / FAIL / note.
+
+B2.pairs (the M1.c reduced statement):
+ (i)   pass -- no k-dependent constant appears in the statement
+       or its consumption (Cauchy-Schwarz only).
+ (ii)  note -- upper-relative shape; frozen HLQuantA (lower,
+       absolute, span-gated) neither implies nor is implied by
+       it; the pair-grain analogue of U18.2 is its truth
+       heuristic, flagged, never load-bearing.
+ (iii) pass -- all counts on S'^{(s)}_x, caps inside (RS.1).
+ (iv)  pass -- no tensorization or compounding presupposed.
+ (v)   pass -- statement is window-level throughout.
+ (vi)  pass -- m2/m3 cited as direction only (T5 both-readings
+       row); no measured number enters any constant.
+A3.card (the M3.1 statement):
+ (i)   pass -- constants are (e A'/2)^{J+K} capacity, polylog-
+       free in the CONCLUSION (delta = 1/2 absolute).
+ (ii)  pass -- consumes only proved corpus inputs (P3.3'(ii)/
+       (iv), RS.1); no HL content in any direction.
+ (iii) pass -- S'^{(s)}_x counts, caps inside.
+ (iv)  pass.  (v) pass.  (vi) note -- crossover rows in T2:
+       the statement is asymptotic; finite-scale vacuity is
+       printed, never hidden.
+Mechanism routes, six lines each, verbatim question order
+[audit repair: the v1-draft gave first-failure lines only]:
+M1.a (W2 = o(|S'|); statement FALSE by T3, verdict NO-GO):
+ (i) pass (no constants)  (ii) moot (statement false)
+ (iii) pass  (iv) moot  (v) moot  (vi) moot.
+M1.b (W2 <= eps V2; statement open, consumer NO-GO by T4):
+ (i)   pass -- no k- or x-dependent constant in the statement.
+ (ii)  note -- pair-grain relative upper; no implication either
+       way against frozen HLQuantA (lower, absolute), by text.
+ (iii) pass -- counts on S'^{(s)}_x, caps inside.
+ (iv)  pass.  (v) pass.  (vi) pass (m2 cited direction only).
+M2 (relative Selberg; NO-GO(w1 + NI-M2)):
+ (i)   FAIL on route (i): exp((1+o(1)) k ln k) per-word class.
+ (ii)  FAIL-adjacent on route (ii): NI-M2 is beyond-HLQuantA
+       upper/equidistribution content (compared by text).
+ (iii) pass as stated (counts on S').  (iv) moot after (i)/(ii).
+ (v) moot.  (vi) moot.
+M3 (averaging engine; GO for its delivered statements):
+ (i) pass  (ii) pass (consumes proved corpus inputs only)
+ (iii) pass  (iv) pass  (v) pass  (vi) note (T2 crossover
+ honesty rows printed; asymptotic-only).
+M4 (dispersion; NO-GO(NI-M4)):
+ (i)   pass at statement level (no constant yet named).
+ (ii)  FAIL-adjacent: NI-M4 is strictly-beyond-HLQuantA upper
+       mean-value content at rank k.
+ (iii) pass.  (iv) FLAG -- a product-form reference profile
+       mu_P would presuppose tensorization (U17.11(a)); any
+       executed variant must state mu_P non-product or pay it.
+ (v)   note -- mu_P from marginal middle laws would be a
+       marginal-as-window promotion; forbidden without proof.
+ (vi)  pass.
+M5 (B3 on rho-capped family; CONDITIONAL(NI-M5a, NI-M5b),
+DEFERRED):
+ (i)   pass -- C_q(x) = R(x) = o(ln x) by the cap clause.
+ (ii)  FLAG -- NI-M5b is OI-B1 (open-HL-adjacent in its sharp
+       form per the B1(ii) record; the C_rel form is not);
+       NI-M5a is a density statement, no HL strength.
+ (iii) pass -- family rule is cap-blind ex-ante, counts on S'.
+ (iv)  pass.
+ (v)   note -- transferring m3's fixed-row aligned-mass shares
+       to coupled depth would be marginal-as-window; that is
+       exactly why NI-M5a counts as unmeasured (E1).
+ (vi)  FLAG -- coupled-depth aligned-mass share unmeasured; no
+       finite number may enter the eps_B3 <= 1/8 ledger check.
+M6 (signed weights; NO-GO(F17.9)/merged):
+ (i) FAIL at word rank (T1 rows; rank-2k trap for the pair
+ variant)  (ii) moot  (iii) moot  (iv) moot  (v) moot
+ (vi) moot.  Surviving variants are M2(ii)/M3 rows above.
+M7 (one-extension specificity; subsumed into M1 room calculus):
+ (i)-(vi): inherits M1.c's matrix for the room calculus it
+ feeds and M2's (ii) for the missing carrier NI-M2; no
+ separate statement exists to audit.
+
+== PRIORITY ORDER (W2 output; one-paragraph justifications ==
+==     in the final report Section W2) ==
+ 1. M3 engine: prove A3.card, the V2 floor, the M1.a falsity,
+    the barrier (all sheet-clean, zero forbidden constants).
+ 2. M1.c: prove the B2.pairs => RelExtensionUpper reduction
+    (sheet-clean); register B2.pairs as the successor target
+    with its D3 matrix.
+ 3. M1.c-closure attempts on B2.pairs: union-sieve (T1 trap
+    row: quantified NO-GO), identity-layer (M3.3 barrier:
+    quantified NO-GO): register obstructions F20.n.
+ 4. M5: record CONDITIONAL statement shape + named inputs;
+    no proof investment (no in-corpus surface).
+ M2, M4, M6: registered NO-GO with exact gaps; no investment.
+
+END OF SHEETS
