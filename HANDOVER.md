@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..54; bets: 6 scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..55; bets: 6 scored,
 2 open -- BET-07 to 2026-08-08, BET-08 to 2026-09-30). 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
@@ -480,6 +480,27 @@ its later sections carry a STALE banner, HANDOVER is the record).
    sorry-free, classical three, frozen untouched, inventory
    unchanged, U18.5 round-trip rule binding; review gate = Lean/CI
    + steering statement-fidelity diff).
+2l. ITEM-0018 CLOSED (2026-07-19; record ANN-55; M2 landed, main =
+   f2902da). Supply.lean: definitional layer (filteredSites with
+   caps byte-parallel to ExchangeAt; classCount / classCountMid;
+   realizedFamily / multiFamily; RS.1 partition identity),
+   SupplyParams (D_le_two_pow_J = the b = 1 gate source,
+   P3.3'(i)), the three named Props (7.1 v1.1 faithful, audit
+   notes as docstrings), and supply_of_triple PROVED sorry-free on
+   [propext, Classical.choice, Quot.sound]; lake build green
+   (operator-attested); inventory/frozen/relocation unchanged
+   (steering re-verified). Steering statement-fidelity diff:
+   FAITHFUL. The consumer chain is machine-checked end-to-end:
+   three named Props -> ExchangeSupply1 -> S not in Z[1/2]; the
+   analytic burden is exactly items 0019/0020/0021 (BET-08 binds
+   to RelExtensionUpper; report F1 flags the selection-restriction
+   choice for the item-0020 kickoff). Reports consolidated to
+   dossier/item-0018-workpapers/item-0018-final-report.md;
+   roadmap done-move via companion mbox; NEXT: item-0019 (kickoff
+   on request; m1-m5 frozen in v1.1). Rule 18 codified (pin
+   semantics under bookkeeping races, report O3, second
+   recurrence). OPEN OPERATOR: rule-16 strengthening (B6); BET-07
+   to 2026-08-08; BET-08 to 2026-09-30.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an

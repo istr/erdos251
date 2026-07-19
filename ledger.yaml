@@ -2026,3 +2026,79 @@ annotations:
       0018-report-M2.md; supply_of_triple sorry-free, classical
       three, frozen untouched, U18.5 round-trip rule binding;
       rule-17 single-source pin honored, pin = main e0f6ee4a).
+  - id: ANN-20260719-55
+    refs: [ANN-20260719-54, BET-20260718-08]
+    date: 2026-07-19
+    note: >-
+      ITEM-0018 CLOSED (M2 LANDED). Operator commit
+      f2902dacd1f2983558d9ba7af86f0716cde132c8 on main (base =
+      20ef744, the ANN-54 apply); one purely additive commit:
+      lean/Erdos251/Supply.lean (567 lines), one root import line,
+      0018-report-M2.md (317 lines). EXECUTOR run per kickoff v2
+      (disk sha256 verified byte-identical to the ANN-54 steering
+      value 50d429a4...; web OFF; mathlib pin a6276f4c intact,
+      lean-toolchain newline intact; no lake update). GATES: lake
+      build green, zero new warnings (operator-attested, report
+      verbatim); #print axioms Erdos251.supply_of_triple =
+      [propext, Classical.choice, Quot.sound] (report verbatim);
+      strict inventory UNCHANGED, exactly Statement.lean:1
+      (steering re-verified at f2902da -- the three Props are
+      named statements, supply_of_triple is PROVED); frozen blocks
+      byte-identical and relocation PASSED (steering re-verified);
+      writes-scope exact (steering re-verified). PIN RACE: kickoff
+      Section-0 pin e0f6ee4a vs actual HEAD 20ef744 -- the
+      ANN-anchored hash verification makes the pair unsatisfiable
+      as authored; the run resolution (diff bookkeeping-only,
+      anchors byte-identical, pin to HEAD) steering-re-verified
+      and RATIFIED; second recurrence of the race (after the M1
+      stale predicate) -> runs/README rule 18 codified this
+      commit per report O3 (pin = last pre-bookkeeping content
+      state; runner verifies the bookkeeping-only delta). STEERING
+      STATEMENT-FIDELITY DIFF executed clause-by-clause (7.1 v1.1
+      <-> Supply.lean): FAITHFUL. MatchedFlankLower: delta : Q
+      s-uniform before s, per-s threshold, Fam_2 mass vs delta *
+      |S'|; RelExtensionUpper: eps -> x4 (s- and
+      selection-uniform) -> x -> s -> ALL total selection
+      functions with the even/>=2/window restriction, Nat-sub
+      (N-1)+, casts at the comparison only; TailIntersection:
+      per-s threshold, division-free 4|S'| >= sitePop, NO |S'| >=
+      1 clause (hazard vi); memSiteFilter clauses byte-parallel to
+      ExchangeAt (delta(n+J) <= D, delta(n+J+1+K) <= 2^K, window
+      over range(J+1+K), threshold s+1 <= n, ANN-50 far index);
+      SupplyParams.D_le_two_pow_J is the b = 1 gate source
+      (P3.3'(i)) -- hazard (v) discharged with zero 7.1 shape
+      change, U18.5 never engaged. The selection restriction is
+      semantically equivalent to the unrestricted display
+      (inadmissible middles contribute 0 to the Nat-sub sum;
+      report lens, steering re-read). In-run 18-agent fidelity
+      fan-out (six lenses, two refuters per finding): 0 FATAL / 0
+      MAJOR / 6 MINOR raised, 1 sustained (docstring, repaired in
+      place, gates re-run green). CONSUMER CHAIN now
+      machine-checked end-to-end: MatchedFlankLower +
+      RelExtensionUpper + TailIntersection -> ExchangeSupply1 ->
+      S not in Z[1/2] (dyadic_of_exchange_supply); the analytic
+      burden is exactly the three named Props -- item-0019
+      measures (m1-m5 frozen in v1.1), item-0020 proves the
+      B-side (RelExtensionUpper; the BET-20260718-08 shape;
+      report F1 flags the restricted-vs-unrestricted selection
+      choice for that kickoff), item-0021 the C-side transfer.
+      Follow-ups carried: F2 pinned-parameter layer optional
+      additive (the literal D0 formulas need small-x guards); F3
+      anchorPrime vs consCount anchor off-by-one firewall for
+      future cross-layer reuse audits; F4 sitePop = primeCounting
+      equivalence lemma candidate for the C2 supplier; O4
+      classical decidability expected (the statement layer is
+      choice-free). Convention note: Supply.lean and the M2
+      report fidelity table carry Lean unicode verbatim (as all
+      lean/ files do); the ASCII-clean discipline applies to
+      prose artifacts, quoted Lean is exempt. REPORT
+      CONSOLIDATION this commit: 0018-report-M1.md +
+      0018-report-M2.md relocated and merged -> dossier/
+      item-0018-workpapers/item-0018-final-report.md (item-0017
+      convention); roadmap done-move via the companion mbox; NEXT
+      in execution order: item-0019 (kickoff on operator
+      request). Item-0018 acceptance discharged on both
+      milestones: M1 dossier + ANN-54 gate; M2 no new sorry,
+      frozen untouched, classical three, width-1 (K1) primary.
+      OPEN OPERATOR: rule-16 strengthening (B6); BET-07 to
+      2026-08-08; BET-08 to 2026-09-30.

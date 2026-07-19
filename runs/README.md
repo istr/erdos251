@@ -141,3 +141,17 @@ Rules:
     Section 0 but the stale literal survived, costing the run a
     deviation resolution (resolved correctly per the item-0017
     anchors-unchanged precedent; ANN-53).
+18. Pin semantics under bookkeeping races (2026-07-19). A kickoff
+    pin denotes the last pre-bookkeeping CONTENT state; HEAD may
+    legitimately be ahead of it by bookkeeping-only commits
+    (HANDOVER.md, ledger.yaml, payloads/HASHES.txt,
+    runs/README.md, roadmap/). At session start the runner
+    verifies (a) git diff pin..HEAD touches only those paths, and
+    (b) every Section-2 read-only anchor is byte-identical across
+    both states; then the session pins to HEAD and records the
+    delta in the report. Any content-path delta remains a
+    STOP-AND-REPORT. Provenance: the ANN-anchored kickoff-hash
+    verification necessarily advances HEAD past any pre-authored
+    pin (item-0018 M1: stale duplicated predicate, rule 17;
+    item-0018 M2: Section-0 pin vs ANN-54 presence, report O3 --
+    second recurrence, both resolved correctly by the runs).
