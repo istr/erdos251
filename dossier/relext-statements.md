@@ -1,4 +1,4 @@
-# Relative extension statement layer -- item-0018 M1 (v1)
+# Relative extension statement layer -- item-0018 M1 (v1.1; post-R2)
 
 Date: 2026-07-19. Author: item-0018 runner (steering lineage, Claude
 Fable 5, model string claude-fable-5), against kickoff v1 (operator-
@@ -45,6 +45,14 @@ adversarially audited at draft state by a nine-agent pass (Section
 RS.3 worst-case quotient bound and one FATAL re-scope of the F18.2
 sufficiency claim -- was steering-re-executed and folded in before
 this v1 was fixed.
+R2 RECORD (v1.1): a blind cross-family adversarial scope audit was
+executed against the redacted object (payloads/
+item-0018-review-r2-v1.md; SOUND WITH REPAIRABLE ISSUES, 0.94, zero
+FATAL, 9 MAJOR / 5 MINOR); every sustained finding is repaired in
+place with [R2 repair] marks; dispositions in
+payloads/item-0018-adjudication-v1.md and Section 9b. The D5
+selection, the 7.1 Props, and the 7.2/7.3 design are UNCHANGED
+(reviewer-confirmed, NOTE-2/3/4).
 
 ## 0. Mission, target shapes, shape register
 
@@ -100,7 +108,10 @@ the floor routes by capacity slack even in Model M).
            threshold (Section 7.3)              feeds ExchangeSupply1
   N        pi(x); sites n with p_n <= x         site population
   s        depth threshold; sites n >= s+1      Lean t-threading:
-           (paper); Lean t = s+2 (FW-3)         t <= n, t <= m
+           (paper); SINGLE dictionary s := t     t <= n, t <= m
+           per 7.3; the downstream dyadic
+           consumer itself calls t = s+2 (FW-3)
+           [R2 repair, MINOR-3]
   A'       fixed, in (1, 4 sqrt(2)/e)           aggregate window cap
            (working value 1.5)                  sum g_{n+i} <= A'L lnx
   A''      working value 48; the repaired       tail-cap scale; the
@@ -213,7 +224,14 @@ H(a,d,c) = wordPointSet of that word.
 DEFINITION RS.3 (local quotient rho; the kickoff's B-layer quotient,
 factored via the insert algebra). For P = (a,c) and even d:
     rho(P,d) := S(H(a,d,c)) / ( S(H_pre(a)) * S(H_suf(c)) ),
-the two-block correlation quotient (S = singularSeries). Structure,
+the two-block correlation quotient (S = singularSeries). DOMAIN
+[R2 repair, MINOR-4]: defined when S(H_pre(a)) and S(H_suf(c)) are
+positive (admissible blocks); NOTE: any block realized by primes
+exceeding p omits residue 0 mod p, so every side pair realized at
+large anchors is admissible with positive block singular series;
+off-domain set rho := 0 by convention (unused: B1's cap clause and
+m3 range over realized classes, and an inadmissible H(a,d,c) has
+N_{P,d} = 0 at large anchors). Structure,
 even-conditioned: the p = 2 factor is exactly 2 (all point sets
 occupy one class mod 2; the factor is 2^{|H|-1} over 2^{J} * 2^{K}).
 For odd p the factor is computed by iterating the one-point insert
@@ -311,7 +329,15 @@ one good shift class per prime; the in-budget count of admissible
 alternative middles then COLLAPSES (audit-computed and
 steering-re-executed: exactly 1 admissible in-budget middle -- the
 original d itself -- at k = 24, kappa = 2, and the count is
-nonincreasing in k at kappa = 10 as well). Whether side pairs with
+nonincreasing in k at kappa = 10 as well). DISPLAYED INSTANCE [R2
+repair, MAJOR-9: reproducible from this text; adjudication
+re-executed]: the 24 consecutive primes 29..137, balanced split
+J = K = 11, block spans A_J + C_K = 102, original middle d = 6,
+budget 2*23*ln 25 = 148.07, candidate middles d' even in [2, 46]:
+exactly d' = 6 is admissible. (Adjudication scan over ALL splits
+J = 1..21 of the same run: balanced and near-balanced splits give
+exactly 1; the near-degenerate splits J in {1, 19, 20, 21} give
+2-4 -- see U18.7's adjudication note.) Whether side pairs with
 >= 2 admissible in-budget middles exist at every rank ("doubly
 extendable in-budget side pairs") is OPEN and is registered as
 U18.7; no construction is exhibited here.
@@ -321,9 +347,12 @@ working rank), applying A1 at the SAME P with two middles d != d'
 produces, for every threshold s and x >= max(x_0, threshold scale),
 two sites n, m with matched flanks and differing middles and
 n, m >= s+1 -- the differ clause WITHOUT any B-layer input. What it
-does NOT produce: the (E4) caps (N^o is uncapped, RS.4). The class is HL-thin (relative density
-e^{-Theta((lnln x)^2)} by the mass floor), and the C-layer window for
-thin classes is CLOSED unconditionally (F18.2, budget T6(b)): the
+does NOT produce: the (E4) caps (N^o is uncapped, RS.4). The class is HL-thin (HL-PREDICTED relative density
+e^{-Theta((lnln x)^2)}; the mass floor is the lower half of that
+scale), and the C-layer window for thin classes is closed FOR THIS
+RECORDED ROUTE (the frozen-card truncated-tail transfer; F18.2,
+budget T6(b); no all-routes impossibility is claimed [R2 repair,
+MAJOR-5]): the
 truncated-tail transfer inside the frozen HLQuantA card budget admits
 family density (ln x)^{-c} only for c < c* = 4 ln 2 - 2 = 0.7726,
 while a thin class sits at quasi-polylog sparsity. So the two-word
@@ -332,13 +361,27 @@ pointwise cap and its ENTIRE unconditional residual is the sparse-
 site tail clause (F17.8) -- now with the HL-conditional part fully
 consumed machinery rather than a trap construction. This sharpens,
 and is consistent with, the T3 row of the dossier D3 table.
-A1-typ (exchange-typical-span variant; named open input OI-A1). The
-same display with (h2) replaced by the D0 window budget span <=
-A' L ln x is NOT derivable from the landed machinery (reuse audit
-Section 6, walls w1/w2) and its honest heuristic form carries the
-Cramer thinning factor (ln x)^{-tau(A')}, tau(A') = 2A'/ln2 (budget
-T5(c); heuristic status U17.9-class, registered U18.1). Kept as a
-statement target only; no candidate below consumes it.
+A1-typ (exchange-typical-span variant; named open input OI-A1;
+exact candidate, heuristically motivated [R2 repair, MAJOR-3: the
+draft hedged between the unthinned display and a thinned one; the
+candidate below is the single exact statement]). Assume HLQuantA
+(frozen decl, verbatim). CANDIDATE: for every eps > 0 there exists
+x_0' = x_0'(eps) such that for all x >= x_0', for every even side
+pair P = (a,c) at the D0 depths and every even d >= 2 such that
+H = H(a,d,c) satisfies (h1) IsAdmissible H and
+    (h2') offsetSpan H <= A' L ln x     [D0 window budget],
+it holds that
+    N^o_{P,d}(x) >= (1/4) (ln x)^{-tau(A')(1+eps)} modelMass(H, x),
+with tau(A') = 2A'/ln 2 fixed. Uniformity: over all (P, d)
+satisfying (h1)-(h2') simultaneously at each x (single threshold).
+Constant dependence: 1/4 absolute; tau(A') from the D0 pin A'
+alone; x_0' depends on eps and the D0 pins only. Normalization:
+none. STATUS: OPEN; NOT derivable from the landed machinery (reuse
+audit Section 6, walls w1/w2); the exponent tau(A') is MOTIVATED
+by the U18.1 Cramer thinning heuristic (U17.9-class, budget T5(c))
+-- the motivation is heuristic, the statement is exact and may be
+false. Kept as a statement target only; no candidate below
+consumes it; its finite-scale shadow is the m5 measurement.
 
 CANDIDATE A2 (family abundance; unconditional; proved at dossier
 level). For every s >= 0 and x >= x_1' (P3.3' threshold): 
@@ -373,13 +416,17 @@ strictly stronger and is adopted for the single s-free 7.4 gate
 constant and the m1 measurement target, not by necessity.
 Constant dependence: delta absolute. Normalization: none.
 STATUS: OPEN for the primes. Support (audit-corrected provenance):
-the Model M analogue at delta = 1 - o(1) is DERIVABLE FROM the
-Theorem M1 toolkit (mean site degree N_S q_2^{J+K} = x^{1-o(1)} plus
-a per-site lower-tail Chernoff with the M1(e) residue-class dilution
-step) but is NOT STATED in M1 -- M1's recorded clauses (i)/(ii)
-certify only a (ln x)^{-2+o(1)} twinned-site fraction; the
-derivation is registered as write-out debt U18.6, and no PROVED tag
-is claimed. Primes-side evidence measured (exchange-class counts
+the Model M analogue at delta = 1 - o(1) is PLAUSIBLY DERIVABLE
+from the Theorem M1 toolkit but only after four steps NOT written
+in the corpus [R2 repair, MAJOR-7]: (1) a uniform LOWER bound on
+the per-word match probability (M1(e) is an upper/dilution
+device), (2) a per-site lower-tail argument after the
+residue-class dilution, (3) the Par -> Par' / per-position ->
+aggregate filter adaptation, (4) the degree-to-Fam_2-mass
+conversion. It is NOT STATED in M1 -- M1's recorded clauses
+(i)/(ii) certify only a (ln x)^{-2+o(1)} twinned-site fraction; no
+derivation is supplied here; registered as write-out debt U18.6,
+and no PROVED tag is claimed. Primes-side evidence measured (exchange-class counts
 12/178/1287 and 2/21/143 across 2e6/2e7/1e8; (6,6,64) classes
 1 -> 29 from 1e8 to 1e9; all measured on the D0.2-style site sets of
 dossier 7.1, not on S'_x -- evidence class, not proof; asymptotic
@@ -438,10 +485,14 @@ witnesses), so an uncapped pointwise form has empty content on
 CRT-aligned classes; those classes are carried by the
 family-averaged forms below, whose gate constants never reference
 rho.
-STATEMENT-PRECISION FINDING (F18.5): WITHOUT the floor (b1-floor)
-the pointwise form is FALSE at any scale where small classes exist:
+STATEMENT-PRECISION FINDING (F18.5; domain-qualified [R2 repair,
+MINOR-1]): WITHOUT the floor (b1-floor) the capped pointwise form
+is FALSE at any scale where a small class has a realized middle
+inside the rho <= R(x) domain (the uncapped o(ln x)-constant form
+is false for every sufficiently small realized class):
 sum_d N_{P,d} = N_P forces some N_{P,d} >= N_P/#realized-middles,
-and a singleton class has N_{P,d} = N_P = 1 > (C/ln x) N_P. Integer
+and a singleton class with an in-domain realized middle has
+N_{P,d} = N_P = 1 > (C/ln x) N_P. Integer
 counts have Poisson-scale fluctuations in any truth model, so
 pointwise (rho + eps)-precision requires per-cell means -> infinity:
 hence the floor. Empirical calibration (audit-corrected statistic:
@@ -453,8 +504,11 @@ root-mean-square multiplicity ~ 2), far below the floor: B1's truth
 window is EXPECTED-INACCESSIBLE at reachable x (pending m1), and
 item-0019 must measure averaged forms instead (Section 8,
 measurement spec m1/m2).
-B1' (bounded-constant variant): as B1 with (rho + eps) replaced by
-C_rel * rho for an absolute C_rel >= 1 (consumption survives any
+B1' (bounded-constant variant; closed form [R2 repair, MINOR-5]):
+THERE EXIST an absolute constant C_rel >= 1 and, for the fixed
+candidate parameters (eps_0, R), a threshold x_3'(eps_0, R) such
+that the B1 conclusion holds for all x >= x_3' with (rho + eps)
+replaced by C_rel * rho (consumption survives any
 C_rel with C_rel * R(x) = o(ln x) on the (b1-rho)-capped domain; no
 room exists outside the cap -- corrected T4). B1' is the form the
 consumer actually needs; the (rho+eps)
@@ -469,27 +523,37 @@ finite-scale aggregates indicate AND the CRT-aligned classes outside
 (b1-rho), so it CANNOT be the sole B-layer input at any finite stage
 of the argument -- selection consequence in D5.
 
-CANDIDATE B2 (family-averaged, selection form; kickoff-verbatim
-display plus the reduced form). Selection form (B2.plain): for every
-eps > 0 there is x_4(eps) with: for all x >= x_4, all s >= 0, and
-EVERY selection function P |-> d_P (even, d_P <= A' L ln x) on
+CANDIDATE B2 (family-averaged, selection form; closed eps-form
+[R2 repair, MAJOR-1: the kickoff-verbatim rate display quantified
+eps without using it and used C_F without quantifying it; the
+closed form below IS the candidate, the rate reading is derived
+notation]). Selection form (B2.plain): for every eps > 0 there is
+x_4(eps) such that for all x >= x_4, all s >= 0, and EVERY
+selection function P |-> d_P (even, d_P <= A' L ln x) on
 Fam(S'^{(s)}_x):
-    sum over P of N_{P, d_P}  <=  (C_F(x)/ln x) * sum over P of N_P,
-    gate: C_F(x) = o(ln x)  [equivalently, RHS = eps * sum N_P
-    eventually, for every eps > 0].
+    sum over P of N_{P, d_P}  <=  eps * sum over P of N_P.
+RATE NOTATION (derived, not part of the proposition): for any
+proof delivering the display, C_F(x) := ln x times the sup over
+(s, selections) of the realized ratio satisfies C_F(x) = o(ln x);
+the kickoff display "<= (C_F(x)/ln x) sum N_P, gate C_F = o(ln x)"
+is recovered with this C_F.
 The adversarial-selection quantifier is what the rigidity pigeonhole
 consumes (the rigid middle is adversarial); a fixed-selection or
 fixed-d variant is strictly weaker and NOT sufficient for D4.
 ENTANGLEMENT FINDING (F18.3): B2.plain is not a pure upper-bound
 statement: choosing d_P realized gives LHS >= |Fam|, so B2.plain
-forces average class multiplicity >= ln x / C_F -- abundance content
-smuggled into an upper-bound shape. The pure-concentration isolate
-is the REDUCED form (B2.reduced), the selected candidate:
-    sum over P of ( N_{P, d_P} - 1 )_+  <=  (C_F(x)/ln x) * sum over
-    P of N_P,   same quantifiers, same gate.
+forces |Fam| <= eps * sum N_P for every eps eventually, i.e.
+average class multiplicity -> infinity -- abundance content
+smuggled into an upper-bound shape [R2 repair: eps-form reading]. The pure-concentration isolate
+is the REDUCED form (B2.reduced), the selected candidate (closed
+eps-form, identical to the 7.1 Prop [R2 repair, MAJOR-1]):
+    for every eps > 0 there is x_4(eps) such that for all x >= x_4,
+    all s >= 0, and every selection (d_P):
+    sum over P of ( N_{P, d_P} - 1 )_+  <=  eps * sum over P of N_P.
 B2.reduced is singleton-inert ((N-1)_+ = 0 there), carries no
 abundance content, and still contradicts rigidity given A3 (Section
-7.2). Constant dependence: C_F(x) explicit, gate o(ln x);
+7.2). Constant dependence: none beyond the D0 pins (the derived rate
+C_F is o(ln x) by construction) [R2 repair, MAJOR-1];
 normalization: none (counting ratio). Budget: the gate line is
 (G1); the heuristic value of C_F on the Gallagher frame is O(1)
 (max-concentration of the middle law; U18.2-status), tabulated
@@ -502,13 +566,15 @@ F17.9's k-uniform per-word hypothesis BY SHAPE (averaged, relative,
 selection-quantified); the designated structurally-different
 exclusion device lane is global pair counting (Section 7.5).
 
-CANDIDATE B3 (quantile fallback). For every eps > 0 there is
-x_5(eps): for all x >= x_5, s >= 0, there is an exceptional
-sub-family E subset Fam(S'^{(s)}_x) with
+CANDIDATE B3 (quantile fallback; closed form [R2 repair,
+MAJOR-2]). There exists ONE fixed nonnegative function C_q with
+C_q(x)/ln x -> 0 -- independent of eps, s and the selection, with
+dependence on the D0 pins alone -- such that: for every eps > 0
+there is x_5(eps) with: for all x >= x_5, s >= 0, there is an
+exceptional sub-family E subset Fam(S'^{(s)}_x) with
     sum over P in E of N_P <= eps * sum over all P of N_P,
 such that for every P outside E and every even d <= A' L ln x:
-    N_{P,d}(x) <= (C_q(x)/ln x) * N_P(x) + 1,
-gate C_q(x) = o(ln x). The +1 makes the per-class clause
+    N_{P,d}(x) <= (C_q(x)/ln x) * N_P(x) + 1. The +1 makes the per-class clause
 singleton-inert (statement-precision repair, same mechanism as
 F18.5); the eps-mass exceptional clause is the quantile weakening.
 STATUS: OPEN (weaker than B2.reduced: derivable from it up to the
@@ -524,24 +590,41 @@ item-0020's device controls typical classes only.
 CANDIDATE C1 (family-aggregate cap retention; audit-repaired
 display -- the draft's per-class forall-P form is NOT supported by
 the recorded reduction and is demoted to the mass-floor variant
-C1'' below). For a specified family FF(x) subset Fam of side pairs:
-there is eps_C < 1/2 and x_6 with: for all x >= x_6, s >= 0:
-    sum over P in FF(x) of N_P(S'^{(s)}_x)
-      >= (1 - eps_C) * sum over P in FF(x) of N^w_P(x)
+C1'' below). [R2 repair, MAJOR-4: the family is now an EX ANTE
+rule; the draft's FF(x) left the s-dependence and cap-independence
+unpinned, admitting a circular post-cap selection and the empty
+family.] For a NAMED family rule (s, x) |-> FF_{s,x}, a set of
+side pairs declared CAP-BLIND: membership is determined by P, x, s
+and window-only data (RS.4's N^{w,(s)}-world and word data) alone,
+independent of the two delta-cap outcomes; rules with
+sum over P in FF_{s,x} of N^{w,(s)}_P(x) = 0 are excluded. The
+candidate, for that ONE named rule: there is eps_C < 1/2 and x_6
+with: for all x >= x_6, s >= 0:
+    sum over P in FF_{s,x} of N_P(S'^{(s)}_x)
+      >= (1 - eps_C) * sum over P in FF_{s,x} of N^{w,(s)}_P(x)
 (RS.4: left side carries both (E4) delta caps; right side the
-window cap only). C1' (asymptotic variant): eps_C = eps_C(x) -> 0.
-C1'' (per-class variant): the forall-P form, admissible ONLY under
-an explicit per-class mass floor N^w_P >= mu(x) * sum_FF N^w_P
-(the deep-tail budget below then reads against the CLASS mass; at
-exchange rank a single class has density at most ~ (ln x)^{-(k-1)},
-driving the needed tail rank to ~ (k-1) lnln x/ln2 >> the headroom:
-per-class C1'' is unreachable by this route for ANY family at
-exchange rank -- audit finding, steering-re-executed).
+window cap only; the threshold s is explicit on BOTH sides).
+eps_C and x_6 may depend on the rule and the D0 pins, not on s or
+x. C1' (asymptotic variant): eps_C = eps_C(x) -> 0.
+C1'' (per-class variant): the forall-P form, admissible ONLY
+under an explicit per-class mass floor N^{w,(s)}_P >= mu(x) *
+sum_FF N^{w,(s)}_P (the deep-tail budget below then reads against
+the CLASS mass. [R2 repair, MAJOR-8: the draft's blanket density
+claim used an unstated side-class upper bound; scoped form:] the
+HL-PREDICTED density of a single exchange-rank class is
+~ (ln x)^{-(k-1)} -- a model-level scale; no proved upper bound is
+displayed, and a proved one would itself carry a growing-k sieve
+constant (F17.9-adjacent); for any class whose density is
+INDEPENDENTLY known to be exp(-Theta((lnln x)^2)), the needed tail
+rank ~ (k-1) lnln x/ln2 >> the headroom: per-class C1'' is
+unreachable BY THIS ROUTE for such classes -- audit finding,
+re-scoped).
 Constant dependence: eps_C explicit; the consumption in D4 needs
 only eps_C < 1/2 (constant retention), NOT o(1). Normalization:
-none. DEFINITION (eta): the family site-density is eta(x) :=
-(sum over P in FF(x) of N^w_P(x)) / N -- TRUE window mass, not
-model mass; the distinction is load-bearing below.
+none. DEFINITION (eta): the family site-density is eta_s(x) :=
+(sum over P in FF_{s,x} of N^{w,(s)}_P(x)) / N -- TRUE window
+mass, not model mass; the distinction is load-bearing below. [R2
+repair, MAJOR-4: threshold-explicit.]
 STATUS: OPEN; REDUCTION RECORD (this item; audit-re-scoped): C1 for
 a family of site-density eta reduces, via Markov INSIDE the family
 mass, to family-conditional truncated-tail first moments at
@@ -576,10 +659,12 @@ AND (n1)-(n2) are the route's viable window -- conditional
 machinery-plus-prose, NOT unconditional; (ii) a single HL-thin
 class (density e^{-Theta((lnln x)^2)}) is OUTSIDE the c* budget by
 an unbounded margin -- the A1 two-word route strands here
-unconditionally (its T3-parallel residual); (iii) even the thinned
-typical-span A-mass (thinning tau(A') = 2A'/ln2 >= 2.885 > c*)
-never fits as a single class: C-layer viability is a FAMILY
-property, not a class property. This is the quantitative form of
+unconditionally (its T3-parallel residual); (iii) under the U18.1
+thinning heuristic, even the thinned typical-span A-mass (tau(A')
+= 2A'/ln2 >= 2.885 > c*) lies outside THIS ROUTE's c* window as a
+single class [R2 repair, MAJOR-5: route- and heuristic-scoped]:
+for the recorded route, C-layer viability is a FAMILY property,
+not a class property. This is the quantitative form of
 V4(iii) for this statement set.
 D3(v) note (audit-scoped): the 2^{-j}-weighted summation step adds
 first moments -- no marginal-to-window law there (Markov is
@@ -623,10 +708,14 @@ budget_sheet.py, budget_sheet_tables.txt (deterministic; exact
 local-factor arithmetic where it decides (T4 witnesses), float where
 tail truncation dominates (T3), mpmath dps 40 elsewhere; stated per
 table). Grid: x = 1e8, 1e20, 1e100, 1e1000 at k = (2/ln2) lnln x.
-Per-candidate pointers (every k- or x-dependent constant class of
-Section 4 appears in at least one row; the x-free lock choices
-A', A'', kappa, delta, eps_C, eps_0 enter through their consumers'
-rows):
+Per-candidate pointers (every k- or x-dependent constant
+appearing in a candidate's BOUND appears in at least one row; the
+x-free lock choices A', A'', kappa, delta, eps_C, eps_0 and
+C1(n1)'s fixed profile margin enter through their consumers' rows;
+the free SPECIFICATION parameters m(x) (A3(m)) and mu(x) (C1'')
+are consumer-declared inputs without independent rows -- their
+budget effect enters through the B1 floor/T7 reserve and the C1''
+rank display respectively [R2 repair, MAJOR-9]):
 
   A1: T5(a) mass-floor vacuity (C = 12 vs C = 1); T5(b) small-span
       extension-sum reserve ratio (closes only near 1e1000 at
@@ -663,6 +752,57 @@ side by side (T1; a comparison of the exact value with the
 adjudication's asymptotic display, not a re-derivation claim);
 theta(A') and the F17.5 deficit exponent 0.290 reproduced (T2); the
 F17.5 Euler product recomputed to 4.601923 (T3).
+
+### 5a. Decisive rows (verbatim from budget_sheet_tables.txt;
+### steering re-executed byte-identically, ANN-53) [R2 repair,
+### MAJOR-9: self-containedness for review]
+
+T4 witnesses:
+Audit witnesses (admissible, all-even, inside the D0 window at
+the named grid depth; truncated exact-factor product, p < 1e6):
+depth    span     rho       (ln x)-expo   v1-draft cap (FALSE)
+1e8        222     82.24      1.514           9.80
+1e20       388    221.66      1.410          11.90
+1e1000   30072   1060.34      0.900          17.60
+(CE at 1e20 depths: rho = 221.66 = 4.8 ln x -- (G1) fails
+ outright on the unconstrained pointwise range.)
+
+
+T5(a) vacuity crossings:
+    -> nonvacuity crossings (v = 1), decl-indexed: C = 12 at x ~ 1e371; C = 1 at x ~ 1e45.
+
+T5(b) w2 ratio rows (exchange-span vs small-span):
+x        exch-span ratio ~ 8 A' L    small-span ratio (C2=1)
+1e8              100.9                     20.03
+1e20             132.6                     12.67
+1e100            188.3                      4.50
+1e1000           268.1                      0.79
+    -> exchange-span transfer FAILS by Theta(L) even at perfect
+       HL constants; small-span transfer closes for x >~ 1e1000
+       at C2 = 1 (in-repo C2 is larger: finite-scale vacuity).
+
+T6(b) c* window:
+    subtraction threshold T* ~ ln x/eta.  HLQuantA card headroom:
+    4 lnln x - k = (4 - 2/ln2) lnln x.  Admissible iff
+    c/ln2 < 4 - 2/ln2, i.e.  c < c* = 4 ln 2 - 2 = 0.7726.
+x        headroom(=4lnlnx-k)   J_0 at c=0.5   J_0 at c=0.7726  J_0 at c=1
+1e8               2.25           2.10           3.25           4.20
+1e20              3.27           2.76           4.27           5.53
+1e100             5.06           3.92           6.06           7.85
+1e1000            7.63           5.58           8.63          11.17
+    -> C1-via-frozen-HLQuantA admissibility window:
+       family density (ln x)^-c with c < 4 ln 2 - 2 = 0.7726;
+       the A-side thinning tau(A') >= 2/ln2 = 2.885 > c* --
+       a thinned single class NEVER fits; only polylog-dense
+       families (small c) do.  [New datum this item.]
+
+T7 exclusion reserve:
+== T7. Consumption sheet (T5 slack sink; D4) ==
+Exclusion reserve ln x / C_F after the B-layer constant:
+x         C_F=O(1)   C_F=(lnx)^0.405   C_F=(lnx)^2
+1e8      (lnx)^1.00    (lnx)^0.59       NEGATIVE: dead
+1e20     (lnx)^1.00    (lnx)^0.59       NEGATIVE: dead
+1e100    (lnx)^1.00    (lnx)^0.59       NEGATIVE: dead
 
 ## 6. Reuse audit -- candidates onto the machine-checked Counting
 ## layer (decl names per ANN-2f; frozen blocks read-only)
@@ -740,11 +880,13 @@ half; both quantified in budget T5(b)):
 CONSEQUENCE (F18.1): the kickoff's reuse-audit question "is A1
 derivable from consCount_lower_bound-style machinery?" has a SPLIT
 answer: YES verbatim at small span (A-layer becomes consumed
-machinery there; the unconditional burden moves to B + C exactly as
-the kickoff's desired-outcome clause anticipates), NO at
-exchange-typical span (walls w1/w2, both now quantified) -- and the
+machinery there; the unconditional burden moves to B + C exactly
+as the kickoff's desired-outcome clause anticipates), NO at
+exchange-typical span (wall w1 proved; wall w2 heuristic-predicted
+under U18.2 [R2 repair, MAJOR-6]; both tabulated) -- and the
 small-span route re-concentrates the entire unconditional burden
-onto the C-layer at thin density, where F18.2 closes the window.
+onto the C-layer at thin density, where F18.2 closes the RECORDED
+ROUTE's window [R2 repair, MAJOR-5].
 The desired outcome is therefore booked as a reduction WITH ITS
 PRICE TAG, not as a free consumption.
 
@@ -939,8 +1081,9 @@ it); (iv) delta/eps arithmetic stays in Q until the final cast.
 
 PRIORITY-ORDERED CANDIDATE TRIPLE (consumer-fit ordering with the
 F17.1-style gloss: ">" is fit for the landed consumer chain, NOT
-logical strength -- B1 is logically the strongest B-layer statement
-and is ranked last):
+logical strength -- B1 gives the strongest POINTWISE conclusion on
+its restricted domain but is not logically comparable with the
+averaged forms [R2 repair, MINOR-2], and is ranked last):
   A-layer:  A3 (with A2 as its proved denominator layer)
             > A1 (small-span, HLQuantA-conditional; consumed
               machinery per word, but its two-word instantiation is
@@ -1002,7 +1145,8 @@ o(ln x), by a global pair-counting / AR-side device (7.5) that never
 instantiates a per-word sieve constant; dossier grade; Lean not
 required. Fallback shape: B3 with the coupled gate of 7.4(s3).
 TRANSFER TARGET for item-0021 (audit-re-scoped): C1 in its
-AGGREGATE form on polylog-dense families -- the c* = 4 ln 2 - 2
+AGGREGATE form (ex-ante family rule per the repaired C1 definition
+[R2 MAJOR-4]) on polylog-dense families -- the c* = 4 ln 2 - 2
 necessity budget PLUS the two named closure inputs: (n1) the
 middle/near-word profile cap and (n2) the true-vs-model mass
 comparability (F18.2) -- with the F17.8 ledger of C2 as the item's
@@ -1171,16 +1315,49 @@ verdict-table diff against the body's support classes (rule-16(a)
 analogue) was re-run after the repairs. Full disposition detail in
 the run report (0018-report-M1.md, Observations).
 
+## 9b. R2 adjudication record (EXECUTED)
+
+Blind cross-family adversarial scope audit (payload S1-S9) against
+the four-redaction object: verdict SOUND WITH REPAIRABLE ISSUES,
+confidence 0.94, ZERO FATAL, 9 MAJOR / 5 MINOR / 7 NOTE. All
+FATAL/MAJOR-class dispositions steering-re-executed before repair
+(payloads/item-0018-adjudication-v1.md). Sustained and repaired in
+place with [R2 repair] marks: MAJOR-1/2 (B2/B3 closed eps- and
+fixed-rate forms), MAJOR-3 (A1-typ written as one exact candidate),
+MAJOR-4 (C1 ex-ante cap-blind family rule, threshold-explicit),
+MAJOR-5 (route/heuristic scoping of the thin-class closure
+language, three sites), MAJOR-6 (w2's heuristic half qualified in
+F18.1 and the Section 6 consequence), MAJOR-7 (U18.6/A3 "derivable"
+downgraded to plausibly-derivable with the four missing steps
+named), MAJOR-8 (C1'' side-class density claim scoped to
+independently-known density), MAJOR-9 (Section 5 pointer narrowed;
+Section 5a decisive rows embedded; the k = 24 middle computation
+displayed with data and adjudication-re-executed), MINOR-1..5
+(F18.5 domain qualifier; D5 comparability gloss; single threshold
+dictionary; RS.3 positivity domain; B1' existential constant).
+Reviewer-confirmed UNCHANGED: the D5 selection, the 7.1 Props, the
+7.2 pigeonhole, the 7.3 instantiation (NOTE-2/3/4); both PROVED
+tags sustained (NOTE-1); the 9a rho retraction independently
+re-derived (NOTE-7). New adjudication observation: doubly-
+extendable in-budget side pairs EXIST at k = 24 at degenerate
+aspect (U18.7 note). Process observation B6: third recurrence of
+the verdict-promotion pattern (item-0005 P1, item-0017 FATAL-1,
+here MAJOR-5/6) -- the same-family rule-16(a) passes (in-run and
+steering) missed it, the cross-family audit caught it.
+
 ## 10. Findings register (F18.n)
 
 F18.1 (reuse audit, Section 6): SPLIT answer to the kickoff's A1
       question. consCount_lower_bound consumes the A-layer VERBATIM
       at small span (span <= kappa (k-1) ln(k+1)); at
-      exchange-typical span the transfer is blocked by walls w1
-      (necessary span hypothesis of oneExtension_sum_le) and w2
-      (the Theta(L)-oversized extension term against the ln x/8
-      reserve, sieve-constant-independent) -- both quantified in
-      budget T5(b). The small-span consumption re-concentrates the
+      exchange-typical span the transfer is blocked by wall w1
+      (the PROVED, necessary span hypothesis of
+      oneExtension_sum_le) and, under the U18.2 growing-k mean
+      heuristic, by wall w2 (the predicted Theta(L)-oversized
+      extension term against the ln x/8 reserve,
+      sieve-constant-independent) -- both tabulated in budget
+      T5(b) [R2 repair, MAJOR-6: w2's lower-bound half is
+      U18.2-class per the Section 6 scope tag]. The small-span consumption re-concentrates the
       unconditional burden on the C-layer at thin density.
 F18.2 (C-layer window; budget T6(b); audit-re-scoped): within the
       frozen HLQuantA card budget, the truncated-tail C1 transfer
@@ -1190,10 +1367,12 @@ F18.2 (C-layer window; budget T6(b); audit-re-scoped): within the
       profile cap and (n2) true-vs-model mass comparability (C1's
       reduction record), and reaches the AGGREGATE retention form
       only (per-class C1'' is unreachable at exchange rank by this
-      route). The A-side thinning tau(A') = 2A'/ln 2 >= 2.885
-      exceeds c* for every admissible A', so no single thinned
-      class ever fits: C-layer viability is a family property.
-      Quantitative form of V4(iii) for this statement set.
+      route). Under the U18.1 thinning heuristic the A-side thinning
+      tau(A') = 2A'/ln 2 >= 2.885 exceeds c* for every admissible
+      A', so no single thinned typical-span class fits THIS
+      ROUTE's window [R2 repair, MAJOR-5]: for the recorded route,
+      C-layer viability is a family property. Quantitative form of
+      V4(iii) for this statement set.
 F18.3 (B-layer hygiene): the family-averaged selection form
       B2.plain smuggles abundance (average multiplicity >=
       ln x/C_F) inside an upper-bound shape; the reduced form with
@@ -1212,12 +1391,15 @@ F18.4 (F17.9 locus sharpened; audit-scoped): the o(ln x) statement
       F17.9's "structurally different exclusion device" mandate
       remains a constraint on proof routes, not on the existence
       of gate-passing statements.
-F18.5 (pointwise falsity window): the pointwise relative extension
-      bound WITHOUT a multiplicity floor is false wherever
-      singleton/small classes exist (sum_d N_{P,d} = N_P forces
-      concentration at integer granularity); the honest pointwise
-      form carries N_P >= (ln x)^{1+eps_0} (and, post-audit, the
-      (b1-rho) cap). Corpus support for inaccessibility
+F18.5 (pointwise falsity window): WITHOUT a multiplicity floor,
+      the rho-CAPPED pointwise form is false whenever a small
+      class has a realized middle inside the rho <= R(x) domain,
+      and the uncapped constant-o(ln x) form is false for every
+      sufficiently small realized class [R2 repair, MINOR-1:
+      domain-qualified] (sum_d N_{P,d} = N_P forces concentration
+      at integer granularity); the honest pointwise form carries
+      N_P >= (ln x)^{1+eps_0} (and, post-audit, the (b1-rho)
+      cap). Corpus support for inaccessibility
       (audit-corrected statistic): no class-size census exists in
       the corpus; the 7.1 aggregates imply rms multiplicity ~ 2
       among collision classes at 1e8, far below the floor --
@@ -1252,13 +1434,16 @@ U18.5 Sections 7.6's Lean-shape sketches are statement-pattern
       forecasts; M2 may discover encoding frictions (the hazards
       register 7.6(i)-(iv)); any Prop-shape change at M2 must
       round-trip through a D5 amendment, not be absorbed silently.
-U18.6 The Model-M analogue of A3 at delta = 1 - o(1): derivable
-      from the Theorem M1 toolkit (mean site degree N_S q_2^{J+K}
-      = x^{1-o(1)}; per-site lower-tail Chernoff with the M1(e)
-      residue-class dilution) but NOT stated in M1, whose recorded
-      clauses certify only a (ln x)^{-2+o(1)} twinned-site
-      fraction. Write-out debt (audit finding, 4x convergent);
-      until discharged, A3 carries no PROVED model tag.
+U18.6 The Model-M analogue of A3 at delta = 1 - o(1): PLAUSIBLY
+      derivable from the Theorem M1 toolkit only after (1) a
+      uniform lower bound on the per-word match probability, (2) a
+      post-dilution lower-tail argument, (3) the Par -> Par'
+      filter adaptation, (4) the degree-to-Fam_2-mass conversion
+      -- none written in the corpus [R2 repair, MAJOR-7]; NOT
+      stated in M1, whose recorded clauses certify only a
+      (ln x)^{-2+o(1)} twinned-site fraction. Write-out debt
+      (audit finding, 4x convergent; R2-sustained scope); until
+      discharged, A3 carries no PROVED model tag.
 U18.7 Doubly-extendable in-budget side pairs: existence, at every
       working rank, of an even side pair with >= 2 admissible
       middles inside the (h2) span budget. OPEN; the consecutive-
@@ -1267,4 +1452,11 @@ U18.7 Doubly-extendable in-budget side pairs: existence, at every
       the count is nonincreasing in k. Gates A1's two-word route
       (consumer-fit note); candidate engineering target for a
       successor run (blocks with >= 2 uncovered shift classes mod
-      every small prime).
+      every small prime). [Adjudication note, steering-re-executed
+      2026-07-19: at k = 24, kappa = 2, the near-degenerate splits
+      J in {1, 19, 20, 21} of the SAME prime run 29..137 admit 2-4
+      in-budget middles (balanced splits: exactly 1) -- existence
+      of doubly-extendable pairs at k = 24 is thereby WITNESSED at
+      degenerate aspect; uniform existence at balanced aspect and
+      growing rank remains OPEN, and few-point suffix blocks being
+      weakly shift-constrained is the concrete lead for FU2.]
