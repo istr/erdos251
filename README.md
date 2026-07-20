@@ -1,8 +1,23 @@
 # erdos251
 
-Attempt on Erdős Problem #251: is S = sum_{n>=1} p_n / 2^n irrational?
-(p_n = n-th prime; decimal expansion OEIS A098990; statement formalized in
-google-deepmind/formal-conjectures.)
+## The problem
+
+Let $`p_n`$ denote the $`n`$-th prime. Erdős Problem 251 asks whether
+
+$$
+S=\sum_{n\ge 1}\frac{p_n}{2^n}
+$$
+
+is irrational. The series converges absolutely, but that elementary fact does not decide its arithmetic nature. The original problem remains open.
+
+**Nothing in this project is an unconditional proof of the irrationality of $`S`$.**
+
+Please read the [status page](writeup/status.md) for a human-readable description of the mathematical findings and process of this project.
+
+The project studies the problem through consecutive prime gaps. Write $`g_n=p_{n+1}-p_n`$. Summation and tail identities turn a hypothetical rational representation of $`S`$ into strong lattice restrictions on weighted tails of the gap sequence. The main strategy is then to find two long prime-gap words with matching flanks but different middle behavior. Such a configuration conflicts with those lattice restrictions once its end tails are sufficiently small.
+
+The decimal expansion of $`S`$ is OEIS A098990.
+The statement is formalized in google-deepmind/formal-conjectures.
 
 This repo is the single source of truth for a human-plus-frontier-model
 research pilot. Conversations are ephemeral scratch; durable state lives here.

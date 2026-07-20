@@ -10,7 +10,9 @@ $$
 S=\sum_{n\ge 1}\frac{p_n}{2^n}
 $$
 
-is irrational. The series converges absolutely, but that elementary fact does not decide its arithmetic nature. The original problem remains open. Nothing in this project is an unconditional proof of the irrationality of $`S`$.
+is irrational. The series converges absolutely, but that elementary fact does not decide its arithmetic nature. The original problem remains open.
+
+**Nothing in this project is an unconditional proof of the irrationality of $`S`$.**
 
 The project studies the problem through consecutive prime gaps. Write $`g_n=p_{n+1}-p_n`$. Summation and tail identities turn a hypothetical rational representation of $`S`$ into strong lattice restrictions on weighted tails of the gap sequence. The main strategy is then to find two long prime-gap words with matching flanks but different middle behavior. Such a configuration conflicts with those lattice restrictions once its end tails are sufficiently small.
 
