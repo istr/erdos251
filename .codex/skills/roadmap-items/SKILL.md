@@ -7,7 +7,7 @@ description: >-
   roadmap when its commands apply.
 ---
 
-# roadmap-items (Claude adapter)
+# roadmap-items (Codex adapter)
 
 This is a discovery adapter only. Before acting, read and follow the shared
 workflow at `.agents/skills/roadmap-items/SKILL.md` in full. Its script,

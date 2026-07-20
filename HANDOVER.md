@@ -12,7 +12,7 @@ round-2 unconditional-front verdict; adjudication at
 payloads/item-0005-adjudication-v1.md). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
 then triage-1b.md end (methodology register: blind spots 1-5, checklist
 rules i-iv) and triage-1a.md. 5. runs/README.md rules 1-11.
-6. roadmap: python3 /mnt/skills/user/roadmap-items/scripts/roadmap.py
+6. roadmap: python3 .agents/skills/roadmap-items/scripts/roadmap.py
 list --arc research. 7. lean/README.md (layout map; inventory 1 --
 its later sections carry a STALE banner, HANDOVER is the record).
 
