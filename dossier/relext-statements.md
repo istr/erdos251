@@ -1,4 +1,4 @@
-# Relative extension statement layer -- item-0018 M1 (v1.1; post-R2)
+# Relative extension statement layer -- item-0018 M1 (v1.2; post-item-0020 status erratum)
 
 Date: 2026-07-19. Author: item-0018 runner (steering lineage, Claude
 Fable 5, model string claude-fable-5), against kickoff v1 (operator-
@@ -53,6 +53,19 @@ place with [R2 repair] marks; dispositions in
 payloads/item-0018-adjudication-v1.md and Section 9b. The D5
 selection, the 7.1 Props, and the 7.2/7.3 design are UNCHANGED
 (reviewer-confirmed, NOTE-2/3/4).
+
+## Post-item-0020 status erratum
+
+Item-0020 proves MatchedFlankLower, candidate A3, at the D0-pinned
+parameter map. The displayed A3 quantifier order is preserved: one
+may take delta = 1/2, and in fact every fixed delta < 1 holds
+eventually. This result is asymptotic only and makes no finite-scale
+claim. TailIntersection was already proved, so the dossier-grade
+supply triple now lacks only RelExtensionUpper. B2.pairs is an
+item-0020 sufficient condition for RelExtensionUpper, not a change to
+the frozen 7.1 Prop shape. Sources: dossier/item-0020-workpapers/
+proofs.md, Claim C1; dossier/relext-upper.md, Section 1 items 2, 3,
+and 5.
 
 ## 0. Mission, target shapes, shape register
 
@@ -415,7 +428,13 @@ closes per s at eps = delta(s)/4); the s-uniform placement is
 strictly stronger and is adopted for the single s-free 7.4 gate
 constant and the m1 measurement target, not by necessity.
 Constant dependence: delta absolute. Normalization: none.
-STATUS: OPEN for the primes. Support (audit-corrected provenance):
+STATUS UPDATE (item-0020; dossier grade; D0-pinned map): PROVED.
+Claim C1 of dossier/item-0020-workpapers/proofs.md proves the
+displayed statement with delta = 1/2 in the same quantifier order;
+indeed every fixed delta < 1 holds eventually. This is asymptotic
+only. The historical route discussion below is retained as the
+pre-item-0020 evidence and route-hardness record.
+Historical pre-item-0020 support (audit-corrected provenance):
 the Model M analogue at delta = 1 - o(1) is PLAUSIBLY DERIVABLE
 from the Theorem M1 toolkit but only after four steps NOT written
 in the corpus [R2 repair, MAJOR-7]: (1) a uniform LOWER bound on

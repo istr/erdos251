@@ -2200,3 +2200,29 @@ annotations:
       item-0018 report F1 (selection-restriction choice) plus
       this item's F1. OPEN OPERATOR: rule-16 strengthening (B6);
       BET-07 to 2026-08-08; BET-08 to 2026-09-30.
+  - id: ANN-20260720-57
+    refs: [ANN-20260719-55, ANN-20260719-56, BET-20260718-08]
+    date: 2026-07-20
+    note: >-
+      ITEM-0020 CLOSED. Content commit
+      be210b6ceaaf53673da670f259f107649568197b. Review gate closed:
+      R1-light independent budget rerun PASS; exact T4 counterexample
+      check PASS; final rule-16(a) verdict/body pass PASS; blind R2
+      not run, optional by operator decision. Overall verdict remains
+      (S-): the original problem and RelExtensionUpper are not solved.
+      NEW PROVED: A3 / MatchedFlankLower, delta = 1/2, with the same
+      s-uniform displayed quantifier order, asymptotically only; every
+      fixed delta < 1 holds eventually. The supply triple now hangs on
+      RelExtensionUpper alone. NEW REDUCTION: B2.pairs implies
+      unrestricted RelExtensionUpper with eps_REU = sqrt(eps_pair);
+      eps_pair = 1/64 is sufficient for the current pigeonhole.
+      B2.pairs remains OPEN. The old M1.a condition W2 = o(|S'|) is
+      false at the D0 depths. The identity/capacity/PNT layer alone
+      cannot prove the target; a future proof needs a middle-slot
+      distributional input absent from the deterministic barrier model.
+      Finite-scale measurements are direction-only and remain well
+      above the 1/64 consumption point. BET-20260718-08 remains open,
+      with probability and resolve_by unchanged. Roadmap consequences:
+      item-0020 moved to done; item-0021 removed from execution order
+      pending re-scope; item-0021 is not done and its acceptance is not
+      claimed.

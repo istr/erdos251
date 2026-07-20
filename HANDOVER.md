@@ -1,20 +1,41 @@
-# HANDOVER -- erdos251 (round 2 in motion, 2026-07-18; round 1 closed and scored 2026-07-15)
+# HANDOVER -- erdos251 (post-item-0020 frontier, 2026-07-20; round 1 closed and scored 2026-07-15)
 
 Mission: public experiment attacking Erdos #251 (irrationality of
 S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..56; bets: 6 scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..57; bets: 6 scored,
 2 open -- BET-07 to 2026-08-08, BET-08 to 2026-09-30). 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
 payloads/item-0005-adjudication-v1.md). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
 then triage-1b.md end (methodology register: blind spots 1-5, checklist
-rules i-iv) and triage-1a.md. 5. runs/README.md rules 1-11.
-6. roadmap: python3 .agents/skills/roadmap-items/scripts/roadmap.py
-list --arc research. 7. lean/README.md (layout map; inventory 1 --
+rules i-iv) and triage-1a.md. 5. dossier/relext-upper.md, then
+dossier/item-0020-workpapers/item-0020-final-report.md. 6. runs/README.md
+rules 1-18.
+7. roadmap: python3 .agents/skills/roadmap-items/scripts/roadmap.py
+list --arc research. 8. lean/README.md (layout map; inventory 1 --
 its later sections carry a STALE banner, HANDOVER is the record).
+
+## Current frontier after item-0020
+
+- The reviewed conditional theorem remains the round-1 result, and
+  the deterministic implication and supply integrator are
+  machine-checked.
+- Item-0019 supplied the current empirical calibration. Item-0020
+  proved A3 / MatchedFlankLower asymptotically at D0; TailIntersection
+  was already available. Only RelExtensionUpper remains as a supplier.
+- B2.pairs is the surviving explicit sufficient target for
+  RelExtensionUpper and remains OPEN. M1.a is refuted, and the T-only
+  identity-layer routes are blocked. No unconditional solution is
+  claimed; finite-scale measurements do not close the 1/64 gate.
+- The R1-light budget rerun and exact T4 check are closed. BET-08
+  remains open and unchanged.
+- Item-0022 remains first in the existing execution order.
+  Item-0021 must not execute unchanged: it is unscheduled pending an
+  operator-ratified re-scope or retirement decision. Creating a
+  dedicated B2.pairs successor is outside this housekeeping update.
 
 ## Round-1 record (closed, scored)
 - Result: chain-v1 v1.3 -- conditional theorem "Hypothesis A (uniform
@@ -44,7 +65,7 @@ its later sections carry a STALE banner, HANDOVER is the record).
   confirmed a second time on the review side; five blind-spot
   register entries with checklist rules (i)-(iv).
 
-## Current state (round-2 opening position)
+## Historical current state (round-2 opening position)
 - item-0014 statement skeleton LANDED (main 5144918): Counting.lean
   with real definitions (deletion construction, 0-based handoff via
   prefix sums, kappa-parametrized interfaces) and 12 intentional
