@@ -38,12 +38,12 @@ The formal development therefore verifies the logic of the implication and much 
 
 <!-- sources: item0020-verdict, claim-c1, relext-props -->
 
-The current unconditional progress concerns filtered prime sites. Fix a scale $x$ and a threshold $s$. A filtered site belongs to $S_x^{\prime(s)}$ when its index is beyond $s$, its length-$L$ gap window obeys the pinned aggregate cap, and two weighted gap tails obey the pinned near and far caps. The word is split into a prefix of length $J$, one middle gap, and a suffix of length $K$. A side pair $P=(a,c)$ records the prefix and suffix. Its class size $N_P$ is the number of filtered sites with those same flanks. The family $\operatorname{Fam}_2(S_x^{\prime(s)})$ consists of side-pair classes with at least two members.
+The current unconditional progress concerns filtered prime sites. Fix a scale $x$ and a threshold $s$. A filtered site belongs to $S_x^{\prime(s)}$ when its index is beyond $s$, its gap window of length $L$ obeys the pinned aggregate cap, and two weighted gap tails obey the pinned near and far caps. The word is split into a prefix of length $J$, one middle gap, and a suffix of length $K$. A side pair $P=(a,c)$ records the prefix and suffix. Its class size $N_P$ is the number of filtered sites with those same flanks. The family $\mathrm{Fam}_2(S_x^{\prime(s)})$ consists of side-pair classes with at least two members.
 
 At the pinned parameter map, the following statement is proved asymptotically:
 
 $$
-\sum_{P\in\operatorname{Fam}_2(S_x^{\prime(s)})}N_P
+\sum_{P\in\mathrm{Fam}_2(S_x^{\prime(s)})}N_P
 \ge \frac12\lvert S_x^{\prime(s)}\rvert.
 $$
 
@@ -61,7 +61,7 @@ For a realized side-pair class $P$, let $N_{P,d}$ be the number of its members w
 
 $$
 Q(x,s)=
-\sum_{P\in\operatorname{Fam}(S_x^{\prime(s)})}
+\sum_{P\in\mathrm{Fam}(S_x^{\prime(s)})}
 \frac{1}{N_P}
 \sum_{\substack{d\ge2\\2\mid d}}
 N_{P,d}\bigl(N_{P,d}-1\bigr).

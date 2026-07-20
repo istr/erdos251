@@ -23,7 +23,7 @@ $$
 \end{aligned}
 $$
 
-where $J=K=\lceil\log_2 D\rceil$, $D$ is a fixed constant multiple of $\log x$, and the middle width is one. The set $S_x^{\prime(s)}$ contains the prime sites beyond $s$ that satisfy an aggregate length-$L$ window bound and both the near and far weighted-tail caps. These filters are part of the set definition; they are not imposed after counting.
+where $J=K=\lceil\log_2 D\rceil$, $D$ is a fixed constant multiple of $\log x$, and the middle width is one. The set $S_x^{\prime(s)}$ contains the prime sites beyond $s$ that satisfy an aggregate window bound of length $L$ and both the near and far weighted-tail caps. These filters are part of the set definition; they are not imposed after counting.
 
 A side pair is $P=(a,c)$, consisting of the prefix and suffix gap words. For a finite filtered set, define
 
@@ -41,7 +41,7 @@ N_{P,d}=\#\{n\in S_x^{\prime(s)}:
 \end{aligned}
 $$
 
-The realized family $\operatorname{Fam}(S_x^{\prime(s)})$ consists of the classes with $N_P\ge1$; its subfamily $\operatorname{Fam}_2(S_x^{\prime(s)})$ consists of those with $N_P\ge2$. Exact partition identities give $\sum_dN_{P,d}=N_P$ and $\sum_PN_P=\lvert S_x^{\prime(s)}\rvert$.
+The realized family $\mathrm{Fam}(S_x^{\prime(s)})$ consists of the classes with $N_P\ge1$; its subfamily $\mathrm{Fam}_2(S_x^{\prime(s)})$ consists of those with $N_P\ge2$. Exact partition identities give $\sum_dN_{P,d}=N_P$ and $\sum_PN_P=\lvert S_x^{\prime(s)}\rvert$.
 
 ## The conditional irrationality theorem
 
@@ -89,7 +89,7 @@ At the pinned parameter map, for one fixed $\delta=1/2$, every $s$ has a thresho
 
 $$
 \begin{aligned}
-\sum_{P\in\operatorname{Fam}_2(S_x^{\prime(s)})}N_P
+\sum_{P\in\mathrm{Fam}_2(S_x^{\prime(s)})}N_P
 &\ge
 \frac12\lvert S_x^{\prime(s)}\rvert.
 \end{aligned}
@@ -121,7 +121,7 @@ $$
 \begin{aligned}
 Q(x,s)
 &=
-\sum_{P\in\operatorname{Fam}(S_x^{\prime(s)})}
+\sum_{P\in\mathrm{Fam}(S_x^{\prime(s)})}
 \frac{1}{N_P}
 \sum_{\substack{d\ge2\\2\mid d}}
 N_{P,d}\bigl(N_{P,d}-1\bigr)\\
@@ -215,7 +215,7 @@ A second route is a word-grain upper mean-value theorem strong enough to control
 
 A conditional fallback would separate a small exceptional family of strongly aligned classes and prove the middle law on the complement. Such a route owes both a quantitative bound on the aligned mass and a cap-blind definition of the exceptional family. Measurements can test these decompositions and calibrate $Q(x,s)$, but an asymptotic proof needs new uniform prime input.
 
-Any proposed estimate must also preserve the uniformity order. The pair target chooses $\varepsilon_{\mathrm{pair}}$ first, then one threshold in $x$ that works for every $s$. A statement proved only for each fixed $s$ with an $s$-dependent threshold would not match `B2.pairs` as currently consumed. Likewise, replacing $\operatorname{Fam}$ by $\operatorname{Fam}_2$ inside $Q$ would be harmless only after an explicit singleton argument; it should not be done silently even though singleton contributions vanish in the displayed numerator.
+Any proposed estimate must also preserve the uniformity order. The pair target chooses $\varepsilon_{\mathrm{pair}}$ first, then one threshold in $x$ that works for every $s$. A statement proved only for each fixed $s$ with an $s$-dependent threshold would not match `B2.pairs` as currently consumed. Likewise, replacing $\mathrm{Fam}$ by $\mathrm{Fam}_2$ inside $Q$ would be harmless only after an explicit singleton argument; it should not be done silently even though singleton contributions vanish in the displayed numerator.
 
 The alignment issue is quantitative rather than terminological. Singular-series heuristics predict roughly one inverse power of $\log x$ of relative room for the middle slot in bulk classes. For residue-aligned classes, the local quotient can grow nearly like a full power of $\log x$, erasing most of that margin. A proof must therefore average this inflation, show that the aligned mass is sufficiently small, or exploit cancellation unavailable to the present positive counting arguments. Merely bounding the largest local quotient cannot reach the target.
 

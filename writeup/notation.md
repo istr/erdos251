@@ -12,8 +12,8 @@ The table keeps established project notation unchanged. “Pinned” below means
 | $J,K,L$ | Prefix depth, suffix depth, and full word length, with $L=J+1+K$. | `dossier/relext-statements.md`, §1 | At the pinned map, $J=K=\lceil\log_2 D\rceil$. |
 | $S_x^{\prime(s)}$ | Filtered sites at scale $x$, beyond threshold $s$, satisfying the window and two tail caps. | `dossier/relext-statements.md`, §§1, 3 | Filters-first: caps are inside the counted set. |
 | $P=(a,c)$ | A matched pair of prefix and suffix gap words, called a side pair or flank pair. | `dossier/relext-statements.md`, §3 | Entries are positive even gaps on realized prime sites. |
-| $\operatorname{Fam}(S_x^{\prime(s)})$ | The realized family of side pairs with $N_P\ge1$. | `dossier/relext-statements.md`, §3 | Depends on the filtered site set. |
-| $\operatorname{Fam}_2(S_x^{\prime(s)})$ | The realized side pairs with $N_P\ge2$. | `dossier/relext-statements.md`, §3 | Counts multi-member classes, not classes with two distinct middles. |
+| $\mathrm{Fam}(S_x^{\prime(s)})$ | The realized family of side pairs with $N_P\ge1$. | `dossier/relext-statements.md`, §3 | Depends on the filtered site set. |
+| $\mathrm{Fam}_2(S_x^{\prime(s)})$ | The realized side pairs with $N_P\ge2$. | `dossier/relext-statements.md`, §3 | Counts multi-member classes, not classes with two distinct middles. |
 | $N_P$ | The number of filtered sites in side-pair class $P$. | `dossier/relext-statements.md`, §3 | $N_P\ge1$ on the realized family. |
 | $N_{P,d}$ | The number of members of class $P$ whose middle gap is $d$. | `dossier/relext-statements.md`, §3 | Realized middle gaps are even and at least $2$. |
 | $Q(x,s)$ | The class-normalized ordered within-middle pair sum used in `B2.pairs`. | `dossier/item-0020-workpapers/proofs.md`, Claim C3 | Singleton classes contribute zero. |
