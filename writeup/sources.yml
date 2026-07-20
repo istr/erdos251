@@ -11,7 +11,7 @@ symbols:
   gamma: \gamma
   pi: \pi
   ln: \ln
-  log: \log
+  log: \log{}
   exp: \exp
   infinity: \infty
 entries:

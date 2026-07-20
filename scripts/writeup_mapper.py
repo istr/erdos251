@@ -12,6 +12,8 @@ from pathlib import Path
 
 
 GENERATOR_VERSION = "0.1"
+INLINE_MATH_OPEN = "$`"
+INLINE_MATH_CLOSE = "`$"
 TRANSFERS = {"verbatim", "normalized", "synthesized"}
 FORMULA_POLICIES = {"none", "classify-only", "green-only"}
 ENTRY_FIELDS = {
@@ -31,7 +33,7 @@ DEFAULT_SYMBOLS = {
     "gamma": r"\gamma",
     "pi": r"\pi",
     "ln": r"\ln",
-    "log": r"\log",
+    "log": r"\log{}",
     "exp": r"\exp",
     "infinity": r"\infty",
 }
@@ -323,6 +325,94 @@ def _protected_line(line: str, in_fence: bool, in_comment: bool) -> bool:
     return False
 
 
+def _normalize_inline_dollar_spans(line: str) -> tuple[str, bool]:
+    """Wrap plain inline dollar math with GitHub's inner backticks."""
+    output: list[str] = []
+    index = 0
+    changed = False
+    while index < len(line):
+        if line.startswith(INLINE_MATH_OPEN, index):
+            end = line.find(INLINE_MATH_CLOSE, index + len(INLINE_MATH_OPEN))
+            if end < 0:
+                output.append(line[index:])
+                break
+            end += len(INLINE_MATH_CLOSE)
+            output.append(line[index:end])
+            index = end
+            continue
+        if line.startswith("$$", index):
+            output.append("$$")
+            index += 2
+            continue
+        if line[index] == "`":
+            run = 1
+            while index + run < len(line) and line[index + run] == "`":
+                run += 1
+            marker = "`" * run
+            end = line.find(marker, index + run)
+            if end < 0:
+                output.append(line[index:])
+                break
+            end += run
+            output.append(line[index:end])
+            index = end
+            continue
+        if line[index] == "$":
+            end = index + 1
+            while end < len(line):
+                if line[end] == "`":
+                    end = -1
+                    break
+                if (
+                    line[end] == "$"
+                    and (end + 1 == len(line) or line[end + 1] != "$")
+                ):
+                    break
+                end += 1
+            if end >= 0 and end < len(line) and line[end] == "$":
+                content = line[index + 1 : end]
+                output.extend((INLINE_MATH_OPEN, content, INLINE_MATH_CLOSE))
+                index = end + 1
+                changed = True
+                continue
+        output.append(line[index])
+        index += 1
+    return "".join(output), changed
+
+
+def _normalize_substack_row_breaks(line: str) -> tuple[str, bool]:
+    """Use KaTeX-compatible ``\\cr`` separators inside ``\\substack``."""
+    output: list[str] = []
+    position = 0
+    changed = False
+    opener = r"\substack{"
+    while True:
+        start = line.find(opener, position)
+        if start < 0:
+            output.append(line[position:])
+            break
+        output.append(line[position : start + len(opener)])
+        position = start + len(opener)
+        depth = 1
+        while position < len(line) and depth:
+            if line.startswith(r"\\", position):
+                output.append(r" \cr ")
+                position += 2
+                changed = True
+                continue
+            char = line[position]
+            output.append(char)
+            if char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+            position += 1
+        if depth:
+            output.append(line[position:])
+            break
+    return "".join(output), changed
+
+
 def _candidate_kind(line: str) -> str | None:
     stripped = line.strip()
     if not stripped or not re.search(r"<=|>=|!=|(?<![-])=(?!=)|->", stripped):
@@ -427,6 +517,20 @@ def normalize_formulas(
             in_fence = not in_fence
             output.append(line)
             continue
+        inline_protected = in_comment or frontmatter or "<!--" in line
+        if not inline_protected:
+            original_line = line
+            line, substack_changed = _normalize_substack_row_breaks(line)
+            line, inline_changed = _normalize_inline_dollar_spans(line)
+            if substack_changed or inline_changed:
+                conversions.append(
+                    {
+                        "line": number,
+                        "from": original_line.rstrip("\r\n"),
+                        "to": line.rstrip("\r\n"),
+                    }
+                )
+            stripped = line.strip()
         protected = _protected_line(line, in_fence, in_comment) or frontmatter
         if "<!--" in line and "-->" not in line:
             in_comment = True

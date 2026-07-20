@@ -140,11 +140,11 @@ class FormulaTests(unittest.TestCase):
         self.assertEqual(conversions, [])
 
     def test_13_tables_are_protected(self):
-        text = "| eps <= delta |\n| --- |\n"
+        text = "| eps <= delta | $rho$ |\n| --- | --- |\n"
         output, classes, conversions = self.normalize(text)
-        self.assertEqual(output, text)
+        self.assertEqual(output, "| eps <= delta | $`rho`$ |\n| --- | --- |\n")
         self.assertEqual(classes, [])
-        self.assertEqual(conversions, [])
+        self.assertEqual(len(conversions), 1)
 
     def test_14_inline_code_is_protected(self):
         text = "Use `eps <= delta` here.\n"
@@ -152,21 +152,55 @@ class FormulaTests(unittest.TestCase):
         self.assertEqual(output, text)
         self.assertEqual(classes, [])
         self.assertEqual(conversions, [])
+        mixed = "Math $eps <= delta$ and code `$rho$`.\n"
+        mixed_output, mixed_classes, mixed_conversions = self.normalize(mixed)
+        self.assertEqual(
+            mixed_output,
+            "Math $`eps <= delta`$ and code `$rho$`.\n",
+        )
+        self.assertEqual(mixed_classes, [])
+        self.assertEqual(len(mixed_conversions), 1)
 
-    def test_15_green_formula_is_converted(self):
+    def test_15_inline_math_uses_github_wrapper(self):
+        text = "Plain $eps <= delta$; wrapped $`rho`$; display $$x = y$$.\n"
+        output, classes, conversions = self.normalize(text)
+        self.assertEqual(
+            output,
+            "Plain $`eps <= delta`$; wrapped $`rho`$; display $$x = y$$.\n",
+        )
+        self.assertEqual(classes, [])
+        self.assertEqual(len(conversions), 1)
+
+    def test_16_substack_row_breaks_use_cr(self):
+        text = "$$\n\\sum_{\\substack{d\\ge2\\\\2\\mid d}}\n$$\n"
+        output, classes, conversions = self.normalize(text)
+        self.assertEqual(
+            output,
+            "$$\n\\sum_{\\substack{d\\ge2 \\cr 2\\mid d}}\n$$\n",
+        )
+        self.assertEqual(classes, [])
+        self.assertEqual(len(conversions), 1)
+
+    def test_17_green_formula_is_converted(self):
         output, classes, conversions = self.normalize("    eps <= delta -> infinity\n")
         self.assertEqual(output, "$$\n\\varepsilon \\le \\delta \\to \\infty\n$$\n")
         self.assertEqual(classes[0]["classification"], "green")
         self.assertEqual(len(conversions), 1)
 
-    def test_16_inverse_token_mismatch_blocks_conversion(self):
+    def test_18_log_symbol_uses_empty_group(self):
+        output, classes, conversions = self.normalize("    log <= delta\n")
+        self.assertEqual(output, "$$\n\\log{} \\le \\delta\n$$\n")
+        self.assertEqual(classes[0]["classification"], "green")
+        self.assertEqual(len(conversions), 1)
+
+    def test_19_inverse_token_mismatch_blocks_conversion(self):
         symbols = {"foo": r"\delta", "delta": r"\delta"}
         output, classes, conversions = self.normalize("    foo = delta\n", symbols)
         self.assertIn("mapper-review: yellow", output)
         self.assertEqual(classes[0]["classification"], "yellow")
         self.assertEqual(conversions, [])
 
-    def test_17_yellow_input_is_unchanged_and_marked(self):
+    def test_20_yellow_input_is_unchanged_and_marked(self):
         text = "    value = max(a, b)\n"
         output, classes, conversions = self.normalize(text)
         self.assertTrue(output.endswith(text))
@@ -180,7 +214,7 @@ class FormulaTests(unittest.TestCase):
         self.assertEqual(legacy_classes[0]["classification"], "yellow")
         self.assertEqual(legacy_conversions, [])
 
-    def test_18_red_pseudomathematics_is_unchanged_and_marked(self):
+    def test_21_red_pseudomathematics_is_unchanged_and_marked(self):
         text = "    sum over even d >= 2\n"
         output, classes, conversions = self.normalize(text)
         self.assertTrue(output.endswith(text))
