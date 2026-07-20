@@ -65,3 +65,6 @@ bbce2f583f0a1f158b7fc5f13ca120b5388be642c585bbbdac5e6be5c5558b0d  dossier/item-0
 58e16a603705ac85d519a510c4049d47e9e7a9ba4290f7b7905abef7da865e64  dossier/item-0020-workpapers/proofs.md
 776920d763e6e3c5d202288a3d93068c1749a7f8c57604b0bdf73a26ac8f6866  dossier/item-0020-workpapers/audit-record.md
 11e8c9329810574fa7f5eca3f060fe99280538e1eb7aaf7ece19a66ffb911f47  dossier/item-0020-workpapers/item-0020-final-report.md
+6a2c86f06946315f2abafb11b25c60bef9ca780921e4b0c1f55a144430c48145  https://arxiv.org/pdf/1412.5029v3
+8250cf8b46eb80238412570611fa0f6dca37ef8fc2f44458223e880ba05f8088  https://arxiv.org/pdf/1105.1451v1
+eb806d88da05c2848979a614027253bbf4e754a9c2a041b2f4ccef31216894dc  https://warwick.ac.uk/fac/sci/maths/people/staff/visser/large_gaps_between_primes.pdf
