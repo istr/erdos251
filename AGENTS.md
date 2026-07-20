@@ -16,6 +16,12 @@
 - The ratifying commit or merge is the handover from steering to execution.
 - Byte-exact execution contracts are ephemeral and pinned to one commit.
 
+## Discovery and planning
+- If you want to discover content from files ALWAYS read the full file.
+- DO NOT use windowing techniques (sed-windows, head, tail) for discovery.
+- You may use windowing techniques for targeted edits only during execution
+  and to prepare changes where discovery has exactly located the target.
+
 ## Evidence discipline
 
 - Preserve proved, conditional, measured, heuristic, and model-only classifications.
