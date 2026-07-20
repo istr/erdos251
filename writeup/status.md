@@ -26,6 +26,26 @@ Hypothesis A is a uniform two-sided prime-tuple estimate. In the exact form used
 
 Hypothesis B is the pointwise Cramér–Granville prime-gap bound: for some fixed $`C_g`$, all sufficiently late gaps satisfy $`g_n\le C_g(\log{} p_n)^2`$. This hypothesis is also open.
 
+The conditional argument is considerably more specific than an appeal to “prime randomness.” At each large scale $x$, it sets $K=\lceil\log_2(4C_g)+2\log_2\log x\rceil$, $J=\lceil4\log_2(K+20)\rceil$, and $L=J+2+K$. From the first $L+2$ primes $q_0<\cdots<q_{L+1}$ exceeding $L+3$, it forms two admissible point sets by deleting, respectively, the adjacent points $q_{J+2}$ and $q_{J+1}$. Their gap words $w,w'$ have the same first $J$ gaps and last $K$ gaps, while their two middle gaps change by $(-\gamma,+\gamma)$, where $\gamma=q_{J+2}-q_{J+1}$. Hypothesis A is not applied to a conjectural count of consecutive gap words: a proved one-point-extension and Bonferroni argument transfers its ordinary Hardy–Littlewood tuple counts to
+
+$$
+N_{\mathrm{cons}}(w;x)
+\ge \pi_{H(w)}(x)-\sum_t\pi_{H(w)\cup\{t\}}(x)-\pi_{H(w)}(\sqrt{x})
+\ge \frac14\,\mathfrak S(H(w))\frac{x}{(\log x)^{L+1}}
+\ge 1,
+$$
+
+and likewise for $w'$. Here $H(w)$ is the offset set of the word, and $t$ runs over its admissible interior even one-point extensions. Thus Hardy–Littlewood supplies actual consecutive realizations at indices $n,m$. Writing $\delta_r=\sum_{j\ge1}g_{r+j}2^{-j}$, Hypothesis B is used only to make their end tails small; the chosen value of $K$ and the exact fork decomposition give the second load-bearing line
+
+$$
+\delta_{n+L},\delta_{m+L}\le 2^K,
+\qquad
+\delta_{n+J}-\delta_{m+J}
+=\frac{\gamma}{4}+2^{-(K+2)}\bigl(\delta_{n+L}-\delta_{m+L}\bigr).
+$$
+
+If $S$ were rational with odd denominator part $b$, the common prefix would put $b(\delta_{n+J}-\delta_{m+J})$ in $2^{J+1}\mathbb Z$. Since $(\gamma+4)/2^J\to0$, this lattice element must vanish; the displayed fork identity would then force $|\delta_{n+L}-\delta_{m+L}|=\gamma2^K\ge2^{K+1}$, contradicting the strict bound $|\delta_{n+L}-\delta_{m+L}|<2^K$. The tuple-to-consecutive transfer, explicit fork construction, tail reduction, and lattice contradiction are the proved—and machine-checked where stated below—content beyond the two open analytic inputs.
+
 Assuming both hypotheses, the repository proves that $`S`$ is irrational. The conclusion is therefore proved modulo the two explicitly named assumptions. It would be incorrect either to call the assumptions established or to describe the original problem as solved. The result is also purely asymptotic; no effective threshold is claimed.
 
 ## What is machine-checked
