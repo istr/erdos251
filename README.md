@@ -16,6 +16,7 @@ research pilot. Conversations are ephemeral scratch; durable state lives here.
 - `lean/`              Lake project; vendored target statement; CI = lake build.
 - `ledger.yaml`        pre-registered bets and Brier scoring.
 - `roadmap/`           work items (roadmap-items store; one file per item).
+- `writeup/`           curated human-readable status and technical note.
 
 ## Ground rules
 
@@ -36,7 +37,8 @@ research pilot. Conversations are ephemeral scratch; durable state lives here.
 
 ## Status
 
-Skeleton materialized 2026-07-11. Lean project is UNVERIFIED (no toolchain in
-the authoring sandbox); first CI run validates. Roadmap items are `proposed`;
-the initial commit by the operator is the ratifying act for the skeleton, item
-statuses are advanced separately via the roadmap script.
+The original problem remains open. The repository contains a reviewed
+conditional irrationality theorem, a machine-checked deterministic implication
+layer, and unconditional partial progress reducing the current analytic
+bottleneck to `B2.pairs`. See [`writeup/status.md`](writeup/status.md) for the
+curated account and [`HANDOVER.md`](HANDOVER.md) for the operational state.

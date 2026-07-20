@@ -1,0 +1,121 @@
+# Restricted YAML grammar: spaces only; scalar top-level keys; a two-space
+# symbols map; and entries whose "- id" line has two spaces and remaining
+# scalar fields have four. No flow collections, anchors, tags, or multiline
+# scalars are accepted. See writeup/README.md for the full subset contract.
+version: 1
+source_commit: 6b8248462d90e58482ed91871e7713bdf8976bd5
+symbols:
+  eps: \varepsilon
+  delta: \delta
+  rho: \rho
+  gamma: \gamma
+  pi: \pi
+  ln: \ln
+  log: \log
+  exp: \exp
+  infinity: \infty
+entries:
+  - id: chain-main
+    source_path: dossier/chain-v1.md
+    source_blob: d76ab5f21143627a80c3b4be9eacb3037ff23f6d
+    source_heading: ## 1. Main statement
+    target_path: writeup/status.md
+    target_heading: ## The conditional result
+    transfer: synthesized
+    formula_policy: none
+  - id: chain-mechanism
+    source_path: dossier/chain-v1.md
+    source_blob: d76ab5f21143627a80c3b4be9eacb3037ff23f6d
+    source_heading: ## 3. Fork-merge and its contradiction
+    target_path: writeup/technical-note.md
+    target_heading: ## The deterministic contradiction mechanism
+    transfer: synthesized
+    formula_policy: none
+  - id: frontier-verdict
+    source_path: dossier/relext-upper.md
+    source_blob: 53b0bc2a91b27bb476490666084595be6652fe77
+    source_heading: ## 1. VERDICT (one page; support class per sentence)
+    target_path: writeup/status.md
+    target_heading: ## The remaining estimate
+    transfer: synthesized
+    formula_policy: none
+  - id: relext-definitions
+    source_path: dossier/relext-statements.md
+    source_blob: 59678d335980749554dc1b0ce2b970b351d461f9
+    source_heading: ## 3. Statement-layer definitions (RS.n; used verbatim by D1-D5)
+    target_path: writeup/technical-note.md
+    target_heading: ## Notation and filtered sites
+    transfer: synthesized
+    formula_policy: none
+  - id: relext-props
+    source_path: dossier/relext-statements.md
+    source_blob: 59678d335980749554dc1b0ce2b970b351d461f9
+    source_heading: ### 7.1 The three named Props (final names = kickoff working names;
+    target_path: writeup/technical-note.md
+    target_heading: ## Matched-flank classes
+    transfer: synthesized
+    formula_policy: none
+  - id: item0020-verdict
+    source_path: dossier/item-0020-workpapers/item-0020-final-report.md
+    source_blob: 02fcdc9f3864cb489da91989ef1ad2f08764c4d4
+    source_heading: ### W4 -- verdict object
+    target_path: writeup/status.md
+    target_heading: ## Unconditional progress
+    transfer: synthesized
+    formula_policy: none
+  - id: claim-c1
+    source_path: dossier/item-0020-workpapers/proofs.md
+    source_blob: 7d8871038b17a5e708f6e5802d583464c00502f9
+    source_heading: ## Claim C1 (A3.card): MatchedFlankLower holds at the D0 pin,
+    target_path: writeup/technical-note.md
+    target_heading: ## The proved matched-flank lower bound
+    transfer: synthesized
+    formula_policy: none
+  - id: claim-c3
+    source_path: dossier/item-0020-workpapers/proofs.md
+    source_blob: 7d8871038b17a5e708f6e5802d583464c00502f9
+    source_heading: ## Claim C3 (the reduction): B2.pairs implies RelExtensionUpper,
+    target_path: writeup/technical-note.md
+    target_heading: ## Reduction to `RelExtensionUpper`
+    transfer: synthesized
+    formula_policy: none
+  - id: claim-c4
+    source_path: dossier/item-0020-workpapers/proofs.md
+    source_blob: 7d8871038b17a5e708f6e5802d583464c00502f9
+    source_heading: ## Claim C4 (the barrier): the unconditional identity layer cannot
+    target_path: writeup/technical-note.md
+    target_heading: ## The identity-layer barrier
+    transfer: synthesized
+    formula_policy: none
+  - id: final-observations
+    source_path: dossier/item-0020-workpapers/item-0020-final-report.md
+    source_blob: 02fcdc9f3864cb489da91989ef1ad2f08764c4d4
+    source_heading: ### Observations (O-n)
+    target_path: writeup/status.md
+    target_heading: ## What is not claimed
+    transfer: synthesized
+    formula_policy: none
+  - id: literature-problem
+    source_path: dossier/literature.md
+    source_blob: 8d00aaed4b0e1f96a80f8c8fa8a107bf6835afd5
+    source_heading: ### Item 6 -- Erdos #251 Mapping + Seitenstatus
+    target_path: writeup/references.md
+    target_heading: ## External literature
+    transfer: synthesized
+    formula_policy: none
+  - id: literature-schlage
+    source_path: dossier/literature.md
+    source_blob: 8d00aaed4b0e1f96a80f8c8fa8a107bf6835afd5
+    source_heading: ### Item 2 -- ScPu11-Inhaltsansprueche
+    target_path: writeup/references.md
+    target_heading: ## External literature
+    transfer: synthesized
+    formula_policy: none
+  - id: lean-layout
+    source_path: lean/README.md
+    source_blob: efa4cafe85949e64e04599a2c2cf648141b25ab9
+    source_heading: ## Layout (sorry inventory: 1 -- the unconditional target, by design)
+    target_path: writeup/technical-note.md
+    target_heading: ## Verification and limitations
+    transfer: synthesized
+    formula_policy: none
