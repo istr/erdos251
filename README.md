@@ -10,9 +10,9 @@ $$
 
 is irrational. The series converges absolutely, but that elementary fact does not decide its arithmetic nature. The original problem remains open.
 
-**Nothing in this project is an unconditional proof of the irrationality of $`S`$.**
+**Nothing in this project is an unconditional proof of the irrationality of** $`S`$.
 
-Please read the [status page](writeup/status.md) for a human-readable description of the mathematical findings and process of this project.
+Please read the [status page](writeup/status.md) for a human-readable description of the mathematical findings and progress of this project.
 
 The project studies the problem through consecutive prime gaps. Write $`g_n=p_{n+1}-p_n`$. Summation and tail identities turn a hypothetical rational representation of $`S`$ into strong lattice restrictions on weighted tails of the gap sequence. The main strategy is then to find two long prime-gap words with matching flanks but different middle behavior. Such a configuration conflicts with those lattice restrictions once its end tails are sufficiently small.
 

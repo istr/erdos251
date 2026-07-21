@@ -53,11 +53,7 @@
 
 - J. B. Rosser and L. Schoenfeld, “Approximate formulas for some functions of prime numbers,” *Illinois Journal of Mathematics* 6 (1962), no. 1, 64–94, [DOI 10.1215/ijm/1255631807](https://doi.org/10.1215/ijm/1255631807). This is the verified source for explicit Mertens- and Chebyshev-type estimates.
 - F. Mertens, “Über einige asymptotische Gesetze der Zahlentheorie,” *Journal für die reine und angewandte Mathematik* 77 (1874), 289–338. This is the corrected source for Mertens product estimates; volume 78, pages 46–62 is a different paper.
-- G. H. Hardy and E. M. Wright, revised by D. R. Heath-Brown and J. H. Silverman, *An Introduction to the Theory of Numbers*, 6th ed., Oxford University Press, 2008, ISBN 978-0-19-921986-5. The edition data are verified, but the dossier does not verify the exact theorem number for $p_n\sim n\log n$.
-
-#### Unconfirmed pinpoint
-
-- The exact theorem number in Hardy–Wright, 6th ed., for $p_n\sim n\log n$ or the weaker bound $p_n=O(n\log n)$ remains unconfirmed; only the book and edition metadata were verified.
+- G. H. Hardy and E. M. Wright, revised by D. R. Heath-Brown and J. H. Silverman, *An Introduction to the Theory of Numbers*, 6th ed., Oxford University Press, 2008, ISBN 978-0-19-921986-5. Chapter I, p. 12, Theorem 8 states $p_n\sim n\log n$.
 
 ## Internal project sources
 

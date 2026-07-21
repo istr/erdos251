@@ -1,10 +1,8 @@
 # Status of Erdős Problem 251
 
-## The problem
+## 1. The problem and how we study it
 
-<!-- sources: chain-main, literature-problem -->
-
-Let $`p_n`$ denote the $`n`$-th prime. Erdős Problem 251 asks whether
+Let $p_n$ denote the $n$-th prime. Erdős Problem 251 asks whether
 
 $$
 S=\sum_{n\ge 1}\frac{p_n}{2^n}
@@ -12,122 +10,216 @@ $$
 
 is irrational. The series converges absolutely, but that elementary fact does not decide its arithmetic nature. The original problem remains open.
 
-**Nothing in this project is an unconditional proof of the irrationality of $`S`$.**
+**Nothing in this project is an unconditional proof of the irrationality of** $`S`$.
 
-The project studies the problem through consecutive prime gaps. Write $`g_n=p_{n+1}-p_n`$. Summation and tail identities turn a hypothetical rational representation of $`S`$ into strong lattice restrictions on weighted tails of the gap sequence. The main strategy is then to find two long prime-gap words with matching flanks but different middle behavior. Such a configuration conflicts with those lattice restrictions once its end tails are sufficiently small.
+The project studies the problem through consecutive prime gaps. Write $g_n=p_{n+1}-p_n$ and introduce weighted tails of the gap sequence. If $S$ were rational, those tails would eventually satisfy strong binary lattice constraints. The basic strategy is therefore to find two long prime-gap configurations that agree on long flanks but differ locally in the middle. If the corresponding tails are small enough, the local difference is incompatible with the lattice forced by rationality.
 
-## The conditional result
+This point of view separates the problem into two parts: a deterministic arithmetic contradiction, which can be checked once the right gap configuration exists, and an analytic supply problem, which asks whether the primes actually produce enough such configurations.
 
-<!-- sources: chain-main -->
+## 2. What we have achieved so far
 
-There is a reviewed conditional theorem. It assumes two open analytic hypotheses.
-
-Hypothesis A is a uniform two-sided prime-tuple estimate. In the exact form used here, it applies simultaneously to every admissible even-offset set whose cardinality is at most $`4\log{}\log{} x`$ and whose span is at most $`(\log{} x)^3`$. Its predicted Hardy–Littlewood mass is bounded above and below by fixed factors. This is a conjectural uniform statement, not a proved theorem.
-
-Hypothesis B is the pointwise Cramér–Granville prime-gap bound: for some fixed $`C_g`$, all sufficiently late gaps satisfy $`g_n\le C_g(\log{} p_n)^2`$. This hypothesis is also open.
-
-The conditional argument is considerably more specific than an appeal to “prime randomness.” At each large scale $x$, it sets $K=\lceil\log_2(4C_g)+2\log_2\log x\rceil$, $J=\lceil4\log_2(K+20)\rceil$, and $L=J+2+K$. From the first $L+2$ primes $q_0<\cdots<q_{L+1}$ exceeding $L+3$, it forms two admissible point sets by deleting, respectively, the adjacent points $q_{J+2}$ and $q_{J+1}$. Their gap words $w,w'$ have the same first $J$ gaps and last $K$ gaps, while their two middle gaps change by $(-\gamma,+\gamma)$, where $\gamma=q_{J+2}-q_{J+1}$. Hypothesis A is not applied to a conjectural count of consecutive gap words: a proved one-point-extension and Bonferroni argument transfers its ordinary Hardy–Littlewood tuple counts to
+The current unconditional program has isolated a one-gap exchange configuration as a sufficient local witness. Its supply has been decomposed into three statements:
 
 $$
-N_{\mathrm{cons}}(w;x)
-\ge \pi_{H(w)}(x)-\sum_t\pi_{H(w)\cup\{t\}}(x)-\pi_{H(w)}(\sqrt{x})
-\ge \frac14\,\mathfrak S(H(w))\frac{x}{(\log x)^{L+1}}
-\ge 1,
+\begin{aligned}
+&\text{MatchedFlankLower}
++\text{TailIntersection}
++\text{RelExtensionUpper}\\
+&\hspace{4em}\Longrightarrow
+\text{ExchangeSupply1}
+\Longrightarrow
+S\notin\mathbb Z[1/2].
+\end{aligned}
 $$
 
-and likewise for $w'$. Here $H(w)$ is the offset set of the word, and $t$ runs over its admissible interior even one-point extensions. Thus Hardy–Littlewood supplies actual consecutive realizations at indices $n,m$. Writing $\delta_r=\sum_{j\ge1}g_{r+j}2^{-j}$, Hypothesis B is used only to make their end tails small; the chosen value of $K$ and the exact fork decomposition give the second load-bearing line
+At the pinned parameter map, `MatchedFlankLower` and `TailIntersection` are proved. The implication from the three suppliers to `ExchangeSupply1` is machine-checked, as is the final deterministic implication
 
 $$
-\delta_{n+L},\delta_{m+L}\le 2^K,
-\qquad
-\delta_{n+J}-\delta_{m+J}
-=\frac{\gamma}{4}+2^{-(K+2)}\bigl(\delta_{n+L}-\delta_{m+L}\bigr).
+\text{ExchangeSupply1}
+\Longrightarrow
+S\notin\mathbb Z[1/2].
 $$
 
-If $S$ were rational with odd denominator part $b$, the common prefix would put $b(\delta_{n+J}-\delta_{m+J})$ in $2^{J+1}\mathbb Z$. Since $(\gamma+4)/2^J\to0$, this lattice element must vanish; the displayed fork identity would then force $|\delta_{n+L}-\delta_{m+L}|=\gamma2^K\ge2^{K+1}$, contradicting the strict bound $|\delta_{n+L}-\delta_{m+L}|<2^K$. The tuple-to-consecutive transfer, explicit fork construction, tail reduction, and lattice contradiction are the proved—and machine-checked where stated below—content beyond the two open analytic inputs.
+Thus only `RelExtensionUpper` remains open in this chain.
 
-Assuming both hypotheses, the repository proves that $`S`$ is irrational. The conclusion is therefore proved modulo the two explicitly named assumptions. It would be incorrect either to call the assumptions established or to describe the original problem as solved. The result is also purely asymptotic; no effective threshold is claimed.
-
-## What is machine-checked
-
-<!-- sources: chain-mechanism, lean-layout -->
-
-The deterministic implication layer has been checked in Lean. This includes the convergence and tail identities, the eventual lattice and parity consequences of rationality, the quantization step for repeated prefixes, the fork–merge contradiction, the conditional counting construction, and the final composition from Hypotheses A and B to irrationality. The checked theorem depends on the named hypotheses and ordinary classical axioms, not on an unconditional proof of those hypotheses.
-
-The formal development therefore verifies the logic of the implication and much of the combinatorial supply machinery. It does not formalize a solution of the original problem. The unconditional target remains intentionally open in the formal source tree. A separate checked integrator shows how three supply propositions—`MatchedFlankLower`, `RelExtensionUpper`, and `TailIntersection`—would produce the exchange configuration needed by a related deterministic argument. That integrator likewise does not prove its analytic suppliers.
-
-## Unconditional progress
-
-<!-- sources: item0020-verdict, claim-c1, relext-props -->
-
-The current unconditional progress concerns filtered prime sites. Fix a scale $`x`$ and a threshold $`s`$. A filtered site belongs to $`S_x^{\prime(s)}`$ when its index is beyond $`s`$, its gap window of length $`L`$ obeys the pinned aggregate cap, and two weighted gap tails obey the pinned near and far caps. The word is split into a prefix of length $`J`$, one middle gap, and a suffix of length $`K`$. A side pair $`P=(a,c)`$ records the prefix and suffix. Its class size $`N_P`$ is the number of filtered sites with those same flanks. The family $`\mathrm{Fam}_2(S_x^{\prime(s)})`$ consists of side-pair classes with at least two members.
-
-At the pinned parameter map, the following statement is proved asymptotically:
+That remaining supplier has itself been reduced to one explicit class-normalized pair estimate:
 
 $$
-\sum_{P\in\mathrm{Fam}_2(S_x^{\prime(s)})}N_P
-\ge \frac12\lvert S_x^{\prime(s)}\rvert.
+\boxed{
+\text{B2.pairs}
+\Longrightarrow
+\text{RelExtensionUpper}
+\Longrightarrow
+\text{ExchangeSupply1}
+\Longrightarrow
+S\notin\mathbb Z[1/2]
+}
 $$
 
-The quantifiers matter. One may fix $`\delta=1/2`$; then for every $`s`$ there is a threshold depending on $`s`$, and the inequality holds for all sufficiently large $`x`$. In fact every fixed $`\delta<1`$ eventually works. This is `MatchedFlankLower` at the pinned map.
-
-The proof is a capacity argument. The number of possible realized side pairs is only $`x^{o(1)}`$, while the retained filtered-site mass is $`x^{1-o(1)}`$. Singleton side-pair classes therefore carry a negligible fraction of the site mass. This argument is unconditional at the dossier level, but it begins to have content only at enormous asymptotic scales. It makes no finite-scale claim.
-
-`TailIntersection`, the positive-density lower bound for the filtered set, was already proved. Consequently the three-part supply chain now lacks only `RelExtensionUpper`.
-
-## The remaining estimate
-
-<!-- sources: frontier-verdict, claim-c3, relext-definitions -->
-
-For a realized side-pair class $P$, let $`N_{P,d}`$ be the number of its members whose middle gap equals the even integer $`d\ge2`$. Define
+For a class $P$ of filtered sites with the same left and right gap flanks, let $N_P$ be the class size and let $N_{P,d}$ count members whose middle gap equals $d$. Define
 
 $$
 Q(x,s)=
-\sum_{P\in\mathrm{Fam}(S_x^{\prime(s)})}
+\sum_{P}
 \frac{1}{N_P}
 \sum_{\substack{d\ge2 \cr 2\mid d}}
 N_{P,d}\bigl(N_{P,d}-1\bigr).
 $$
 
-The explicit surviving sufficient target, called `B2.pairs`, asks that for every $`\varepsilon_{\mathrm{pair}}>0`$, uniformly in $`s`$ once $`x`$ is sufficiently large,
+`B2.pairs` asks for
 
 $$
-Q(x,s)\le
-\varepsilon_{\mathrm{pair}}\lvert S_x^{\prime(s)}\rvert.
+Q(x,s)
+\le
+\varepsilon_{\mathrm{pair}}
+\lvert S_x^{\prime(s)}\rvert
 $$
 
-`B2.pairs` remains open. It is a class-normalized ordered-pair estimate: singleton classes contribute nothing, and division by $`N_P`$ prevents very large classes from distorting the scale. The repository proves that `B2.pairs` at $`\varepsilon_{\mathrm{pair}}`$ implies `RelExtensionUpper` at
+for every fixed $\varepsilon_{\mathrm{pair}}>0$, eventually in $x$, with one threshold that works uniformly in $s$. The proved reduction loses only a square root:
 
 $$
-\varepsilon_{\mathrm{REU}}=\sqrt{\varepsilon_{\mathrm{pair}}}.
+\varepsilon_{\mathrm{REU}} = \sqrt{\varepsilon_{\mathrm{pair}}}.
 $$
 
-The current pigeonhole argument consumes $`\varepsilon_{\mathrm{REU}}=1/8`$, so the corresponding pair target is $`\varepsilon_{\mathrm{pair}}=1/64`$. The implication and these constants are proved; the pair estimate itself is not.
+The present exchange argument needs $\varepsilon_{\mathrm{REU}}=1/8$, so
 
-## Why the remaining step is difficult
+$$
+\varepsilon_{\mathrm{pair}}=\frac1{64}
+$$
 
-<!-- sources: claim-c4, frontier-verdict -->
+is sufficient. The reduction and this constant are proved; `B2.pairs` itself remains open.
 
-Several tempting counting routes lose too much. In particular, the older sufficient condition $`W2=o(\lvert S'\rvert)`$, based on an unnormalized full-word pair count, is false at the pinned depths. The failure is structural: asymptotically large word classes create quadratically many ordered pairs compared with linearly many sites. The factor $`1/N_P`$ in `B2.pairs` is therefore essential rather than cosmetic.
+## 3. Why proving `B2.pairs` would already be useful
 
-There is also a precise but scoped barrier. An explicit deterministic smooth-gap system satisfies the identity, capacity, retention, Chebyshev, and prime-number-theorem layer used by the present program, yet it is almost entirely middle-rigid and violates both `B2.pairs` and `RelExtensionUpper`. Thus those named inputs alone cannot imply the target. A successful argument must use some fact about the primes that fails in this smooth model. Distributional control of the middle slot, at the growing word rank relevant here, is the most visible candidate family.
+A proof of `B2.pairs` would not yet solve Erdős Problem 251. It would, however, close the first fully unconditional version of the exchange mechanism and prove
 
-This is not a general impossibility theorem. It neither says that `B2.pairs` is unprovable nor rules out methods using additional prime-number input.
+$$
+S\notin\mathbb Z[1/2],
+$$
 
-## What is not claimed
+that is,
 
-<!-- sources: chain-main, final-observations, frontier-verdict -->
+$$
+S\ne\frac{a}{2^s}
+\qquad
+\text{for all }a\in\mathbb Z,\ s\ge0.
+$$
 
-The original irrationality problem is not solved. Hypotheses A and B are not proved. The machine-checked result is a conditional implication, not a formalization of an unconditional solution. `RelExtensionUpper` is open, and `B2.pairs` is open.
+This is a natural first denominator class because the series itself is built from the binary weights $2^{-n}$. For a hypothetical dyadic value, repeated shifting eventually removes the denominator completely and places the weighted tails on the cleanest possible binary lattice. The present exchange theorem is designed exactly for that case.
 
-Finite computations have measured class multiplicities, repeated-middle shares, and local quotient behavior at accessible scales. Those observations are useful for choosing plausible statements and rejecting poor normalizations. They are measured, direction-only evidence. The finite-scale evidence is not an asymptotic proof; indeed the proved capacity argument operates in a regime far beyond the measured range. Heuristic middle laws and singular-series interpretations are motivation only and carry no proved conclusion.
+More importantly, this step separates two difficulties that are currently entangled in the full irrationality problem. The first is the **prime-distribution problem**: do the actual primes supply matching long flanks with enough variation in the middle while satisfying the required tail filters? The second is the **denominator-uniformity problem**: can the quantitative lattice gate be made strong enough to absorb an arbitrary fixed odd denominator part?
 
-Finally, the smooth-gap construction locates the limit of a named tool layer. It must not be promoted to the claim that no unconditional proof exists or that every possible non-distributional idea fails.
+A proof of `B2.pairs` would settle the first question for the current exchange architecture at the dyadic level. The remaining obstacle to full irrationality would then be much more sharply identified: strengthen the quantitative exchange supply so that the argument works not only for denominator $2^s$, but for
 
-## Current next steps
+$$
+2^s b
+$$
 
-<!-- sources: frontier-verdict, final-observations -->
+with arbitrary fixed odd $b$.
 
-The central mathematical task is to prove `B2.pairs`, or to prove a different statement strong enough to yield `RelExtensionUpper` with the required constant. The most concrete routes are class-level equidistribution for the middle gap and word-grain upper mean-value estimates at rank comparable with $`\log{}\log{} x`$. Either route must retain the filters-first quantifiers and handle the mass of arithmetically aligned classes rather than assuming it is typical.
+So the value of `B2.pairs` is not that dyadic rationals are somehow “almost all” rationals; they are not. Its value is structural: it would show that the new unconditional mechanism genuinely works for the primes and would isolate the next missing quantitative step.
 
-On the computational side, the full class-normalized statistic $`Q(x,s)`$, separated by class-size and alignment strata, can refine calibration of the distance to $`1/64`$. Such measurements can guide a proof target but cannot establish its asymptotic form. On the formal side, the proved cardinality argument for `MatchedFlankLower` could eventually be connected to the existing checked supply integrator; that would remove one stated supplier without changing the open analytic core.
+## 4. How this relates to the conditional irrationality route
+
+The project also contains a different proof route that reaches the stronger conclusion
+
+$$
+S\notin\mathbb Q,
+$$
+
+but only from two strong open inputs: a uniform Hardy-Littlewood-type prime-tuple estimate and a Cramér-Granville pointwise prime-gap bound.
+
+These two routes are **not consecutive stages of one implication**. The strong conditional inputs are not used to prove `B2.pairs`, `RelExtensionUpper`, or `ExchangeSupply1`, and the exchange route does not assume them.
+
+They are nevertheless closely related because they share the same arithmetic core.
+
+In both routes, a hypothetical rational value of $S$ forces a binary lattice structure on weighted prime-gap tails. A long common prefix of two gap configurations then quantizes the difference of the corresponding tails. A controlled local difference in the middle, together with matching behavior afterward and sufficiently small end tails, forces a contradiction with that lattice.
+
+What differs is the local configuration and the way it is supplied.
+
+The conditional route uses a **two-gap fork-merge**:
+
+$$
+\text{strong tuple input}
++
+\text{strong gap bound}
+\Longrightarrow
+\text{two-slot fork-merge supply}
+\Longrightarrow
+S\notin\mathbb Q.
+$$
+
+The current exchange route seeks a simpler **one-gap exchange**:
+
+$$
+\text{B2.pairs}
+\Longrightarrow
+\text{one-slot exchange supply}
+\Longrightarrow
+S\notin\mathbb Z[1/2].
+$$
+
+The two deterministic contradictions are therefore siblings, not instances of one another. They use the same binary quantization mechanism, block identities, and small-tail principle, but the conditional route constructs a compensated two-gap change, whereas the exchange route needs only one differing middle gap between matching flanks.
+
+This explains the role of the conditional theorem. It validates the underlying fork/lattice mechanism and proves that sufficiently rich prime-distribution input can force full irrationality. The exchange program asks a different and more targeted question: can the same arithmetic mechanism be activated by a simpler local configuration whose supply may be provable without assuming those two large open conjectural packages?
+
+## 5. Why `B2.pairs` is difficult
+
+The main difficulty is that matching long flanks strongly conditions the middle gap. One cannot simply treat the middle as an independent random prime gap.
+
+An earlier target used an unnormalized count of repeated full words. That condition is actually false in the relevant asymptotic regime: the number of possible words grows only like $x^{o(1)}$, while the retained site population is $x^{1-o(1)}$. Large classes are therefore unavoidable, and raw ordered-pair counts grow quadratically with class size.
+
+`B2.pairs` removes exactly this distortion by dividing the within-class pair count by $N_P$:
+
+$$
+\frac{1}{N_P}
+\sum_d N_{P,d}(N_{P,d}-1).
+$$
+
+Singleton middle cells contribute nothing, and very large flank classes are put back on the correct linear scale. This normalization is essential, not cosmetic.
+
+There is also a proved scoped barrier. The identities, capacity bounds, retention estimates, Chebyshev/PNT information, and current parameter arithmetic are compatible with an explicit smooth-gap model in which matching flanks make the middle gap almost rigid. In that model, both `B2.pairs` and `RelExtensionUpper` fail.
+
+Therefore the existing identity-and-capacity layer alone cannot prove the target. Any successful proof must use additional information about the primes that fails in the smooth model. The most visible missing input is genuine distributional control of the middle gap after conditioning on long left and right flanks, at a word rank of order $\log\log x$.
+
+That is a delicate regime. Pointwise equidistribution statements are generally too strong when individual classes are small, while ordinary per-word sieve estimates can lose constants that grow too quickly with the rank. The required statement must instead be averaged, class-normalized, uniform in the filter parameter, and strong enough to reach the explicit $1/64$ consumption point.
+
+## 6. What we plan to do next
+
+The primary analytic target is to prove `B2.pairs`, or a different statement that implies `RelExtensionUpper` with the required constant. The two most concrete directions are to obtain class-level distributional control of the middle gap after conditioning on matching flanks, or to prove a word-grain mean-value or dispersion estimate that controls the normalized ordered-pair statistic directly without paying a prohibitive rank-dependent constant.
+
+Computationally, the next useful measurements are not merely larger prime censuses. We want the full statistic $Q(x,s)$ resolved by class size, middle multiplicity, and arithmetic alignment. These data cannot prove the asymptotic statement, but they can show where the $1/64$ budget is actually lost and help distinguish a bulk phenomenon from a small exceptional family.
+
+In parallel, the denominator-uniformity problem should be kept explicit. Once a dyadic exchange supply is available, the natural strengthening is to gain enough quantitative slack in the lattice gate to absorb every fixed odd denominator part $b$. A condition of the schematic form
+
+$$
+\frac{D}{2^J}\longrightarrow0
+$$
+
+would be the kind of strengthening that could eventually make the exchange contradiction work for arbitrary rational denominators.
+
+Finally, the conditional full-irrationality route remains useful as a second research guide, but the right target there is not to attack the full Hardy-Littlewood and Cramér-Granville conjectures as black boxes. The proof uses much less: localized existence of two specially constructed gap words and sufficiently small word-conditioned end tails. Isolating and weakening those exact local requirements is a parallel route toward full irrationality.
+
+The current research frontier is therefore deliberately split:
+
+$$
+\boxed{\text{prove `B2.pairs' to close the next unconditional theorem}}
+$$
+
+and, in parallel,
+
+$$
+\boxed{\text{strengthen the exchange gate or localize the full-irrationality inputs}}
+$$
+
+with the long-term goal of passing from
+
+$$
+S\notin\mathbb Z[1/2]
+$$
+
+to
+
+$$
+S\notin\mathbb Q.
+$$
