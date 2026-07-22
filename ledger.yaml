@@ -2226,3 +2226,51 @@ annotations:
       item-0020 moved to done; item-0021 removed from execution order
       pending re-scope; item-0021 is not done and its acceptance is not
       claimed.
+  - id: ANN-20260722-58
+    refs: [ANN-20260718-50, ANN-20260720-57, BET-20260718-08]
+    date: 2026-07-22
+    note: >-
+      ITEM-0010 COLLISION-GAP TARGET AUDIT LANDED; ITEM-0010 REMAINS
+      RATIFIED/OPEN. Execution used exact pin
+      8ae6aebb72c52c505468b3abb0917c681a47d239, web OFF, and produced
+      dossier/item-0010-workpapers/collision-gap-audit.md; no Lean or
+      roadmap state changed. EXACT FINITE ALGEBRA, PROVED in the
+      workpaper: with N = |T| and F = |Fam(T)|,
+      Q = sum_P N_P sum_d p_(P,d)^2 - F and
+      N-F-Q = sum_P (2/N_P) sum_(d<e) N_(P,d)N_(P,e) >= 0. Hence
+      Q < N-F iff some realized flank class is non-rigid in its middle;
+      the existing supply_of_triple clause table then yields one
+      ExchangeAt witness. Item-0020's per-fixed-s sparse-family ratio
+      F/N -> 0 makes one favorable arbitrarily large scale per threshold
+      sufficient. PREFERRED OPEN TARGET: for every fixed s, some
+      eta_s > 0 gives Q <= (1-eta_s)N on unbounded integer scales,
+      equivalently liminf Q/N < 1 after eventual positivity. This direct
+      route consumes neither MatchedFlankLower nor RelExtensionUpper at
+      integration time and needs no s-uniform gap or global x-threshold.
+      CONSTANT AUDIT: 1/64 is convenient slack from the current generic
+      interface, not item-0010's logical threshold; the old route needs
+      eps_REU < delta/2 and, through the proved square-root reduction,
+      pair coefficient c < (delta/2)^2. At delta = 1/2 this is c < 1/16;
+      using every fixed rational 0 < delta < 1 at dossier grain permits
+      each fixed 0 <= c < 1/4 after an interface change, while the direct
+      route permits each fixed 0 <= c < 1 along suitable unbounded scales.
+      The proposed
+      RHO-ENERGY package remains OPEN; NI-M5a plus NI-M5b would imply the
+      collision gap directly by a favorable/exceptional cap split, while
+      embedding that proof into the full global-energy package needs the
+      recorded strict margin. Class-size strata survive only as a
+      diagnostic. The admissible-middle audit records the finite-anchor
+      exception exactly; the even-Cramer-smooth model has Q/N -> 1, so
+      the preferred target still needs new prime-distribution information
+      outside the identity/capacity layer. The next full-Q, admissible-
+      multiplicity, rho-energy, and CRT-alignment census is specified but
+      requires a later ratified dispatch. GATES: frozen blocks byte-
+      identical; relocation PASS; ASCII/control/whitespace and MathJax
+      checks PASS; independent mathematical, target, Lean-facing, and
+      final semantic reviews PASS. REPORT HYGIENE: AGENTS.md now records
+      the Markdown/MathJax generation conventions (dollar-backtick inline
+      math; mathrm; lvert/rvert; lbrace/rbrace; substack cr; log{}), and
+      writeup/status.md carries the corresponding log{} normalization.
+      BET-20260718-08 remains OPEN with probability and resolve_by
+      unchanged. The byte-exact kickoff remains ephemeral and is not part
+      of the commit.

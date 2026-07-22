@@ -180,7 +180,7 @@ Singleton middle cells contribute nothing, and very large flank classes are put 
 
 There is also a proved scoped barrier. The identities, capacity bounds, retention estimates, Chebyshev/PNT information, and current parameter arithmetic are compatible with an explicit smooth-gap model in which matching flanks make the middle gap almost rigid. In that model, both `B2.pairs` and `RelExtensionUpper` fail.
 
-Therefore the existing identity-and-capacity layer alone cannot prove the target. Any successful proof must use additional information about the primes that fails in the smooth model. The most visible missing input is genuine distributional control of the middle gap after conditioning on long left and right flanks, at a word rank of order $\log\log x$.
+Therefore the existing identity-and-capacity layer alone cannot prove the target. Any successful proof must use additional information about the primes that fails in the smooth model. The most visible missing input is genuine distributional control of the middle gap after conditioning on long left and right flanks, at a word rank of order $\log{}\log{} x$.
 
 That is a delicate regime. Pointwise equidistribution statements are generally too strong when individual classes are small, while ordinary per-word sieve estimates can lose constants that grow too quickly with the rank. The required statement must instead be averaged, class-normalized, uniform in the filter parameter, and strong enough to reach the explicit $1/64$ consumption point.
 

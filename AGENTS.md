@@ -28,6 +28,26 @@
 - Never strengthen a mathematical statement during exposition or formatting work.
 - Preserve scope qualifiers, constants, quantifier order, and dependency declarations.
 
+## Report generation and MathJax
+
+- Generated Markdown reports must use the repository's MathJax-compatible notation.
+- Delimit every inline formula in raw Markdown as dollar-backtick, formula,
+  backtick-dollar (for example, ``$`S`$``); never use bare ``$S$``. Keep display
+  formulas in ``$$`` blocks.
+- Use ``\mathrm{...}`` instead of ``\operatorname{...}``.
+- Write absolute values and cardinalities with ``\lvert ... \rvert``; never use
+  ``|...|``, ``\#``, or ``#`` as mathematical cardinality notation.
+- Inside ``\substack{...}``, separate rows with ``\cr``, never ``\\``. This
+  restriction is local to ``\substack``; retain ``\\`` where required by
+  environments such as ``aligned`` or ``array``.
+- For visible braces, use ``\lbrace`` and ``\rbrace`` instead of ``\{`` and
+  ``\}``.
+- For logarithm, use ``\log{}`` instead of raw ``\log``. If you need an index,
+  use ``\log_n{}`` where n is the index.
+- Apply these rules to mathematical prose and formulas only. Preserve Markdown
+  headings and table delimiters, divisibility notation such as ``\mid``, and
+  literal source or code fences unless a task explicitly calls for changing them.
+
 ## Repository history
 
 - Treat dossier/, runs/, and payloads/ as historical and evidentiary material.
