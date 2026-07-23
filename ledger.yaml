@@ -2365,3 +2365,44 @@ annotations:
       whitespace checks PASS. BET-20260718-08 remains OPEN with
       probability and resolve_by unchanged. The byte-exact kickoff
       remains ephemeral and is excluded from the commit.
+  - id: ANN-20260723-61
+    refs: [ANN-20260723-60, ANN-20260723-59, BET-20260718-08]
+    date: 2026-07-23
+    note: >-
+      ITEM-0010 M5-LITE PHASE-3B OPTIMIZATION AND FULL FROZEN CAMPAIGN
+      LANDED; ITEM-0010 REMAINS RATIFIED/OPEN. Execution used exact pin
+      3d3abb3fdc80c34a690fccab3ae1ff8bdb20a47a, web and cloud OFF, and
+      the unchanged frozen registry sha256
+      047bfe6e64146d78e851e2964033b6381ef78f1aa9802f02401276130f4e547b.
+      A local C11 residue-overlap kernel replaced repeated Python
+      set/product work while preserving integer-exact admissibility and
+      CRT profiles and enclosing rho computations in conservative
+      long-double intervals. COMPLETE SMOKE EQUIVALENCE: all 78261
+      prospective and realized reference rho values enclosed; maxima
+      two ulps prospective and one ulp realized; all five selector
+      memberships, all exact counts, and all 200 CRT profiles agree.
+      The combined kernel took 1.537 seconds on 24 workers versus
+      290.297 seconds for the two reference phases, about 189x faster.
+      FULL MEASURED LADDER: seven scales through x = 1000000000 and
+      s in {0,1,10,100,1000}, 35/35 rows complete. Every row has
+      N = F, Q = 0, and N-F-Q = 0. Thus all 23 declared rules pass
+      only through singleton inertia, with zero positive escape or
+      Gini margin; this is finite adverse evidence and no asymptotic
+      M5-lite claim. At x = 1000000000, s = 0, N = F = 50827008,
+      realized rho energy/N = 679.6962143600192, four realized cells
+      are off-domain, and 586 prospective candidates are off-domain.
+      The largest scale took 3762.2 seconds and peaked at 3491920 KiB
+      RSS. The deterministic 64-bucket in-memory pipeline retained
+      compact atomic summaries and all 35 integrity rows passed; the
+      abandoned 9.4 GiB raw prototype checkpoint was removed.
+      OUTPUTS under dossier/item-0010-workpapers:
+      m5-lite-phase3b-optimization-report.md, m5_lite_phase3b.py,
+      m5_lite_phase3b_kernel.c, and m5-lite-phase3b/. GATES: report sha256
+      b6407e47ecc7cdf612c2e1cc6a32373f0e04a2852a8e06c041c8ea0d345be8d4;
+      run-manifest sha256
+      ebe777ac506bb22f4a88f9310cbce5c1fb3424cf68c74248782aa22c2953ee5e;
+      synthetic, complete-smoke, stream-reducer, source-syntax,
+      JSON, manifest-hash, MathJax, and whitespace checks PASS.
+      BET-20260718-08 remains OPEN with probability and resolve_by
+      unchanged. The byte-exact redispatch remains ephemeral and is
+      excluded from the commit.

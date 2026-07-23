@@ -1,0 +1,282 @@
+{
+  "1000000,0": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000,1": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000,10": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000,100": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000,1000": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "3000000,0": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "3000000,1": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "3000000,10": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "3000000,100": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "3000000,1000": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "10000000,0": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "10000000,1": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "10000000,10": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "10000000,100": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "10000000,1000": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "30000000,0": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "30000000,1": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "30000000,10": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "30000000,100": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "30000000,1000": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "100000000,0": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "100000000,1": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "100000000,10": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "100000000,100": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "100000000,1000": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "300000000,0": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "300000000,1": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "300000000,10": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "300000000,100": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "300000000,1000": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000000,0": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000000,1": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000000,10": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000000,100": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  },
+  "1000000000,1000": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "escape_le_Gini_le_2escape": true,
+    "rho_enclosure_internal": true,
+    "zero_numeric_ambiguities": true,
+    "rule_checks": true
+  }
+}

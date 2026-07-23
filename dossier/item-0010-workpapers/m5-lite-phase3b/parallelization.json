@@ -1,0 +1,49 @@
+{
+  "schema": "item-0010-phase3b-parallelization-v1",
+  "dispatch_pin": "3d3abb3fdc80c34a690fccab3ae1ff8bdb20a47a",
+  "registry_sha256": "047bfe6e64146d78e851e2964033b6381ef78f1aa9802f02401276130f4e547b",
+  "independent_axes": {
+    "x": {
+      "shard_key": "integer x from the frozen ladder",
+      "shared_inputs": "registry, implementation, prime cutoff",
+      "output": "one scale manifest plus fixed-s views",
+      "merge": "sort by frozen x-ladder order",
+      "associative_commutative": true,
+      "checkpoint": "atomic per-scale manifest",
+      "retry": "recompute only the missing x shard"
+    },
+    "side_class_bucket": {
+      "shard_key": "fixed hash(side gap word) bucket",
+      "shared_inputs": "read-only prime/gap/delta arrays and D0 row",
+      "output": "class/cell arrays and prospective/realized reducers",
+      "merge": "integer sums and bucket-index concatenation",
+      "associative_commutative": "integer reducers yes; byte order fixed by bucket index",
+      "checkpoint": "atomic bucket artifact plus SHA-256",
+      "retry": "idempotent replacement after hash validation"
+    },
+    "class_range": {
+      "shard_key": "bucket-local contiguous class interval",
+      "shared_inputs": "small-prime list and invariant band factor",
+      "output": "A_P, domain, rho enclosure, realized rho/CRT",
+      "merge": "write disjoint deterministic array slices",
+      "associative_commutative": true,
+      "checkpoint": "parent bucket is the checkpoint boundary",
+      "retry": "rerun failed range before bucket commit"
+    },
+    "fixed_s": {
+      "shard_key": "s in the frozen panel",
+      "shared_inputs": "s=0 side classes, prospective rho, realized cell rho",
+      "output": "counts after deleting sites n < s+1",
+      "merge": "independent report rows",
+      "associative_commutative": true,
+      "checkpoint": "stored with parent x/bucket",
+      "retry": "re-reduce without recomputing rho"
+    }
+  },
+  "cloud": {
+    "used": false,
+    "reason": "Repository AGENTS.md requires local execution and forbids delegating repository computation to Codex Cloud.",
+    "data_transfer": "Not applicable locally. A future operator-managed compute host would need the frozen registry, source/executable hashes, and per-x prime/gap/delta cache or regenerate it."
+  },
+  "status": "PASS"
+}
