@@ -1,0 +1,8 @@
+{
+  "rho_Q": 1000000,
+  "certified_tail_log_width": 0.000459,
+  "realized_rho_energy": 35829777.52435564,
+  "realized_rho_energy_over_N": 457.82417199314654,
+  "off_domain_cell_count": 3,
+  "off_domain_site_mass": 3
+}

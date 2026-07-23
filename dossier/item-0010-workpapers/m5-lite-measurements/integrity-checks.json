@@ -1,0 +1,173 @@
+{
+  "global": {
+    "Q_le_N_minus_F": true,
+    "defect_identity": true,
+    "Gini_equals_defect": true,
+    "escape_le_Gini_le_2escape": true
+  },
+  "rules": {
+    "R0-all-k0": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R1-all-k1_8": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R1-all-k1_4": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R1-all-k1_2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_8-k1_8": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_8-k1_4": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_8-k1_2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_4-k1_8": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_4-k1_4": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_4-k1_2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_2-k1_8": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_2-k1_4": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1_2-k1_2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho3_4-k1_8": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho3_4-k1_4": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho3_4-k1_2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1-k1_8": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1-k1_4": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R2-rho1-k1_2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R3-weighted-C1_2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R3-weighted-C1": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R3-weighted-C2": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    },
+    "R3-weighted-C4": {
+      "eta_cert_le_eta_weight": true,
+      "eta_weight_identity": true,
+      "escape_Gini_bounds": true,
+      "passing_global_bound": true,
+      "passing_profile_le_weight": true
+    }
+  },
+  "synthetic_tests": "PASS",
+  "item0019_continuity": "PASS"
+}

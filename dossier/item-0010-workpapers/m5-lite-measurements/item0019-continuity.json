@@ -1,0 +1,32 @@
+{
+  "schema": "item-0010-item0019-continuity-v1",
+  "source": "item-0019 (4,5,30), x=2000000, D0.2'",
+  "got": {
+    "pi": 148933,
+    "ns": 142130,
+    "nW": 142104,
+    "nP": 142092,
+    "cw": 52,
+    "cs": 76,
+    "cls": 12
+  },
+  "want": {
+    "pi": 148933,
+    "ns": 142130,
+    "nW": 142104,
+    "nP": 142092,
+    "cw": 52,
+    "cs": 76,
+    "cls": 12
+  },
+  "checks": {
+    "pi": true,
+    "ns": true,
+    "nW": true,
+    "nP": true,
+    "cw": true,
+    "cs": true,
+    "cls": true
+  },
+  "status": "PASS"
+}

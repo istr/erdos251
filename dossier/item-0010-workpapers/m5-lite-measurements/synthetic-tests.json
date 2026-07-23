@@ -1,0 +1,166 @@
+{
+  "schema": "item-0010-synthetic-tests-v1",
+  "registry_sha256": "047bfe6e64146d78e851e2964033b6381ef78f1aa9802f02401276130f4e547b",
+  "cases": {
+    "all_singletons": {
+      "N": 3,
+      "F": 3,
+      "Q": "0",
+      "Q_num": 0,
+      "Q_den": 1,
+      "Q_over_N": "0",
+      "F_over_N": "1",
+      "defect": "0",
+      "defect_over_N": "0",
+      "all_class_Gini": "0",
+      "majority_escape_over_N": "0",
+      "W2": 0,
+      "checks": {
+        "Q_le_N_minus_F": true,
+        "defect_identity": true,
+        "Gini_equals_defect": true,
+        "escape_le_Gini_le_2escape": true
+      }
+    },
+    "rigid_class": {
+      "N": 4,
+      "F": 1,
+      "Q": "3",
+      "Q_num": 3,
+      "Q_den": 1,
+      "Q_over_N": "3/4",
+      "F_over_N": "1/4",
+      "defect": "0",
+      "defect_over_N": "0",
+      "all_class_Gini": "0",
+      "majority_escape_over_N": "0",
+      "W2": 12,
+      "checks": {
+        "Q_le_N_minus_F": true,
+        "defect_identity": true,
+        "Gini_equals_defect": true,
+        "escape_le_Gini_le_2escape": true
+      }
+    },
+    "two_equal_cells": {
+      "N": 4,
+      "F": 1,
+      "Q": "1",
+      "Q_num": 1,
+      "Q_den": 1,
+      "Q_over_N": "1/4",
+      "F_over_N": "1/4",
+      "defect": "2",
+      "defect_over_N": "1/2",
+      "all_class_Gini": "1/2",
+      "majority_escape_over_N": "1/2",
+      "W2": 4,
+      "checks": {
+        "Q_le_N_minus_F": true,
+        "defect_identity": true,
+        "Gini_equals_defect": true,
+        "escape_le_Gini_le_2escape": true
+      }
+    },
+    "all_distinct_middles": {
+      "N": 4,
+      "F": 1,
+      "Q": "0",
+      "Q_num": 0,
+      "Q_den": 1,
+      "Q_over_N": "0",
+      "F_over_N": "1/4",
+      "defect": "3",
+      "defect_over_N": "3/4",
+      "all_class_Gini": "3/4",
+      "majority_escape_over_N": "3/4",
+      "W2": 0,
+      "checks": {
+        "Q_le_N_minus_F": true,
+        "defect_identity": true,
+        "Gini_equals_defect": true,
+        "escape_le_Gini_le_2escape": true
+      }
+    },
+    "mixed_class_sizes": {
+      "N": 10,
+      "F": 4,
+      "Q": "13/6",
+      "Q_num": 13,
+      "Q_den": 6,
+      "Q_over_N": "13/60",
+      "F_over_N": "2/5",
+      "defect": "23/6",
+      "defect_over_N": "23/60",
+      "all_class_Gini": "23/60",
+      "majority_escape_over_N": "3/10",
+      "W2": 6,
+      "checks": {
+        "Q_le_N_minus_F": true,
+        "defect_identity": true,
+        "Gini_equals_defect": true,
+        "escape_le_Gini_le_2escape": true
+      }
+    },
+    "empty_favorable_selector": {
+      "N": 3,
+      "F": 2,
+      "Q": "1",
+      "Q_num": 1,
+      "Q_den": 1,
+      "Q_over_N": "1/3",
+      "F_over_N": "2/3",
+      "defect": "0",
+      "defect_over_N": "0",
+      "all_class_Gini": "0",
+      "majority_escape_over_N": "0",
+      "W2": 2,
+      "checks": {
+        "Q_le_N_minus_F": true,
+        "defect_identity": true,
+        "Gini_equals_defect": true,
+        "escape_le_Gini_le_2escape": true
+      }
+    },
+    "declared_profile_violation": {
+      "N": 3,
+      "F": 1,
+      "Q": "2",
+      "Q_num": 2,
+      "Q_den": 1,
+      "Q_over_N": "2/3",
+      "F_over_N": "1/3",
+      "defect": "0",
+      "defect_over_N": "0",
+      "all_class_Gini": "0",
+      "majority_escape_over_N": "0",
+      "W2": 6,
+      "checks": {
+        "Q_le_N_minus_F": true,
+        "defect_identity": true,
+        "Gini_equals_defect": true,
+        "escape_le_Gini_le_2escape": true
+      }
+    }
+  },
+  "declared_profiles": {
+    "empty_selector": {
+      "alpha": "0",
+      "eta_profile": "0",
+      "beta_viol": "0",
+      "extrema": null,
+      "passed": true,
+      "positive": false
+    },
+    "violation": {
+      "kappa": "1/2",
+      "NP": 3,
+      "maxNPd": 3,
+      "r_P": "2/3",
+      "delta_P": "-1/6",
+      "beta_viol": "1",
+      "passed": false
+    }
+  },
+  "status": "PASS"
+}

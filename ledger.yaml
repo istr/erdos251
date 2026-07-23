@@ -2328,3 +2328,40 @@ annotations:
       reviews PASS. BET-20260718-08 remains OPEN with probability and
       resolve_by unchanged. The byte-exact kickoff remains ephemeral and
       is excluded from the commit.
+  - id: ANN-20260723-60
+    refs: [ANN-20260723-59, ANN-20260722-58, BET-20260718-08]
+    date: 2026-07-23
+    note: >-
+      ITEM-0010 M5-LITE MEASUREMENT KICKOFF REACHED THE PHASE-3 STOP;
+      ITEM-0010 REMAINS RATIFIED/OPEN. Execution used exact pin
+      8d82901785b36ab87dc413dc7f0cc1e992808748, web OFF, the frozen
+      registry sha256
+      047bfe6e64146d78e851e2964033b6381ef78f1aa9802f02401276130f4e547b,
+      and a complete coupled smoke row at x = 1000000, s = 0.
+      Phase 1 synthetic checks PASS and Phase 2 reproduces the exact
+      item-0019 continuity row. MEASURED in Phase 3: N = F = 78261,
+      Q = 0, and collision defect = 0. All 23 predeclared profile
+      candidates pass only through the all-singleton artifact, so every
+      escape and Gini margin is 0 and this row supplies no favorable
+      positive-saving evidence. The exact admissible-multiplicity bins
+      are 0:6, 1:59503, 2:16851, 3-4:1871, and 5-8:30, with six finite
+      anchor exceptions. The realized rho energy per site is
+      457.8241719931, with three off-domain cells recorded explicitly.
+      COMPUTATIONAL FEASIBILITY STOP: the prospective and realized-rho
+      passes took 162.34 and 127.95 seconds on 24 workers. The measured
+      projection is 77.98 wall-hours for the full ladder and 52.39
+      wall-hours for its largest row, so Phase 4 was not run. No
+      selector, ladder, threshold, or object was changed; no sampled or
+      realized-only substitute was used. Outputs are
+      dossier/item-0010-workpapers/m5-lite-measurement-report.md,
+      dossier/item-0010-workpapers/m5-lite-measurement-registry.yaml,
+      dossier/item-0010-workpapers/m5_lite_measure.py, and
+      dossier/item-0010-workpapers/m5-lite-measurements/. GATES:
+      report sha256
+      57e5e7aafee55187633ecb679467d7557763101578018d4cc65bc1b7bac59293;
+      run-manifest sha256
+      497449cbde0c32cceeb7757e90ae3b2f3e4d00d8234a9c7dd293d949fed47173;
+      frozen-registry, artifact-hash, JSON, MathJax, ASCII/control, and
+      whitespace checks PASS. BET-20260718-08 remains OPEN with
+      probability and resolve_by unchanged. The byte-exact kickoff
+      remains ephemeral and is excluded from the commit.

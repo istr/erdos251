@@ -1,0 +1,312 @@
+{
+  "schema": "item-0010-m5-lite-registry-v1",
+  "campaign": "item-0010 M5-lite finite measurement campaign",
+  "dispatch_pin": "8d82901785b36ab87dc413dc7f0cc1e992808748",
+  "freeze_rule": "This file is immutable after its sha256 is recorded and before any new production middle histogram is computed or opened.",
+  "evidence_class": "predeclared measurement design; not a theorem",
+  "parameter_map": {
+    "A_prime": "3/2",
+    "A_double_prime": "48",
+    "C_0": "2/log(3)",
+    "D": "ceil(13 * C_0 * A_double_prime * log(x))",
+    "J": "ceil(log_2(D))",
+    "K": "ceil(log_2(D))",
+    "L": "J + 1 + K",
+    "k": "L + 1",
+    "W": "A_prime * L * log(x)",
+    "site_set": "D0.2' filters-first: n >= s+1, p_n <= x, window sum <= W, delta_(n+J) <= D, delta_(n+J+K+1) <= 2^K",
+    "real_boundary": "Evaluate log(x), D, and W with at least 80 decimal digits; use the certified stable integer floor of W for the residual middle boundary.",
+    "finite_anchor_exception": "A realized inadmissible middle is exceptional exactly when its anchor prime is <= k; retain it in the collision census and add its distinct value to A_tilde_P."
+  },
+  "primary_x_ladder": [1000000, 3000000, 10000000, 30000000, 100000000, 300000000, 1000000000],
+  "positive_s_panel": [0, 1, 10, 100, 1000],
+  "class_size_bins": ["1", "2-3", "4-7", "8-15", "16-31", "32-63", "64-127", "128+"],
+  "A_P_bins": ["0", "1", "2", "3-4", "5-8", "9-16", "17+"],
+  "side_span_bins": ["0-63", "64-127", "128-255", "256-511", "512+"],
+  "residual_middle_domain_bins": ["0", "1", "2", "3-4", "5-8", "9-16", "17-32", "33-64", "65-128", "129+"],
+  "rho_definition": {
+    "domain": "Every even d >= 2 satisfying A_J + d + C_K <= W, not only realized middles.",
+    "local_factor": "rho(P,d) = 2 * product over odd primes p of ((p-nu_H)*p)/((p-nu_pre)*(p-nu_suf)).",
+    "off_domain": "If either side block is inadmissible, or a prospective full tuple is inadmissible, rho(P,d) = 0.",
+    "rho_Q": "Upper endpoint obtained from exact integer local products through Q=1000000; the omitted tail is nonpositive and has log width at most 0.51*k^2/Q.",
+    "rho_pros": "Arithmetic mean of rho_Q(P,d) over all even residual-domain candidates, including inadmissible candidates as zero.",
+    "empty_residual_domain": "rho_pros = 0 and every rho-based selector is false.",
+    "singular_series_zero": "Counted as an inadmissible candidate with rho_Q = 0.",
+    "finite_anchor_exception": "Does not alter prospective rho; realized exceptional cells are reported separately.",
+    "classification": "rho_Q and rho_pros are certified finite upper endpoints; persistence is HEURISTIC."
+  },
+  "rules": [
+    {
+      "rule_id": "R0-all-k0",
+      "selector_formula": "Every realized side class P.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 0",
+      "constants_thresholds": "none",
+      "empty_set_convention": "Empty only when N=0; alpha=eta_profile=beta_viol=0 and extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P"],
+      "classification": "diagnostic stratum"
+    },
+    {
+      "rule_id": "R1-all-k1_8",
+      "selector_formula": "Every realized side class P.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/8",
+      "constants_thresholds": "kappa_0=1/8; lambda_0=7/8",
+      "empty_set_convention": "Empty only when N=0; alpha=eta_profile=beta_viol=0 and extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R1-all-k1_4",
+      "selector_formula": "Every realized side class P.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/4",
+      "constants_thresholds": "kappa_0=1/4; lambda_0=3/4",
+      "empty_set_convention": "Empty only when N=0; alpha=eta_profile=beta_viol=0 and extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R1-all-k1_2",
+      "selector_formula": "Every realized side class P.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/2",
+      "constants_thresholds": "kappa_0=1/2; lambda_0=1/2",
+      "empty_set_convention": "Empty only when N=0; alpha=eta_profile=beta_viol=0 and extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_8-k1_8",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/8)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/8",
+      "constants_thresholds": "rho cap c=1/8; kappa_0=1/8",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_8-k1_4",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/8)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/4",
+      "constants_thresholds": "rho cap c=1/8; kappa_0=1/4",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_8-k1_2",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/8)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/2",
+      "constants_thresholds": "rho cap c=1/8; kappa_0=1/2",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_4-k1_8",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/4)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/8",
+      "constants_thresholds": "rho cap c=1/4; kappa_0=1/8",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_4-k1_4",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/4)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/4",
+      "constants_thresholds": "rho cap c=1/4; kappa_0=1/4",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_4-k1_2",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/4)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/2",
+      "constants_thresholds": "rho cap c=1/4; kappa_0=1/2",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_2-k1_8",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/2)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/8",
+      "constants_thresholds": "rho cap c=1/2; kappa_0=1/8",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_2-k1_4",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/2)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/4",
+      "constants_thresholds": "rho cap c=1/2; kappa_0=1/4",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1_2-k1_2",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (1/2)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/2",
+      "constants_thresholds": "rho cap c=1/2; kappa_0=1/2",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho3_4-k1_8",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (3/4)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/8",
+      "constants_thresholds": "rho cap c=3/4; kappa_0=1/8",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho3_4-k1_4",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (3/4)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/4",
+      "constants_thresholds": "rho cap c=3/4; kappa_0=1/4",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho3_4-k1_2",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= (3/4)*log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/2",
+      "constants_thresholds": "rho cap c=3/4; kappa_0=1/2",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1-k1_8",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/8",
+      "constants_thresholds": "rho cap c=1; kappa_0=1/8",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1-k1_4",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/4",
+      "constants_thresholds": "rho cap c=1; kappa_0=1/4",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R2-rho1-k1_2",
+      "selector_formula": "A_P > 0 and rho_pros(P) <= log(x).",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 1/2",
+      "constants_thresholds": "rho cap c=1; kappa_0=1/2",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "primary certificate candidate"
+    },
+    {
+      "rule_id": "R3-weighted-C1_2",
+      "selector_formula": "Every realized P with A_P > 0.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = max(0, 1 - (1/2)*rho_pros(P)/log(x))",
+      "constants_thresholds": "C=1/2; Q=1000000 upper endpoint",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "secondary candidate"
+    },
+    {
+      "rule_id": "R3-weighted-C1",
+      "selector_formula": "Every realized P with A_P > 0.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = max(0, 1 - rho_pros(P)/log(x))",
+      "constants_thresholds": "C=1; Q=1000000 upper endpoint",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "secondary candidate"
+    },
+    {
+      "rule_id": "R3-weighted-C2",
+      "selector_formula": "Every realized P with A_P > 0.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = max(0, 1 - 2*rho_pros(P)/log(x))",
+      "constants_thresholds": "C=2; Q=1000000 upper endpoint",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "secondary candidate"
+    },
+    {
+      "rule_id": "R3-weighted-C4",
+      "selector_formula": "Every realized P with A_P > 0.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = max(0, 1 - 4*rho_pros(P)/log(x))",
+      "constants_thresholds": "C=4; Q=1000000 upper endpoint",
+      "empty_set_convention": "alpha=eta_profile=beta_viol=0; extrema undefined.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P", "rho_pros"],
+      "classification": "secondary candidate"
+    },
+    {
+      "rule_id": "R4-crt",
+      "selector_formula": "Exact independent strata keyed separately for each p in {3,5,7,11,13} by (nu_H,nu_pre,nu_suf); no favorable union.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 0",
+      "constants_thresholds": "p in {3,5,7,11,13}",
+      "empty_set_convention": "Omit absent keys and record zero total mass.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "prospective d", "CRT residues"],
+      "classification": "diagnostic stratum"
+    },
+    {
+      "rule_id": "R4-side-span",
+      "selector_formula": "Exact side-span bins {0-63,64-127,128-255,256-511,512+}.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 0",
+      "constants_thresholds": "bin edges fixed as displayed",
+      "empty_set_convention": "Record zero mass for empty bins.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "side spans"],
+      "classification": "diagnostic stratum"
+    },
+    {
+      "rule_id": "R4-residual-domain",
+      "selector_formula": "Exact count of even d >= 2 satisfying the residual W boundary, binned as {0,1,2,3-4,5-8,9-16,17-32,33-64,65-128,129+}.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 0",
+      "constants_thresholds": "bin edges fixed as displayed",
+      "empty_set_convention": "Record zero mass for empty bins.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "side spans"],
+      "classification": "diagnostic stratum"
+    },
+    {
+      "rule_id": "R4-A-P",
+      "selector_formula": "Exact A_P bins {0,1,2,3-4,5-8,9-16,17+}.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 0",
+      "constants_thresholds": "bin edges fixed as displayed",
+      "empty_set_convention": "Record zero mass for empty bins.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "A_P"],
+      "classification": "diagnostic stratum"
+    },
+    {
+      "rule_id": "R4-class-size",
+      "selector_formula": "Marginal N_P bins {1,2-3,4-7,8-15,16-31,32-63,64-127,128+}, reported separately from geometric rules.",
+      "declared_saving_formula": "kappa_decl(s,x,P) = 0",
+      "constants_thresholds": "bin edges fixed as displayed",
+      "empty_set_convention": "Record zero mass for empty bins.",
+      "allowed_input_data": ["s", "x", "J", "K", "D", "L", "W", "P", "N_P"],
+      "classification": "diagnostic stratum"
+    }
+  ],
+  "forbidden_inputs": [
+    "M_P",
+    "number of realized middles",
+    "Q_P",
+    "Gini defect",
+    "observed concentration",
+    "all middles distinct",
+    "realized-middle-only rho",
+    "any cap, bin, threshold, coefficient, or favorable-family definition tuned after collision output"
+  ],
+  "post_hoc_only": [
+    "lambda_max",
+    "eta_cert",
+    "eta_weight",
+    "eta_escape",
+    "eta_Gini",
+    "weighted r_P quantiles and trimmed means",
+    "Pareto frontiers",
+    "correlations and top contributors"
+  ]
+}

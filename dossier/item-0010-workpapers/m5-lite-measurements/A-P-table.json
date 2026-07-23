@@ -1,0 +1,52 @@
+{
+  "bins": [
+    {
+      "label": "0",
+      "class_count": 6,
+      "site_mass": 6,
+      "site_mass_over_N": "2/26087"
+    },
+    {
+      "label": "1",
+      "class_count": 59503,
+      "site_mass": 59503,
+      "site_mass_over_N": "59503/78261"
+    },
+    {
+      "label": "2",
+      "class_count": 16851,
+      "site_mass": 16851,
+      "site_mass_over_N": "5617/26087"
+    },
+    {
+      "label": "3-4",
+      "class_count": 1871,
+      "site_mass": 1871,
+      "site_mass_over_N": "1871/78261"
+    },
+    {
+      "label": "5-8",
+      "class_count": 30,
+      "site_mass": 30,
+      "site_mass_over_N": "10/26087"
+    },
+    {
+      "label": "9-16",
+      "class_count": 0,
+      "site_mass": 0,
+      "site_mass_over_N": "0"
+    },
+    {
+      "label": "17+",
+      "class_count": 0,
+      "site_mass": 0,
+      "site_mass_over_N": "0"
+    }
+  ],
+  "residual_domain_min": 6,
+  "residual_domain_max": 241,
+  "contaminated_class_count": 6,
+  "contaminated_site_mass": 6,
+  "inverse_A_tilde_site_mean": "1370927/1565220",
+  "zero_A_tilde_classes": 0
+}

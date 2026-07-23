@@ -1,0 +1,113 @@
+{
+  "schema": "item-0010-m5-lite-run-manifest-v1",
+  "dispatch_pin": "8d82901785b36ab87dc413dc7f0cc1e992808748",
+  "registry_sha256": "047bfe6e64146d78e851e2964033b6381ef78f1aa9802f02401276130f4e547b",
+  "web": "OFF",
+  "evidence_scope": "finite empirical calibration only",
+  "platform": "Linux-7.1.4-1-liquorix-amd64-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "numpy": "2.2.4",
+  "workers": 24,
+  "cache": "/tmp/item0010-m5-lite-cache",
+  "commands": [
+    "python3 dossier/item-0010-workpapers/m5_lite_measure.py self-test",
+    "python3 dossier/item-0010-workpapers/m5_lite_measure.py continuity",
+    "python3 dossier/item-0010-workpapers/m5_lite_measure.py profile 1000000 256",
+    "python3 -u dossier/item-0010-workpapers/m5_lite_measure.py smoke",
+    "python3 dossier/item-0010-workpapers/m5_lite_measure.py freeze-smoke"
+  ],
+  "runs": [
+    {
+      "phase": 1,
+      "name": "synthetic tests",
+      "status": "PASS"
+    },
+    {
+      "phase": 2,
+      "name": "item-0019 continuity",
+      "status": "PASS"
+    },
+    {
+      "phase": 3,
+      "name": "D0 smoke x=1000000 s=0",
+      "status": "PASS",
+      "runtime": {
+        "prospective_seconds": 162.34388052599934,
+        "realized_rho_seconds": 127.95359815600023,
+        "total_seconds": 353.3953495300002
+      }
+    },
+    {
+      "phase": 3,
+      "name": "full-ladder feasibility gate",
+      "status": "STOP",
+      "evidence": "phase3-feasibility.json"
+    }
+  ],
+  "artifacts": {
+    "A-P-table.json": {
+      "bytes": 1057,
+      "sha256": "7d8a03098b9487da92f5abaa1cef0ca386fad67f5682421f35edae11226e1a3c"
+    },
+    "CRT-strata.json": {
+      "bytes": 42441,
+      "sha256": "d359e0cacf96c68ae3fadc1f4b9b9933568941f0a38a6fa32411a4c2236dd277"
+    },
+    "class-size-table.json": {
+      "bytes": 368,
+      "sha256": "0e6a8ee19eeb78bbab3d0b01e818398d1755f6bc5b2c7bc1ead2a815a5d993c0"
+    },
+    "frozen-registry.yaml": {
+      "bytes": 16220,
+      "sha256": "047bfe6e64146d78e851e2964033b6381ef78f1aa9802f02401276130f4e547b"
+    },
+    "global-per-scale.json": {
+      "bytes": 557,
+      "sha256": "ca8331e124c7fee35599221ec224b8d40fa4e3f7e41be53a134adc7425d49c59"
+    },
+    "integrity-checks.json": {
+      "bytes": 5132,
+      "sha256": "a26cfd9e82ee73b42c35d0bbe7dbff82689f96aa1057f3e6223cee8c87b1b1e8"
+    },
+    "item0019-continuity.json": {
+      "bytes": 515,
+      "sha256": "10b633f8206ab942ba288771759aa5977adc37d549fddf2c60e87ca0f1ebc7cd"
+    },
+    "per-rule-certificates.json": {
+      "bytes": 22348,
+      "sha256": "4d4c6200bbe9f6cae2c80649b1ff8e769da0f8a2a0c331d2ada87833d6f0164b"
+    },
+    "phase3-feasibility.json": {
+      "bytes": 1327,
+      "sha256": "d6a7b63da21a06579361c1244420066e7637133abb12906a56d4d0c2c5330f41"
+    },
+    "profile-x1000000.json": {
+      "bytes": 1300,
+      "sha256": "8c396aeabdd6662de164fc390eacc5ccb55b577b4a32288ecef205bcf9f81654"
+    },
+    "prospective-x1000000-s0.npz": {
+      "bytes": 721516,
+      "sha256": "2df8c7800be025b24b4d6c64cbb0e74f62511e4bd17879736b71ff51553f2a5d"
+    },
+    "realized-rho-x1000000-s0.npz": {
+      "bytes": 825881,
+      "sha256": "bd75a774e7df98370268edfee82063da615d2807f8563a11a990cdf6919d1ef2"
+    },
+    "registry.sha256": {
+      "bytes": 129,
+      "sha256": "9463881a4683db55864e66dd50bc26f8056c44e9de416374a4730479f5a9bad9"
+    },
+    "rho-energy-table.json": {
+      "bytes": 218,
+      "sha256": "e8e57c5fbee14b836c650f42b7c777d45a670fe8ffb3f1997a810ec2ed19b6dc"
+    },
+    "smoke-x1000000-s0.json": {
+      "bytes": 74717,
+      "sha256": "0b56bd9bd6b473aff6b35b27cc4027de49ebf0f77475a900c132fc0b70efcb2d"
+    },
+    "synthetic-tests.json": {
+      "bytes": 3822,
+      "sha256": "0a16c34ab74a4f0b017f2b6420103ed07de0b4791cdc068313b97d254e60ae5b"
+    }
+  }
+}

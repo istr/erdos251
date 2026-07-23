@@ -1,0 +1,31 @@
+{
+  "schema": "item-0010-phase3-feasibility-v1",
+  "classification": "MEASURED runtime plus conservative linear projection",
+  "smoke_x": 1000000,
+  "smoke_N": 78261,
+  "workers": 24,
+  "prospective_wall_seconds": 162.34388052599934,
+  "realized_rho_wall_seconds": 127.95359815600023,
+  "prospective_wall_seconds_per_smoke_class": 0.0020743905716257057,
+  "realized_rho_wall_seconds_per_smoke_cell": 0.0016349599181712505,
+  "ladder_pi_exact": {
+    "1000000": 78498,
+    "3000000": 216816,
+    "10000000": 664579,
+    "30000000": 1857859,
+    "100000000": 5761455,
+    "300000000": 16252325,
+    "1000000000": 50847534
+  },
+  "ladder_pi_sum": 75679066,
+  "projected_rho_wall_hours_at_smoke_rate": 77.97782792624338,
+  "largest_row_projected_rho_wall_hours_at_smoke_rate": 52.39203476329649,
+  "omitted_costs": [
+    "larger residual-domain and local-prime ranges",
+    "prime/gap/delta cache generation",
+    "side-class partitioning and sorting",
+    "five fixed s views",
+    "certificate, CRT, A_P, correlation, and report reducers"
+  ],
+  "stop": "Phase 3 STOP: the unchanged mandatory prospective-rho object is not computationally feasible for the frozen full ladder in this implementation/resource envelope. No realized-rho substitution, sampling, cap change, ladder truncation, or post-hoc selector change was made."
+}

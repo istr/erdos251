@@ -1,0 +1,25 @@
+[
+  {
+    "x": 1000000,
+    "s": 0,
+    "N": 78261,
+    "F": 78261,
+    "Q": "0",
+    "Q_num": 0,
+    "Q_den": 1,
+    "Q_over_N": "0",
+    "F_over_N": "1",
+    "defect": "0",
+    "defect_over_N": "0",
+    "all_class_Gini": "0",
+    "majority_escape_over_N": "0",
+    "W2": 0,
+    "checks": {
+      "Q_le_N_minus_F": true,
+      "defect_identity": true,
+      "Gini_equals_defect": true,
+      "escape_le_Gini_le_2escape": true
+    },
+    "log_x": "13.81551055796427410410794872810618524560660893177263785619996740580543565806411488141598323053758979"
+  }
+]
