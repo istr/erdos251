@@ -2406,3 +2406,46 @@ annotations:
       BET-20260718-08 remains OPEN with probability and resolve_by
       unchanged. The byte-exact redispatch remains ephemeral and is
       excluded from the commit.
+  - id: ANN-20260724-62
+    refs: [ANN-20260723-61, ANN-20260722-58, BET-20260718-08]
+    date: 2026-07-24
+    note: >-
+      ITEM-0010 FLANK-COLLISION / SINGLETON-FRONTIER AUDIT LANDED;
+      ITEM-0010 REMAINS RATIFIED/OPEN. Execution used exact pin
+      67661c6f83516b07df1f402c8a375d9b3600d6c6, web and cloud OFF,
+      and produced dossier/item-0010-workpapers/
+      flank-collision-singleton-frontier-audit.md; no Lean, frozen
+      registry, roadmap, production artifact, run, or payload changed.
+      MEASURED-PRODUCTION: all 35 frozen rows retain N = F, Q = 0,
+      and N-F-Q = 0; no H1, H2, or H3 event occurred through x = 1e9.
+      MEASURED-AUDIT: an exact equality-refinement pass over the
+      regenerable cache computed four one-sided orders, four oriented
+      joint paths, and a predeclared 70/87-cell canonical parity mesh
+      for all five thresholds at all seven scales. Complete prefixes
+      and suffixes are individually unique on every row; at x = 1e9,
+      C_joint(6,6) = 47 at each s in {0,1,10,100,1000},
+      C_joint(7,7) = 0 throughout, no sampled cell changes zero/nonzero
+      status under threshold deletion, and no sustained asymmetric
+      ridge appears. PROVED in the workpaper: F = N iff every realized
+      flank is singleton iff C_flank = 0 (with the nonempty max guard);
+      H2 and H3 each imply H1 but neither implies the other; and
+      F < N with Q = 0 yields a non-rigid repeated flank, while one row
+      supplies only one threshold-specific ExchangeAt witness toward
+      the universally quantified ExchangeSupply1. HEURISTIC only:
+      calibrated stress models put an order-one collision region near
+      1e27--1e30 with many-order uncertainty; the actual frontier is
+      OPEN. The existing sparse-family capacity/population comparators
+      turn permanently favorable only near 1.20e105 (binomial cap) and
+      3.53e106 (displayed cap), subject to the proof's non-explicit
+      fixed-s population onset; these are proof-bound crossovers, not
+      collision forecasts. NEXT: land a reusable memory-bounded exact
+      full-grid flank diagnostic, then, only under separate dispatch,
+      use 3e9 and 1e10 as constant-depth validation probes; no rho work
+      before H1. GATES: report sha256
+      99fa4ffff45c533e4005d16872e7f2b73d9153942c6aadee59e1519442b024ea;
+      all-threshold and mesh hashes/invariants, independent numerical,
+      mathematical/evidence, contract/format, MathJax, ASCII/control,
+      table-arity, and whitespace checks PASS. No kickoff stop
+      condition fired. BET-20260718-08 remains OPEN with probability
+      and resolve_by unchanged. The byte-exact kickoff remains
+      ephemeral and is excluded from the commit.
