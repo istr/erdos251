@@ -2274,3 +2274,57 @@ annotations:
       BET-20260718-08 remains OPEN with probability and resolve_by
       unchanged. The byte-exact kickoff remains ephemeral and is not part
       of the commit.
+  - id: ANN-20260723-59
+    refs: [ANN-20260722-58, ANN-20260720-57, BET-20260718-08]
+    date: 2026-07-23
+    note: >-
+      ITEM-0010 M5-LITE STATEMENT/BUDGET AUDIT LANDED; ITEM-0010
+      REMAINS RATIFIED/OPEN. Execution used exact pin
+      9b993ced7627f803493e9df0564785a5e99af19a, web OFF, and produced
+      dossier/item-0010-workpapers/m5-lite-audit.md; no empirical
+      campaign, literature search, Lean edit, or roadmap edit was made.
+      EXACT FINITE ALGEBRA, PROVED in the workpaper: if a class obeys
+      N_(P,d) <= lambda N_P + 1 on every repeated realized middle, with
+      0 <= lambda < 1, then Q_P <= lambda N_P. The sharp finite envelope
+      from that cap alone is obtained from
+      b = min(N_P, floor(lambda N_P + 1)), N_P = q b + r:
+      Q_P <= b - 1 - r(b-r)/N_P. The complement has the sharp bound
+      Q_exc <= N_exc - F_exc, so for an ex ante favorable family
+      Q <= N - (1-lambda)N_G - F_exc; if N_G >= alpha N, the clean
+      collision-gap margin is eta = (1-lambda)alpha.
+      PREFERRED OPEN TARGET:
+      ExAnteWeightedMiddleContractionAlongScales. One predeclared
+      selector and saving profile kappa_P, fixed before inspecting the
+      middle histogram, gives classwise bounds
+      N_(P,d) <= (1-kappa_P)N_P + 1 and positive site-weighted saving
+      sum_(P in G) kappa_P N_P >= eta_s N on unbounded scales for each
+      fixed s. This implies CollisionGapAlongScales with the same eta_s.
+      Majority escape and Gini defect are equivalent up to factor 2 and
+      remain measurement-facing certificates, not a new proved
+      mechanism. CONDITIONAL ON the still-OPEN NI-M5a and NI-M5b,
+      alpha = 7/8 and c(x) = C_q(x)/log x -> 0 give
+      Q/N <= 1/8 + (7/8)c(x) - F_exc/N; c <= 1/2 gives eta = 7/16,
+      and eventually every fixed 0 < eta < 7/8. The rho cap
+      R = o(log x) is therefore an old proof device, not a logical
+      requirement of the new endpoint.
+      BARRIERS: the weaker endpoint clears the normalization and
+      class-skew implication issues but does not clear the recorded
+      rank-2k union-sieve, NI-M2, NI-M4, or signed-weight mechanisms.
+      In the even-Cramer-smooth model Q/N -> 1. On model scales where
+      the classwise bounds hold, the normalized weighted saving tends
+      to 0; otherwise the classwise bound itself fails. The resulting
+      route-design conclusion is only relative to the named model-blind
+      list T: within the recorded program a future supplier needs an
+      input outside T that fails in the model, with the U20.4 inventory
+      and U20.5 write-out qualifications retained.
+      MEASUREMENT SPECIFICATION ONLY: the prior full-Q,
+      admissible-multiplicity, rho-energy, contribution-correlation,
+      class-stratum, and CRT diagnostics remain mandatory, augmented by
+      exact pass/fail and margin fields for every predeclared selector
+      and saving profile. No run was executed. GATES: workpaper sha256
+      238e86dd8152c9f1ce082b035b9cc989702d8094cd7ad4c620591580ccfe0645;
+      ASCII/control/whitespace and MathJax checks PASS; independent
+      finite-algebra, statement/measurement, barrier, and final semantic
+      reviews PASS. BET-20260718-08 remains OPEN with probability and
+      resolve_by unchanged. The byte-exact kickoff remains ephemeral and
+      is excluded from the commit.
