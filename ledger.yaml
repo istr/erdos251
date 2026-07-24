@@ -2461,3 +2461,101 @@ annotations:
       condition fired. BET-20260718-08 remains OPEN with probability
       and resolve_by unchanged. The byte-exact kickoff remains
       ephemeral and is excluded from the commit.
+  - id: ANN-20260724-63
+    refs: [ANN-20260724-62, ANN-20260722-58, ANN-20260720-57]
+    date: 2026-07-24
+    note: >-
+      STEERING BOOKKEEPING CORRECTION FOR THE item-0010 RANGE
+      6b824846..89418e95; ITEM-0010 REMAINS RATIFIED/OPEN. No Lean
+      file, frozen block, frozen registry, production artifact,
+      roadmap item, run, or payload is changed by this entry. It
+      back-books four unrecorded state changes, records one
+      discipline deviation, lands one reproduction note, and books
+      one independent verification. INDEPENDENT VERIFICATION
+      (steering lane, separate from every item-0010 executor, local
+      recomputation only): all five workpaper sha256 values, the
+      frozen registry, and both run-manifests match their ledger
+      entries; all 455 scale-result and bucket-summary hashes and all
+      seven artifact hashes and byte counts in the Phase-3b
+      production manifest match the committed bytes; N = F, Q = 0,
+      and N-F-Q = 0 hold on all 35 rows; the D0 map D(x), J(x), L(x)
+      was recomputed for all seven scales and the J = 15 interval
+      endpoint 3368925490843 confirmed; A_P bins sum to N and
+      inverse_A_tilde_site_mean equals inverse_A_tilde_sum/N on all
+      35 rows; the Section G.1 capacity table (r, M, B_cap, U_cap,
+      P_0 and every displayed ratio) reproduces at all seven scales;
+      all six Section G.2 crossover roots and both first-window roots
+      reproduce; gamma = 1.5723 from C_joint(6,6) = 47, the
+      3e-19 to 3e-16 expected-collision band at 1e9, and the
+      1e27 to 1e30 order-one region all reproduce; 805 = 23 x 35
+      certificate rows and 9028 CRT rows confirmed; frozen blocks
+      byte-identical, sorry inventory exactly one in Statement.lean,
+      native_decide only in comments, lean/ untouched across the
+      range, tests 25/25 PASS. No discrepancy was found in any
+      recomputed quantity. BACK-BOOKED 1, ITEM-0025: operator commit
+      992729a785a1f53e474b154ab26499cdb5654564 moved item-0025 to
+      roadmap/completed/ and added writeup/ (a public claims surface),
+      scripts/writeup_mapper.py, and tests/test_writeup_mapper.py with
+      no ledger entry; a grep for 0025 in ledger.yaml returned nothing
+      before this entry. The closure is hereby recorded; no
+      adversarial review, sha256 anchor, or review gate is claimed for
+      it, and none was run. BACK-BOOKED 2, ROADMAP REORDER: operator
+      commit 8ae6aebb72c52c505468b3abb0917c681a47d239 reinserted
+      item-0021 into roadmap/_order.md and changed item-0022 rank from
+      0130 to 0095. ANN-20260720-57 removed item-0021 from the
+      execution order pending re-scope; roadmap/item-0021.md is
+      byte-unchanged since then, so the recorded re-scope precondition
+      is NOT met. OPERATOR DECISION REQUIRED: either re-scope
+      item-0021 and record it, or remove it from _order.md again.
+      BACK-BOOKED 3, ANN-58 GATE: ANN-20260722-58 is the only entry of
+      the five in this range without a workpaper sha256 in its GATES
+      clause. The value is
+      55c915f0ae0ffcabd66cb07b3467881f9a035e9ecd63657c0b1486b173e1f79b
+      for dossier/item-0010-workpapers/collision-gap-audit.md, matching
+      current repository bytes. BACK-BOOKED 4, DOC COMMITS: seven
+      operator doc: commits (d1a0bd9..11d8622) and c383aae touched
+      README.md and writeup/ without ledger entries; they are MathJax,
+      DOI-resolution, and exposition changes, and are recorded here as
+      such with no mathematical delta claimed. DISCIPLINE DEVIATION:
+      commit 89418e95 amended the applied note body of
+      ANN-20260724-62 in place with the POST-LANDING SCRIPT EXPOSURE
+      clause. Per the append-only discipline (apply is the
+      registration), an applied note body is final and the exposure
+      belonged in a successor entry. The amendment content is correct
+      and is independently confirmed: flank_frontier.py sha256
+      4197d8dfcc9d774e6035aba3bc57d34c5d0c0f63e22247aefb68d6134fbd8a4e,
+      flank_panel.py sha256
+      cb9472d021072b69f0589dd9cfc12842fcadebd99a6f9f46bd89efbe05077c42,
+      flank_mesh.py sha256
+      d7aff3f8ed962e8a2439c2cef610dcfc0c299191daa98d3a6aadee419417f9cd,
+      all matching current repository bytes. The method, not the
+      content, is the recorded deviation. REPRODUCTION NOTE LANDED:
+      dossier/item-0010-workpapers/flank-reproduction.md sha256
+      f7f6880dadbda2abb19ef99d9e516e47bfa96a02287e5a4de4d60b06df70a4f4.
+      It records cache regeneration, driver invocation, the 64 + 6 = 70
+      canonical-cell split between flank_mesh.py and the flank_panel.py
+      diagonal, and an independent steering recomputation at x = 1e6
+      that reproduces the ANN-62 Section D.3 row (C_joint(6,6) = 0 and
+      C_joint(7,7) = 0 at all five thresholds; last positive one-sided
+      depth 13 with count 1 on all four paths) and the Section D.4 row
+      (3 transpose mismatches, largest positive j+k = 13, maximum
+      transpose ratio 1.01743 at cell (2,4) with counts 4378 and 4303).
+      OPEN: no driver output JSON is committed at any scale, and rows
+      from 3e6 through 1e9 remain independently unverified. READING
+      CAUTIONS FOR DOWNSTREAM CONSUMERS, both correct in the source
+      reports and recorded here to prevent promotion: (a) in
+      m5-lite-phase3b/production/per-rule-certificates.json the field
+      eta_cert equals (1-lambda_max)*alpha and therefore takes values
+      up to 1.0 in 224 of the 805 rows purely because lambda_max = 0
+      under singleton inertia; the collision-gap margins are
+      eta_escape and eta_Gini, which are 0 in all 805 rows. eta_cert
+      must never be cited as a measured collision-gap margin. (b) The
+      35 frozen rows are 7 independent scales; N falls by exactly s at
+      every scale, so the s panel is a deterministic prefix deletion
+      and contributes no independent evidence. ANN-20260723-61 phrasing
+      35/35 rows should be read accordingly. (c) All entries of
+      integrity-checks.json are trivially satisfied in the all-zero
+      regime and constitute no validation of this campaign.
+      BET-20260718-08 remains OPEN with probability and resolve_by
+      unchanged. No verdict, target, threshold, or acceptance is
+      changed by this entry.
