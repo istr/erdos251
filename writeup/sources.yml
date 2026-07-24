@@ -97,7 +97,7 @@ entries:
     formula_policy: none
   - id: literature-problem
     source_path: dossier/literature.md
-    source_blob: 8d00aaed4b0e1f96a80f8c8fa8a107bf6835afd5
+    source_blob: 010a376453be0699438a8eda8cb32979150e735b
     source_heading: ### Item 6 -- Erdos #251 Mapping + Seitenstatus
     target_path: writeup/references.md
     target_heading: ## External literature
@@ -105,7 +105,7 @@ entries:
     formula_policy: none
   - id: literature-schlage
     source_path: dossier/literature.md
-    source_blob: 8d00aaed4b0e1f96a80f8c8fa8a107bf6835afd5
+    source_blob: 010a376453be0699438a8eda8cb32979150e735b
     source_heading: ### Item 2 -- ScPu11-Inhaltsansprueche
     target_path: writeup/references.md
     target_heading: ## External literature
