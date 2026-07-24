@@ -1,0 +1,14 @@
+run_id: 20260724_opus5max_review_item0026
+stage: review
+model: claude-opus-5-max
+provider: Anthropic
+thinking_budget: unlimited
+temperature: hot
+payload_file: payloads/item-0026-review-payload-v1.md
+payload_sha256: ""
+web_access: true
+tools: [web_search, data_analysis, code_execution, literature_access]
+started: 2026-07-24
+finished: ""
+operator: istr
+notes: "Item-0026 initial review run; full research tooling, web access enabled for literature survey on S1 carrier gap"
