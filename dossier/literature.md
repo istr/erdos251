@@ -246,3 +246,79 @@ this site's content as public LLM-generated material about the
 problem. Watch method: poll the repo path attacks/erdos/ and
 docs/data/erdos_data.js for commits touching 251 -- not the rendered
 page, which is blind to fetchers.
+
+---
+
+## Addendum 3: item-0026 anchor registration (executor session, 2026-07-25)
+
+Language boundary: the surrounding report (item-0004) is a German ASCII
+transliteration; this addendum is written in English, the project's
+working language, and like the report body it is ASCII-only with
+diacritics folded (Matomaki, Teravainen, de la Breteche, Erdos).
+
+Provenance: this addendum registers the seven literature anchors
+introduced for item-0026 (S1 carrier search), extracted this session with
+web access OFF and the seven local PDFs as the only evidence base, under
+the ephemeral executor dispatch dispatch-item-0026-extract-v1. Each sha256
+below is the value booked in payloads/HASHES.txt at the session pin (the
+anchor there is the corresponding https://arxiv.org/pdf/<id> URL) and was
+re-verified against the local PDF before extraction. The extracts live
+under dossier/item-0026-workpapers/extract/. All seven front matters were
+confirmed against the PDFs with no author or title deviation; the row-7
+author, left by steering to be read, is Sun-Kai Leung (Universite de
+Montreal).
+
+New anchors (identifier | author(s) | title | venue | sha256 | extract file):
+
+1. arXiv:2009.05760v1 | R. de la Breteche and D. Fiorilli | "On a
+   conjecture of Montgomery and Soundararajan" | arXiv preprint (no printed
+   journal reference) |
+   0a3d4a999b4e6a9a5385e91679ac5dfaf17a50dbf0e62ddee5e5245cfcc66977 |
+   dlbf20-moments.md
+2. arXiv:2207.05038v2 | K. Matomaki and J. Teravainen | "Almost primes in
+   almost all short intervals II" | arXiv preprint |
+   93aa865f7699da179305dbf14935016b4e092d75a5d7cb1ecac651c59067380d |
+   mt22-almostprimes2.md
+3. arXiv:1510.06005v2 | J. Teravainen | "Almost primes in almost all short
+   intervals" | arXiv preprint |
+   05cc130e898b1e6b60bc096713eb67f83e2d4c0e96bc715797338817d9a52ddb |
+   tera15-almostprimes.md
+4. arXiv:2012.11565v3 | K. Matomaki | "Almost primes in almost all very
+   short intervals" | arXiv preprint |
+   676ac2ceafc1550d63d70e71b34d4b1ed84d41918e3f6178a252e6cf9f0f007d |
+   matomaki20-veryshort.md
+5. arXiv:2605.23014v1 | A. Jha | "The Poisson Tail Conjecture for Primes in
+   Short Intervals" | arXiv preprint |
+   ccf3f21acb103235c817ea7ef8012c3554a31ad1ec3d69ba8630085f31b0b551 |
+   jha26-poissontail.md
+6. arXiv:2407.05380v2 | S.-K. Leung | "Pseudorandomness of primes at large
+   scales" | arXiv preprint |
+   019b27fdd1506ed0c796bdf49c68d138fbf099ef2dd6223868667d8306d7e890 |
+   leung24-pseudorandom.md
+7. arXiv:2401.04000v4 | S.-K. Leung | "Joint distribution of primes in
+   multiple short intervals" | arXiv preprint |
+   bbc3bf4724844976fbb5dd345dd647d56139c33e45c195ab136d95ec01a20c31 |
+   leung24-jointdist.md
+
+Item-0026 literature-grain verdict (registration only, one sentence):
+across these seven anchors the project's target statement is located as
+absent on axis A3 (grain) -- every result attains its rank, window, or
+non-concentration conclusion on prime counts, interval-content counts, or
+singular-series averages, and none carries the consecutive-gap-word
+class-mass grain N_{P,d}; the located gap is the transfer from
+singular-series averages and interval counts to word-grain prime
+realisations, not a blanket absence from the corpus.
+
+Search record: the two review runs under
+runs/20260724_opus5max_review_item0026/ and
+runs/20260724_chatgpt5.6sol_review_item0026/ are the search record that
+surfaced these anchors. The ChatGPT run is a translation of an unretained
+German report, carries no verbatim anchors, and is a lead list, not a
+citable object; every citable anchor above was fixed by sha256 against a
+local PDF, not taken from either run.
+
+No verdict on any candidate is recorded here: this addendum registers the
+anchors and points to their extracts and to the search record. Pricing
+each candidate against the six axes (A1 rank, A2 window, A3 grain, A4
+direction, A5 strength, A6 density) and deciding the S1 carrier question
+is a separate steering task after delivery.
