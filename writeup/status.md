@@ -89,6 +89,17 @@ $$
 
 is sufficient. The reduction and this constant are proved; `B2.pairs` itself remains open.
 
+Two later audits have relativized this picture. The value $`1/64`$ is convenient slack from the current generic interface, not the logical threshold of the dyadic target: the exchange argument needs only $`\varepsilon_{\mathrm{REU}}<\delta/2`$, hence a pair coefficient below $`(\delta/2)^2`$, which at $`\delta=1/2`$ is $`1/16`$.
+
+More importantly, a strictly weaker endpoint is already sufficient. Write $`N=\lvert S_x^{\prime(s)}\rvert`$ for the filtered site count and let $`F`$ be the number of realized flank classes. The exact finite criterion for producing one exchange witness is $`Q<N-F`$, and $`F/N\to0`$ for each fixed $`s`$ is already proved. It is therefore enough that
+
+$$
+\liminf_{x\to\infty}\frac{Q(x,s)}{N(x,s)}<1
+\qquad\text{for each fixed }s.
+$$
+
+This consumes no threshold uniform in $`s`$, no statement valid at all large $`x`$, and neither `MatchedFlankLower` nor `RelExtensionUpper` at integration time. It is the weakest currently known sufficient endpoint for $`S\notin\mathbb Z[1/2]`$. Whether it is easier to prove than `B2.pairs` is open: the barrier described in Section 5 applies to both.
+
 ## 3. Why proving `B2.pairs` would already be useful
 
 A proof of `B2.pairs` would not yet solve Erdős Problem 251. It would, however, close the first fully unconditional version of the exchange mechanism and prove
@@ -188,7 +199,7 @@ That is a delicate regime. Pointwise equidistribution statements are generally t
 
 The primary analytic target is to prove `B2.pairs`, or a different statement that implies `RelExtensionUpper` with the required constant. The two most concrete directions are to obtain class-level distributional control of the middle gap after conditioning on matching flanks, or to prove a word-grain mean-value or dispersion estimate that controls the normalized ordered-pair statistic directly without paying a prohibitive rank-dependent constant.
 
-Computationally, the next useful measurements are not merely larger prime censuses. We want the full statistic $`Q(x,s)`$ resolved by class size, middle multiplicity, and arithmetic alignment. These data cannot prove the asymptotic statement, but they can show where the $`1/64`$ budget is actually lost and help distinguish a bulk phenomenon from a small exceptional family.
+Computationally, that measurement has since been carried out. A frozen campaign over seven scales through $`x=10^9`$, at five values of the filter parameter, resolved the statistic by class size, middle multiplicity, and arithmetic alignment. Every realized flank class turned out to be a singleton: $`N=F`$ and $`Q=0`$ on every row. The statistic therefore vanishes identically over the entire measured range and supplies no evidence for or against the asymptotic statement. Calibrated finite models place the first flank collision many orders of magnitude beyond any reachable census, so computing this statistic further is not the bottleneck. The bottleneck is the missing prime-distribution input described in Section 5.
 
 In parallel, the denominator-uniformity problem should be kept explicit. Once a dyadic exchange supply is available, the natural strengthening is to gain enough quantitative slack in the lattice gate to absorb every fixed odd denominator part $`b`$. A condition of the schematic form
 

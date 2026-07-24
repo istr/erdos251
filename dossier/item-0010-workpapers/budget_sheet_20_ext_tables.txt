@@ -1,0 +1,132 @@
+item-0010 W4 separator re-pricing -- extension of the anchored
+item-0020 budget sheet (conventions re-declared, anchor read-only).
+Exponent convention (anchor): expo(F) = ln F / lnln x, F = (ln x)^expo.
+Gate (G1) o(ln x): expo < 1 with decay or a limit < 1.  (G2) x^eps:
+ln F = o(ln x).  (G3) pigeonhole reserve: ln x / C_F must survive.
+Evaluation rank k = L+1 = (2/ln 2 + o(1)) lnln x.  A' = 1.5, A'' = 48,
+C_0 = 2/ln 3 = 1.820478.  EA2 = e A'/2 = 2.038711.
+
+== T8. Endpoint demand ledger (the three endpoints; strength /
+==     uniformity / scale-density triple that SUFFICES) ==
+Downstream pigeonhole (7.2) closes at eps_REU = delta/4 = 1/8 with
+delta = 1/2 (A3.card, PROVED).  The pair coefficient c := Q/N-share.
+
+ endpoint        strength (on Q/N)     uniformity-in-s   scale-density
+ --------------  -------------------   ---------------   -------------
+ B2.pairs        c -> 0 (any eps>0);   one x_8(eps),     all large x
+  (baseline)     minimal that feeds    UNIFORM in s      (eventual)
+                 pigeonhole: c<1/16    (s inside x)
+                 (=(delta/2)^2), slack
+                 c=1/64=(delta/4)^2
+ CG              c<1 fixed (eta_s=1-c   NONE (eta_s may   SPARSE: one
+  (weakest)      >0); constant-order,   depend on s)      favorable x
+                 NOT c->0                                 per X, per s
+                                                          (liminf<1)
+ Contraction     per-class N_Pd <=      NONE (eta_s per   SPARSE:
+  (=>CG)         (1-kappa_P)N_P+1 on    fixed s)          unbounded
+                 ex-ante G, + saving                      scales per s
+                 sum kappa_P N_P>=eta_s N
+
+Demand order (weakest -> strongest): CG < Contraction < B2.pairs.
+CG does NOT consume: any s-uniform constant; any all-large-x claim;
+any global x-threshold; eps->0; MatchedFlankLower or RelExtensionUpper
+at integration time.  Contraction additionally does NOT consume the
+rho cap R = o(log x) (ANN-59: old proof device, not a logical
+requirement).  BOTH CG-routes DO consume item-0020's F/N -> 0 (SF).
+
+== T9. Separator re-pricing against CG (and Contraction). ==
+Question W4: does relaxing B2.pairs -> CG (drop eps->0, drop
+s-uniformity, drop all-large-x) reduce ANY separator's cost?
+Principle: a cost that depends on the tuple RANK m (set by the D0
+exchange geometry) is INVARIANT under the relaxation; only a cost
+that depends on strength/uniformity/scale-density can drop.
+
+-- T9.S3  Maynard-class bounded-gap input (anchored 1311.4600). --
+Fails in the barrier model (all model gaps -> infinity): genuine
+separator.  Cost to realize a SPECIFIED length-(L-1) matched-flank
+word twice with distinct middles = cluster/density loss at cluster
+size m ~ L: exp((1+o(1)) m ln m) (T6 M3(c); T1 class).  Rank m ~ L
+is D0-FORCED, independent of the endpoint's strength.
+x        m=L        expo[exp(m ln m)]   vs (G1)/(G2)
+1e8          8.407          6.143        SUPERPOLYLOG: FAILS (G1),(G2)
+1e20        11.050          6.932        SUPERPOLYLOG: FAILS (G1),(G2)
+1e100       15.694          7.944        SUPERPOLYLOG: FAILS (G1),(G2)
+1e1000      22.338          8.963        SUPERPOLYLOG: FAILS (G1),(G2)
+  -> same superpolylog class as the anchor T1 exp(k ln k) row
+     (expo ~ 2.885 lnlnln x).  Bounded-rank Maynard (fixed m) is
+     affordable but CANNOT realize a growing-length flank word, so
+     it never populates a D0-depth class with a twin.  The relaxation
+     to CG removes eps->0 / s-uniformity / all-large-x, NONE of which
+     is the binding cost: the binding cost is the rank m ~ L.
+     VERDICT: superpolylog rank cost STILL BINDING under CG.
+
+-- T9.S2  Second-moment gap statistic (Montgomery-Soundararajan; --
+   corpus tool nearest = Kuperberg 2210.09775, D1.b). --
+Fails in the model (Cramer-defying variance H log(N/H)).  Nearest
+corpus tool admits rank k_adm ~ (log h)^{1/2} at window h; the
+exchange needs k_req = (2/ln 2) lnln x at window h = A' L ln x.
+x        k_req      k_adm=(ln h)^0.5   ratio k_req/k_adm
+1e8          8.407          2.334            3.602
+1e20        11.050          2.576            4.289
+1e100       15.694          2.932            5.352
+1e1000      22.338          3.355            6.659
+  -> ratio ~ (lnln x)^{1/2} -> infinity: a REGIME square-out that is
+     independent of endpoint strength.  MS's own interval regime
+     N^delta <= H <= N^{1-delta} (H polynomial) does not even reach
+     the log-size middle window.  The constant-order demand of CG
+     does NOT close a regime gap.  VERDICT: regime-blocked under CG;
+     corpus-status gap (literature-only, not a word-grain tool)
+     also binding.
+
+-- T9.S1  Middle-slot equidistribution / upper-uniformity --
+   (NI-M2 class-equidistribution, NI-M4 word-grain mean value). --
+Fails in the model (model middle is rigid).  Its LOCAL cost is
+dimension-1: O(1) rho-algebra factors (M7), so it passes every
+budget -- the block is ABSENCE from the corpus, not cost.
+x        local-cost expo   carrier present?   CG effect
+1e8              0.000   NO (F20.4/F20.5)   weakens strength only
+1e20             0.000   NO (F20.4/F20.5)   weakens strength only
+1e100            0.000   NO (F20.4/F20.5)   weakens strength only
+1e1000           0.000   NO (F20.4/F20.5)   weakens strength only
+  -> expo 0 (affordable at every scale): the dimension-1 middle
+     law carries O(1) constants.  CG relaxes the DEMANDED strength
+     from full equidistribution (o(1) error) to constant-order
+     non-concentration on sparse scales per s -- a strictly weaker
+     target -- but does NOT manufacture the missing carrier.
+     VERDICT: right shape, absent from corpus; the weaker CG
+     variant is UNDECIDABLE at corpus grain.
+
+== T10. CG-route rule-12 landing: the F/N -> 0 (SF) onset. ==
+Every CG-route consumes item-0020 F(x,s)/N(x,s) -> 0.  The proved
+cap F <= cap_{J+K} beats the population comparator
+P_0(x) = x/(8 C_0 ln x) = x ln3/(16 ln x) only at astronomical x.
+D0 ceil-honest depths: D=ceil(13 C_0 A'' ln x), J=K=ceil(log2 D),
+r=2J, L=2J+1, M=floor(A' L ln x/2).  Displayed cap U = exp(cap_ln);
+proved binomial cap B = C(M,r).  Permanent crossover = last ln x
+with cap >= P_0 (D0 jumps cause temporary crossings then resets).
+  proved binomial cap C(M,r)             permanent cap<P_0 at ln x ~ 241.96 (x ~ 1e105.1)
+  displayed cap ((3e/4)(L/r)ln x)^r      permanent cap<P_0 at ln x ~ 245.34 (x ~ 1e106.5)
+  -> anchored audit values (ANN-20260724-62/63, independently
+     re-verified): proved binomial 1.20e105, displayed 3.53e106.
+     RULE-12 LANDING: the o(1) in F/N = x^{-1+o(1)} lands as an
+     ADDITIVE threshold shift (the ~1e105-1e106 onset), NOT as a
+     leading-coefficient coupling (anchor T3 landing row).  Hence
+     every CG-route is Eventually/Tendsto-extraction only, with no
+     concrete materialization in any reachable range.
+
+== T11. Pigeonhole-reserve (G3) check for a hypothetical S1 CG-proof. ==
+If S1 existed and drove constant-order non-concentration, the
+consumption would be the C3 reduction (B2.pairs=>REU) shape: NO k-
+or x-dependent constant (anchor T5 row (a): NONE).  Reserve after a
+constant-order C_F: ln x / C_F with C_F = O(1) is (ln x)^{1-o(1)}.
+x        reserve expo (C_F=O(1))    reserve expo (C_F=(ln x)^2, dead)
+1e8              1.000                expo -1: dead
+1e20             1.000                expo -1: dead
+1e100            1.000                expo -1: dead
+1e1000           1.000                expo -1: dead
+  -> a constant-order middle law leaves full reserve; the reserve
+     is never the binding constraint for S1.  S1's block is carrier
+     ABSENCE (T9.S1), not budget.  (An (abs)-route S1 with a per-
+     word sieve constant (ln x)^2-class is dead, as in the anchor.)
+
+END OF EXTENSION SHEETS
