@@ -2,7 +2,7 @@
 
 ## 1. The problem and how we study it
 
-Let $p_n$ denote the $n$-th prime. Erdős Problem 251 asks whether
+Let $`p_n`$ denote the $`n`$-th prime. Erdős Problem 251 asks whether
 
 $$
 S=\sum_{n\ge 1}\frac{p_n}{2^n}
@@ -12,7 +12,7 @@ is irrational. The series converges absolutely, but that elementary fact does no
 
 **Nothing in this project is an unconditional proof of the irrationality of** $`S`$.
 
-The project studies the problem through consecutive prime gaps. Write $g_n=p_{n+1}-p_n$ and introduce weighted tails of the gap sequence. If $S$ were rational, those tails would eventually satisfy strong binary lattice constraints. The basic strategy is therefore to find two long prime-gap configurations that agree on long flanks but differ locally in the middle. If the corresponding tails are small enough, the local difference is incompatible with the lattice forced by rationality.
+The project studies the problem through consecutive prime gaps. Write $`g_n=p_{n+1}-p_n`$ and introduce weighted tails of the gap sequence. If $`S`$ were rational, those tails would eventually satisfy strong binary lattice constraints. The basic strategy is therefore to find two long prime-gap configurations that agree on long flanks but differ locally in the middle. If the corresponding tails are small enough, the local difference is incompatible with the lattice forced by rationality.
 
 This point of view separates the problem into two parts: a deterministic arithmetic contradiction, which can be checked once the right gap configuration exists, and an analytic supply problem, which asks whether the primes actually produce enough such configurations.
 
@@ -56,7 +56,7 @@ S\notin\mathbb Z[1/2]
 }
 $$
 
-For a class $P$ of filtered sites with the same left and right gap flanks, let $N_P$ be the class size and let $N_{P,d}$ count members whose middle gap equals $d$. Define
+For a class $`P`$ of filtered sites with the same left and right gap flanks, let $`N_P`$ be the class size and let $`N_{P,d}`$ count members whose middle gap equals $`d`$. Define
 
 $$
 Q(x,s)=
@@ -75,13 +75,13 @@ Q(x,s)
 \lvert S_x^{\prime(s)}\rvert
 $$
 
-for every fixed $\varepsilon_{\mathrm{pair}}>0$, eventually in $x$, with one threshold that works uniformly in $s$. The proved reduction loses only a square root:
+for every fixed $`\varepsilon_{\mathrm{pair}}>0`$, eventually in $`x`$, with one threshold that works uniformly in $s$. The proved reduction loses only a square root:
 
 $$
 \varepsilon_{\mathrm{REU}} = \sqrt{\varepsilon_{\mathrm{pair}}}.
 $$
 
-The present exchange argument needs $\varepsilon_{\mathrm{REU}}=1/8$, so
+The present exchange argument needs $`\varepsilon_{\mathrm{REU}}=1/8`$, so
 
 $$
 \varepsilon_{\mathrm{pair}}=\frac1{64}
@@ -105,17 +105,17 @@ S\ne\frac{a}{2^s}
 \text{for all }a\in\mathbb Z,\ s\ge0.
 $$
 
-This is a natural first denominator class because the series itself is built from the binary weights $2^{-n}$. For a hypothetical dyadic value, repeated shifting eventually removes the denominator completely and places the weighted tails on the cleanest possible binary lattice. The present exchange theorem is designed exactly for that case.
+This is a natural first denominator class because the series itself is built from the binary weights $`2^{-n}`$. For a hypothetical dyadic value, repeated shifting eventually removes the denominator completely and places the weighted tails on the cleanest possible binary lattice. The present exchange theorem is designed exactly for that case.
 
 More importantly, this step separates two difficulties that are currently entangled in the full irrationality problem. The first is the **prime-distribution problem**: do the actual primes supply matching long flanks with enough variation in the middle while satisfying the required tail filters? The second is the **denominator-uniformity problem**: can the quantitative lattice gate be made strong enough to absorb an arbitrary fixed odd denominator part?
 
-A proof of `B2.pairs` would settle the first question for the current exchange architecture at the dyadic level. The remaining obstacle to full irrationality would then be much more sharply identified: strengthen the quantitative exchange supply so that the argument works not only for denominator $2^s$, but for
+A proof of `B2.pairs` would settle the first question for the current exchange architecture at the dyadic level. The remaining obstacle to full irrationality would then be much more sharply identified: strengthen the quantitative exchange supply so that the argument works not only for denominator $`2^s`$, but for
 
 $$
 2^s b
 $$
 
-with arbitrary fixed odd $b$.
+with arbitrary fixed odd $`b`$.
 
 So the value of `B2.pairs` is not that dyadic rationals are somehow “almost all” rationals; they are not. Its value is structural: it would show that the new unconditional mechanism genuinely works for the primes and would isolate the next missing quantitative step.
 
@@ -133,7 +133,7 @@ These two routes are **not consecutive stages of one implication**. The strong c
 
 They are nevertheless closely related because they share the same arithmetic core.
 
-In both routes, a hypothetical rational value of $S$ forces a binary lattice structure on weighted prime-gap tails. A long common prefix of two gap configurations then quantizes the difference of the corresponding tails. A controlled local difference in the middle, together with matching behavior afterward and sufficiently small end tails, forces a contradiction with that lattice.
+In both routes, a hypothetical rational value of $`S`$ forces a binary lattice structure on weighted prime-gap tails. A long common prefix of two gap configurations then quantizes the difference of the corresponding tails. A controlled local difference in the middle, together with matching behavior afterward and sufficiently small end tails, forces a contradiction with that lattice.
 
 What differs is the local configuration and the way it is supplied.
 
@@ -167,9 +167,9 @@ This explains the role of the conditional theorem. It validates the underlying f
 
 The main difficulty is that matching long flanks strongly conditions the middle gap. One cannot simply treat the middle as an independent random prime gap.
 
-An earlier target used an unnormalized count of repeated full words. That condition is actually false in the relevant asymptotic regime: the number of possible words grows only like $x^{o(1)}$, while the retained site population is $x^{1-o(1)}$. Large classes are therefore unavoidable, and raw ordered-pair counts grow quadratically with class size.
+An earlier target used an unnormalized count of repeated full words. That condition is actually false in the relevant asymptotic regime: the number of possible words grows only like $`x^{o(1)}`$, while the retained site population is $`x^{1-o(1)}`$. Large classes are therefore unavoidable, and raw ordered-pair counts grow quadratically with class size.
 
-`B2.pairs` removes exactly this distortion by dividing the within-class pair count by $N_P$:
+`B2.pairs` removes exactly this distortion by dividing the within-class pair count by $`N_P`$:
 
 $$
 \frac{1}{N_P}
@@ -180,17 +180,17 @@ Singleton middle cells contribute nothing, and very large flank classes are put 
 
 There is also a proved scoped barrier. The identities, capacity bounds, retention estimates, Chebyshev/PNT information, and current parameter arithmetic are compatible with an explicit smooth-gap model in which matching flanks make the middle gap almost rigid. In that model, both `B2.pairs` and `RelExtensionUpper` fail.
 
-Therefore the existing identity-and-capacity layer alone cannot prove the target. Any successful proof must use additional information about the primes that fails in the smooth model. The most visible missing input is genuine distributional control of the middle gap after conditioning on long left and right flanks, at a word rank of order $\log{}\log{} x$.
+Therefore the existing identity-and-capacity layer alone cannot prove the target. Any successful proof must use additional information about the primes that fails in the smooth model. The most visible missing input is genuine distributional control of the middle gap after conditioning on long left and right flanks, at a word rank of order $`\log{}\log{} x`$.
 
-That is a delicate regime. Pointwise equidistribution statements are generally too strong when individual classes are small, while ordinary per-word sieve estimates can lose constants that grow too quickly with the rank. The required statement must instead be averaged, class-normalized, uniform in the filter parameter, and strong enough to reach the explicit $1/64$ consumption point.
+That is a delicate regime. Pointwise equidistribution statements are generally too strong when individual classes are small, while ordinary per-word sieve estimates can lose constants that grow too quickly with the rank. The required statement must instead be averaged, class-normalized, uniform in the filter parameter, and strong enough to reach the explicit $`1/64`$ consumption point.
 
 ## 6. What we plan to do next
 
 The primary analytic target is to prove `B2.pairs`, or a different statement that implies `RelExtensionUpper` with the required constant. The two most concrete directions are to obtain class-level distributional control of the middle gap after conditioning on matching flanks, or to prove a word-grain mean-value or dispersion estimate that controls the normalized ordered-pair statistic directly without paying a prohibitive rank-dependent constant.
 
-Computationally, the next useful measurements are not merely larger prime censuses. We want the full statistic $Q(x,s)$ resolved by class size, middle multiplicity, and arithmetic alignment. These data cannot prove the asymptotic statement, but they can show where the $1/64$ budget is actually lost and help distinguish a bulk phenomenon from a small exceptional family.
+Computationally, the next useful measurements are not merely larger prime censuses. We want the full statistic $`Q(x,s)`$ resolved by class size, middle multiplicity, and arithmetic alignment. These data cannot prove the asymptotic statement, but they can show where the $`1/64`$ budget is actually lost and help distinguish a bulk phenomenon from a small exceptional family.
 
-In parallel, the denominator-uniformity problem should be kept explicit. Once a dyadic exchange supply is available, the natural strengthening is to gain enough quantitative slack in the lattice gate to absorb every fixed odd denominator part $b$. A condition of the schematic form
+In parallel, the denominator-uniformity problem should be kept explicit. Once a dyadic exchange supply is available, the natural strengthening is to gain enough quantitative slack in the lattice gate to absorb every fixed odd denominator part $`b`$. A condition of the schematic form
 
 $$
 \frac{D}{2^J}\longrightarrow0
