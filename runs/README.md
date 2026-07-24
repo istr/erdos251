@@ -165,3 +165,21 @@ Rules:
     pin (item-0018 M1: stale duplicated predicate, rule 17;
     item-0018 M2: Section-0 pin vs ANN-54 presence, report O3 --
     second recurrence, both resolved correctly by the runs).
+19. Primary-anchor authoring (2026-07-24). Prose that will land in a
+    committed artifact -- statement text, public exposition, or a
+    byte-exact block inside a dispatch -- and any finding asserted
+    about such an artifact, is authored against the primary anchor,
+    with the governing sentence quoted verbatim in the authoring turn.
+    A ledger entry, a review finding, a repair log, or a hand-off
+    message may direct attention to a claim; it may never be the
+    source of its wording or the evidence for its state. Summaries
+    drop scope qualifiers, and a dropped qualifier is
+    indistinguishable from a strengthened claim. The gate is
+    mechanical: the authoring turn must contain the quote, so a
+    reviewer can check the wording against its source without
+    re-deriving it. Provenance: item-0010 R1/R2 chain, six steering
+    errors -- two findings asserted from executor hand-off text that
+    the artifacts contradicted, and four wordings authored from
+    ledger notes or reviewer summaries, of which the public
+    "weakest currently known sufficient endpoint" sentence dropped
+    exactly the qualifier standing in collision-gap-audit.md:39.
