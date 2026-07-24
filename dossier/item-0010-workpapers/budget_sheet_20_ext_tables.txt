@@ -6,6 +6,20 @@ ln F = o(ln x).  (G3) pigeonhole reserve: ln x / C_F must survive.
 Evaluation rank k = L+1 = (2/ln 2 + o(1)) lnln x.  A' = 1.5, A'' = 48,
 C_0 = 2/ln 3 = 1.820478.  EA2 = e A'/2 = 2.038711.
 
+L-CONVENTION (disclosure, B7; anchor budget_sheet_20.py (m)/(p) split):
+L is the GRID surrogate L = (2/ln2) lnln x (anchor tag (m): 'the grid
+convention; NOT the proof condition').  The D0-EXACT proof depth is
+L = 2J+1, J = ceil(log2(ceil(13 C_0 A'' ln x))) (anchor tag (p),
+shipped as L_ceil).  Grid vs exact L on the grid (surrogate factor):
+  1e8     grid L =   8.41   exact L = 2J+1 =  31   factor 3.69
+  1e20    grid L =  11.05   exact L = 2J+1 =  33   factor 2.99
+  1e100   grid L =  15.69   exact L = 2J+1 =  37   factor 2.36
+  1e1000  grid L =  22.34   exact L = 2J+1 =  45   factor 2.01
+Blocks pricing on grid L: T9.S3 (m=L, cost L ln L) and T9.S2 (k_req =
+grid L, window h = A' L ln x).  T10 uses the ceil-honest depths()
+(exact).  This pass DISCLOSES only; it does NOT switch to L_ceil
+(deferred to a later dispatch).
+
 == T8. Endpoint demand ledger (the three endpoints; strength /
 ==     uniformity / scale-density triple that SUFFICES) ==
 Downstream pigeonhole (7.2) closes at eps_REU = delta/4 = 1/8 with
@@ -47,6 +61,9 @@ separator.  Cost to realize a SPECIFIED length-(L-1) matched-flank
 word twice with distinct middles = cluster/density loss at cluster
 size m ~ L: exp((1+o(1)) m ln m) (T6 M3(c); T1 class).  Rank m ~ L
 is D0-FORCED, independent of the endpoint's strength.
+[B7: m=L below is the GRID surrogate L; the D0-exact rank m ~ 2J+1
+ is larger (factor ~3.7x..2.0x), so this understates the superpolylog
+ cost -- the STILL-BINDING verdict is unaffected.]
 x        m=L        expo[exp(m ln m)]   vs (G1)/(G2)
 1e8          8.407          6.143        SUPERPOLYLOG: FAILS (G1); PASSES (G2): cost x^{o(1)}
 1e20        11.050          6.932        SUPERPOLYLOG: FAILS (G1); PASSES (G2): cost x^{o(1)}
@@ -69,6 +86,9 @@ x        m=L        expo[exp(m ln m)]   vs (G1)/(G2)
 Fails in the model (Cramer-defying variance H log(N/H)).  Nearest
 corpus tool admits rank k_adm ~ (log h)^{1/2} at window h; the
 exchange needs k_req = (2/ln 2) lnln x at window h = A' L ln x.
+[B7: k_req = grid L and h = A' L ln x use the GRID surrogate L; the
+ D0-exact L = 2J+1 is larger, widening k_req/k_adm -- the regime
+ square-out is only strengthened, verdict unaffected.]
 x        k_req      k_adm=(ln h)^0.5   ratio k_req/k_adm
 1e8          8.407          2.334            3.602
 1e20        11.050          2.576            4.289
@@ -84,21 +104,43 @@ x        k_req      k_adm=(ln h)^0.5   ratio k_req/k_adm
 
 -- T9.S1  Middle-slot equidistribution / upper-uniformity --
    (NI-M2 class-equidistribution, NI-M4 word-grain mean value). --
-Fails in the model (model middle is rigid).  Its LOCAL cost is
-dimension-1: O(1) rho-algebra factors (M7), so it passes every
-budget -- the block is ABSENCE from the corpus, not cost.
-x        local-cost expo   carrier present?   CG effect
-1e8              0.000   NO (F20.4/F20.5)   weakens strength only
-1e20             0.000   NO (F20.4/F20.5)   weakens strength only
-1e100            0.000   NO (F20.4/F20.5)   weakens strength only
-1e1000           0.000   NO (F20.4/F20.5)   weakens strength only
-  -> expo 0 (affordable at every scale): the dimension-1 middle
-     law carries O(1) constants.  CG relaxes the DEMANDED strength
-     from full equidistribution (o(1) error) to constant-order
-     non-concentration on sparse scales per s -- a strictly weaker
-     target -- but does NOT manufacture the missing carrier.
-     VERDICT: right shape, absent from corpus; the weaker CG
-     variant is UNDECIDABLE at corpus grain.
+Fails in the model (model middle is rigid).
+[B5 repair: the prior draft priced this row at local-cost expo 0.000
+ and read it as 'passes every budget, ABSENCE not cost'.  That
+ conflated the bounded PER-INSERT rho factor with the CUMULATIVE
+ ALIGNED cost.  Split three ways against its own anchor:]
+(1) PROVED pointwise aligned envelope.  The worst-case singular-
+    series factor over CRT-aligned in-window middles is
+    sup rho = (ln x)^{1-o(1)} (POLYLOG, expo -> 1; relext-statements
+    RS.3 l.270 / l.1303, PROVED-DOSSIER), (G1)-FAILING at finite
+    scales.  Anchored witnesses (relext-statements T4 l.783-785,
+    MEASURED; exact-factor product p < 1e6):
+      depth     rho        (ln x)-expo
+      1e8        82.24      1.514
+      1e20      221.66      1.410
+      1e1000   1060.34      0.900   (expo descends toward 1 from above)
+(2) HEURISTIC typical mean.  The Gallagher-frame even-conditioned
+    d-mean of rho is 2 (HEURISTIC at growing k; U18.2,
+    relext-statements l.277-280) -- a heuristic, not a proved cost.
+(3) OPEN averaged carrier and cost.  Dimension-1 supplies only the
+    bounded PER-INSERT rho factor (M7); averaging rho away to a
+    proved bounded CUMULATIVE cost needs NI-M2/NI-M4, ABSENT from
+    the corpus (F20.4/F20.5) -- the very carrier S1 is recorded as
+    lacking.
+component            grade         budget status
+pointwise envelope   PROVED-DOSS   expo -> 1: (G1)-FAILS (polylog)
+typical mean = 2     HEURISTIC     not a proved cost
+averaged carrier     OPEN          ABSENT (F20.4/F20.5)
+  -> CG relaxes the DEMANDED strength (full equidistribution, o(1)
+     error -> constant-order non-concentration on sparse scales per
+     s -- strictly weaker) but neither manufactures the missing
+     averaged carrier nor cancels the polylog pointwise aligned
+     cost.  So the block is NOT 'passes every budget' and NOT
+     'absence rather than cost': the aligned cumulative cost is
+     polylog ((G1)-failing) UNLESS the absent NI-M2/NI-M4 carrier
+     supplies the averaging.  VERDICT: S1 OPEN -- right shape,
+     carrier absent, aligned cost polylog; UNDECIDABLE at corpus
+     grain under CG.
 
 == T10. CG-route rule-12 landing: the F/N -> 0 (SF) onset. ==
 Every CG-route consumes item-0020 F(x,s)/N(x,s) -> 0.  The proved
@@ -128,9 +170,11 @@ x        reserve expo (C_F=O(1))    reserve expo (C_F=(ln x)^2, dead)
 1e20             1.000                expo -1: dead
 1e100            1.000                expo -1: dead
 1e1000           1.000                expo -1: dead
-  -> a constant-order middle law leaves full reserve; the reserve
-     is never the binding constraint for S1.  S1's block is carrier
-     ABSENCE (T9.S1), not budget.  (An (abs)-route S1 with a per-
-     word sieve constant (ln x)^2-class is dead, as in the anchor.)
+  -> a constant-order middle law leaves full reserve; the (G3)
+     reserve is never S1's binding constraint.  S1's block is the
+     absent averaged carrier TOGETHER WITH the polylog pointwise
+     aligned cost against (G1) (T9.S1, B5), not the (G3) reserve.
+     (An (abs)-route S1 with a per-word sieve constant (ln x)^2-
+     class is dead, as in the anchor.)
 
 END OF EXTENSION SHEETS

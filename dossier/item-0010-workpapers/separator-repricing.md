@@ -292,7 +292,7 @@ becomes affordable under the weaker endpoints.
 
 The verdict of W6 adjudicates the primary hypothesis H-SEP. Because the
 commissioning kickoff was ephemeral (operator-supplied, never
-committed), H-SEP is stated here verbatim, so the CONFIRMED verdict is
+committed), H-SEP is stated here verbatim, so the verdict is
 checkable against a fixed object.
 
 **(1) H-SEP as dispatched** (byte-exact):
@@ -339,10 +339,11 @@ adjudicates form 2, not form 1:
   `relext-statements` D3(ii)). So the separator is stated at the
   `HLQuantA` **rank**, not "of `HLQuantA` shape."
 
-The CONFIRMED verdict of W6 adjudicates H-SEP\* (obstruction upgrade to
-`CG`, middle-slot the salient family); it does **not** certify the
-dispatched form 1's shape-necessity. Form 2 is not presented as what was
-asked -- it is the repaired object the evidence supports.
+The W6 verdict adjudicates H-SEP\* by component (the `CG` barrier
+inherited from `collision-gap-audit.md` l.752, not upgraded here;
+middle-slot the salient family); it does **not** certify the dispatched
+form 1's shape-necessity. Form 2 is not presented as what was asked -- it
+is the repaired object the evidence supports.
 
 `proofs.md` C4 SCOPE names three separator families -- inputs outside
 $`T`$ that fail in the model. Each is re-priced against `CG` and
@@ -443,16 +444,40 @@ So the *named* S2 tool does not survive re-pricing (regime-blocked,
 Recorded absent from the corpus. Does the constant-order demand of `CG`
 admit a **weaker** member of this family than `NI-M2` in full?
 
-Yes, in strength -- but the carrier is still absent. `NI-M2` (class
-equidistribution at rank $`k`$) and `NI-M4` (word-grain upper mean
-value at rank $`k`$) are the salient middle-slot inputs; their
-**local** cost is dimension-1, $`O(1)`$ $`\rho`$-algebra factors
-(M7), so they clear every budget -- `budget_sheet_20_ext.py` T9.S1 marks
-their exponent $`0`$ at every scale. The block is **absence**, not
-cost (F20.4/F20.5, recorded obstructions). `CG` genuinely weakens the
-**demanded strength**: from full equidistribution (error $`o(1)`$,
-driving $`Q/N\to0`$) to constant-order middle non-concentration on
-sparse scales per $`s`$ ($`Q/N\le1-\eta_s`$ on a $`\liminf`$
+Yes, in strength -- but the carrier is still absent, and the earlier
+"clears every budget" pricing was wrong. `NI-M2` (class equidistribution
+at rank $`k`$) and `NI-M4` (word-grain upper mean value at rank $`k`$)
+are the salient middle-slot inputs. [audit repair B5: the draft priced
+their cost at dimension-1 $`O(1)`$ $`\rho`$-algebra factors (M7) and read
+$`\rho`$'s contribution as exponent $`0`$, "clears every budget, absence
+not cost". That conflated the bounded **per-insert** $`\rho`$ factor with
+the **cumulative aligned** cost. The row splits three ways against its
+own anchor:]
+
+1. **Proved pointwise aligned envelope.** The worst-case singular-series
+   factor over CRT-aligned in-window middles is
+   $`\sup\rho=(\ln{}x)^{1-o(1)}`$ (polylog, exponent $`\to1`$;
+   `relext-statements` RS.3 l.270 / l.1303, `PROVED-DOSSIER`), which is
+   **(G1)-failing at finite scales**: anchored witnesses $`\rho=82.24`$
+   at exponent $`1.514`$ ($`10^8`$), $`\rho=221.66`$ at $`1.410`$
+   ($`10^{20}`$), $`\rho=1060.34`$ at $`0.900`$ ($`10^{1000}`$)
+   (`relext-statements` T4 l.783--785, `MEASURED`).
+2. **Heuristic typical mean.** The Gallagher-frame even-conditioned
+   $`d`$-mean of $`\rho`$ is $`2`$ (`HEURISTIC` at growing $`k`$; U18.2,
+   `relext-statements` l.277--280) -- a heuristic, not a proved cost.
+3. **Open averaged carrier and cost.** Dimension-1 supplies only the
+   bounded per-insert $`\rho`$ factor (M7); averaging $`\rho`$ away to a
+   proved bounded cumulative cost needs `NI-M2`/`NI-M4`, **absent** from
+   the corpus (F20.4/F20.5) -- the very carrier S1 is recorded as
+   lacking.
+
+So the block is **not** "clears every budget" and **not** "absence
+rather than cost": the aligned cumulative cost is polylog, hence
+(G1)-failing, unless the absent `NI-M2`/`NI-M4` carrier supplies the
+averaging (`budget_sheet_20_ext.py` T9.S1, regenerated). `CG` genuinely
+weakens the **demanded strength**: from full equidistribution (error
+$`o(1)`$, driving $`Q/N\to0`$) to constant-order middle non-concentration
+on sparse scales per $`s`$ ($`Q/N\le1-\eta_s`$ on a $`\liminf`$
 sequence). That target is strictly weaker; whether it is provable is
 **not decidable from the corpus** -- no averaged middle-slot
 non-concentration statement at rank $`k\sim2.885\,\ln\ln{}x`$ exists
@@ -590,19 +615,33 @@ constraint; its absence is.
 
 Support class on every clause; rule-16(a) clause-vs-body diff run below.
 
-**Primary hypothesis H-SEP: CONFIRMED (obstruction upgrade).**
-[`PROVED-DOSSIER` for the S3 negative, the *named*-S2-tool regime
-square-out (`PROVED`), and the barrier ($`Q/N\to1`$ a genuine limit,
-**with U20.5 write-out debt**); the **S1 and the
-S2-substitute-existence** components are
-`OPEN`/undecidable-at-corpus-grain, named. Adjudicates H-SEP\* (W4.0):
-middle-slot the salient, not the necessary, family.]
+**Primary hypothesis H-SEP\*: adjudicated by component (no single
+composite grade).** [The barrier -- `CG` false in the even-Cramer-smooth
+model, so any proof of `CG` consumes an input outside $`T`$ that fails in
+the model -- is `PROVED-DOSSIER` **with U20.5 write-out debt** and is
+**inherited** from `collision-gap-audit.md` l.752 (it predates this
+audit; this audit did not upgrade it, repair B1). What this audit
+contributes is the separator dispositions against the weakened endpoints,
+on top of that already-available barrier, graded individually: the
+*named*-S2-tool regime square-out `PROVED`; the S3 rank-cost negative
+`PROVED-DOSSIER` (its survival is a reviewer disagreement deferred to
+Dispatch C, not re-adjudicated here); the `U20.4` sweep hits
+`PROVED-DOSSIER` non-viable; the **S1** and **S2-substitute-existence**
+components `OPEN`/undecidable-at-corpus-grain. Adjudicates H-SEP\*
+(W4.0): middle-slot the salient, not the necessary, family; the
+dispatched form 1 (shape-necessity) is not certified. A single composite
+word over sub-cases of mixed grade is withheld deliberately, repair B6.]
 
 1. Against the weakest currently known sufficient endpoint `CG` (and its
    strengthening, the contraction endpoint), and after adjoining the
    named separator inventory $`\lbrace S1,S2,S3\rbrace`$ plus the `U20.4` sweep
-   to the tool list, **no separator in the anchored corpus survives
-   re-pricing** as a live candidate with a sheet-clean rule-15 ledger:
+   to the tool list, **no separator in the displayed named inventory
+   $`\lbrace S1,S2,S3\rbrace`$, nor in the representative `U20.4`
+   categories actually dispositioned, survives re-pricing** as a live
+   candidate with a sheet-clean rule-15 ledger (this is **not** a
+   universal over the anchored shelf: the `U20.4` sweep was a
+   representative selection, not a per-row enumeration -- audit repair
+   B3):
    - S3 (Maynard bounded gaps) fails on a **rank** cost
      $`\exp((1+o(1))m\ln{}m)`$, $`m\sim L`$, which is invariant
      under the `B2.pairs`->`CG` relaxation because the relaxation touches
@@ -620,39 +659,40 @@ middle-slot the salient, not the necessary, family.]
    - S1 (middle-slot equidistribution / upper-uniformity, `NI-M2`/`NI-M4`)
      is the **right shape** -- a middle-slot distributional input at the
      `HLQuantA` rank $`k\sim2.885\,\ln\ln{}x`$, carrying the upper /
-     equidistribution content the frozen lower-bound `HLQuantA` lacks --
-     and is **absent** from the corpus; `CG` weakens the demanded
-     strength (constant-order non-concentration on sparse scales per
-     $`s`$) but does not manufacture the carrier, so the re-pricing is
-     **undecidable at corpus grain** [`OPEN`; deciding fact named in
-     W4.S1].
-2. Therefore the located obstruction **upgrades**: from "relative to
-   $`T`$, for `B2.pairs`" to **"relative to $`T`$ together with the
-   named separator inventory, for `CG`, the weakest currently known
-   sufficient endpoint."** Any proof of `CG` must consume an input
-   **outside $`T`$ that fails in the model** (the barrier's own
-   characterization; `proofs.md` C4 STATEMENT: "the characterization is
-   failure-in-model, not middle-slot-ness"). The **salient**, and only
-   currently identified such family **whose obstruction is
-   absence-of-carrier rather than cost or regime**, is the
-   middle-slot distributional statements at rank
-   $`k\sim2.885\,\ln\ln{}x`$ -- the upper / equidistribution companion,
-   at the `HLQuantA` rank but beyond its lower-bound content, of the
-   uniform-tuple input the conditional full-irrationality route assumes.
-   S3 (Maynard `1311.4600`) and S2 (Montgomery--Soundararajan /
-   Kuperberg) are currently-identified failure-in-model inputs at the
-   exchange rank too; they are excluded here explicitly because their
-   obstruction is **cost** (S3, the $`D0`$-forced rank) and **regime**
-   (S2, the square-out), not absence-of-carrier -- not by "at the
-   exchange rank" [`assessment`; the sub-clauses carry the classes above.
-   audit repair R2: "only currently identified ... at the exchange rank"
-   over-reached -- `proofs.md` C4 SCOPE names Maynard `1311.4600` as a
-   failure-in-model input priced at the exchange rank $`m\sim L`$
-   (W4.S3), so "at the exchange rank" does not do the excluding work;
-   narrowed to the absence-of-carrier qualifier. audit repair (in-run):
-   "requires precisely a middle-slot input" / "HLQuantA-shape"
-   over-strengthened the barrier; softened to salient-family +
-   failure-in-model].
+     equidistribution content the frozen lower-bound `HLQuantA` lacks. Its
+     pointwise aligned cost is itself polylog
+     ($`\sup\rho=(\ln{}x)^{1-o(1)}`$, (G1)-failing; W4.S1 (1)), and the
+     averaged carrier that would tame it is **absent** from the corpus
+     (W4.S1 (3)); `CG` weakens the demanded strength (constant-order
+     non-concentration on sparse scales per $`s`$) but manufactures
+     neither, so the re-pricing is **undecidable at corpus grain**
+     [`OPEN`; three-way split and deciding fact in W4.S1; audit repair
+     B5].
+2. The barrier is **inherited, not upgraded here**: `collision-gap-audit.md`
+   l.752 already records, `PROVED-DOSSIER` (with U20.5 write-out debt),
+   that `CG` is false in the even-Cramer-smooth model, so any proof of
+   `CG` must consume an input **outside $`T`$ that fails in the model**
+   (the barrier's own characterization; `proofs.md` C4 STATEMENT: "the
+   characterization is failure-in-model, not middle-slot-ness"). This
+   audit does not enlarge that barrier; its contribution is to
+   **disposition the named separator inventory against the weakened
+   endpoints on top of it** -- S3 `PROVED-DOSSIER`, the named-S2 tool
+   `PROVED`, S1 and the S2-substitute leg `OPEN`, the `U20.4` hits
+   `PROVED-DOSSIER` non-viable (clause 1). The **salient** such
+   failure-in-model family is the middle-slot distributional statements
+   at rank $`k\sim2.885\,\ln\ln{}x`$ -- the upper / equidistribution
+   companion, at the `HLQuantA` rank but beyond its lower-bound content,
+   of the uniform-tuple input the conditional full-irrationality route
+   assumes. It is stated as **salient only**, not as the unique
+   absence-of-carrier family: S2's open word-grain **substitute** leg
+   (clause 1, W4.S2) is itself an absence-of-carrier case beside S1, so
+   no exclusivity is claimed [audit repair B4: the previous pass narrowed
+   "only currently identified" to "absence-of-carrier rather than cost or
+   regime", but after the R3 S2 split that qualifier no longer excludes
+   the S2-substitute leg; the exclusivity is dropped, and nothing
+   downstream consumes it. The prior in-run/R2 softenings of "requires
+   precisely a middle-slot input" / "HLQuantA-shape" to salient-family +
+   failure-in-model stand].
 3. The `U20.4` sweep (a representative selection, not a per-row
    enumeration of the shelf) returns **several** $`T`$-external
    model-failing corpus facts, **all non-viable**: Ford--Green--
@@ -684,10 +724,17 @@ middle-slot the salient, not the necessary, family.]
    obstruction relative to a named inventory**, not an impossibility
    theorem; no endpoint is claimed unprovable. `CG` remains the
    recommended proof-campaign target; the re-pricing shows only that its
-   proof must still consume an input that fails in the
-   even-Cramer-smooth model and is absent from the corpus -- the salient
-   such family being the middle-slot distributional inputs at the
-   exchange rank.
+   proof must consume an input **outside $`T`$ that fails in the
+   even-Cramer-smooth model** (the criterion of W3.1: $`T`$-external and
+   false in the model -- corpus absence is **not** part of the
+   criterion). The salient such family is the middle-slot distributional
+   inputs at the exchange rank; that this carrier is presently **absent
+   from the corpus** is the current status of that salient family, not a
+   condition imposed on every proof [audit repair B2: the draft made
+   corpus absence a necessity clause, whereas W3.1's criterion requires
+   only $`T`$-external + failure-in-model, and the inventory itself names
+   corpus-present, $`T`$-external, model-failing inputs (S3, the named
+   S2 tool)].
 
 ### rule-16(a) clause-vs-body diff (re-run after the R1--R11 repairs)
 
@@ -708,9 +755,41 @@ strengthenings were live and it caught none of them. What it missed:
   `PROVED-DOSSIER`, one grade above its F20.5 `RECORDED` anchor
   (`m5-lite-audit.md` l.752; `collision-gap-audit.md` l.750).
 
-These are repaired above; the diff below is re-run against the repaired
-verdict, and is not a quiet re-certification. Every scope qualifier of
-the body now survives into the verdict verbatim:
+**Correction to the R1--R11 certification (B-repair pass; R2 review
+findings).** The re-run diff below the R6 block was itself printed with a
+"no verdict clause strengthens a body support class" certification. Two
+independent cross-family reviews show that certification was **also
+inaccurate**: it was issued while six further defects were live and
+caught none of them. What it missed:
+
+- (B1) verdict clause 2 claimed the located obstruction **upgrades**,
+  crediting this audit with the `CG` barrier that `collision-gap-audit.md`
+  l.752 already records (`PROVED-DOSSIER`, predating this audit);
+- (B2) verdict clause 5 and the headline bracket made **corpus absence a
+  necessity** on every proof ("...fails in the model and is absent from
+  the corpus"), whereas W3.1's own criterion requires only $`T`$-external
+  + failure-in-model, and the inventory itself names corpus-present such
+  inputs (S3, the named S2 tool);
+- (B3) verdict clause 1 still read "**no separator in the anchored
+  corpus survives**", a universal over the shelf that a representative
+  `U20.4` selection cannot certify;
+- (B4) verdict clause 2 retained the "**only currently identified ...
+  absence-of-carrier rather than cost or regime**" exclusivity, which
+  after the R3 S2 split no longer excludes the S2-substitute leg (itself
+  absence-of-carrier);
+- (B5) W4.S1 / sheet T9.S1 priced S1 at "clears every budget, absence
+  not cost", **conflating the bounded per-insert $`\rho`$ factor with the
+  polylog cumulative aligned cost** ($`\sup\rho=(\ln{}x)^{1-o(1)}`$,
+  `relext-statements` l.270 / l.1303);
+- (B6) the headline aggregated a **single composite** `CONFIRMED` over
+  sub-cases of mixed grade (barrier `PROVED-DOSSIER`, named-S2 `PROVED`,
+  S1 / S2-substitute `OPEN`).
+
+Both the R6 items and these six B items are repaired above. The diff
+below is re-run against the B-repaired verdict; like the R6 correction it
+is **not** a quiet re-certification -- each missed item is named with its
+live location. Every scope qualifier of the body now survives into the
+verdict verbatim:
 
 - "weakest currently known sufficient endpoint" -- body W2.4, verdict 1/2.
 - "invariant under the relaxation ... never the $`D0`$-forced rank" --
@@ -724,12 +803,23 @@ the body now survives into the verdict verbatim:
   identically in both. The "at-the-`HLQuantA`-rank, beyond its content"
   qualifier (not "of `HLQuantA` shape") is carried identically in W4.0,
   body W4.S1, and verdict 1/2.
-- "salient, and only currently identified such family **whose
-  obstruction is absence-of-carrier rather than cost or regime**" --
-  body W4.S1 + W4.0, verdict 2; S3 (cost) and S2 (regime) are excluded
-  explicitly, not by "at the exchange rank". (This records the added
-  "only currently identified" words the pre-repair diff omitted, now
-  reconciled by the R2 narrowing.)
+- "salient only" -- body W4.S1 + W4.0, verdict 2. The prior "only
+  currently identified ... absence-of-carrier rather than cost or regime"
+  exclusivity is **dropped** (audit repair B4): after the R3 S2 split,
+  S2's open word-grain substitute leg is itself an absence-of-carrier
+  case beside S1, so the qualifier no longer excludes it. Nothing
+  downstream consumes exclusivity; the salience claim alone carries the
+  verdict.
+- "the proof must consume an input outside $`T`$ that fails in the
+  model" -- body W3.1 criterion, verdict 5; **corpus absence removed as a
+  necessity** (audit repair B2) and restated as the present status of the
+  salient carrier only (S3 and the named S2 tool are corpus-present,
+  $`T`$-external, model-failing).
+- "the barrier is inherited, not upgraded here" -- body W3.1 / headline,
+  verdict 2 (audit repair B1): the `CG` barrier is
+  `collision-gap-audit.md` l.752, predating this audit; the verdict no
+  longer credits this audit with an "upgrade", and states its actual
+  contribution (the separator dispositions on top of the barrier).
 - "failure-in-model is the characterization, middle-slot the salient
   family" -- body W4.0 / W4.S1 / W3.1, verdict 2/5 (quote `proofs.md`
   C4 STATEMENT; not "requires precisely middle-slot").
@@ -745,7 +835,14 @@ the body now survives into the verdict verbatim:
   `PROVED` regime square-out, and the S3 `PROVED-DOSSIER` negative are
   carried without promotion. The earlier blanket "S2 `PROVED-DOSSIER`"
   over-grade and the dropped "U20.5 write-out debt" qualifier are
-  removed.
+  removed. The B-pass additionally removes: the "obstruction upgrades"
+  credit (B1, now "barrier inherited"); the "absent from the corpus"
+  necessity (B2, now carrier status only); the "anchored corpus"
+  universal (B3, now the displayed inventory + the representative
+  `U20.4` categories); the residual absence-of-carrier exclusivity (B4,
+  dropped); the S1 "clears every budget / absence not cost" mispricing
+  (B5, now the three-way split with a polylog pointwise envelope); and
+  the single composite headline grade (B6, componentized).
 
 ---
 
@@ -805,8 +902,11 @@ SUSTAINED and repaired in place (marked "[audit repair]" inline):
   verdict 2, verdict 5, and the rule-16(a) diff now state
   failure-in-model as the characterization, middle-slot as the salient
   family, and the separator as at the `HLQuantA` **rank** but **beyond**
-  its lower-bound content. The H-SEP verdict (CONFIRMED / obstruction
-  upgrade) is unchanged in substance. [repair R2: this in-run removal was
+  its lower-bound content. The H-SEP verdict (then stated CONFIRMED /
+  obstruction upgrade) is unchanged in substance [B-pass: the composite
+  CONFIRMED is now componentized (B6) and the "obstruction upgrade"
+  credit removed as inherited (B1); the substance -- barrier applies,
+  middle-slot salient -- is unchanged]. [repair R2: this in-run removal was
   **incomplete** -- it softened the headline "requires precisely" form
   but left a residual "and only currently identified ... at the exchange
   rank" exclusivity in verdict clause 2 (the fifth recorded recurrence of
@@ -844,14 +944,18 @@ demoted.
   `335eb6ea026ab2a41ac6e48f31e034da2f72d5597e0e62415fc71fa1b8120c6d`;
   `git diff --stat` = `writeup/status.md` only; W1 gate checks PASS.
 - Budget-sheet extension `budget_sheet_20_ext.py` (deterministic;
-  re-run sha256-stable) sha256 (post-R9):
-  `999d6de33dda09cf82858113a3d269811c15aa1e2a7935b6a93371ece3c14d52`
-  (pre-repair `9c0d51f3...1899`; the only change is the T9.S3 gate tag
-  -- "FAILS (G1); PASSES (G2): cost x^{o(1)}" replacing "FAILS
-  (G1),(G2)" -- per repair R9; numeric columns byte-identical).
-- Emitted table `budget_sheet_20_ext_tables.txt` sha256 (post-R9):
-  `abf2fa65ca3320782958d63657c371e4b8adb074519ee10717156a54d3e9b128`
-  (pre-repair `135815b3...bd71`).
+  re-run sha256-stable) sha256 (post-B-repair):
+  `9a0cd704314d74c09f1e1ec19420531db7a0ce28f3e7979931a726f0181d19ea`
+  (post-R9 was `999d6de3...5d52`). B-pass changes: the B5 T9.S1 rewrite
+  (three-way split -- proved pointwise envelope / heuristic typical mean
+  / open averaged carrier -- replacing the "expo 0, passes every budget"
+  block) and the B7 L-convention disclosure (header note, per-block
+  reminders in T9.S3 / T9.S2; grid L vs exact L = 2J+1 tabulated). No
+  switch to `L_ceil`; T9.S3 / T9.S2 numeric columns byte-identical.
+- Emitted table `budget_sheet_20_ext_tables.txt` sha256 (post-B-repair):
+  `49907f0cb1af2e09579aa346568a98610a2b0411b11cf3e743929e4897c79036`
+  (post-R9 was `abf2fa65...b128`). Regenerated from the script, not
+  hand-edited; deterministic (identical on re-run).
 - The anchored `dossier/item-0020-workpapers/budget_sheet_20.py` is
   untouched (byte-identical to the Section 2 anchor
   `bbce2f58...b0d`); the extension neither imports nor overwrites it.
