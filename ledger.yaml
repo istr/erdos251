@@ -2559,3 +2559,122 @@ annotations:
       BET-20260718-08 remains OPEN with probability and resolve_by
       unchanged. No verdict, target, threshold, or acceptance is
       changed by this entry.
+  - id: ANN-20260724-64
+    refs: [ANN-20260722-58, ANN-20260723-59, ANN-20260724-62,
+      ANN-20260724-63, BET-20260718-08]
+    date: 2026-07-24
+    note: >-
+      CLOSES the item-0010 separator re-pricing audit and its full
+      multi-review chain across commits 48cdf55d..9b475418; ITEM-0010
+      REMAINS RATIFIED/OPEN. This entry books the outcome, the support
+      classification, the review record, and the process facts. No
+      Lean file, frozen block, frozen registry, production artifact,
+      roadmap item, run, or payload is changed by it. ARTIFACTS AND
+      HASHES at 9b475418. Audit:
+      dossier/item-0010-workpapers/separator-repricing.md sha256
+      644c512b7e1a4106eea14454e0ebbdade22bdcdaf753ed1b38bf64d155fee63d.
+      Budget-sheet extension:
+      dossier/item-0010-workpapers/budget_sheet_20_ext.py sha256
+      eedef5e23e00d7c2690b9580c0ea3ff22dde34a0cc4c1eb24c63947202d899b0;
+      emitted table
+      dossier/item-0010-workpapers/budget_sheet_20_ext_tables.txt sha256
+      11660525a92bc49dfb0818f8f61bbc31894b78e04783a5abe04728059a5ec476.
+      S3 adjudication note:
+      dossier/item-0010-workpapers/s3-adjudication.md sha256
+      8ddc620311dd09c2e7ea90807bbcff9fb617c260e494282710183cc23c66b349.
+      Public status page:
+      writeup/status.md sha256
+      3663dc9e8ec534e0959449bcb694b8a3ae29f1bfb4f13bfd954eec2b7efd0e51.
+      The anchored budget_sheet_20.py is byte-identical throughout at
+      bbce2f583f0a1f158b7fc5f13ca120b5388be642c585bbbdac5e6be5c5558b0d.
+      OUTCOME. The dispatched hypothesis H-SEP (every separator
+      surviving re-pricing against (CG) is equivalent in strength to a
+      middle-slot HLQuantA-shape input at the exchange rank) was NOT
+      adjudicated as dispatched. The in-run audit repair replaced it by
+      H-SEP*: failure-in-model characterization with middle-slot as the
+      salient, not the necessary, family, at the HLQuantA rank but
+      beyond its lower-bound content. The verdict adjudicates H-SEP* and
+      names it as such; the delta from H-SEP is recorded in W4.0 as a
+      delta. NET RESULT, by component, all relative to the named tool
+      list (T) plus the U20.4 inventory: (i) the F20.7 smooth-model
+      barrier to (CG) is PROVED-DOSSIER but INHERITED from
+      collision-gap-audit.md l.752, predating this audit -- it is not a
+      contribution of item-0010 and the earlier verdict language
+      claiming an obstruction "upgrade" was removed; (ii) S3
+      (Maynard-class bounded-gap input, anchored 1311.4600) does NOT
+      survive re-pricing against (CG): PROVED-DOSSIER, route-exhaustive
+      and member-specific, a located obstruction on the Maynard input
+      and never an impossibility for (CG); (iii) the named
+      Montgomery-Soundararajan/Kuperberg S2 regime square-out is PROVED;
+      (iv) the S1 upper-equidistribution carrier (NI-M2/NI-M4) and the
+      S2 word-grain substitute are OPEN. The audit's own new proved
+      content is thus the separator dispositions plus the C-pass
+      derivation, not the barrier. The residual open route to (CG)
+      consumes S1's absent carrier, which a lower-bound clustering tool
+      such as Maynard structurally cannot supply. SUPPORT DISCIPLINE:
+      the collision gap is recorded as the weakest clean,
+      non-tautological analytic campaign target currently known, NOT as
+      the weakest sufficient endpoint; the exact criterion Q < N-F
+      (CollisionDeficitSupply, collision-gap-audit.md l.334) is strictly
+      weaker and is the right minimal Lean core but nearly restates the
+      combinatorial conclusion. REVIEW RECORD. One same-family blind
+      review (R1) sustained 4 MAJOR and 7 MINOR, verdict-preserving;
+      steering verified the checkable findings against repository bytes.
+      Two cross-family reviews (R2) were run independently under
+      identical input from the same non-Anthropic family (one via that
+      family's strongest available model, one via its coding executor);
+      they converged on 6 findings and diverged on 3, and every
+      divergent finding was independently steering-verified and
+      sustained. This corroborates the standing project learning that
+      route diversity is sample-level, not model-level: a single R2 run
+      would have lost two sustained MAJOR findings. The contested S3
+      grade -- cleared by R1, attacked by both R2 on necessity and
+      aggregation grounds -- was adjudicated in Dispatch C by a fresh
+      executor. Its four-lens corpus-only refuter panel unanimously
+      reversed its own initial "S3-vs-CG OPEN" reading, which had
+      double-counted S1's already-graded openness under the S3 label;
+      the method correction is recorded in that note. The C1 L_ceil
+      re-run confirmed the direction predicted in the dispatch (exact
+      D0 rank m = 2J+1 exceeds the grid surrogate by ~3.7x at 1e8,
+      deepening the (G1) failure; (G2) still passes since m ln m =
+      o(log x) at exact rank); steering independently reproduced the
+      exact-rank exponents 36.538/30.128/24.563/22.127 against the
+      committed expo definition (normalization by loglog x). PROCESS
+      REPAIRS booked in the chain: Dispatch A corrected two false or
+      stale sentences on the public status page (the endpoint-minimality
+      claim and the primary-target statement) plus the boxed frontier;
+      Dispatch B (B1-B7) repaired the inherited-barrier credit, the
+      corpus-absence-as-necessity promotion (the SIXTH recorded
+      verdict-promotion recurrence, which had survived an in-run refuter
+      panel that reported removing it), the corpus-exhaustive verdict
+      clause, the exclusivity narrowing, the S1 exponent-zero
+      mispricing, the composite headline grade, and the undisclosed
+      grid-L surrogate convention; Dispatch D closed the same
+      endpoint-minimality wording residual in the report that Dispatch A
+      had fixed on the public page. RULE 19 (primary-anchor authoring)
+      was added to runs/README.md in two parts as a direct consequence
+      of this chain: prose landing in a committed artifact, and any
+      finding asserted about one, is authored against the primary anchor
+      with the governing sentence quoted; and a multi-location finding is
+      routed with its full location list, each location receiving a
+      repair or a named deferral. Provenance for the rule is seven
+      steering errors in this chain: two findings asserted from executor
+      hand-off text that the artifacts contradicted, four wordings
+      authored from ledger notes or reviewer summaries rather than
+      anchors (including the public "weakest currently known sufficient
+      endpoint" sentence, which dropped exactly the qualifier at
+      collision-gap-audit.md l.39), and one multi-location finding routed
+      only to the public page and not to the report. FAMILY EXPERIMENT
+      (operator-recorded): the bookkeeping, reproducibility, public-
+      surface, and rule-compliance defects arising in the earlier
+      6b824846..417eeb00 range originated entirely from a short
+      second-family generative experiment; the operator verdict is that
+      the second-choice engine cannot take over the generative lane from
+      a standing start. The same family performed well in the R2
+      reviewer role in this chain, consistent with the defect profile
+      being generative rather than analytic. BET IMPACT: BET-20260718-08
+      concerns the item-0020 target, not item-0010, and its probability
+      and resolve_by are UNCHANGED; this entry is nonetheless evidence
+      that the unconditional dyadic route past the located obstruction
+      requires the S1 carrier, which remains OPEN. No verdict, target,
+      threshold, acceptance, or bet is changed by this entry.
