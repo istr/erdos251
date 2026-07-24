@@ -111,6 +111,30 @@ entries:
     target_heading: ## External literature
     transfer: synthesized
     formula_policy: none
+  - id: literature-prime-tuples
+    source_path: dossier/literature.md
+    source_blob: 010a376453be0699438a8eda8cb32979150e735b
+    source_heading: ### Item 3 -- Kuperberg + Gallagher
+    target_path: writeup/references.md
+    target_heading: ## External literature
+    transfer: synthesized
+    formula_policy: none
+  - id: literature-prime-gaps
+    source_path: dossier/literature.md
+    source_blob: 010a376453be0699438a8eda8cb32979150e735b
+    source_heading: ### Item 5 -- Cramer-Granville
+    target_path: writeup/references.md
+    target_heading: ## External literature
+    transfer: synthesized
+    formula_policy: none
+  - id: literature-standard-estimates
+    source_path: dossier/literature.md
+    source_blob: 010a376453be0699438a8eda8cb32979150e735b
+    source_heading: ### Item 4 -- Standardzitate der Kette
+    target_path: writeup/references.md
+    target_heading: ## External literature
+    transfer: synthesized
+    formula_policy: none
   - id: lean-layout
     source_path: lean/README.md
     source_blob: efa4cafe85949e64e04599a2c2cf648141b25ab9
