@@ -110,6 +110,48 @@ open:
       prior and resolve_by steering-proposed on operator instruction
       (ANN-52); operator amendment before apply is the registered
       value
+  - id: BET-20260724-09
+    registered: 2026-07-24
+    claim: >-
+      the item-0026 search locates and primary-anchors an
+      unconditional statement of the named S1 carrier shape --
+      averaged middle-slot non-concentration or upper-uniformity at
+      rank k = (2/ln 2 + o(1)) lnln x, window A' L ln x, of strength
+      enough to keep a fixed proportion of D0-depth site mass off its
+      modal middle on some unbounded scale sequence per s, and failing
+      in the even-Cramer-smooth model -- usable for (CG) without
+      further conjectural input
+    p: 0.05
+    resolution: >-
+      operator judgment against the item-0026 verdicted per-candidate
+      checklist; a located carrier must carry a primary anchor booked
+      in payloads/HASHES.txt, not a secondary description
+    resolve_by: 2026-08-31
+    note: >-
+      prior and resolve_by steering-proposed (ANN-65); operator
+      amendment before apply is the registered value. Registered
+      BEFORE the session runs, per ground rule 4
+  - id: BET-20260724-10
+    registered: 2026-07-24
+    claim: >-
+      the same search locates at least one unconditional near-miss of
+      the right family whose gap to the named shape is stated,
+      bounded, and named by axis (regime, rank, strength, or scale
+      density) rather than open-ended -- scored independently of
+      BET-20260724-09 and in particular still live if that bet
+      resolves NO
+    p: 0.20
+    resolution: >-
+      operator judgment against the item-0026 verdicted per-candidate
+      checklist; a near-miss counts only with a primary anchor and an
+      explicitly named gap axis
+    resolve_by: 2026-08-31
+    note: >-
+      prior and resolve_by steering-proposed (ANN-65); operator
+      amendment before apply is the registered value. The two bets are
+      deliberately separated: the first prices the exact object, the
+      second prices the search's expected information value, which is
+      where steering expects the return to sit
 
 annotations:
   - id: ANN-20260712-01
@@ -2678,3 +2720,161 @@ annotations:
       that the unconditional dyadic route past the located obstruction
       requires the S1 carrier, which remains OPEN. No verdict, target,
       threshold, acceptance, or bet is changed by this entry.
+  - id: ANN-20260724-65
+    refs: [ANN-20260724-64, ANN-20260722-58, ANN-20260724-63,
+      BET-20260724-09, BET-20260724-10, BET-20260718-08]
+    date: 2026-07-24
+    note: >-
+      BOOKS THE POST-ANN-64 PLANNING DECISION FOR item-0010, REFRESHES
+      HANDOVER.md, AND REGISTERS TWO BETS BEFORE THEIR EVIDENCE;
+      ITEM-0010 REMAINS RATIFIED/OPEN. Authored by steering at pin
+      97edc00978646d2d9c7219c9dfdb13f08b0cb297 == HEAD of main. No Lean
+      file, frozen block, frozen registry, production artifact, run,
+      payload, dossier workpaper, writeup file, or roadmap execution
+      order is changed by this entry or by the commits it books. No
+      verdict, target, threshold, constant, or acceptance is changed.
+      DECISION. After ANN-64 the named separator inventory against (CG)
+      is exhausted at corpus grain and exactly one object remains OPEN.
+      The governing sentence, quoted per rule 19 from its primary
+      anchor dossier/item-0010-workpapers/separator-repricing.md,
+      section W4.S1 verdict: "S1: undecidable at corpus grain under
+      (CG). Deciding fact (named): an unconditional averaged
+      middle-slot non-concentration / upper-uniformity statement at
+      rank k = (2/ln2 + o(1)) lnln x, window A' L ln x, of strength
+      enough to keep a fixed proportion of D0-depth site mass off its
+      modal middle on some unbounded scale sequence per s -- a
+      statement that fails in the even-Cramer-smooth model." The
+      Dispatch C note dossier/item-0010-workpapers/s3-adjudication.md,
+      closing section, adds the operative fact: "Its presence or
+      absence in the mathematical literature is not resolvable at
+      corpus grain (web OFF; the anchored shelf records it as absent,
+      F20.4/F20.5). That fact decides S1, not S3, and is the
+      searchable/provable object." Every item-0010 session of the chain
+      declares web and cloud OFF, so the recorded absence is scoped to
+      the anchored shelf and the literature has never been checked for
+      this object (RECORDED, a fact about the repository record, not a
+      mathematical claim).
+      TWO PROPOSED SUCCESSORS, created by the companion roadmap mbox.
+      item-0026 "S1 carrier search: literature-grain decision on the
+      absent middle-slot carrier" (research, rank 0160, large/high):
+      a steering research session with web ON on the item-0004
+      precedent (ANN-27 decision 3, contamination classes bind stage
+      and review runs, not verification work), deciding the named
+      object against primary sources. item-0027 "Lean integrator for
+      the direct collision route" (research, rank 0170,
+      largest/high): the executor-lane item that exports the
+      non-rigid-class clause table and encodes the section-B finite
+      algebra. Both are status `proposed` and NEITHER is placed in
+      roadmap/_order.md: AGENTS.md permits steering to create only
+      proposed items, and the roadmap skill's `new` explicitly does not
+      schedule. RECOMMENDED PLACEMENT at ratification, operator to
+      confirm or override -- item-0026 immediately after item-0010,
+      item-0027 immediately after item-0026, item-0006 / item-0022 /
+      item-0024 unchanged behind them; the two commands are
+      `roadmap.py set-status item-0026 ratified` (likewise 0027) and
+      `roadmap.py reorder item-0026 --after item-0010` (likewise
+      item-0027 --after item-0026), from the repo root against
+      .agents/skills/roadmap-items/scripts/roadmap.py.
+      WHY item-0026 IS THE RECOMMENDED NEXT STEP. It is the only
+      available action that can move the item-0010 verdict: the
+      measurement instrument is exhausted (35/35 rows N = F, Q = 0
+      through 1e9; heuristic first-collision region 1e27--1e30; proved
+      F/N onset near 1e105), the separator inventory is closed at
+      corpus grain, and both outcomes are deliverables -- a located
+      carrier makes the (CG) campaign live, a literature-grain
+      not-found is the strongest available form of the located
+      obstruction and is item-0010's S- deliverable. TWO SEARCH-DESIGN
+      POINTS, steering contributions, classified HEURISTIC (search
+      design, not mathematics) and load-bearing for the item's scope.
+      First: the search key must be the RELAXED demand triple recorded
+      in the re-pricing report section W2.2 -- constant-order strength,
+      no s-uniformity, sparse scale-density along one unbounded per-s
+      sequence -- and not the B2.pairs triple (eps -> 0, s-uniform, all
+      large x) under which the shelf was originally sighted. The
+      relaxation admits the infinitely-many-x and almost-all-x classes
+      of unconditional short-interval results, which the stronger form
+      excluded a priori. Second: the Maier short-interval row of the
+      U20.4 table carries a one-line disposition ("S1/S2 family;
+      short-interval, regime-blocked") and no worked per-row pricing;
+      the report itself states that the U20.4 sweep was a
+      representative selection and not a per-row enumeration (repair
+      B3), and the FGKMT row in the same table is the recorded
+      precedent for a one-line disposition whose stated reason was
+      quantitatively wrong and had to be repaired. item-0026 therefore
+      re-prices that row against the (CG) DENSITY demand and records
+      the result with its support class. THIS IS NOT A CLAIM THAT THE
+      MAIER ROW SURVIVES, and no separator disposition of ANN-64 is
+      re-opened by this entry.
+      WHY item-0027 RUNS INDEPENDENTLY. The direct collision route is
+      the recommended campaign route and is what writeup/status.md now
+      names, but it exists only at dossier grade. The gap is recorded
+      in the primary anchor
+      dossier/item-0010-workpapers/collision-gap-audit.md section B.4:
+      "the clause-table construction is machine-checked inside
+      `supply_of_triple`, but no standalone non-rigid-class theorem is
+      exported. Reuse requires factoring that formal proof pattern. The
+      Q-to-non-rigidity algebra is PROVED here but not yet encoded in
+      Lean." The item is needed in both item-0026 branches: a located
+      carrier is consumed through this interface, and an obstruction
+      verdict should be stated about a machine-checked route rather
+      than a prose one. It also gives the audit's own finite algebra an
+      independent check, consistent with the standing Q4 finding that
+      formalization pressure is itself a review instrument. Statement
+      discipline: `supply_of_triple` stays byte-identical and is
+      re-proved through the factored theorem; all analytic content
+      stays in named Props, per the item-0018 M2 pattern; expected
+      axiom footprint the classical three; sorry inventory unchanged at
+      one.
+      BETS. BET-20260724-09 (p 0.05, the exact object located and
+      primary-anchored) and BET-20260724-10 (p 0.20, an unconditional
+      near-miss with a stated, bounded, named gap axis), both
+      resolve_by 2026-08-31, both registered here BEFORE the session
+      runs per ground rule 4. Priors and dates are steering-proposed;
+      per the ANN-52 convention the operator amendment before apply is
+      the registered value. BET-20260718-08 concerns the item-0020
+      target and is UNCHANGED in probability and resolve_by;
+      BET-20260711-07 runs to its full resolve_by 2026-08-08 per the
+      ANN-52 decision, and this entry is not a scoring event for it.
+      HANDOVER REFRESH, booked here. HANDOVER.md was seven annotations
+      stale and carried three statements false at this pin, all now
+      corrected: the cold-start read order said ledger ANN-01..57 and
+      runs/README rules 1-18; and the frontier section asserted "Item-
+      0022 remains first in the existing execution order", which
+      roadmap/_order.md contradicts (order at this pin: item-0010,
+      item-0006, item-0022, item-0024). Added: the current-frontier
+      section rewritten around the direct collision route and the S1
+      residual, with the "weakest clean, non-tautological analytic
+      campaign target currently known" qualifier carried verbatim
+      rather than restated as weakest sufficient endpoint -- that
+      substitution is the exact defect Dispatch A and Dispatch D
+      repaired; a 2n record of the whole ANN-58..64 chain including the
+      three binding ANN-63 reading cautions; the item-0010 workpapers
+      in the read order; and a named (not numbered) block of open
+      operator decisions. ALSO DISCHARGED: the ANN-63 back-booking 2
+      demanded an operator decision on item-0021, which commit 60ba5f1
+      settled by parking it (arcs: [parked], out of _order.md); the
+      HANDOVER text is updated accordingly.
+      EXPLICITLY NOT REPAIRED, and recorded so a cold start does not
+      trust them: lean/README.md below its own STALE banner, and the
+      Erdos251/Counting.lean umbrella docstring, whose opening line
+      still reads "STATEMENT SKELETON (item-0014). Definitions are
+      real; the lemmata are intentional, named `sorry`s." -- false on
+      three counts since ANN-45/ANN-47 (Counting.lean is sorry-free;
+      proof investment did happen there across sessions 3-5; the layer
+      IS consumed by the landed implication cone via Conditional.lean),
+      with the separate ANN-45(ii) staleness in its "Glue proofs
+      (flagged): q_eq_of_count only" line. A bookkeeping pass over both
+      remains unscheduled. The rule-16 strengthening (B6) also remains
+      formally open: ANN-64 added rule 19 and booked a sixth
+      verdict-promotion recurrence instead, and whether rule 19
+      discharges B6 is an operator call, carried in the HANDOVER
+      decision block.
+      AUTHORING DISCIPLINE. Rule 19 was applied to this entry: each of
+      the three load-bearing quotations above is taken verbatim from
+      its primary anchor in the repository tree, not from a ledger
+      note, a reviewer summary, or a hand-off message, and each names
+      its anchor so a reviewer can check the wording without
+      re-deriving it. Steering flipped no status, touched no execution
+      order, and emitted no byte-exact instruction contract into the
+      durable store; the item-0026 and item-0027 kickoffs remain
+      ephemeral and unwritten until their items are ratified.

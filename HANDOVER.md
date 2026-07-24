@@ -1,41 +1,84 @@
-# HANDOVER -- erdos251 (post-item-0020 frontier, 2026-07-20; round 1 closed and scored 2026-07-15)
+# HANDOVER -- erdos251 (post-item-0010-separator-repricing frontier, 2026-07-24; round 1 closed and scored 2026-07-15)
 
 Mission: public experiment attacking Erdos #251 (irrationality of
 S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..57; bets: 6 scored,
-2 open -- BET-07 to 2026-08-08, BET-08 to 2026-09-30). 3. dossier/chain-v1.md (v1.4, SIGNED
+1. This file. 2. ledger.yaml (append-only; ANN-01..65; 6 bets scored,
+BET-07 to 2026-08-08 and BET-08 to 2026-09-30 open, plus the item-0026
+bets registered at the ANN-65 apply -- read the `open:` block, not this
+line, for the registered values). 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
 payloads/item-0005-adjudication-v1.md). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
 then triage-1b.md end (methodology register: blind spots 1-5, checklist
 rules i-iv) and triage-1a.md. 5. dossier/relext-upper.md, then
-dossier/item-0020-workpapers/item-0020-final-report.md. 6. runs/README.md
-rules 1-18.
+dossier/item-0020-workpapers/item-0020-final-report.md, then the
+item-0010 chain under dossier/item-0010-workpapers/ in landing order:
+collision-gap-audit.md, m5-lite-audit.md,
+flank-collision-singleton-frontier-audit.md, separator-repricing.md,
+s3-adjudication.md. 6. runs/README.md rules 1-19; rule 19
+(primary-anchor authoring) is new and binds every sentence that lands
+in a committed artifact.
 7. roadmap: python3 .agents/skills/roadmap-items/scripts/roadmap.py
 list --arc research. 8. lean/README.md (layout map; inventory 1 --
 its later sections carry a STALE banner, HANDOVER is the record).
 
-## Current frontier after item-0020
+## Current frontier after the item-0010 separator re-pricing chain
 
-- The reviewed conditional theorem remains the round-1 result, and
-  the deterministic implication and supply integrator are
-  machine-checked.
-- Item-0019 supplied the current empirical calibration. Item-0020
-  proved A3 / MatchedFlankLower asymptotically at D0; TailIntersection
-  was already available. Only RelExtensionUpper remains as a supplier.
-- B2.pairs is the surviving explicit sufficient target for
-  RelExtensionUpper and remains OPEN. M1.a is refuted, and the T-only
-  identity-layer routes are blocked. No unconditional solution is
-  claimed; finite-scale measurements do not close the 1/64 gate.
-- The R1-light budget rerun and exact T4 check are closed. BET-08
-  remains open and unchanged.
-- Item-0022 remains first in the existing execution order.
-  Item-0021 must not execute unchanged: it is unscheduled pending an
-  operator-ratified re-scope or retirement decision. Creating a
-  dedicated B2.pairs successor is outside this housekeeping update.
+- The reviewed conditional theorem remains the round-1 result, and the
+  deterministic implication and supply integrator are machine-checked.
+  No unconditional solution is claimed anywhere in what follows.
+- ROUTE CHANGE (ANN-58, on the public status page since the ANN-64
+  chain). The recommended campaign route for item-0010 is no longer the
+  supply triple but the DIRECT COLLISION ROUTE
+  SparseFlankFamily + CollisionGapAlongScales => CollisionDeficitSupply
+  => ExchangeSupply1, which consumes neither MatchedFlankLower nor
+  RelExtensionUpper at integration time. (SF) is PROVED-DOSSIER; (CG)
+  is OPEN and is the weakest clean, non-tautological analytic campaign
+  target currently known -- NOT the weakest sufficient endpoint. The
+  exact criterion Q < N-F is strictly weaker and is the right minimal
+  Lean core, but it nearly restates the combinatorial conclusion. Keep
+  that qualifier: dropping it is the exact defect Dispatch A/D repaired.
+- The old triple stands where it stood: MatchedFlankLower and
+  TailIntersection available, RelExtensionUpper the only open supplier,
+  B2.pairs its surviving explicit sufficient target, OPEN. BET-08 binds
+  to that target and is unchanged by the whole item-0010 chain.
+- THE RESIDUAL OBSTACLE IS NOW ONE NAMED OBJECT (ANN-64). Against (CG)
+  the named separator inventory is exhausted at corpus grain: S3
+  (Maynard bounded gaps) does not survive, route-exhaustively and
+  member-specifically, on a D0-forced rank cost that the relaxation
+  cannot touch (PROVED-DOSSIER, upheld in Dispatch C against two
+  independent R2 attacks); the named S2 tool (Montgomery-Soundararajan
+  / Kuperberg) is regime-blocked (PROVED); the U20.4 sweep hits
+  re-open the inventory but are non-viable. S1 alone is OPEN: an
+  unconditional averaged middle-slot non-concentration /
+  upper-uniformity carrier of NI-M2/NI-M4 shape at the exchange rank,
+  stated at the HLQuantA RANK but strictly beyond its lower-bound
+  content, absent from the anchored corpus. The F20.7 smooth-model
+  barrier is INHERITED from collision-gap-audit.md and predates the
+  chain; it is not an item-0010 contribution.
+- Every item-0010 session ran web OFF, so "absent" is scoped to the
+  anchored shelf. The literature has never been checked for this
+  object, and both the re-pricing verdict (W4.S1) and the Dispatch C
+  note name it as the searchable/provable object. That is what
+  item-0026 is for.
+- Measurement is exhausted as a decision instrument. 35/35 frozen rows
+  through x = 1e9 carry N = F, Q = 0, N-F-Q = 0; the heuristic
+  order-one collision region is 1e27--1e30 and the proved F/N onset is
+  near 1e105. The three ANN-63 reading cautions are BINDING on every
+  downstream citation.
+- EXECUTION ORDER at this apply (roadmap/_order.md): item-0010,
+  item-0006, item-0022, item-0024. The earlier claim in this file that
+  item-0022 runs first is SUPERSEDED. item-0021 is PARKED
+  (arcs: [parked]) and out of the order, which discharges the ANN-63
+  back-booking that demanded an operator decision on it.
+- Two successors are PROPOSED and unscheduled at this apply:
+  item-0026 (S1 carrier search; steering lane, web ON, primary anchors)
+  and item-0027 (Lean integrator for the direct collision route;
+  executor lane, independent of the item-0026 outcome). ANN-65 carries
+  the recommended placement and the two ratification commands.
 
 ## Round-1 record (closed, scored)
 - Result: chain-v1 v1.3 -- conditional theorem "Hypothesis A (uniform
@@ -567,6 +610,64 @@ its later sections carry a STALE banner, HANDOVER is the record).
    flags (item-0018 selection-restriction; item-0019
    matched-depth ladder). OPEN OPERATOR: rule-16 strengthening
    (B6); BET-07 to 2026-08-08; BET-08 to 2026-09-30.
+2n. ITEM-0010 SEPARATOR CHAIN LANDED, ITEM STILL RATIFIED/OPEN
+   (2026-07-22..24; records ANN-58 through ANN-64; main = 97edc00).
+   Five landings, all executor-local, web and cloud OFF, corpus-only;
+   no Lean file, frozen block, frozen registry, run, payload or roadmap
+   item changed anywhere in the chain.
+   (a) ANN-58 collision-gap audit. Exact finite algebra, PROVED:
+   Q = sum_P N_P sum_d p_(P,d)^2 - F and
+   N-F-Q = sum_P (2/N_P) sum_(d<e) N_(P,d) N_(P,e) >= 0, hence
+   Q < N-F iff some realized flank class is middle-non-rigid, which
+   feeds the existing Supply.lean clause table directly. Gives the (CG)
+   endpoint; the 1/64 constant audit (the logical point is
+   c < (delta/2)^2, i.e. 1/16 at the proved delta = 1/2 -- 1/64 is
+   interface slack, not a threshold); the RHO-ENERGY package
+   (RE1)/(RE2); the barrier table F20.1-F20.7; and a Lean-shape sketch
+   in section K naming four new finite lemmas.
+   (b) ANN-59 m5-lite statement/budget audit: the ex-ante weighted
+   middle contraction endpoint, which implies (CG); the sharp finite
+   envelope from the classwise cap; and the rho cap R = o(log x)
+   demoted to an old proof device, NOT a requirement of the new
+   endpoint.
+   (c) ANN-60/61 measurement: a Phase-3 computational-feasibility stop,
+   then a C11 residue-overlap kernel (189x) and the full frozen ladder
+   -- 7 scales through x = 1e9 times 5 thresholds, 35/35 rows with
+   N = F, Q = 0. All 23 declared rules pass only through singleton
+   inertia: finite adverse evidence, no asymptotic claim.
+   (d) ANN-62 singleton-frontier audit: F = N iff every realized flank
+   is singleton iff C_flank = 0 (nonempty max guard); C_joint(6,6) = 47
+   and C_joint(7,7) = 0 at 1e9; heuristic order-one collision region
+   1e27--1e30 with many-order uncertainty, actual frontier OPEN.
+   (e) ANN-63 steering bookkeeping correction: four back-bookings, one
+   discipline deviation (an APPLIED note body amended in place --
+   append-only means a successor entry, never an edit), a full
+   independent recomputation with no discrepancy in any quantity, and
+   THREE BINDING READING CAUTIONS -- eta_cert is not a measured
+   collision-gap margin and must never be cited as one; the s panel is
+   deterministic prefix deletion and contributes no independent
+   evidence; integrity-checks.json is trivially satisfied in the
+   all-zero regime.
+   (f) ANN-64 separator re-pricing: the verdict summarized in the
+   frontier section above. Reached through one same-family R1 and TWO
+   independent same-family R2 runs under identical input, which
+   converged on 6 findings and diverged on 3 -- a single R2 would have
+   lost two sustained MAJOR findings, which sharpens the standing
+   route-diversity-is-sample-level learning. Plus Dispatch C (S3 grade
+   upheld by a fresh adjudicator whose own four-lens panel reversed its
+   initial "S3-vs-CG OPEN" reading, which had double-counted S1's
+   openness under the S3 label) and Dispatch D.
+   PROCESS: rule 19 (primary-anchor authoring, both parts) added to
+   runs/README from seven steering errors in this chain; the SIXTH
+   verdict-promotion recurrence was booked, and it had survived an
+   in-run refuter panel that reported having removed it. FAMILY
+   EXPERIMENT (operator-recorded): the bookkeeping, reproducibility and
+   rule-compliance defects in the earlier 6b824846..417eeb00 range came
+   entirely from a short second-family generative experiment; the
+   operator verdict is that the second-choice engine cannot take over
+   the generative lane from a standing start, while the same family
+   performed well in the R2 reviewer role -- the defect profile is
+   generative, not analytic.
 3. Pin policy (ANN-36): mathlib pin STAYS at a6276f4c -- master also
    lacks Mertens (verified 2026-07-16); MP is built in-session;
    post-heart pin-bump item proposed on operator word; MP is an
@@ -596,6 +697,41 @@ its later sections carry a STALE banner, HANDOVER is the record).
    the rendered page is a JS shell, blind to fetchers. Contamination
    note: that venue is public LLM-generated #251 material; web-ON
    runs must treat it as such.
+
+OPEN OPERATOR DECISIONS at the ANN-65 apply. Named, not numbered: the
+numbering above is legacy, has two 2./3. pairs, and is deliberately
+left alone rather than renumbered under a bookkeeping commit.
+- RATIFY OR AMEND the two proposed successors. item-0026 (S1 carrier
+  search) and item-0027 (direct-route Lean integrator) are `proposed`
+  and NOT in roadmap/_order.md, because steering may create only
+  proposed items and `new` does not schedule. ANN-65 carries the
+  recommended placement and the exact set-status/reorder commands.
+- REGISTERED BET VALUES. The item-0026 priors and resolve_by dates are
+  steering-proposed; per the ANN-52 convention the operator amendment
+  before apply is the registered value. If a bet is amended or dropped,
+  the cold-start read-order line above must be mirrored.
+- FIREWALL for the item-0026 web-ON session: verification-class on the
+  item-0004 precedent (ANN-27 decision 3), with this repository and its
+  mirrors excluded as evidence and the ANN-32 treatment of the
+  LLM-hunter venue. Rule 19 and the item-0022 anchoring contract bind
+  every claim the session produces.
+- RULE-16 STRENGTHENING (B6) is still formally open. ANN-64 added
+  rule 19 instead and booked a sixth verdict-promotion recurrence;
+  decide whether rule 19 discharges B6 or whether rule 16 is separately
+  strengthened to catch verdict promotion across families.
+- BET-07 runs to its full resolve_by 2026-08-08 (ANN-52: no early
+  scoring). The ANN-58..64 chain is further evidence AGAINST resolution
+  and is not a scoring event.
+- KNOWN STALE, unrepaired, out of scope for this commit and NOT to be
+  trusted by a cold start: (i) lean/README.md below its own STALE
+  banner; (ii) the Erdos251/Counting.lean umbrella docstring, whose
+  opening line still reads "STATEMENT SKELETON (item-0014). Definitions
+  are real; the lemmata are intentional, named `sorry`s." That is false
+  on three counts since ANN-45/ANN-47 -- Counting is sorry-free, proof
+  investment did happen there across sessions 3-5, and the layer IS
+  consumed by the landed implication cone through Conditional.lean. Its
+  "Glue proofs (flagged): q_eq_of_count only" line carries the separate
+  ANN-45(ii) staleness. A bookkeeping pass over both is unscheduled.
 
 ## item-0004 RESOLVED (2026-07-16)
 Full report: dossier/literature.md (ANN-28; original artifact
