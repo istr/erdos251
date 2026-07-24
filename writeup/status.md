@@ -98,7 +98,7 @@ $$
 \qquad\text{for each fixed }s.
 $$
 
-This consumes no threshold uniform in $`s`$, no statement valid at all large $`x`$, and neither `MatchedFlankLower` nor `RelExtensionUpper` at integration time. It is the weakest currently known sufficient endpoint for $`S\notin\mathbb Z[1/2]`$. Whether it is easier to prove than `B2.pairs` is open: the barrier described in Section 5 applies to both.
+This consumes no threshold uniform in $`s`$, no statement valid at all large $`x`$, and neither `MatchedFlankLower` nor `RelExtensionUpper` at integration time. It is the weakest clean, non-tautological analytic campaign target currently known. It is not the logically weakest sufficient endpoint: the exact criterion $`Q<N-F`$ itself is strictly weaker, and is the right minimal core, but it so nearly restates the desired combinatorial conclusion that it is not a useful analytic target. Whether the collision gap is easier to prove than `B2.pairs` is open: the barrier described in Section 5 applies to both.
 
 ## 3. Why proving `B2.pairs` would already be useful
 
@@ -197,7 +197,7 @@ That is a delicate regime. Pointwise equidistribution statements are generally t
 
 ## 6. What we plan to do next
 
-The primary analytic target is to prove `B2.pairs`, or a different statement that implies `RelExtensionUpper` with the required constant. The two most concrete directions are to obtain class-level distributional control of the middle gap after conditioning on matching flanks, or to prove a word-grain mean-value or dispersion estimate that controls the normalized ordered-pair statistic directly without paying a prohibitive rank-dependent constant.
+The recommended analytic campaign target is the collision gap of Section 2, which bypasses `RelExtensionUpper` entirely. Proving `B2.pairs`, or a different statement implying `RelExtensionUpper` with the required constant, remains a sufficient alternative but is no longer the primary route. The two most concrete directions are unchanged by that reordering: class-level distributional control of the middle gap after conditioning on matching flanks, or a word-grain mean-value or dispersion estimate that controls the normalized ordered-pair statistic directly without paying a prohibitive rank-dependent constant.
 
 Computationally, that measurement has since been carried out. A frozen campaign over seven scales through $`x=10^9`$, at five values of the filter parameter, resolved the statistic by class size, middle multiplicity, and arithmetic alignment. Every realized flank class turned out to be a singleton: $`N=F`$ and $`Q=0`$ on every row. The statistic therefore vanishes identically over the entire measured range and supplies no evidence for or against the asymptotic statement. Calibrated finite models place the first flank collision many orders of magnitude beyond any reachable census, so computing this statistic further is not the bottleneck. The bottleneck is the missing prime-distribution input described in Section 5.
 
@@ -214,7 +214,7 @@ Finally, the conditional full-irrationality route remains useful as a second res
 The current research frontier is therefore deliberately split:
 
 $$
-\boxed{\text{prove `B2.pairs' to close the next unconditional theorem}}
+\boxed{\text{prove the collision gap to close the next unconditional theorem}}
 $$
 
 and, in parallel,
