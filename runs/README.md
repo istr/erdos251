@@ -183,3 +183,13 @@ Rules:
     ledger notes or reviewer summaries, of which the public
     "weakest currently known sufficient endpoint" sentence dropped
     exactly the qualifier standing in collision-gap-audit.md:39.
+    A finding that names more than one location is routed with its
+    full location list quoted, and every named location receives
+    either a repair in the dispatch or a deferral stated by name with
+    a reason. A partial routing without a residue note is
+    indistinguishable from a silent decision not to repair, and the
+    executor cannot tell the difference either.
+    Second pattern, same chain: a cross-family finding located at both
+    writeup/status.md and separator-repricing.md was routed only to
+    the public page; the report half survived a full repair pass and
+    was caught by the executor, not by steering.
