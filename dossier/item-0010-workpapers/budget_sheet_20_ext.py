@@ -115,8 +115,12 @@ emit("x        m=L        expo[exp(m ln m)]   vs (G1)/(G2)")
 for e in SCALES:
     lnx, llx, L, k = regime(e)
     cost = L * log(L)
-    emit("1e%-5d %10.3f %14.3f        SUPERPOLYLOG: FAILS (G1),(G2)"
+    emit("1e%-5d %10.3f %14.3f        SUPERPOLYLOG: FAILS (G1); PASSES (G2): cost x^{o(1)}"
          % (e, float(L), float(expo(cost, llx))))
+emit("  -> ln F = L ln L ~ 2.885 lnln x . lnlnln x = o(ln x): the cost is")
+emit("     x^{o(1)}, so it PASSES (G2) x^eps; it FAILS only the tight budget")
+emit("     (G1) superpolylog-in-(ln x).  Non-survival rests on (G1) / the")
+emit("     D0-forced unbounded rank m ~ L, NOT on (G2).")
 emit("  -> same superpolylog class as the anchor T1 exp(k ln k) row")
 emit("     (expo ~ 2.885 lnlnln x).  Bounded-rank Maynard (fixed m) is")
 emit("     affordable but CANNOT realize a growing-length flank word, so")

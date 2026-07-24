@@ -288,6 +288,62 @@ becomes affordable under the weaker endpoints.
 
 ## W4. Separator re-pricing
 
+### W4.0 The primary hypothesis H-SEP (stated; adjudicated form; delta)
+
+The verdict of W6 adjudicates the primary hypothesis H-SEP. Because the
+commissioning kickoff was ephemeral (operator-supplied, never
+committed), H-SEP is stated here verbatim, so the CONFIRMED verdict is
+checkable against a fixed object.
+
+**(1) H-SEP as dispatched** (byte-exact):
+
+````text
+H-SEP. Every separator that survives re-pricing against `CG` is
+equivalent in strength to a middle-slot distributional input of
+`HLQuantA` shape at rank `k ~ 2.885 lnln x`. That is: the
+unconditional dyadic route requires precisely the input the
+conditional full-irrationality route assumes.
+````
+
+**(2) H-SEP\*, the form actually adjudicated** (its own labelled
+object). Any proof of `CG` must consume an input outside $`T`$ that
+**fails in the even-Cramer-smooth model**. The characterization of that
+input is **failure-in-model, not middle-slot-ness** (`proofs.md` C4
+STATEMENT: "the characterization is failure-in-model, not
+middle-slot-ness"; its own SCOPE example, Maynard `1311.4600`, is a
+non-middle-slot failure-in-model input). The **salient** such family is
+the middle-slot distributional statements (`NI-M2`/`NI-M4`), evaluated
+at the `HLQuantA` **rank** $`k\sim2.885\,\ln\ln{}x`$ but carrying upper /
+equidistribution content **strictly beyond** the frozen lower-bound
+`HLQuantA` card. No separator in the named inventory
+$`\lbrace S1,S2,S3\rbrace`$ survives re-pricing against `CG` as a live
+sheet-clean candidate: S3 is cost-blocked, the named S2 tool
+regime-blocked, S1 right-shaped but absent, and the `U20.4` sweep
+returns only non-viable hits.
+
+**(3) The delta, named as a delta.** Form 2 is **weaker** than form 1;
+two clauses of the dispatched form were dropped, and the verdict
+adjudicates form 2, not form 1:
+
+- *Shape-necessity dropped.* Form 1's "equivalent in strength to ... a
+  middle-slot input of `HLQuantA` shape" and "requires precisely the
+  input" assert that a surviving separator **must be** a middle-slot
+  input. The barrier disclaims shape-necessity: it characterizes the
+  missing input as failure-in-model, and its own SCOPE lists a
+  non-middle-slot such input (Maynard `1311.4600`). Middle-slot is
+  therefore the *salient*, not the *necessary*, family.
+- *"`HLQuantA` shape" rescoped to "at the `HLQuantA` rank, beyond its
+  content."* The corpus reserves the `HLQuantA` name for the absolute
+  lower-bound card; `NI-M2`/`NI-M4` carry upper / equidistribution
+  content strictly beyond it (`mechanism-inventory` M4;
+  `relext-statements` D3(ii)). So the separator is stated at the
+  `HLQuantA` **rank**, not "of `HLQuantA` shape."
+
+The CONFIRMED verdict of W6 adjudicates H-SEP\* (obstruction upgrade to
+`CG`, middle-slot the salient family); it does **not** certify the
+dispatched form 1's shape-necessity. Form 2 is not presented as what was
+asked -- it is the repaired object the evidence supports.
+
 `proofs.md` C4 SCOPE names three separator families -- inputs outside
 $`T`$ that fail in the model. Each is re-priced against `CG` and
 against the contraction endpoint at rank
@@ -361,9 +417,26 @@ $`k_{\mathrm{req}}/k_{\mathrm{adm}}\sim(\ln\ln{}x)^{1/2}\to\infty`$
 ($`3.60\to6.66`$ across the grid) -- a regime square-out independent
 of endpoint strength. Corpus-status: it is a literature citation, not a
 word-grain corpus tool (the group structure the large sieve / BV need is
-absent on side-pair classes). `PROVED-DOSSIER`: S2 is regime-blocked
-under `CG`; the constant-order demand does not close the word-grain gap.
-S2 does not survive re-pricing.
+absent on side-pair classes). Two legs, graded separately (rule-16(a)):
+
+- **Named-tool regime square-out** (`PROVED`). The named MS/Kuperberg
+  tool is regime-blocked at the recorded admissible rank --
+  $`k_{\mathrm{req}}/k_{\mathrm{adm}}\sim(\ln\ln{}x)^{1/2}\to\infty`$
+  (sheet T9.S2), unconditional and untouched by the
+  `B2.pairs`->`CG` relaxation (a regime, not a strength, gap). Finite
+  algebra over the recorded admissible rank: `PROVED`.
+- **Word-grain-substitute existence** (`RECORDED`/`OPEN`). Whether a
+  lower-moment or positive-proportion word-grain *substitute* for the
+  named tool exists is the F20.5 question, graded **`RECORDED`** in both
+  barrier tables, with the explicit note that "a lower-moment or
+  positive-proportion substitute is only an open possibility"
+  (`m5-lite-audit.md` l.752; `collision-gap-audit.md` l.750). `CG` does
+  not relax it and the corpus does not settle it: **`OPEN`**,
+  epistemically beside S1's F20.4 ("a weaker averaged carrier is not
+  ruled out, but none is in the corpus").
+
+So the *named* S2 tool does not survive re-pricing (regime-blocked,
+`PROVED`); the S2-substitute-existence question is `OPEN`, beside S1.
 
 ### W4.S1 Middle-slot equidistribution / upper-uniformity (`NI-M2`, `NI-M4` shapes)
 
@@ -408,28 +481,33 @@ name for the absolute lower bound, so the separator is stated at the
 Execute the `U20.4` re-open clause: sweep the anchored corpus for any
 unconditional fact **outside $`T`$** that **fails in the model** and
 has **not yet entered the inventory** $`\lbrace S1,S2,S3\rbrace`$. Anything found
-re-opens the inventory, not Theorem 4. Named enumeration of what was
-swept (the anchored PDF shelf of `payloads/HASHES.txt` plus
-`literature.md`), model-behaviour recorded for each (model gaps are
-$`g_n\sim\ln{}q_n`$, smooth, monotone, all $`\to\infty`$):
+re-opens the inventory, not Theorem 4. A **representative selection** of
+what was swept (drawn from the anchored PDF shelf of
+`payloads/HASHES.txt` plus `literature.md`; a selection, **not** a
+per-row enumeration of the shelf), model-behaviour recorded for each
+(model gaps are $`g_n\sim\ln{}q_n`$, smooth, monotone, all
+$`\to\infty`$):
 
 | corpus fact | fails in model? | disposition |
 | --- | --- | --- |
 | Maynard, *Small gaps between primes* (`1311.4600`) | yes (gaps $`\to\infty`$) | = S3 |
 | Maynard, *Dense clusters* (`1405.2593`) | yes | S3 family |
 | Banks--Freiberg--Turnage-Butterbaugh (`1311.7003`) | yes (consecutive primes in constant patterns) | S3 family |
-| Goldston--Pintz--Yildirim small-gaps (`0409258`) | yes | S3 family |
 | Kuperberg (`2210.09775`) | yes (singular-series sums, MS line) | = S2 |
-| Montgomery--Soundararajan (`literature.md`) | yes | = S2 |
+| Montgomery--Soundararajan (`literature.md`; anchored `0409258`) | yes | = S2 |
 | Maier, *Primes in short intervals* | yes (model is smooth; Maier shows short-interval oscillation) | S1/S2 family; short-interval, regime-blocked |
 | Ford--Green--Konyagin--Maynard--Tao, *Long gaps* (`1412.5029`) | **yes** (model max gap $`\sim\ln{}x`$; theorem forces $`\gg\ln{}x`$) | **NEW hit** -- see below |
+| Normalized prime-gap distribution / limit-points (Hildebrand--Maier `S0002-9939-1988-0958032-5`, Banks--Freiberg--Maynard `1404.5094`, Merikoski `1811.03008`, Pintz `1510.04577` / `1407.2213` / `1305.6289`, Ford--Maynard--Tao chains `1511.04468`, Baker--Freiberg `1510.08054`) | **yes** (normalized gap $`\to1`$, so the limit-point set is the single point $`\lbrace1\rbrace`$ of measure $`0`$; the unconditional positive-measure limit-point statements fail) | **NEW hits** (category grain) -- **non-viable**; see below |
 | Pratt (`2409.15185`), Tao--Teravainen (`2512.01739`) | n/a (bounded $`\omega(n)`$, different series) | not a matched-flank input; corroborating meta-fact below |
 | Cramer 1936 / Granville 1995 | -- (the model being defied) | not a separator |
 
-The sweep is **not empty**: the long-gaps theorem of Ford--Green--
-Konyagin--Maynard--Tao is a $`T`$-external, model-failing corpus fact
-outside $`\lbrace S1,S2,S3\rbrace`$ (the model's maximal gap up to $`x`$ is
-$`\sim\ln{}x`$, asymptotically below the theorem's
+The sweep returns **several** model-failing, $`T`$-external corpus facts
+outside $`\lbrace S1,S2,S3\rbrace`$, **all non-viable** -- the
+Ford--Green--Konyagin--Maynard--Tao long-gaps theorem, and the entire
+normalized-prime-gap distribution / limit-points category (last table
+row). The long-gaps theorem is a $`T`$-external, model-failing corpus
+fact outside $`\lbrace S1,S2,S3\rbrace`$ (the model's maximal gap up to
+$`x`$ is $`\sim\ln{}x`$, asymptotically below the theorem's
 $`\gg(\log{}x)(\log{}\log{}x)(\log{}\log{}\log{}\log{}x)/(\log{}\log{}\log{}x)`$).
 It **re-opens the `U20.4` inventory** (the claim "T exhausts the
 program's unconditional inputs" is not complete of model-failing facts).
@@ -452,6 +530,23 @@ middles, which a size-existence bound on one gap cannot supply. So it
 cannot feed $`Q<N-F`$. Recorded as a hit that
 re-opens the inventory but changes no verdict. `PROVED-DOSSIER`.
 
+The normalized-prime-gap distribution / limit-points category
+(Hildebrand--Maier `S0002-9939-1988-0958032-5`, Banks--Freiberg--Maynard
+`1404.5094`, Merikoski `1811.03008`, the three Pintz notes
+`1510.04577` / `1407.2213` / `1305.6289`, Ford--Maynard--Tao chains
+`1511.04468`, Baker--Freiberg `1510.08054`) is dispositioned at
+**category grain**, not priced per row (no sheet extension): every
+member is unconditional, $`T`$-external, and fails in the
+even-Cramer-smooth model, whose normalized gap $`\to1`$ collapses the
+limit-point set to the single point $`\lbrace1\rbrace`$ of measure
+$`0`$, so each unconditional positive-measure limit-point statement
+fails. None is a viable matched-flank separator, for the shared reason:
+these are statements about gap *size* and about the limit-point set of
+*normalized* gaps, not positive-proportion coincidences of a
+growing-length ($`L-1\to\infty`$) integer flank word realized twice with
+distinct middles, so none can feed $`Q<N-F`$. Recorded as hits that
+re-open the inventory but change no verdict. `PROVED-DOSSIER`.
+
 Corroborating meta-fact, both-readings: Tao--Teravainen (`2512.01739`,
 anchored) settle $`\sum\omega(n)/2^n`$ unconditionally with
 Maynard-type sieves but state explicitly that growing numerators (like
@@ -470,7 +565,7 @@ For every candidate surviving W4, the rule-12 error-landing check must
 run before any further investment. **No separator survives W4** as a
 live sheet-clean candidate against `CG` (S3: superpolylog rank, still
 binding; S2: regime-blocked; S1: right shape, absent, undecidable at
-corpus grain; the `U20.4` hit non-viable). So there is no surviving
+corpus grain; the `U20.4` hits non-viable). So there is no surviving
 candidate to error-land, and STOP condition 6 does not fire.
 
 The rule-12 landing is recorded for the ingredient every `CG`-route
@@ -496,8 +591,12 @@ constraint; its absence is.
 Support class on every clause; rule-16(a) clause-vs-body diff run below.
 
 **Primary hypothesis H-SEP: CONFIRMED (obstruction upgrade).**
-[`PROVED-DOSSIER` for the S2/S3 negatives and the barrier; the S1
-component is `OPEN`/undecidable-at-corpus-grain, named.]
+[`PROVED-DOSSIER` for the S3 negative, the *named*-S2-tool regime
+square-out (`PROVED`), and the barrier ($`Q/N\to1`$ a genuine limit,
+**with U20.5 write-out debt**); the **S1 and the
+S2-substitute-existence** components are
+`OPEN`/undecidable-at-corpus-grain, named. Adjudicates H-SEP\* (W4.0):
+middle-slot the salient, not the necessary, family.]
 
 1. Against the weakest currently known sufficient endpoint `CG` (and its
    strengthening, the contraction endpoint), and after adjoining the
@@ -509,18 +608,22 @@ component is `OPEN`/undecidable-at-corpus-grain, named.]
      under the `B2.pairs`->`CG` relaxation because the relaxation touches
      strength / $`s`$-uniformity / scale-density, never the
      $`D0`$-forced rank [`PROVED-DOSSIER`; sheet T9.S3].
-   - S2 (Montgomery--Soundararajan / Kuperberg line) fails on a
-     **regime** square-out
-     $`k_{\mathrm{req}}/k_{\mathrm{adm}}\sim(\ln\ln{}x)^{1/2}`$ and on
-     corpus status, neither a strength gap `CG` could close
-     [`PROVED-DOSSIER`; sheet T9.S2].
+   - S2 (Montgomery--Soundararajan / Kuperberg line) splits: the
+     **named tool** fails on a **regime** square-out
+     $`k_{\mathrm{req}}/k_{\mathrm{adm}}\sim(\ln\ln{}x)^{1/2}`$,
+     unconditional and not a strength gap `CG` could close [`PROVED`;
+     sheet T9.S2]; whether a lower-moment / positive-proportion
+     **word-grain substitute** for it exists is the F20.5 "only an open
+     possibility" question (`m5-lite-audit.md` l.752;
+     `collision-gap-audit.md` l.750), which `CG` does not settle --
+     **`OPEN`/`RECORDED`**, beside S1.
    - S1 (middle-slot equidistribution / upper-uniformity, `NI-M2`/`NI-M4`)
      is the **right shape** -- a middle-slot distributional input at the
      `HLQuantA` rank $`k\sim2.885\,\ln\ln{}x`$, carrying the upper /
      equidistribution content the frozen lower-bound `HLQuantA` lacks --
      and is **absent** from the corpus; `CG` weakens the demanded
-     strength (constant-order non-concentration on sparse scales) but
-     does not manufacture the carrier, so the re-pricing is
+     strength (constant-order non-concentration on sparse scales per
+     $`s`$) but does not manufacture the carrier, so the re-pricing is
      **undecidable at corpus grain** [`OPEN`; deciding fact named in
      W4.S1].
 2. Therefore the located obstruction **upgrades**: from "relative to
@@ -528,31 +631,50 @@ component is `OPEN`/undecidable-at-corpus-grain, named.]
    named separator inventory, for `CG`, the weakest currently known
    sufficient endpoint."** Any proof of `CG` must consume an input
    **outside $`T`$ that fails in the model** (the barrier's own
-   characterization; `proofs.md` C4 SCOPE: "the characterization is
+   characterization; `proofs.md` C4 STATEMENT: "the characterization is
    failure-in-model, not middle-slot-ness"). The **salient**, and only
-   currently identified, such family at the exchange rank is the
+   currently identified such family **whose obstruction is
+   absence-of-carrier rather than cost or regime**, is the
    middle-slot distributional statements at rank
    $`k\sim2.885\,\ln\ln{}x`$ -- the upper / equidistribution companion,
    at the `HLQuantA` rank but beyond its lower-bound content, of the
    uniform-tuple input the conditional full-irrationality route assumes.
-   This is a materially stronger `(S-)` statement than the item-0020
-   register and directly informs BET-20260718-08 [`assessment`; the
-   sub-clauses carry the classes above. audit repair: "requires
-   precisely a middle-slot input" / "HLQuantA-shape" over-strengthened
-   the barrier; softened to salient-family + failure-in-model].
-3. The `U20.4` sweep is not empty: Ford--Green--Konyagin--Maynard--Tao
-   long gaps is a $`T`$-external model-failing corpus fact that
-   re-opens the inventory but is **non-viable** as a separator -- a
-   single-event maximal-gap existence about gap *size*, not
-   matched-flank non-rigidity; it contributes $`O(1)`$ sites, not the
-   positive proportion (CG) needs [`PROVED-DOSSIER`; audit repair: the
-   draft's window-cap filtering reason was quantitatively wrong -- a
-   lone FGKMT gap is $`o(A'L\ln{}x)`$, inside the cap]. No new viable
-   separator emerges.
+   S3 (Maynard `1311.4600`) and S2 (Montgomery--Soundararajan /
+   Kuperberg) are currently-identified failure-in-model inputs at the
+   exchange rank too; they are excluded here explicitly because their
+   obstruction is **cost** (S3, the $`D0`$-forced rank) and **regime**
+   (S2, the square-out), not absence-of-carrier -- not by "at the
+   exchange rank" [`assessment`; the sub-clauses carry the classes above.
+   audit repair R2: "only currently identified ... at the exchange rank"
+   over-reached -- `proofs.md` C4 SCOPE names Maynard `1311.4600` as a
+   failure-in-model input priced at the exchange rank $`m\sim L`$
+   (W4.S3), so "at the exchange rank" does not do the excluding work;
+   narrowed to the absence-of-carrier qualifier. audit repair (in-run):
+   "requires precisely a middle-slot input" / "HLQuantA-shape"
+   over-strengthened the barrier; softened to salient-family +
+   failure-in-model].
+3. The `U20.4` sweep (a representative selection, not a per-row
+   enumeration of the shelf) returns **several** $`T`$-external
+   model-failing corpus facts, **all non-viable**: Ford--Green--
+   Konyagin--Maynard--Tao long gaps -- a single-event maximal-gap
+   existence about gap *size*, not matched-flank non-rigidity; it
+   contributes $`O(1)`$ sites, not the positive proportion (CG) needs
+   [`PROVED-DOSSIER`; audit repair: the draft's window-cap filtering
+   reason was quantitatively wrong -- a lone FGKMT gap is
+   $`o(A'L\ln{}x)`$, inside the cap] -- and the normalized-prime-gap
+   distribution / limit-points category (Hildebrand--Maier,
+   Banks--Freiberg--Maynard, Merikoski, Pintz, Ford--Maynard--Tao
+   chains, Baker--Freiberg), non-viable at category grain (gap-size and
+   limit-point statements, not growing-length matched-flank coincidence)
+   [`PROVED-DOSSIER`; audit repair R1: the draft table was a selection
+   captioned as a shelf enumeration and undercounted the hits at "one";
+   re-captioned, and the omitted category dispositioned]. Each re-opens
+   the inventory; no new viable separator emerges.
 4. STOP conditions: none fired. #5 does not fire -- the model's
    $`Q/N\to1`$ is a **genuine limit** over all integer $`x`$
    (transitional mass $`o(N)`$ at every scale, including $`D0`$
-   depth jumps) and is `PROVED-DOSSIER`, not `MODEL-ONLY` (W3.2b). #6
+   depth jumps) and is `PROVED-DOSSIER` (**with U20.5 write-out debt**;
+   W3.1/W3.2a), not `MODEL-ONLY` (W3.2b). #6
    does not fire -- no separator survives W4 sheet-clean. #8 does not
    fire -- every fact used (Maynard `1311.4600`, Montgomery--
    Soundararajan via `literature.md`, Kuperberg `2210.09775`, FGKMT
@@ -567,30 +689,63 @@ component is `OPEN`/undecidable-at-corpus-grain, named.]
    such family being the middle-slot distributional inputs at the
    exchange rank.
 
-### rule-16(a) clause-vs-body diff
+### rule-16(a) clause-vs-body diff (re-run after the R1--R11 repairs)
 
-Every scope qualifier of the body survives into the verdict verbatim:
+**Correction to the previous certification (R6).** The pre-repair diff
+certified "No verdict clause strengthens a body support class." That
+certification was **inaccurate**: it was issued while three
+strengthenings were live and it caught none of them. What it missed:
+
+- (MINOR-1 / R5) the barrier `PROVED-DOSSIER` carried "with U20.5
+  write-out debt" in the body (W3.1, W3.2a) and in both F20.7 anchors
+  (`m5-lite-audit.md` l.754; `collision-gap-audit.md` l.752), but verdict
+  clause 4 and the headline bracket dropped it;
+- (MAJOR-2 / MINOR-2 / R2) verdict clause 2 added "and only currently
+  identified ... at the exchange rank", an exclusivity the body states
+  only as "salient" (W4.S1); the one-directional diff did not record the
+  added words;
+- (MAJOR-3 / R3) the verdict and headline graded S2's blanket negative
+  `PROVED-DOSSIER`, one grade above its F20.5 `RECORDED` anchor
+  (`m5-lite-audit.md` l.752; `collision-gap-audit.md` l.750).
+
+These are repaired above; the diff below is re-run against the repaired
+verdict, and is not a quiet re-certification. Every scope qualifier of
+the body now survives into the verdict verbatim:
+
 - "weakest currently known sufficient endpoint" -- body W2.4, verdict 1/2.
 - "invariant under the relaxation ... never the $`D0`$-forced rank" --
   body W4.S3, verdict 1.
-- "regime square-out ... neither a strength gap `CG` could close" --
-  body W4.S2, verdict 1.
-- "right shape, absent, undecidable at corpus grain" -- body W4.S1,
-  verdict 1; the deciding fact named identically in both. The
-  "at-the-`HLQuantA`-rank, beyond its content" qualifier (not "of
-  `HLQuantA` shape") is carried identically in body W4.S1 and verdict
-  1/2.
+- "named-tool regime square-out (`PROVED`); word-grain-substitute
+  existence `OPEN`/`RECORDED` (F20.5, `m5-lite-audit.md` l.752 /
+  `collision-gap-audit.md` l.750)" -- body W4.S2, verdict 1; the
+  `RECORDED` grade is carried from the barrier tables, not promoted.
+- "right shape, absent, undecidable at corpus grain; sparse scales
+  **per $`s`$**" -- body W4.S1, verdict 1; the deciding fact named
+  identically in both. The "at-the-`HLQuantA`-rank, beyond its content"
+  qualifier (not "of `HLQuantA` shape") is carried identically in W4.0,
+  body W4.S1, and verdict 1/2.
+- "salient, and only currently identified such family **whose
+  obstruction is absence-of-carrier rather than cost or regime**" --
+  body W4.S1 + W4.0, verdict 2; S3 (cost) and S2 (regime) are excluded
+  explicitly, not by "at the exchange rank". (This records the added
+  "only currently identified" words the pre-repair diff omitted, now
+  reconciled by the R2 narrowing.)
 - "failure-in-model is the characterization, middle-slot the salient
-  family" -- body W4.S1 / W3.1, verdict 2/5 (not "requires precisely
-  middle-slot").
+  family" -- body W4.0 / W4.S1 / W3.1, verdict 2/5 (quote `proofs.md`
+  C4 STATEMENT; not "requires precisely middle-slot").
 - "genuine limit over all integer $`x`$ ... including $`D0`$ depth
-  jumps ... `PROVED-DOSSIER`, not `MODEL-ONLY`" -- body W3.2b, verdict 4.
-- "re-opens the inventory but non-viable (single-event maximal-gap,
-  gap-size not matched-flank; not a window-cap reason)" -- body
-  W4.U20.4, verdict 3.
-- No verdict clause strengthens a body support class; the S1 `OPEN`
-  label and the S2/S3 `PROVED-DOSSIER` negatives are carried without
-  promotion.
+  jumps ... `PROVED-DOSSIER`, **with U20.5 write-out debt**, not
+  `MODEL-ONLY`" -- body W3.2b / W3.1 / W3.2a, verdict 4.
+- "re-opens the inventory but non-viable (several hits: FGKMT
+  single-event maximal-gap, gap-size not matched-flank, not a window-cap
+  reason; and the normalized-gap distribution / limit-points category at
+  category grain)" -- body W4.U20.4, verdict 3.
+- No verdict clause now strengthens a body support class: the S1 `OPEN`
+  label, the **S2-substitute-existence `OPEN`** leg, the named-S2-tool
+  `PROVED` regime square-out, and the S3 `PROVED-DOSSIER` negative are
+  carried without promotion. The earlier blanket "S2 `PROVED-DOSSIER`"
+  over-grade and the dropped "U20.5 write-out debt" qualifier are
+  removed.
 
 ---
 
@@ -643,7 +798,7 @@ SUSTAINED and repaired in place (marked "[audit repair]" inline):
 - **(2/3) H-SEP wording over-strengthened the barrier.** The draft's
   "requires precisely a middle-slot distributional input of `HLQuantA`
   shape" made a shape-necessity claim the barrier disclaims (`proofs.md`
-  C4 SCOPE: "the characterization is failure-in-model, not
+  C4 STATEMENT: "the characterization is failure-in-model, not
   middle-slot-ness") and re-used the reserved `HLQuantA` name for the
   class-relative `NI-M2`/`NI-M4` carrier, which the corpus records as
   strictly beyond-`HLQuantA` upper content. Repaired: W4.S1, verdict 1,
@@ -651,9 +806,15 @@ SUSTAINED and repaired in place (marked "[audit repair]" inline):
   failure-in-model as the characterization, middle-slot as the salient
   family, and the separator as at the `HLQuantA` **rank** but **beyond**
   its lower-bound content. The H-SEP verdict (CONFIRMED / obstruction
-  upgrade) is unchanged in substance; the over-strengthening -- exactly
-  the verdict-promotion pattern this project has caught three times -- is
-  removed.
+  upgrade) is unchanged in substance. [repair R2: this in-run removal was
+  **incomplete** -- it softened the headline "requires precisely" form
+  but left a residual "and only currently identified ... at the exchange
+  rank" exclusivity in verdict clause 2 (the fifth recorded recurrence of
+  verdict promotion on this project, and the first to survive an in-run
+  panel that reported having removed it). The residual is repaired in the
+  R1--R11 pass by narrowing to "absence-of-carrier rather than cost or
+  regime", excluding priced-out S3 and regime-blocked S2 explicitly; see
+  the rule-16(a) diff correction and W4.0.]
 - **(2/3) FGKMT non-viability reason was quantitatively wrong.** The
   draft claimed a single Ford--Green--Konyagin--Maynard--Tao large gap
   violates the $`D0.2'`$ window cap and is filtered out of
@@ -683,10 +844,14 @@ demoted.
   `335eb6ea026ab2a41ac6e48f31e034da2f72d5597e0e62415fc71fa1b8120c6d`;
   `git diff --stat` = `writeup/status.md` only; W1 gate checks PASS.
 - Budget-sheet extension `budget_sheet_20_ext.py` (deterministic;
-  re-run sha256-stable) sha256:
-  `9c0d51f30b458ee0991d8980237a9a4a2d404f0f2659e28d89b27e26024e1899`.
-- Emitted table `budget_sheet_20_ext_tables.txt` sha256:
-  `135815b3b3253003650352914c6a9d88986d2fc1cc6de2a4f1db878b1c47bd71`.
+  re-run sha256-stable) sha256 (post-R9):
+  `999d6de33dda09cf82858113a3d269811c15aa1e2a7935b6a93371ece3c14d52`
+  (pre-repair `9c0d51f3...1899`; the only change is the T9.S3 gate tag
+  -- "FAILS (G1); PASSES (G2): cost x^{o(1)}" replacing "FAILS
+  (G1),(G2)" -- per repair R9; numeric columns byte-identical).
+- Emitted table `budget_sheet_20_ext_tables.txt` sha256 (post-R9):
+  `abf2fa65ca3320782958d63657c371e4b8adb074519ee10717156a54d3e9b128`
+  (pre-repair `135815b3...bd71`).
 - The anchored `dossier/item-0020-workpapers/budget_sheet_20.py` is
   untouched (byte-identical to the Section 2 anchor
   `bbce2f58...b0d`); the extension neither imports nor overwrites it.
