@@ -157,6 +157,39 @@ emit("     to CG removes eps->0 / s-uniformity / all-large-x, NONE of which")
 emit("     is the binding cost: the binding cost is the rank m ~ L.")
 emit("     VERDICT: superpolylog rank cost STILL BINDING under CG.")
 emit("")
+# -- T9.S3.Lceil (Dispatch C, C1): the SAME cost m ln m re-priced at the
+#    D0-EXACT rank m = L_ceil = 2J+1 (anchored budget_sheet_20.py L_ceil()
+#    form; C_0 = 2/ln 3), reported ALONGSIDE the grid-L columns above.
+#    Section 5 permits ONLY this addition; every grid column above is
+#    left byte-identical.  This block adds NO new column to any other
+#    table and changes no existing value.
+emit("-- T9.S3.Lceil  Dispatch-C C1 re-run: cost m ln m at the D0-EXACT")
+emit("   rank m = L_ceil = 2J+1, J = ceil(log2(ceil(13 C_0 A'' ln x))),")
+emit("   ALONGSIDE the grid-L T9.S3 columns above (which are unchanged).")
+emit("x        m=L_ceil   expo[exp(m ln m)]   vs (G1)/(G2)")
+for e in SCALES:
+    lnx, llx, L, k = regime(e)
+    lnx_f = float(lnx_of(e))
+    Dex = math.ceil(13 * float(C0) * APP * lnx_f)
+    Jex = math.ceil(math.log2(Dex))
+    Lex = 2 * Jex + 1
+    cost_ceil = Lex * log(Lex)
+    emit("1e%-5d %10d %14.3f        SUPERPOLYLOG: FAILS (G1) HARDER; PASSES (G2)"
+         % (e, Lex, float(expo(cost_ceil, llx))))
+emit("  -> exact m = 2J+1 exceeds grid m = (2/ln2)lnln x by ~3.7x (1e8) ..")
+emit("     ~2.0x (1e1000) (disclosure factors above), so exp(m ln m) is")
+emit("     LARGER and the expo column here rises well above the grid's")
+emit("     6.1 -> 9.0.  (G1) failure is only DEEPER; (G2) still passes")
+emit("     (m ln m = o(ln x) at exact m too, since m = O(lnln x)).  The")
+emit("     magnitude verdict is UNCHANGED and strengthened -- the exact")
+emit("     rank makes the per-word cost worse, never affordable.")
+emit("  -> SCOPE (Dispatch C): this L_ceil re-run bears on the MAGNITUDE of")
+emit("     the per-word EX / union-sieve route ONLY (F20.3 rank-2k cost).")
+emit("     It does NOT bear on C2 (necessity: is that route the one CG")
+emit("     forces?) or C3 (aggregation: does the averaged AR / F17.9-evading")
+emit("     lane escape the per-word cost?).  Those are decided in the note,")
+emit("     not on this sheet.")
+emit("")
 emit("-- T9.S2  Second-moment gap statistic (Montgomery-Soundararajan; --")
 emit("   corpus tool nearest = Kuperberg 2210.09775, D1.b). --")
 emit("Fails in the model (Cramer-defying variance H log(N/H)).  Nearest")
