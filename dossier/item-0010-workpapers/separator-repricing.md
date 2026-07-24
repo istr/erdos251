@@ -196,8 +196,14 @@ $$
 \text{CG}\ \prec\ \text{Contraction}\ \prec\ \text{B2.pairs},
 $$
 
-with `CG` the weakest currently known sufficient endpoint for
-$`S\notin\mathbb Z[1/2]`$. The re-pricing question of W4 is whether
+with `CG` the weakest clean, non-tautological analytic campaign target
+currently known for $`S\notin\mathbb Z[1/2]`$. It is not the logically
+weakest sufficient endpoint: the exact criterion $`Q<N-F`$
+(`CollisionDeficitSupply`, `collision-gap-audit.md` l.334) is strictly
+weaker and is the right minimal Lean core, but it so nearly restates
+the combinatorial conclusion that the anchor does not recommend it as
+an analytic campaign target (`collision-gap-audit.md` l.39, l.341-343).
+The re-pricing question of W4 is whether
 descending this order rescues any separator that was fatal for
 `B2.pairs`.
 
@@ -632,8 +638,9 @@ components `OPEN`/undecidable-at-corpus-grain. Adjudicates H-SEP\*
 dispatched form 1 (shape-necessity) is not certified. A single composite
 word over sub-cases of mixed grade is withheld deliberately, repair B6.]
 
-1. Against the weakest currently known sufficient endpoint `CG` (and its
-   strengthening, the contraction endpoint), and after adjoining the
+1. Against the weakest clean, non-tautological analytic campaign target
+   currently known, `CG` (and its strengthening, the contraction
+   endpoint), and after adjoining the
    named separator inventory $`\lbrace S1,S2,S3\rbrace`$ plus the `U20.4` sweep
    to the tool list, **no separator in the displayed named inventory
    $`\lbrace S1,S2,S3\rbrace`$, nor in the representative `U20.4`
@@ -791,7 +798,10 @@ is **not** a quiet re-certification -- each missed item is named with its
 live location. Every scope qualifier of the body now survives into the
 verdict verbatim:
 
-- "weakest currently known sufficient endpoint" -- body W2.4, verdict 1/2.
+- "weakest clean, non-tautological analytic campaign target currently
+  known" -- body W2.4, verdict 1/2. The prior wording asserted the
+  weakest *sufficient endpoint*, dropping the anchor's qualifier at
+  `collision-gap-audit.md` l.39; corrected in the D pass.
 - "invariant under the relaxation ... never the $`D0`$-forced rank" --
   body W4.S3, verdict 1.
 - "named-tool regime square-out (`PROVED`); word-grain-substitute
