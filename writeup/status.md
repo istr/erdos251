@@ -75,7 +75,7 @@ Q(x,s)
 \lvert S_x^{\prime(s)}\rvert
 $$
 
-for every fixed $`\varepsilon_{\mathrm{pair}}>0`$, eventually in $`x`$, with one threshold that works uniformly in $s$. The proved reduction loses only a square root:
+for every fixed $`\varepsilon_{\mathrm{pair}}>0`$, eventually in $`x`$, with one threshold that works uniformly in $`s`$. The proved reduction loses only a square root:
 
 $$
 \varepsilon_{\mathrm{REU}} = \sqrt{\varepsilon_{\mathrm{pair}}}.
