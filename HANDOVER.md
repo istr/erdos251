@@ -1,14 +1,15 @@
-# HANDOVER -- erdos251 (post-item-0010-separator-repricing frontier, 2026-07-24; round 1 closed and scored 2026-07-15)
+# HANDOVER -- erdos251 (post-item-0026 frontier, 2026-07-25; round 1 closed and scored 2026-07-15)
 
 Mission: public experiment attacking Erdos #251 (irrationality of
 S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..65; 6 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..66; 6 bets scored,
 BET-07 to 2026-08-08 and BET-08 to 2026-09-30 open, plus the item-0026
 bets registered at the ANN-65 apply -- read the `open:` block, not this
-line, for the registered values). 3. dossier/chain-v1.md (v1.4, SIGNED
+line, for the registered values). ANN-66 is NOT a scoring event;
+BET-20260724-10 may have met its condition and that call is open. 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
 payloads/item-0005-adjudication-v1.md). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
@@ -18,7 +19,11 @@ dossier/item-0020-workpapers/item-0020-final-report.md, then the
 item-0010 chain under dossier/item-0010-workpapers/ in landing order:
 collision-gap-audit.md, m5-lite-audit.md,
 flank-collision-singleton-frontier-audit.md, separator-repricing.md,
-s3-adjudication.md. 6. runs/README.md rules 1-19; rule 19
+s3-adjudication.md. Then the item-0026 outputs under
+dossier/item-0026-workpapers/: extraction-report.md (per-axis verdict
+table for all seven anchors), the seven extracts under extract/, and
+pintz-constants.md with pintz_constants_sheet.py.
+6. runs/README.md rules 1-19; rule 19
 (primary-anchor authoring) is new and binds every sentence that lands
 in a committed artifact.
 7. roadmap: python3 .agents/skills/roadmap-items/scripts/roadmap.py
@@ -56,29 +61,56 @@ its later sections carry a STALE banner, HANDOVER is the record).
   unconditional averaged middle-slot non-concentration /
   upper-uniformity carrier of NI-M2/NI-M4 shape at the exchange rank,
   stated at the HLQuantA RANK but strictly beyond its lower-bound
-  content, absent from the anchored corpus. The F20.7 smooth-model
+  content. Since item-0026 the absence is LOCATED, not blanket: on the
+  singular-series side an unconditional upper carrier at growing rank
+  exists at priced superpolylog cost (Kuperberg Thm 1.2), and what is
+  absent is the TRANSFER to word-grain class masses N_{P,d} -- axis A3
+  in the item-0026 decomposition. The F20.7 smooth-model
   barrier is INHERITED from collision-gap-audit.md and predates the
   chain; it is not an item-0010 contribution.
-- Every item-0010 session ran web OFF, so "absent" is scoped to the
-  anchored shelf. The literature has never been checked for this
-  object, and both the re-pricing verdict (W4.S1) and the Dispatch C
-  note name it as the searchable/provable object. That is what
-  item-0026 is for.
+- THE LITERATURE HAS NOW BEEN CHECKED (item-0026, ANN-66). Seven
+  primary anchors extracted with per-axis verdicts; 14 independent
+  verification agents, 0 errors. NO CARRIER IS LOCATED: no candidate
+  clears all six axes, so the item-0010 campaign state is unchanged.
+  The informative form, and the one to cite: A3 (word grain) FAILS for
+  all seven, so the located absence is the transfer to consecutive-gap-
+  word class masses, NOT a blanket corpus absence and NOT an absence on
+  the rank or window axes taken separately. Jha 2605.23014 clears rank
+  AND window jointly but is conditional on a strong Hardy-Littlewood
+  variant; the unconditional anchors (Teravainen 1510.06005, Matomaki
+  2012.11565) reach the window only on almost-prime objects. Earlier
+  text in this file said the literature had never been checked and that
+  this "is what item-0026 is for": SUPERSEDED.
+- PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
+  start reading only this file would otherwise assume it is. The
+  dispatched effectivization returned a STOP-condition-6 finding: the
+  printed proof's per-factor bound (2.3) holds only where p >> k, while
+  Theorem 1''s own threshold forces k/y -> 6 log k/(5 c_2) -> infinity.
+  On the D0 grid k/y = 1.85 -> 2.38 and the limit is 3.4625, so the
+  clean regime k <= y is never entered at any scale. This is a gap in
+  printed bookkeeping named at its exact step, NOT a claim that the
+  theorem is false; the rescue is a good-h averaging argument the
+  four-page note does not carry. Anchor:
+  dossier/item-0026-workpapers/pintz-constants.md.
 - Measurement is exhausted as a decision instrument. 35/35 frozen rows
   through x = 1e9 carry N = F, Q = 0, N-F-Q = 0; the heuristic
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md): item-0010,
-  item-0006, item-0022, item-0024. The earlier claim in this file that
+- EXECUTION ORDER at this apply (roadmap/_order.md): item-0026,
+  item-0010, item-0006, item-0022, item-0024. item-0026 has been
+  EXECUTED and its outputs have landed; whether it now leaves the order
+  is an operator call and has not been made. The earlier claim in this file that
   item-0022 runs first is SUPERSEDED. item-0021 is PARKED
   (arcs: [parked]) and out of the order, which discharges the ANN-63
   back-booking that demanded an operator decision on it.
-- Two successors are PROPOSED and unscheduled at this apply:
-  item-0026 (S1 carrier search; steering lane, web ON, primary anchors)
-  and item-0027 (Lean integrator for the direct collision route;
-  executor lane, independent of the item-0026 outcome). ANN-65 carries
-  the recommended placement and the two ratification commands.
+- BOTH SUCCESSORS ARE RATIFIED (commit 356bae5). item-0026 (S1 carrier
+  search) is first in roadmap/_order.md and has been executed; its
+  extraction lane ran web OFF against operator-held PDFs, not web ON as
+  originally scoped. item-0027 (Lean integrator for the direct
+  collision route; executor lane) is ratified, unscheduled, and
+  independent of the item-0026 outcome -- which, since item-0026
+  located no carrier, leaves it unaffected.
 
 ## Round-1 record (closed, scored)
 - Result: chain-v1 v1.3 -- conditional theorem "Hypothesis A (uniform
@@ -698,23 +730,36 @@ its later sections carry a STALE banner, HANDOVER is the record).
    note: that venue is public LLM-generated #251 material; web-ON
    runs must treat it as such.
 
-OPEN OPERATOR DECISIONS at the ANN-65 apply. Named, not numbered: the
+OPEN OPERATOR DECISIONS at the ANN-66 apply. Named, not numbered: the
 numbering above is legacy, has two 2./3. pairs, and is deliberately
 left alone rather than renumbered under a bookkeeping commit.
-- RATIFY OR AMEND the two proposed successors. item-0026 (S1 carrier
-  search) and item-0027 (direct-route Lean integrator) are `proposed`
-  and NOT in roadmap/_order.md, because steering may create only
-  proposed items and `new` does not schedule. ANN-65 carries the
-  recommended placement and the exact set-status/reorder commands.
+DISCHARGED since ANN-65 and struck from this block: the ratification of
+the two proposed successors (both ratified at 356bae5) and the
+item-0026 web-ON firewall (the extraction lane ran web OFF against
+operator-held PDFs; the firewall never bound).
+- WHETHER item-0026 LEAVES roadmap/_order.md. It is executed and still
+  listed first. Steering does not reorder.
 - REGISTERED BET VALUES. The item-0026 priors and resolve_by dates are
   steering-proposed; per the ANN-52 convention the operator amendment
   before apply is the registered value. If a bet is amended or dropped,
   the cold-start read-order line above must be mirrored.
-- FIREWALL for the item-0026 web-ON session: verification-class on the
-  item-0004 precedent (ANN-27 decision 3), with this repository and its
-  mirrors excluded as evidence and the ANN-32 treatment of the
-  LLM-hunter venue. Rule 19 and the item-0022 anchoring contract bind
-  every claim the session produces.
+- BET-20260724-10 (p 0.20, "an unconditional near-miss with a stated,
+  bounded, named gap axis", resolve_by 2026-08-31) has arguably met its
+  condition: four unconditional near-misses with A3 named as the
+  bounded gap axis. Whether the seven-anchor delivery resolves it is an
+  operator call. BET-20260724-09 is NOT met (no candidate clears all six
+  axes). Steering resolved nothing.
+- WHAT TO DO WITH THE item-0026 CONSOLIDATION. Steering holds an
+  approved v2 (six errata against v1, corrected axis matrix, re-ranked
+  hypotheses). Its disposition -- placed under
+  dossier/item-0026-workpapers/, split into roadmap items, or both --
+  is undecided.
+- source_commit IN writeup/sources.yml still reads
+  6b8248462d90e58482ed91871e7713bdf8976bd5 while per-entry blobs have
+  moved on. The mapper does not validate it; re-pinning is editorial.
+- FOUR HEADING RE-ASSIGNMENTS in writeup/sources.yml (commit a292ba4)
+  carry steering judgement rather than mechanism; final-observations ->
+  "## 1. The problem and how we study it" is the least certain.
 - RULE-16 STRENGTHENING (B6) is still formally open. ANN-64 added
   rule 19 instead and booked a sixth verdict-promotion recurrence;
   decide whether rule 19 discharges B6 or whether rule 16 is separately
