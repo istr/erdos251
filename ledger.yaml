@@ -2878,3 +2878,177 @@ annotations:
       order, and emitted no byte-exact instruction contract into the
       durable store; the item-0026 and item-0027 kickoffs remain
       ephemeral and unwritten until their items are ratified.
+  - id: ANN-20260725-66
+    refs: [ANN-20260724-65, ANN-20260724-64, BET-20260724-09,
+      BET-20260724-10, BET-20260711-07]
+    date: 2026-07-25
+    note: >-
+      BOOKS THE EXECUTION OF item-0026 (SEVEN EXTRACTS + DIRECTORY
+      UPDATE), THE writeup MAPPER REPAIR, AND THE PINTZ-CONSTANT
+      SESSION WHOSE OUTCOME IS A STOP-CONDITION-6 FINDING AGAINST A
+      PRINTED PROOF. Authored by steering at pin
+      d69026670abf873e9e366f37723e506cecc76228 == HEAD of main. No Lean
+      file, frozen block, frozen registry, production artifact, run,
+      roadmap execution order, or dossier verdict is changed by this
+      entry. item-0010 remains ratified/open; the (CG) verdict, the S1
+      deciding fact, and the item-0020 targets are untouched.
+      WHAT LANDED. (i) 97bf6d6: seven anchors extracted into
+      dossier/item-0026-workpapers/extract/ with per-axis verdicts,
+      plus Addendum 3 to dossier/literature.md and six edits to
+      writeup/references.md. Adjudication: no candidate clears all six
+      axes, so no carrier is located and the item-0010 campaign state
+      is unchanged. (ii) a292ba4..d690266: the writeup mapper repair.
+      (iii) 2cea537: dossier/item-0026-workpapers/pintz-constants.md
+      and its deterministic sheet, booked into payloads/HASHES.txt by
+      the commit preceding this entry.
+      THE STRUCTURAL RESULT OF item-0026, and the reason its headline
+      is weaker than its content. A3 (word grain) FAILS for all seven
+      candidates while other axes are cleared severally: Jha 2605.23014
+      clears rank AND window together (conditionally), Matomaki-
+      Teravainen 2207.05038 and Teravainen 1510.06005 clear the window
+      unconditionally on almost-prime objects, de la Breteche-Fiorilli
+      2009.05760 clears the sparse-scale axis unconditionally on
+      primes. The located absence is therefore the TRANSFER from
+      singular-series averages and interval counts to consecutive-gap-
+      word class masses N_{P,d}, not a blanket corpus absence. This is
+      a located absence relative to a named inventory of seven primary
+      anchors; it is not an impossibility theorem.
+      THE FINDING (STOP condition 6, reported not fabricated). The
+      dispatched question was the absolute constant c_2 in Pintz (1.8).
+      The answer is that it is not recoverable from the printed proof
+      in the regime the theorem itself operates in. The governing
+      display, quoted per rule 19 from dossier/1004.1084v1.pdf via the
+      transcription in dossier/item-0017-workpapers/extract/
+      pintz10-singser.md: "(2.3)  \Pi_3 = \prod_{p>y} ( 1 + O(k/p^2) )
+      = 1 + O( k/(y log y) )". With y := 5 log H / 6 from (2.1), the
+      exact per-factor value is nu_p / ((p - nu_p)(p - 1)), which is
+      O(k/p^2) only where nu_p/p is bounded away from 1, i.e. p >> k.
+      Theorem 1 lives there (H >= exp(k^{1/eps}) forces k << y).
+      Theorem 1' does not: at its own threshold H = exp(c_2 k/log k)
+      one gets k/y = 6 log k / (5 c_2) -> infinity for every fixed
+      absolute c_2, so the band y < p <= k is non-empty and carries
+      per-factor deviations of order 1. Support: PROVED (finite
+      algebra, re-derived independently by steering before reading the
+      workpaper; the identity and the k/y computation both check).
+      WHAT THE FINDING IS NOT. It is not a refutation of Theorem 1'.
+      The pointwise failure sits on a set of extension positions h of
+      density o(1), and an averaging argument over good h together with
+      CRT independence of the small-prime factor plausibly rescues the
+      statement as printed. What is absent from the four-page note is
+      that argument: the text multiplies the pointwise floor (2.8) by
+      the exact average (2.7), and the pointwise floor is what fails.
+      So the entry books a GAP IN THE PRINTED BOOKKEEPING, named at its
+      exact step, and explicitly declines to book either a corrected
+      constant or a defect in the theorem. The weakest link in the
+      finding is the CRT construction exhibiting a tuple that realises
+      the failure: it is sketched, not carried out. The gap itself does
+      not depend on it; the strengthening from "the proof does not show
+      it" to "pointwise it is false" does.
+      PRICING (rule 15, MEASURED, sheet 8980bc59...). Against the D0
+      grid the project sits INSIDE the un-effectivizable regime:
+      k/y = 1.85 / 2.00 / 2.19 / 2.38 at x = 1e8 / 1e20 / 1e100 /
+      1e1000 on the surrogate rank, larger on L_ceil, and rising.
+      Steering adds one figure the workpaper does not carry: the limit
+      is k/y -> (2/ln2)/(5/6) = 3.4625, so the ratio converges from
+      below to a constant above 1 and the clean regime k <= y is never
+      entered at ANY scale. RULE-12 LANDING: the constant does not land
+      as an additive shift or a coefficient coupling; the obstruction
+      is a regime boundary, and growth alone does not cross it.
+      STEERING CORRECTIONS, booked because the superseded figures were
+      steering-authored and are otherwise only retracted inside an
+      executor workpaper. (1) The item-0026 consolidation priced Pintz
+      Theorem 1' as admitting rank k <~ c_3 (log H)(loglog H) with
+      headroom 1.10/1.14/1.18/1.22 growing like lnlnln h. WITHDRAWN:
+      that computation assumed c_3 = 1 to be a valid absolute constant.
+      The printed-proof ceiling is the regime boundary k <= y =
+      (5/6) log H, linear in log H, and the demand exceeds it
+      everywhere. (2) The same consolidation priced Kuperberg Theorem
+      1.2 as milder than the F17.9 wall by a factor 1.15-1.46 in the
+      exponent across the grid. WITHDRAWN in part: the displayed
+      (3 log k)^k drops e^gamma per factor; the Mertens-honest factor
+      is 3 e^gamma log k = 5.343 log k, an added 2 gamma / ln 2 = 1.6655
+      in expo. Honest column 7.02 / 7.36 / 7.76 / 8.11 against the wall
+      6.14 / 6.93 / 7.94 / 8.96: Theorem 1.2 is MORE expensive than the
+      wall at 1e8 and 1e20 and cheaper only from about 1e100. The
+      qualitative reading survives -- on the singular-series side S1 is
+      a priced cost, not an absence -- but the quantification that made
+      it interesting does not. Steering verified 3 e^gamma and the expo
+      shift independently; the executor's measured finite product
+      converging to e^gamma = 1.7811 is the stronger evidence and is
+      preferred to the appeal to Mertens. (3) The consolidation's axis
+      A4 was defined as "direction (upper / non-concentration)", which
+      conflates two directions that coincide for the collision quantity
+      Q (since Q + cross-mass = N - F) but separate for moments of a
+      counting function. The executor had to interpret it and chose
+      anti-concentration. A4 must be object-bound or split; the
+      consolidation's candidate matrix is not load-bearing in that
+      column.
+      CONSEQUENCE FOR THE PROPOSED HYPOTHESIS H1. The cross-mass
+      reorientation was argued on the ground that the lower-bound
+      direction is the one the literature supplies at target rank. Both
+      supports for that argument are now gone: Pintz's floor is not
+      available at target rank per this entry, and dlbf20-moments.md
+      records that the sparse-scale mechanism there is a
+      Kaczorowski-Pintz style RH dichotomy that is direction-neutral,
+      with the moment lower bound a downstream Holder consequence. H1
+      survives as a methodological reorientation and loses its
+      literature leg. H2 (Maier matrix at word grain on sparse scales)
+      and H3 (class-restricted Kuperberg cost) are unaffected. No
+      roadmap item is created, re-scoped, or re-ordered by this entry.
+      BETS. This entry is NOT a scoring event and steering resolves
+      nothing. Noted for the operator: BET-20260724-10 (p 0.20, "an
+      unconditional near-miss with a stated, bounded, named gap axis",
+      resolve_by 2026-08-31) has arguably met its condition -- four
+      unconditional near-misses with A3 named as the bounded gap axis
+      -- and whether the seven-anchor delivery counts as resolution is
+      an operator call. BET-20260724-09 (p 0.05, the exact object
+      located and primary-anchored) is NOT met: no candidate clears all
+      six axes. BET-20260711-07 runs to its full resolve_by 2026-08-08;
+      this entry records further evidence against resolution and is not
+      a scoring event for it.
+      OPERATOR DEVIATION, booked. dispatch-pintz-constants-v1.md
+      section 8 read "the executor commits and pushes nothing"; the
+      operator overrode it with an explicit commit instruction, and the
+      executor flagged the deviation rather than absorbing it. The
+      commit touched no steering-owned bookkeeping surface, which is
+      why this entry and the preceding one exist.
+      EXPLICITLY NOT REPAIRED, and recorded so a cold start does not
+      trust them. HANDOVER.md is now stale in its frontier section: it
+      describes item-0026 in the future tense ("is what item-0026 is
+      for") and predates the seven-anchor delivery, the mapper repair,
+      and this finding. A refresh is NOT attempted here: HANDOVER.md is
+      800 lines, ANN-65 refreshed it by correcting three statements
+      that were false at their pin, and a half-read refresh would
+      reproduce exactly that defect. It is scheduled, not done. Also
+      still open and unchanged: lean/README.md below its STALE banner;
+      the Erdos251/Counting.lean umbrella docstring false on three
+      counts since ANN-45/ANN-47; the rule-16 strengthening (B6); and
+      the manifest's top-level source_commit, which still reads
+      6b8248462d90e58482ed91871e7713bdf8976bd5 while per-entry blobs
+      have moved on -- the mapper does not validate it, and re-pinning
+      it is an editorial decision left to the operator.
+      MAPPER STATE. writeup_mapper.py check now returns PASS and render
+      returns 16 entries, the first green run since writeup/status.md
+      was restructured into numbered sections. The repair found nine
+      defects in three classes where one was visible: validate_manifest
+      is fail-fast in entry order, so a non-fail-fast pass over all
+      thirteen entries was run first. Four target headings had gone
+      stale (all in status.md), two entries carried the pre-Addendum-3
+      literature.md blob, and three source-comment ids named in
+      references.md were undefined. The four heading re-assignments
+      carry steering judgement rather than mechanism and are flagged
+      for operator review in their own commit message;
+      final-observations -> "## 1. The problem and how we study it" is
+      the least certain of the four.
+      AUTHORING DISCIPLINE. Rule 19 applied: display (2.3) is quoted
+      verbatim from its primary anchor and the anchor is named, and the
+      identity, the k/y computation, the 3 e^gamma correction and the
+      expo shift were each re-derived by steering independently before
+      the workpaper was read, not taken from the executor summary.
+      Support classes: PROVED for the finite algebra, MEASURED for
+      sheet values, RECORDED for quotations, OPEN for the absolute
+      constants c_1, c_2, c_3. Obstruction language: the entry names a
+      gap in a printed argument at its exact step and declines to
+      assert that the theorem is false. Steering flipped no status,
+      changed no execution order, resolved no bet, and emitted no
+      byte-exact instruction contract into the durable store.
