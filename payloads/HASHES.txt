@@ -75,3 +75,6 @@ bbc3bf4724844976fbb5dd345dd647d56139c33e45c195ab136d95ec01a20c31  https://arxiv.
 05cc130e898b1e6b60bc096713eb67f83e2d4c0e96bc715797338817d9a52ddb  https://arxiv.org/pdf/1510.06005v2
 676ac2ceafc1550d63d70e71b34d4b1ed84d41918e3f6178a252e6cf9f0f007d  https://arxiv.org/pdf/2012.11565v3
 93aa865f7699da179305dbf14935016b4e092d75a5d7cb1ecac651c59067380d  https://arxiv.org/pdf/2207.05038v2
+29a7d7eaea2dbb69b88dd68ea6771cfbd6ae15e6fcbdd00f7bc63f6d55eea737  dossier/item-0026-workpapers/pintz-constants.md
+8980bc595ff30cbb251d8bb19b8787f1b4fba3126226d483dc7d2e2d19b5935f  dossier/item-0026-workpapers/pintz_constants_sheet.py
+6f37598d3fa3fcdac4063a357de940a640af33052101cc0ebd8a1f026d3e2e57  dossier/item-0026-workpapers/pintz_constants_sheet_tables.txt
