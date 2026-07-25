@@ -87,6 +87,55 @@ scored:
       #251 proof. Scoring booked ANN-28; binary mean brier moves
       0.183 -> 0.149 over five scored.
 
+  - id: BET-20260724-10
+    registered: 2026-07-24
+    claim: >-
+      the same search locates at least one unconditional near-miss of
+      the right family whose gap to the named shape is stated,
+      bounded, and named by axis (regime, rank, strength, or scale
+      density) rather than open-ended -- scored independently of
+      BET-20260724-09 and in particular still live if that bet
+      resolves NO
+    p: 0.20
+    resolve_by: 2026-08-31
+    outcome: true   # four unconditional near-misses, each primary-anchored with a named gap axis
+    brier: 0.64
+    note: >-
+      Resolved by operator judgment on the item-0026 per-candidate
+      checklist (extraction-report.md section 5), 2026-07-25, five
+      weeks before resolve_by. FOUR qualifying candidates, each
+      unconditional, each with a primary anchor booked in
+      payloads/HASHES.txt and an explicitly named gap axis: de la
+      Breteche-Fiorilli 2009.05760 (clears scale density and
+      direction; gap = rank, window, grain), Teravainen 1510.06005
+      (clears window; gap = rank, grain), Matomaki 2012.11565 (clears
+      window; gap = rank, grain, direction), Matomaki-Teravainen
+      2207.05038 (gap = window, grain). One counted would suffice.
+      The one interpretive question, recorded rather than passed over:
+      the claim's parenthesis lists regime, rank, strength and scale
+      density, and does NOT list grain, which is the axis item-0026
+      actually named as the located absence -- the axis decomposition
+      A1-A6 did not exist when the bet was registered. The resolution
+      does not turn on how that parenthesis is read. Under the loose
+      reading (the list illustrates what "named by axis" means, as
+      against "open-ended") all four qualify. Under the strict reading
+      (the list is exhaustive) at least dlB-F and Teravainen still
+      qualify, since rank is among their named gaps and rank is on the
+      list. YES under both readings.
+      CALIBRATION. Worst binary brier in the ledger; the prior was far
+      too low. The diagnosis is not that steering was pessimistic about
+      the literature -- that pessimism was right, and BET-20260724-09
+      still stands unmet -- but that the bet was BADLY CONSTRUCTED: its
+      resolution condition depends on an instrument, the axis
+      decomposition, which the project itself created between
+      registration and resolution. Once axes are defined, every gap is
+      named by axis nearly by construction, so the bet partly measured
+      its own resolution machinery rather than a fact about the
+      literature. Lesson booked for future registrations: a bet whose
+      condition can be satisfied by a change in the project's own
+      description language is not a forecast. Binary mean brier moves
+      0.149 -> 0.231 over six scored.
+
 open:
   - id: BET-20260711-07
     registered: 2026-07-11
@@ -131,28 +180,6 @@ open:
       prior and resolve_by steering-proposed (ANN-65); operator
       amendment before apply is the registered value. Registered
       BEFORE the session runs, per ground rule 4
-  - id: BET-20260724-10
-    registered: 2026-07-24
-    claim: >-
-      the same search locates at least one unconditional near-miss of
-      the right family whose gap to the named shape is stated,
-      bounded, and named by axis (regime, rank, strength, or scale
-      density) rather than open-ended -- scored independently of
-      BET-20260724-09 and in particular still live if that bet
-      resolves NO
-    p: 0.20
-    resolution: >-
-      operator judgment against the item-0026 verdicted per-candidate
-      checklist; a near-miss counts only with a primary anchor and an
-      explicitly named gap axis
-    resolve_by: 2026-08-31
-    note: >-
-      prior and resolve_by steering-proposed (ANN-65); operator
-      amendment before apply is the registered value. The two bets are
-      deliberately separated: the first prices the exact object, the
-      second prices the search's expected information value, which is
-      where steering expects the return to sit
-
   - id: BET-20260725-11
     registered: 2026-07-25
     claim: >-
@@ -3337,3 +3364,61 @@ annotations:
       remain open operator decisions, as does the BET-20260724-10 call,
       source_commit in writeup/sources.yml, the four heading
       re-assignments from a292ba4, and rule-16/B6.
+  - id: ANN-20260725-70
+    refs: [BET-20260724-10, BET-20260724-09, ANN-20260725-69,
+      ANN-20260725-66, ANN-20260724-65]
+    date: 2026-07-25
+    note: >-
+      RESOLVES BET-20260724-10 YES ON OPERATOR INSTRUCTION AND MOVES IT
+      TO THE SCORED BLOCK. brier 0.64 at p 0.20. One file: ledger.yaml.
+      No other bet is resolved, no verdict changes, and nothing else in
+      the tree is touched. This IS a scoring event, the first since
+      ANN-28, and steering resolved it only on instruction: the
+      resolution field names operator judgment and that is what it got.
+      THE GROUND. Four unconditional candidates from item-0026 qualify,
+      each with a primary anchor booked in payloads/HASHES.txt and an
+      explicitly named gap axis, against a claim needing one. They are
+      named in the scored entry with their cleared and failing axes.
+      The per-candidate checklist the resolution field points at is
+      dossier/item-0026-workpapers/extraction-report.md section 5.
+      THE INTERPRETIVE QUESTION, recorded rather than passed over. The
+      claim's parenthesis enumerates regime, rank, strength and scale
+      density; it does not enumerate grain, which is the axis item-0026
+      named as the located absence, because the A1-A6 decomposition did
+      not exist on 2026-07-24. The resolution does not depend on how
+      that parenthesis is read: under the loose reading all four
+      candidates qualify, under the strict reading dlB-F and Teravainen
+      still do, since rank is among their named gaps and rank is
+      enumerated. Stating this is the point -- a resolution that would
+      flip on a reading of its own wording should not be booked as
+      clean.
+      CALIBRATION, and the reason this entry is longer than the
+      resolution needed. 0.64 is the worst binary brier in the ledger
+      and the running binary mean moves 0.149 -> 0.231 over six scored.
+      The diagnosis is NOT that steering was too pessimistic about the
+      literature: that pessimism was correct, BET-20260724-09 stands
+      unmet, no carrier was located, and the campaign state is
+      unchanged. The diagnosis is that the bet was badly constructed.
+      Its resolution condition depends on an instrument -- the axis
+      decomposition -- that this project created between registration
+      and resolution, and once axes exist every gap is named by axis
+      nearly by construction. The bet therefore measured its own
+      resolution machinery as much as it measured the literature.
+      LESSON BOOKED, and it binds the three bets registered in ANN-69:
+      a bet whose condition can be satisfied by a change in the
+      project's own description language is not a forecast. Checked
+      against BET-20260725-11, -12 and -13: each turns on a numerical
+      outcome, a positive-proportion finding, or the existence of a
+      named weaker hypothesis, and none can be satisfied by
+      redescription.
+      NOT RESOLVED HERE. BET-20260724-09 (p 0.05, the exact object
+      located and primary-anchored, resolve_by 2026-08-31) is decidable
+      on the same record and is NOT met -- no candidate clears all six
+      axes. Steering did not resolve it, because the instruction named
+      one bet. If the operator resolves it NO on the same record its
+      brier is 0.0025 and the binary mean over seven becomes 0.198.
+      BET-20260711-07 runs to 2026-08-08 and BET-20260718-08 to
+      2026-09-30, both untouched. A re-pricing of BET-20260718-08 was
+      drafted on 2026-07-25 and NOT applied on operator decision; that
+      bet therefore stands at its registered 0.07, and no BET-14 exists
+      in this ledger.
