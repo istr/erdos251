@@ -1,0 +1,90 @@
+item-0026 Pintz (1.8) span-constant effectivization sheet.
+Grid convention (anchor budget_sheet_20.py (m)/(p)): surrogate rank
+L = (2/ln2) lnln x, k = L; D0-exact L_ceil = 2J+1,
+J = ceil(log2(ceil(13 C0 A'' ln x))).  Window h = A' L ln x, A' = 1.5,
+A'' = 48, C0 = 2/ln3 = 1.820478, e^gamma = 1.781072.
+Exponent convention (anchor): expo(F) = ln F / lnln x, F = (ln x)^expo.
+
+== SELF-CHECK. Reproduce the anchored F17.9 grid column ==
+F17.9 = expo[exp(L ln L)] = L ln L / lnln x at k = L = (2/ln2) lnln x
+(item-0010 budget_sheet_20_ext.py T9.S3 grid-L column; the
+superpolylog wall).  Anchored values: 6.143 / 6.932 / 7.944 / 8.963.
+x        L          F17.9 = L ln L / lnln x
+1e8         8.4065     6.1430
+1e20       11.0504     6.9320
+1e100      15.6942     7.9443
+1e1000     22.3381     8.9629
+  -> reproduces the anchored F17.9 column to 3 dp; self-check PASSES.
+
+== S3. Pintz (2.8) floor: effectivization ceiling vs grid demand ==
+Pintz splits the extension-ratio Euler product at y = 5 log H/6 (2.1);
+with the window H = h = A' L ln x this is y = 5 ln h / 6.  The printed
+per-factor bound Pi_3 = prod_{p>y}(1+O(k/p^2)) (2.3) is valid only
+where nu_p/p is bounded away from 1 for every p > y, i.e. where
+y >= k (all p > y satisfy nu_p <= k < p).  So the EFFECTIVIZATION
+CEILING of the printed floor is k_adm = y = 5 ln h / 6.  In the floor
+regime the ceiling is BELOW the demand: the (1.8) threshold
+H = exp(c_2 k/log k) gives k/y = 6 log k /(5 c_2) -> infinity (Q2).
+Below the k=grid-L (m) and k=L_ceil (p) rank columns, both vs y.
+
+x        k_req=L    y=5lnh/6   k_adm/k_req=y/L   k/y     verdict
+1e8         8.4065     4.5400     0.5401     1.8517   UNAVAILABLE
+1e20       11.0504     5.5314     0.5006     1.9977   UNAVAILABLE
+1e100      15.6942     7.1650     0.4565     2.1904   UNAVAILABLE
+1e1000     22.3381     9.3780     0.4198     2.3820   UNAVAILABLE
+
+x        k_req=Lceil y=5lnh/6  k_adm/k_req=y/Lc  Lc/y    verdict
+1e8             31     4.5400     0.1465     6.8283   UNAVAILABLE
+1e20            33     5.5314     0.1676     5.9659   UNAVAILABLE
+1e100           37     7.1650     0.1936     5.1640   UNAVAILABLE
+1e1000          45     9.3780     0.2084     4.7985   UNAVAILABLE
+  -> k/y = 1.85 -> 2.38 (grid L) and larger for L_ceil, RISING with
+     scale: the demand exceeds the effectivization ceiling at every
+     tabulated scale and the gap WIDENS.  VERDICT: UNAVAILABLE,
+     grid-uniformly, in the operative regime.
+  SUPERSEDES steering's authoring-time sensitivity (headroom
+     1.10/1.14/1.18/1.22 growing like lnlnln h): that used
+     k_adm = c_3 ln h lnln h with c_3 = 1 ASSUMED a valid absolute
+     constant.  Q2 shows c_3 is not recoverable as absolute from the
+     printed proof in this regime; the true printed-proof ceiling is
+     the regime boundary k_adm = y, not c_3 ln h lnln h.
+  RULE-12 LANDING: the constant does NOT land in the operative regime
+     (neither additive shift nor coefficient coupling) -- the
+     obstruction is a regime boundary k > y, and k/y never approaches
+     1 from above in or beyond the grid (window h grows too slowly
+     relative to L), so growth alone never reaches the clean regime.
+
+== S4. Kuperberg Theorem 1.2 displayed constant (3 log k)^k ==
+(20)/(21) small-prime factor prod_{p<=k^3}(1-1/p)^{-k}; Mertens third
+theorem (Rosser-Schoenfeld 1962, explicit form) gives
+prod_{p<=z}(1-1/p)^{-1} = e^gamma ln z (1+o(1)), so at z=k^3,
+prod_{p<=k^3}(1-1/p)^{-1} = e^gamma . 3 ln k (1+o(1)) = 3 e^gamma ln k
+(1+o(1)).  The printed bound (3 log k)^k drops the e^gamma per factor
+(an e^{gamma k} = (ln x)^{2 gamma/ln2 . (1+o(1))} loss at k = L).
+Exact finite product at the grid k^3 (MEASURED) vs 3 ln k and the RS
+asymptotic 3 e^gamma ln k:
+x        k=L        exactProd   3lnk       3e^g.lnk   exact/(3lnk)
+1e8         8.4065    11.4270     6.3870    11.3757     1.7891
+1e20       11.0504    12.8842     7.2074    12.8369     1.7876
+1e100      15.6942    14.7423     8.2599    14.7114     1.7848
+1e1000     22.3381    16.6124     9.3189    16.5976     1.7827
+  -> exact/(3 ln k) = 1.789 -> 1.783 -> e^gamma = 1.7811: the exact
+     small-prime product is 3 e^gamma ln k, NOT 3 ln k.
+
+S4 pricing on the grid: expo[(c ln k)^k] = k ln(c ln k)/lnln x, vs the
+anchored F17.9 wall.  c = 3 reproduces steering's displayed-factor
+row (5.350/5.699/6.092/6.440); c = 3 e^gamma is the Mertens-honest
+column; the exact-product column uses the MEASURED finite product.
+x        (3lnk)^k    (3e^g lnk)^k  exactProd^k   F17.9(exp(k ln k))
+1e8         5.3503     7.0158     7.0287     6.1430
+1e20        5.6990     7.3644     7.3751     6.9320
+1e100       6.0922     7.7577     7.7638     7.9443
+1e1000      6.4403     8.1058     8.1084     8.9629
+  -> the Mertens-honest / exact column exceeds steering's (3 ln k)^k
+     by 2 gamma/ln2 = 1.6655 in expo (the dropped e^{gamma k}); it also
+     exceeds F17.9 at the small scales and closes toward it by 1e1000.
+     The exponent GROWS like (2/ln2) ln(3 e^gamma ln k) ~ lnlnln x:
+     Theorem 1.2's average-side upper bound is superpolylog at
+     exchange depth under EITHER constant.
+
+END OF PINTZ-CONSTANTS SHEET
