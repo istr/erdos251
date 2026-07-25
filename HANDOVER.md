@@ -5,11 +5,15 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..66; 6 bets scored,
-BET-07 to 2026-08-08 and BET-08 to 2026-09-30 open, plus the item-0026
-bets registered at the ANN-65 apply -- read the `open:` block, not this
-line, for the registered values). ANN-66 is NOT a scoring event;
-BET-20260724-10 may have met its condition and that call is open. 3. dossier/chain-v1.md (v1.4, SIGNED
+1. This file. 2. ledger.yaml (append-only; ANN-01..72; 8 bets scored,
+BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
+successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
+block, not this line, for the registered values). Both item-0026 bets
+are now SCORED: BET-20260724-10 YES at brier 0.64 (ANN-70) and
+BET-20260724-09 NO at brier 0.0025 (ANN-71); read ANN-70 and ANN-71
+together, since both entries argue that the pair priced the project's
+own vocabulary rather than the world and that 0.149 over the five
+pre-2026-07-24 bets is the honest baseline. 3. dossier/chain-v1.md (v1.4, SIGNED
 OFF -- the round-1 result), then dossier/tate-transfer.md (v2 -- the
 round-2 unconditional-front verdict; adjudication at
 payloads/item-0005-adjudication-v1.md). 4. dossier/triage-2a.md and triage-2b.md (R2 adjudications),
@@ -97,20 +101,44 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md): item-0026,
-  item-0010, item-0006, item-0022, item-0024. item-0026 has been
-  EXECUTED and its outputs have landed; whether it now leaves the order
-  is an operator call and has not been made. The earlier claim in this file that
-  item-0022 runs first is SUPERSEDED. item-0021 is PARKED
-  (arcs: [parked]) and out of the order, which discharges the ANN-63
-  back-booking that demanded an operator decision on it.
-- BOTH SUCCESSORS ARE RATIFIED (commit 356bae5). item-0026 (S1 carrier
-  search) is first in roadmap/_order.md and has been executed; its
-  extraction lane ran web OFF against operator-held PDFs, not web ON as
-  originally scoped. item-0027 (Lean integrator for the direct
-  collision route; executor lane) is ratified, unscheduled, and
-  independent of the item-0026 outcome -- which, since item-0026
-  located no carrier, leaves it unaffected.
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-72): item-0010,
+  item-0006, item-0022, item-0027, item-0028, item-0029, item-0030,
+  item-0024. POLICY, operator-set at that apply: the full research arc
+  stays on top of the order and tooling items are postponed behind it.
+  Positions 1-7 are the whole active research arc in strictly ascending
+  rank (0016, 0090, 0095, 0170, 0180, 0190, 0200); item-0024 (arcs
+  [tooling, workflow], rank 0020) sits LAST by that policy, so its low
+  rank against its last position is intended postponement and NOT an
+  ordering defect. Earlier claims in this file that item-0026 runs
+  first, and before that item-0022, are both SUPERSEDED. item-0021 is
+  PARKED (arcs: [parked]) and out of the order, which discharges the
+  ANN-63 back-booking that demanded an operator decision on it; by
+  rank (0150) it would sit between item-0022 and item-0027, and
+  reviving it costs a restructure onto research plus a placement.
+- item-0026 IS DONE AND OUT OF THE ORDER (ANN-72). It lives at
+  roadmap/completed/item-0026.md with a final summary; the verdict is
+  unchanged (NOT-FOUND at literature grain, A3 the named gap axis) and
+  its extraction lane ran web OFF against operator-held PDFs, not web
+  ON as originally scoped. The summary is bookkeeping over
+  ANN-66/67/68 and introduces no new claim.
+- item-0027 IS RATIFIED (commit 356bae5) AND NOW SCHEDULED (ANN-72),
+  placed by rank at position 4. Lean integrator for the direct
+  collision route, executor lane, independent of the item-0026
+  outcome -- which, since item-0026 located no carrier, leaves it
+  unaffected. It was ratified but unscheduled between 356bae5 and
+  ANN-72 because the reorder ANN-64 recommended was never run.
+- THE THREE item-0026 SUCCESSORS ARE RATIFIED AND SCHEDULED (ANN-72),
+  in the run order ANN-69 recommended: item-0028 (class-restricted
+  singular-series cost, budget-sheet only, cheapest and recommended
+  first because a negative closes it outright), item-0029 (Maier
+  matrix at word grain -- the substantive one, the ONLY registered
+  hypothesis aimed at the A3 absence, single gate the
+  positive-proportion question), item-0030 (measure the assumed
+  Hardy-Littlewood variant of arXiv 2605.23014, measurement not proof
+  work, web not needed). BET-11/12/13 each bind only if their item is
+  ratified AND runs: the ratification half is met, the run half is
+  not. The cross-mass reorientation (H1) is deliberately NOT an item
+  (ANN-69); it stays registered in the consolidation and unscheduled.
 
 ## Round-1 record (closed, scored)
 - Result: chain-v1 v1.3 -- conditional theorem "Hypothesis A (uniform
@@ -730,30 +758,28 @@ its later sections carry a STALE banner, HANDOVER is the record).
    note: that venue is public LLM-generated #251 material; web-ON
    runs must treat it as such.
 
-OPEN OPERATOR DECISIONS at the ANN-66 apply. Named, not numbered: the
+OPEN OPERATOR DECISIONS at the ANN-72 apply. Named, not numbered: the
 numbering above is legacy, has two 2./3. pairs, and is deliberately
 left alone rather than renumbered under a bookkeeping commit.
-DISCHARGED since ANN-65 and struck from this block: the ratification of
-the two proposed successors (both ratified at 356bae5) and the
-item-0026 web-ON firewall (the extraction lane ran web OFF against
-operator-held PDFs; the firewall never bound).
-- WHETHER item-0026 LEAVES roadmap/_order.md. It is executed and still
-  listed first. Steering does not reorder.
-- REGISTERED BET VALUES. The item-0026 priors and resolve_by dates are
+DISCHARGED since ANN-66 and struck from this block: whether item-0026
+leaves roadmap/_order.md (it does -- item-0026 is done and out,
+ANN-72); the disposition of the item-0026 consolidation (landed under
+dossier/item-0026-workpapers/ and anchored, ANN-68; not split into
+items, and the H1 non-proposal is booked in ANN-69); and the
+BET-20260724-10 call (resolved YES at brier 0.64, ANN-70, with
+BET-20260724-09 closed NO at 0.0025, ANN-71 -- both are in the
+`scored:` block and neither is an open call). Struck earlier, at the
+ANN-66 apply: the ratification of the two proposed successors (both
+ratified at 356bae5) and the item-0026 web-ON firewall (the extraction
+lane ran web OFF against operator-held PDFs; the firewall never bound).
+- REGISTERED BET VALUES. The priors and resolve_by dates of the three
+  item-0026 successor bets (BET-11/12/13, ANN-69) are
   steering-proposed; per the ANN-52 convention the operator amendment
-  before apply is the registered value. If a bet is amended or dropped,
-  the cold-start read-order line above must be mirrored.
-- BET-20260724-10 (p 0.20, "an unconditional near-miss with a stated,
-  bounded, named gap axis", resolve_by 2026-08-31) has arguably met its
-  condition: four unconditional near-misses with A3 named as the
-  bounded gap axis. Whether the seven-anchor delivery resolves it is an
-  operator call. BET-20260724-09 is NOT met (no candidate clears all six
-  axes). Steering resolved nothing.
-- WHAT TO DO WITH THE item-0026 CONSOLIDATION. Steering holds an
-  approved v2 (six errata against v1, corrected axis matrix, re-ranked
-  hypotheses). Its disposition -- placed under
-  dossier/item-0026-workpapers/, split into roadmap items, or both --
-  is undecided.
+  before apply is the registered value, and no amendment was made, so
+  0.12 / 0.15 / 0.35 to 2026-09-30 stand. Each binds only if its item
+  is ratified AND runs: all three are ratified as of ANN-72, none has
+  run. If a bet is amended or dropped, the cold-start read-order line
+  above must be mirrored.
 - source_commit IN writeup/sources.yml still reads
   6b8248462d90e58482ed91871e7713bdf8976bd5 while per-entry blobs have
   moved on. The mapper does not validate it; re-pinning is editorial.
