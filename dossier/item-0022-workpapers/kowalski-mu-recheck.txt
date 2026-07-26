@@ -1,0 +1,28 @@
+primes used: 148933 (all primes p < 2000000)
+largest prime used: 1999993
+working precision: 40 digits (30 significant + guard)
+
+mu_2(2) = 2.30096154471321787845931778685
+mu_3(2) = 6.0329456732065653267125144874
+mu_4(2) = 17.562460016396732625372926801
+mu_5(2) = 55.2550578033345459938223505756
+mu_6(2) = 184.181597390659992059369806357
+
+E_even[S_2]        = 2.0
+E_even[S_2^2]      = 4.6019230894264357569186355737
+E_even[S_2^2] / E_even[S_2]^2 = 1.15048077235660893922965889343
+
+Comparison against anchor 2 Example 3.5 (stated, not assumed):
+  k=2: computed 2.30096154471  vs anchor 2.300...
+  k=3: computed 6.03294567321  vs anchor 6.03294...
+  k=4: computed 17.5624600164  vs anchor 17.562...
+  k=5: computed 55.2550578033  vs anchor 55.255...
+  k=6: computed 184.181597391  vs anchor 184.18...
+
+Comparison against report 1's more precise figures (not assumed):
+  report 1 states mu_2(2) = 2.3009615447...
+  computed          mu_2(2) = 2.30096154471322
+  report 1 states E_even[S_2^2] = 4.6019230894...
+  computed          E_even[S_2^2] = 4.60192308942644
+  report 1 states ratio = 1.1504807723...
+  computed          ratio = 1.15048077235661
