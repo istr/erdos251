@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..74; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..75; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -154,6 +154,28 @@ its later sections carry a STALE banner, HANDOVER is the record).
   anchored 2210.09775v2; the precedent layer is P1 through P8, not P1
   through P3. ANCHORING IS NOT ABSORPTION -- none of the ten is
   extracted, no claim is verdicted, and no item scope grew.
+- THE REPORT-3 SPLIT IS RATIFIED (ANN-75). Identification duty joined
+  item-0022, whose acceptance now also carries the fourth verdict class
+  SUPERSEDED, the named output artifact
+  dossier/item-0022-workpapers/absorption-checklist.md, and the rule
+  that unanchorable citations take a verdict class rather than a hash.
+  Its TITLE still names only the two 2026-07-18 reports, deliberately:
+  verification remains its identity and report 3 enters as anchor and
+  citation work only. Evaluation duty became item-0031, PROPOSED,
+  rank 0210, research arc, UNSCHEDULED -- roadmap/_order.md is
+  byte-identical to what ANN-73 set. item-0031 prices each proposed
+  route in the target regime and names the first factor that dies; its
+  first question is whether the residue route really halves the window
+  budget, against the corpus depth arithmetic and the triage-1a
+  shared-log-log finding. It does NOT inherit the report's own priority
+  ordering and may not propose successor items.
+- THE item-0022 KICKOFF GOES TO A FRESH SESSION (ANN-75), on the ANN-41
+  grounds re-read at this pin. Ground (c) applies -- the hot context's
+  knowledge is spent into ANN-74 and travels here -- and a stronger
+  item-specific ground applies too: the authoring session read both
+  2026-07-18 reports in full and fetched two newly anchored sources, so
+  a kickoff written there risks encoding conclusions into an
+  instruction set. Recommendation, not a decision.
 - THE PINTZ DISCREPANCY RESOLVED, AND IT IS A CORPUS GAP (ANN-74).
   1004.1072 is Pintz, "Patterns of primes", a DIFFERENT paper from the
   anchored 1004.1084v1. Report 1 cites it correctly: its Lemma 2 proof
@@ -839,15 +861,6 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   is ratified AND runs: all three are ratified as of ANN-72, none has
   run. If a bet is amended or dropped, the cold-start read-order line
   above must be mirrored.
-- REPORT-3 SCOPE SPLIT (ANN-74). The 2026-07-19 alternative-routes
-  report is anchored but sits OUTSIDE item-0022's ratified goal line,
-  which names the two 2026-07-18 reports. Steering recommends splitting
-  rather than widening: identification duty extends to report 3 cheaply
-  (1105.1451v1 already anchored, 1603.03720 not, two gesture-references
-  unanchorable, all seven internal sources verified present), but its
-  substance is eight route PROPOSALS, which need a D3-pattern no-go
-  audit rather than a verdicted citation checklist -- a research item,
-  not a verification one. Both halves are open.
 - PRECEDENT-ANCHOR POLICY (ANN-74). P2 is a git repository
   (google-deepmind/alphaproof-nexus-results) with no stable PDF and
   needs a commit SHA rather than a sha256; P4 through P8 are Nature,
