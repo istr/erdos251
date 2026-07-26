@@ -3782,3 +3782,162 @@ annotations:
       writeup/sources.yml; the four heading re-assignments from a292ba4;
       rule-16/B6; lean/README.md below its STALE banner; and the
       Erdos251/Counting.lean umbrella docstring.
+  - id: ANN-20260726-74
+    refs: [ANN-20260726-73, ANN-20260725-68, ANN-20260725-69,
+      ANN-20260718-51, ANN-20260717-27, ERRATUM-5]
+    date: 2026-07-26
+    note: >-
+      TEN ANCHORS BOOKED; item-0022's IDENTIFICATION LAYER RESOLVED;
+      ERRATUM-5 ON A LANDED WORKPAPER; A THIRD REPORT ARRIVES OUTSIDE
+      THE RATIFIED SCOPE. Authored by steering (Claude Opus 5) on
+      operator instruction, emitted as a git am mbox that applies on top
+      of the ANN-73 pair; the operator apply is the ratifying commit.
+      Files: payloads/HASHES.txt (ten appended lines), HANDOVER.md
+      (bounded deltas, enumerated below), ledger.yaml (this entry).
+      NOTHING ANALYTIC MOVES. No Lean file, frozen block, roadmap item,
+      roadmap order, dossier workpaper, run, writeup file or existing
+      anchor line is touched. No verdict, target, threshold or constant
+      changes; no bet is resolved, re-priced or amended; item-0026's
+      NOT-FOUND verdict at literature grain and A3 as the named gap axis
+      stand exactly as ANN-66/68 left them.
+      THE ANCHORS. The operator supplied canonical sha256 for seven
+      primary sources and three reports. Seven source URLs are booked
+      version-pinned: 1004.1072v1, 2109.03767v3, 2312.09021v2,
+      2301.06095v1, 2605.22763v2, 2601.07421v5, and the ETH-hosted
+      Kowalski note. Three operator-held reports are booked by the
+      operator's own filenames, on the precedent of the two bare-filename
+      PDF entries already in the file: the S-weighted-repair literature
+      report (2026-07-18), the consolidated redevelopment report
+      (2026-07-18), and the alternative-routes report (2026-07-19). All
+      ten hashes are new, no hash or path collides with an existing line,
+      and https://arxiv.org/pdf/1105.1451v1 was ALREADY anchored.
+      ANCHORING IS NOT ABSORPTION. Booking a hash makes an artifact
+      citable as a primary source; it does not verdict a single claim in
+      it, and it does not enlarge any item's scope. None of the ten is
+      extracted yet. The 2026-07-18 steering spot-checks of P1 and P3
+      were made against unversioned abstract pages; the anchors now fix
+      v2 and v5 respectively, which is a stricter object than what was
+      spot-checked.
+      HASH CALIBRATION. Steering computed provisional sha256 for the two
+      2026-07-18 reports from the uploaded bytes before the operator
+      published his; both matched exactly (93bb5f6b... and 4b8bae09...).
+      This does NOT weaken the standing rule that the operator hash is
+      the only canonical layer, and it is not evidence against the
+      documented Gemini self-hash confabulation: a hash computed by a
+      real tool over bytes present in a sandbox is a different object
+      from a hash a model reports about itself. Recorded as calibration,
+      not as a rule change.
+      IDENTIFICATION LAYER, all of item-0022's named targets resolved.
+      (i) The Kowalski note is E. Kowalski, "Averages of Euler products,
+      distribution of singular series and the ubiquity of Poisson
+      distribution". (ii) 2109.03767 is Kuperberg ALONE, "Odd moments in
+      the distribution of primes", Alg. Number Th. 19 (2025) 617-666.
+      (iii) The Bloom-Kuperberg line named in report 1's prose carries NO
+      URL in that report's own bibliography; it is Bloom and Kuperberg,
+      "Odd moments and adding fractions", 2312.09021, Proc. LMS 131
+      (2025) e70068 -- a dangling citation, now resolved and anchored.
+      (iv) 2301.06095 is Kuperberg, sums of singular series along
+      arithmetic progressions and with smooth weights, a DIFFERENT paper
+      from the already-anchored 2210.09775v2. (v) The precedent layer is
+      P1 through P8, not P1 through P3 as item-0022's goal line assumes;
+      P2 is a git repository, google-deepmind/alphaproof-nexus-results,
+      which has no stable PDF and needs a commit SHA rather than a
+      sha256. (vi) Report 1 cites a Tao blog TAG page, and report 3
+      carries two gesture-references without identifiers (large-gaps work
+      of Ford, Green, Konyagin, Maynard and Tao; Adamczewski and Bugeaud
+      on complexity and transcendence). None of these three is stably
+      anchorable and each needs a verdict class of its own rather than an
+      anchor. All identification above is steering web-checked and
+      RECORDED, not extracted; extraction remains item-0022's work.
+      THE PINTZ DISCREPANCY IS A CORPUS GAP, NOT A MIS-CITATION. 1004.1072
+      is Pintz, "Patterns of primes", a DIFFERENT paper from the anchored
+      1004.1084v1 on which item-0026 built pintz-constants.md. Report 1
+      cites 1004.1072 correctly for the claim it supports: that paper's
+      Lemma 1 and Lemma 2 bound fixed-rank power sums of the singular
+      series, and its proof of Lemma 2 runs through a per-position ratio
+      sum over one added element h, with the paper stating in the same
+      breath that the dependence of the implied constants on the rank and
+      on the exponent is not marked. In project vocabulary that is an
+      AVERAGED RELATIVE ONE-POSITION EXTENSION BOUND on the same rho
+      object item-0019 m3 censused, with exactly the rank-uniformity the
+      project needs left untracked. SUPPORT: steering web check against
+      the arXiv full text, now hash-anchored but NOT extracted and NOT
+      quoted into any dossier. THIS DOES NOT MOVE THE VERDICT. The object
+      is singular-series grain, not word grain, so A3 fails exactly as
+      before, and the rank dependence is unpriced, so A1 is not cleared.
+      No carrier is located. What it does establish is that the shelf was
+      incomplete: 1004.1072 was never on it, and the pointer to it sat in
+      an operator-held report for eight days. That is a second instance
+      of the E5 pattern the consolidation's own both-readings appendix
+      warned about. ROUTING: item-0028 is at position 1 and prices
+      rank-dependent singular-series cost; 1004.1072 belongs on its desk,
+      and its sheet should not be authored as if the shelf were complete.
+      NUMERICAL VERIFICATION OF REPORT 1's k=2 CORE, measured in the
+      steering sandbox. Kowalski's Example 3.5 Euler product was
+      evaluated independently over primes below 2e6 in 30-digit
+      arithmetic; the local factor is 1 + p^-3 + O(p^-4), so the
+      truncation is far below the digits reported. The implementation
+      first reproduces Kowalski's own printed values mu_k(2) for k = 2
+      through 6 (2.300..., 6.03294..., 17.562..., 55.255..., 184.18...),
+      and then reproduces all three of report 1's derived figures to
+      every printed digit: mu_2(2) = 2.3009615447..., E_even[S^2] =
+      4.6019230894..., and E_even[S^2]/E_even[S]^2 = 1.1504807723... .
+      Also confirmed against the note: mu_k(1) = 1, the symmetry
+      mu_k(m) = mu_m(k), log mu_k(m) = km loglog(3m) + O(m), the k=2
+      specialisation log mu_k(2) = 2k loglog(3k) + O(k), and the parity
+      cause, the 2-factor vanishing unless all entries share a parity,
+      which has probability 2^(1-k) and hence 1/2 at k=2. Report 1's k=2
+      obstruction is therefore CONFIRMED on its numbers. The verdict
+      classes still have to be assigned claim by claim inside item-0022;
+      this entry pre-empts none of them except by recording what was
+      measured.
+      ERRATUM-5. dossier/item-0026-workpapers/literature-consolidation.md
+      is anchored at dbdaf557... and is byte-identical at this pin, so it
+      is NOT edited. Its recommendation 5 reads "No re-scoping of
+      item-0023 on H1's account; the Dispersion Arm should not inherit an
+      argument that has been withdrawn." The REFERENT is false. At this
+      pin item-0023 is "Generalize roadmap skill for Claude and Codex",
+      arcs [tooling, workflow], rank 0010, status done; it was created
+      and closed in the single commit 1d158da on 2026-07-20 and has never
+      carried a Dispersion Arm scope. The string "Dispersion Arm" occurs
+      nowhere else in the repository, and no roadmap item, dossier file
+      or ledger entry carries route R, route F or route L in the sense of
+      the 2026-07-19 report. The CONTENT of the recommendation is sound:
+      a withdrawn argument should not be inherited. It simply has no
+      target on the board. The Dispersion Arm exists only as route R, in
+      fusion with route F, inside the 2026-07-19 operator-held report,
+      which until this entry was neither anchored nor absorbed nor
+      referenced anywhere in the tree. A cold start reading recommendation
+      5 would look for an item that does not exist.
+      THE THIRD REPORT IS OUTSIDE item-0022's RATIFIED SCOPE, whose goal
+      line names the two 2026-07-18 reports. It is anchored here and
+      nothing more. Steering recommends SPLITTING the duty rather than
+      widening item-0022 wholesale, because the two objects differ in
+      kind: reports 1 and 2 are literature-verification objects whose
+      claims are citation claims, while report 3 is a route-proposal
+      object whose substance is eight candidate research directions.
+      Identification duty applies to all three and is cheap for report 3
+      -- one external identifier is already anchored (1105.1451v1), one
+      is not (1603.03720), the two gesture-references are not anchorable,
+      the erdosproblems entry and forum thread need a policy, and all
+      seven internal sources it cites exist at this pin and were
+      verified present. Evaluation duty is a different instrument: route
+      proposals need a no-go audit on the D3 pattern, not a verdicted
+      citation checklist, and that is a research item rather than a
+      verification one. Both halves are OPERATOR DECISIONS and neither is
+      taken here.
+      HANDOVER DELTAS, bounded. (i) Cold-start read-order line, ANN range
+      73 -> 74. (ii) A new bullet records the ten anchors, the resolved
+      identification layer, the 1004.1072 finding with its explicit
+      non-promotion, and the routing note to item-0028. (iii) The
+      open-decisions block gains three named entries: the report-3 scope
+      split, the P2/P4-P8 precedent-anchor policy, and the unanchorable
+      citation policy. (iv) ERRATUM-5 is recorded in the known-stale
+      block as booked-not-repaired, with the reason that the workpaper is
+      anchored. Nothing else is touched.
+      BETS. No bet moves. BET-20260711-07 still runs to 2026-08-08 per
+      ANN-52 and this entry is not a scoring event; BET-20260718-08
+      stands at 0.07; BET-20260725-11/12/13 stand at their registered
+      0.12 / 0.15 / 0.35 and remain ratified-but-not-run. Nothing here
+      touches the item-0028 hypothesis except to widen the shelf its
+      sheet must read.

@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..73; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..74; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -142,6 +142,35 @@ its later sections carry a STALE banner, HANDOVER is the record).
   collision route. A re-scope is DUE BEFORE THE ITEM RUNS and is
   deliberately deferred until 0028/0029/0030 return, since their
   outcome decides the branch. ANN-73 changed no item file.
+- TEN ANCHORS AND THE item-0022 IDENTIFICATION LAYER (ANN-74). The
+  operator supplied canonical sha256 for seven primary sources and the
+  three operator-held reports; all ten are booked in
+  payloads/HASHES.txt and none collides. item-0022's named targets are
+  now all identified: the Kowalski note is his "Averages of Euler
+  products, distribution of singular series and the ubiquity of Poisson
+  distribution"; 2109.03767 is Kuperberg ALONE; the Bloom-Kuperberg
+  line, which carries no URL in report 1's own bibliography, is
+  2312.09021; 2301.06095 is a DIFFERENT Kuperberg paper from the
+  anchored 2210.09775v2; the precedent layer is P1 through P8, not P1
+  through P3. ANCHORING IS NOT ABSORPTION -- none of the ten is
+  extracted, no claim is verdicted, and no item scope grew.
+- THE PINTZ DISCREPANCY RESOLVED, AND IT IS A CORPUS GAP (ANN-74).
+  1004.1072 is Pintz, "Patterns of primes", a DIFFERENT paper from the
+  anchored 1004.1084v1. Report 1 cites it correctly: its Lemma 2 proof
+  runs through a per-position ratio sum over one added element, with
+  the rank and exponent dependence of the implied constants explicitly
+  unmarked -- an averaged relative one-position extension bound on the
+  same rho object item-0019 m3 censused. READ THIS WITH THE VERDICT
+  UNCHANGED: the grain is singular series, not word grain, so A3 fails
+  exactly as before; the rank dependence is unpriced, so A1 is not
+  cleared; NO CARRIER IS LOCATED and item-0026's NOT-FOUND stands. What
+  it does establish is that the shelf was incomplete and the pointer
+  sat unabsorbed for eight days -- a second E5 instance. ROUTING:
+  item-0028 sits at position 1 and prices rank-dependent
+  singular-series cost, so its sheet must not be authored as if the
+  shelf were complete. Report 1's k=2 numerical core is separately
+  CONFIRMED: steering reproduced Kowalski's printed mu_k(2) for k=2..6
+  and all three of report 1's derived figures to every printed digit.
 - item-0026 IS DONE AND OUT OF THE ORDER (ANN-72). It lives at
   roadmap/completed/item-0026.md with a final summary; the verdict is
   unchanged (NOT-FOUND at literature grain, A3 the named gap axis) and
@@ -788,7 +817,7 @@ its later sections carry a STALE banner, HANDOVER is the record).
    note: that venue is public LLM-generated #251 material; web-ON
    runs must treat it as such.
 
-OPEN OPERATOR DECISIONS at the ANN-73 apply. Named, not numbered: the
+OPEN OPERATOR DECISIONS at the ANN-74 apply. Named, not numbered: the
 numbering above is legacy, has two 2./3. pairs, and is deliberately
 left alone rather than renumbered under a bookkeeping commit.
 DISCHARGED since ANN-66 and struck from this block: whether item-0026
@@ -810,6 +839,25 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   is ratified AND runs: all three are ratified as of ANN-72, none has
   run. If a bet is amended or dropped, the cold-start read-order line
   above must be mirrored.
+- REPORT-3 SCOPE SPLIT (ANN-74). The 2026-07-19 alternative-routes
+  report is anchored but sits OUTSIDE item-0022's ratified goal line,
+  which names the two 2026-07-18 reports. Steering recommends splitting
+  rather than widening: identification duty extends to report 3 cheaply
+  (1105.1451v1 already anchored, 1603.03720 not, two gesture-references
+  unanchorable, all seven internal sources verified present), but its
+  substance is eight route PROPOSALS, which need a D3-pattern no-go
+  audit rather than a verdicted citation checklist -- a research item,
+  not a verification one. Both halves are open.
+- PRECEDENT-ANCHOR POLICY (ANN-74). P2 is a git repository
+  (google-deepmind/alphaproof-nexus-results) with no stable PDF and
+  needs a commit SHA rather than a sha256; P4 through P8 are Nature,
+  blog and arXiv items carrying none of the project's mathematics.
+  Decide whether the precedent layer needs primary anchors at all or a
+  lighter verdict class.
+- UNANCHORABLE CITATIONS (ANN-74). Report 1 cites a Tao blog TAG page,
+  whose content is not fixed; report 3 carries two gesture-references
+  without identifiers. None can be anchored. They need a verdict class
+  of their own rather than a hash.
 - ITEM-0010 RE-SCOPE (ANN-73), due before the item runs and not
   before. Its acceptance_intent and last body note still route the full
   target through item-0017's register and the 0018/0019/0020/0021
@@ -838,6 +886,17 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
 - BET-07 runs to its full resolve_by 2026-08-08 (ANN-52: no early
   scoring). The ANN-58..64 chain is further evidence AGAINST resolution
   and is not a scoring event.
+- ERRATUM-5 (ANN-74), BOOKED AND DELIBERATELY NOT REPAIRED.
+  dossier/item-0026-workpapers/literature-consolidation.md is anchored
+  at dbdaf557... and byte-identical at this pin, so it is not edited.
+  Its recommendation 5 names item-0023 as "the Dispersion Arm". At this
+  pin item-0023 is "Generalize roadmap skill for Claude and Codex",
+  arcs [tooling, workflow], done, created and closed in the single
+  commit 1d158da on 2026-07-20; it never carried that scope, and
+  "Dispersion Arm" occurs nowhere else in the tree. The recommendation's
+  CONTENT is sound, its REFERENT is false: the arm exists only as route
+  R, fused with route F, inside the 2026-07-19 report. A cold start
+  reading that line would search for an item that does not exist.
 - KNOWN STALE, unrepaired, out of scope for this commit and NOT to be
   trusted by a cold start: (i) lean/README.md below its own STALE
   banner; (ii) the Erdos251/Counting.lean umbrella docstring, whose
