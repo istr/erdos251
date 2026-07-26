@@ -31,19 +31,30 @@
 ## Report generation and MathJax
 
 - Generated Markdown reports must use the repository's MathJax-compatible notation.
-- Delimit every inline formula in raw Markdown as dollar-backtick, formula,
-  backtick-dollar (for example, ``$`S`$``); never use bare ``$S$``. Keep display
-  formulas in ``$$`` blocks.
-- Use ``\mathrm{...}`` instead of ``\operatorname{...}``.
-- Write absolute values and cardinalities with ``\lvert ... \rvert``; never use
-  ``|...|``, ``\#``, or ``#`` as mathematical cardinality notation.
-- Inside ``\substack{...}``, separate rows with ``\cr``, never ``\\``. This
-  restriction is local to ``\substack``; retain ``\\`` where required by
-  environments such as ``aligned`` or ``array``.
-- For visible braces, use ``\lbrace`` and ``\rbrace`` instead of ``\{`` and
-  ``\}``.
-- For logarithm, use ``\log{}`` instead of raw ``\log``. If you need an index,
-  use ``\log_n{}`` where n is the index.
+- Inline formulas carry a four-character delimiter pair whose halves each
+  contain a backtick. An inline example cannot show them without escaping, and
+  the escape character is itself a backtick, so the pattern below is the ONLY
+  authoritative source for it. Copy it from there; never reconstruct it from a
+  prose description, and never wrap it in outer backticks.
+
+  ```
+  $`S`$
+  ```
+
+  Opener is dollar then backtick; closer is backtick then dollar. Never use bare
+  dollar delimiters. Keep display formulas in `$$` blocks.
+- Use `\mathrm{...}` instead of `\operatorname{...}`.
+- Write absolute values and cardinalities with `\lvert ... \rvert`; never use
+  bare pipes, `\#`, or `#` as mathematical cardinality notation.
+- Inside `\substack{...}`, separate rows with `\cr`, never a double backslash.
+  This restriction is local to `\substack`; retain the double backslash where
+  required by environments such as `aligned` or `array`.
+- For visible braces, use `\lbrace` and `\rbrace` instead of the escaped
+  literal braces.
+- For logarithm, use `\log{}` instead of raw `\log`. If you need an index,
+  use `\log_n{}` where n is the index.
+- `scripts/mathjax_lint.py` enforces the delimiter rule. Run it before handing
+  over any generated Markdown; CI runs it on every push.
 - Apply these rules to mathematical prose and formulas only. Preserve Markdown
   headings and table delimiters, divisibility notation such as ``\mid``, and
   literal source or code fences unless a task explicitly calls for changing them.
