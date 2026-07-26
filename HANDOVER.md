@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..72; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..73; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -101,20 +101,47 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-72): item-0010,
-  item-0006, item-0022, item-0027, item-0028, item-0029, item-0030,
-  item-0024. POLICY, operator-set at that apply: the full research arc
-  stays on top of the order and tooling items are postponed behind it.
-  Positions 1-7 are the whole active research arc in strictly ascending
-  rank (0016, 0090, 0095, 0170, 0180, 0190, 0200); item-0024 (arcs
-  [tooling, workflow], rank 0020) sits LAST by that policy, so its low
-  rank against its last position is intended postponement and NOT an
-  ordering defect. Earlier claims in this file that item-0026 runs
-  first, and before that item-0022, are both SUPERSEDED. item-0021 is
-  PARKED (arcs: [parked]) and out of the order, which discharges the
-  ANN-63 back-booking that demanded an operator decision on it; by
-  rank (0150) it would sit between item-0022 and item-0027, and
-  reviving it costs a restructure onto research plus a placement.
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-73): item-0028,
+  item-0022, item-0029, item-0027, item-0030, item-0010, item-0006,
+  item-0024. The ANN-72 POLICY is UNCHANGED and still governs: the full
+  research arc stays on top of the order and tooling items are
+  postponed behind it, so item-0024 (arcs [tooling, workflow], rank
+  0020) still sits LAST by intended postponement and NOT by an ordering
+  defect. WHAT ANN-73 CHANGED is the sequence inside the research
+  block only; no rank, status, arc, scope, acceptance or verdict moved.
+  RANK AND ORDER NOW DIVERGE, deliberately: the ANN-72 order was
+  strictly rank-ascending, this one is not (0180, 0095, 0190, 0170,
+  0200, 0016, 0090), because rank encodes creation-time priority and
+  the feeders of item-0010 were created last. Rank remains the
+  within-arc query key; roadmap/_order.md remains the cross-arc truth
+  for what runs next. A later reader seeing rank 0016 in position 6
+  should read intended sequencing, not a defect -- the same reading
+  ANN-72 booked for item-0024. Earlier claims in this file that
+  item-0026 runs first, and before that item-0022, are both SUPERSEDED,
+  as is the ANN-72 rank-ascending sentence. item-0021 is PARKED (arcs:
+  [parked]) and out of the order, which discharges the ANN-63
+  back-booking that demanded an operator decision on it; by rank (0150)
+  it would sit between item-0022 and item-0027, and reviving it costs a
+  restructure onto research plus a placement.
+- WHY THE ORDER IS FEEDERS-FIRST (ANN-73), and why a cold start must
+  NOT dispatch item-0010 as written. After ANN-64/66 item-0010 is a
+  CONSUMER: exactly one object is open against (CG), S1, no carrier is
+  located, and measurement is exhausted. Every producer of the missing
+  input is now a separate scheduled item -- 0028/0029/0030 analytic,
+  0027 the machine-checked interface through which either branch is
+  consumed or stated -- so item-0010 runs after them, in whichever
+  branch they leave it. Its S- deliverable also gets strictly stronger
+  by waiting. SEPARATELY, and flagged rather than repaired here: the
+  item-0010 frontmatter is STALE against the ANN-58 route change. Its
+  acceptance_intent still reads "full: exchange_supply_1 proved via
+  item-0017 or its obstruction folded into the item-0017 register", and
+  its last body note reads "the full target (supplying ExchangeSupply1)
+  now flows through the successor package item-0018 (statement layer +
+  Lean integrator) feeding items 0019/0020/0021" -- 0018/0019/0020 are
+  done, 0021 is parked, and the recommended route is the direct
+  collision route. A re-scope is DUE BEFORE THE ITEM RUNS and is
+  deliberately deferred until 0028/0029/0030 return, since their
+  outcome decides the branch. ANN-73 changed no item file.
 - item-0026 IS DONE AND OUT OF THE ORDER (ANN-72). It lives at
   roadmap/completed/item-0026.md with a final summary; the verdict is
   unchanged (NOT-FOUND at literature grain, A3 the named gap axis) and
@@ -122,7 +149,10 @@ its later sections carry a STALE banner, HANDOVER is the record).
   ON as originally scoped. The summary is bookkeeping over
   ANN-66/67/68 and introduces no new claim.
 - item-0027 IS RATIFIED (commit 356bae5) AND NOW SCHEDULED (ANN-72),
-  placed by rank at position 4. Lean integrator for the direct
+  placed at position 4 -- by rank at ANN-72, and unchanged in position
+  by the ANN-73 reorder, which reached it on lane grounds instead: it
+  is the only Lean-lane item on the board and can run in parallel with
+  the analytic items ahead of it. Lean integrator for the direct
   collision route, executor lane, independent of the item-0026
   outcome -- which, since item-0026 located no carrier, leaves it
   unaffected. It was ratified but unscheduled between 356bae5 and
@@ -758,7 +788,7 @@ its later sections carry a STALE banner, HANDOVER is the record).
    note: that venue is public LLM-generated #251 material; web-ON
    runs must treat it as such.
 
-OPEN OPERATOR DECISIONS at the ANN-72 apply. Named, not numbered: the
+OPEN OPERATOR DECISIONS at the ANN-73 apply. Named, not numbered: the
 numbering above is legacy, has two 2./3. pairs, and is deliberately
 left alone rather than renumbered under a bookkeeping commit.
 DISCHARGED since ANN-66 and struck from this block: whether item-0026
@@ -780,6 +810,21 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   is ratified AND runs: all three are ratified as of ANN-72, none has
   run. If a bet is amended or dropped, the cold-start read-order line
   above must be mirrored.
+- ITEM-0010 RE-SCOPE (ANN-73), due before the item runs and not
+  before. Its acceptance_intent and last body note still route the full
+  target through item-0017's register and the 0018/0019/0020/0021
+  package; the recommended route has been the direct collision route
+  since ANN-58. Deferring is deliberate: 0028/0029/0030 decide whether
+  the re-scope lands on the S+ integration branch or the S- obstruction
+  branch, and re-scoping now would fix the wrong one.
+- EXECUTION PROFILES ARE MISSING on four scheduled items -- item-0006,
+  item-0022, item-0029, item-0030 -- including two of the three
+  item-0026 successors, so their advisory class and reasoning are
+  unavailable at scheduling time. Steering proposes item-0022 and
+  item-0030 {class: medium, reasoning: high} and item-0029
+  {class: large, reasoning: high}; item-0006 is unpriced. The field is
+  advisory and non-gating, so this is a bookkeeping call, and it
+  overlaps item-0024, which extends exactly that field.
 - source_commit IN writeup/sources.yml still reads
   6b8248462d90e58482ed91871e7713bdf8976bd5 while per-entry blobs have
   moved on. The mapper does not validate it; re-pinning is editorial.

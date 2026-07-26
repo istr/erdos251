@@ -3640,3 +3640,145 @@ annotations:
       re-assignments from a292ba4; rule-16/B6; lean/README.md below
       its STALE banner; and the Erdos251/Counting.lean umbrella
       docstring. The last two remain an unscheduled bookkeeping pass.
+  - id: ANN-20260726-73
+    refs: [ANN-20260725-72, ANN-20260725-69, ANN-20260724-65,
+      ANN-20260724-64, ANN-20260722-58, BET-20260718-08,
+      BET-20260725-11, BET-20260725-12, BET-20260725-13]
+    date: 2026-07-26
+    note: >-
+      OPERATOR REORDERS EXECUTION TO FEEDERS-FIRST; item-0010 MOVES OFF
+      THE TOP AND REMAINS RATIFIED/OPEN. Authored by steering at pin
+      87cc05eed112f0c8eb486a4c8477ea9db56f5b44 == HEAD of main before
+      this commit, on operator instruction given in this session, and
+      emitted from the analysis sandbox as a git am mbox: the operator
+      apply is the ratifying commit. Steering model: Claude Opus 5, not
+      Fable 5; the author line names the model actually used, because
+      the standing steering author string embeds a model name and using
+      it here would have recorded a false provenance. Files:
+      roadmap/_order.md (rewritten through the roadmap-items skill's own
+      reorder command, not by hand, per the ANN-69 convention),
+      HANDOVER.md (bounded deltas, enumerated below in the ANN-67
+      discipline), ledger.yaml (this entry).
+      NOTHING ANALYTIC MOVES. No Lean file, frozen block, frozen
+      registry, production artifact, run, payload, dossier workpaper or
+      writeup file is touched. No roadmap ITEM file is touched at all:
+      no rank, no status, no arc membership, no title, goal,
+      acceptance_intent, link or body line changes anywhere in the
+      store. No target, threshold or constant is changed; no bet is
+      resolved, re-priced or amended. The item-0010 campaign state is
+      exactly as ANN-66 left it: (CG) OPEN, S1 the one named residual,
+      no carrier located.
+      DECISION: THE EXECUTION ORDER, eight items -- item-0028,
+      item-0022, item-0029, item-0027, item-0030, item-0010, item-0006,
+      item-0024. The ANN-72 policy stands unchanged and still governs:
+      the full research arc on top, tooling behind, so item-0024 stays
+      last by intended postponement.
+      RATIONALE, feeders before consumer. After ANN-64/66 item-0010 is a
+      CONSUMER of inputs no scheduled item had yet produced when it sat
+      first: exactly one object is open against (CG), measurement is
+      exhausted at 35/35 rows with N = F and Q = 0, and the literature
+      search located no carrier. Its producers are now separate items --
+      item-0028 (one budget sheet, class smallest, closes in either
+      direction), item-0029 (the only registered hypothesis aimed at the
+      A3 absence), item-0030 (measurement) -- and item-0027 is the
+      machine-checked interface through which a located carrier would be
+      consumed and against which an obstruction verdict should be
+      stated. Running item-0010 ahead of all four would have opened a
+      session with no new instrument, and its S- deliverable is strictly
+      stronger once the three analytic items have returned.
+      WHY item-0022 IS AT POSITION 2 rather than behind the analytic
+      block. The operator states this session that the two 2026-07-18
+      reports are available, which removes the input gate that was the
+      only reason to defer it: 0028/0029/0030 are runnable web OFF
+      against the anchored shelf, while item-0022 could not start at
+      all. It is placed ahead of item-0010 because the item-0010
+      deliverable is in both branches a claim about the corpus, and two
+      unabsorbed literature reports would either have to be absorbed
+      first or declared out of scope by name at that point. RECORDED,
+      not measured: the availability of the reports is an operator
+      statement in conversation; no report byte has been seen by
+      steering and none is anchored in payloads/HASHES.txt.
+      item-0027 KEEPS POSITION 4, reached on lane rather than rank
+      grounds: it is the only Lean-lane item on the board, it has no
+      analytic dependency, it is the largest item scheduled, and it is
+      needed in both item-0029 branches, so it can and should run in
+      parallel with the analytic items ahead of it rather than waiting
+      for them.
+      RANK AND ORDER NOW DIVERGE, and the divergence is booked here so a
+      later reader does not read it as a defect. ANN-72 recorded, as a
+      structural fact and not as a policy, that "positions 1 through 7
+      are strictly rank-ascending (0016, 0090, 0095, 0170, 0180, 0190,
+      0200), so over the research arc the within-arc rank axis and the
+      cross-arc order agree rather than merely coexisting". That
+      property does not survive this reorder: the sequence is now 0180,
+      0095, 0190, 0170, 0200, 0016, 0090. The cause is structural, not
+      an oversight -- rank encodes creation-time priority and every
+      feeder of item-0010 was created after it -- and restoring
+      agreement would have cost four re-ranks of items whose scope did
+      not change. The skill's own model permits exactly this: rank
+      orders within an arc for queries, roadmap/_order.md is the
+      cross-arc truth for what runs next, and an item may sit high by
+      rank yet late in execution. The booked ANN-72 POLICY, as against
+      that observation, is preserved intact.
+      FINDING, FLAGGED AND DELIBERATELY NOT REPAIRED: THE item-0010
+      FRONTMATTER IS STALE AGAINST THE ANN-58 ROUTE CHANGE. Quoted per
+      rule 19 from the primary anchor roadmap/item-0010.md, its
+      acceptance_intent reads "full: exchange_supply_1 proved via
+      item-0017 or its obstruction folded into the item-0017 register;
+      the wiki-taxonomy-grade writeup clause carries over unchanged",
+      and its last body note reads "2026-07-18 (ANN-51): item-0017
+      closed on the obstruction branch; the full target (supplying
+      ExchangeSupply1) now flows through the successor package item-0018
+      (statement layer + Lean integrator) feeding items 0019/0020/0021.
+      Consumption interface unchanged." At this pin item-0018, item-0019
+      and item-0020 are done, item-0021 is parked and out of the order,
+      and the recommended campaign route has been the direct collision
+      route since ANN-58. The named funding path is therefore exhausted
+      as written. The deferral is by name and with a reason, per rule
+      19's routing clause: a re-scope is due BEFORE the item runs, and
+      authoring it now would fix the wrong branch, since 0028/0029/0030
+      decide whether item-0010 lands as S+ integration or as the S-
+      obstruction package. Carried into the HANDOVER open-decisions
+      block as a named entry.
+      SECOND FINDING, bookkeeping: four scheduled items carry no
+      execution_profile -- item-0006, item-0022, item-0029, item-0030 --
+      including two of the three item-0026 successors, so the two
+      substantive successors were scheduled without their advisory class
+      and reasoning. Steering proposes {class: medium, reasoning: high}
+      for item-0022 and item-0030 and {class: large, reasoning: high}
+      for item-0029, leaves item-0006 unpriced, and does not write them:
+      the field is advisory and non-gating, item files are untouched by
+      this entry, and the call overlaps item-0024, which extends exactly
+      that field. Carried into the HANDOVER open-decisions block.
+      HANDOVER DELTAS, enumerated so the refresh is a bounded edit.
+      (i) The cold-start read-order line: ANN range 72 -> 73; the scored
+      count, the open-bet list and every other figure on that line are
+      unchanged and were re-read rather than assumed. (ii) The EXECUTION
+      ORDER bullet is rewritten to the eight-line order, with the ANN-72
+      policy restated as unchanged, the rank-order divergence booked,
+      and the ANN-72 rank-ascending sentence marked SUPERSEDED. (iii) A
+      new bullet states why the order is feeders-first and warns a cold
+      start not to dispatch item-0010 as written, carrying both stale
+      quotations. (iv) The item-0027 bullet's "placed by rank at
+      position 4" is corrected to the position it now holds on lane
+      grounds. (v) The open-decisions block is retargeted to this apply
+      and gains two entries, the item-0010 re-scope and the missing
+      execution profiles. NOTHING ELSE IS TOUCHED: no frontier verdict
+      statement, no S1 paragraph, no qualifier -- "the weakest clean,
+      non-tautological analytic campaign target currently known"
+      survives verbatim -- and the Pintz-floor bullet, the
+      measurement-exhausted bullet and the three ANN-63 reading cautions
+      are untouched. HANDOVER.md is ASCII-only before and after.
+      BETS. BET-20260711-07 runs to its full resolve_by 2026-08-08 per
+      ANN-52 and this entry is not a scoring event for it;
+      BET-20260718-08 is unchanged at 0.07 to 2026-09-30;
+      BET-20260725-11/12/13 keep their registered 0.12 / 0.15 / 0.35 to
+      2026-09-30 and remain in the ratified-but-not-run state ANN-72
+      recorded. Position 1 means BET-20260725-11 is the next of the
+      three that can bind.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-72 left open, minus
+      nothing and plus the two findings above: BET-07 to 2026-08-08;
+      BET-08 to 2026-09-30; the three ANN-69 bets; source_commit in
+      writeup/sources.yml; the four heading re-assignments from a292ba4;
+      rule-16/B6; lean/README.md below its STALE banner; and the
+      Erdos251/Counting.lean umbrella docstring.
