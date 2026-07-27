@@ -4039,3 +4039,121 @@ annotations:
       split, item-0031's proposed status and the fresh-session routing.
       (iii) The precedent-anchor and unanchorable-citation decisions stay
       open and are untouched. Nothing else changes.
+  - id: ANN-20260727-76
+    refs: [ANN-20260726-74, ANN-20260726-75, ANN-20260726-73,
+      ANN-20260724-64, ERRATUM-5]
+    date: 2026-07-27
+    note: >-
+      THE THREE REPORTS ARE DROPPED AS OBJECTS; THE item-0022 ARTIFACT
+      DROP IS BOOKED FOUR APPLIES LATE; THE INSTRUMENT THAT PRODUCED IT
+      IS WITHDRAWN. Authored by steering (Claude Opus 5, analysis
+      sandbox) on operator instruction; the operator apply is the
+      ratifying commit. Files: ledger.yaml (this entry), HANDOVER.md
+      (nine bounded deltas, enumerated below),
+      dossier/item-0022-incident-r1.md (new, the incident report). The
+      report travels in this apply rather than a later one because
+      separating an artifact from the entry that books it is the defect
+      this entry books.
+      NOTHING MATHEMATICAL MOVES. No Lean file, frozen block, roadmap
+      item, roadmap order, existing dossier workpaper, run, writeup file
+      or anchor line is touched. No verdict, target, threshold or
+      constant changes. No bet is resolved, re-priced or amended:
+      BET-20260711-07 to 2026-08-08, BET-20260718-08 at 0.07 and
+      BET-20260725-11/12/13 at 0.12 / 0.15 / 0.35 all stand.
+      item-0026's NOT-FOUND verdict and A3 as the named gap axis are
+      untouched, as is the 1004.1072 routing to item-0028.
+      THE FOUR UNBOOKED COMMITS. ANN-75 last covered 3c40e6e. Since
+      then: 3c40e6e moved item-0022 to position 1 and booked its
+      execution profile; d3966a3 added 3308 lines in 13 files under
+      dossier/item-0022-workpapers/ and deleted nothing; 9cd43a3
+      proposed item-0032; 19495d7 added the MathJax lint. The largest
+      of the four is the artifact drop, whose own commit message
+      deferred the ledger entry, the handover refresh and the roadmap
+      bookkeeping to a follow-up that did not happen. All four are
+      booked here.
+      THE FINDING, in one line. A per-claim verdict register was built
+      over the prose of three reports that no session can open, and the
+      half of the material that had already influenced the roadmap was
+      the half the item's own firewall made structurally uncheckable.
+      Full analysis in dossier/item-0022-incident-r1.md, which is a
+      process finding and carries no erratum: no frozen or landed
+      artifact is asserted there to hold a wrong mathematical
+      statement.
+      THE OPERATOR DECISION. The three reports are DROPPED AS OBJECTS.
+      The middle state -- held outside the tree, with enough standing to
+      drive a ratified item and not enough to be audited by anyone but
+      the holder -- was the root cause and could not be kept. The three
+      report hash lines already in payloads/HASHES.txt STAY as history
+      and now name objects with no standing; an append-only file is not
+      edited to make a decision look tidier. NO HASH LINE IS ADDED IN
+      THIS APPLY, deliberately: anchoring freezes what it books, and the
+      grade of the item-0022 artifact set is exactly what is still open.
+      WHAT SURVIVES THE DROP, and why it survives: because somebody
+      re-anchored it to a primary source instead of citing a report.
+      The seven primary anchors and the identification layer; the seven
+      extracts, whose grade remains open; the 1004.1072 shelf-gap
+      finding and its routing; the k=2 numerics, re-executed twice
+      against the anchored Kowalski note; and the general-r reading of
+      Pintz Lemma 2. WHAT DIES: every verbatim-claim row in the
+      absorption checklist, since the quotation now has no retrievable
+      source and the register is unauditable in principle rather than
+      inconveniently; item-0031, whose object was report 3 and which is
+      VOID AS WRITTEN; and the two ANN-74 citation-policy decisions,
+      which close as moot because each existed to classify citations
+      belonging to dropped objects.
+      THE SEVENTH VERDICT-PROMOTION RECURRENCE. Five claim locations --
+      R1-001's own footnote, R1-002, R1-007's own footnote, R1-013 and
+      R1-026's fourth sub-claim -- moved from an honest STOP disposition
+      to CONFIRMED inside repair r1, by widening the anchor gate from
+      the item's own ten named anchors to the whole shelf and then
+      reading in-tree extracts rather than the anchored sources. Both
+      sources concerned are booked on the shelf, so the class is
+      legitimate in kind; the evidence actually consulted was a derived
+      transcription, and the widening contradicts the checklist's own
+      firewall sentence. B6 has been carried open since the third
+      recurrence and was carried again by ANN-64 in favour of rule 19.
+      This entry books the seventh and does not settle it; item-0034 is
+      proposed to settle it either way rather than carry it an eighth
+      time.
+      ONE ROW IS SUBSTANTIVELY RIGHT AND PROCEDURALLY UNREVIEWED.
+      R1-015's reversal to CONFIRMED, the general-r reading of Pintz's
+      Lemma 2, holds against the primary anchor; the addendum that
+      landed it responded to a mid-session operator instruction, had no
+      steering review by its own report's admission, and rode into a
+      ratifying apply anyway. The row is not re-verdicted here. It is
+      recorded as owing a review, which item-0033 carries.
+      ERRATUM-5 IS AMENDED, NOT REPAIRED. The workpaper carrying the
+      false referent is anchored and stays byte-identical. What changes
+      is the reason line: with report 3 dropped, the Dispersion Arm has
+      no object anywhere, in the tree or outside it.
+      ROADMAP CONTEXT, booked not changed here. The Phase 0 apply
+      de-scheduled item-0022 and proposed item-0033 (disposition:
+      withdraw the verdict register, re-grade the promoted rows, repair
+      the record) and item-0034 (evidence standing for model-generated
+      reports and for operator-held objects, closing B6). Both are
+      PROPOSED and unscheduled. This entry touches no roadmap file.
+      HANDOVER DELTAS, bounded and enumerated. (i) Cold-start read-order
+      line, ANN range 75 -> 76. (ii) The execution-order bullet drops
+      item-0022 and re-attributes to this entry. (iii) A new bullet
+      records the drop, the incident and the withdrawn instrument.
+      (iv) The report-3 split bullet gains a superseding sentence:
+      item-0031 is void as written. (v) The fresh-session kickoff bullet
+      is superseded: there is no item-0022 kickoff. (vi) The
+      execution-profile bullet is corrected -- item-0022 received its
+      profile at 3c40e6e, one of the four unbooked commits, so the
+      missing-profile count is three and not four. (vii) The
+      precedent-anchor and unanchorable-citation entries close as moot.
+      (viii) The ERRATUM-5 entry gains its amended reason line. (ix) The
+      B6 entry records the seventh recurrence and item-0034. Historical
+      lines naming item-0022 as upcoming are SUPERSEDED by (iii) and are
+      not edited. Nothing else changes; HANDOVER.md is ASCII-only before
+      and after.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-75 left open minus the
+      two closed-as-moot citation policies, plus: whether item-0022
+      closes as superseded, whether item-0031 is withdrawn or re-founded
+      on material that exists, and whether the two precedent extracts
+      stay in the corpus at all. The item-0010 re-scope, source_commit
+      in writeup/sources.yml, the four heading re-assignments from
+      a292ba4, rule-16/B6, lean/README.md below its STALE banner and the
+      Erdos251/Counting.lean umbrella docstring all stand exactly as
+      ANN-75 left them.

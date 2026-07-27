@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..75; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..76; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -101,9 +101,10 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-73): item-0028,
-  item-0022, item-0029, item-0027, item-0030, item-0010, item-0006,
-  item-0024. The ANN-72 POLICY is UNCHANGED and still governs: the full
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-76): item-0028,
+  item-0029, item-0027, item-0030, item-0010, item-0006, item-0024.
+  item-0022 IS OUT OF THE ORDER (ANN-76): its object is dropped and its
+  instrument withdrawn; see the incident bullet below. The ANN-72 POLICY is UNCHANGED and still governs: the full
   research arc stays on top of the order and tooling items are
   postponed behind it, so item-0024 (arcs [tooling, workflow], rank
   0020) still sits LAST by intended postponement and NOT by an ordering
@@ -142,6 +143,28 @@ its later sections carry a STALE banner, HANDOVER is the record).
   collision route. A re-scope is DUE BEFORE THE ITEM RUNS and is
   deliberately deferred until 0028/0029/0030 return, since their
   outcome decides the branch. ANN-73 changed no item file.
+- THE THREE REPORTS ARE DROPPED AS OBJECTS AND THE item-0022 INSTRUMENT
+  IS WITHDRAWN (ANN-76). item-0022 RAN on 2026-07-26 and its artifacts
+  landed at d3966a3, 3308 lines in 13 files, unbooked for four applies;
+  this file's earlier lines naming item-0022 as upcoming work are
+  SUPERSEDED. The finding: a per-claim verdict register was built over
+  the prose of three reports that no session can open, and the half of
+  the material that had already influenced the roadmap was the half the
+  item's own firewall made structurally uncheckable. Analysis:
+  dossier/item-0022-incident-r1.md. WHAT SURVIVES THE DROP survives
+  because it was re-anchored to a primary source rather than cited from
+  a report -- the seven anchors and the identification layer, the seven
+  extracts (grade still open), the 1004.1072 shelf-gap finding and its
+  routing to item-0028, the k=2 numerics, and the general-r reading of
+  Pintz Lemma 2. WHAT DIES: every verbatim-claim row in the absorption
+  checklist, item-0031 as written, and the two ANN-74 citation policies.
+  A SEVENTH VERDICT-PROMOTION RECURRENCE is booked: five claim locations
+  moved STOP -> CONFIRMED inside repair r1 by widening the anchor gate
+  mid-item. R1-015's reversal is substantively right against the anchor
+  and had no steering review; it owes one. NO HASH LINE WAS ADDED for
+  any item-0022 workpaper, deliberately -- anchoring freezes what it
+  books. item-0033 (disposition) and item-0034 (evidence standing,
+  closing B6) are PROPOSED and unscheduled.
 - TEN ANCHORS AND THE item-0022 IDENTIFICATION LAYER (ANN-74). The
   operator supplied canonical sha256 for seven primary sources and the
   three operator-held reports; all ten are booked in
@@ -168,14 +191,19 @@ its later sections carry a STALE banner, HANDOVER is the record).
   first question is whether the residue route really halves the window
   budget, against the corpus depth arithmetic and the triage-1a
   shared-log-log finding. It does NOT inherit the report's own priority
-  ordering and may not propose successor items.
+  ordering and may not propose successor items. SUPERSEDED IN PART
+  (ANN-76): report 3 is dropped as an object, so item-0031 is VOID AS
+  WRITTEN and cannot be ratified until it is re-founded on material
+  that exists in the tree.
 - THE item-0022 KICKOFF GOES TO A FRESH SESSION (ANN-75), on the ANN-41
   grounds re-read at this pin. Ground (c) applies -- the hot context's
   knowledge is spent into ANN-74 and travels here -- and a stronger
   item-specific ground applies too: the authoring session read both
   2026-07-18 reports in full and fetched two newly anchored sources, so
   a kickoff written there risks encoding conclusions into an
-  instruction set. Recommendation, not a decision.
+  instruction set. Recommendation, not a decision. SUPERSEDED (ANN-76):
+  there is no item-0022 kickoff. The item ran on 2026-07-26, its
+  artifacts landed at d3966a3, and its instrument is withdrawn.
 - THE PINTZ DISCREPANCY RESOLVED, AND IT IS A CORPUS GAP (ANN-74).
   1004.1072 is Pintz, "Patterns of primes", a DIFFERENT paper from the
   anchored 1004.1084v1. Report 1 cites it correctly: its Lemma 2 proof
@@ -861,16 +889,11 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   is ratified AND runs: all three are ratified as of ANN-72, none has
   run. If a bet is amended or dropped, the cold-start read-order line
   above must be mirrored.
-- PRECEDENT-ANCHOR POLICY (ANN-74). P2 is a git repository
-  (google-deepmind/alphaproof-nexus-results) with no stable PDF and
-  needs a commit SHA rather than a sha256; P4 through P8 are Nature,
-  blog and arXiv items carrying none of the project's mathematics.
-  Decide whether the precedent layer needs primary anchors at all or a
-  lighter verdict class.
-- UNANCHORABLE CITATIONS (ANN-74). Report 1 cites a Tao blog TAG page,
-  whose content is not fixed; report 3 carries two gesture-references
-  without identifiers. None can be anchored. They need a verdict class
-  of their own rather than a hash.
+- CLOSED AS MOOT (ANN-76): the precedent-anchor policy and the
+  unanchorable-citation class, both opened by ANN-74. Each existed to
+  classify citations belonging to the three reports, which are dropped
+  as objects. The residual question -- whether the two precedent
+  extracts stay in the corpus at all -- moves to item-0033.
 - ITEM-0010 RE-SCOPE (ANN-73), due before the item runs and not
   before. Its acceptance_intent and last body note still route the full
   target through item-0017's register and the 0018/0019/0020/0021
@@ -878,12 +901,13 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   since ANN-58. Deferring is deliberate: 0028/0029/0030 decide whether
   the re-scope lands on the S+ integration branch or the S- obstruction
   branch, and re-scoping now would fix the wrong one.
-- EXECUTION PROFILES ARE MISSING on four scheduled items -- item-0006,
-  item-0022, item-0029, item-0030 -- including two of the three
+- EXECUTION PROFILES ARE MISSING on three scheduled items -- item-0006,
+  item-0029, item-0030 -- including two of the three
   item-0026 successors, so their advisory class and reasoning are
-  unavailable at scheduling time. Steering proposes item-0022 and
-  item-0030 {class: medium, reasoning: high} and item-0029
-  {class: large, reasoning: high}; item-0006 is unpriced. The field is
+  unavailable at scheduling time. item-0022 received
+  {class: medium, reasoning: high} at 3c40e6e, booked late by ANN-76.
+  Steering proposes item-0030 {class: medium, reasoning: high} and
+  item-0029 {class: large, reasoning: high}; item-0006 is unpriced. The field is
   advisory and non-gating, so this is a bookkeeping call, and it
   overlaps item-0024, which extends exactly that field.
 - source_commit IN writeup/sources.yml still reads
@@ -895,7 +919,11 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
 - RULE-16 STRENGTHENING (B6) is still formally open. ANN-64 added
   rule 19 instead and booked a sixth verdict-promotion recurrence;
   decide whether rule 19 discharges B6 or whether rule 16 is separately
-  strengthened to catch verdict promotion across families.
+  strengthened to catch verdict promotion across families. SEVENTH
+  RECURRENCE BOOKED (ANN-76), in item-0022 repair r1: five claim
+  locations moved STOP -> CONFIRMED by widening the anchor gate
+  mid-item. item-0034 is PROPOSED to settle B6 rather than carry it an
+  eighth time.
 - BET-07 runs to its full resolve_by 2026-08-08 (ANN-52: no early
   scoring). The ANN-58..64 chain is further evidence AGAINST resolution
   and is not a scoring event.
@@ -910,6 +938,10 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   CONTENT is sound, its REFERENT is false: the arm exists only as route
   R, fused with route F, inside the 2026-07-19 report. A cold start
   reading that line would search for an item that does not exist.
+  AMENDED (ANN-76): report 3 is dropped as an object, so the referent
+  now has no object anywhere, in the tree or outside it. The erratum
+  stays booked and unrepaired because the workpaper carrying it is
+  anchored.
 - KNOWN STALE, unrepaired, out of scope for this commit and NOT to be
   trusted by a cold start: (i) lean/README.md below its own STALE
   banner; (ii) the Erdos251/Counting.lean umbrella docstring, whose
