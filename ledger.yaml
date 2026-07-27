@@ -4157,3 +4157,126 @@ annotations:
       a292ba4, rule-16/B6, lean/README.md below its STALE banner and the
       Erdos251/Counting.lean umbrella docstring all stand exactly as
       ANN-75 left them.
+  - id: ANN-20260727-77
+    refs: [ANN-20260727-76, ANN-20260726-74]
+    date: 2026-07-27
+    note: >-
+      THE item-0022 VERDICT REGISTER IS WITHDRAWN AS AN INSTRUMENT, THE
+      SEVEN EXTRACTS ARE INVENTORIED AND STILL UNGRADED, AND THE THREE
+      ROADMAP APPLIES ARE BOOKED. Executed by the local executor
+      against pin b37713b under an ephemeral Phase 2a dispatch, never
+      committed; the operator apply is the ratifying commit. Executor
+      model: Claude Opus 5 (claude-opus-5[1m]). Files:
+      dossier/item-0022-workpapers/absorption-checklist.md (+33 lines,
+      banner only, no row edited),
+      dossier/item-0022-workpapers/extract-inventory.py and
+      dossier/item-0022-workpapers/extract-inventory-r1.md (both new),
+      HANDOVER.md (six bounded deltas, enumerated below) and ledger.yaml
+      (this entry) -- two files added, three modified, none deleted, no
+      hash line added, no roadmap file touched.
+      THE THREE ROADMAP APPLIES ARE BOOKED. ANN-76 last covered
+      343a3df. Since then cd53a72 closed item-0022 as interrupted and
+      moved it to roadmap/completed/, 05b7c42 withdrew item-0031 as void
+      as written and moved it to roadmap/completed/, and b37713b
+      ratified item-0033 and item-0034 and placed them at positions 1
+      and 2 of roadmap/_order.md. ALL THREE LANDED UNBOOKED. This is the
+      same defect ANN-76 booked, recurring within a day of that entry
+      and inside the response to it, which is the strongest available
+      argument for item-0034's clause that an artifact and the entry
+      that books it land in one apply: the rule is not being broken by
+      carelessness in a distant corner of the tree, it is being broken
+      by the very sessions that are repairing the record.
+      THE REGISTER IS WITHDRAWN, BY BANNER, AND NO ROW IS EDITED.
+      absorption-checklist.md now opens with a banner stating that its
+      object is not in the tree, that nothing in it is corpus knowledge,
+      that it is kept under rule 5 and is the primary evidence for
+      dossier/item-0022-incident-r1.md, and that it is not evidence for
+      any mathematical statement. THE ADJUDICATION, recorded with its
+      reasoning. item-0033's acceptance offers two branches for each
+      promoted row: re-verify it against its own anchored primary
+      source, or return it to its pre-repair class with the promotion
+      listed as such. THE FIRST BRANCH IS CLOSED BY THE DROP. A row
+      asserts what a report claimed; the reports are gone; that
+      assertion is not re-verifiable by anyone, now or later, however
+      available the underlying anchored source remains. So the second
+      branch is taken, and taken wholesale rather than row by row: the
+      register is withdrawn entire, and the five promoted locations --
+      R1-001's own footnote, R1-002, R1-007's own footnote, R1-013 and
+      R1-026's fourth sub-claim, in the register's own Section 6 naming
+      -- are named in the banner instead of being individually reverted.
+      Correcting five rows inside a document that has just been declared
+      non-evidentiary is a category confusion, it destroys part of the
+      record of what happened, and it is the same tidying move this
+      ledger already refused for the three report hash lines. THIS
+      SESSION ACCEPTS THE ADJUDICATION, and records its own ground for
+      accepting it: the useful half of each promoted row was always the
+      anchored source behind it, which survives independently in the
+      extracts and in the ANN-74 anchor layer, so reverting the row
+      would recover nothing and would erase the evidence of the
+      promotion.
+      THE EXTRACTS ARE NOT WHAT ANN-76 SAID THEY WERE. ANN-76 listed the
+      seven extracts among what survives the drop, without
+      qualification. THAT IS CORRECTED HERE RATHER THAN SILENTLY: their
+      content is transcribed from anchored sources, but their selection
+      and section structure are indexed to the dropped reports -- section
+      headings that frame extracted material as a named report's claim
+      -- and some assertions are sourced to the item-0022 kickoff
+      dispatch, an ephemeral object that no longer exists in any form.
+      Counted mechanically by
+      dossier/item-0022-workpapers/extract-inventory.py over 921 lines
+      in seven files, output at extract-inventory-r1.md: 21
+      report-indexed headings or framing annotations, 17 references to
+      an ephemeral object, 11 further report mentions outside those two
+      classes, and 15 in-tree cross-references, which survive and are
+      not defects. All seven extracts carry at least one match on each
+      of the first two axes; none is clean. NO HASH LINE IS BOOKED for
+      any extract, deliberately: anchoring freezes what it books, and a
+      hash taken over report-indexed structure would freeze exactly the
+      class of defect ERRATUM-5 is the standing demonstration of. The
+      inventory carries no verdict, no fidelity claim and no disposition
+      recommendation; each of those needs the primary sources and
+      belongs to Phase 2b.
+      NOTHING MATHEMATICAL MOVES. No Lean file, frozen block, roadmap
+      item, roadmap order, run, writeup file or anchor line is touched.
+      No verdict, target, threshold or constant changes. No claim row is
+      re-verdicted, and no extract file is edited. No bet is resolved,
+      re-priced or amended: BET-20260711-07 to 2026-08-08,
+      BET-20260718-08 at 0.07 and BET-20260725-11/12/13 at 0.12 / 0.15 /
+      0.35 all stand. item-0026's NOT-FOUND verdict and A3 as the named
+      gap axis are untouched, as is the 1004.1072 routing to item-0028.
+      NO PDF WAS OPENED FOR CONTENT in this apply; the seven anchored
+      sources were touched only to re-check that their sha256 still
+      match both the extract headers and the lines already booked in
+      payloads/HASHES.txt, which they do, 7 of 7.
+      HANDOVER DELTAS, bounded and enumerated, six. (i) The
+      execution-order bullet is rewritten to the ANN-77 order, records
+      that item-0022 is closed as interrupted and item-0031 withdrawn,
+      both now under roadmap/completed/, and states why the disposition
+      and evidence-standing items sit ahead of the research block.
+      (ii) item-0033 and item-0034 move from PROPOSED and unscheduled to
+      RATIFIED at positions 1 and 2. (iii) The report-3 split bullet
+      records that item-0031 is withdrawn and moved. (iv) The B6 entry
+      records that item-0034 is ratified at position 2 and settles B6
+      rather than carrying it an eighth time. (v) The cold-start
+      read-order line moves from ANN-01..76 to ANN-01..77. (vi) A new
+      bullet, at the head of its group, records the withdrawal, the
+      correction on the extracts with the inventory counts, the absent
+      hash and why, the shape of Phase 2b, and the three unbooked
+      roadmap applies. Nothing else changes; historical lines that name
+      the register as item-0022's acceptance artifact are SUPERSEDED by
+      (vi) and are NOT edited, per the convention ANN-76 applied.
+      HANDOVER.md is ASCII-only before and after, as are both new files.
+      STILL OPEN AFTER THIS ENTRY. PHASE 2b, the grading pass: it opens
+      the seven primary PDFs -- at most 227 pages as the extract headers
+      declare them, at least 172 once the two precedent extracts' own
+      declared bounded reads are counted -- grades each extract against
+      its own anchored source, and only then may anything be hashed.
+      Plus everything ANN-76 left open, unchanged: whether the two
+      precedent extracts stay in the corpus at all, R1-015's owed
+      steering review, the item-0010 re-scope, source_commit in
+      writeup/sources.yml, the four heading re-assignments from a292ba4,
+      rule-16/B6 pending item-0034, lean/README.md below its STALE
+      banner, and the Erdos251/Counting.lean umbrella docstring. Two of
+      ANN-76's open questions are closed by the three applies booked
+      above: item-0022 closes as interrupted, and item-0031 is withdrawn
+      rather than re-founded.

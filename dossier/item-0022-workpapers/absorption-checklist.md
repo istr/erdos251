@@ -1,5 +1,38 @@
 # item-0022 absorption checklist -- primary verification of the two 2026-07-18 reports
 
+> **WITHDRAWN AS AN INSTRUMENT (2026-07-27; ANN-20260727-76 and
+> ANN-20260727-77). NOTHING IN THIS FILE IS CORPUS KNOWLEDGE.**
+>
+> This is a per-claim verdict register over the prose of three reports
+> that were dropped as objects on 2026-07-27. Every row quoting a report
+> quotes something no session can retrieve, so no verdict here can be
+> checked by anyone, now or later. The file is kept under rule 5 --
+> failed runs are data -- and it is the primary evidence for the
+> incident analysed in `dossier/item-0022-incident-r1.md`. It is not
+> evidence for any mathematical statement.
+>
+> NO ROW IS EDITED, deliberately. Five claim locations -- R1-001's own
+> footnote, R1-002, R1-007's own footnote, R1-013, and R1-026's fourth
+> sub-claim -- were promoted from a STOP disposition to CONFIRMED during
+> repair r1, by widening the anchor gate mid-item, contrary to this
+> file's own Section 1 firewall sentence. They are named here rather
+> than reverted: a register with no standing gains nothing from having
+> its rows corrected, the promotion is part of the record, and a
+> document is not tidied after it has been declared non-evidentiary.
+>
+> WHAT SURVIVED THIS FILE, and only because somebody re-anchored it to a
+> primary source instead of citing a report: the seven anchors and the
+> identification layer, the 1004.1072 shelf-gap finding and its routing
+> to item-0028, the k=2 numerics, and the general-r reading of Pintz
+> Lemma 2.
+>
+> THE SEVEN EXTRACTS UNDER `extract/` ARE NOT COVERED BY THAT SURVIVAL.
+> Their content is transcribed from anchored sources, but their
+> selection and section structure are indexed to the dropped reports,
+> and some assertions are sourced to an ephemeral kickoff dispatch that
+> no longer exists. Their grade is open under item-0033 and no hash is
+> booked for them.
+
 Executor: local Claude Code, per item-0022-kickoff-v1.md. Session pinned
 to HEAD `3c40e6e68b9f0c5da7761f212dd263e4c9a553e9` (rule-18 delta from
 the Section 0 pin `9dee3699665bf66a7076bcb875ee290c39127bbe` touched only

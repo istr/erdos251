@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..76; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..77; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -101,10 +101,14 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-76): item-0028,
-  item-0029, item-0027, item-0030, item-0010, item-0006, item-0024.
-  item-0022 IS OUT OF THE ORDER (ANN-76): its object is dropped and its
-  instrument withdrawn; see the incident bullet below. The ANN-72 POLICY is UNCHANGED and still governs: the full
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-77): item-0033,
+  item-0034, item-0028, item-0029, item-0027, item-0030, item-0010,
+  item-0006, item-0024. item-0022 IS CLOSED AS INTERRUPTED and lives at
+  roadmap/completed/item-0022.md; item-0031 IS WITHDRAWN and lives at
+  roadmap/completed/item-0031.md. The disposition and evidence-standing
+  items sit AHEAD of the research block deliberately: the corpus record
+  is repaired before more mathematics is added on top of it.
+  The ANN-72 POLICY is UNCHANGED and still governs: the full
   research arc stays on top of the order and tooling items are
   postponed behind it, so item-0024 (arcs [tooling, workflow], rank
   0020) still sits LAST by intended postponement and NOT by an ordering
@@ -164,7 +168,39 @@ its later sections carry a STALE banner, HANDOVER is the record).
   and had no steering review; it owes one. NO HASH LINE WAS ADDED for
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
-  closing B6) are PROPOSED and unscheduled.
+  closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- THE REGISTER IS WITHDRAWN AND THE EXTRACTS ARE UNGRADED (ANN-77).
+  dossier/item-0022-workpapers/absorption-checklist.md carries a
+  withdrawal banner at its head: its object is not in the tree and
+  nothing in it is corpus knowledge. NO ROW WAS EDITED, deliberately.
+  The five promoted claim locations -- R1-001's own footnote, R1-002,
+  R1-007's own footnote, R1-013 and R1-026's fourth sub-claim -- are
+  named in the banner rather than reverted, because a register with no
+  standing gains nothing from having its rows corrected and the
+  promotion is itself part of the record. A CORRECTION TO ANN-76,
+  stated as one: that entry listed the seven extracts among what
+  survives the drop without qualification. Their CONTENT is transcribed
+  from anchored sources, but their SELECTION AND SECTION STRUCTURE ARE
+  INDEXED TO THE DROPPED REPORTS, and some assertions are sourced to the
+  ephemeral item-0022 kickoff dispatch, which no longer exists in any
+  form. Counted mechanically over 921 lines, output at
+  dossier/item-0022-workpapers/extract-inventory-r1.md: 21
+  report-indexed headings or framing annotations, 17 references to an
+  ephemeral object, 11 further report mentions, and 15 in-tree
+  cross-references that need no work. All seven extracts carry at least
+  one of the first two; none is clean. NO HASH LINE WAS BOOKED for any
+  extract, deliberately -- anchoring freezes what it books, and hashing
+  report-indexed structure now would repeat exactly the defect
+  ERRATUM-5 stands as the demonstration of. PHASE 2b IS THE GRADING
+  PASS: it opens the seven primary PDFs -- at most 227 pages as the
+  extract headers declare them, at least 172 once the two precedent
+  extracts' own bounded reads are counted -- and grades each extract
+  against its own anchored source. Only after that may anything be
+  hashed. THE THREE ROADMAP APPLIES ARE BOOKED HERE: cd53a72 closed
+  item-0022 as interrupted, 05b7c42 withdrew item-0031, and b37713b
+  ratified item-0033 and item-0034 and placed them at the head of the
+  order. All three landed unbooked, which is the same defect ANN-76
+  booked, recurring within a day.
 - TEN ANCHORS AND THE item-0022 IDENTIFICATION LAYER (ANN-74). The
   operator supplied canonical sha256 for seven primary sources and the
   three operator-held reports; all ten are booked in
@@ -194,7 +230,8 @@ its later sections carry a STALE banner, HANDOVER is the record).
   ordering and may not propose successor items. SUPERSEDED IN PART
   (ANN-76): report 3 is dropped as an object, so item-0031 is VOID AS
   WRITTEN and cannot be ratified until it is re-founded on material
-  that exists in the tree.
+  that exists in the tree. WITHDRAWN (ANN-77) and moved to
+  roadmap/completed/item-0031.md.
 - THE item-0022 KICKOFF GOES TO A FRESH SESSION (ANN-75), on the ANN-41
   grounds re-read at this pin. Ground (c) applies -- the hot context's
   knowledge is spent into ANN-74 and travels here -- and a stronger
@@ -922,8 +959,8 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   strengthened to catch verdict promotion across families. SEVENTH
   RECURRENCE BOOKED (ANN-76), in item-0022 repair r1: five claim
   locations moved STOP -> CONFIRMED by widening the anchor gate
-  mid-item. item-0034 is PROPOSED to settle B6 rather than carry it an
-  eighth time.
+  mid-item. item-0034 is RATIFIED (ANN-77) at position 2 and settles B6
+  rather than carrying it an eighth time.
 - BET-07 runs to its full resolve_by 2026-08-08 (ANN-52: no early
   scoring). The ANN-58..64 chain is further evidence AGAINST resolution
   and is not a scoring event.
