@@ -4280,3 +4280,211 @@ annotations:
       ANN-76's open questions are closed by the three applies booked
       above: item-0022 closes as interrupted, and item-0031 is withdrawn
       rather than re-founded.
+  - id: ANN-20260728-78
+    refs: [ANN-20260727-77, ANN-20260727-76, ANN-20260726-74]
+    date: 2026-07-28
+    note: >-
+      THE SEVEN item-0022 EXTRACTS ARE GRADED AGAINST THEIR ANCHORED
+      PDFs, AND NOTHING IS HASHED. Phase 2b, executed by the local
+      executor against pin 91dec12 under an ephemeral dispatch, never
+      committed; the operator apply is the ratifying commit. Executor
+      model: Claude Opus 5 (claude-opus-5[1m]). THIS IS THE PASS THAT
+      OPENED THE PDFs: every prior item-0022 apply was forbidden from
+      opening a primary source, and every fidelity judgement below was
+      made by reading the anchored PDF at the cited location, never
+      against an extract's own account of itself. Files:
+      dossier/item-0022-workpapers/extract-grades-r1.md (new, 1079
+      lines), HANDOVER.md (three bounded deltas, enumerated below) and
+      ledger.yaml (this entry) -- one file added, two modified, none
+      deleted, NO hash line added, no extract edited, no checklist row
+      edited, no inventory edit, no roadmap, lean, runs or writeup file
+      touched.
+      THE GRADE TABLE. bloomkuperberg23-oddmoments.md DEFECTIVE -- its
+      NOT-FOUND probe is contradicted on p.4 of its own anchor and its
+      header quotes a bibliography entry this anchor does not print.
+      kowalski-singser-dist.md DEFECTIVE -- three page citations name
+      pages that do not carry the quoted objects (p.1 for eq. (1.1),
+      printed p.2; p.5 for Theorem 1.1 and for eq. (1.5), both printed
+      p.3), and one verbatim block deletes a source cross-reference and
+      folds the following sentence into the parenthesis that replaced
+      it. kuperberg21-oddmoments.md DEFECTIVE -- a uniformity-ledger
+      citation names p.4 for a statement printed on p.3 in weaker form,
+      its NOT-FOUND scope sentence is contradicted by the paper's own
+      definitions and by Theorems 1.3/1.4, and one corroboration
+      sentence is a comparison whose second term is a dropped object.
+      kuperberg23-apsmooth.md DEFECTIVE -- the nearest of the seven to
+      repairable, with correct pages and zero formula deviations, but a
+      quoted passage is attributed to a "Remark" that is a different
+      paragraph, the quotation carries an unmarked inserted connective,
+      and a range citation names a Theorem 1.4 the paper does not have.
+      pintz10-patterns.md DEFECTIVE -- the (2.16) block is introduced
+      "then, verbatim" and its middle numerator is transcribed with a
+      cancellation the source leaves unperformed, plus four further
+      altered quotations. precedent-p1-2605.22763.md DEFECTIVE -- one
+      quotation splices passages printed six pages apart under a single
+      section citation that fits neither, two further pages are wrong,
+      and a quoted URL drops a printed component. precedent-p3-
+      2601.07421.md DEFECTIVE -- the Lean-correspondence quotation is
+      cited to p.2 and is printed on p.10 in a different section, and
+      the extract's own description of its bounded read understates it
+      by two sections. TOTALS: 0 CLEAN, 0 CLEAN-PENDING, 7 DEFECTIVE.
+      WHAT GOT HASHED: NOTHING. Not one extract, and not the grade file
+      either. The dispatch gates every hash on CLEAN -- "only CLEAN
+      extracts, and the grade file itself, are hashed ... nothing if
+      nothing is clean" -- and its budget line reads "one per CLEAN
+      extract, plus one for the grade file; 0 if nothing is CLEAN".
+      Nothing is CLEAN, so zero lines were added and payloads/HASHES.txt
+      is byte-unchanged by this apply. CLEAN-PENDING and DEFECTIVE
+      extracts were deliberately not hashed, because anchoring freezes
+      what it books and an ungraded-clean or defective artifact must not
+      be frozen; ERRATUM-5 is the standing demonstration of what that
+      costs. The hash-integrity gate is satisfied vacuously: no line was
+      added, so no line can fail to match its file.
+      ANCHOR IDENTITY, CHECKED BEFORE GRADING BEGAN. All seven file
+      sha256 equal both the value printed in the extract header and the
+      line booked in payloads/HASHES.txt, 7 of 7; all seven declared
+      page counts equal the actual page counts (38, 30, 51, 19, 9, 60,
+      20), 7 of 7; all seven declared PDF metadata sets match, 7 of 7.
+      Had one mismatched, grading would not have started.
+      THE FIDELITY HEADLINE. Not every transcription checked was
+      faithful, but the failures fall in one place and it is not the
+      mathematics. All 25 display-fenced lines and every theorem, lemma
+      and equation number across the seven were checked; EXACTLY ONE
+      display deviates from its source, and every numbered object --
+      Lemma 1, Lemma 2, (2.8) through (2.16), Theorem 1.1, (1.5),
+      Example 3.5, Proposition 4.1, Example 4.3, eq. (4), Conjecture
+      1.1, Theorem 1.2, Theorem 2, (6), (8), (9), Remark 1 -- is
+      correctly identified. Against that: ELEVEN page or section
+      citations name a location that does not carry the object cited,
+      across five of the seven extracts; SIX quotations are altered
+      inside their quotation marks; and FIVE NOT-FOUND or scope
+      sentences are contradicted by the anchor. Every alteration runs in
+      the direction of tidiness -- a comma supplied, a source typo
+      repaired, a cancellation performed, a cross-reference deleted, a
+      connective inserted, a "www." dropped -- and none inserts content
+      the source does not support. That bounds the defect: an editorial
+      hand operating inside quotation marks, in a set whose whole
+      purpose is to be the checkable record of what the sources print.
+      Every NOT-FOUND clause that carries item-0026 reasoning SURVIVED:
+      no uncentered sum of S(H)^2, no flanked or aggregated-simplex
+      domain, no per-position (1+o(1))^k constant, no growing-rank
+      asymptotic, no commit SHA in the 60-page precedent.
+      THE pintz10 (2.10)/(2.16) EXPONENT QUESTION, CHECKED AND STATED
+      AGAINST THE PDF. Confirmed on the text layer and on 200-dpi
+      renders of pages 6-8 of 1004.1072v1.pdf: (2.10) as printed carries
+      the exponent 2 and NO cardinality condition under the summation
+      sign, exactly as the extract transcribes it, while (2.8) on the
+      same page carries the same exponent 2 AND the condition on its own
+      second summation line; (2.11) and (2.16) both carry a general
+      exponent r, (2.16) applying it at every p dividing P; the r=1
+      remark is printed immediately after (2.10) and asserts an
+      asymptotic; and the lemma name S(nu,r), the constant c8(nu,r) and
+      the threshold H0(nu,r) are all r-dependent. The lead-in itself
+      prints "For fixed nu r" with no comma, which is independent
+      evidence the display was not proofread. THE COHERENT READING IS A
+      GENERAL-r BOUND under the cardinality restriction, and the printed
+      exponent 2 together with the missing size restriction is a v1
+      TYPESETTING DEFECT. THIS IS RECORDED AS A FIDELITY FINDING ABOUT
+      THE EXTRACT AND ABOUT WHAT THE ANCHOR PRINTS, NOT AS A RE-VERDICT
+      OF ANY CLAIM ROW. The single deviating display in the whole set
+      sits in the same extract and is not this one: the (2.16) block is
+      introduced with the word "verbatim" and its middle numerator is
+      printed by the source as nu_p/p + 1 - nu_p/p - r(nu_p+1)/p +
+      O(1/p^2) and transcribed by the extract as 1 - r(nu_p+1)/p +
+      O(p^-2). The two are equal; the source leaves the cancellation
+      unperformed and the extract performs it silently. The extract's
+      own assurance that the block was "independently re-verified via
+      pdftotext this session" does not hold for that line, since
+      pdftotext returns the uncancelled numerator.
+      THE PROVENANCE AXES, DISPOSED. All 21 I1 headings and framing
+      annotations are written out with the source-anchored form each
+      would become, per extract, in the grade file; none of the
+      severances touches transcribed content, and none was applied here.
+      All 17 I2 references are classified: FIFTEEN are (a) disclaimers
+      or (b) duplicates the anchor independently carries, and TWO are
+      (c) load-bearing and unreplaceable -- both the precedent extracts'
+      self-identification as "precedent P1 / P3 (Appendix C.1)", a label
+      no anchored source carries, which must be DELETED rather than
+      re-anchored. All seven pintz10 I2 hits are the disclaiming
+      direction, as the inventory predicted; they were TESTED against
+      the PDF rather than accepted, and the provenance half holds while
+      the verification half is overstated. THE I3 AXIS IS NOT INERT:
+      FOUR of the eleven bare mentions carry evidentiary weight about a
+      dropped object and are flagged; three are replaceable from
+      in-tree records, and one is a verbatim report quotation that must
+      be deleted. TWO extracts carry verbatim report prose beneath an I1
+      annotation; severing the frame and removing the quotation is ONE
+      operation, not two.
+      NOTHING MATHEMATICAL MOVES. No Lean file, frozen block, roadmap
+      item, roadmap order, run, writeup file or anchor line is touched.
+      No verdict, target, threshold or constant changes. No bet is
+      resolved, re-priced or amended: BET-20260711-07 to 2026-08-08,
+      BET-20260718-08 at 0.07 and BET-20260725-11/12/13 at 0.12 / 0.15 /
+      0.35 all stand. No checklist row is edited and none is
+      re-verdicted; the register stays withdrawn and untouched. No
+      extract's mathematical content is altered. item-0026's NOT-FOUND
+      verdict and A3 as the named gap axis are untouched, as is the
+      1004.1072 routing to item-0028.
+      GATES. check-frozen, relocation-check, the sorry inventory (1, at
+      Statement.lean:21), the manifest pin, the toolchain newline, the
+      roadmap show and order, writeup_mapper check and mathjax_lint (138
+      files, 0 problems) all produce identical output at start and
+      close. extract-inventory.py reproduces extract-inventory-r1.md
+      BYTE-FOR-BYTE, before and after: 2b did not perturb the worklist
+      it graded against. HANDOVER.md and the grade file are both
+      ASCII-only, 0 non-ASCII bytes, before and after. STOP conditions,
+      all seven reported: S1 does not fire (diff pin..HEAD empty). S2
+      does not fire (all three Appendix C anchors match exactly once).
+      S3 does not fire (last annotation was ANN-77, item-0033 ratified
+      at position 1). S4 does not fire -- every cited page exists and is
+      legible; the eleven citation failures are pages that exist but do
+      not carry the object, which is graded as an ordinary fidelity fail
+      and the true page is named in each case, not guessed. S5 does not
+      fire. S6 does not fire (no hash line added; nothing outside the
+      permitted set touched). S7 does not fire -- no dropped, ephemeral
+      or operator-held object was opened, and none needed to be: the
+      four assertions in the extracts that rest on a dropped report are
+      graded as unverifiable-and-severable from the extract and the
+      anchor alone.
+      ONE AUTHORING-SIDE NOTE, disclosed rather than silently absorbed.
+      Appendix C2's FIND block is described in the dispatch as the tail
+      of the Phase 2a bullet; it is unique at the pin, as required, but
+      the bullet does not end there -- the sentence "THE THREE ROADMAP
+      APPLIES ARE BOOKED HERE" follows on the same line. The replacement
+      was applied to the unique FIND text and the trailing sentence was
+      re-wrapped and preserved intact. This is a wording imprecision in
+      the dispatch, not an anchor failure, and S2 does not fire.
+      HANDOVER DELTAS, bounded and enumerated, three. (i) The cold-start
+      read-order line moves from ANN-01..77 to ANN-01..78. (ii) The
+      Phase 2a bullet's closing sentences are replaced: the plan
+      sentence "only after that may anything be hashed" is superseded by
+      a statement that Phase 2b graded the seven and that its results
+      are the record below. (iii) A new bullet, at the head of the
+      item-0022 group, records the seven grades, that nothing was hashed
+      and why, the fidelity headline with the (2.10)/(2.16) finding, and
+      what is now owed. Nothing else changes.
+      STILL OPEN AFTER THIS ENTRY. THE REPAIR IS TWO OPERATIONS PER
+      EXTRACT, NOT ONE, and that is this entry's load-bearing
+      consequence for whoever runs next. (1) SEVERANCE of the 21 I1
+      headings and the 17 I2 references, which Phase 2a scoped -- still
+      owed, still not performed, and now written out in full with the
+      exact replacement text. (2) FIDELITY REPAIR of the eleven
+      fabricated locations, the six altered quotations and the five
+      contradicted negatives -- new to this entry, not previously known
+      to be owed, and NOT discharged by severance: a fully severed set
+      would still carry every one of them. Both are itemized per
+      extract, per finding, in
+      dossier/item-0022-workpapers/extract-grades-r1.md, which is the
+      tracking artifact until item-0033 closes; each repair is local and
+      checkable against a hash-booked PDF, and none requires a dropped
+      object. NO HASH MAY BE BOOKED over any of the seven until both are
+      done with the PDFs open. Plus everything ANN-77 left open,
+      unchanged: whether the two precedent extracts stay in the corpus
+      at all -- informed but NOT answered by this pass, which found that
+      both carry the only two class-(c) I2 references in the set --
+      R1-015's owed steering review, the item-0010 re-scope,
+      source_commit in writeup/sources.yml, the four heading
+      re-assignments from a292ba4, rule-16/B6 pending item-0034,
+      lean/README.md below its STALE banner, and the
+      Erdos251/Counting.lean umbrella docstring. item-0033 is NOT closed
+      by this apply and stays ratified at position 1.

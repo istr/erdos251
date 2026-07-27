@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..77; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..78; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -169,6 +169,60 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- THE EXTRACTS ARE GRADED (ANN-78). Phase 2b opened the seven anchored
+  PDFs and graded each extract against its own source. Grades:
+  bloomkuperberg23-oddmoments DEFECTIVE, kowalski-singser-dist
+  DEFECTIVE, kuperberg21-oddmoments DEFECTIVE, kuperberg23-apsmooth
+  DEFECTIVE, pintz10-patterns DEFECTIVE, precedent-p1-2605.22763
+  DEFECTIVE, precedent-p3-2601.07421 DEFECTIVE. 0 CLEAN, 0
+  CLEAN-PENDING, 7 DEFECTIVE. NOTHING WAS HASHED -- not one extract and
+  not the grade file, because the dispatch gates every hash on CLEAN and
+  its budget reads "0 if nothing is CLEAN". That is the rule working,
+  not a shortfall: anchoring freezes what it books and every one of the
+  seven carries a defect a hash would freeze. payloads/HASHES.txt is
+  unchanged by this apply.
+  THE FIDELITY HEADLINE: the mathematics is faithful and the citation
+  apparatus is not. All 25 display-fenced lines and every theorem,
+  lemma and equation number were checked against the PDFs; exactly ONE
+  display deviates from its source and every numbered object is
+  correctly identified. Against that, ELEVEN page or section citations
+  name a location that does not carry the object cited, across five of
+  the seven; SIX quotations are altered inside their quotation marks
+  (an inserted connective, a deleted cross-reference, a performed
+  cancellation, two repaired source typos, a URL component dropped);
+  and FIVE NOT-FOUND or scope sentences are contradicted by the anchor,
+  every one of them an over-broad negative rather than a wrong one --
+  every probe clause carrying item-0026 reasoning survived. THE
+  pintz10 (2.10)/(2.16) FINDING, checked against the anchor and against
+  200-dpi renders of pages 6-8: (2.10) as printed carries exponent 2
+  and NO cardinality condition, exactly as the extract transcribes it;
+  (2.11) and (2.16) both carry a general exponent r; the r=1 remark is
+  printed; the lemma name S(nu,r), the constant c8(nu,r) and the
+  threshold H0(nu,r) are all r-dependent; and the Lemma 2 lead-in
+  itself prints "For fixed nu r" with no comma. The coherent reading is
+  a general-r bound under the cardinality restriction and the printed
+  exponent 2 with the missing size restriction is a v1 typesetting
+  defect. THIS IS A FIDELITY FINDING ABOUT THE EXTRACT AND ABOUT WHAT
+  THE ANCHOR PRINTS, NOT A RE-VERDICT of any claim row; no row was
+  touched. The one deviating display is in the same extract: the (2.16)
+  block is introduced "then, verbatim" and its middle numerator is
+  transcribed with a cancellation the source leaves unperformed.
+  WHAT IS NOW OWED, and it is TWO repairs per extract, not one.
+  Severance of the 21 I1 headings and the 17 I2 references is necessary
+  and NOT SUFFICIENT: a fully severed set would still carry the eleven
+  fabricated locations, the six altered quotations and the five
+  contradicted negatives. Both repairs are written out per extract, per
+  finding, with the exact replacement text, in
+  dossier/item-0022-workpapers/extract-grades-r1.md, which is the
+  tracking artifact until item-0033 closes; every one is local and
+  checkable against a hash-booked PDF and NONE requires a dropped
+  object. Two further results routed there: FOUR of the eleven I3 bare
+  mentions carry evidentiary weight after all and are flagged, so that
+  axis must not be assumed inert; and TWO I2 references are class (c),
+  unreplaceable -- both are the precedent extracts' self-identification
+  as "precedent P1 / P3 (Appendix C.1)", a label no anchor carries, to
+  be deleted rather than re-anchored. That is information for the open
+  precedent-membership question and not an answer to it.
 - THE REGISTER IS WITHDRAWN AND THE EXTRACTS ARE UNGRADED (ANN-77).
   dossier/item-0022-workpapers/absorption-checklist.md carries a
   withdrawal banner at its head: its object is not in the tree and
@@ -191,16 +245,15 @@ its later sections carry a STALE banner, HANDOVER is the record).
   one of the first two; none is clean. NO HASH LINE WAS BOOKED for any
   extract, deliberately -- anchoring freezes what it books, and hashing
   report-indexed structure now would repeat exactly the defect
-  ERRATUM-5 stands as the demonstration of. PHASE 2b IS THE GRADING
-  PASS: it opens the seven primary PDFs -- at most 227 pages as the
-  extract headers declare them, at least 172 once the two precedent
-  extracts' own bounded reads are counted -- and grades each extract
-  against its own anchored source. Only after that may anything be
-  hashed. THE THREE ROADMAP APPLIES ARE BOOKED HERE: cd53a72 closed
-  item-0022 as interrupted, 05b7c42 withdrew item-0031, and b37713b
-  ratified item-0033 and item-0034 and placed them at the head of the
-  order. All three landed unbooked, which is the same defect ANN-76
-  booked, recurring within a day.
+  ERRATUM-5 stands as the demonstration of. PHASE 2b GRADED the seven
+  against their anchored PDFs (ANN-78); its results and the resulting
+  hashes are the record below, superseding the "only after that may
+  anything be hashed" plan this bullet used to end on. THE THREE
+  ROADMAP APPLIES ARE BOOKED HERE: cd53a72 closed item-0022 as
+  interrupted, 05b7c42 withdrew item-0031, and b37713b ratified
+  item-0033 and item-0034 and placed them at the head of the order.
+  All three landed unbooked, which is the same defect ANN-76 booked,
+  recurring within a day.
 - TEN ANCHORS AND THE item-0022 IDENTIFICATION LAYER (ANN-74). The
   operator supplied canonical sha256 for seven primary sources and the
   three operator-held reports; all ten are booked in
