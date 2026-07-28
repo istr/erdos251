@@ -2,20 +2,20 @@
 
 Source (only evidence base): /home/istr/pro/erdos251/dossier/2301.06095v1.pdf
 sha256 c67fdd9c9a822581371409e3fae54c9fcf97e0bd1a0b534fb22ea7a4b61f9617
-(operator-verified; re-verified this session).
+Transcribed from the anchored PDF named above; fidelity repair applied
+per the ANN-78 grade (`extract-grades-r1.md`) at this pin; re-grade
+pending.
 arXiv:2301.06095v1 [math.NT] [arXiv preprint] 15 Jan 2023. Author(s):
 Vivian Kuperberg. 19 pages. PDF metadata: Creator "LaTeX with hyperref",
 Producer "dvips + GPL Ghostscript GIT PRERELEASE 9.22", CreationDate
 "Wed Jan 18 02:56:39 2023 CET". No journal reference is printed on the
 paper.
 
-Front-matter identification CONFIRMED against the dispatch: author
+Front-matter identification, read from p.1 of the anchor: author
 "Vivian Kuperberg", title "Sums of singular series along arithmetic
 progressions and with smooth weights", arXiv:2301.06095v1. No
-deviation. This is confirmed to be a different paper from the anchored
-arXiv:2210.09775v2 (a separate, non-item-0022 shelf item cited by report
-1's footnote 6 for a different Kuperberg result on sums over large sets
-$`T_k(h)`$; see checklist row R1-013).
+deviation. This is a different paper from the anchored
+arXiv:2210.09775v2.
 
 ---
 
@@ -36,9 +36,9 @@ elements of the set in the case of arithmetic progressions and by
 pairings of the smooth functions in the case of weights. These sums shed
 light on sums of singular series in other formats."
 
-## 2. Statement cited by item-0022's reports (verbatim)
+## 2. Statement extracted from the anchor (verbatim)
 
-### 2.1 The perfect-matching / pairing main-term structure (report 1's "matched-flank" analogy)
+### 2.1 The perfect-matching / pairing main-term structure (Theorems 1.1 and 1.2, pp.3-4)
 
 p.3, Theorem 1.1 (restricted sums along arithmetic progressions): "Fix a
 modulus $`r\ge1`$, an integer $`k\ge1`$, and k congruence classes
@@ -57,13 +57,13 @@ sums over partitions of $`[1,k]`$ into doubleton and singleton blocks,
 with the doubleton part again organized by perfect matchings $`\sigma \in
 \mathcal{B}(j+1,\ldots,k-j)`$ of the remaining indices (eq. (9)).
 
-This confirms report 1's characterization: the main-term structure of
-these restricted sums is governed by perfect matchings/pairings of the
-index set, with the dominant contribution occurring when the paired
-congruence classes coincide (Theorem 1.2's remark, p.4: "if
+The main-term structure of these restricted sums is governed by perfect
+matchings/pairings of the index set, with the dominant contribution
+occurring when the paired congruence classes coincide (Theorem 1.2's
+"In particular" clause, p.4: "In particular, if
 $`\#\widetilde{\mathcal{B}}(c_1,\ldots,c_k)`$ is the number of ways to
-pair the $`c_i`$'s such that every pair has equal values... the theorem
-implies $`R_k(h;r,c_1,\ldots,c_k) =
+pair the $`c_i`$'s such that every pair has equal values, then
+$`R_k(h;r,c_1,\ldots,c_k) =
 \#\widetilde{\mathcal{B}}(c_1,\ldots,c_k)\left(-h\frac{\phi(r)}{r}\log
 h+C_0(r)h\right)^{k/2}+O_{r,k}(h^{k/2}(\log h)^{k/2-1})`$").
 
@@ -78,12 +78,11 @@ uniform in growing $`k`$.
 Checked and NOT present in this paper: any Hardy-Littlewood-type lower
 bound for a prime-counting function $`\sum_{\text{sites}}
 S_{\text{side}}(P(\text{site}))`$ on a parity-blocked flank class (report
-1's "Input (i)"). This paper's results (Theorems 1.1-1.5) are all
-asymptotic formulas for sums of the algebraic singular-series constant
-itself (or its restricted/weighted variants), never lower bounds for a
-prime-tuple counting function. This matches report 1's own
-characterization of the gap between what this anchor supplies and what
-its "Input (i)" would require.
+1's "Input (i)"). This paper's results -- Theorem 1.1 (p.3), Theorem 1.2
+(p.4), Theorem 1.3 (p.5) and Theorem 1.5 (p.5); the paper states no
+Theorem 1.4 -- are all asymptotic formulas for sums of the algebraic
+singular-series constant itself (or its restricted/weighted variants),
+never lower bounds for a prime-tuple counting function.
 
 ## FLAGS
 

@@ -2,7 +2,9 @@
 
 Source (only evidence base): /home/istr/pro/erdos251/dossier/1004.1072v1.pdf
 sha256 74824028eb50c322f43da700fcb31fe10ce91272fe8e73695e9a4f82df22053b
-(operator-verified; re-verified this session).
+Transcribed from the anchored PDF named above; fidelity repair applied
+per the ANN-78 grade (`extract-grades-r1.md`) at this pin; re-grade
+pending.
 arXiv:1004.1072v1 [math.NT] [arXiv preprint] 7 Apr 2010. Author(s): Janos
 Pintz, Renyi Mathematical Institute of the Hungarian Academy of Sciences,
 Budapest. 9 pages. PDF metadata: Creator "LaTeX with hyperref package",
@@ -12,7 +14,7 @@ arXiv PDF pipeline; the arXiv submission date printed on the paper itself
 is 7 Apr 2010). No journal reference is printed on the paper; it is an
 arXiv preprint throughout.
 
-Front-matter identification CONFIRMED against the dispatch: author
+Front-matter identification, read from p.1 of the anchor: author
 "Janos Pintz", title "Patterns of primes", arXiv:1004.1072v1. No
 deviation.
 
@@ -32,13 +34,13 @@ this PDF is clean LaTeX output with no scrambled displays.
 Pintz [footnote:] Supported by OTKA Grants K72731, K67676 and
 ERC-AdG.228005."
 
-## 2. Statements cited by item-0022's reports (verbatim, in reading order)
+## 2. Statements extracted from the anchor (verbatim, in reading order)
 
-### 2.1 The Theorem actually invoked (report 1's "uniform Gallagher w.r.t. k" claim)
+### 2.1 Lemma 2 and its r=1 remark (p.6)
 
 This is Lemma 2 and its r=1 remark, p.6-7:
 
-"**Lemma 2.** For fixed nu, r and H > H0(nu, r) we have
+"**Lemma 2.** For fixed nu r and H > H0(nu, r) we have
 
 $$S(\nu, r) = \sum_{D \subset [1,H]} S^2(D^+) \le c_8(\nu, r) H^\nu.$$
 
@@ -52,11 +54,20 @@ implies easily the original Gallagher's theorem too, by dividing all
 possible nu+1-tuples according to the smallest element of it and using
 that S(H) is invariant under translation."
 
+Source print slip, noted alongside and not repaired in the quotation
+above: the Lemma 2 lead-in prints "For fixed nu r", with no comma after
+nu. The comma is absent in the source.
+
 Proof close, p.8: "(2.14)-(2.16) together prove the lemma, while for r =
 1, in order to obtain ~ instead of <<, it is enough to observe that the
 numerator after the product sign equals exactly 1 for each prime p, and
 the contribution of the incomplete period, the interval [RP+1, RP+r], is
-<= P = O(H) by the prime number theorem, since y = log H / 2."
+<= P = 0(H) by the prime number theorem, since y = log H / 2."
+
+Source print slip, noted alongside: the source prints a digit zero in
+"P = 0(H)", not a capital O. Confirmed on a 200-dpi render of p.8, where
+the glyph is narrow and upright and differs visibly from the wide italic
+O in "= O(1)" in the display above it on the same page.
 
 ### 2.2 Lemma 1 (the fixed-tuple-size special case, r absent)
 
@@ -81,31 +92,44 @@ t. In such a way, (2.10) follows by induction from
 $$S^*(t,r,D) := \sum_{1\le h\le H,\, h\notin D} \left(\frac{\mathfrak{S}(D^+\cup\{h\})}{\mathfrak{S}(D^+)}\right)^r \ll H$$
 
 where D+ is any admissible set of size t+1 and, as in the following, we
-will not mark the dependence of the constants implied by << or O symbols
+will not mark the dependence of the constants implied by << or 0 symbols
 on t and r."
 
-p.7 (continued, the local averaging computation, eq. (2.12)-(2.16)),
-transcribed via `pdftotext -layout` on pages 7-8 of the anchor (the same
-tool touch used throughout this repair pass, re-run to settle this
-question independently of any operator-supplied material):
+Source print slip, noted alongside: the source prints a digit zero in
+"<< or 0 symbols", not a capital O. Confirmed on a 200-dpi render of
+p.7, where the glyph is narrow and upright and differs visibly from the
+wide italic O in "1 + O(1/p^2)" in (2.14) on the same page.
+
+pp.7-8 (continued, the local averaging computation, eq. (2.12)-(2.16)),
+transcribed from pages 7 and 8 of the anchor:
 
 "$`\nu_p'=\nu_p(D^+\cup\{h\}), \nu_p=\nu_p(D^+), y=\frac{\log H}{2},
-P=\prod_{p\le y}p, \Delta:=\prod_i(h-d_i).`$" (2.12); the ratio
+P=\prod_{p\le y}p, \Delta:=\prod_{i=1}^{\nu}(h-d_i).`$" (2.12); the ratio
 $`\mathfrak{S}(D^+\cup\{h\})/\mathfrak{S}(D^+)`$ is split into
 $`\prod_1\cdot\prod_2\cdot\prod_3`$ over $`p\le y`$, $`p>y,p\mid\Delta`$,
 and $`p>y,p\nmid\Delta`$ respectively (2.13); $`\prod_3=1+O(1/y)`$ (2.14)
 and $`\log\prod_2\ll1/\log y`$ (2.15); then, verbatim:
 
-"If H = RP + r, 0 <= r < P then Π₁(h) is periodic with period P. ...
-Consequently
+"If H = RP + r, 0 <= r < P then $`\Pi_1(h)`$ is periodic with period P.
+... Consequently
 
 (2.16)
 $$\frac{1}{P}\sum_{h=1}^P \Pi_1(h) = \prod_{p\mid P}
 \frac{\frac{\nu_p}{p}\left(1-\frac{\nu_p}{p}\right)^r +
 \left(1-\frac{\nu_p}{p}\right)\left(1-\frac{\nu_p+1}{p}\right)^r}
 {\left(1-\frac{\nu_p}{p}\right)^r\left(1-\frac1p\right)^r}
-= \prod_{p\mid P}\frac{1-\frac{r(\nu_p+1)}{p}+O(p^{-2})}{1-\frac{r(\nu_p+1)}{p}+O(p^{-2})}
+= \prod_{p\mid P}\frac{\frac{\nu_p}{p}+1-\frac{\nu_p}{p}-\frac{r(\nu_p+1)}{p}+O\left(\frac{1}{p^2}\right)}{1-\frac{r(\nu_p+1)}{p}+O\left(\frac{1}{p^2}\right)}
 = \prod_{p\mid P}\left(1+O(p^{-2})\right) = O(1).$$"
+
+The extract's own step, not the source's: in the middle numerator above
+the source leaves $`\frac{\nu_p}{p}`$ and $`-\frac{\nu_p}{p}`$ standing.
+They cancel, giving $`1-\frac{r(\nu_p+1)}{p}+O(p^{-2})`$ -- the same
+form the denominator carries, which is what makes the final
+$`\prod_{p\mid P}\left(1+O(p^{-2})\right)=O(1)`$ follow. The
+cancellation is performed here, not in the source; the source prints the
+numerator uncancelled, as transcribed. Confirmed against the `-layout`
+text layer, the raw text layer, and a 200-dpi render of p.7. The last
+two equalities of (2.16) are printed at the top of p.8.
 
 The local-average identity (2.16) carries the exponent **r**, applied
 directly to $`(1-\nu_p/p)`$ and $`(1-(\nu_p+1)/p)`$ at every prime
@@ -115,8 +139,8 @@ own use of r: the two displays are the two halves of one continuous
 computation (2.11 sets up the quantity to be bounded; 2.12-2.16 bound
 it), and both are written for general r throughout.
 
-**Revision (this line added after the item-0022 repair-r1 pass; see
-FLAGS below for full provenance).** An earlier version of this Section
+**Revision (this line added after the item-0022 repair-r1 pass).** An
+earlier version of this Section
 2.3 concluded from (2.11) alone that r was purely a proof-internal
 ratio-exponent, unrelated to Lemma 2's own displayed moment order (fixed
 at 2 per the literal glyph in (2.10)). That conclusion did not weigh
@@ -144,9 +168,8 @@ $`M_{0,r}(H)=\mathfrak{S}(\{0\})^r=1`$. Iterating for
 $`t=0,\ldots,\nu-1`$ gives $`M_{\nu,r}(H)\ll_{\nu,r}H^\nu`$, i.e.
 $`\sum_{D\subset[1,H],|D|=\nu}\mathfrak{S}(D^+)^r\ll_{\nu,r}H^\nu`$ --
 a genuine general-r moment bound, for every fixed r, not only r=2. This
-derivation uses nothing beyond (2.11) and (2.16) as printed (both
-independently re-verified via pdftotext this session) and standard
-counting; it is not sourced from any operator-supplied material.
+derivation uses nothing beyond (2.11) and (2.16) as printed and standard
+counting.
 
 ## 3. Method anatomy (paraphrase except quotes)
 
@@ -203,10 +226,11 @@ exponent 2 on $`\mathfrak{S}(D^+)`$ -- matching Lemma 1's exponent
 verbatim -- and shows no "$`|D|=\nu`$" restriction under the summation
 sign, unlike Lemma 1's display (2.8), which carries `|D|=nu` on its own
 second summation line (Section 2.2 above). Both of these features of
-the DISPLAY are independently re-verified this session via
-`pdftotext -layout` (Section 0 provenance below), and were already noted
-correctly in the original version of this extract for the exponent, but
-the missing cardinality condition was not flagged until this revision.
+the DISPLAY are confirmed against p.6 of the anchor, in the
+`pdftotext -layout` text layer and on a 200-dpi render of the page, and
+were already noted correctly in the original version of this extract for
+the exponent, but the missing cardinality condition was not flagged
+until this revision.
 
 Taken as an isolated, self-contained display, (2.10) is internally
 inconsistent with the rest of the same lemma and proof: (a) the r=1
@@ -237,37 +261,17 @@ theorem as an asymptotic). The printed (2.10) -- exponent 2, no
 Lemma 1's own display, not as a separate, narrower mathematical
 statement that the rest of the lemma and its proof then silently ignore.
 
-**Report 1's claim, reassessed.** Report 1 paraphrases this material as
-"fuer festes nu und festes r $`\sum \mathfrak{S}(D^+)^r \le
-c(\nu,r)H^\nu`$, und insbesondere fuer r=2 also ein quadratischer
-Mittelwert im festen-nu-Regime kontrolliert wird" ("in the fixed-nu
-regime" -- consistent with the `|D|=nu` restriction, even though report
-1 does not spell out the summation domain explicitly). This matches the
-coherent reading above. See the corresponding checklist row (R1-015)
-for the revised CONFIRMED verdict this supports, reversing this
-extract's and that row's earlier CORRECTED disposition.
-
 ## FLAGS
 
 - No sha256 mismatch, no TRANSCRIPTION-UNSURE passages.
 - **Revision provenance (2026-07-26, after item-0022 repair-r1's
-  original Task C pass).** The operator supplied two documents,
-  `Pintz_Lemma2_Image_Analysis_Report.pdf` and
-  `Pintz_Lemmas_1_and_2_Report.pdf` (both self-described AI-assisted
-  analyses, dated 26 July 2026), arguing that the printed exponent in
-  (2.10) is a typographical slip and that Lemma 2 is intended as a
-  general-r bound. Per this project's standing rule that
-  operator-commissioned or AI-generated reports are never themselves
-  evidence for a verdict, neither document is cited as a source in this
-  extract; both served only to prompt a fresh, independent re-reading
-  of the primary anchor. That re-reading (fresh `pdftotext -layout` on
-  pages 6-8, reproduced in Section 2.3 above) independently confirmed
-  the exponent-r content of (2.16), which this extract had not
-  previously transcribed, and the logical force of the r=1 remark
-  against a fixed-exponent-2 reading, which this extract had not
-  previously connected to the (2.10) question. The revision above rests
-  on that independent re-reading of the anchor, not on the two
-  documents' own conclusions.
+  original Task C pass).** The Section 2.3 revision rests on a reading
+  of pages 6-8 of the anchor, reproduced in Section 2.3 above: the
+  exponent-r content of (2.16), which this extract had not previously
+  transcribed, and the logical force of the r=1 remark against a
+  fixed-exponent-2 reading, which this extract had not previously
+  connected to the (2.10) question. Both are confirmed against the
+  anchor's text layer and against 200-dpi renders of pp.6-8.
 - The originally recorded transcription of (2.10) itself (exponent "2",
   no visible `|D|=nu`) is UNCHANGED and re-confirmed accurate as a
   transcription of what the display literally prints; what changed is

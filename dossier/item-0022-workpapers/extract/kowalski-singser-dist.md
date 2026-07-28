@@ -2,7 +2,9 @@
 
 Source (only evidence base): /home/istr/pro/erdos251/dossier/singular-series-distribution.pdf
 sha256 378433db556a2e83236f83a946d15178fe431e08f81511764325cce361b27920
-(operator-verified; re-verified this session).
+Transcribed from the anchored PDF named above; fidelity repair applied
+per the ANN-78 grade (`extract-grades-r1.md`) at this pin; re-grade
+pending.
 No arXiv identifier or version marker is printed on this PDF; it is
 hosted at the author's ETH Zurich personal page as a standalone note.
 [preprint/note, no journal reference printed] Undated in the printed
@@ -13,11 +15,12 @@ PDF metadata: Creator "TeX", Producer "pdfTeX-1.40.19", CreationDate
 "Sun Jun 16 16:09:41 2019 CEST". No journal reference is printed on the
 paper.
 
-Front-matter identification CONFIRMED against the dispatch: author
+Front-matter identification, read from p.1 of the anchor: author
 "Emmanuel Kowalski", title as printed on PDF page 1 ("AVERAGES OF EULER
 PRODUCTS, DISTRIBUTION OF SINGULAR SERIES AND THE UBIQUITY OF POISSON
-DISTRIBUTION"), URL
-people.math.ethz.ch/~kowalski/singular-series-distribution.pdf. No
+DISTRIBUTION"). The source URL
+people.math.ethz.ch/~kowalski/singular-series-distribution.pdf is
+carried in-tree at `payloads/HASHES.txt` line 83. No
 deviation: PDF page numbering matches the paper's own printed page
 numbers 1-30 exactly (verified directly against PDF page 1, page 20,
 and page 21).
@@ -49,12 +52,12 @@ Affiliation line (last page of the paper): "ETH ZURICH - D-MATH,
 RAEMISTRASSE 101, 8092 ZURICH, SWITZERLAND / Email address:
 kowalski@math.ethz.ch"
 
-## 2. Statements cited by item-0022's reports (verbatim, in reading order)
+## 2. Statements extracted from the anchor (verbatim, in reading order)
 
 ### 2.1 Definition of the singular series (S(h))
 
-p.1: "The singular series associated with h is defined as the Euler
-product
+p.2, eq. (1.1): "The singular series associated with h is defined as the
+Euler product
 
 $$\mathfrak{S}(h) = \prod_p \left(1-\frac{\nu_p(h)}{p}\right)\left(1-\frac{1}{p}\right)^{-k} = \prod_p \left(1-\frac{\nu_p(h)-1}{p-1}\right)\left(1-\frac{1}{p}\right)^{1-k}$$
 
@@ -62,7 +65,7 @@ which is absolutely convergent."
 
 ### 2.2 Theorem 1.1 (existence of the moments $`\mu_k(m)`$)
 
-p.5: "**Theorem 1.1.** Let $`k\ge1`$ be fixed. For any complex number
+p.3: "**Theorem 1.1.** Let $`k\ge1`$ be fixed. For any complex number
 $`m\in\mathbf{C}`$ with $`\mathrm{Re}(m)\ge0`$, there exists a complex
 number $`\mu_k(m)`$ such that
 
@@ -81,7 +84,7 @@ enlightening."
 
 ### 2.3 Gallagher's theorem, as restated by this anchor (the mu_k(1)=1 baseline)
 
-p.5, eq. (1.5): "A result of Gallagher [Ga] states that
+p.3, eq. (1.5): "A result of Gallagher [Ga] states that
 
 $$\lim_{h\to+\infty}\frac{1}{h^k}\sum^*_{|h|\le h}\mathfrak{S}(h) = 1,$$
 
@@ -108,8 +111,8 @@ proved in Proposition 4.1 in the next section). This is explained
 intuitively by the fact that $`\mathfrak{S}(h)`$ is often zero: for
 instance, the 2-factor of $`\mathfrak{S}(h)`$ is zero unless all $`h_i`$
 are of the same parity, which happens with probability $`2^{1-k}`$ only
-(for those, of course, the 2-factor is very large, equal to
-$`2^{k-1}`$)."
+(see Example 4.3 for a more precise estimate). For those, of course, the
+2-factor is very large (equal to $`2^{k-1}`$)."
 
 ### 2.5 Growth rate of the moments (Proposition 4.1 and Example 4.3)
 
@@ -164,27 +167,34 @@ Checked and NOT present in this paper: any statement of a
 or parity-conditioned second moment in a growing-k regime (Proposition
 4.1 and Example 4.3 show the opposite: $`\mu_k(2)`$ grows like
 $`\exp(2k\log\log3k)`$, i.e. faster than any fixed exponential in k);
-no statement about a "flanked" or "aggregated simplex" domain; no
-Montgomery-Soundararajan $`R_k(h)`$ theorem (that result is cited only
-in this paper's own bibliography, entry [MS], and is not restated or
-proved here). The explicit even-class-conditioned ratio
+no statement about a "flanked" or "aggregated simplex" domain.
+
+Checked and NOT stated or proved in this paper: the
+Montgomery-Soundararajan $`R_k(h)`$ theorem. [MS] is cited in the body
+at p.3 ("This property was used by Gallagher himself to understand the
+behavior of primes in short intervals (see also the recent work by
+Montgomery and Soundararajan [MS])") and in the bibliography; the
+theorem itself is neither stated nor proved here.
+
+Checked and NOT printed in this paper: the explicit
+even-class-conditioned ratio
 $`\mathbb{E}_{\mathrm{even}}[\mathfrak{S}^2]/\mathbb{E}_{\mathrm{even}}[\mathfrak{S}]^2
-= 1.1504807723\ldots`$ that report 1 states is NOT itself printed in
-this paper; it is report 1's own arithmetic derivation from the
-ingredients extracted in Sections 2.2 and 2.4 above (independently
-re-derived and re-executed in kowalski-mu-recheck.py/.txt).
+= 1.1504807723\ldots`$. That value is this project's own arithmetic
+derivation from the ingredients extracted in Sections 2.2 and 2.4 above
+(re-derived and re-executed in kowalski-mu-recheck.py/.txt).
 
 ## 6. COMMENTARY (assessment, not extraction)
 
-This anchor supplies every ingredient report 1 uses for the k=2
-obstruction (mu_2(1)=1, the explicit mu_k(2) Euler product, its
-numerical value, and the parity-vanishing mechanism), but the specific
-"even-class-conditioned" ratio is report 1's own elementary derivation,
-not a quotation. The derivation is correct: conditioning a random
-variable that is 0 with probability $`1-q`$ and equal to a random $`X`$
-with probability q (here $`q=2^{1-k}=1/2`$ at k=2) on the nonzero event
-multiplies both the mean and the second moment by $`1/q=2`$, which
-reproduces exactly report 1's $`\mathbb{E}_{\mathrm{even}}[\mathfrak{S}_2]=2`$,
+This anchor supplies every ingredient the k=2 obstruction needs
+(mu_2(1)=1, the explicit mu_k(2) Euler product, its numerical value, and
+the parity-vanishing mechanism); the specific "even-class-conditioned"
+ratio is not a quotation from it but an elementary derivation from those
+ingredients. The derivation is this project's, and it is correct:
+conditioning a random variable that is 0 with probability $`1-q`$ and
+equal to a random $`X`$ with probability q (here $`q=2^{1-k}=1/2`$ at
+k=2) on the nonzero event multiplies both the mean and the second moment
+by $`1/q=2`$, which gives
+$`\mathbb{E}_{\mathrm{even}}[\mathfrak{S}_2]=2`$ and
 $`\mathbb{E}_{\mathrm{even}}[\mathfrak{S}_2^2]=2\mu_2(2)`$.
 
 ## FLAGS

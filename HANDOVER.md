@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..78; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..79; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -169,6 +169,57 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- THE EXTRACTS ARE REPAIRED, NOT YET RE-GRADED (ANN-79). Phase 2c opened
+  the seven anchored PDFs and edited the seven extracts to what the
+  ANN-78 grade specifies. THE REFRAMING that makes this mandatory: the
+  extracts are the ONLY in-tree representation of their primary sources
+  -- the repository does not re-publish the PDFs -- and both lanes
+  consume them, so a defective extract is a silently wrong corpus, not a
+  stale cache; "cache with no live consumer" was the wrong model.
+  REPAIRED ACROSS THE SEVEN: the universal header (the false
+  "operator-verified; re-verified this session" assurance and the
+  ephemeral "CONFIRMED against the dispatch" identification are gone,
+  replaced by a provenance line claiming no fidelity the repair has not
+  earned); eleven fabricated page and section locations; six altered
+  quotations restored to what the source prints, including two DIGIT
+  ZEROS the source prints where the extract had capital O; five
+  over-broad negatives narrowed from "not present" to "not proved here"
+  or "not this paper's own result"; and the I1/I2 provenance severance,
+  which takes the inventory from I1 21, I2 17, I3 11 to ZERO on all
+  three axes, with the two class-(c) precedent self-labels deleted
+  rather than re-anchored. THE MATHEMATICS WAS NOT TOUCHED except
+  pintz10's P27: the (2.16) middle numerator is now transcribed with the
+  nu_p/p terms UNPERFORMED as the source prints them, with the
+  cancellation recorded below as the extract's own step. Verified
+  mechanically: every display block byte-identical to the pin in six of
+  seven files, exactly one changed line in the seventh, fenced-line
+  count unchanged at 25.
+  NOTHING WAS HASHED -- not an extract, not the repair log.
+  payloads/HASHES.txt is unchanged and the ANN-78 grade file's withheld
+  hash stays withheld. Standing is the RE-GRADE's to confer, because a
+  session must not hash or grade the artifact it just produced. THE
+  RE-GRADE is the Phase 2b dispatch re-run against the repaired
+  extracts by a FRESH executor session that did not perform the repair,
+  cross-family preferred, pin bumped to this commit; it exhibits
+  pdftotext output alongside every quotation it grades CLEAN and hashes
+  on CLEAN. item-0033 CLOSES ONLY when it returns seven CLEAN and hashes
+  them; if it returns fewer, the shortfall is named and the item stays
+  open. Do not consume these seven as graded-correct before then.
+  S7 FIRED, THREE FINDINGS, so the first grade was not complete. (1)
+  pintz10 line 99 carried two non-ASCII characters inside a quotation in
+  a file declaring ASCII folding, graded PASS by ANN-78; repaired here
+  only because the close gate compels it, and disclosed. (2)
+  kuperberg23-apsmooth still carries a report-1 reference split across a
+  line break, which the inventory's single-line patterns never matched
+  -- so THE INVENTORY'S ZERO COUNTS ARE A LOWER BOUND ON SEVERANCE, NOT
+  A PROOF OF IT. (3) precedent-p1 still carries a second, uncounted
+  Appendix C.1 reference, very likely a third class-(c). (2) and (3)
+  were deliberately NOT repaired and are the re-grade's to adjudicate.
+  Also recorded: two page errors in the ANN-78 grade's own prose (ref
+  [17] is on p.37 not p.38; 2601.07421 Section 5 starts on p.10 not
+  p.9), and a defect in the Phase 2c dispatch's inventory gate line,
+  which assumes the inventory script prints to stdout when it in fact
+  rewrites the inventory file in place.
 - THE EXTRACTS ARE GRADED (ANN-78). Phase 2b opened the seven anchored
   PDFs and graded each extract against its own source. Grades:
   bloomkuperberg23-oddmoments DEFECTIVE, kowalski-singser-dist

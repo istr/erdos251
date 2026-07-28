@@ -2,7 +2,9 @@
 
 Source (only evidence base): /home/istr/pro/erdos251/dossier/2605.22763v2.pdf
 sha256 d71b78f1ea764ea0489b7fdec3c53d394cf99cd2ac2a22c1d61e744618e9573d
-(operator-verified; re-verified this session).
+Transcribed from the anchored PDF named above; fidelity repair applied
+per the ANN-78 grade (`extract-grades-r1.md`) at this pin; re-grade
+pending.
 arXiv:2605.22763v2 [cs.AI] [arXiv preprint] 8 Jun 2026 (printed dateline
 "2026-6-9" on the paper's own header). Author(s): George Tsoukalas,
 Anton Kovsharov, Sergey Shirobokov, Anja Surina, Moritz Firsching,
@@ -15,10 +17,8 @@ metadata: Creator "arXiv GenPDF (tex2pdf:a6404ea)", Producer "pikepdf
 8.15.1". No journal reference is printed (Google DeepMind technical
 report / arXiv preprint).
 
-Front-matter identification CONFIRMED against the dispatch: this is
-precedent P1 (Appendix C.1), anchored PDF, verdicted like any other
-anchor. No deviation from the title/author/identifier named in the
-kickoff dispatch and roadmap.
+Front-matter identification, read from p.1 of the anchor: title, author
+list and arXiv identifier are as printed there. No deviation.
 
 ---
 
@@ -49,9 +49,9 @@ successes but proved costlier on the hardest problems. These findings
 demonstrate the power of AI-aided formal proof search and shed light on
 the agent designs that enable it."
 
-## 2. Statements cited by item-0022's reports (verbatim)
+## 2. Statements extracted from the anchor (verbatim)
 
-### 2.1 The headline solve counts (report 2 Section 10.1)
+### 2.1 The headline solve counts (Introduction, pp.1-2)
 
 p.1-2, Introduction: "Our full-featured agent autonomously solved 9
 Erdos problems out of 353 attempted, including two questions that had
@@ -59,18 +59,22 @@ been open for 56 years [54, 7, 17], at the inference cost of a few
 hundred dollars per problem. It also proved 44/492 open conjectures
 from the Online Encyclopedia of Integer Sequences (OEIS)..."
 
-### 2.2 The basic Generate-Verify agent replicating the Erdos successes (report 2's "einfacherer Generate-Verify-Agent" claim)
+### 2.2 The basic agent replicating the Erdos successes (Introduction p.2; Section 5, p.8)
 
-p.9, Section 5: "We compared the agents by analyzing the solve rate
-against the cost (in US dollars) per successfully proven problem... To
-understand the impact of the agent design on these results, we did a
-post-hoc analysis of the performance of the full-featured and basic
-agents, as well as two agents with intermediate capabilities, on the 9
-Erdos problems solved by the full-featured agent. Remarkably, the basic
-agent solved all 9 problems, though at a higher cost on the harder
-problems."
+Two passages, printed six pages apart and quoted separately.
 
-### 2.3 Lean mechanical verification (report 2's "die Beweise wurden in Lean mechanisch gepruft" claim)
+p.8, Section 5 ("Impact of Agent Architecture and Model"): "We compared
+the agents by analyzing the solve rate against the cost (in US dollars)
+per successfully proven problem."
+
+p.2, Section 1 (Introduction): "To understand the impact of the agent
+design on these results, we did a post-hoc analysis of the performance
+of the full-featured and basic agents, as well as two agents with
+intermediate capabilities, on the 9 Erdos problems solved by the
+full-featured agent. Remarkably, the basic agent solved all 9 problems,
+though at a higher cost on the harder problems."
+
+### 2.3 Lean mechanical verification (Section 2, p.2; p.4)
 
 p.2, Section 2 ("Lean."): "Lean [43] is a proof assistant in which
 definitions, theorems, and proofs are all mechanically verified code...
@@ -78,11 +82,11 @@ A proof is correct if it leads the compiler to a state with no pending
 goals."; and p.4: "after each solve, experts on our team validated that
 the Lean statement faithfully captured the original conjecture."
 
-### 2.4 Public availability of results (report 2's [P2] citation)
+### 2.4 Public availability of results (Introduction, p.2)
 
-p.1 (Introduction, final sentence): "All Lean proofs and select
+p.2 (Introduction, final sentence): "All Lean proofs and select
 natural-language proofs are available in
-https://github.com/google-deepmind/alphaproof-nexus-results."
+https://www.github.com/google-deepmind/alphaproof-nexus-results."
 
 ## 3. Uniformity ledger
 
@@ -90,7 +94,7 @@ Not applicable in the Appendix B sense (this is an empirical/systems
 paper, not an asymptotic theorem); the counts above (9/353, 44/492) are
 the paper's own reported totals for its full-featured agent (D) as
 described in Section 2 and Table 1, not a claim of completeness over
-all Erdos problems (p.10 states "Even most Erdos problems remain out of
+all Erdos problems (p.11 states "Even most Erdos problems remain out of
 reach").
 
 ## 4. NOT-FOUND probe

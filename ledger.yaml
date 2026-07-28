@@ -4488,3 +4488,227 @@ annotations:
       lean/README.md below its STALE banner, and the
       Erdos251/Counting.lean umbrella docstring. item-0033 is NOT closed
       by this apply and stays ratified at position 1.
+  - id: ANN-20260728-79
+    refs: [ANN-20260728-78, ANN-20260727-77]
+    date: 2026-07-28
+    note: >-
+      THE SEVEN item-0022 EXTRACTS ARE REPAIRED AGAINST THEIR ANCHORED
+      PDFs, AND NOTHING IS HASHED. Phase 2c, executed by the local
+      executor against pin f1bd97a under an ephemeral dispatch, never
+      committed; the operator apply is the ratifying commit. Executor
+      model: Claude Opus 5 (claude-opus-5[1m]). This pass opened the
+      seven PDFs and edited the seven extracts to what the ANN-78 grade
+      specifies, and recorded what it changed. Files:
+      dossier/item-0022-workpapers/repair-log-2c.md (new), the seven
+      extract files under dossier/item-0022-workpapers/extract/,
+      HANDOVER.md (two bounded deltas, enumerated below) and ledger.yaml
+      (this entry) -- one file added, nine modified, none deleted, NO
+      hash line added, no grade file edit, no inventory file edit, no
+      checklist row edited, no roadmap, lean, runs or writeup file
+      touched.
+      THE REFRAMING, BOOKED PLAINLY, BECAUSE IT IS WHY THIS PASS EXISTS.
+      ANN-77 recorded the extracts as ungraded, and Section 5a of the
+      incident report treated them as a by-product that merely survives
+      the artifact drop. That was wrong and is corrected here. The seven
+      extracts are THE ONLY IN-TREE REPRESENTATION OF THEIR PRIMARY
+      SOURCES: the repository does not re-publish the PDFs, and both
+      lanes consume the extracts -- the analysis lane because it has no
+      primary source it can open, the executor lane for efficiency. A
+      defective extract is therefore not a stale cache, it is a
+      SILENTLY WRONG CORPUS, propagated to every later reader. "Cache
+      with no live consumer" was the wrong model; the demand is
+      permanent and was already being served defectively. Correctness of
+      these files is mandatory, not optional, which is what makes a
+      repair pass -- rather than a deletion or a disclaimer -- the right
+      response to ANN-78's seven DEFECTIVE grades.
+      THE REPAIR, PER EXTRACT. All seven received the universal header
+      repair: the false assurance "(operator-verified; re-verified this
+      session)" and the ephemeral "CONFIRMED against the dispatch"
+      identification are removed and replaced by a truthful provenance
+      line -- transcribed from the anchored PDF, fidelity repair applied
+      per the ANN-78 grade, re-grade pending -- so that no header states
+      a fidelity grade the repair has not earned.
+      bloomkuperberg23-oddmoments.md: mis-attributed bibliography
+      quotation re-anchored by identifier to 2301.06095v1 reference 4
+      (p.19), the even-order NOT-FOUND probe narrowed from "not present"
+      to "not proved here" with the p.4 Montgomery-Soundararajan
+      attribution named, the scope sentence replaced by the three
+      objects the paper actually carries, three I1 headings and
+      annotations severed, two I2 references removed, the dropped-object
+      I3 assertion dropped. kowalski-singser-dist.md: three fabricated
+      page citations corrected (p.1 to p.2 for eq. (1.1); p.5 to p.3 for
+      Theorem 1.1 and again for eq. (1.5)), the Example 3.5 quotation
+      restored to what the source prints including the cross-reference
+      that had been deleted without an ellipsis, the [MS] negative
+      narrowed to name the p.3 body citation, one I1 heading severed,
+      one I2 reference removed, and the even-class-conditioned ratio
+      restated as this project's own derivation from anchored
+      ingredients. kuperberg21-oddmoments.md: the same bibliography
+      mis-attribution re-anchored, the unverifiable dropped-report
+      comparison severed while its anchored half is kept, the
+      uniformity-ledger citation moved from p.4 to p.3 with the printed
+      sentence quoted and the stronger reading marked as inference, the
+      "works throughout" generalization dropped while the clause
+      carrying item-0026 reasoning is kept, three I1 items severed --
+      one of them jointly with the verbatim report prose it introduced
+      -- and two I2 references removed. kuperberg23-apsmooth.md: the
+      quoted passage re-attributed from a "Remark" that is a different
+      paragraph to Theorem 1.2's "In particular" clause, the unmarked
+      inserted connective replaced by the source's own "then", the range
+      citation naming a non-existent Theorem 1.4 replaced by the four
+      theorems the paper states, four I1 items severed, one I2 reference
+      removed. pintz10-patterns.md: see the next paragraph.
+      precedent-p1-2605.22763.md: the spliced quotation split into two
+      separately cited passages (p.8 Section 5 and p.2 Introduction, six
+      pages apart, the ellipsis that asserted contiguity removed), the
+      availability sentence moved from p.1 to p.2 with the printed
+      "www." restored, the out-of-reach sentence moved from p.10 to
+      p.11, five I1 headings severed with the page repairs folded in,
+      and both I2 references removed including the class-(c) self-label,
+      which is deleted rather than re-anchored.
+      precedent-p3-2601.07421.md: the Lean-correspondence quotation
+      moved from p.2 to p.10 Section 6, the bounded-read description
+      corrected from "start of Section 4" to "opening of Section 6", two
+      I1 headings severed, both I2 references removed including the
+      class-(c) self-label.
+      THE MATHEMATICS WAS NOT TOUCHED, WITH ONE NAMED EXCEPTION.
+      Every display and every numbered object the ANN-78 grade marked
+      PASS is byte-for-byte as it was, verified mechanically by
+      comparing every display block in all seven files against the pin:
+      six of the seven have all displays byte-identical, and the seventh
+      has exactly one changed line. That line is pintz10's P27, the one
+      mathematical fail in the set: inside the block introduced
+      "verbatim", the (2.16) middle numerator is now transcribed as the
+      source prints it, with the nu_p/p and -nu_p/p terms UNPERFORMED,
+      and the cancellation is recorded one line below as the extract's
+      own step, so the source's state and the extract's algebra are
+      separately visible. Confirmed on the -layout text layer, the raw
+      text layer and a 200-dpi render of p.7. The first fraction, which
+      carries the exponent r at both factors and is the feature the
+      extract relies on, passed and was not touched. Four further
+      pintz10 quotation repairs restore what the source actually prints
+      rather than a tidied version of it: the Lemma 2 lead-in "For fixed
+      nu r" with no comma, the two DIGIT ZEROS the source prints in
+      "<< or 0 symbols" (p.7) and "P = 0(H)" (p.8) where the extract had
+      capital letters O, and the dropped product limits in (2.12), now
+      restored to i=1 and nu. Each is mathematically inert and each is
+      noted alongside the quotation rather than silently normalized. The
+      load-bearing transcription of (2.10) -- exponent 2, no cardinality
+      restriction -- is UNCHANGED, as is the extract's Section 6 reading
+      of the anchor.
+      NOTHING WAS HASHED, AND THIS IS THE POINT OF THE PASS. Not one
+      extract, and not the repair log either. payloads/HASHES.txt is
+      byte-unchanged. Standing is conferred by the RE-GRADE, not by the
+      repair, for the same reason 2a and 2b were separated: A SESSION
+      MUST NOT HASH OR GRADE THE ARTIFACT IT JUST PRODUCED. This entry
+      asserts no extract is CLEAN; that is not this pass's to decide.
+      The ANN-78 grade file's own withheld hash REMAINS WITHHELD and
+      resolves at the re-grade.
+      THE RE-GRADE IS REQUIRED BEFORE CONSUMPTION AND BEFORE CLOSE. It
+      is the Phase 2b dispatch re-run against the repaired extracts, by
+      a FRESH executor session that did not perform this repair,
+      cross-family preferred, with the pin bumped to this pass's commit.
+      It grades the full ANN-78 fidelity surface fresh -- every display,
+      numbered object, citation, quotation and negative -- not as a diff
+      against the repair log; it exhibits pdftotext output alongside
+      every quotation it grades CLEAN; and on CLEAN it hashes the
+      extract and the re-grade record. An extract that does not re-grade
+      CLEAN returns to repair rather than being hashed. Until that pass
+      returns, the analysis lane must not consume these files as
+      graded-correct.
+      S7 FIRED: THREE DEFECTS ANN-78 DID NOT RECORD, WHICH MEANS THE
+      FIRST GRADE WAS NOT COMPLETE. (1) pintz10-patterns.md line 99
+      carried two NON-ASCII characters (Greek capital Pi and subscript
+      one) inside a quotation, in a file declaring "ASCII-folded per
+      AGENTS.md"; ANN-78 marked that line PASS as check P25. Because the
+      dispatch's own close gate requires every extract to be ASCII-only,
+      this one WAS repaired, to the inline form Pi_1(h) already used by
+      the display directly below it, and the exception is disclosed
+      rather than absorbed; the ASCII gate returns 1 at start and 0 at
+      close for that file alone. (2) kuperberg23-apsmooth.md still
+      carries a reference to report 1 in its NOT-FOUND probe, split
+      across a line break so that the inventory's single-line patterns
+      never matched it and the grade never dispositioned it. THE
+      INVENTORY'S ZERO COUNTS ARE THEREFORE A LOWER BOUND ON SEVERANCE,
+      NOT A PROOF OF IT, and the re-grade must sweep line-break
+      tolerantly. (3) precedent-p1-2605.22763.md still carries a second
+      reference to Appendix C.1 in its NOT-FOUND probe, uncounted on
+      every axis; it is very likely a third class-(c) reference of the
+      same kind as the two the grade did find and ordered deleted. (2)
+      and (3) were NOT repaired: a newly noticed defect is reported for
+      the re-grade to adjudicate, not silently fixed by the repair pass.
+      TWO ERRORS IN THE ANN-78 GRADE'S OWN PROSE, recorded so the
+      re-grade does not inherit them; neither changes a repair. The
+      grade states that 2312.09021v2.pdf p.38 prints reference [17]; it
+      is printed on p.37, and p.38 carries [21] and [22]. The grade
+      states that 2601.07421v5.pdf Section 5 begins on p.9; it begins on
+      p.10, as does Section 6, and the repair text the grade prescribes
+      is unaffected. ALSO RECORDED: the dispatch's Section 4 gate line
+      for the inventory assumes extract-inventory.py emits to stdout,
+      but the script WRITES extract-inventory-r1.md in place, so running
+      the gate as written overwrites the file it is meant to diff
+      against. It was run once and the file was restored immediately
+      with git checkout; the inventory file is byte-identical to the pin
+      at close and its regenerated counts were quoted from a copy held
+      outside the repository.
+      THE INVENTORY MOVED, AS INTENDED, AND THIS IS THE EVIDENCE THE
+      SEVERANCE HAPPENED. I1 21 to 0, I2 17 to 0, I3 11 to 0, across all
+      seven; extracts carrying none of I1, I2, I3 rise from 0 of 7 to 7
+      of 7. Total lines 921 to 949. THE FENCED/DISPLAY LINE COUNT IS
+      UNCHANGED AT 25, which is the mechanical check that no display was
+      added or removed. I4, the in-tree cross-reference axis, falls 15
+      to 11 because checklist-row pointers were removed inside
+      paragraphs the grade ordered deleted, and rises by one in kowalski
+      where an in-tree HASHES.txt record replaced a dispatch reference.
+      Subject to S7 finding (2): the zero counts are a lower bound.
+      NOTHING ELSE MATHEMATICAL MOVES. No Lean file, frozen block,
+      roadmap item, roadmap order, run, writeup file or anchor line is
+      touched. No verdict, target, threshold or constant changes. No bet
+      is resolved, re-priced or amended: BET-20260711-07 to 2026-08-08,
+      BET-20260718-08 at 0.07 and BET-20260725-11/12/13 at 0.12 / 0.15 /
+      0.35 all stand. No checklist row is edited and none is
+      re-verdicted; the register stays withdrawn and untouched.
+      item-0026's NOT-FOUND verdict and A3 as the named gap axis are
+      untouched, as is the 1004.1072 routing to item-0028. Every
+      NOT-FOUND clause carrying item-0026 reasoning survived the repair
+      intact: no uncentered sum of S(H)^2, no flanked or
+      aggregated-simplex domain, no per-position (1+o(1))^k constant, no
+      growing-rank asymptotic, no commit SHA in the 60-page precedent.
+      GATES. check-frozen, relocation-check, the sorry inventory (1, at
+      Statement.lean:21), the manifest pin, the toolchain newline, the
+      roadmap show and order, writeup_mapper check and mathjax_lint (138
+      files, 0 problems) all produce identical output at start and
+      close. HANDOVER.md and the repair log are ASCII-only, 0 non-ASCII
+      bytes. The seven extracts are ASCII-only at close, 0 of 7 carrying
+      any non-ASCII byte, against 1 of 7 at start (S7 finding (1)). The
+      inventory gate is the one gate expected to move and it moved as
+      described above. STOP conditions, all seven reported: S1 does not
+      fire (diff pin..HEAD empty; HEAD equals the pin). S2 does not fire
+      (both Appendix B anchors matched exactly once). S3 does not fire
+      (last annotation was ANN-78, item-0033 ratified at position 1, the
+      grade file unmodified). S4 does not fire -- no repair required a
+      dropped, ephemeral or operator-held object, and none would have
+      changed a display or numbered object marked PASS. S5 does not
+      fire. S6 does not fire (no hash line added; nothing outside the
+      permitted set touched). S7 FIRES, three findings, recorded above.
+      HANDOVER DELTAS, bounded and enumerated, two. (i) The cold-start
+      read-order line moves from ANN-01..78 to ANN-01..79. (ii) A new
+      bullet is inserted at the head of the item-0022 group, above the
+      ANN-78 grading bullet, recording that the extracts are repaired
+      and not yet re-graded, the reframing that makes their correctness
+      mandatory, what was repaired across the seven, that nothing was
+      hashed, that the re-grade is the Phase 2b protocol re-run by a
+      fresh session and gates item-0033's close, and the three S7
+      findings.
+      STILL OPEN. The RE-GRADE, which is the whole of the standing these
+      seven files do not yet have, and without which no hash may be
+      booked over any of them. item-0033 does NOT close by this apply
+      and stays ratified at position 1; it closes only when the re-grade
+      returns seven CLEAN and hashes them, and if it returns fewer the
+      shortfall is named and the item stays open. The three S7 findings
+      are undischarged and are the re-grade's to adjudicate. The
+      membership question for the two precedent extracts remains an open
+      operator question, now sharpened by the deletion of both
+      class-(c) self-labels and by S7 finding (3). Everything ANN-78
+      left open remains open, including the two citation-policy
+      decisions item-0022 was carrying.

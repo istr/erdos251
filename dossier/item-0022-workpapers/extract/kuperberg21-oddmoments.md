@@ -2,17 +2,20 @@
 
 Source (only evidence base): /home/istr/pro/erdos251/dossier/2109.03767v3.pdf
 sha256 e1bbabbd259d43bf80614756bc96ddb13612e82bdd8887d536612bd7d5441f94
-(operator-verified; re-verified this session).
-arXiv:2109.03767v3 [math.NT] [arXiv preprint] 29 Jul 2024 (v3; original
-submission 2021, per the paper's own reference to a 2021 arXiv posting
-in the item-0022 kickoff dispatch and anchor 4's bibliography entry "V.
-Kuperberg, Odd moments in the distribution of primes, arXiv:2109.03767,
-2021"). Author(s): Vivian Kuperberg. 51 pages. PDF metadata: Creator
-"LaTeX with hyperref", Producer "pdfTeX-1.40.25", CreationDate "Wed Jul
-31 02:11:45 2024 CEST" (a re-render timestamp for this v3 upload). No
-journal reference is printed on the paper.
+Transcribed from the anchored PDF named above; fidelity repair applied
+per the ANN-78 grade (`extract-grades-r1.md`) at this pin; re-grade
+pending.
+arXiv:2109.03767v3 [math.NT] [arXiv preprint] 29 Jul 2024 (v3; the arXiv
+identifier 2109 dates the original submission to September 2021). This
+paper is listed as "V. Kuperberg, Odd moments in the distribution of
+primes, arXiv:2109.03767, 2021" at `2301.06095v1` reference 4, p.19;
+that string is not printed in this anchor, whose own bibliography
+carries no entry for it. Author(s): Vivian Kuperberg. 51 pages. PDF
+metadata: Creator "LaTeX with hyperref", Producer "pdfTeX-1.40.25",
+CreationDate "Wed Jul 31 02:11:45 2024 CEST" (a re-render timestamp for
+this v3 upload). No journal reference is printed on the paper.
 
-Front-matter identification CONFIRMED against the dispatch: author
+Front-matter identification, read from p.1 of the anchor: author
 "Vivian Kuperberg", title "Odd moments in the distribution of primes",
 arXiv:2109.03767v3. No deviation.
 
@@ -37,7 +40,7 @@ with the correct power of h when k = 3, and prove analogous upper bounds
 in the function field setting when k = 3 and k = 5. We provide further
 evidence for this conjecture in the form of numerical computations."
 
-## 2. Statements cited by item-0022's reports (verbatim)
+## 2. Statements extracted from the anchor (verbatim)
 
 ### 2.1 The Montgomery-Soundararajan Rk(h) theorem, as independently restated by this anchor
 
@@ -49,14 +52,11 @@ $$R_k(h) = \mu_k(-h\log h + Ah)^{k/2} + O_k(h^{k/2-1/(7k)+\varepsilon}),$$
 where $`A = 2 - \gamma - \log 2\pi`$. Their estimate on $`R_k(h)`$
 implies their bound on the moments."
 
-This is byte-for-byte the same formula report 1 attributes (via its own
-footnote 3, pointed at arXiv:math/0409258, which is outside this
-session's Section 2 anchor set -- see checklist row R1-007) to
-Montgomery-Soundararajan; it is independently confirmed here because
-this anchor (one of the ten Section 2 anchors) restates the identical
-theorem in its own introduction as the result it builds on.
+This anchor restates the Montgomery-Soundararajan estimate in its own
+introduction, as the result it builds on: eq. (4) is printed on p.3 in
+exactly that role.
 
-### 2.2 The odd-moment conjecture and upper bound (report 1's "obere Schranken bzw. numerische Evidenz" claim)
+### 2.2 The odd-moment conjecture and upper bound (Conjecture 1.1 and Theorem 1.2, p.3)
 
 p.3, Conjecture 1.1: "Let k >= 3 be an odd integer, and let h > 1. With
 Rk(h) defined as above,
@@ -74,20 +74,21 @@ $$R_3(h) \ll h(\log h)^5.$$"
 
 - Theorem/eq.(4)'s bound holds for any nonnegative integer k, any h>1,
   any eps>0, with an implied constant depending on k and eps.
-- Theorem 1.2's upper bound is specific to k=3 only; the paper states
-  (p.4) it does not prove an asymptotic for Rk(h) when k is odd for any
-  k, only an upper bound, and only proves the conjectured power of h
-  (not of log h) at k=3.
+- Theorem 1.2's upper bound is specific to k=3 only. What the paper
+  states, on p.3, is: "For k odd, we do not know, even heuristically,
+  which terms contribute to the main term in $`R_k(h)`$; for this
+  reason, we do not know what the constant should be in front of the
+  asymptotic in Conjecture 1.1." That no asymptotic for $`R_k(h)`$ at
+  odd k is proved here -- only an upper bound, and only the conjectured
+  power of h (not of log h) at k=3 -- is an inference from Theorem 1.2
+  and Conjecture 1.1 as printed, not a statement the paper makes in
+  those words.
 
 ## 4. NOT-FOUND probe
 
 Checked and NOT present in this paper: any claim about a "flanked" or
-"aggregated simplex" domain, or about unzentrierte (uncentered)
-Zweitmomente $`\sum\mathfrak{S}(H)^2`$; the paper works throughout with
-the centered/refined singular series $`\mathfrak{S}_0`$ and its sums
-$`R_k(h)`$, matching report 1's own characterization that this line "ist
-weiterhin eine Theorie von Rk(h) bzw. S0, nicht von sum S(H)^2 ueber
-flankierte Simplexe."
+"aggregated simplex" domain, or about uncentered second moments
+$`\sum\mathfrak{S}(H)^2`$.
 
 ## FLAGS
 
