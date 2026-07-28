@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..80; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..81; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -169,6 +169,53 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- THE FIVE SURVIVORS ARE RE-GRADED (ANN-81). Phase 2d, the Phase 2b
+  protocol re-run over the five by a fresh session with the anchored PDFs
+  open, fresh and not as a diff against ANN-78. GRADE:
+  bloomkuperberg23-oddmoments CLEAN, kowalski-singser-dist CLEAN,
+  kuperberg21-oddmoments CLEAN, kuperberg23-apsmooth BOUNCED,
+  pintz10-patterns BOUNCED. kuperberg23's Theorem 1.2 sentence assigns
+  display (9)'s perfect matchings to the DOUBLETON blocks; the anchor
+  pairs the SINGLETON blocks (p.4, confirmed by the analogue (16) at
+  p.6). pintz10's Method anatomy calls the cited Theorem [Pin] at p.2 --
+  a conditional result of a companion preprint -- this anchor's main
+  theorem; the anchor's own Theorem is the unconditional one at p.4
+  proved in "2 Proof of the Theorem". Both bounces are prose, neither
+  touches a display or a transcription, and repair specs are in
+  extract-grades-r2.md.
+  HASHED: the three CLEAN extracts only. NO HASH for either bounced
+  extract and NO HASH FOR THE RE-GRADE RECORD -- the pass is not
+  terminal and a partial determination is not frozen. The ANN-78 grade
+  file's withheld hash still waits, together with the record's own.
+  THE TWO AXES 2b SKIPPED both ran. The robust dropped-object scan, with
+  line breaks flattened, independently re-established all five clean --
+  no report N, no appendix c.N, no header residue -- with the single
+  anticipated "this session" hit on kowalski. In-tree path-liveness:
+  every cross-reference on all five resolves at HEAD, including
+  HASHES.txt line 83, the anchored 2210.09775v2, kowalski-mu-recheck.py
+  and the 2301.06095v1 reference-4 citation; nothing dangled and this
+  axis bounced nothing.
+  THE TWO ADJUDICATIONS. kowalski's "this session" deictic does NOT
+  block CLEAN, decided on the record: the deixis is not load-bearing
+  (the correction it discloses was re-verified here against all thirty
+  pages), it is not a dropped-object residual, and the identical class
+  of deixis -- "at this pin" -- stands in the header of ALL FIVE
+  survivors, so the blocking reading would bounce the whole corpus on a
+  line three prior passes accepted. Retiring it is booked for the repair
+  apply, which must touch that same line anyway because "re-grade
+  pending" goes stale there once this apply lands. "Theorem 1.4":
+  CONFIRMED not a defect -- 2301.06095v1 carries a LEMMA 1.4 at p.5 and
+  zero occurrences of the string "Theorem 1.4", so kuperberg23's phrasing
+  is literally true and a re-grader grepping 1.4 must not misread it.
+  ITEM-0033 DOES NOT CLOSE. Its acceptance -- five CLEAN and hashed, two
+  dropped -- is NOT met: three of five. The item stays open and ratified
+  at position 1. Path forward: a repair apply on the two bounced
+  extracts (folding in the header-line work above), then a terminal
+  re-grade by a session that did not perform that repair, which hashes
+  those two and the record, and only then the operator's close.
+  ALSO CORRECTED HERE, not in the ANN-78 grade file, which stays a
+  timestamped record: reference [17] of 2312.09021v2 is at p.37 not
+  p.38, and Section 5 of 2601.07421 begins p.10 not p.9.
 - TWO PRECEDENT EXTRACTS DROPPED; SEVERANCE RESIDUALS CLOSED (ANN-80).
   precedent-p1-2605.22763.md and precedent-p3-2601.07421.md were deleted
   from extract/ on operator instruction: they carried none of the
@@ -1069,7 +1116,8 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   unanchorable-citation class, both opened by ANN-74. Each existed to
   classify citations belonging to the three reports, which are dropped
   as objects. The residual question -- whether the two precedent
-  extracts stay in the corpus at all -- moves to item-0033.
+  extracts stay in the corpus at all -- was RESOLVED (ANN-80): both
+  precedent extracts were dropped and deleted from extract/.
 - ITEM-0010 RE-SCOPE (ANN-73), due before the item runs and not
   before. Its acceptance_intent and last body note still route the full
   target through item-0017's register and the 0018/0019/0020/0021
