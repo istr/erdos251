@@ -4712,3 +4712,156 @@ annotations:
       class-(c) self-labels and by S7 finding (3). Everything ANN-78
       left open remains open, including the two citation-policy
       decisions item-0022 was carrying.
+  - id: ANN-20260728-80
+    refs: [ANN-20260728-79, ANN-20260728-78, ANN-20260727-77]
+    date: 2026-07-28
+    note: >-
+      THE TWO PRECEDENT EXTRACTS ARE DROPPED AND THE S7 SEVERANCE
+      RESIDUALS ARE CLOSED ON THE FIVE SURVIVORS; NOTHING IS HASHED.
+      Phase 2c-residual, executed by the local executor against pin
+      3bdf48b under an ephemeral dispatch, never committed; the operator
+      apply is the ratifying commit. Executor model: Claude Opus 5
+      (claude-opus-5[1m]). This is a repair-and-disposition pass, not a
+      grade: it removes the two dropped objects from the directory both
+      lanes consume from, and it closes the severance residuals the 2c
+      grading missed, so that the five survivors are severance-complete
+      before the re-grade. Files:
+      dossier/item-0022-workpapers/repair-log-2c-residual.md (new), the
+      two precedent extracts under dossier/item-0022-workpapers/extract/
+      (DELETED), kuperberg23-apsmooth.md (one residual repair),
+      HANDOVER.md (two bounded deltas, enumerated below) and ledger.yaml
+      (this entry) -- one file added, two deleted, three modified, NO
+      hash line added, no grade file edit, no inventory file edit, no
+      checklist row edited, no roadmap, lean, runs or writeup file
+      touched.
+      THE PRECEDENT DROP. Both precedent extracts --
+      precedent-p1-2605.22763.md and precedent-p3-2601.07421.md -- are
+      deleted from extract/ on operator instruction. They carried none
+      of the project's mathematics, their role was the experiment's own
+      meta-narrative, and precedent-p1 was the most entangled of the
+      seven with dropped objects: it is the extract carrying the second
+      uncounted Appendix C.1 reference ANN-79 booked as S7 finding (3),
+      on top of the class-(c) self-label 2c had already deleted. The
+      deletion changes THE CONSUMPTION SURFACE, NOT THE RECORD. Git
+      history preserves both files, and the item-0022 records that name
+      them -- the ANN-78 grade file, repair-log-2c.md,
+      extract-inventory-r1.md and the withdrawn checklist -- are
+      timestamped records and are NOT edited to erase the mention.
+      Their two PDF anchor lines in payloads/HASHES.txt stay as history,
+      append-only, now naming sources whose extracts were dropped.
+      extract/ goes from seven files to FIVE. This settles, in the drop
+      direction, the residual membership question ANN-76 moved to
+      item-0033.
+      THE INVENTORY UNDERCOUNTS, BOOKED AS A FINDING. ANN-79's S7 showed
+      the inventory's single-line regex missing a reference split across
+      a line break and a second occurrence on a line it had already
+      counted, so an extract could report 0/0/0 on all three axes while
+      still carrying a reference to a dropped object. THE ZERO WAS A
+      LOWER BOUND ON SEVERANCE, NOT PROOF OF IT. This apply therefore
+      re-scanned all five survivors with line breaks FLATTENED before
+      matching, over the dropped-object, ephemeral and header-residue
+      patterns together. Before repair the scan returned exactly one
+      hit, the anticipated kuperberg23 report-1 attribution, and nothing
+      on the other four; it surfaced no reference the dispatch had not
+      named. At close it returns clean on all five. The header residues
+      2c's universal repair targeted also return nothing on any
+      survivor, which confirms that repair took on all of them.
+      THE RESIDUAL REPAIRS, PER SURVIVOR. kuperberg23-apsmooth.md: the
+      NOT-FOUND probe attributed the probed concept to a dropped report
+      in a parenthetical split across a line break; the parenthetical is
+      removed and the sentence now records what the probe found without
+      citing the dropped object. The negative itself stands on the
+      anchor alone and is unchanged. Confirmed with the anchored PDF
+      open -- 2301.06095v1.pdf, whose sha256 matches both the extract
+      header and its booked line -- pages 3 to 5 read, and the
+      theorem-list transcription ANN-78 passed (Theorem 1.1 p.3,
+      Theorem 1.2 p.4, Theorem 1.3 p.5, Theorem 1.5 p.5, and zero
+      occurrences of the string "Theorem 1.4" in the whole document) is
+      faithful before the edit and after it. bloomkuperberg23-oddmoments.md,
+      kowalski-singser-dist.md, kuperberg21-oddmoments.md and
+      pintz10-patterns.md: no residual, no edit, byte-unchanged. THE
+      MATHEMATICS WAS NOT TOUCHED. The repair changed two lines of prose
+      and nothing else, verified two ways: a word-level comparison of
+      the file against the pin with line breaks flattened, whose entire
+      delta is the removed parenthetical, and a fence-level comparison
+      showing every display block identical in position and content.
+      Line count unchanged at 89. Zero displays or numbered objects
+      marked PASS were changed, in any file.
+      TWO THINGS ARE LOGGED FOR THE RE-GRADE AND NEITHER IS REPAIRED
+      HERE. (i) A wider read-only sweep, beyond the dispatch's pattern,
+      found kowalski-singser-dist.md's FLAGS disclosure ending "in this
+      session" -- a deictic pointing at the original extraction session,
+      which no later reader can resolve. It is not a dropped-object
+      residual: it attributes nothing to a dropped report, kickoff
+      dispatch or operator-held object, and the correction it discloses
+      stays checkable against PDF pages 1, 20 and 21. It is distinct in
+      kind from the falsified verification assurances 2c removed.
+      Whether to re-point it to a pin is a grading decision and is the
+      re-grade's. (ii) The numbering slot 1.4 in 2301.06095v1 is
+      occupied by a LEMMA 1.4, so the extract's "the paper states no
+      Theorem 1.4" is literally true; recorded only so that a re-grader
+      grepping for 1.4 does not read the hit as a contradiction.
+      NOTHING WAS HASHED. Not an extract, not the repair log.
+      payloads/HASHES.txt is byte-unchanged, including both precedent
+      anchor lines. THIS ENTRY ASSERTS NO SURVIVOR IS CLEAN; standing is
+      the RE-GRADE's to confer, for the same reason 2a, 2b and 2c were
+      separated: a session must not grade the artifact it just touched.
+      The ANN-78 grade file's own withheld hash REMAINS WITHHELD.
+      NOTHING ELSE MATHEMATICAL MOVES. No Lean file, frozen block,
+      roadmap item, verdict, target, threshold, constant or bet changes.
+      No checklist row, grade file or inventory file was edited. The
+      inventory file is left STALE by construction against the five-file
+      directory, deliberately, as a timestamped record of the
+      seven-extract state, and the inventory script was NOT run, because
+      it rewrites that file in place and S6 forbids the write.
+      GATES: check-frozen, relocation-check, the strict sorry inventory
+      (1, Statement.lean:21), the mathlib pin, the toolchain newline,
+      roadmap show, writeup_mapper and the ASCII gates on HANDOVER and
+      on the new log all reproduce their start-of-pass output. Two gates
+      move and both movements are the deliverable: the extract/ ASCII
+      loop covers five files instead of seven, returning 0 on every one
+      at both ends, and mathjax_lint covers 138 files instead of 139
+      (minus the two deleted extracts, plus this pass's log), 0 problems
+      at both ends.
+      STOP CONDITIONS, all seven reported: S1 does not fire (diff
+      pin..HEAD empty; HEAD equals the pin). S2 does not fire (both
+      Appendix B anchors matched exactly once). S3 does not fire (last
+      annotation was ANN-79, item-0033 ratified at position 1, both
+      precedent files present at the pin). S4 does not fire (the scan
+      returns clean on all five at close; the one repair changed no
+      display and no numbered object and needed no dropped, ephemeral or
+      operator-held object). S5 does not fire. S6 does not fire. S7 does
+      not fire in its own terms -- no fidelity defect ANN-78 failed to
+      record was found in the one region examined with the anchor open
+      -- and the two items above are logged anyway.
+      HANDOVER DELTAS, bounded and enumerated, two. (i) The cold-start
+      read-order line moves from ANN-01..79 to ANN-01..80. (ii) A new
+      bullet is inserted at the head of the item-0022 group, above the
+      ANN-79 repair bullet, recording the drop and its grounds, the
+      inventory undercount and the flattened re-scan, that five
+      survivors remain and are severance-complete with the mathematics
+      untouched and nothing hashed, what the re-grade is and what closes
+      item-0033, and the finding logged here for it. The
+      open-operator-decisions block line carrying the precedent
+      membership question was DELIBERATELY NOT EDITED: the dispatch
+      enumerates the HANDOVER deltas exhaustively and its budget allows
+      no third one, so reconciling that line is bookkeeping left to the
+      operator or to a later pass.
+      STILL OPEN. THE RE-GRADE, which is the whole of the standing the
+      five survivors do not yet have, and without which no hash may be
+      booked over any of them: the Phase 2b dispatch re-run over the five
+      by a FRESH executor session that did not perform this repair,
+      cross-family preferred, pin bumped to this commit, on the full
+      ANN-78 fidelity surface and not as a diff against any log,
+      extended by an independent robust dropped-object scan and by an
+      in-tree path-liveness check on each extract's cross-references.
+      item-0033 does NOT close by this apply and stays ratified at
+      position 1; it closes when the five survivors are CLEAN and hashed
+      and the two precedents are dropped -- FIVE, NOT SEVEN, is the
+      acceptance now, and the close summary records the disposition. If
+      the re-grade returns fewer than five CLEAN, the shortfall is named
+      and the item stays open. The two page errors in the ANN-78 grade's
+      own prose stay booked and unrepaired, per the operator's standing
+      choice, so that the re-grade does not inherit them. Everything
+      ANN-79 left open remains open, including the two citation-policy
+      decisions item-0022 was carrying.

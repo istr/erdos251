@@ -77,8 +77,8 @@ uniform in growing $`k`$.
 
 Checked and NOT present in this paper: any Hardy-Littlewood-type lower
 bound for a prime-counting function $`\sum_{\text{sites}}
-S_{\text{side}}(P(\text{site}))`$ on a parity-blocked flank class (report
-1's "Input (i)"). This paper's results -- Theorem 1.1 (p.3), Theorem 1.2
+S_{\text{side}}(P(\text{site}))`$ on a parity-blocked flank class.
+This paper's results -- Theorem 1.1 (p.3), Theorem 1.2
 (p.4), Theorem 1.3 (p.5) and Theorem 1.5 (p.5); the paper states no
 Theorem 1.4 -- are all asymptotic formulas for sums of the algebraic
 singular-series constant itself (or its restricted/weighted variants),

@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..79; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..80; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -169,6 +169,41 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- TWO PRECEDENT EXTRACTS DROPPED; SEVERANCE RESIDUALS CLOSED (ANN-80).
+  precedent-p1-2605.22763.md and precedent-p3-2601.07421.md were deleted
+  from extract/ on operator instruction: they carried none of the
+  project's mathematics, their role was the experiment's own
+  meta-narrative, and precedent-p1 was the most entangled of the seven
+  with dropped objects. Git history and the item-0022 records that name
+  them -- the ANN-78 grade file, repair-log-2c.md, the inventory and the
+  withdrawn checklist -- preserve that they existed; their two PDF
+  anchor lines in payloads/HASHES.txt stay as history.
+  THE INVENTORY UNDERCOUNTS (2c's S7): its single-line regex missed a
+  reference split across a line break and a second occurrence on a line
+  it had already counted, so 0/0/0 was a LOWER BOUND on severance, not
+  proof of it. The survivors were therefore re-scanned with LINE BREAKS
+  FLATTENED. One hit before repair -- the anticipated kuperberg23
+  report-1 attribution inside its NOT-FOUND probe -- and nothing on the
+  other four; it was repaired with the anchored PDF open, and the scan
+  returns clean on all five at close.
+  FIVE SURVIVORS NOW: bloomkuperberg23-oddmoments, kowalski-singser-dist,
+  kuperberg21-oddmoments, kuperberg23-apsmooth, pintz10-patterns.
+  Severance-complete, mathematics untouched (every display and numbered
+  object marked PASS byte-identical, line count unchanged), and NOTHING
+  HASHED.
+  THE RE-GRADE is the Phase 2b protocol re-run over the five by a FRESH
+  session that did not perform this repair, pin bumped to this commit,
+  extended with the robust dropped-object scan as an independent check
+  and with an in-tree path-liveness check on each extract's
+  cross-references. item-0033 CLOSES when the five are CLEAN and hashed
+  and the two precedents are dropped -- five, not seven, is the
+  acceptance now.
+  NO S7 FIDELITY FINDING was surfaced: the one region examined with the
+  anchor open is faithful before and after. Logged for the re-grade
+  instead: the kowalski FLAGS disclosure still ends "in this session", a
+  deictic no later reader can resolve; it is not a dropped-object
+  residual and re-pointing it is a grading decision, so it was left
+  alone.
 - THE EXTRACTS ARE REPAIRED, NOT YET RE-GRADED (ANN-79). Phase 2c opened
   the seven anchored PDFs and edited the seven extracts to what the
   ANN-78 grade specifies. THE REFRAMING that makes this mandatory: the
