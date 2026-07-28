@@ -38,7 +38,7 @@ ERC-AdG.228005."
 
 ### 2.1 Lemma 2 and its r=1 remark (p.6)
 
-This is Lemma 2 and its r=1 remark, p.6-7:
+This is Lemma 2 and its r=1 remark, p.6:
 
 "**Lemma 2.** For fixed nu r and H > H0(nu, r) we have
 
@@ -74,6 +74,9 @@ O in "= O(1)" in the display above it on the same page.
 p.6: "**Lemma 1.** For fixed nu and any H > H0(nu) we have
 
 $$\sum_{\substack{D \subset [1,H] \\ |D|=\nu}} S^2(D^+) \le c_7(\nu) H^\nu.$$
+
+**Remark.** The parameter H can be arbitrary here, not just that given in
+(2.2).
 
 **Remark.** The above lemma is somewhat analogous to Gallagher's theorem
 $$\sum_{D\subset[1,H], |D|=\nu} \mathfrak{S}(D) \sim H^\nu,$$
@@ -173,19 +176,28 @@ counting.
 
 ## 3. Method anatomy (paraphrase except quotes)
 
-Section 1 states the main theorem: under a distribution-level hypothesis
-$`\vartheta>1/2`$ on the primes, there is a bounded even $`d\le
-C_1(\vartheta)`$ such that the set of primes p with $`p,p+d`$ both prime
-contains arbitrarily long arithmetic progressions (building on
-Green-Tao and Goldston-Pintz-Yildirim). Section 2 proves a quantitative
-strengthening: for any $`\eta>0`$, $`\nu,m`$ natural numbers, there is a
-set of $`\nu`$-tuples of admissible differences of size $`\gg
-\log^\nu N`$, each realizing $`\gg N^2/\log^m N`$ length-$`m`$
-arithmetic progressions of $`(\nu{+}1)`$-tuples of primes. The proof
-reduces (via Selberg's sieve, Cauchy-Schwarz, and Lemma 1/Lemma 2's
-bound on $`\sum \mathfrak{S}^2(D^+)`$) to bounding this sum of squared
-singular series over $`\nu`$-subsets of $`[1,H]`$, which is exactly the
-statement extracted in Sections 2.1-2.3 above.
+Section 1 surveys the results this note builds on -- Green-Tao and the
+conditional Goldston-Pintz-Yildirim bounded-gap theorem [GPY2] (both
+p.1), the author's own cited preprint "Theorem [Pin]" (p.2), and
+"Theorem [GPY3]" (p.3). "Theorem [Pin]" -- under a distribution-level
+hypothesis $`\vartheta>1/2`$ on the primes, there is a bounded even
+$`d\le C_1(\vartheta)`$ such that the set of primes p with $`p,p+d`$
+both prime contains arbitrarily long arithmetic progressions -- is a
+cited prior preprint of the same author, listed at p.9 as "[Pin] J.
+Pintz, Are there arbitrarily long arithmetic progressions in the
+sequence of twin primes? preprint, arxiv math.NT", and is NOT this
+note's own theorem.
+
+This note's own result is the unconditional Theorem stated at p.4 and
+proved in Section 2 (heading "2 Proof of the Theorem", p.5): for any
+$`\eta>0`$, $`\nu,m`$ natural numbers, there is a set of
+$`\nu`$-tuples of admissible differences of size $`\gg \log^\nu N`$
+(1.17), each realizing $`\gg N^2/\log^m N`$ length-$`m`$ arithmetic
+progressions of $`(\nu{+}1)`$-tuples of primes (the Corollary, p.4).
+The proof reduces (via Selberg's sieve, Cauchy-Schwarz, and Lemma
+1/Lemma 2's bound on $`\sum \mathfrak{S}^2(D^+)`$) to bounding this sum
+of squared singular series over $`\nu`$-subsets of $`[1,H]`$, which is
+exactly the statement extracted in Sections 2.1-2.3 above.
 
 ## 4. Uniformity ledger
 

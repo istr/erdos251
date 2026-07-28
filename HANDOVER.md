@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..81; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..82; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -169,6 +169,39 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- THE TWO 2d BOUNCES ARE REPAIRED (ANN-82). Phase 2d-repair, to the
+  specs in extract-grades-r2.md Section 11, with both anchored PDFs open.
+  Both bounces were prose misdescriptions of the anchors' own structure.
+  kuperberg23-apsmooth: the Theorem 1.2 sentence now says that display
+  (9)'s matching sigma in B(j+1,...,k-j) pairs the k-2j SINGLETON blocks,
+  the j doubleton blocks being carried by the separate j-th power factor
+  (2301.06095v1 p.4, confirmed by the analogue (16) at p.6).
+  pintz10-patterns, three fixes: Section 3 is re-pointed from the cited
+  conditional Theorem [Pin] (p.2) to the anchor's own UNCONDITIONAL
+  Theorem at p.4, proved in "2 Proof of the Theorem" (p.5), and the
+  "quantitative strengthening" framing is dropped; Section 2.2's unmarked
+  elision is closed by quoting the intervening "The parameter H can be
+  arbitrary here" Remark (p.6); and Section 2.1's "p.6-7" becomes "p.6".
+  THE MATH IS UNTOUCHED -- no display, numbered object, transcription or
+  NOT-FOUND probe moved, and the display-fence counts are unchanged on
+  both files.
+  NO HEADER WAS EDITED AND THE THREE CLEAN EXTRACTS ARE BYTE-UNCHANGED,
+  confirmed at close by re-hashing them against HASHES.txt lines 92-94.
+  The "re-grade pending" header clause on all five is a 2c-era annotation
+  left in place and superseded by the ledger grades: editing the three
+  hashed CLEAN extracts would break the payloads/HASHES.txt append-only
+  one-line-per-file invariant. The header-design lesson -- provenance
+  header carries source and hash only -- is routed to item-0034 instead.
+  NOTHING WAS HASHED: not the repaired extracts, not the repair log, not
+  the re-grade record. The TERMINAL RE-GRADE over the two repaired
+  extracts is the next apply, by a session that did not perform this
+  repair; item-0033 closes when it returns both CLEAN and hashed.
+  S7: NO fidelity defect beyond the spec was found on either bounced
+  extract, and none was looked for on the three frozen CLEAN ones. Three
+  in-span additions are disclosed for the terminal re-grade to check: the
+  refinement condition P refines {C_l} folded into the kuperberg23
+  sentence, and two short verbatim quotations added to pintz10 (the p.6
+  Remark and the p.9 [Pin] references entry).
 - THE FIVE SURVIVORS ARE RE-GRADED (ANN-81). Phase 2d, the Phase 2b
   protocol re-run over the five by a fresh session with the anchored PDFs
   open, fresh and not as a diff against ANN-78. GRADE:

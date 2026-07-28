@@ -53,9 +53,16 @@ of $`[1,k]`$" (a perfect matching being a set of unordered pairs $`(i,j)`$
 partitioning $`[1,k]`$).
 
 p.4, Theorem 1.2 (the corresponding asymptotic for $`R_k(h;r,c_1,\ldots,c_k)`$)
-sums over partitions of $`[1,k]`$ into doubleton and singleton blocks,
-with the doubleton part again organized by perfect matchings $`\sigma \in
-\mathcal{B}(j+1,\ldots,k-j)`$ of the remaining indices (eq. (9)).
+sums, for each $`0\le j\le k/2`$, over the partitions
+$`P=\lbrace S_1,\ldots,S_{k-j}\rbrace`$ of $`[1,k]`$ that refine the
+congruence-class sets $`C_\ell`$ of p.3 and consist of $`j`$ doubleton
+blocks $`S_1,\ldots,S_j`$ and $`k-2j`$ singleton blocks
+$`S_{j+1},\ldots,S_{k-j}`$. The perfect matchings
+$`\sigma\in\mathcal{B}(j+1,\ldots,k-j)`$ appearing in eq. (9) pair the
+singleton blocks $`S_{j+1},\ldots,S_{k-j}`$; the $`j`$ doubleton blocks
+are carried by the separate factor
+$`\left(\frac{h}{r}\sum_{d\mid Q,\,d>1}\frac{\mu(d)^2}{\phi(d)}\right)^j`$
+of the same summand (eq. (9)).
 
 The main-term structure of these restricted sums is governed by perfect
 matchings/pairings of the index set, with the dominant contribution
