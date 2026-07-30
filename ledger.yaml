@@ -5315,3 +5315,89 @@ annotations:
       item-0022 was carrying, the seventh verdict-promotion recurrence
       and R1-015's owed steering review, and the header-design and
       surrogate-standing questions routed to item-0034.
+  - id: ANN-20260730-84
+    refs: [ANN-20260728-83, ANN-20260728-82, ANN-20260727-77,
+      ANN-20260727-76]
+    date: 2026-07-30
+    note: >-
+      item-0034 IS AMENDED TO CARRY THE THIRD OBJECT CLASS -- SOURCE
+      EXTRACTS AS FIDELITY-GATED SURROGATES -- AND THE HEADER-DESIGN
+      RULE. Authored by steering (Claude Fable 5, analysis sandbox) on
+      operator instruction at pin 9d84ba4 == HEAD of main; emitted as
+      two mboxes on the ANN-75 pattern, roadmap first, this entry
+      second; the operator apply is the ratifying commit. Files:
+      roadmap/item-0034.md (title, acceptance_intent, links, one
+      appended body section; status, arcs, rank, goal and
+      execution_profile untouched), HANDOVER.md (two bounded deltas,
+      enumerated below), ledger.yaml (this entry). Nothing else is
+      touched.
+      WHAT THE AMENDMENT ADDS, in one paragraph. item-0034 covered two
+      object classes -- model-generated reports and operator-held
+      objects. The item-0022 disposition (ANN-77..83) surfaced a third
+      with the inverse defect mode: a readable, anchored, in-tree
+      extract that silently misrepresents the primary source it stands
+      for, consumed by both lanes as if it were the source. The
+      architectural fact beneath it: primary sources are held by the
+      operator and the executor lane only and are never duplicated
+      into the repository (copyright and provenance hygiene), so the
+      anchored extract is the ONLY in-tree representation of its
+      source, and extract correctness is mandatory -- a defective
+      extract is a silently wrong corpus (ANN-79 reframing).
+      THE CLAUSES, now in the item's acceptance_intent and body.
+      (1) An extract is created or edited only with its anchored
+      source open and carries corpus standing only after an executor
+      fidelity grade over the FULL surface -- displays, numbered
+      objects, citations, quotations, negatives, AND the prose claims
+      the extract makes about its source, the surface the 2d bounces
+      showed a display-and-quotation grade cannot see (ANN-82); it is
+      re-graded after any change, and ungraded or defective it directs
+      attention at most. (2) Extract fidelity is exclusively the
+      executor lane's to establish; analysis-lane fidelity assurances
+      are void; analysis-side fidelity questions are recorded open and
+      routed, never answered there. (3) A session never grades or
+      hashes an artifact it produced or repaired -- the 2a/2b/2c/2d
+      separation as a standing rule. (4) Both lanes consume only
+      graded-clean-and-hashed extracts as source surrogates; no
+      ad-hoc extraction bypasses the extract layer; for the analysis
+      lane the graded extract IS the primary anchor in the rule-19
+      sense. (5) New or additional extraction is an operator-gated
+      event -- named anchor line, purpose, scope -- graded and newly
+      anchored before use; a superseding extract re-books its hash
+      with the superseded line kept as history (rule-17 pattern).
+      (6) The header-design rule ANN-82 routed here: an extract's
+      provenance header carries source identity and hash only, never
+      grade-state and never a deixis a later reader cannot resolve;
+      grade-state lives in the ledger and the grade record.
+      Prospective: the five hashed CLEAN extracts keep their stale
+      header clause, superseded by the ledger, because an edit would
+      break the payloads/HASHES.txt one-line-per-file invariant.
+      PROVENANCE. The operator-supplied rule proposal of 2026-07-28
+      (RECORDED; conversation-delivered, not a tree object, and per
+      this item's own report-standing clause it enters as the pointer
+      set this amendment carries, never as a unit of verification),
+      folded together with the chain's later sharpenings: the
+      prose-claims surface and the four booked incompletenesses of the
+      first grade (ANN-82), the separation of duties (ANN-79/82/83),
+      and the header disposition (ANN-82). The title is widened to
+      name all three classes; reversing that is a one-line operator
+      edit at apply time if the item-0022 titling precedent is
+      preferred.
+      NOTHING MATHEMATICAL MOVES. No Lean file, frozen block, run,
+      payload, dossier workpaper, writeup file, hash line, extract or
+      extract header is touched. No verdict, target, threshold or
+      constant changes. No bet is resolved, re-priced or amended:
+      BET-20260711-07 to 2026-08-08, BET-20260718-08 at 0.07 and
+      BET-20260725-11/12/13 at 0.12 / 0.15 / 0.35 all stand. No
+      roadmap status, rank, arc or order changes: item-0034 stays
+      ratified at the head of roadmap/_order.md.
+      HANDOVER DELTAS, bounded and enumerated, two. (i) The cold-start
+      read-order line moves from ANN-01..83 to ANN-01..84. (ii) The B6
+      bullet's item-0034 sentence is corrected from "at position 2" to
+      the head of the order (stale since the item-0033 close) and
+      gains one sentence recording this amendment. Nothing else
+      changes; HANDOVER.md is ASCII-only before and after.
+      STILL OPEN AFTER THIS ENTRY. item-0034's EXECUTION, which lands
+      the rule text where the other run rules live (runs/README.md and
+      AGENTS.md) and closes B6 either way -- this entry amends the
+      item, it does not execute it. R1-015's owed steering review.
+      Everything ANN-83 left open remains open.

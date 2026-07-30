@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..83; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..84; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -1216,8 +1216,11 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   strengthened to catch verdict promotion across families. SEVENTH
   RECURRENCE BOOKED (ANN-76), in item-0022 repair r1: five claim
   locations moved STOP -> CONFIRMED by widening the anchor gate
-  mid-item. item-0034 is RATIFIED (ANN-77) at position 2 and settles B6
-  rather than carrying it an eighth time.
+  mid-item. item-0034 is RATIFIED (ANN-77), at the head of the order
+  since the item-0033 close, and settles B6 rather than carrying it an
+  eighth time. AMENDED (ANN-84): it now also carries the
+  surrogate-standing clauses and the header-design rule for source
+  extracts, the third object class.
 - BET-07 runs to its full resolve_by 2026-08-08 (ANN-52: no early
   scoring). The ANN-58..64 chain is further evidence AGAINST resolution
   and is not a scoring event.
