@@ -5177,3 +5177,141 @@ annotations:
       open remains open, including the two citation-policy decisions
       item-0022 was carrying and the seventh verdict-promotion
       recurrence.
+  - id: ANN-20260728-83
+    refs: [ANN-20260728-82, ANN-20260728-81, ANN-20260728-78]
+    date: 2026-07-28
+    note: >-
+      THE TWO REPAIRED EXTRACTS ARE TERMINALLY RE-GRADED ON THEIR
+      DELTA, BOTH CLEAN, AND THE CLEAN IS HASHED. Phase 2d-residual,
+      the terminal re-grade, executed by the local executor against pin
+      08164ba under an ephemeral dispatch, never committed; the
+      operator apply is the ratifying commit. Executor model: Claude
+      Opus 5 (claude-opus-5[1m]), a FRESH session that did not produce,
+      repair or previously grade either extract -- an executor must not
+      grade its own repair -- with both anchored PDFs open at every
+      location. The id and date carry the 2026-07-28 dispatch cycle;
+      the pass itself executed on 2026-07-30 against the unmoved
+      2026-07-28 pin, and the record states that date. Files:
+      dossier/item-0022-workpapers/extract-grades-r3.md (new),
+      payloads/HASHES.txt (three lines appended), HANDOVER.md (two
+      bounded deltas) and ledger.yaml (this entry) -- one file added,
+      none deleted, three modified, ZERO extract files edited, ZERO
+      headers edited, ZERO of the three CLEAN extracts touched, no
+      grade-record edit, no inventory edit, no checklist row edited, no
+      roadmap, lean, runs or writeup file touched.
+      THE TWO GRADES. kuperberg23-apsmooth.md CLEAN: display (9)'s
+      summation conditions, the singleton pairing, the refinement
+      condition and the doubleton factor all verified at 2301.06095v1
+      pp.3-4 and confirmed independently at the smooth-weight analogue
+      (16) on p.6. pintz10-patterns.md CLEAN: the p.6-7 to p.6 page
+      correction, the added Remark quotation and every citation of the
+      Section 3 rewrite verified at 1004.1072v1 pp.1-6 and p.9.
+      HASHED, AND THIS PASS BEING TERMINAL THE RECORD IS HASHED TOO.
+      Three lines appended to payloads/HASHES.txt: the two extracts,
+      neither of which was booked before, so both are new lines and the
+      one-line-per-file invariant holds; and extract-grades-r3.md
+      itself, as the terminal determination. Each line was recomputed
+      from the file in the tree after the write and matches. STILL
+      UNHASHED, deliberately: extract-grades-r1.md, kept as a
+      timestamped record of an incompleteness now shown four times
+      rather than as a standing determination, and extract-grades-r2.md,
+      non-terminal by its own Section 11.
+      THE DELTA WAS GRADED WHOLE, not just the two quotations the
+      repair log flagged. The scope was fixed from the diff
+      2229c55..HEAD over the two files -- two hunks in kuperberg23, three
+      in pintz10, nothing else in the tree -- and every added or changed
+      line in it was graded against the PDF, because the repair added
+      prose-about-the-source in exactly the class that bounced these
+      two. Checked accordingly and each at its cited page: in pintz10's
+      Section 3 rewrite, Green-Tao and the conditional [GPY2]
+      bounded-gap theorem at p.1, Theorem [Pin] at p.2 with its p.9
+      references entry byte-faithful, Theorem [GPY3] at p.3, this
+      note's own UNCONDITIONAL Theorem at p.4 with the tuple count
+      (1.17) and the AP-count Corollary at p.4, the heading "2 Proof of
+      the Theorem" at p.5, and that the "quantitative strengthening"
+      framing is gone from the tree; and in kuperberg23, the added
+      refinement condition P refines {C_l}, read against the C_l
+      definition at p.3 and the refinement definition at the top of p.4
+      and confirmed to be the source's own printed summation condition
+      rather than an over-statement. Two displays were read on 200-dpi
+      renders rather than the layout dump, because a column dump cannot
+      settle them: 2301.06095v1 display (9) and 1004.1072v1 (1.17).
+      Paraphrase was graded as fidelity surface, not exempted by the
+      "paraphrase except quotes" heading -- that is the 2d lesson,
+      applied where the 2d bounce was.
+      BOTH AXES 2b SKIPPED RAN FRESH ON BOTH EXTRACTS. The robust
+      dropped-object scan with line breaks flattened returns (none) on
+      each, so the repair introduced no reference to a dropped object;
+      and every in-tree cross-reference on both -- the two anchored
+      PDFs, extract-grades-r1.md, the cross-referenced 2210.09775v2 at
+      HASHES.txt line 21, and AGENTS.md -- resolves at HEAD. Neither
+      axis bounced anything.
+      THE THREE CLEAN EXTRACTS ARE BYTE-UNCHANGED AND NO HEADER WAS
+      EDITED. The frozen-CLEAN gate confirms bloomkuperberg23-oddmoments
+      9125824e..., kowalski-singser-dist 2177b805... and
+      kuperberg21-oddmoments 50beadb8... each still equal their ANN-81
+      lines 92-94, recomputed from the files in the tree after the
+      writes; they were not opened for grading and no finding was made
+      on any of them. All five survivors keep the "re-grade pending"
+      clause, now stale on all five and left in place as a 2c-era
+      annotation SUPERSEDED BY THE LEDGER AND BY THE r3 RECORD, on the
+      ANN-82 reasoning this apply inherits and strengthens: with all
+      five now hashed, editing any header would either break
+      payloads/HASHES.txt's append-only rule or add a second line for a
+      path that has appeared once. The header-design rule stays routed
+      to item-0034.
+      ITEM-0033'S ACCEPTANCE IS MET IN FULL AND THE CLOSE IS THE
+      OPERATOR'S NEXT ROADMAP APPLY. Five extracts are graded CLEAN and
+      hashed -- three at ANN-81, two here -- and two precedents are
+      dropped, which is the five-not-seven acceptance ANN-80 set; the
+      register was withdrawn as an instrument (ANN-77); the extracts
+      were graded and repaired (ANN-78, ANN-79); the severance
+      residuals were closed (ANN-80); and the seventh
+      verdict-promotion recurrence, the surrogate-standing rule and the
+      header-design lesson were booked and routed to item-0034
+      (ANN-76). THIS APPLY DOES NOT CLOSE ITEM-0033. The close is the
+      operator's separate roadmap act, mirroring item-0022 and
+      item-0031: set the terminal status, move to roadmap/completed/,
+      and write the close summary, which should record the
+      five-not-seven acceptance, the header disposition above, and the
+      two page corrections to the ANN-78 grade prose (reference [17] of
+      2312.09021v2 at p.37 not p.38; Section 5 of 2601.07421 at p.10
+      not p.9), left in the ANN-81 record and restated in the r3
+      record.
+      THREE NON-BLOCKING OBSERVATIONS, on the record rather than
+      absorbed. (1) pintz10's [Pin] gloss renders the anchor's
+      "positive even d <= C_1(theta)" as "bounded even": the
+      inequality, the parity and the constant stand and nothing is
+      strengthened, but positivity is dropped, and it is positivity
+      that stops the statement being satisfiable at d = 0. (2) the same
+      section's "admissible differences" is the extract's word, entailed
+      by (1.15) but not printed in the Theorem. Both predate the repair,
+      which carried them over unchanged. (3) 2301.06095v1 itself defines
+      C_l for 1 <= l <= r and then indexes {C_l} by l in [1,k]; the
+      extract reproduces neither range and inherits nothing from the
+      slip.
+      NOTHING ELSE MATHEMATICAL MOVES. No Lean file, no frozen block, no
+      roadmap item, no verdict, no target, no threshold, no constant and
+      no bet changes. No extract was edited: both were graded as they
+      stand at the pin. Gates at start and at close: frozen blocks
+      byte-identical, relocation-check passed, the single baseline
+      Statement.lean sorry unchanged, manifest rev count 1, toolchain
+      trailing newline, item-0033 ratified at position 1, writeup mapper
+      PASS, mathjax_lint 0 problems at both ends, zero non-ASCII in all
+      five extracts, in HANDOVER.md and in the new record. The only gate
+      movement is mathjax_lint's file count, which rises by this pass's
+      own record. All seven STOP conditions were evaluated and reported;
+      none fired. S7 in particular: neither extract needed an edit to
+      pass, so none was made.
+      HANDOVER DELTAS, TWO. B1: the cold-start read-order ANN range
+      moves ANN-01..82 to ANN-01..83. B2: a new bullet at the head of
+      the item-0022 group carrying the two CLEAN grades, what was
+      hashed, the whole-delta scope, the two clean axes and the met
+      acceptance with the close as the operator's next apply.
+      STILL OPEN. ITEM-0033'S CLOSE, which is the operator's roadmap
+      apply and the only thing this item now waits on. No bounce
+      occurred, so no repair cycle follows. Everything ANN-82 left open
+      remains open, including the two citation-policy decisions
+      item-0022 was carrying, the seventh verdict-promotion recurrence
+      and R1-015's owed steering review, and the header-design and
+      surrogate-standing questions routed to item-0034.

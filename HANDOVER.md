@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..82; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..83; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -169,6 +169,43 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- THE TWO REPAIRED EXTRACTS ARE TERMINALLY RE-GRADED (ANN-83). Phase
+  2d-residual, by a fresh session that did not perform the repair, with
+  both anchored PDFs open. GRADE: kuperberg23-apsmooth CLEAN -- display
+  (9)'s summation conditions, the singleton pairing, the refinement
+  condition and the doubleton factor verified at 2301.06095v1 pp.3-4 and
+  confirmed at the analogue (16) on p.6; pintz10-patterns CLEAN -- the
+  p.6-7 to p.6 correction, the added Remark quotation and every citation
+  of the Section 3 rewrite verified at 1004.1072v1 pp.1-6 and p.9.
+  HASHED: both extracts, neither booked before so both are new lines,
+  AND the r3 record extract-grades-r3.md, this pass being terminal.
+  extract-grades-r1.md and -r2.md stay unhashed by design. The three
+  earlier CLEAN extracts are BYTE-UNCHANGED, re-confirmed against
+  HASHES.txt lines 92-94 at close, and NO HEADER WAS EDITED: the
+  "re-grade pending" clause is now stale on all five and stays as a
+  2c-era annotation superseded by the ledger and the r3 record, because
+  with all five hashed any header edit would break the HASHES.txt
+  append-only one-line-per-file invariant.
+  THE DELTA WAS GRADED WHOLE, not just the two flagged quotations: the
+  diff since the r2 grade fixed the scope, and pintz10's Section 3
+  rewrite was checked citation by citation against the PDF (Green-Tao
+  and the conditional [GPY2] at p.1, Theorem [Pin] at p.2 with its p.9
+  entry, [GPY3] at p.3, the note's own UNCONDITIONAL Theorem at p.4 with
+  (1.17) and the Corollary, the p.5 proof heading, and the
+  "quantitative strengthening" framing gone), as was kuperberg23's added
+  refinement condition P refines {C_l} against p.3 and p.4 -- confirmed
+  to be the source's own printed summation condition, not an
+  over-statement. Two displays needed 200-dpi renders. BOTH AXES 2b
+  SKIPPED ran fresh on both extracts and returned clean: the robust
+  dropped-object scan is (none) on each, and every in-tree
+  cross-reference resolves at HEAD.
+  ITEM-0033'S ACCEPTANCE IS MET IN FULL -- five extracts CLEAN and
+  hashed (three at ANN-81, two here) and two precedents dropped, the
+  five-not-seven acceptance ANN-80 set. THE CLOSE IS THE OPERATOR'S NEXT
+  ROADMAP APPLY, not this one: set item-0033's terminal status, move it
+  to roadmap/completed/, and write the close summary recording the
+  five-not-seven acceptance, the header disposition above, and the two
+  page corrections to the ANN-78 grade prose.
 - THE TWO 2d BOUNCES ARE REPAIRED (ANN-82). Phase 2d-repair, to the
   specs in extract-grades-r2.md Section 11, with both anchored PDFs open.
   Both bounces were prose misdescriptions of the anchors' own structure.
