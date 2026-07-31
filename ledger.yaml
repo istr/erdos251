@@ -5484,3 +5484,92 @@ annotations:
       writeup/sources.yml, the four heading re-assignments from a292ba4,
       lean/README.md below its STALE banner, and the
       Erdos251/Counting.lean umbrella docstring.
+  - id: ANN-20260731-86
+    refs: [ANN-20260731-85, ANN-20260725-72, ANN-20260727-77]
+    date: 2026-07-31
+    note: >-
+      item-0032 IS RATIFIED AND PLACED AT THE HEAD OF THE EXECUTION
+      ORDER, AHEAD OF THE RESEARCH BLOCK. Operator decision, applied by
+      the local executor through the roadmap tool
+      (set-status, then reorder --to-position 1); no roadmap file was
+      hand-edited. Files: roadmap/item-0032.md (status proposed ->
+      ratified, one line), roadmap/_order.md (one line inserted),
+      ledger.yaml (this entry), HANDOVER.md (two bounded deltas,
+      enumerated below). Nothing else is touched.
+      THIS ENTRY TRAVELS WITH THE ROADMAP CHANGE, which is the point.
+      runs/README rule 25 landed one commit earlier at ANN-85 and binds
+      from this apply onward: an artifact drop and the ledger entry that
+      books it are one apply. Every prior roadmap act in this chain --
+      c16aaee, cd53a72, 05b7c42, b37713b, 9d84ba4 -- landed unbooked and
+      ANN-77 had to book three of them retroactively, which that entry
+      itself records as the ANN-76 defect recurring within a day. This
+      is the first roadmap apply under the rule and it is booked in
+      place rather than deferred.
+      THE ANN-72 POLICY IS SUPERSEDED FOR item-0032 AND FOR NOTHING
+      ELSE. That policy keeps the full research arc on top of the order
+      and postpones tooling items behind it; item-0032 carries arcs
+      [tooling, workflow] and now sits at position 1, ahead of
+      item-0028, item-0029, item-0027, item-0030, item-0010 and
+      item-0006. The exception rests on two operator grounds. First, the
+      item's own body states a sequencing constraint rather than a
+      preference: it touches script and CI paths outside the
+      bookkeeping path list that dispatch validity predicates use, so it
+      must not land while a dispatch pinned before it is in flight, and
+      it must be landed in a window where no dispatch is open. That
+      window is open now -- the item-0034 dispatch landed at ANN-85 and
+      was discarded, and no other dispatch is in flight. Second, the
+      item makes the ledger's append-only rule mechanically enforceable
+      instead of observed as a discipline, which is the record-integrity
+      layer the entire ANN-76..85 chain has been repairing by hand. The
+      policy otherwise stands unchanged: item-0024, also [tooling,
+      workflow] and rank 0020, still sits LAST by intended postponement
+      and NOT by an ordering defect. Rank and order diverge here as they
+      already do elsewhere in this order -- item-0032 is rank 0030
+      against research ranks 0180 to 0016 -- and rank remains the
+      within-arc query key while roadmap/_order.md remains the cross-arc
+      truth for what runs next.
+      NOTHING MATHEMATICAL MOVES AND NO ITEM CONTENT CHANGES. No Lean
+      file, frozen block, run, payload, dossier workpaper, writeup file,
+      extract, extract header, verdict, target, threshold or constant is
+      touched. NO HASH LINE IS ADDED and payloads/HASHES.txt is
+      byte-unchanged. item-0032's rank, arcs, title, goal,
+      acceptance_intent, links, execution_profile and body are all
+      byte-unchanged; only the status line moved. No other item's
+      status, rank, arc or position changed. No bet is resolved,
+      re-priced or amended.
+      THE ITEM IS RATIFIED, NOT EXECUTED. Its acceptance_intent is
+      unchanged and its own two open questions travel with it: whether
+      the short reference form becomes canonical with the date-bearing
+      long form kept only in the id field, and whether the directory
+      bucketing trigger is set by entry count or by time. The item
+      records a third question it must NOT decide -- the standing
+      tension between the append-never-rewrite registration convention
+      and the fact that scoring a bet moves an entry between blocks --
+      and that exclusion stands. The byte-exact execution contract is
+      authored ephemerally against the then-current pin when the item
+      runs, never stored back into the item.
+      A NOTE FOR WHOEVER EXECUTES IT: the item restructures ledger.yaml
+      itself, so the apply that lands it must book its own entry into
+      the structure it creates, and rule 25 binds that apply too.
+      HANDOVER DELTAS, bounded and enumerated, two. (i) The EXECUTION
+      ORDER bullet is refreshed to the actual order with item-0032 at
+      the head, and its ANN-72 paragraph records the supersession above.
+      The same edit clears a stale residue: that bullet still listed
+      item-0033, which closed at 9d84ba4 without the bullet being
+      refreshed, and which ANN-85 disclosed rather than repaired because
+      it sat outside that dispatch's named delta. It is repaired here,
+      where the bullet is being rewritten anyway. (ii) A new bullet at
+      the head of the workflow group records the ratification and the
+      placement. Nothing else changes; HANDOVER.md is ASCII-only before
+      and after.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-85 left open remains
+      open, including R1-015's owed steering review, the item-0010
+      re-scope, source_commit in writeup/sources.yml, the four heading
+      re-assignments from a292ba4, lean/README.md below its STALE banner
+      and the Erdos251/Counting.lean umbrella docstring. Also still open
+      and NOT enumerated by ANN-85, recorded here so the omission that
+      entry disclosed does not persist: the three missing execution
+      profiles on item-0006, item-0029 and item-0030; ERRATUM-5, booked
+      and deliberately unrepaired; and the registered bet values of
+      BET-11/12/13, which stand as steering-proposed under the ANN-52
+      convention.

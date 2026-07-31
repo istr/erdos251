@@ -101,21 +101,33 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-77): item-0033,
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-86): item-0032,
   item-0028, item-0029, item-0027, item-0030, item-0010, item-0006,
   item-0024. item-0022 IS CLOSED AS INTERRUPTED and lives at
   roadmap/completed/item-0022.md; item-0031 IS WITHDRAWN and lives at
-  roadmap/completed/item-0031.md; item-0034 IS CLOSED AS DONE and lives
-  at roadmap/completed/item-0034.md. The disposition and
-  evidence-standing items sit AHEAD of the research block deliberately:
+  roadmap/completed/item-0031.md; item-0033 AND item-0034 ARE CLOSED AS
+  DONE and live at roadmap/completed/item-0033.md and
+  roadmap/completed/item-0034.md. Any earlier text in this bullet
+  listing item-0033 in the order is SUPERSEDED: it closed at 9d84ba4
+  and the bullet was not refreshed then. The disposition and
+  evidence-standing items sat AHEAD of the research block deliberately:
   the corpus record is repaired before more mathematics is added on top
   of it.
-  The ANN-72 POLICY is UNCHANGED and still governs: the full
-  research arc stays on top of the order and tooling items are
-  postponed behind it, so item-0024 (arcs [tooling, workflow], rank
-  0020) still sits LAST by intended postponement and NOT by an ordering
-  defect. WHAT ANN-73 CHANGED is the sequence inside the research
-  block only; no rank, status, arc, scope, acceptance or verdict moved.
+  The ANN-72 POLICY IS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
+  (ANN-86). item-0032 carries arcs [tooling, workflow] and now sits at
+  POSITION 1, ahead of the whole research block, on two operator
+  grounds: its own body states a sequencing constraint, not a
+  preference -- it touches script and CI paths outside the bookkeeping
+  path list dispatch validity predicates use, so it must land in a
+  window where no dispatch is open, and that window is open now -- and
+  it makes the ledger's append-only rule mechanically enforceable, the
+  record-integrity layer the whole ANN-76..85 chain repaired by hand.
+  OTHERWISE THE POLICY STANDS: the full research arc stays on top of
+  the order and tooling items are postponed behind it, so item-0024
+  (arcs [tooling, workflow], rank 0020) still sits LAST by intended
+  postponement and NOT by an ordering defect. WHAT ANN-73 CHANGED is
+  the sequence inside the research block only; no rank, status, arc,
+  scope, acceptance or verdict moved.
   RANK AND ORDER NOW DIVERGE, deliberately: the ANN-72 order was
   strictly rank-ascending, this one is not (0180, 0095, 0190, 0170,
   0200, 0016, 0090), because rank encodes creation-time priority and
@@ -171,6 +183,18 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- item-0032 IS RATIFIED AND RUNS NEXT (ANN-86). It sits at POSITION 1 of
+  roadmap/_order.md, ahead of the research block, superseding the ANN-72
+  policy for this item only -- see the EXECUTION ORDER bullet above for
+  the two grounds. It splits ledger.yaml into a mutable bets file plus
+  one append-only file per annotation, so the append-only rule becomes a
+  property a check enforces instead of a discipline a human reads a diff
+  for. RATIFIED, NOT EXECUTED: its two open questions (short-vs-long
+  reference form, bucketing trigger by count or by time) travel with it,
+  and the bet-scoring tension it names is explicitly NOT its to decide.
+  Whoever executes it must land it in a window where no dispatch is open
+  -- its own sequencing constraint -- and must book that apply's ledger
+  entry into the structure the apply itself creates (rule 25).
 - item-0034 IS EXECUTED AND CLOSED (ANN-85). The evidence-standing rule
   set landed as runs/README rules 20-27 and three AGENTS.md bullets;
   B6 is closed by rule 22; source extracts now carry surrogate standing
