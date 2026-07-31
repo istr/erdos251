@@ -1,0 +1,93 @@
+  - id: ANN-20260801-89
+    refs: [ANN-20260801-88, ANN-20260728-83, ANN-20260727-77,
+      ANN-20260727-76, BET-20260725-11]
+    date: 2026-08-01
+    note: >-
+      BET-20260725-11 IS SCORED NO AGAINST THE item-0028 SHEET, AND THE
+      R1-015 OWED STEERING REVIEW IS DISCHARGED BY OPERATOR DECISION.
+      Authored by steering (Claude Fable 5, analysis sandbox) on
+      operator instruction at pin 3e1b52f == HEAD of main; emitted as a
+      git am mbox; the operator apply is the ratifying commit. Files:
+      ledger/bets.yaml (one entry moves open -> scored, outcome and
+      brier appended, registration note kept and extended -- the
+      mutable half of the ledger, which is exactly the file the
+      item-0032 split carved out for this edit), HANDOVER.md (four
+      bounded deltas, enumerated below), this entry. ONE APPLY, per
+      rule 25.
+      THE SCORING. Operator judgment 2026-08-01 against the item-0028
+      sheet (dossier/item-0028-workpapers/, ANN-88), eight-plus weeks
+      before resolve_by 2026-09-30. The registered resolution clause
+      requires the loss to be exponential in the rank alone, not in
+      rank times an iterated logarithm; the sheet's verdict is
+      NEGATIVE AT CORPUS GRAIN -- the one GC-CONST mechanism located,
+      the (2.16)-sharpening per-step component (C5d), is
+      component-only, covering p <= y = (ln h)/2 (the prime sets
+      {2}/{2,3}/{2,3}/{2,3,5} at the four grid scales, 29% to 47% of
+      the Mertens mass), while every full-range column (C3a, C3b, C4c,
+      C5e) is GC-ITLOG or worse. Outcome NO, brier (0.12)^2 = 0.0144;
+      binary mean brier moves 0.198 -> 0.175 over eight scored.
+      CALIBRATION, recorded with the score. This bet was
+      externally decidable, unlike the 09/10 pair whose entries record
+      that they priced the project's own vocabulary: the resolution ran
+      through a mechanical verdict rule (sheet S6) against anchored
+      references. The registered reasoning -- the restriction has to
+      act on the exponent rather than on the base, and nothing located
+      suggests it does -- is confirmed and sharpened: the restriction
+      DOES act, but on the p = 2 factor only, promoting it from rare
+      event to deterministic main term (expo exactly 2r at grid rank)
+      without changing any growth class elsewhere. THE BLOCK MOVE
+      open -> scored follows the BET-09/10 precedent; the
+      registration-vs-scoring tension item-0032 explicitly declined to
+      settle stays unsettled, and this edit touches only the mutable
+      file that split exists to isolate.
+      THE R1-015 DISCHARGE. Open since ANN-76 (the row's reversal is
+      substantively right against the primary anchor and had no
+      steering review), carried by item-0033, and deliberately NOT
+      booked at ANN-88 on the executor's own correct ground that the
+      executor lane does not book a steering proposal on its own
+      account. OPERATOR DECISION THIS SESSION: discharged. GROUNDS,
+      three, each in the tree. (i) The review R1-015 owed now exists
+      as a landed artifact: pintz10-source-defects.md Section 2
+      (steering, 2026-07-26) reviews the general-r reading of Pintz
+      Lemma 2 through four independent internal signals, and was
+      landed byte-exact at ANN-88. (ii) The reconstruction it reviews
+      is carried against the anchored 1004.1072v1 bytes by the graded
+      CLEAN extract pintz10-patterns.md (ANN-83). (iii) The item-0028
+      session re-verified the workpaper's source-facing claims against
+      that extract (ANN-88 V-A rows A2/A3/A6, no CONTRADICTED). WHAT
+      THIS DOES NOT DO: no register row is re-verdicted -- the
+      item-0022 verdict register stays withdrawn and non-evidentiary
+      exactly as ANN-77 left it, and the general-r reading's standing
+      continues to rest on the graded extract, not on any register
+      row. No verdict moves toward a stronger class, so rule 22 is not
+      engaged; a process debt closes, nothing is promoted.
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload,
+      dossier workpaper, writeup file, extract, extract header or
+      roadmap file is touched. NO HASH LINE IS ADDED and
+      payloads/HASHES.txt is byte-unchanged. No other bet is resolved,
+      re-priced or amended: BET-20260711-07 to 2026-08-08,
+      BET-20260718-08 at 0.07, and BET-20260725-12/13 at 0.15 / 0.35
+      all stand. item-0026's NOT-FOUND verdict and A3 as the named gap
+      axis are unchanged; no verdict on the separator S1, on (CG), or
+      on the item-0010 campaign state is recorded; the item-0028
+      verdict stands exactly as ANN-88 booked it.
+      HANDOVER DELTAS, four, enumerated. (i) The cold-start read-order
+      line moves ANN-01..88 to ANN-01..89. (ii) The same passage's bet
+      figures move to 9 bets scored and the two item-0026 successor
+      bets BET-12/13 open. (iii) The item-0028 bullet's BET-11
+      sentence is rewritten from now-binds-and-open to SCORED NO
+      (ANN-89, brier 0.0144, binary mean 0.198 -> 0.175). (iv) The
+      incident bullet's R1-015 sentence is rewritten from owes-one to
+      DISCHARGED with the three grounds' pointer. Nothing else
+      changes; HANDOVER.md is ASCII-only before and after, as are this
+      entry and the bets file.
+      STILL OPEN AFTER THIS ENTRY. BET-20260711-07 (resolve_by
+      2026-08-08, one week out), BET-20260718-08, BET-20260725-12,
+      BET-20260725-13. Everything ANN-88 left open minus BET-11 and
+      minus the R1-015 review: the item-0010 re-scope (one feeder
+      returned, two to go), source_commit in writeup/sources.yml, the
+      four heading re-assignments from a292ba4, lean/README.md below
+      its STALE banner, the Counting.lean umbrella docstring, the
+      three missing execution profiles on item-0006, item-0029 and
+      item-0030, ERRATUM-5 booked and unrepaired, and Q1/Q2 of
+      item-0032.

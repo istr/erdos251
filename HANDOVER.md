@@ -8,11 +8,11 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..88; the old path
+strictly-append-only file per entry, ANN-01..89; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
-bets.yaml alone -- the history no longer rides along. 8 bets scored,
-BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
-successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
+bets.yaml alone -- the history no longer rides along. 9 bets scored,
+BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
+successor bets BET-12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
 are now SCORED: BET-20260724-10 YES at brier 0.64 (ANN-70) and
 BET-20260724-09 NO at brier 0.0025 (ANN-71); read ANN-70 and ANN-71
@@ -105,9 +105,9 @@ its later sections carry a STALE banner, HANDOVER is the record).
   2.72 to 5.63 at the exchange window (29% to 47% of the Mertens mass);
   the printed pointwise Pi_2 bookkeeping GC-FASTER with the source's
   own "we will not mark the dependence" disclosure; band ratio
-  L/y = 3.09 to 3.97 -> 4/ln 2. BET-20260725-11 now BINDS and is OPEN
-  for operator judgment against the sheet (resolve_by 2026-09-30);
-  nothing scored. The Lemma-2-of-1004.1072 support annotation is in
+  L/y = 3.09 to 3.97 -> 4/ln 2. BET-20260725-11 is SCORED NO by
+  operator judgment against the sheet (ANN-89), brier 0.0144; binary
+  mean 0.198 -> 0.175 over eight scored. The Lemma-2-of-1004.1072 support annotation is in
   force corpus-wide; the workpaper's internal "S1" label is cited as
   "the (2.16) sharpening" to avoid collision with the separator S1.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
@@ -208,7 +208,10 @@ its later sections carry a STALE banner, HANDOVER is the record).
   A SEVENTH VERDICT-PROMOTION RECURRENCE is booked: five claim locations
   moved STOP -> CONFIRMED inside repair r1 by widening the anchor gate
   mid-item. R1-015's reversal is substantively right against the anchor
-  and had no steering review; it owes one. NO HASH LINE WAS ADDED for
+  and had no steering review; the owed review is DISCHARGED by operator
+  decision (ANN-89): the landed pintz10-source-defects.md Section 2 is
+  that review, executor-verified at ANN-88 V-A against the graded
+  extract. NO HASH LINE WAS ADDED for
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).

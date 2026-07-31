@@ -184,6 +184,51 @@ scored:
       picture of forecasting performance on externally-decidable
       claims.
 
+  - id: BET-20260725-11
+    registered: 2026-07-25
+    claim: >-
+      the class-restricted analogue of the rank-unrestricted
+      singular-series upper bound loses materially less than the
+      all-subsets form at exchange depth -- specifically, enough that
+      the cost exponent stops growing with scale and the polylog gate
+      becomes a live question rather than a settled failure
+    p: 0.12
+    resolution: >-
+      operator judgment against the item-0028 sheet; a favourable
+      outcome requires the loss to be exponential in the rank alone,
+      not in rank times an iterated logarithm
+    resolve_by: 2026-09-30
+    outcome: false  # V-NEG at corpus grain; the one GC-CONST mechanism is component-only (p <= y)
+    brier: 0.0144
+    note: >-
+      prior and resolve_by steering-proposed (ANN-69); operator
+      amendment before apply is the registered value. Binds only if
+      item-0028 is ratified and runs. Steering's reasoning for the low
+      prior: the Mertens loss is carried per prime and the class
+      restriction does not change which primes appear, so the
+      restriction has to act on the exponent rather than on the base to
+      help, and nothing located suggests it does.
+      SCORED 2026-08-01 by operator judgment against the item-0028
+      sheet (ANN-88, ANN-89), eight-plus weeks before resolve_by. The
+      resolution clause requires the loss exponential in the rank
+      alone; the sheet's verdict is NEGATIVE AT CORPUS GRAIN: the one
+      GC-CONST mechanism located, the (2.16)-sharpening per-step
+      component (C5d), covers only p <= y = (ln h)/2 -- the prime sets
+      {2}/{2,3}/{2,3}/{2,3,5} at the four grid scales, 29% to 47% of
+      the Mertens mass -- and every full-range column (C3a, C3b, C4c,
+      C5e) is GC-ITLOG or worse. Outcome NO, brier 0.0144.
+      CALIBRATION. A well-constructed, externally-decidable bet, unlike
+      the 09/10 pair: the resolution ran through a mechanical sheet
+      rule against anchored references, not through the project's own
+      vocabulary. The registered reasoning is confirmed and sharpened
+      by the sheet: the restriction DOES act, but on the p = 2 factor
+      only, which it promotes from rare event to deterministic main
+      term (expo exactly 2r at grid rank) without changing any growth
+      class elsewhere. Binary mean brier moves 0.198 -> 0.175 over
+      eight scored; the block move open -> scored follows the
+      BET-09/10 precedent, and the registration-vs-scoring tension
+      stays exactly as item-0032 left it, explicitly unsettled.
+
 open:
   - id: BET-20260711-07
     registered: 2026-07-11
@@ -207,28 +252,6 @@ open:
       prior and resolve_by steering-proposed on operator instruction
       (ANN-52); operator amendment before apply is the registered
       value
-  - id: BET-20260725-11
-    registered: 2026-07-25
-    claim: >-
-      the class-restricted analogue of the rank-unrestricted
-      singular-series upper bound loses materially less than the
-      all-subsets form at exchange depth -- specifically, enough that
-      the cost exponent stops growing with scale and the polylog gate
-      becomes a live question rather than a settled failure
-    p: 0.12
-    resolution: >-
-      operator judgment against the item-0028 sheet; a favourable
-      outcome requires the loss to be exponential in the rank alone,
-      not in rank times an iterated logarithm
-    resolve_by: 2026-09-30
-    note: >-
-      prior and resolve_by steering-proposed (ANN-69); operator
-      amendment before apply is the registered value. Binds only if
-      item-0028 is ratified and runs. Steering's reasoning for the low
-      prior: the Mertens loss is carried per prime and the class
-      restriction does not change which primes appear, so the
-      restriction has to act on the exponent rather than on the base to
-      help, and nothing located suggests it does
   - id: BET-20260725-12
     registered: 2026-07-25
     claim: >-
