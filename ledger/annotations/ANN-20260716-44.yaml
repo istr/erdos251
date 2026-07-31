@@ -1,0 +1,49 @@
+  - id: ANN-20260716-44
+    refs: [ANN-20260716-42, ANN-20260716-43]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s5: LEMMA 4.3 CLOSED (the T3 gate). `consCount_lower_bound`
+      is machine-checked -- [propext, Classical.choice, Quot.sound], no
+      sorryAx; the frozen docstring+signature is BYTE-IDENTICAL to the
+      ORIGINAL statement pin c6c0b98 (only the trailing `sorry` line is
+      gone, which IS the deliverable). Strict sorry inventory 4 -> 3.
+      Landed implication cone's axiom gate unchanged.
+      ANN-43's capacity finding is VINDICATED: T3 alone, booked alone,
+      closed in one session. The five-term cut needed no repair -- it was
+      built as designed, confirming s4's "SOUND, no defect found".
+      ROUTE AS BUILT (kickoff v5 section 4; no route deviation, so the
+      pre-cleared rule-12 landing was not re-run): step 1
+      `consCount_bonferroni` additive throughout (zero Nat subtraction, as
+      booked); the three branches are the kickoff's verbatim -- small
+      anchors via Nat.le_sqrt (the ONE Real/Nat sqrt bridge, crossed once
+      as instructed), extension anchors via card_le_card + card_biUnion_le,
+      good anchors injected by Nat.count on top of the s4 structural core.
+      Step 2 `modelMass_insert` one equation. Step 4 needed no separate
+      lemma (it lives inside step 1), as the kickoff anticipated.
+      SIMPLIFICATION vs kickoff, the round's main finding: the kickoff's
+      step-5 shape carried `ln(4t+2)` factors and booked TWO limits
+      (LIMIT A ext, LIMIT B mass) plus a `y ln(y+2)`-monotonicity helper.
+      Bounding `ln(L+2) <= L+1 <= 4t` ONCE (Real.log_le_sub_one_of_pos)
+      collapses every such factor to a pure power of t = lnln x. The whole
+      basket then reduces to ONE limit, `tendsto_pow_loglog_div_log`:
+      (ln s)^n = o(s) via Real.isLittleO_pow_log_id_atTop, composed with
+      ln x -> infinity, instantiated at n = 3 (the 4.2 extension fraction,
+      64 C_4 t^3) and n = 2 (the 4.1 mass margin, 196 t^2). No cfm2-style
+      filter plumbing was needed; the L = 0 corner needed no case split,
+      exactly as booked. Constants fell out as 128 C_4 t^3 <= s/8 and
+      8(sqrt x + 1) <= x exp(-196 t^2).
+      FINDING (a real gap in the frozen statement set, not a defect):
+      `oneExtension_sum_le` exports C_2 with NO SIGN -- its statement is a
+      bare `exists C_2`. The assembly must clamp to `max C_2 1` before any
+      monotonicity step, since C_2 * L ln(L+2)^2 <= C_2 * 64 t^3 needs
+      C_2 >= 0. Costless here, but 4.2's `0 < C_2` is exportable (its proof
+      builds C_2 = 2 kappa mertensC3 Ex > 0) and would be the cleaner
+      statement. Unfreeze candidate, NOT repaired in passing.
+      COST NOTE: the assembly needs `set_option maxHeartbeats 400000` (the
+      tree's first). Heartbeats are cumulative per declaration and this is
+      one large assembled proof; the ANN-26-era `... in` convention places
+      the set_option BEFORE the frozen docstring, so the frozen block is
+      untouched. Two isDefEq sinks were removed first rather than papered
+      over: nlinarith on 3-way products (replaced by explicit calc chains)
+      and let-bound `H := wordPointSet w L` (clear_value'd, since linarith
+      atom comparison was unfolding it into a Finset.image).

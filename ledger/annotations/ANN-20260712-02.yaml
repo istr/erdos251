@@ -1,0 +1,10 @@
+  - id: ANN-20260712-02
+    refs: [BET-20260711-04]
+    date: 2026-07-12
+    note: >-
+      Open adjudication for stage 1b: report claim C18 (standard uniform HL
+      insufficient; deterministic worst-case-tail reading) vs steering
+      counter-analysis (distributional route: Markov truncation at
+      k ~ loglog x, error budget summed over polylog many patterns).
+      The verdict decides whether BET-04 resolves against an off-the-shelf
+      quantified-HL hypothesis or a bespoke anti-concentration axiom.

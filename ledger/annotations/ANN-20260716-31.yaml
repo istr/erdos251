@@ -1,0 +1,24 @@
+  - id: ANN-20260716-31
+    refs: [ANN-20260716-30, ANN-20260716-28, ANN-20260715-25]
+    date: 2026-07-16
+    note: >-
+      chain-v1 v1.4 SIGN-OFF REFRESH (citation hygiene; discharges the
+      ANN-28 queue item, which was gated on item-0014 closure to keep
+      the fidelity object's source byte-stable). Delta over signed
+      v1.3, statements and mathematics untouched: title bump;
+      Hardy-Wright completed to 6th ed. OUP 2008 with the theorem
+      number still pending a physical-volume check; Mertens and
+      Rosser-Schoenfeld given precise volumes (J. reine angew. Math.
+      77 (1874) 289-338 -- v1.4 bracket warns off the same-year Band
+      78 paper -- and Illinois J. Math. 6 (1962) 64-94); the three
+      "tracked in item-0004" phrases resolved to verified state.
+      Kuperberg and the remaining report citations live in
+      dossier/literature.md and are not cited by the chain; dissektion
+      already carries the correct ScPu11 single-paper pairing, no edit
+      needed. New sha256
+      6bcb1425271a3d55db955f1c63c3b7b205c2fc7a6a93625bc688afdea778ec0b
+      (old 1dda542d...59cf1c); Counting.lean's source-of-truth
+      docstring line follows. Per the established ratify-by-apply
+      convention the operator's application of this followup extends
+      the ANN-25 sign-off to v1.4; the diff is one commit and
+      citation-only, reviewable in isolation.

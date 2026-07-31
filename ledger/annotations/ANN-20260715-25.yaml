@@ -1,0 +1,15 @@
+  - id: ANN-20260715-25
+    refs: [BET-20260711-04, BET-20260711-05, ANN-20260715-24]
+    date: 2026-07-15
+    note: >-
+      Operator declaration books the round-1 bets: BET-04 YES
+      (brier 0.1225) -- this declaration IS the formal chain-v1 v1.3
+      sign-off, closing pending decision 2; BET-05 NO (brier 0.2025),
+      strict-claim reading. Both moved from open to scored with full
+      original fields preserved (append-only lifecycle). Aggregate
+      calibration over the four scored binary bets: mean brier 0.183
+      vs 0.25 coin-flip baseline. Unblocked by the sign-off: the Lean
+      statement-unfreeze batch (unused hb, ANN-18) is now an
+      on-request operator item. Still gating any public claim:
+      BET-06 (literature, p 0.10) via item-0004. BET-07 (unconditional
+      progress, p 0.03) runs to 2026-08-08.

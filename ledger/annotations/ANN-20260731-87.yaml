@@ -1,0 +1,235 @@
+  - id: ANN-20260731-87
+    refs: [ANN-20260731-86, ANN-20260731-85, ANN-20260727-77,
+      ANN-20260724-63]
+    date: 2026-07-31
+    note: >-
+      item-0032 IS EXECUTED: THE LEDGER IS SPLIT INTO A MUTABLE BETS
+      FILE PLUS ONE APPEND-ONLY FILE PER ANNOTATION, THE THREE CHECKS
+      ARE IN CI, AND THIS ENTRY IS THE FIRST BOOKED INTO THE STRUCTURE
+      ITS OWN APPLY CREATES. Executed by the local executor against the
+      Section 0 pin 733f989b5487b3ce39a5d53137bd6f3b6aaf4e92 under an
+      ephemeral dispatch, never committed; the operator apply is the
+      ratifying commit. Executor model: Claude Opus 5
+      (claude-opus-5[1m]). HEAD equalled the pin at session start and
+      the pin..HEAD delta was empty, so rule 18 was not exercised.
+      Files: ledger.yaml (rewritten as a pointer stub), ledger/bets.yaml
+      and the 86 relocated files under ledger/annotations/ (new),
+      ledger/annotations/ANN-20260731-87.yaml (this entry),
+      scripts/ledger_check.py (new), .github/workflows/lint.yml (a new
+      `ledger` job), runs/README.md (rule 18's path list), README.md,
+      writeup/README.md, HANDOVER.md, and the roadmap close of
+      item-0032. ONE APPLY, per rule 25, which landed one commit before
+      the ratification this item ran under: the store, the pointer, the
+      checks, the CI wiring, every reference update, the roadmap
+      done-move and this booking are one commit, and nothing is deferred
+      to a follow-up.
+      THE SPLIT IS A PURE RELOCATION, AND THAT IS PROVED RATHER THAN
+      ASSERTED. The old file carried a 276-line head
+      (version/convention/scored/open) and, after its sole column-0
+      `annotations:` line, a 5298-line body of 86 entries. The body was
+      partitioned at each `  - id: ANN-` line, each slice written
+      verbatim to ledger/annotations/<id>.yaml at the original two-space
+      list indent, and the head written verbatim to ledger/bets.yaml.
+      The entry files concatenated in ASCENDING SEQUENCE ORDER -- not
+      filesystem lexical order -- reproduce the pre-split body byte for
+      byte: 5298 lines, sha256
+      24f7e372cdee3cf708d4d6ebf2f59b0f719c8328d1eb0cd8328bd81785dae7aa
+      on both sides. No id, no citation token and no byte of any
+      existing entry changed. The entry files are YAML LIST FRAGMENTS
+      and deliberately NOT re-keyed standalone mappings: re-indenting
+      would break the byte-exact gate and buy nothing.
+      THE FOUR RATIFIED DECISIONS, all at the dispatch's recommended
+      defaults. D-A layout: the old path becomes a pointer stub, a new
+      ledger/bets.yaml holds the mutable head, a new
+      ledger/annotations/ holds one file per entry -- the item names
+      three artifacts and this is the reading that produces three, and
+      it removes the last mutable-data reason to read the old path.
+      D-B store directory: ledger/, which coexists on the filesystem
+      with the ledger.yaml stub without conflict. D-C malformed-ref
+      policy: grandfather-allowlist, because the four historical
+      dangling refs sit inside byte-frozen entries and a
+      hard-fail-on-all policy would make CI permanently red against a
+      history nobody may edit. D-D: Q1 and Q2 deferred, and no
+      bucketing implemented.
+      THE THREE CHECKS, one script, scripts/ledger_check.py, pure
+      stdlib, sibling to mathjax_lint.py, all three wired into CI as a
+      new `ledger` job in .github/workflows/lint.yml. (1)
+      relocation-check bakes the pre-split pin as its default rev and
+      compares the concatenation to `git show <pin>:ledger.yaml`, so it
+      DOES NOT EXPIRE AT THE SPLIT COMMIT: it re-proves on every run
+      that no pre-split entry has been edited since, which is the same
+      invariant append-only enforces for everything added later, stated
+      absolutely rather than incrementally. The instrument is the one
+      the project already owns from the item-0016 Lean split
+      (lean/scripts/blocks.py). (2) validate checks filename equals the
+      id the file carries, ids unique, sequence numbers contiguous
+      1..N, every entry parsing to id / refs / date, no stray file
+      under annotations/, and ref integrity BY NAMESPACE: an internal
+      ref (ANN- or BET-) must name a live id or sit on the allowlist,
+      ERRATUM- is a legal external namespace and is not resolved, and
+      any other token fails. (3) append-only requires that
+      `git diff <base>..HEAD` show additions only under
+      ledger/annotations/; any M, D or R fails. The CI job checks out
+      at fetch-depth 0, which is load-bearing and not hygiene, since
+      the relocation check reads the pin.
+      ONE DEVIATION FROM THE DISPATCH'S REFERENCE IMPLEMENTATION,
+      FLAGGED RATHER THAN ABSORBED. Its Appendix B concatenates EVERY
+      file under annotations/ and compares that to the pinned body.
+      That is green only while the store still holds exactly the pinned
+      entries, so it fails on the FIRST legitimate append -- including
+      this apply's own booking entry, which the same dispatch's Section
+      8 requires in the same commit. The two sections are inconsistent
+      as literally implemented, and the reference ran green in
+      authoring only because ANN-87 did not exist yet. Resolved in
+      favour of the ratified item's own words, which are unambiguous:
+      the check "keeps proving, on every run, that no historical entry
+      has been edited since, which is the same invariant the
+      append-only check enforces for everything added later". THE
+      LANDED CHECK THEREFORE READS ITS SCOPE OFF THE PIN: it
+      concatenates exactly the entries the pinned body names, in the
+      order the pinned body carries them, having first asserted that
+      that order IS ascending sequence order, and it reports post-pin
+      entries as out of scope and append-only's business. This is
+      strictly stronger than the reference on the historical set, since
+      a pinned entry that is deleted or renamed now fails BY NAME
+      instead of silently shifting the concatenation, and it is the
+      only reading under which the item's acceptance and its own
+      reflexive booking can both hold.
+      THE APPEND-ONLY GUARANTEE IS INCREMENTAL, AND THE CAVEAT IS
+      RECORDED RATHER THAN SOLVED HERE. It composes into a
+      whole-history guarantee only under branch protection that forbids
+      force-push to main and preserves linear history; correct base
+      resolution in CI is the fragile part, so the workflow resolves
+      the pull_request base sha or the push before-sha and SKIPS
+      LOUDLY, rather than passing silently, when neither is present (a
+      branch's first push carries the all-zero sha). Every PRE-split
+      entry is covered absolutely by the relocation check regardless. A
+      single per-file sha manifest was considered and REJECTED: an
+      in-place edit of a manifest line is indistinguishable from an
+      append, which is exactly the discipline-vs-mechanism failure this
+      item removes, so it would reintroduce the problem one level up.
+      THE MALFORMED-REF INVENTORY, four refs, recorded HERE because the
+      item requires it live in a ledger entry and not in the item file.
+      All four are of one shape, correct sequence number and wrong date
+      component, which is the evidence Q1 rests on that the date
+      component carries no information and only breaks. ANN-20260717-49
+      cites ANN-20260711-07, which reads as ANN-20260712-07;
+      ANN-20260717-47 cites ANN-20260716-14, which reads as
+      ANN-20260712-14; ANN-20260717-48 cites ANN-20260716-47, which
+      reads as ANN-20260717-47; ANN-20260726-74 cites ANN-20260717-27,
+      which reads as ANN-20260716-27. THE ALLOWLIST KEYS ON THE
+      (CITING ENTRY, MALFORMED REF) PAIR ONLY; each intended id above
+      is a reading and is advisory, carried as a comment in the script
+      and not as data. THE ALLOWLIST IS NOT A REPAIR CHANNEL: a
+      dangling internal ref not on it fails validate, and a post-split
+      entry must be fixed before it lands rather than added to the
+      list, because it is not yet frozen. THE INVENTORY WAS RE-DERIVED
+      BY FULL-FILE PARSE of the pinned ledger before the allowlist was
+      written, not copied from the dispatch, and it matched the
+      dispatch's table exactly. The full-file parse is load-bearing:
+      four refs lists span two source lines, so a single-line parse
+      would have dropped ANN-20260717-27 and mis-flagged ERRATUM-5.
+      ERRATUM-5 is the sole non-id token in any refs list across all 86
+      entries, which is what makes the external namespace a
+      three-occurrence fact rather than a guess.
+      BOOKKEEPING AND REFERENCE UPDATES, all in this apply. runs/README
+      rule 18's bookkeeping-path list now names ledger/bets.yaml and
+      ledger/annotations/, because a ledger append is now a NEW FILE
+      and a dispatch pinned before that edit would otherwise read the
+      next append as a content-path change and correctly STOP.
+      README.md's layout list describes the store; writeup/README.md's
+      source list points at ledger/; HANDOVER.md's cold-start read
+      order now sends a cold start to bets.yaml alone when it only
+      needs bet state, which is the read-cost half of the item's
+      motivation. FROZEN AND DELIBERATELY NOT TOUCHED: every
+      ledger.yaml reference under dossier/ (chain-v1.md, runde0.md,
+      dissektion.md and the item-0010/0018/0022 workpapers). Those are
+      historical and evidentiary under AGENTS.md and are exactly why
+      the old path keeps a pointer. Three untracked files under
+      dossier/item-0022-workpapers/ sat in the working tree at this
+      apply and were NOT committed: dossier/ is outside this item's
+      write scope and they are not this item's to land.
+      NO HASH LINE IS ADDED and payloads/HASHES.txt is byte-unchanged:
+      ledger.yaml was never anchored there, so the split books nothing
+      and freezes nothing. No script reads the ledger programmatically
+      -- writeup_mapper.py consumes writeup/sources.yml, not this store
+      -- so nothing downstream breaks.
+      NOTHING MATHEMATICAL MOVES. No Lean file, frozen block, frozen
+      registry, run, payload, dossier workpaper, writeup content file,
+      extract or extract header is touched. No verdict, target,
+      threshold, constant or acceptance changes. No bet is resolved,
+      re-priced or amended: BET-20260711-07 to 2026-08-08,
+      BET-20260718-08 at 0.07 and BET-20260725-11/12/13 at 0.12 / 0.15
+      / 0.35 all stand, and they stand in ledger/bets.yaml now, at the
+      same bytes. No item other than item-0032 changes status, rank,
+      arc or position.
+      CARRIED OPEN, EXPLICITLY, EXACTLY AS ANN-86 SAID THEY WOULD BE.
+      Q1, whether the short reference form becomes canonical with the
+      date-bearing long form kept only in the id field, is NOT decided:
+      filenames and the id: field use the full id regardless of how Q1
+      lands, so Q1 never blocked the split and no short-form
+      canonicalization is introduced. Q2, whether the directory
+      bucketing trigger is set by entry count or by time, is NOT
+      decided and NO BUCKETING IS IMPLEMENTED; the trigger is only
+      NAMED, per the item's own preference for a named trigger over a
+      later improvisation, and at 87 entries against the item's
+      few-hundred figure nothing buckets now. THE BET
+      REGISTRATION-VERSUS-SCORING TENSION IS EXPLICITLY NOT SETTLED
+      HERE: the registration convention says edits append and never
+      rewrite, while scoring a bet legitimately moves it between the
+      scored and open blocks. That tension predates this item, the item
+      forbids deciding it, and the split answers it only in the narrow
+      structural sense that the mutable half is now a separate, small
+      file from the append-only half.
+      GATES, all re-run by the executor locally; the authoring-side
+      runs disclosed in the dispatch discharge none of them.
+      relocation-check PASSED byte-identical at the pin. validate
+      PASSED: 86 entries at the split, sequence 1..86 contiguous, no
+      duplicate, filename equals id on every one, 13 bets parsed, ref
+      integrity clean with exactly the four grandfathered refs and
+      ERRATUM- accepted as external. THE NEGATIVE DIRECTION WAS
+      EXERCISED TOO, eight cases, so the gates are known to bite rather
+      than to pass vacuously: validate fails on a dangling internal ref
+      off the allowlist, on an unknown ref namespace, on a filename/id
+      mismatch and on a non-contiguous sequence; relocation-check fails
+      on a one-byte edit inside a landed entry and, by name, on a
+      pinned entry whose file is gone; append-only fails on a
+      modification and on a deletion of a landed entry across a commit,
+      and passes a pure new-entry addition. The four validate and two
+      relocation cases ran against the real store with the mutations
+      reverted and the tree re-verified clean; the two append-only
+      cases ran in a throwaway repository, since they need commits.
+      mathjax_lint, writeup_mapper check, blocks.py check-frozen and
+      blocks.py relocation-check, and the strict sorry inventory (1, at
+      Statement.lean:21) all reproduce their start-of-pass output.
+      HANDOVER DELTAS, bounded and enumerated, three. (i) The
+      cold-start read-order line stops naming ledger.yaml as the store
+      and sends the reader to ledger/bets.yaml and
+      ledger/annotations/, ANN-01..87; the ANN-01..85 range it carried
+      was already two entries stale. (ii) The EXECUTION ORDER bullet
+      drops item-0032, adds it to the completed list, and records that
+      the ANN-72 policy exception granted for this item alone is now
+      spent -- the research block is the whole order again with
+      item-0028 at position 1. (iii) The item-0032 bullet is rewritten
+      from RATIFIED to EXECUTED and carries the new layout, the append
+      instruction, the three checks, the grandfathering and the two
+      carried-open questions. Nothing else changes; HANDOVER.md is
+      ASCII-only before and after, as are this entry and every file in
+      the new store.
+      ROADMAP. item-0032 is set to done and moved to
+      roadmap/completed/item-0032.md through the roadmap-items tool,
+      not by hand, and drops out of roadmap/_order.md, in this same
+      apply. There is no self-grading concern for a tooling item whose
+      acceptance is discharged by mechanical checks that anyone can
+      re-run, and leaving it ratified at the head of the order while
+      its acceptance artifact exists is the D1 re-run hazard rule 25
+      exists to prevent.
+      STILL OPEN AFTER THIS ENTRY. Q1 and Q2 above. Everything ANN-86
+      left open remains open: R1-015's owed steering review, the
+      item-0010 re-scope, source_commit in writeup/sources.yml, the
+      four heading re-assignments from a292ba4, lean/README.md below
+      its STALE banner, the Erdos251/Counting.lean umbrella docstring,
+      the three missing execution profiles on item-0006, item-0029 and
+      item-0030, ERRATUM-5 booked and deliberately unrepaired, and the
+      registered bet values of BET-11/12/13 standing as
+      steering-proposed under the ANN-52 convention.

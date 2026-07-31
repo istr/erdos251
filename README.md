@@ -29,7 +29,9 @@ research pilot. Conversations are ephemeral scratch; durable state lives here.
 - `payloads/`          exact, hashed model inputs per stage (contamination classes).
 - `runs/`              one directory per model run: config, transcript, output.
 - `lean/`              Lake project; vendored target statement; CI = lake build.
-- `ledger.yaml`        pre-registered bets and Brier scoring.
+- `ledger/`            pre-registered bets and Brier scoring in `bets.yaml`;
+                       one append-only file per annotation entry under
+                       `annotations/`. `ledger.yaml` is a pointer to it.
 - `roadmap/`           work items (roadmap-items store; one file per item).
 - `writeup/`           curated human-readable status and technical note.
 

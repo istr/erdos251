@@ -1,0 +1,25 @@
+  - id: ANN-20260716-45
+    refs: [ANN-20260716-43, ANN-20260716-44]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s5 STRETCH: `constr_consCount_pos` CLOSED. Counting.lean is
+      now SORRY-FREE; project strict inventory 3 -> 2 (Conditional
+      `fork_merge_of_hypotheses` = s6, Statement residual). Machine-checked,
+      classical three, no sorryAx. Attempted only after the T3 gate closed
+      and G1-G5 passed locally, per kickoff v5's no-gate discipline.
+      ANN-43's OPEN QUESTION IS RESOLVED. s4 booked constr_consCount_pos as
+      "near-free downstream" but explicitly flagged that status as the
+      kickoff's ESTIMATE, not a finding, since it sat downstream of a sorry.
+      It is now a finding: near-free was CORRECT, and if anything
+      understated. 12 lines, no new helpers, compiled first try. The three
+      interfaces line up VERBATIM with no glue whatsoever -- cspan_le's
+      third/fourth clauses ARE 4.3's span hypothesis at kappa := C_1;
+      cbudget's fifth clause IS 4.3's window `L+1 <= 4 lnln x - 1`;
+      cword_admissible supplies IsAdmissible + card = L+1 for both words.
+      This is a retrospective vindication of the v1.1/F1 and v1.1/F2
+      amendments: the narrowed span (F2) is exactly what made 5(iii)'s
+      output plug into 4.3 without adaptation.
+      The kickoff's own estimate of the x_0 bottleneck is confirmed
+      structurally: kappa = C_1 here is 12 * C from q_le_mul_log, and 4.3's
+      x_0 at that kappa is astronomical -- irrelevant, as steering booked,
+      because the statement is a bare exists-x_0 and nothing materializes it.

@@ -1,0 +1,58 @@
+  - id: ANN-20260725-70
+    refs: [BET-20260724-10, BET-20260724-09, ANN-20260725-69,
+      ANN-20260725-66, ANN-20260724-65]
+    date: 2026-07-25
+    note: >-
+      RESOLVES BET-20260724-10 YES ON OPERATOR INSTRUCTION AND MOVES IT
+      TO THE SCORED BLOCK. brier 0.64 at p 0.20. One file: ledger.yaml.
+      No other bet is resolved, no verdict changes, and nothing else in
+      the tree is touched. This IS a scoring event, the first since
+      ANN-28, and steering resolved it only on instruction: the
+      resolution field names operator judgment and that is what it got.
+      THE GROUND. Four unconditional candidates from item-0026 qualify,
+      each with a primary anchor booked in payloads/HASHES.txt and an
+      explicitly named gap axis, against a claim needing one. They are
+      named in the scored entry with their cleared and failing axes.
+      The per-candidate checklist the resolution field points at is
+      dossier/item-0026-workpapers/extraction-report.md section 5.
+      THE INTERPRETIVE QUESTION, recorded rather than passed over. The
+      claim's parenthesis enumerates regime, rank, strength and scale
+      density; it does not enumerate grain, which is the axis item-0026
+      named as the located absence, because the A1-A6 decomposition did
+      not exist on 2026-07-24. The resolution does not depend on how
+      that parenthesis is read: under the loose reading all four
+      candidates qualify, under the strict reading dlB-F and Teravainen
+      still do, since rank is among their named gaps and rank is
+      enumerated. Stating this is the point -- a resolution that would
+      flip on a reading of its own wording should not be booked as
+      clean.
+      CALIBRATION, and the reason this entry is longer than the
+      resolution needed. 0.64 is the worst binary brier in the ledger
+      and the running binary mean moves 0.149 -> 0.231 over six scored.
+      The diagnosis is NOT that steering was too pessimistic about the
+      literature: that pessimism was correct, BET-20260724-09 stands
+      unmet, no carrier was located, and the campaign state is
+      unchanged. The diagnosis is that the bet was badly constructed.
+      Its resolution condition depends on an instrument -- the axis
+      decomposition -- that this project created between registration
+      and resolution, and once axes exist every gap is named by axis
+      nearly by construction. The bet therefore measured its own
+      resolution machinery as much as it measured the literature.
+      LESSON BOOKED, and it binds the three bets registered in ANN-69:
+      a bet whose condition can be satisfied by a change in the
+      project's own description language is not a forecast. Checked
+      against BET-20260725-11, -12 and -13: each turns on a numerical
+      outcome, a positive-proportion finding, or the existence of a
+      named weaker hypothesis, and none can be satisfied by
+      redescription.
+      NOT RESOLVED HERE. BET-20260724-09 (p 0.05, the exact object
+      located and primary-anchored, resolve_by 2026-08-31) is decidable
+      on the same record and is NOT met -- no candidate clears all six
+      axes. Steering did not resolve it, because the instruction named
+      one bet. If the operator resolves it NO on the same record its
+      brier is 0.0025 and the binary mean over seven becomes 0.198.
+      BET-20260711-07 runs to 2026-08-08 and BET-20260718-08 to
+      2026-09-30, both untouched. A re-pricing of BET-20260718-08 was
+      drafted on 2026-07-25 and NOT applied on operator decision; that
+      bet therefore stands at its registered 0.07, and no BET-14 exists
+      in this ledger.

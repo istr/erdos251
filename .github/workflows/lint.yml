@@ -12,3 +12,45 @@ jobs:
           python-version: '3.12'
       - name: MathJax delimiter lint
         run: python3 scripts/mathjax_lint.py
+
+  ledger:
+    runs-on: ubuntu-latest
+    steps:
+      # fetch-depth: 0 is load-bearing, not hygiene. The relocation check reads
+      # ledger.yaml at the pre-split pin via `git show`, so the pin must be in
+      # the clone; a shallow checkout would fail the job on a missing object.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ledger relocation check
+        run: python3 scripts/ledger_check.py relocation-check
+      - name: Ledger validate
+        run: python3 scripts/ledger_check.py validate
+      - name: Ledger append-only
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          # The append-only guarantee is INCREMENTAL: this compares the push or
+          # pull request against its own base. It composes into a whole-history
+          # guarantee only under branch protection that forbids force-push to
+          # main and preserves linear history. Every PRE-split entry is covered
+          # absolutely by the relocation check above, which reaches back to the
+          # pin on every run.
+          #
+          # Base resolution is the fragile part: github.event.before is the
+          # all-zero sha on a branch's first push, and the base commit can be
+          # absent from a fork clone. An unresolvable base skips the check
+          # loudly rather than passing it silently or failing the build on a
+          # condition the contributor cannot fix.
+          if [ -z "$BASE_SHA" ] || [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "append-only: no base sha for this event (new branch or first push); SKIPPED"
+            exit 0
+          fi
+          if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            echo "append-only: base ${BASE_SHA} not present in this clone; SKIPPED"
+            exit 0
+          fi
+          python3 scripts/ledger_check.py append-only --base "$BASE_SHA"

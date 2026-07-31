@@ -1,0 +1,23 @@
+  - id: ANN-20260716-46
+    refs: [ANN-20260716-44]
+    date: 2026-07-16
+    note: >-
+      ITEM-0015 s5 STRUCTURAL, flagged not repaired: the glue lemma
+      `q_eq_of_count` was RELOCATED upward (statement, docstring and proof
+      byte-unchanged) from the section-5 "Glue (PROVED, flagged)" block to
+      the Lemma 4.3 proof-layer helpers. Reason: `consCount_bonferroni` is
+      its first consumer and Lean requires it declared earlier. A pointer
+      note replaces it at the old site, mirroring the ANN-38/39/40
+      "relocated to Mertens.lean" convention already in this file.
+      WHY A MOVE AND NOT A SECOND BRIDGE: `q` IS `Nat.nth Nat.Prime`, so
+      inlining `Nat.nth_count` at the use site would have been one line --
+      but the module docstring asserts "Glue proofs (flagged):
+      `q_eq_of_count` only", and a second raw Nat.nth/Nat.count bridge would
+      have silently falsified a traceability claim the review object makes.
+      The move preserves that invariant exactly.
+      RESIDUAL NIT (unfreeze candidate): q_eq_of_count's docstring says
+      "used only by the smoke tests below". The "below" is still true (the
+      smoke tests remain at the file's end) but the "only" is now stale --
+      the T3 proof consumes it. Docstrings were out of scope this session,
+      so this is flagged, never silent, per the kickoff's own rule. One-word
+      fix whenever the statement set is next unfrozen.

@@ -1,0 +1,20 @@
+  - id: ANN-20260713-15
+    refs: [ANN-20260712-14]
+    date: 2026-07-13
+    note: >-
+      item-0003 kickoff amended to v2 (sha 846b291c...3803bb; supersedes
+      v1 sha a6549936...ac51e0, discard v1). Deltas, from applying the
+      strike mechanism taxonomy to this loop (AI-WORKFLOW sha
+      9a9630e5..., AI-ORCHESTRATION sha 2ce0c29d..., read 2026-07-13):
+      (1) M2 closure -- the executor completion report ends with three
+      mandatory sections (Gates verbatim, Observations, Follow-up
+      candidates); a missing section is a gate failure; candidates
+      become proposed roadmap items steering-side, never in-passing
+      implementations. (2) M3 closure -- item-0011 created (proposed,
+      rank 0011, unscheduled) as owner of the Hypotheses faithfulness
+      pair singularSeries_multipliable/_pos; contingent: ratify only if
+      item-0003 closes at floor with the pair still sorried, retire
+      unratified if the stretch discharges it. (3) Kickoff validity
+      predicate refined to the exact dependency paths (lean/,
+      roadmap/item-0003.md, roadmap/_order.md), so this bookkeeping
+      cannot false-alarm the executor.

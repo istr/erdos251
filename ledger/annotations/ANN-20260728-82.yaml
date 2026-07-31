@@ -1,0 +1,154 @@
+  - id: ANN-20260728-82
+    refs: [ANN-20260728-81, ANN-20260728-78]
+    date: 2026-07-28
+    note: >-
+      THE TWO 2d BOUNCES ARE REPAIRED TO THE RE-GRADE'S SPECS. NOTHING
+      WAS HASHED AND NO HEADER WAS EDITED. Phase 2d-repair, executed by
+      the local executor against pin 2229c55 under an ephemeral
+      dispatch, never committed; the operator apply is the ratifying
+      commit. Executor model: Claude Opus 5 (claude-opus-5[1m]), with
+      the anchored PDFs open at every location the spec names. The
+      specification is extract-grades-r2.md Section 11, in the tree at
+      the pin and unmodified since it; this pass worked from that
+      record, not from a re-transcription of it. Files:
+      dossier/item-0022-workpapers/repair-log-2d-bounce.md (new),
+      dossier/item-0022-workpapers/extract/kuperberg23-apsmooth.md and
+      dossier/item-0022-workpapers/extract/pintz10-patterns.md
+      (repaired), HANDOVER.md (two bounded deltas) and ledger.yaml
+      (this entry) -- one file added, none deleted, four modified, ZERO
+      hash lines added, ZERO headers edited, ZERO of the three CLEAN
+      extracts touched, no grade-record edit, no inventory edit, no
+      checklist row edited, no roadmap, lean, runs or writeup file
+      touched. This pass confers no standing and does not close
+      item-0033; it does NOT assert that either repaired extract is
+      CLEAN.
+      BOTH BOUNCES WERE PROSE MISDESCRIPTIONS OF THE ANCHORS' OWN
+      STRUCTURE, and all four fixes are prose or citation.
+      kuperberg23-apsmooth.md, one fix: its Theorem 1.2 sentence
+      assigned display (9)'s perfect matchings to the DOUBLETON blocks;
+      the anchor's matching sigma in B(j+1,...,k-j) pairs the k-2j
+      SINGLETON blocks S_{j+1},...,S_{k-j}, the j doubleton blocks being
+      carried by the separate j-th power factor of the same summand.
+      Verified at 2301.06095v1 p.4 display (9) with its summation
+      conditions, confirmed independently by the closing clause of the
+      smooth-weight analogue (16) at p.6, which defines the paired
+      argument only for singleton blocks, and with the C_l and
+      B(a_1,...,a_k) notations read at p.3. The rewritten sentence also
+      names the refinement condition P refines {C_l}, which the original
+      omitted; that is an in-span completeness item of the same class,
+      disclosed in the repair log rather than folded in silently.
+      pintz10-patterns.md, three fixes. (1) Section 3 presented the
+      cited Theorem [Pin] at 1004.1072v1 p.2 -- a conditional result of
+      a companion preprint of the same author, listed in the references
+      at p.9 -- as this note's main theorem; it is re-pointed to the
+      anchor's own UNCONDITIONAL Theorem stated at p.4 and proved in
+      Section 2 ("2 Proof of the Theorem", p.5), with the Corollary at
+      p.4, and the "quantitative strengthening" framing is dropped
+      because the p.4 Theorem is not a strengthening of [Pin]'s
+      statement. Green-Tao and [GPY2] were read at p.1 and [GPY3] at
+      p.3 for the survey sentence. (2) Section 2.2's unmarked elision is
+      closed by QUOTING the intervening Remark ("The parameter H can be
+      arbitrary here, not just that given in (2.2)."), read at p.6,
+      rather than by an ellipsis: the Remark is a scope statement about
+      Lemma 1's hypothesis, and quoting preserves the scope where an
+      ellipsis would only signal its absence; it also makes Section 2.2
+      uniform with Section 2.1, which already quotes the analogous pair
+      under Lemma 2. (3) Section 2.1's "p.6-7" for the Lemma 2 block
+      becomes "p.6"; Lemma 2, (2.10) and both Remarks are entirely on
+      p.6, verified there. The "p.6-7" at Section 2.3 is correct and was
+      not touched -- that passage does straddle the break.
+      THE MATH IS NOT TOUCHED. Every display, numbered object,
+      transcription and NOT-FOUND probe the re-grade exhibited as
+      verified is byte-identical; the display-fence count is unchanged
+      on both files (kuperberg23 2, pintz10 12) and line counts move
+      89 to 96 and 279 to 291. Two short verbatim quotations are ADDED
+      to pintz10 -- the p.6 Remark and the p.9 [Pin] references entry --
+      and both are new transcription surface exhibited against the
+      anchor in the repair log, for the terminal re-grade to check.
+      THE ANN-78 GRADE'S INCOMPLETENESS IS NOW FOUR, BOOKED PLAINLY.
+      Phase 2b passed two extracts that misdescribed their own sources'
+      structure, because it graded displays, numbers, citations and
+      quotations but not the prose glosses wrapped around them. Neither
+      bounce touched a display, a number, a transcription or a
+      NOT-FOUND probe, which is exactly why a display-and-quotation
+      grade could not see them. THE LESSON: A FIDELITY GRADE MUST CHECK
+      THE PROSE CLAIMS AN EXTRACT MAKES ABOUT ITS SOURCE, NOT ONLY THE
+      SOURCE TEXT IT QUOTES. This joins the three earlier
+      incompletenesses -- two non-ASCII characters passed inside a
+      quotation, a report-1 reference split across a line break, and an
+      I4 cross-reference passed without checking that the path still
+      resolved.
+      THE HEADER DISPOSITION: NO HEADER WAS EDITED, DELIBERATELY. All
+      five survivors keep the clause "fidelity repair applied per the
+      ANN-78 grade (extract-grades-r1.md) at this pin; re-grade
+      pending". It is a 2c-era annotation, it is left in place, and it
+      is SUPERSEDED BY THE LEDGER GRADES rather than edited -- the same
+      disposition the two ANN-78 page errors got. The reason it is not
+      edited: the three CLEAN extracts are hashed, so editing them would
+      either break the append-only rule or add a second
+      payloads/HASHES.txt line for a path that has appeared once,
+      breaking a one-line-per-file invariant that file has held over its
+      whole history, and a cosmetic process-note is not worth either.
+      The re-grade had already adjudicated the "at this pin" deixis as
+      tolerable and non-blocking. Grade-state does not belong in an
+      extract header at all; it belongs in the ledger and the grade
+      record, which carry it authoritatively. THE HEADER-DESIGN LESSON
+      IS ROUTED TO ITEM-0034 -- an extract's provenance header carries
+      source and hash only, never grade-state and never an unresolvable
+      deixis -- and applying it going forward requires no edit to these
+      five. This corrects an earlier steering error: the 2c header spec
+      put a process-state clause and a deixis into the header, which it
+      should not have.
+      NOTHING WAS HASHED AND THE THREE CLEAN EXTRACTS ARE
+      BYTE-UNCHANGED. payloads/HASHES.txt is byte-unchanged by this
+      apply. No
+      line was added for either repaired extract, for the repair log, or
+      for the re-grade record. The frozen-CLEAN gate confirms the three
+      CLEAN extracts at close: bloomkuperberg23-oddmoments.md
+      9125824e..., kowalski-singser-dist.md 2177b805... and
+      kuperberg21-oddmoments.md 50beadb8... each still equal their
+      ANN-81 lines 92-94, recomputed from the files in the tree after
+      the writes. The bounced-span scan -- the re-grade's robust
+      dropped-object scan with line breaks flattened -- returns (none)
+      on both repaired extracts, so the repair introduced no reference
+      to a dropped object.
+      NOTHING ELSE MATHEMATICAL MOVES. No Lean file, no frozen block, no
+      roadmap item, no verdict, no target, no threshold, no constant and
+      no bet changes. Gates at start and at close: frozen blocks
+      byte-identical, relocation-check passed, the single baseline
+      Statement.lean sorry unchanged, manifest rev count 1, toolchain
+      trailing newline, item-0033 ratified at position 1, writeup mapper
+      PASS, mathjax_lint 0 problems at both ends, zero non-ASCII in all
+      five extracts, in HANDOVER.md and in the new repair log. The only
+      gate movement is mathjax_lint's file count, which rises by this
+      pass's own log. All seven STOP conditions were evaluated and
+      reported; none fired. S7 in particular: with both anchors open no
+      fidelity defect beyond the spec was found on either bounced
+      extract, and the three CLEAN extracts were not opened for grading
+      -- they are frozen, and a finding on one would be logged, never
+      repaired here.
+      HANDOVER DELTAS, TWO. B1: the cold-start read-order ANN range
+      moves ANN-01..81 to ANN-01..82. B2: a new bullet at the head of
+      the item-0022 group carrying the four repairs, the header
+      disposition, the nothing-hashed statement and the terminal
+      re-grade as the next apply.
+      STILL OPEN. ITEM-0033 DOES NOT CLOSE AND ITS ACCEPTANCE IS NOT
+      MET. The next apply is the TERMINAL RE-GRADE, by a fresh session
+      that did not perform this repair -- an executor must not grade its
+      own repair -- scoped as extract-grades-r2.md authorizes: the
+      repaired spans, plus a fresh robust dropped-object scan and a
+      fresh in-tree path-liveness check on both extracts, not a
+      re-grade of the three CLEAN ones, whose grades stand at ANN-81. It
+      should check the three new spans this pass discloses: the
+      refinement clause in kuperberg23 and the two added quotations in
+      pintz10. On CLEAN it hashes the two repaired extracts, which are
+      new lines and not duplicates, and hashes the terminal record.
+      item-0033's acceptance is then met -- five extracts CLEAN and
+      hashed, three at ANN-81 and two at the terminal entry, two
+      precedents dropped -- and the close is the operator's separate
+      roadmap apply, whose close summary records the header disposition
+      above. If either repaired extract bounces again, item-0033 stays
+      open and the cycle repeats on that one. Everything ANN-81 left
+      open remains open, including the two citation-policy decisions
+      item-0022 was carrying and the seventh verdict-promotion
+      recurrence.

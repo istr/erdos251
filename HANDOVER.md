@@ -5,7 +5,12 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..85; 8 bets scored,
+1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
+read ledger/bets.yaml for version/convention/scored/open, and
+ledger/annotations/<id>.yaml for the annotation history, one
+strictly-append-only file per entry, ANN-01..87; the old path
+ledger.yaml is now a pointer stub. If you only need bet state, read
+bets.yaml alone -- the history no longer rides along. 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -101,27 +106,30 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-86): item-0032,
-  item-0028, item-0029, item-0027, item-0030, item-0010, item-0006,
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-87): item-0028,
+  item-0029, item-0027, item-0030, item-0010, item-0006,
   item-0024. item-0022 IS CLOSED AS INTERRUPTED and lives at
   roadmap/completed/item-0022.md; item-0031 IS WITHDRAWN and lives at
-  roadmap/completed/item-0031.md; item-0033 AND item-0034 ARE CLOSED AS
-  DONE and live at roadmap/completed/item-0033.md and
-  roadmap/completed/item-0034.md. Any earlier text in this bullet
-  listing item-0033 in the order is SUPERSEDED: it closed at 9d84ba4
-  and the bullet was not refreshed then. The disposition and
+  roadmap/completed/item-0031.md; item-0033, item-0034 AND item-0032 ARE
+  CLOSED AS DONE and live at roadmap/completed/item-0033.md,
+  roadmap/completed/item-0034.md and roadmap/completed/item-0032.md. Any
+  earlier text in this bullet listing item-0033 in the order is
+  SUPERSEDED: it closed at 9d84ba4 and the bullet was not refreshed
+  then. The disposition and
   evidence-standing items sat AHEAD of the research block deliberately:
   the corpus record is repaired before more mathematics is added on top
-  of it.
-  The ANN-72 POLICY IS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
-  (ANN-86). item-0032 carries arcs [tooling, workflow] and now sits at
-  POSITION 1, ahead of the whole research block, on two operator
-  grounds: its own body states a sequencing constraint, not a
-  preference -- it touches script and CI paths outside the bookkeeping
-  path list dispatch validity predicates use, so it must land in a
-  window where no dispatch is open, and that window is open now -- and
-  it makes the ledger's append-only rule mechanically enforceable, the
-  record-integrity layer the whole ANN-76..85 chain repaired by hand.
+  of it. THE RESEARCH BLOCK IS NOW THE WHOLE ORDER AGAIN and item-0028
+  is at position 1.
+  THE ANN-72 POLICY WAS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
+  (ANN-86), AND THAT EXCEPTION IS NOW SPENT (ANN-87): item-0032 carried
+  arcs [tooling, workflow] and sat at POSITION 1 ahead of the whole
+  research block on two operator grounds -- its own body states a
+  sequencing constraint, not a preference (it touches script and CI
+  paths outside the bookkeeping path list dispatch validity predicates
+  use, so it had to land in a window where no dispatch was open, and
+  that window was open), and it makes the ledger's append-only rule
+  mechanically enforceable, the record-integrity layer the whole
+  ANN-76..85 chain repaired by hand. It has run and left the order.
   OTHERWISE THE POLICY STANDS: the full research arc stays on top of
   the order and tooling items are postponed behind it, so item-0024
   (arcs [tooling, workflow], rank 0020) still sits LAST by intended
@@ -183,18 +191,43 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
-- item-0032 IS RATIFIED AND RUNS NEXT (ANN-86). It sits at POSITION 1 of
-  roadmap/_order.md, ahead of the research block, superseding the ANN-72
-  policy for this item only -- see the EXECUTION ORDER bullet above for
-  the two grounds. It splits ledger.yaml into a mutable bets file plus
-  one append-only file per annotation, so the append-only rule becomes a
-  property a check enforces instead of a discipline a human reads a diff
-  for. RATIFIED, NOT EXECUTED: its two open questions (short-vs-long
-  reference form, bucketing trigger by count or by time) travel with it,
-  and the bet-scoring tension it names is explicitly NOT its to decide.
-  Whoever executes it must land it in a window where no dispatch is open
-  -- its own sequencing constraint -- and must book that apply's ledger
-  entry into the structure the apply itself creates (rule 25).
+- item-0032 IS EXECUTED AND CLOSED, AND THE LEDGER IS NOW THREE OBJECTS
+  (ANN-87). ledger.yaml is a POINTER STUB. The mutable bets file is
+  ledger/bets.yaml (version, convention, scored, open -- 276 lines, the
+  whole cold-start bet state). The history is ledger/annotations/, one
+  file per entry named <id>.yaml, 87 of them, STRICTLY APPEND-ONLY: a
+  landed entry is never modified, deleted or renamed, and an amendment
+  is a successor entry. TO APPEND, WRITE A NEW FILE -- do not reopen
+  ledger.yaml, which no longer carries entries, and do not re-indent an
+  entry, which would break the relocation gate. The entry files are YAML
+  list fragments at the original two-space list indent, deliberately not
+  re-keyed standalone mappings.
+  THE RULE IS NOW MECHANICAL, WHICH IS THE POINT OF THE ITEM. Three
+  checks in scripts/ledger_check.py, all three wired into CI as a
+  `ledger` job in .github/workflows/lint.yml: relocation-check (the
+  entry files concatenated in ascending sequence order reproduce the
+  pre-split annotations body at pin 733f989 byte for byte -- 5298 lines,
+  sha256 24f7e372...dae7aa; it does NOT expire at the split commit, it
+  re-proves on every run that no pre-split entry was ever edited),
+  validate (filename == id, ids unique, sequence contiguous 1..N, refs
+  resolve by namespace), and append-only (over base..HEAD the
+  annotations directory shows additions only; incremental by
+  construction, so it composes into a whole-history guarantee only under
+  branch protection that forbids force-push and preserves linear
+  history). Run them locally from the repo root the same way.
+  FOUR HISTORICAL DANGLING REFS ARE GRANDFATHERED, not repaired, and the
+  inventory lives in ANN-87 rather than in this file or the item: they
+  sit inside byte-frozen entries, all four of the shape correct sequence
+  number / wrong date component. A dangling ref NOT on that allowlist
+  fails validate, which is the whole enforcement -- the allowlist is not
+  a repair channel and a post-split entry must never extend it.
+  CARRIED OPEN, deliberately, exactly as ANN-86 said they would be: Q1
+  whether the short reference form becomes canonical (filenames and the
+  id: field use the full date-bearing id regardless, so Q1 never blocked
+  the split) and Q2 whether the bucketing trigger is entry count or
+  time. NOTHING BUCKETS NOW at 87 entries; the item names a few hundred
+  as the trigger. The bet registration-vs-scoring tension is explicitly
+  NOT settled here -- a storage change is the wrong instrument for it.
 - item-0034 IS EXECUTED AND CLOSED (ANN-85). The evidence-standing rule
   set landed as runs/README rules 20-27 and three AGENTS.md bullets;
   B6 is closed by rule 22; source extracts now carry surrogate standing

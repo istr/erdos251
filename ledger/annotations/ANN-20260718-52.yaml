@@ -1,0 +1,23 @@
+  - id: ANN-20260718-52
+    refs: [ANN-20260718-51, BET-20260711-07, BET-20260718-08]
+    date: 2026-07-18
+    note: >-
+      OPERATOR DECISION BATCH (steering session 2026-07-18, second
+      round). (1) runs/README rules 15/16 codification CONFIRMED --
+      for the record: both rules rode erdos251-followup29 (the ANN-51
+      commit); no separate mbox exists or is needed. (2) Both
+      2026-07-18 operator reports CONFIRMED operator-held uncommitted
+      until item-0022 lands (as booked in ANN-51): they shape the
+      roadmap but enter the corpus only after primary verification.
+      (3) BET-20260711-07: run to the full resolve_by 2026-08-08, no
+      early scoring. (4) BET-20260718-08 REGISTERED this commit under
+      open: -- claim: the item-0020 target (averaged or
+      usable-subfamily relative one-position extension upper bound,
+      effective constant o(log x) at k ~ loglog x, statement shape
+      per the item-0018 selection verdict, rule-15 sheet passed)
+      proved at dossier grade (written proof surviving the item
+      review gate; Lean formalization not required) by 2026-09-30.
+      Prior p = 0.07 and resolve_by are STEERING-PROPOSED; the
+      operator amends the lines before applying if credence differs
+      -- the apply is the registration, and the append-only
+      discipline starts after it. HANDOVER 2i amended accordingly.

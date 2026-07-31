@@ -154,8 +154,12 @@ Rules:
 18. Pin semantics under bookkeeping races (2026-07-19). A kickoff
     pin denotes the last pre-bookkeeping CONTENT state; HEAD may
     legitimately be ahead of it by bookkeeping-only commits
-    (HANDOVER.md, ledger.yaml, payloads/HASHES.txt,
-    runs/README.md, roadmap/). At session start the runner
+    (HANDOVER.md, ledger.yaml and -- since the item-0032 split --
+    ledger/bets.yaml and ledger/annotations/, payloads/HASHES.txt,
+    runs/README.md, roadmap/). A ledger append is now a NEW FILE
+    under ledger/annotations/, so the list has to reach that
+    directory or the next append trips this rule's content-path
+    STOP. At session start the runner
     verifies (a) git diff pin..HEAD touches only those paths, and
     (b) every Section-2 read-only anchor is byte-identical across
     both states; then the session pins to HEAD and records the

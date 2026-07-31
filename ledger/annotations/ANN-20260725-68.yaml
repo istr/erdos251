@@ -1,0 +1,77 @@
+  - id: ANN-20260725-68
+    refs: [ANN-20260725-67, ANN-20260725-66, ANN-20260724-64]
+    date: 2026-07-25
+    note: >-
+      LANDS THE OPERATOR-APPROVED item-0026 LITERATURE CONSOLIDATION AND
+      ANCHORS IT. Authored by steering at pin
+      57e704643bd24fa982c6015d6a40477ef0cb739e == HEAD of main. Two
+      files: the new dossier/item-0026-workpapers/
+      literature-consolidation.md and its sha256 line in
+      payloads/HASHES.txt. No Lean file, frozen block, production
+      artifact, run, writeup file, roadmap item, or execution order is
+      touched. NO VERDICT IS CHANGED: the item-0026 headline (NOT-FOUND
+      at literature grain, no carrier located) and the item-0010
+      campaign state are exactly as ANN-66 left them.
+      WHAT THE DOCUMENT IS FOR. It is not a second copy of the
+      extraction result. Its load-bearing content is six errata against
+      a steering draft of 2026-07-24 that circulated but never entered
+      the tree, plus a re-ranking of the three named hypotheses and one
+      observation the extraction report does not carry. Three of the six
+      errata (E1 axis definition, E3 Pintz rank pricing, E4 Kuperberg
+      constant) are already booked in ANN-66; landing the document puts
+      the remaining three in the tree where they can be found.
+      E2, THE ERRATUM BOOKED NOWHERE ELSE, stated here so it is
+      searchable from the ledger alone. The draft argued that the target
+      window (ln x)(lnln x) "lies strictly inside (log x)^2.1" and
+      counted Matomaki-Teravainen 2207.05038 as the strongest window
+      hit. That is backwards: an almost-all-intervals statement at a
+      LONGER window is the WEAKER statement and implies nothing at a
+      shorter one. The extraction verdict for 2207.05038 is A2 FAILS.
+      The genuine unconditional window hits are Teravainen 1510.06005
+      and Matomaki 2012.11565, whose windows approach log x from above
+      -- the opposite end of the same family from where the draft
+      pointed. Support: PROVED (the implication direction is
+      elementary); the per-anchor verdicts are RECORDED from
+      dossier/item-0026-workpapers/extraction-report.md section 5.
+      E5 AND E6, also landed by this entry. E5: the draft presented
+      Kuperberg Theorem 1.2 and Pintz Theorem 1' as material both review
+      runs had missed; both were already extracted at
+      dossier/item-0017-workpapers/extract/, Theorem 1.2 with its own
+      focus section. The real finding is narrower and more useful --
+      extracted material never reached the S1 axis pricing, which is a
+      routing defect in this project, not a gap in the shelf. E6: the
+      draft's argument for hypothesis H1 is withdrawn (booked in
+      ANN-66); the document additionally downgrades H1 itself and
+      re-ranks H2 first, on the ground that H2 is the only registered
+      hypothesis aimed at A3 and A3 is the named absence. NO ROADMAP
+      ITEM IS CREATED, RE-SCOPED, OR RE-ORDERED by this entry; the
+      re-ranking is a recommendation and nothing more.
+      EDITORIAL CHANGES AGAINST THE APPROVED DRAFT, all agreed with the
+      operator before authoring and none touching substance: the
+      HANDOVER.md delta section is dropped because ANN-67 executed it
+      and it would otherwise read as an open task list; the per-axis
+      matrix is replaced by a pointer to its single source in
+      extraction-report.md section 5, keeping only the two readings not
+      stated there; the head carries provenance instead of a proposal
+      marker; draft-version labels are removed, since inside the tree
+      "v1/v2" name nothing; and the reference to the ephemeral
+      effectivization dispatch is replaced by its ledger anchor, because
+      that dispatch is never committed.
+      HONESTY NOTE, carried in the document's own both-readings appendix
+      and repeated here because it is a process finding rather than a
+      mathematical one: six corrections in one revision is evidence that
+      the draft's method -- authoring from review-run outputs and
+      sensitivity calculations BEFORE the primary extraction existed --
+      was not sound. Every correction moved in the same direction, away
+      from over-optimism about how close the literature sits to S1. The
+      method has not been used since; the document and this entry are
+      both authored against primary anchors under rule 19.
+      STILL OPEN, unchanged. The HANDOVER open-decisions block lists the
+      disposition of this document as undecided; this entry decides it
+      but does NOT edit that block, because steering does not touch it
+      outside a booked refresh. It will read stale until the next one,
+      and that is deliberate rather than overlooked. Also unchanged:
+      whether item-0026 leaves roadmap/_order.md; the BET-20260724-10
+      call; source_commit in writeup/sources.yml; the four heading
+      re-assignments from a292ba4; rule-16/B6; lean/README.md below its
+      STALE banner; and the Erdos251/Counting.lean umbrella docstring.

@@ -1,0 +1,133 @@
+  - id: ANN-20260725-72
+    refs: [ANN-20260725-69, ANN-20260725-68, ANN-20260725-67,
+      ANN-20260725-66, ANN-20260724-64, BET-20260725-11,
+      BET-20260725-12, BET-20260725-13]
+    date: 2026-07-25
+    note: >-
+      OPERATOR CLOSES item-0026, RATIFIES ITS THREE SUCCESSORS, AND
+      SETS A RESEARCH-ARC-FIRST EXECUTION ORDER. Authored in the local
+      executor lane (Claude Opus 5, claude-opus-5[1m]) at pin
+      7585dcbabba4a38287a4c74a78cded1f27d2e34c == HEAD of main before
+      this commit, on operator instruction given in three successive
+      steps. Files: roadmap/item-0026.md moves to
+      roadmap/completed/item-0026.md with status done and a final
+      summary appended; roadmap/item-0028.md, item-0029.md and
+      item-0030.md flip proposed -> ratified; roadmap/_order.md is
+      rewritten; HANDOVER.md is refreshed; ledger.yaml gains this
+      entry. All roadmap edits were made through the roadmap-items
+      skill's own script, not by hand, per the ANN-69 convention.
+      NO VERDICT IS CHANGED AND NOTHING ANALYTIC MOVES. No Lean file,
+      frozen block, frozen registry, production artifact, run, payload,
+      dossier workpaper, or writeup file is touched. No target,
+      threshold, constant, or acceptance_intent is changed; no item is
+      re-ranked (every rank stands as ANN-69 left it), no arc
+      membership is changed, no item is re-scoped; no bet is resolved,
+      re-priced, or amended. This is a scheduling and bookkeeping
+      entry, and the item-0010 campaign state is exactly as ANN-66 left
+      it: (CG) OPEN, S1 the one named residual, no carrier located.
+      DECISION 1: item-0026 LEAVES roadmap/_order.md. This discharges
+      the open operator decision raised in ANN-66, carried into the
+      HANDOVER open-decisions block by ANN-67, and re-listed as an
+      untaken operator action by both ANN-68 and ANN-69. The item is
+      done, not abandoned: its headline stands as NOT-FOUND at
+      literature grain, with A3 (word grain) failing for all seven
+      anchors and the located absence being the TRANSFER to
+      consecutive-gap-word class masses N_{P,d} rather than a blanket
+      corpus absence. The final summary appended to the completed item
+      is bookkeeping over ANN-66, ANN-67 and ANN-68 and introduces no
+      new claim; every figure in it is RECORDED from those entries.
+      DRIFT-INVARIANCE OF THE COMPLETED ITEM, checked because the
+      durable store forbids tree-pinned content. The final summary
+      carries provenance anchors only -- ANN ids, one commit id for the
+      extraction landing, and dossier paths already present in the
+      item's links. It carries no byte-exact snippet, no files-and-
+      edits list, and no grep gate, so the completed item cannot go
+      stale against tree drift in the way the constitution warns about.
+      DECISION 2: item-0028, item-0029 AND item-0030 ARE RATIFIED.
+      Ratification is the operator's call and this entry records that
+      it was made; steering proposed them as `proposed` in ANN-69 and
+      did not flip them. CONSEQUENCE FOR THE THREE BETS, which is the
+      only substantive effect: BET-20260725-11, -12 and -13 were each
+      registered "binds only if its item is ratified and runs", and the
+      ratification half is now met for all three, leaving only the run
+      half. Per the append-only rule those bet notes are NOT rewritten;
+      this entry is the record. No prior is amended, so the registered
+      values stand at 0.12 / 0.15 / 0.35 with resolve_by 2026-09-30,
+      and the ANN-70/ANN-71 losability check on all three is not
+      re-opened here.
+      DECISION 3: THE EXECUTION ORDER, now eight items --
+      item-0010, item-0006, item-0022, item-0027, item-0028,
+      item-0029, item-0030, item-0024. Two structural facts about it.
+      First, the full active research arc is now scheduled and
+      positions 1 through 7 are strictly rank-ascending (0016, 0090,
+      0095, 0170, 0180, 0190, 0200), so over the research arc the
+      within-arc rank axis and the cross-arc order agree rather than
+      merely coexisting. Second, item-0027 is placed for the first
+      time: it was ratified at 356bae5 but never entered the order,
+      because the `reorder item-0027 --after item-0026` that ANN-64
+      recommended was never run and ANN-69 recorded its placement as
+      an untaken operator action. Placing it by rank closes the gap at
+      0170 that sat immediately before the three new items.
+      THE POLICY BEHIND THE ORDER, stated by the operator this session
+      and booked because it governs future placements: the full
+      research arc stays on top of the execution order, and tooling
+      items are postponed behind it. item-0024 (arcs
+      [tooling, workflow], rank 0020) therefore moves from position 4
+      to the tail. That is a scheduling decision and NOT a re-ranking
+      or a de-ratification -- its rank and status are untouched.
+      Recording the policy explicitly, because a later reader seeing a
+      rank-0020 item last in the order would otherwise read it as an
+      ordering defect rather than as an intended postponement, exactly
+      the misreading that the two-ordering-axes design invites.
+      item-0021 IS UNCHANGED and stays out of the order. It remains
+      ratified with arcs [parked], which is why "the full research arc
+      stays on top" does not reach it; by rank (0150) it would sit
+      between item-0022 and item-0027. Reviving it costs two steps, a
+      restructure onto the research arc and a placement, and both are
+      operator calls. This entry does not re-open the ANN-63
+      back-booking that parking discharged.
+      HANDOVER DELTAS, enumerated in the ANN-67 discipline so the
+      refresh is a bounded edit rather than a half-read pass over an
+      800-line file. (i) The cold-start read-order line: ANN range
+      66 -> 72, scored count 6 -> 8, and the open-bet list corrected --
+      BET-20260724-09 and -10 are scored (ANN-71, ANN-70) and the open
+      set is BET-07, BET-08, BET-11, BET-12, BET-13. The stale note
+      that the BET-20260724-10 call is open is retired, since ANN-70
+      resolved it. (ii) The EXECUTION ORDER bullet is rewritten to the
+      eight-line order with the research-first policy and the
+      item-0026 departure. (iii) The successors bullet is rewritten:
+      item-0026 done and out of the order, item-0027 placed by rank,
+      the three ANN-69 successors ratified and scheduled, each with its
+      one-line role and the H1 non-proposal restated. (iv) The
+      open-decisions block loses THREE entries as discharged and
+      retargets a fourth. Struck: whether item-0026 leaves the order,
+      decided here; the disposition of the item-0026 consolidation,
+      which ANN-68 decided by landing the document while deliberately
+      declining to edit the block, this being the booked refresh where
+      that strike happens as ANN-68 said it would be; and the
+      BET-20260724-10 call, which ANN-70 resolved and which the block
+      still presented as an open operator call, with ANN-71 closing
+      BET-20260724-09 on the same record. Retargeted: the REGISTERED
+      BET VALUES entry pointed at the item-0026 priors, both now
+      scored, and is re-pointed at BET-11/12/13 with the ANN-52
+      convention and the ratified-but-not-run state recorded. No entry
+      is added. The count differs from a two-strike reading of this
+      refresh because the BET-20260724-10 bullet was independently
+      stale: leaving it would have carried a statement false at the
+      pin, the exact defect ANN-65 and ANN-67 repaired.
+      WHAT THE REFRESH DOES NOT TOUCH. No frontier verdict statement,
+      no S1 paragraph, and none of its qualifiers -- in particular
+      "the weakest clean, non-tautological analytic campaign target
+      currently known" survives verbatim, substituting for which is
+      the exact defect Dispatch A and Dispatch D repaired. The
+      Pintz-floor bullet, the measurement-exhausted bullet and the
+      ANN-63 reading cautions are untouched. HANDOVER.md is ASCII-only
+      before and after, and every roadmap item written by this entry is
+      ASCII-only.
+      STILL OPEN AFTER THIS ENTRY. BET-20260711-07 to 2026-08-08;
+      BET-20260718-08 to 2026-09-30 at its registered 0.07; the three
+      ANN-69 bets, now ratified and binding once their items run;
+      source_commit in writeup/sources.yml; the four heading
+      re-assignments from a292ba4; rule-16/B6; lean/README.md below
+      its STALE banner; and the Erdos251/Counting.lean umbrella
+      docstring. The last two remain an unscheduled bookkeeping pass.

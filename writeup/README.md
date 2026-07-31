@@ -2,7 +2,7 @@
 
 The `writeup/` directory is a curated, human-readable account of the mathematical state of the project. The working language is English.
 
-Canonical historical, audit, computation, and provenance material remains in `dossier/`, `runs/`, `payloads/`, `ledger.yaml`, and `lean/`. The files here are expository derivatives, not replacements for those sources. Substantive sections map back to source packets through `sources.yml`.
+Canonical historical, audit, computation, and provenance material remains in `dossier/`, `runs/`, `payloads/`, `ledger/` (the bets file plus one append-only file per annotation entry; `ledger.yaml` is a pointer to it), and `lean/`. The files here are expository derivatives, not replacements for those sources. Substantive sections map back to source packets through `sources.yml`.
 
 Generated proposals under `_draft/` are never canonical. Manual review is mandatory before any draft material moves into a canonical writeup file, and the source comments must remain in place until that review is complete.
 

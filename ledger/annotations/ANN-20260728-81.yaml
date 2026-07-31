@@ -1,0 +1,158 @@
+  - id: ANN-20260728-81
+    refs: [ANN-20260728-80, ANN-20260728-78, ANN-20260727-77]
+    date: 2026-07-28
+    note: >-
+      THE FIVE SURVIVORS ARE RE-GRADED AGAINST THEIR ANCHORED PDFS AND
+      THE CLEAN ARE HASHED: THREE CLEAN, TWO BOUNCED, NOT TERMINAL.
+      Phase 2d, executed by the local executor against pin 87727aa under
+      an ephemeral dispatch, never committed; the operator apply is the
+      ratifying commit. Executor model: Claude Opus 5
+      (claude-opus-5[1m]), a fresh session that did not produce, repair
+      or previously grade any of these extracts. This is the Phase 2b
+      protocol re-run over the five, FRESH -- not a diff against the
+      ANN-78 grade or the repair logs, which were consulted only for
+      where to look; every PASS was earned by reading the anchored PDF
+      at the location. Files:
+      dossier/item-0022-workpapers/extract-grades-r2.md (new),
+      payloads/HASHES.txt (three lines appended), HANDOVER.md (three
+      bounded deltas, enumerated below) and ledger.yaml (this entry) --
+      one file added, none deleted, three modified, ZERO extract files
+      edited, no grade file edit, no inventory file edit, no checklist
+      row edited, no roadmap, lean, runs or writeup file touched.
+      THE GRADE. bloomkuperberg23-oddmoments.md CLEAN -- every display,
+      theorem number, page citation, quotation and both negatives verify
+      against 2312.09021v2, including the [17] entry at p.37 and the
+      even-k asymptotic correctly attributed to [19] at p.4.
+      kowalski-singser-dist.md CLEAN -- all nine quotations and four
+      displays verify against singular-series-distribution.pdf, the
+      mu_k(2) Euler product and all five printed numerical values match,
+      and the extract's page-numbering claim was re-verified on all
+      thirty pages rather than the three it names.
+      kuperberg21-oddmoments.md CLEAN -- all five quotations and three
+      displays verify against 2109.03767v3, decoded through that
+      anchor's Type 1 encoding rather than guessed.
+      kuperberg23-apsmooth.md BOUNCED -- its Theorem 1.2 sentence says
+      display (9)'s perfect matchings organize THE DOUBLETON PART; the
+      anchor at p.4 pairs the SINGLETON blocks, the doubleton blocks
+      being carried by the separate j-th power factor, and the
+      smooth-weight analogue (16) at p.6 confirms this by defining the
+      paired argument only for singleton blocks.
+      pintz10-patterns.md BOUNCED -- its Method anatomy presents the
+      cited Theorem [Pin] at p.2, a conditional result of a companion
+      preprint of the same author, as this anchor's main theorem; the
+      anchor's own theorem is the UNCONDITIONAL one at p.4, proved in
+      Section 2 ("2 Proof of the Theorem"), so the extract misstates
+      both the structure and the conditionality of the source's result.
+      Two further pintz10 defects are recorded in the same bounce spec:
+      an unmarked elision inside the Section 2.2 quotation, where the
+      source's "The parameter H can be arbitrary here" Remark stands
+      between the two quoted blocks and is dropped without an ellipsis
+      although the same extract marks a real elision at (2.16); and an
+      over-broad page citation, "p.6-7" for a block entirely on p.6.
+      BOTH BOUNCES ARE PROSE. Neither touches a display, a
+      transcription, a numbered object or a NOT-FOUND probe, and both
+      extracts PASS on everything else, exhibited in the record. NO
+      SURVIVOR WAS EDITED: an edit that made an extract pass would be
+      grading this session's own work, which is the separation this
+      fresh session exists to keep.
+      WHAT WAS HASHED. Exactly three lines appended to
+      payloads/HASHES.txt, one per CLEAN survivor --
+      bloomkuperberg23-oddmoments.md 9125824e..., kowalski-singser-dist.md
+      2177b805..., kuperberg21-oddmoments.md 50beadb8... NO HASH FOR
+      EITHER BOUNCED EXTRACT, AND NO HASH FOR THE RE-GRADE RECORD: the
+      pass is not terminal and a partial determination is not frozen.
+      The ANN-78 grade file's withheld hash still waits, together with
+      the record's own, for the terminal re-grade. Each appended line
+      was re-verified after the write by recomputing the sha256 of the
+      named file in the tree; all three match, and the write is
+      append-only with the first 91 lines byte-identical to the pin.
+      THE TWO LOGGED ADJUDICATIONS. (a) kowalski's "this session"
+      deictic DOES NOT BLOCK CLEAN, decided explicitly and on the
+      record, for three reasons. The deixis is not load-bearing: what
+      the FLAGS note has to deliver is the correction, and this pass
+      re-verified that correction independently against all thirty PDF
+      pages. It is not a dropped-object residual and the surrounding
+      claim is true. And the identical class of unresolvable deixis --
+      "at this pin" -- stands in the anchoring header of ALL FIVE
+      survivors, so a blocking reading would bounce the entire corpus on
+      a line ANN-78, the 2c repair and the 2c-residual apply all
+      accepted; this pass is not the place to introduce a corpus-wide
+      rule by applying it to one file. The deixis is nonetheless real
+      and is booked for the repair apply, which must touch that same
+      header line anyway, because "re-grade pending" on it goes stale
+      for the three re-graded survivors once this apply lands. (b) THE
+      THEOREM 1.4 PHRASING IS CONFIRMED AND IS NOT A DEFECT.
+      2301.06095v1 carries a LEMMA 1.4 at p.5, between Theorem 1.3 and
+      Theorem 1.5, and zero occurrences of the string "Theorem 1.4" in
+      the whole document; every later reference calls it a Lemma. The
+      extract's "the paper states no Theorem 1.4" is literally true, and
+      this is recorded so that a re-grader grepping 1.4 and finding the
+      Lemma does not misread the extract as wrong. It is independent of
+      the reason kuperberg23 bounces.
+      THE TWO AXES 2b SKIPPED, BOTH RUN, BOTH REPORTED. The robust
+      dropped-object scan, run with line breaks flattened so a split
+      reference cannot hide, INDEPENDENTLY RE-ESTABLISHED the survivors
+      clean rather than trusting the residual apply's word: no report N,
+      no appendix c.N and none of the header residues on any of the
+      five, with the single anticipated "this session" hit on kowalski,
+      which is 3.4(a) above. In-tree path-liveness, the axis ANN-78
+      skipped when it passed I4: every cross-reference the five extracts
+      make resolves at HEAD -- extract-grades-r1.md, the five anchor
+      paths by sha256, payloads/HASHES.txt line 83 (exactly the ETH
+      Zurich URL), kowalski-mu-recheck.py/.txt, the anchored
+      2210.09775v2 at HASHES line 21, the 2301.06095v1 reference-4
+      citation at p.19, and AGENTS.md. NOTHING DANGLED; this axis
+      bounced nothing.
+      THE ANN-78 GRADE WAS INCOMPLETE, BOOKED PLAINLY. This pass exists
+      because a single grade of these extracts proved untrustworthy, and
+      the count is now four: ANN-78 passed two non-ASCII characters in a
+      quotation, missed a report-1 reference split across a line break,
+      passed an I4 cross-reference without checking that the path still
+      resolved, and -- as this pass adds -- passed two extracts carrying
+      FALSE STATEMENTS ABOUT THEIR ANCHORS' OWN STRUCTURE. The two page
+      errors in that grade's prose are corrected in this pass's own
+      record and NOT in the grade file, which stays a timestamped record
+      per the operator's standing choice: reference [17] of
+      2312.09021v2 is at p.37, not p.38 (p.38 carries only [21] and
+      [22]), and Section 5 of 2601.07421 begins at p.10, not p.9 -- the
+      latter belonging to a precedent extract ANN-80 dropped, so no
+      extract graded here cites it.
+      NOTHING ELSE MATHEMATICAL MOVES. No Lean file, no frozen block, no
+      roadmap item, no verdict, no target, no threshold, no constant and
+      no bet changes. The five extracts were graded and not edited, so
+      their ASCII counts and every gate except the ledger, HANDOVER and
+      HASHES writes reproduce start-of-pass output exactly. Gates at
+      start and at close: frozen blocks byte-identical, relocation-check
+      passed, the single baseline Statement.lean sorry unchanged,
+      manifest rev count 1, toolchain trailing newline, item-0033
+      ratified, writeup mapper PASS, mathjax_lint 0 problems now
+      including the new record, zero non-ASCII in all five extracts, in
+      HANDOVER.md and in extract-grades-r2.md. All seven STOP conditions
+      were evaluated and reported; none fired. Two anchors needed care
+      and neither was guessed: 2109.03767v3's Type 1 encoding, which
+      renders parentheses and relations as letters and accents, and
+      1004.1072v1's digit-zero glyphs at p.7 and p.8, resolved from the
+      font encoding, which is a stronger instrument than the 200-dpi
+      render the extract cites.
+      HANDOVER DELTAS, THREE. B1: the cold-start read-order ANN range
+      moves ANN-01..80 to ANN-01..81. B2: THE OPEN-DECISIONS LOOSE END
+      IS RESOLVED -- the residual question of whether the two precedent
+      extracts stay in the corpus, which ANN-76 moved to item-0033, is
+      marked RESOLVED by ANN-80's drop rather than left as an open move.
+      B3: a new bullet at the head of the item-0022 group carrying the
+      grade table, what was hashed, both axes and both adjudications,
+      and the non-close.
+      STILL OPEN. ITEM-0033 DOES NOT CLOSE AND ITS ACCEPTANCE IS NOT
+      MET: five CLEAN and hashed is the acceptance and this pass
+      delivered three. The item stays ratified at position 1. The path
+      is a repair apply on kuperberg23-apsmooth.md and
+      pintz10-patterns.md to the specs in extract-grades-r2.md --
+      folding in the survivor-header work, since "at this pin" and the
+      now-stale "re-grade pending" sit on the same line in all five --
+      then a TERMINAL RE-GRADE by a session that did not perform that
+      repair, which hashes those two extracts and the record, and only
+      then the operator's close roadmap apply. This pass recommends the
+      repair, not the close, and performs neither. Everything ANN-80
+      left open remains open, including the two citation-policy
+      decisions item-0022 was carrying and the seventh
+      verdict-promotion recurrence.

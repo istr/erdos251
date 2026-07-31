@@ -1,0 +1,67 @@
+  - id: ANN-20260725-67
+    refs: [ANN-20260725-66, ANN-20260724-65]
+    date: 2026-07-25
+    note: >-
+      DISCHARGES THE HANDOVER REFRESH ANN-66 BOOKED AS SCHEDULED-NOT-
+      DONE. Authored by steering against HANDOVER.md at
+      d69026670abf873e9e366f37723e506cecc76228; applied on top of the
+      ANN-66 commit, which does not touch HANDOVER.md, so the section-7
+      line numbers remain valid. HANDOVER.md is the only file changed. No Lean file,
+      frozen block, production artifact, run, payload, dossier
+      workpaper, writeup file, roadmap item, or execution order is
+      touched. No verdict, target, threshold, constant, acceptance, or
+      bet is changed, and no status is flipped.
+      WHY IT IS A SEPARATE ENTRY. ANN-66 declined the refresh on the
+      ground that a half-read pass over an 800-line file reproduces the
+      defect ANN-65 repaired in its predecessor, namely carrying
+      statements false at the pin. The refresh became safe once the
+      deltas were enumerated with line numbers against the pin, in
+      section 7 of the steering consolidation v2, which the operator
+      approved. The commit executes that enumeration and nothing
+      beyond it; the enumeration, not the file, was the missing input.
+      THREE CONTENT-BEARING DELTAS. (i) The bullet claiming the
+      literature had never been checked for the S1 object, and that
+      checking it "is what item-0026 is for", was false on three counts
+      after 97bf6d6; replaced by the item-0026 result stated in its
+      informative form -- seven primary anchors, no carrier located, A3
+      the named gap axis, the absence a TRANSFER absence rather than a
+      blanket corpus absence. (ii) A new bullet records that Pintz
+      (1.8) is not an available floor at target rank, because a cold
+      start reading only HANDOVER.md would otherwise cite it as one;
+      the bullet carries the ANN-66 obstruction language verbatim in
+      substance, naming a gap in printed bookkeeping at its exact step
+      and declining to assert the theorem is false. (iii) The S1
+      paragraph's "absent from the anchored corpus" is narrowed to the
+      located absence while every other qualifier is kept verbatim,
+      including "the weakest clean, non-tautological analytic campaign
+      target currently known" -- substituting for that phrase is the
+      exact defect Dispatch A and Dispatch D repaired, and it survives
+      this refresh unaltered.
+      MECHANICAL DELTAS: title date; the ANN range and an ANN-66
+      scoring note in the cold-start line; the item-0026 outputs added
+      to the read order; execution order corrected to item-0026 first
+      with the note that whether it now leaves the order is an unmade
+      operator call; the two successors corrected from proposed to
+      ratified, recording that the item-0026 lane ran web OFF against
+      operator-held PDFs rather than web ON as originally scoped.
+      OPEN-DECISIONS BLOCK. Two entries struck as discharged: the
+      ratification of the two successors (356bae5) and the item-0026
+      web-ON firewall, which never bound because the lane ran web OFF.
+      Five added: whether item-0026 leaves the execution order; the
+      BET-20260724-10 call, flagged as the operator's and unresolved by
+      steering; the disposition of the operator-approved consolidation
+      v2, which steering holds and which is NOT placed in the tree by
+      this entry; the source_commit staleness in writeup/sources.yml;
+      and the four heading re-assignments from a292ba4 that carry
+      steering judgement rather than mechanism.
+      STILL NOT REPAIRED, unchanged from ANN-66 and deliberately left:
+      lean/README.md below its STALE banner; the Erdos251/Counting.lean
+      umbrella docstring false on three counts since ANN-45/ANN-47; and
+      rule-16/B6. A bookkeeping pass over the first two remains
+      unscheduled.
+      VERIFICATION. HANDOVER.md is ASCII-only before and after (0
+      non-ASCII bytes); the four superseded statements no longer appear
+      except as one quotation explicitly marked SUPERSEDED, retained so
+      a reader who remembers the old text can see it was retired rather
+      than silently dropped; no line outside the read-order, frontier,
+      and open-decisions sections is touched.

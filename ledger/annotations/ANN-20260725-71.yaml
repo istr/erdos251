@@ -1,0 +1,58 @@
+  - id: ANN-20260725-71
+    refs: [BET-20260724-09, BET-20260724-10, ANN-20260725-70,
+      ANN-20260725-69, ANN-20260724-64]
+    date: 2026-07-25
+    note: >-
+      PROPOSES THE RESOLUTION OF BET-20260724-09 AS NO AND MOVES IT TO
+      THE SCORED BLOCK. brier 0.0025 at p 0.05. One file: ledger.yaml.
+      Unlike ANN-70, steering was asked to PROPOSE this closure rather
+      than to perform it, so the operator apply is the decision and
+      this entry is the proposal; nothing else in the tree is touched
+      and no other bet is resolved.
+      WHY NO, four independent grounds, any one sufficient. (i) The
+      only candidate reaching both the rank and the window
+      (Jha 2605.23014) is conditional on a strong Hardy-Littlewood
+      variant, failing both "unconditional" and "usable without further
+      conjectural input". (ii) Every unconditional candidate misses the
+      rank; the two that reach the window do so on almost-prime
+      objects. (iii) All seven miss the word grain, so none is usable
+      for (CG) whatever else it clears -- this is the same A3 finding
+      that item-0026 reports as its structural result. (iv) The
+      even-Cramer-smooth clause is untested for all seven; no anchor
+      speaks to this project's deterministic gap system at all.
+      EARLY CLOSURE, five weeks before resolve_by, on the same reasoning
+      as ANN-70: the claim is scoped to "the item-0026 search", that
+      search is executed and its record complete, and no further
+      evidence is scheduled that could bear on it. If the operator
+      prefers to let it run to 2026-08-31, nothing in the record will
+      change; the closure is early, not premature.
+      THE HONEST READING OF THE SCORE, which is the substance of this
+      entry. 0.0025 is the best binary brier in the ledger and it
+      should NOT be read as good forecasting. The claim conjoins seven
+      conditions, one of which -- failure in the even-Cramer-smooth
+      model -- is a property no number theorist has reason to check,
+      since that model is this project's own construction and appears
+      nowhere in the literature. A published statement satisfying it by
+      accident is close to a null event, so the bet was nearly
+      unloseable. This is the ANN-70 defect with the sign reversed:
+      there, a condition the project could satisfy by redescription;
+      here, a condition the literature could not satisfy at all. Both
+      bets priced the project's own vocabulary rather than the world,
+      and the pair should be read together rather than as a bad score
+      offset by a good one.
+      CONSEQUENCE FOR THE RUNNING FIGURE. The binary mean moves 0.231
+      -> 0.198 over seven scored, and that movement is an artifact.
+      The five bets scored before 2026-07-24 average 0.149 on
+      externally-decidable claims, and steering recommends that figure
+      as the honest baseline until enough post-ANN-69 bets resolve to
+      replace it. The three bets registered in ANN-69 were already
+      checked against the redescription failure mode; they should also
+      be checked against THIS one before any of them is relied on --
+      each must be losable, not merely well-specified. Steering's
+      reading is that all three are: a numerical outcome, a
+      positive-proportion finding, and the existence of a named weaker
+      hypothesis are all things the world can decide against us.
+      STILL OPEN AFTER THIS ENTRY. BET-20260711-07 to 2026-08-08;
+      BET-20260718-08 to 2026-09-30 at its registered 0.07, the
+      re-pricing having been drafted and declined; and the three
+      ANN-69 bets, each binding only if its item is ratified and runs.

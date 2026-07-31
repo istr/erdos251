@@ -1,0 +1,98 @@
+  - id: ANN-20260726-75
+    refs: [ANN-20260726-74, ANN-20260726-73, ANN-20260716-41,
+      ANN-20260718-51, ERRATUM-5]
+    date: 2026-07-26
+    note: >-
+      OPERATOR RATIFIES THE REPORT-3 SPLIT; item-0022 AMENDED, item-0031
+      PROPOSED; THE KICKOFF IS ROUTED TO A FRESH SESSION. Authored by
+      steering (Claude Opus 5) on operator instruction; emitted as two
+      mboxes that apply on top of the ANN-73 and ANN-74 patches, roadmap
+      first. The roadmap half was produced through the roadmap-items
+      skill's own update and new commands plus direct body edits, then
+      emitted with emit-patch --baseline; no patch was hand-rolled.
+      THE SPLIT, as ratified. The 2026-07-19 alternative-routes report is
+      two different objects and gets two different instruments.
+      IDENTIFICATION duty joins item-0022, which already owns exactly
+      that duty for the other two reports and now owns all ten anchors.
+      EVALUATION duty becomes item-0031, PROPOSED and unscheduled,
+      because route proposals need a priced no-go audit rather than a
+      verdicted citation checklist, and because that is research work
+      rather than verification work. Reports 1 and 2 keep their full
+      verification scope; report 3 gets citation identification only and
+      NO route verdicts inside item-0022. Nothing in this entry verdicts
+      a single route.
+      item-0022 AMENDMENTS, all four previously ratified by the operator
+      and only now written into the store. (i) The fourth verdict class
+      SUPERSEDED joins confirmed / corrected / not-found, because the
+      reports predate items 0018, 0019, 0020 and 0026, and a claim that
+      was true when written and has since been overtaken is a different
+      object from a claim that was wrong. (ii) The output artifact is
+      named: dossier/item-0022-workpapers/absorption-checklist.md.
+      (iii) The shrunken scope is recorded. (iv) The report-3
+      identification clause is added to the acceptance, and unanchorable
+      citations are required to carry a verdict class rather than a hash.
+      The goal line's 2026-07-18 wording is corrected in the body rather
+      than silently rewritten: the Pintz discrepancy is a corpus gap and
+      not a mis-citation, the Bloom-Kuperberg line was dangling in report
+      1's own bibliography, and the precedent layer is P1 through P8.
+      The TITLE IS DELIBERATELY UNCHANGED. It still names the two
+      2026-07-18 reports because verification remains the item's
+      identity; report 3 enters only as anchor and citation work. A
+      reader who sees three artifacts in the acceptance and two in the
+      title should read the split, not a drift.
+      item-0031 IS PROPOSED, NOT RATIFIED, and NOT scheduled: proposed
+      items stay out of roadmap/_order.md by the skill's own status gate,
+      so the execution order is byte-identical to what ANN-73 set. Rank
+      0210 in the research arc. Its single first question is the one the
+      report's whole priority ordering rests on: whether the residue
+      route really needs one window of order log_2 log x where matched
+      flanks need J+K of order twice that, measured against the corpus
+      depth arithmetic and the triage-1a finding that the variants share
+      one log log window budget. Its instrument is the one the report
+      itself proposes and the project already owns -- rule 15 budget
+      sheets and the D3 no-go questions, pricing 2^J, J!, J^J,
+      exp(J log J) and the primorial below J, naming the first factor
+      that dies per route. The item explicitly does NOT inherit the
+      report's own priority ordering, and it is barred from proposing
+      successor items; it may only state which routes would deserve one.
+      THE KICKOFF GOES TO A FRESH SESSION, on the ANN-41 grounds, which
+      were re-read at this pin rather than recalled. ANN-41's ground (c)
+      is the operative one: the hot context holds no residual advantage
+      once its knowledge has been spent into the durable record, and that
+      is exactly the case here -- the identification layer, the 1004.1072
+      finding, the numerical confirmation and ERRATUM-5 are all booked in
+      ANN-74 and travel through HANDOVER. A SECOND, item-0022-SPECIFIC
+      GROUND applies and is stronger: this steering session has read both
+      2026-07-18 reports in full and has fetched the full text of two of
+      the newly anchored sources. A kickoff authored from that context
+      risks encoding conclusions into what is supposed to be an
+      instruction set, which would defeat the point of an independent
+      verdict pass. Recommendation, not a decision: the operator may
+      still direct otherwise, and ANN-41 requires the reasoning to be
+      logged either way.
+      A CORRECTION IN STEERING'S OWN RECORD, logged because the project
+      treats provenance as load-bearing. Steering entered this session
+      carrying the belief that item-0023 was a Dispersion Arm and
+      item-0024 a Linear-Relations Lab, both ratified research entries.
+      Both are false at this pin: 0023 and 0024 are tooling items. The
+      belief came from steering's own recall, not from the tree, and it
+      is the same false referent ERRATUM-5 records in a landed workpaper.
+      Had a kickoff been authored from that recall rather than from a
+      read of roadmap/, it would have produced exactly the class of
+      artifact the project has caught six times. The operating rule
+      stands unchanged and is restated here: the tree at the pin is the
+      only authority, and steering reads it rather than remembering it.
+      WHAT DOES NOT MOVE. No Lean file, frozen block, dossier workpaper,
+      anchor line, run or writeup file is touched. roadmap/_order.md is
+      unchanged. No verdict, target, threshold or constant changes. No
+      bet is resolved, re-priced or amended: BET-20260711-07 to
+      2026-08-08, BET-20260718-08 at 0.07, and BET-20260725-11/12/13 at
+      0.12 / 0.15 / 0.35 all stand, and item-0031 carries no bet because
+      it is not ratified. item-0026's NOT-FOUND verdict and A3 as the
+      named gap axis are untouched.
+      HANDOVER DELTAS, bounded. (i) Cold-start read-order line, ANN range
+      74 -> 75. (ii) The report-3 scope-split entry leaves the
+      open-decisions block, replaced by a bullet recording the ratified
+      split, item-0031's proposed status and the fresh-session routing.
+      (iii) The precedent-anchor and unanchorable-citation decisions stay
+      open and are untouched. Nothing else changes.
