@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..89; the old path
+strictly-append-only file per entry, ANN-01..90; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 9 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
@@ -1284,15 +1284,14 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   since ANN-58. Deferring is deliberate: 0028/0029/0030 decide whether
   the re-scope lands on the S+ integration branch or the S- obstruction
   branch, and re-scoping now would fix the wrong one.
-- EXECUTION PROFILES ARE MISSING on three scheduled items -- item-0006,
-  item-0029, item-0030 -- including two of the three
-  item-0026 successors, so their advisory class and reasoning are
-  unavailable at scheduling time. item-0022 received
-  {class: medium, reasoning: high} at 3c40e6e, booked late by ANN-76.
-  Steering proposes item-0030 {class: medium, reasoning: high} and
-  item-0029 {class: large, reasoning: high}; item-0006 is unpriced. The field is
-  advisory and non-gating, so this is a bookkeeping call, and it
-  overlaps item-0024, which extends exactly that field.
+- EXECUTION PROFILES: SET on item-0029 {class: large, reasoning: high}
+  and item-0030 {class: medium, reasoning: high} (ANN-90, the ANN-73
+  steering values, operator-ratified before either item runs).
+  item-0006 stays DELIBERATELY UNPRICED until its window nears -- it
+  sits behind the item-0010 re-scope and its shape may change with
+  that branch. The field is advisory and non-gating; the single-line
+  format is unchanged and item-0024 (multiline support) is untouched,
+  still last by intended postponement.
 - source_commit IN writeup/sources.yml still reads
   6b8248462d90e58482ed91871e7713bdf8976bd5 while per-entry blobs have
   moved on. The mapper does not validate it; re-pinning is editorial.
@@ -1333,7 +1332,9 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
   investment did happen there across sessions 3-5, and the layer IS
   consumed by the landed implication cone through Conditional.lean. Its
   "Glue proofs (flagged): q_eq_of_count only" line carries the separate
-  ANN-45(ii) staleness. A bookkeeping pass over both is unscheduled.
+  ANN-45(ii) staleness. Both are ROUTED (ANN-90): item-0027's amended
+  acceptance carries their refresh in the same apply that lands the
+  integrator, so they stay stale exactly until that item lands.
 
 ## item-0004 RESOLVED (2026-07-16)
 Full report: dossier/literature.md (ANN-28; original artifact

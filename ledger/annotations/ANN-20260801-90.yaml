@@ -1,0 +1,88 @@
+  - id: ANN-20260801-90
+    refs: [ANN-20260801-89, ANN-20260731-87, ANN-20260730-84,
+      ANN-20260726-73]
+    date: 2026-08-01
+    note: >-
+      TWO EXECUTION PROFILES ARE SET AND item-0027 IS AMENDED TO CARRY
+      THE TWO KNOWN-STALE LEAN DOCUMENTATION SURFACES. Authored by
+      steering (Claude Fable 5, analysis sandbox) on operator
+      instruction at pin 85bf096 == HEAD of main; emitted as a git am
+      mbox; the operator apply is the ratifying commit. Files:
+      roadmap/item-0029.md and roadmap/item-0030.md (one
+      execution_profile line each), roadmap/item-0027.md
+      (acceptance_intent extended, one appended body note; status,
+      arcs, rank, title, goal, links and execution_profile untouched),
+      HANDOVER.md (three bounded deltas, enumerated below), this
+      entry. ONE APPLY, per rule 25. All three item files were edited
+      through the roadmap-items tool's update command (--class,
+      --reasoning, --acceptance); the single body note is a direct
+      edit on the ANN-75 precedent, the tool having no body command.
+      THE PROFILES, closing two thirds of the ANN-73 second finding.
+      item-0029 {class: large, reasoning: high} and item-0030
+      {class: medium, reasoning: high} -- the ANN-73 steering values,
+      now operator-ratified, set BEFORE either item runs, which is the
+      point: item-0029 is next in the execution order and the only
+      registered hypothesis aimed at the A3 word-grain absence, and
+      scheduling it without its advisory class was the bookkeeping gap
+      ANN-73 flagged. item-0006 stays DELIBERATELY UNPRICED: it sits
+      behind the item-0010 re-scope, its shape may change with that
+      branch, and pricing it now would price the wrong object. The
+      field is advisory and non-gating; the single-line format is
+      unchanged and item-0024 (multiline support) is untouched, still
+      last by intended postponement.
+      THE AMENDMENT, on the ANN-84 precedent (a ratified item amended
+      by steering mbox, operator-ratified at apply; reversal is a
+      one-line operator edit before applying). item-0027's acceptance
+      gains one clause and its body one dated note: the two Lean
+      documentation surfaces named known-stale in HANDOVER --
+      (a) lean/README.md below its STALE banner, rewritten against the
+      state the item lands and the banner then removed, and (b) the
+      Erdos251/Counting.lean umbrella docstring, whose opening line
+      still reads "STATEMENT SKELETON (item-0014)..." and whose
+      glue-proofs line carries the separate ANN-45(ii) staleness --
+      are refreshed IN THE SAME APPLY that lands the integrator.
+      GROUNDS: item-0027 is the only scheduled Lean-lane window; rule
+      23's symmetric scope envelope requires the deliverable to be
+      covered by the item before any dispatch may ask for it; and the
+      marginal cost inside a largest-class run is small where a
+      doc-only session would not be. CONDITION, in the item text: no
+      frozen block is touched, and blocks.py check-frozen plus the
+      strict sorry inventory gate the edits like every other Lean
+      change.
+      NOTHING ELSE MOVES. No Lean file changes in THIS apply -- the
+      amendment edits the item file only; the documentation edits
+      happen inside the item-0027 run, gated there. No roadmap status,
+      rank, arc or order changes; roadmap/_order.md is byte-unchanged
+      and item-0029 remains at position 1. No bet is resolved,
+      re-priced or amended: BET-20260711-07 to 2026-08-08 (operator
+      note this session: all bets stand, no early scoring),
+      BET-20260718-08 at 0.07, BET-20260725-12/13 at 0.15 / 0.35. NO
+      HASH LINE IS ADDED and payloads/HASHES.txt is byte-unchanged. No
+      frozen block, run, payload, dossier workpaper, writeup file,
+      extract or extract header is touched. No verdict, target,
+      threshold or constant changes; the item-0028 verdict and the
+      item-0026 NOT-FOUND/A3 state stand exactly as ANN-88 booked
+      them. Q1 of item-0032 was reviewed this session and is
+      DELIBERATELY NOT decided here: it stays open exactly as ANN-87
+      left it.
+      HANDOVER DELTAS, three, enumerated. (i) The cold-start
+      read-order line moves ANN-01..89 to ANN-01..90. (ii) The
+      open-decisions EXECUTION PROFILES bullet is rewritten from
+      missing-on-three to set-on-two, with item-0006 recorded as
+      deliberately unpriced until its window nears. (iii) The KNOWN
+      STALE bullet's closing sentence moves from
+      unscheduled-bookkeeping-pass to ROUTED: item-0027's amended
+      acceptance carries both refreshes, so the surfaces stay stale
+      exactly until that item lands. Nothing else changes; HANDOVER.md
+      is ASCII-only before and after, as are this entry and the three
+      item files.
+      STILL OPEN AFTER THIS ENTRY. BET-20260711-07 (resolve_by
+      2026-08-08, one week out), BET-20260718-08, BET-20260725-12,
+      BET-20260725-13. The item-0010 re-scope (deferred until
+      item-0029 and item-0030 return, per ANN-73 and this session's
+      operator confirmation). The two Lean doc surfaces, stale in the
+      tree until item-0027 lands, now routed there. The item-0006
+      execution profile, deliberately unpriced. source_commit in
+      writeup/sources.yml and the four heading re-assignments from
+      a292ba4, both routed to the next writeup work package. ERRATUM-5
+      booked and deliberately unrepaired. Q1/Q2 of item-0032.
