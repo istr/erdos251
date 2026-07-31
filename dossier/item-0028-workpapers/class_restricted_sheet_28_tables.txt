@@ -1,0 +1,273 @@
+item-0028 class-restricted Kuperberg 1.2 cost sheet.
+Grid convention (re-declared, anchor budget_sheet_20.py (m)/(p), read
+only): L = (2/ln2) lnln x; D0-exact L_ceil = 2J+1, J = ceil(log2(
+ceil(13 C0 A'' ln x))).  Window h = A' L ln x, A' = 1.5, A'' = 48,
+C0 = 2/ln3 = 1.820478, e^gamma = 1.781072.
+Exponent convention: expo(F) = ln F / lnln x, F = (ln x)^expo.
+Budgets (echoed, anchor budget_sheet_20_ext.py, read-only): (G1)
+o(ln x): expo < 1 with decay or a limit < 1.  (G2) x^eps: ln F =
+o(ln x).  (G3) pigeonhole reserve: ln x / C_F must survive.
+Loss normalization (item body Section 1, binding on every table):
+the class family carries a DETERMINISTIC parity main term (C4a
+below).  Loss of a class-restricted r-th-moment bound is measured
+RELATIVE to that main term at the same r; the two unrestricted
+reference columns (S3) are measured relative to 1.
+
+== S1a. SELF-CHECK: reproduce the anchored F17.9 grid column ==
+F17.9 = L ln L / lnln x at k = L = (2/ln2) lnln x (item-0010
+budget_sheet_20_ext.py T9.S3 grid-L column).  Anchored: 6.143 /
+6.932 / 7.944 / 8.963 (3 dp).
+x        L          F17.9        anchored   match
+1e8         8.4065     6.1430   6.143      PASS
+1e20       11.0504     6.9320   6.932      PASS
+1e100      15.6942     7.9443   7.944      PASS
+1e1000     22.3381     8.9629   8.963      PASS
+  -> S1a: PASS
+
+== S1b. SELF-CHECK: K1.2 displayed / Mertens-honest / exact triple ==
+(pintz-constants.md Section 4; exact product RECOMPUTED from a sieve
+here, not copied.)
+x        (3lnk)^k    (3e^g lnk)^k  exactProd^k
+1e8         5.3503     7.0158     7.0287
+1e20        5.6990     7.3644     7.3751
+1e100       6.0922     7.7577     7.7638
+1e1000      6.4403     8.1058     8.1084
+  vs anchored: 5.3503/5.6990/6.0922/6.4403 | 7.0158/7.3644/7.7577/
+  8.1058 | 7.0287/7.3751/7.7638/8.1084
+  -> S1b: PASS
+
+== S1c. SELF-CHECK: Kowalski mu_k(2), Example 3.5, k = 2..6 ==
+Euler product mu_k(2) = prod_p ((1-1/p)(1-2/p)^k + (1/p)(1-1/p)^k) *
+(1-1/p)^(-2k), truncated p < 2e6, dps 40 (ANN-20260726-74 method).
+primes used: 148933 (all primes p < 2000000)
+  mu_2(2) = 2.30096154471322  (anchored 2.300...)  match=True
+  mu_3(2) = 6.03294567320657  (anchored 6.03294...)  match=True
+  mu_4(2) = 17.5624600163967  (anchored 17.562...)  match=True
+  mu_5(2) = 55.2550578033345  (anchored 55.255...)  match=True
+  mu_6(2) = 184.18159739066  (anchored 184.18...)  match=True
+  -> S1c: PASS
+
+== S1d. Recheck re-run (Section 3.2 of the dispatch) ==
+pintz10-2-16-recheck.py re-executed from its landed directory this
+session; stdout identical to the landed pintz10-2-16-recheck.txt
+except line 2 (the tool-version line; this session's version line
+recorded in the final report).  -> S1d: PASS
+
+S1 SELF-CHECKS: ALL PASS
+
+== S2. Decision frame ==
+Growth classes (expo(F) = ln F / lnln x, F = (ln x)^expo):
+  GC-CONST : expo bounded in x with a stated finite limit
+             ("exponential in the rank alone": cost <= c^k).
+  GC-ITLOG : expo = c * lnlnln x + O(1), c > 0 ("rank times an
+             iterated logarithm": cost = (c' ln k)^k).
+  GC-FASTER: expo / lnlnln x -> infinity.
+BET-20260725-11 resolution clause, verbatim:
+  "operator judgment against the item-0028 sheet; a favourable
+  outcome requires the loss to be exponential in the rank alone,
+  not in rank times an iterated logarithm"
+Item body, two-numbers criterion, verbatim:
+  "Two numbers decide it. If the class-restricted loss is
+  exponential in the rank alone, the cost exponent collapses and
+  the polylog gate becomes a live question rather than a settled
+  failure. If the loss is the same, the hypothesis is closed by
+  arithmetic."
+
+== S3. Unrestricted references (normalization: relative to 1) ==
+C3a. K1.2 Mertens-honest expo (S1b 'hon' column). Class: GC-ITLOG
+(expo ~ (2/ln2) ln(3 e^gamma ln k), grows like lnlnln x). Support:
+MEASURED (finite product), on top of the anchored Theorem 1.2.
+Venue: Kuperberg 1.2 carries "unrefereed-preprint" venue class ONLY
+(arXiv v2, referee thanks in the front matter, no journal ref
+printed) -- the Section 3.4 Lemma-2 support annotation does NOT
+apply here; it is scoped to Pintz Lemma 2 of 1004.1072v1 only.
+x        C3a expo (K1.2 Mertens-honest)
+1e8         7.0158
+1e20        7.3644
+1e100       7.7577
+1e1000      8.1058
+
+C3b. True-growth reference at r = 2 (Kowalski Example 4.3): leading
+term expo = (4/ln2) * lnln(3L) per scale. Class: GC-ITLOG. Support:
+MEASURED (asymptotic to the printed order). TWO caveats: (i) the
+O(k) additive term makes per-scale values indicative only, the
+deliverable is the growth class GC-ITLOG; (ii) venue: unrefereed
+ETH-hosted note (no journal reference printed). Purpose: the
+unrestricted r=2 growth k lnln k is a property of the AVERAGE
+itself (proved in the anchor), not an artifact of Kuperberg's
+method; any class-restricted gain must come from the restriction.
+x        C3b expo = (4/ln2) lnln(3L)
+1e8         6.7619
+1e20        7.2312
+1e100       7.7823
+1e1000      8.2883
+
+== S4. Class-family forced profile ==
+C4a. Parity main term (PROVED, elementary). A realized flank class
+is a tuple of offsets of consecutive primes at scale x >= 3; all
+such primes are odd, so every offset d_i is even, so
+D+ = {0, d_1, ..., d_nu} occupies exactly one residue class mod 2:
+nu_2(D+) = 1. By B1 the p=2 factor of S(D+) is
+(1-1/2)/(1-1/2)^t = 2^{t-1} exactly, t = |D+|. Every class member
+carries it, so the class-restricted r-th moment carries the
+deterministic factor 2^{r(t-1)}. Classification: DETERMINISTIC MAIN
+TERM of the class family, NOT loss; it fixes the loss
+normalization. Cross-anchor: B4 is the anchor's own sentence for
+the same factor.
+expo = r(t-1) ln2 / lnln x, at t = L+1 (identity, exactly 2r) and
+at t = L_ceil+1 (descending toward 2r), r in {1, 2}.
+x        t=L+1,r=1  t=L+1,r=2  t=Lc+1,r=1  t=Lc+1,r=2
+1e8         2.0000     4.0000     7.3752    14.7505
+1e20        2.0000     4.0000     5.9727    11.9453
+1e100       2.0000     4.0000     4.7151     9.4302
+1e1000      2.0000     4.0000     4.0290     8.0580
+  -> t=L+1 columns are exactly 2r at every scale (identity, since
+     L = (2/ln2) lnln x); t=Lc+1 columns descend toward 2r as scale
+     grows (Lc/L -> 1). Support: PROVED.
+
+C4b. Admissibility cap (bookkeeping, no column): nu_p <= p-1 for
+every p on any tuple with S(D+) != 0 (B1: the p-factor vanishes at
+nu_p = p).
+
+C4c. Pointwise worst odd-prime profile. Nothing on the anchored
+shelf forces nu_p away from 1 at odd p for a realized class
+(located non-forcing, citing the item-0026 A3 absence: the
+distributional input that would exclude concentrated realized
+classes is exactly the located absence). Column: the worst
+pointwise class-restricted small-prime cost relative to the C4a
+main term, expo = (t-1) * sum_{2<p<=k^3} 1/p / lnln x at t = L+1
+(per scale; finite sieve sum, k = L). Class: GC-ITLOG (the sum
+grows like lnln k^3). Support: PROVED (finite computation on B1).
+x        C4c expo
+1e8         4.6754
+1e20        5.0215
+1e100       5.4101
+1e1000      5.7547
+Conclusion: pointwise, restriction to the class family changes the
+p=2 factor from rare-event to main term and changes nothing else
+in the growth class.
+
+== S5. The one located cardinality-restricted mechanism ==
+(Pintz Lemma 2 one-position induction; every use below carries the
+Section 3.4 support annotation: "unrefereed-preprint; printed
+statement differs from the statement the proof establishes; reading
+reconstructed and verified in-project".)
+
+C5a. Split-point coverage at the exchange window. y = (ln h)/2
+(1004.1072 convention, distinct from the 1004.1084 y = 5 ln H/6
+priced in pintz-constants). Support: MEASURED-exact.
+x        y        primes<=y   pi(y)  ln(mass covered)  share of full Mertens mass
+1e8     2.7240 [2]              1     0.6931              0.2851
+1e20    3.3188 [2, 3]           2     1.0986              0.4304
+1e100   4.2990 [2, 3]           2     1.0986              0.4086
+1e1000  5.6268 [2, 3, 5]        3     1.3218              0.4705
+Purpose: the averaged component of the per-step route ((2.16),
+p <= y) covers only this prime set at the project's window; the
+entire remaining small-prime range 2 < p <= k^3 sits in the
+pointwise regime of the printed proof.
+
+C5b. Band ratio. PROVED limit L/y -> 2L/ln h -> 4/ln2 =     5.7708
+(derivation: ln h = lnln x + ln(A'L), L = (2/ln2) lnln x).
+x        L/y       Lc/y
+1e8         3.0861    11.3804
+1e20        3.3296     9.9432
+1e100       3.6507     8.6067
+1e1000      3.9700     7.9975
+The band (y, t] is nonempty grid-uniformly (L/y and Lc/y both > 1
+at every scale above): the printed two-sided per-factor shape of
+(2.14)/(2.3)-type displays is outside its validity there (the
+mirror of the pintz-constants F2 finding via the star identity B10;
+no re-derivation needed, cited). This bites any TWO-SIDED or
+lower-direction use; for the upper direction see C5c.
+
+C5c. Pi_3 <= 1 for admissible extensions (band-immune, upper
+direction). Derivation: for p > y, p not dividing Delta, the
+extension factor is (1-(nu_p+1)/p)/((1-nu_p/p)(1-1/p)); by the star
+identity (B10) it equals 1 - nu_p/((p-nu_p)(p-1)); admissibility
+(C4b) gives 1 <= nu_p <= p-2 for a nonvanishing extension, hence the
+factor lies in [0, 1]. So the p > y, p !| Delta part of the r-th-
+power extension ratio costs nothing in the upper direction.
+Support: PROVED (one line from B10 + B1).
+
+C5d. Pi_1 averaged per-step cost via the (2.16) sharpening.
+(i) EXACT: finite product over the actual prime set p <= y (C5a)
+of the maximum over 1 <= nu <= min(t+1, p-1) of the exact (2.16)
+local factor (implemented from B8 directly, numerator and
+denominator expanded separately, no symbolic simplify -- the
+recheck's recorded hazard), at t = L+1. Support: MEASURED-exact.
+x        EXACT prod r=1   EXACT prod r=2   expo r=1   expo r=2
+1e8     1.000000 2.000000     0.0000     0.2379
+1e20    1.000000 3.000000     0.0000     0.2869
+1e100   1.000000 3.000000     0.0000     0.2020
+1e1000  1.000000 3.750000     0.0000     0.1707
+(r=1 product is exactly 1 at every scale: the local factor's r=1
+collapse (2.7) reproduced here as the exact identity it is.)
+
+(ii) LIMIT SHAPE: accumulated third-order bound over t = 0..L-1
+steps, expo limit (2/ln2) * (r(r-1)/2) * C3 with
+C3 = sum_p (p-1)/p^3 = P(2) - P(3), using nu_p <= p-1 absolutely.
+C3 (prime zeta, P(2)-P(3)): 0.277484780742
+C3 (direct sieve sum, primes p < 2000000, same sieve as S1c): 0.277484748391
+  -> agree to 7 significant digits (sieve tail beyond 2e6 accounts
+     for the residual); C3 = 0.27748...
+Support: MEASURED (series identity to the printed order; the
+remainder is not uniformly controlled -- quote the recheck
+docstring's own caveat: "no remainder is controlled uniformly in
+p, nu_p and r here"). Class of this COMPONENT: GC-CONST (constant
+in x -- the ratio L/lnln x = 2/ln2 does not grow with scale).
+r=1:     0.0000   r=2:     0.8007
+Print beside it: this component alone is not a class-restricted
+moment bound; see C5e.
+
+C5e. The unmarked residue. Source's own disclosure, quoted (B7):
+  "we will not mark the dependence of the constants implied by <<
+  or 0 symbols on t and r"
+Column: the visible pointwise Pi_2 accumulation, per-step
+log Pi_2 <= (1+o(1)) * 2t/ln y, accumulated over t = 0..L-1:
+expo = r * L^2 / (ln y * lnln x) per scale. Class: GC-FASTER.
+x        C5e expo r=1   C5e expo r=2
+1e8        24.2054    48.4109
+1e20       26.5790    53.1580
+1e100      31.0509    62.1018
+1e1000     37.3098    74.6196
+Print beside it: this is the PRINTED pointwise bookkeeping; an
+h-averaged treatment of Pi_2 (density of p|Delta over h is
+<= (t+1)/p) would be per-step o(1), but that derivation, and the
+joint average of Pi_1^r Pi_2^r it requires, is ABSENT from the
+nine-page note -- the same shape as the pintz-constants F2 finding:
+plausibly rescuable, not carried by the source. OPEN; out of scope
+here (Section 1 non-scope).
+
+== S6. Synthesis and verdict ==
+column  what it prices                          growth class  support        full-range?  upgrade path
+C3a     unrestricted K1.2, Mertens-honest         GC-ITLOG      MEASURED       yes          absolute constant in Theorem 1.2's <<
+C3b     unrestricted true growth at r=2 (Kowalski) GC-ITLOG      MEASURED       yes          the O(k) additive term pinned
+C4a     parity main term (deterministic, not loss) exactly 2r    PROVED         --           n/a (main term, fixes normalization)
+C4c     worst pointwise odd-prime cost             GC-ITLOG      PROVED         yes          a distributional input excluding
+                                                                                              concentrated realized classes (A3)
+C5d     (2.16)-sharpening averaged per-step cost    GC-CONST      MEASURED(-exact) NO (p<=y only) the Q2/Q3-type band-(y,k] rescue
+C5e     printed pointwise Pi_2 bookkeeping          GC-FASTER     MEASURED       yes          the absent h-averaged joint treatment
+
+Mechanical determination: every GC-CONST candidate (C5d) is
+component-only (covers only p<=y, C5a); every full-range column
+(C3a, C3b, C4c, C5e) is GC-ITLOG or worse. -> (V-NEG) fires.
+
+VERDICT: V-NEG
+(V-NEG) NEGATIVE AT CORPUS GRAIN: no located mechanism prices a
+class-restricted r-th-moment loss (r in {1,2}, relative to the
+C4a main term) in growth class GC-CONST at support MEASURED or
+better over the full small-prime range; the item's hypothesis
+closes. The one GC-CONST mechanism located (C5d, the (2.16)
+sharpening) is component-only: it covers p <= y (C5a), not the
+full range 2 < p <= k^3 that C4c and C5e cover, where the cost is
+GC-ITLOG (C4c) and GC-FASTER (C5e) respectively.
+
+== S7. Budget-gate echo (hypothetical favourable outcome) ==
+A GC-CONST loss at r=2 would put the class-restricted moment cost
+at expo = 4 (parity main term, C4a, 2r at r=2) + 0.8007 (C5d third-order
+limit at r=2) + c* with c* the UNPINNED per-step constant, i.e.
+polylog cost and (G1) live -- exactly the item body's "the polylog
+gate becomes a live question". No claim that c* exists; printed
+symbolically only.
+
+END OF CLASS-RESTRICTED SHEET 28

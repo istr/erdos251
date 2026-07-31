@@ -1,0 +1,113 @@
+  - id: ANN-20260801-88
+    refs: [ANN-20260731-87, ANN-20260728-83, ANN-20260726-74,
+      ANN-20260726-73, ANN-20260725-69, BET-20260725-11]
+    date: 2026-08-01
+    note: >-
+      item-0028 IS EXECUTED AND CLOSED: THE CLASS-RESTRICTED KUPERBERG
+      1.2 COST IS PRICED, VERDICT NEGATIVE AT CORPUS GRAIN -- no
+      located mechanism prices a class-restricted r-th-moment loss in
+      growth class GC-CONST at support MEASURED or better over the
+      full small-prime range; the item's hypothesis closes, AND THE
+      THREE PINTZ10 PLANNING INPUTS OF 2026-07-26 ARE LANDED.
+      Executed by the local executor against the Section 0 pin of the
+      item-0028 kickoff v1 (steering sha256 not separately recorded by
+      the operator at dispatch time; ephemeral, never committed); the
+      operator apply is the ratifying commit. Executor model: Claude
+      Sonnet 5 (claude-sonnet-5). Files: seven new files under
+      dossier/item-0028-workpapers/ (the three landed planning inputs
+      byte-exact as authored 2026-07-26; the landing note; the sheet,
+      its tables, the final report), seven appended payloads/HASHES.txt
+      lines, HANDOVER.md (three bounded deltas, enumerated below), this
+      entry, and the roadmap done-move of item-0028 -- one apply,
+      nothing deferred, per rule 25.
+      THE LANDING. The three files were held untracked in the executor
+      tree under dossier/item-0022-workpapers/ since 2026-07-26
+      (extract-grades-r3.md Section 0; ANN-87) and are landed under
+      their consuming item byte-exact, sha256
+      223465daa26d14129c19b563919d73fe045e1351291ca2ec32725cd4ed7bc8ba
+      (pintz10-source-defects.md),
+      85c9db73c32af52c927f163d782802de2e4e07d7892567d2f6c295251cc81f88
+      (pintz10-2-16-recheck.py), and
+      2524cc7cd1da822272dbe55a81fbd60547736f8a6fa787ff0fafab18eb999f2f
+      (pintz10-2-16-recheck.txt). The workpaper's declared verification
+      path (item-0022 repair r1 Task D) was superseded by a stronger
+      instrument: every source-facing claim was re-verified against the
+      graded CLEAN extracts pintz10-patterns.md (ANN-83) and
+      pintz10-singser.md, and the recheck script re-executed with
+      output identical to its landed record up to the tool-version line
+      (landed: sympy 1.14.0, mpmath 1.3.0; this session: sympy 1.13.3,
+      mpmath 1.3.0); outcomes CONFIRMED except A2/A9 (SUPPORTED-WITH-
+      INFERENCE, IMPRECISE) and A4 (STALE BY SUPERSESSION, expected),
+      recorded in item-0028-final-report.md Section V-A. The landing
+      note enumerates the superseded clauses; the files themselves are
+      not edited (leave-and-document). LABEL COLLISION BOOKED: the
+      workpaper's internal "S1" label (its Section 4) is cited
+      project-wide as "the (2.16) sharpening", never as bare S1.
+      CORPUS-HYGIENE ANNOTATION IN FORCE from this apply: any project
+      use of Lemma 2 of 1004.1072v1 carries "unrefereed-preprint;
+      printed statement differs from the statement the proof
+      establishes; reading reconstructed and verified in-project"
+      (workpaper Section 7, operator-ratified by this apply).
+      THE SHEET. Deterministic, re-run stable (two runs byte-identical);
+      self-checks reproduce the anchored F17.9 column, the
+      pintz-constants Section 4 K1.2 triple, and Kowalski's printed
+      mu_k(2) values k=2..6 to every printed digit. Columns and growth
+      classes: C3a (K1.2 Mertens-honest) GC-ITLOG, 7.02-8.11 across the
+      grid; C3b (Kowalski r=2 reference) GC-ITLOG, 6.76-8.29; C4a
+      (parity main term) DETERMINISTIC, exactly 2r at t=L+1; C4c
+      (pointwise worst odd-prime cost) GC-ITLOG, 4.68-5.75; C5a (split-
+      point coverage) MEASURED-exact, y=2.72-5.63 covering 29%-47% of
+      the Mertens mass; C5d (the (2.16)-sharpening averaged per-step
+      cost) GC-CONST but component-only (covers only p<=y, not the
+      full small-prime range); C5e (the printed pointwise Pi_2
+      bookkeeping) GC-FASTER. THE VERDICT, verbatim from the sheet:
+      NEGATIVE AT CORPUS GRAIN -- no located mechanism prices a
+      class-restricted r-th-moment loss (r in {1,2}, relative to the
+      C4a main term) in growth class GC-CONST at support MEASURED or
+      better over the full small-prime range; the item's hypothesis
+      closes. The split-point finding: at the exchange window the
+      per-step route's averaged component covers only p <= y = (ln
+      h)/2, i.e. {2}/{2,3}/{2,3}/{2,3,5} at the four grid scales, a
+      29%-47% share of the Mertens mass; the band ratio L/y = 3.09 to
+      3.97 rises toward 4/ln 2 = 5.7708. The parity factor 2^{r(t-1)}
+      is booked as the class family's deterministic MAIN TERM (expo
+      exactly 2r at grid rank), fixing the loss normalization.
+      BET-20260725-11 NOW BINDS (item ratified and run) and stays OPEN
+      for operator judgment against the sheet, resolve_by 2026-09-30;
+      no bet is scored, ledger/bets.yaml is untouched.
+      NOTHING ELSE MATHEMATICAL MOVES. No Lean file, frozen block, run,
+      payload, existing dossier workpaper, writeup file, extract or
+      extract header is touched; no existing anchor line changes; no
+      PDF was opened (all verification against graded extracts, rule
+      26(4)). item-0026's NOT-FOUND verdict and A3 as the named gap
+      axis are unchanged; no verdict on the separator S1, on (CG), or
+      on the item-0010 campaign state is recorded.
+      ENVIRONMENT NOTE. The dispatch's Claude Code roadmap-tool path
+      (.claude/skills/roadmap-items/scripts/roadmap.py) does not exist
+      at this pin; only .agents/skills/roadmap-items/scripts/roadmap.py
+      is present and was used throughout (recorded in the final report
+      Section 1, not a validity-predicate failure).
+      GATES at start and close: all reported green in
+      item-0028-final-report.md Section 1, including the ledger triple
+      and mathjax_lint with the new files, and re-run stability
+      (verified twice). STOP conditions: all reported, none fired.
+      HANDOVER DELTAS, three, enumerated: (i) cold-start ANN range
+      ANN-01..87 -> ANN-01..88; (ii) the EXECUTION ORDER bullet drops
+      item-0028 (order now item-0029, item-0027, item-0030, item-0010,
+      item-0006, item-0024) and adds it to the completed list; (iii) a
+      new frontier bullet directly above the "PINTZ (1.8)" bullet
+      carrying the landing, the verdict, the growth-class table
+      headline, the annotation, and the BET-11 binding.
+      STILL OPEN AFTER THIS ENTRY. BET-20260725-11 (operator judgment
+      against this sheet). Everything ANN-87 left open remains open:
+      the item-0010 re-scope (now one feeder returned, two to go),
+      source_commit in writeup/sources.yml, the four heading
+      re-assignments from a292ba4, lean/README.md below its STALE
+      banner, the Counting.lean umbrella docstring, the three missing
+      execution profiles on item-0006, item-0029 and item-0030,
+      ERRATUM-5 booked and unrepaired, and Q1/Q2 of item-0032. The
+      R1-015 owed steering review (open since ANN-76) is NOT discharged
+      by this entry (the executor lane does not book that discharge on
+      its own account); it stays on the open list for the operator's
+      own decision at apply, per the dispatch's own steering-proposes/
+      operator-decides framing.

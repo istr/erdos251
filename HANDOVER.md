@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..87; the old path
+strictly-append-only file per entry, ANN-01..88; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
@@ -90,6 +90,26 @@ its later sections carry a STALE banner, HANDOVER is the record).
   2012.11565) reach the window only on almost-prime objects. Earlier
   text in this file said the literature had never been checked and that
   this "is what item-0026 is for": SUPERSEDED.
+- item-0028 IS EXECUTED AND CLOSED (ANN-88): the class-restricted
+  Kuperberg 1.2 cost is PRICED and the three 2026-07-26 pintz10
+  planning inputs are LANDED under dossier/item-0028-workpapers/ with a
+  landing note enumerating their superseded clauses. VERDICT, verbatim
+  from the sheet: NEGATIVE AT CORPUS GRAIN -- no located mechanism
+  prices a class-restricted r-th-moment loss in growth class GC-CONST
+  at support MEASURED or better over the full small-prime range; the
+  item's hypothesis closes. Headline columns (expo = ln F/lnln x):
+  parity main term exactly 2r at grid rank (deterministic, fixes the
+  loss normalization); K1.2 Mertens-honest and the Kowalski r=2
+  reference both GC-ITLOG (grow like lnlnln x); the (2.16)-sharpening
+  per-step component GC-CONST but covering only p <= y = (ln h)/2 =
+  2.72 to 5.63 at the exchange window (29% to 47% of the Mertens mass);
+  the printed pointwise Pi_2 bookkeeping GC-FASTER with the source's
+  own "we will not mark the dependence" disclosure; band ratio
+  L/y = 3.09 to 3.97 -> 4/ln 2. BET-20260725-11 now BINDS and is OPEN
+  for operator judgment against the sheet (resolve_by 2026-09-30);
+  nothing scored. The Lemma-2-of-1004.1072 support annotation is in
+  force corpus-wide; the workpaper's internal "S1" label is cited as
+  "the (2.16) sharpening" to avoid collision with the separator S1.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
@@ -106,9 +126,10 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-87): item-0028,
-  item-0029, item-0027, item-0030, item-0010, item-0006,
-  item-0024. item-0022 IS CLOSED AS INTERRUPTED and lives at
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-88): item-0029,
+  item-0027, item-0030, item-0010, item-0006, item-0024. item-0028 IS
+  CLOSED AS DONE (ANN-88) and lives at roadmap/completed/item-0028.md.
+  item-0022 IS CLOSED AS INTERRUPTED and lives at
   roadmap/completed/item-0022.md; item-0031 IS WITHDRAWN and lives at
   roadmap/completed/item-0031.md; item-0033, item-0034 AND item-0032 ARE
   CLOSED AS DONE and live at roadmap/completed/item-0033.md,
@@ -118,8 +139,8 @@ its later sections carry a STALE banner, HANDOVER is the record).
   then. The disposition and
   evidence-standing items sat AHEAD of the research block deliberately:
   the corpus record is repaired before more mathematics is added on top
-  of it. THE RESEARCH BLOCK IS NOW THE WHOLE ORDER AGAIN and item-0028
-  is at position 1.
+  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0029 is at
+  position 1.
   THE ANN-72 POLICY WAS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
   (ANN-86), AND THAT EXCEPTION IS NOW SPENT (ANN-87): item-0032 carried
   arcs [tooling, workflow] and sat at POSITION 1 ahead of the whole
