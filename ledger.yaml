@@ -5401,3 +5401,86 @@ annotations:
       AGENTS.md) and closes B6 either way -- this entry amends the
       item, it does not execute it. R1-015's owed steering review.
       Everything ANN-83 left open remains open.
+  - id: ANN-20260731-85
+    refs: [ANN-20260730-84, ANN-20260727-77, ANN-20260727-76]
+    date: 2026-07-31
+    note: >-
+      item-0034 IS EXECUTED: THE EVIDENCE-STANDING RULE SET LANDS WHERE
+      THE RUN RULES LIVE, AND B6 IS CLOSED. Executed by the local
+      executor against the Section 0 pin under an ephemeral dispatch,
+      never committed; the operator apply is the ratifying commit.
+      Files: runs/README.md (rules 20-27 appended), AGENTS.md (one
+      bullet under "Steering and execution", two under "Evidence
+      discipline"), ledger.yaml (this entry), HANDOVER.md (four bounded
+      deltas, enumerated below), and the roadmap close of item-0034.
+      Nothing else is touched.
+      THE EIGHT RULES. 20 report standing -- a model-generated report no
+      primary anchor backs enters the corpus as a pointer list only,
+      its prose never a unit of verification (ANN-74's own sentence,
+      finally enforced). 21 no unreadable object -- an object no
+      tree-only session can read cannot be the object of a ratified
+      item; the one permitted substitute is its anchored,
+      executor-graded-clean extract (rules 26-27). 22 promotion gate for
+      post-gate passes -- a verdict moving toward a stronger class
+      inside a repair, amendment or addendum needs its own pass with the
+      primary anchor open and appears as a promotion in that pass's
+      header; this extends rule 16(a), which stops before the review
+      gate. 23 symmetric scope envelope -- the stop fires on undershoot
+      as well as overshoot. 24 no mid-run task change -- a task change
+      after the final report opens a new run against a new pin, never an
+      addendum. 25 one apply -- an artifact drop and the ledger entry
+      that books it travel together. 26 source-extract surrogate
+      standing -- the five clauses of the ANN-84 amendment: source-open
+      authoring and a full-surface executor grade including prose
+      claims; fidelity exclusively the executor's; no session grades or
+      hashes its own artifact; both lanes consume only
+      graded-clean-and-hashed extracts and the analysis lane's anchor IS
+      the graded extract; new extraction operator-gated and re-anchored.
+      27 header design -- an extract header carries source identity and
+      hash only, never grade-state or an unresolvable deixis.
+      B6 IS CLOSED. The rule-16 strengthening, carried open since the
+      third verdict-promotion recurrence and booked to its seventh at
+      ANN-76, is discharged by rule 22, which is the dedicated post-gate
+      promotion gate the open question asked for. The item's own frame
+      -- settle it either way rather than carry it a sixth time -- is
+      met by writing the rule, not by folding it into rule 19.
+      NOTHING MATHEMATICAL MOVES. No Lean file, frozen block, run,
+      payload, dossier workpaper, writeup file, verdict, target,
+      threshold or constant changes. NO HASH LINE IS ADDED and
+      payloads/HASHES.txt is byte-unchanged. NO EXTRACT AND NO EXTRACT
+      HEADER IS TOUCHED: the five hashed CLEAN item-0022 extracts keep
+      their stale "re-grade pending" clause, superseded by the ledger
+      per rule 27, exactly as ANN-82/83 left them. No bet is resolved,
+      re-priced or amended: BET-20260711-07 to 2026-08-08,
+      BET-20260718-08 at 0.07 and BET-20260725-11/12/13 all stand.
+      PROVENANCE. roadmap/item-0034.md acceptance_intent and body (the
+      ratified in-tree specification); dossier/item-0022-incident-r1.md
+      Section 7 Phase 3 clauses 1-6 and the D1-D6 damage list;
+      ANN-76..84. The rule wording was authored against item-0034.md, an
+      in-tree readable anchor, so the analysis lane authoring it is not
+      an extract-fidelity-authority question.
+      HANDOVER DELTAS, bounded and enumerated, four. (i) The cold-start
+      read-order ANN range moves ANN-01..84 to ANN-01..85. (ii) The
+      cold-start runs/README line moves "rules 1-19" to "rules 1-27" and
+      names rules 20-27 as the item-0034 evidence-standing set. (iii)
+      The B6 bullet is rewritten from "still formally open" to CLOSED by
+      rule 22, item-0034 executed. (iv) A new bullet at the head of the
+      workflow group records the execution: rules 20-27 landed, B6
+      closed, the extract surrogate-standing and header rules in force,
+      item-0034 closed as done. The EXECUTION ORDER bullet drops
+      item-0034 (now at roadmap/completed/). Nothing else changes;
+      HANDOVER.md is ASCII-only before and after.
+      ROADMAP. item-0034 is set to done and moved to
+      roadmap/completed/item-0034.md, and removed from
+      roadmap/_order.md, in this same apply -- there is no self-grading
+      concern for a rules item, and leaving it ratified at the head of
+      the order while its acceptance artifact exists is exactly the D1
+      re-run hazard rule 25 and this item exist to prevent. If the
+      operator prefers the item-0022/0033 two-apply shape, the close is
+      a separate roadmap apply immediately following.
+      STILL OPEN AFTER THIS ENTRY. R1-015's owed steering review.
+      Everything ANN-84 left open other than item-0034's execution and
+      B6 remains open: the item-0010 re-scope, source_commit in
+      writeup/sources.yml, the four heading re-assignments from a292ba4,
+      lean/README.md below its STALE banner, and the
+      Erdos251/Counting.lean umbrella docstring.

@@ -193,3 +193,132 @@ Rules:
     writeup/status.md and separator-repricing.md was routed only to
     the public page; the report half survived a full repair pass and
     was caught by the executor, not by steering.
+
+20. Report standing -- anchoring is not absorption (2026-07-27;
+    item-0034). Material produced outside the project's model-run
+    protocol -- a stateless run, one hash-verified payload, an
+    anchor-stripped object, a committed strip script, web off, the
+    wrapper verbatim in the config -- has no standing as a unit of
+    verification. A model-generated report that no primary anchor
+    backs enters the corpus only as a list of pointers: the
+    identifiers are booked, the sources are extracted and anchored,
+    and the report's own prose is never the object of a per-claim
+    verdict register. A verification ritual applied to an object no
+    session can read manufactures standing rather than testing it.
+    Provenance: item-0022 incident (dossier/item-0022-incident-r1.md),
+    a per-claim register over the prose of three operator-held reports
+    reading CONFIRMED with not one row checkable in the tree; ANN-74
+    wrote the principle down one apply earlier and no rule enforced it.
+21. No unreadable object (2026-07-27; item-0034). An object no session
+    reading only the tree can read cannot be the object of a ratified
+    item: every finding about it is unfalsifiable in the tree and only
+    the holder can audit it, the exact inverse of the
+    single-source-of-truth charter. Held outside the tree is the worst
+    of the two available states -- enough standing to drive a ratified
+    item, not enough to be checked. When a source genuinely cannot be
+    committed (copyright, provenance hygiene), the one permitted
+    substitute is its anchored extract under rules 26 and 27: an
+    in-tree, URL-and-sha256-anchored, executor-graded-clean
+    transcription that is itself readable and checkable. The
+    substitute is named here, not improvised per item. Provenance:
+    item-0022 incident 2.4 and D2, the operator-held-object
+    load-bearing defect.
+22. Promotion gate, post-gate passes (2026-07-27; item-0034; closes
+    B6). Rule 16(a) diffs a verdict against its body's support classes
+    before the review gate; it does not reach a pass that runs after
+    the gate. A verdict that moves toward a stronger support class
+    (model-only -> heuristic -> measured -> proved, or a
+    cannot-verify STOP -> confirmed) inside a repair, amendment or
+    addendum pass requires its own pass with the primary anchor open,
+    and appears as a promotion in that pass's own header. Widening an
+    anchor gate mid-pass, or reading an in-tree transcription in place
+    of the anchored source, is exactly the move this rule forbids.
+    This settles the rule-16 strengthening carried open as B6 since
+    the third verdict-promotion recurrence: B6 is CLOSED by this rule.
+    Provenance: seven recurrences through the item-0022 repair (ANN-76,
+    D3); B6 carried open again by ANN-64 in favour of rule 19.
+23. Symmetric scope envelope (2026-07-27; item-0034). The
+    scope-envelope stop fires on undershoot as well as overshoot. A
+    register or artifact that comes in far under its declared envelope
+    -- by a scope decision taken mid-run, or by verdicting decisive
+    sections against nothing -- trips the stop exactly as an overshoot
+    does; a declared scope decision does not exempt it. Provenance:
+    item-0022 incident D5, a register at 33 claims against a 60-140
+    envelope, 45 per cent under the low end, passed by the
+    overshoot-only stop and then called complete by the completion
+    policy.
+24. No mid-run task change (2026-07-27; item-0034). An instruction
+    that changes a run's task after its final report is issued opens a
+    new run against a new pin, never an addendum to the finished run.
+    An addendum has no review in its path by construction, so a
+    task-changing addendum rides unreviewed into a ratifying apply.
+    New task, new run, new pin, new review. Provenance: item-0022
+    incident D4, a verdict that oscillated three times in one day and
+    landed via an unreviewed mid-session addendum; the content was
+    right, the path had no review in it.
+25. One apply -- artifact and its ledger entry travel together
+    (2026-07-27; item-0034). An artifact drop and the ledger entry
+    that books it land in one apply. A content commit whose ledger
+    entry, hash lines and handover refresh are deferred to a follow-up
+    produces the bookkeeping void this rule exists to prevent: the
+    follow-up may not happen, and a cold start is then pointed at
+    unbooked state. This binds even the sessions repairing the record;
+    the strongest evidence for it is that the defect recurred inside
+    the response to its own first booking (ANN-77). Provenance:
+    item-0022 incident D1, a 3308-line artifact drop that deferred its
+    ledger entry, hash lines and handover to a follow-up that did not
+    happen, leaving four commits unbooked.
+26. Source-extract surrogate standing (2026-07-30; item-0034
+    amendment). The repository does not re-publish primary-source PDFs
+    (copyright, provenance hygiene); sources are held by the operator
+    and the executor lane only, anchored by URL and sha256, never
+    duplicated into the tree. The extract is therefore the only
+    in-tree representation of its source, consumed by both lanes -- the
+    analysis lane because it has no source it can open, the executor
+    lane for efficiency -- so extract correctness is mandatory, not
+    optional cleanup: a defective extract is a silently wrong corpus.
+    The lanes are structurally non-interchangeable on fidelity; no
+    convention gives the analysis lane a source to check against.
+    (1) An extract is created or edited only with its anchored source
+    open, and carries corpus standing only after an executor fidelity
+    grade against that source over the full surface -- every display,
+    numbered object, citation, quotation and negative claim, and every
+    prose claim the extract makes about its source. A
+    display-and-quotation grade does not reach the prose glosses; those
+    are where the item-0022 2d bounces were. An extract is re-graded
+    after any change, and an ungraded or defective extract directs
+    attention at most.
+    (2) Extract fidelity is exclusively the executor lane's to
+    establish. An analysis-lane fidelity assurance is void; a fidelity
+    question that arises analysis-side is recorded as open and routed,
+    never answered there.
+    (3) A session never grades or hashes an artifact it produced or
+    repaired -- the produce/grade/repair/re-grade separation, kept
+    because standing is conferred by the grade, not by the work.
+    (4) Both lanes consume only graded-clean-and-hashed extracts as
+    source surrogates. No ad-hoc extraction, quotation or paraphrase
+    from a source bypasses the extract layer, and for the analysis
+    lane the graded extract is the primary anchor in the rule-19 sense.
+    (5) New or additional extraction is an operator-gated event --
+    named anchor line, purpose, scope -- whose result is graded and
+    newly anchored before use. A superseding extract re-books its hash
+    with the superseded line kept as history, per the rule-17 pattern.
+    Provenance: item-0022 disposition, ANN-77 through ANN-83; the
+    ANN-79 reframing (a defective extract is a silently wrong corpus);
+    the ANN-82 prose-claims surface and the separation of duties; the
+    operator rule proposal of 2026-07-28 folded with the chain's later
+    sharpenings (ANN-84).
+27. Extract provenance header design (2026-07-30; item-0034
+    amendment; ANN-82). An extract's provenance header carries source
+    identity and hash only -- URL with version, source sha256,
+    declared extraction method and scope -- and never grade-state, and
+    never a deixis a later reader cannot resolve ("re-grade pending",
+    "this session", "at this pin"). Grade-state lives in the ledger and
+    the grade record, which carry it authoritatively; a header
+    asserting a fidelity it has not earned lets a consumer skip the
+    check, and a header carrying process-state goes stale the moment
+    the process moves while the hash forbids the edit. The rule is
+    prospective: the five hashed CLEAN item-0022 extracts keep their
+    stale "re-grade pending" clause, superseded by the ledger, because
+    editing them would break the payloads/HASHES.txt one-line-per-file
+    invariant. Provenance: ANN-82 header disposition, routed here.

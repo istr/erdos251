@@ -15,6 +15,10 @@
 - Operator ratification is mandatory.
 - The ratifying commit or merge is the handover from steering to execution.
 - Byte-exact execution contracts are ephemeral and pinned to one commit.
+- An object no session reading only the tree can read cannot be the
+  object of a ratified item; the one permitted in-tree substitute for a
+  source that cannot be committed is its anchored, executor-graded-clean
+  extract (runs/README rules 21 and 26).
 
 ## Discovery and planning
 - If you want to discover content from files ALWAYS read the full file.
@@ -27,6 +31,13 @@
 - Preserve proved, conditional, measured, heuristic, and model-only classifications.
 - Never strengthen a mathematical statement during exposition or formatting work.
 - Preserve scope qualifiers, constants, quantifier order, and dependency declarations.
+- Both lanes consume only graded-clean-and-hashed extracts as source
+  surrogates; no ad-hoc extraction, quotation or paraphrase bypasses the
+  extract layer (runs/README rule 26).
+- Extract fidelity is exclusively the executor lane's to establish; an
+  analysis-lane fidelity assurance is void, and for the analysis lane a
+  graded-clean extract is the primary anchor in the rule-19 sense
+  (runs/README rules 19 and 26).
 
 ## Report generation and MathJax
 

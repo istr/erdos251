@@ -5,7 +5,7 @@ S = sum p_n/2^n) with frontier LLMs; goal is insight, not priority.
 Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 
 ## Read order for a cold start
-1. This file. 2. ledger.yaml (append-only; ANN-01..84; 8 bets scored,
+1. This file. 2. ledger.yaml (append-only; ANN-01..85; 8 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the three item-0026
 successor bets BET-11/12/13 to 2026-09-30 open -- read the `open:`
 block, not this line, for the registered values). Both item-0026 bets
@@ -27,7 +27,7 @@ s3-adjudication.md. Then the item-0026 outputs under
 dossier/item-0026-workpapers/: extraction-report.md (per-axis verdict
 table for all seven anchors), the seven extracts under extract/, and
 pintz-constants.md with pintz_constants_sheet.py.
-6. runs/README.md rules 1-19; rule 19
+6. runs/README.md rules 1-27; rules 20-27 are the item-0034 evidence-standing set (report standing, no unreadable object, the post-gate promotion gate that closes B6, symmetric scope envelope, no mid-run task change, one apply, source-extract surrogate standing, header design); rule 19
 (primary-anchor authoring) is new and binds every sentence that lands
 in a committed artifact.
 7. roadmap: python3 .agents/skills/roadmap-items/scripts/roadmap.py
@@ -102,12 +102,14 @@ its later sections carry a STALE banner, HANDOVER is the record).
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
 - EXECUTION ORDER at this apply (roadmap/_order.md, ANN-77): item-0033,
-  item-0034, item-0028, item-0029, item-0027, item-0030, item-0010,
-  item-0006, item-0024. item-0022 IS CLOSED AS INTERRUPTED and lives at
+  item-0028, item-0029, item-0027, item-0030, item-0010, item-0006,
+  item-0024. item-0022 IS CLOSED AS INTERRUPTED and lives at
   roadmap/completed/item-0022.md; item-0031 IS WITHDRAWN and lives at
-  roadmap/completed/item-0031.md. The disposition and evidence-standing
-  items sit AHEAD of the research block deliberately: the corpus record
-  is repaired before more mathematics is added on top of it.
+  roadmap/completed/item-0031.md; item-0034 IS CLOSED AS DONE and lives
+  at roadmap/completed/item-0034.md. The disposition and
+  evidence-standing items sit AHEAD of the research block deliberately:
+  the corpus record is repaired before more mathematics is added on top
+  of it.
   The ANN-72 POLICY is UNCHANGED and still governs: the full
   research arc stays on top of the order and tooling items are
   postponed behind it, so item-0024 (arcs [tooling, workflow], rank
@@ -169,6 +171,12 @@ its later sections carry a STALE banner, HANDOVER is the record).
   any item-0022 workpaper, deliberately -- anchoring freezes what it
   books. item-0033 (disposition) and item-0034 (evidence standing,
   closing B6) are RATIFIED and sit at positions 1 and 2 (ANN-77).
+- item-0034 IS EXECUTED AND CLOSED (ANN-85). The evidence-standing rule
+  set landed as runs/README rules 20-27 and three AGENTS.md bullets;
+  B6 is closed by rule 22; source extracts now carry surrogate standing
+  (rule 26) and a source-and-hash-only header design (rule 27). No math,
+  no Lean, no hash line, no extract or header touched. item-0034 lives at
+  roadmap/completed/item-0034.md.
 - THE TWO REPAIRED EXTRACTS ARE TERMINALLY RE-GRADED (ANN-83). Phase
   2d-residual, by a fresh session that did not perform the repair, with
   both anchored PDFs open. GRADE: kuperberg23-apsmooth CLEAN -- display
@@ -1210,17 +1218,13 @@ lane ran web OFF against operator-held PDFs; the firewall never bound).
 - FOUR HEADING RE-ASSIGNMENTS in writeup/sources.yml (commit a292ba4)
   carry steering judgement rather than mechanism; final-observations ->
   "## 1. The problem and how we study it" is the least certain.
-- RULE-16 STRENGTHENING (B6) is still formally open. ANN-64 added
-  rule 19 instead and booked a sixth verdict-promotion recurrence;
-  decide whether rule 19 discharges B6 or whether rule 16 is separately
-  strengthened to catch verdict promotion across families. SEVENTH
-  RECURRENCE BOOKED (ANN-76), in item-0022 repair r1: five claim
-  locations moved STOP -> CONFIRMED by widening the anchor gate
-  mid-item. item-0034 is RATIFIED (ANN-77), at the head of the order
-  since the item-0033 close, and settles B6 rather than carrying it an
-  eighth time. AMENDED (ANN-84): it now also carries the
-  surrogate-standing clauses and the header-design rule for source
-  extracts, the third object class.
+- RULE-16 STRENGTHENING (B6) is CLOSED (ANN-85). item-0034 is EXECUTED:
+  runs/README rule 22 is the dedicated promotion gate for repair, amendment
+  and addendum passes -- the post-review-gate reach rule 16(a) lacked -- and
+  it discharges B6. The seventh recurrence (ANN-76) was the last carried
+  open. The item's surrogate-standing clauses (rule 26) and header-design
+  rule (rule 27) for the third object class, source extracts, are also in
+  force.
 - BET-07 runs to its full resolve_by 2026-08-08 (ANN-52: no early
   scoring). The ANN-58..64 chain is further evidence AGAINST resolution
   and is not a scoring event.
