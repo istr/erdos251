@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..90; the old path
+strictly-append-only file per entry, ANN-01..91; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 9 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
@@ -110,6 +110,21 @@ its later sections carry a STALE banner, HANDOVER is the record).
   mean 0.198 -> 0.175 over eight scored. The Lemma-2-of-1004.1072 support annotation is in
   force corpus-wide; the workpaper's internal "S1" label is cited as
   "the (2.16) sharpening" to avoid collision with the separator S1.
+- FIVE SOURCE ANCHORS FOR item-0029 ARE BOOKED AND THE EXTRACTION IS
+  OPERATOR-GATED (ANN-91). Three new payloads/HASHES.txt lines -- the
+  Shiu 2000 publisher PDF (operator-held, filename anchor, doi
+  10.1112/S0024610799007863) and Freiberg arXiv 1005.4703v2 and
+  1110.6624v1 -- join the two standing Maier anchors
+  (Maier-Primes-in-short-intervals.pdf, S0002-9939-1988-0958032-5.pdf).
+  Purpose and scope per source, the render-based protocol for the
+  scanned Maier 1985 PDF (no text layer; empty pdftotext output there
+  is EXPECTED, not a stop), and the ratified three-session structure
+  (extract / grade / adjudicate, rule-26(3) separation, grade hashes
+  on CLEAN only) are in ANN-91. NO extract exists yet, nothing is
+  graded, and that apply was anchor preparation only: the item-0029
+  run had NOT started there and BET-20260725-12 did not bind through
+  it -- the run-opening apply states the binding explicitly (ANN-88
+  precedent).
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the

@@ -1,0 +1,124 @@
+  - id: ANN-20260801-91
+    refs: [ANN-20260801-90, ANN-20260801-88, ANN-20260731-85,
+      ANN-20260725-69, BET-20260725-12]
+    date: 2026-08-01
+    note: >-
+      THREE SOURCE ANCHORS FOR item-0029 ARE BOOKED AND THE FIVE-SOURCE
+      EXTRACTION IS OPERATOR-GATED UNDER RULE 26(5). Authored by
+      steering (Claude Fable 5, analysis sandbox) on operator
+      instruction at pin c7d812f == HEAD of main; emitted as a git am
+      mbox; the operator apply is the ratifying commit. Files:
+      payloads/HASHES.txt (three appended lines, nothing else touched),
+      HANDOVER.md (two bounded deltas, enumerated below), this entry.
+      ONE APPLY, per rule 25. THIS APPLY IS ANCHOR PREPARATION ONLY:
+      no extract exists, nothing is graded, no hash beyond the three
+      source lines is added, the item-0029 run has NOT started, and
+      BET-20260725-12 does NOT bind through this apply -- it binds when
+      the item runs, and the run-opening apply will state the binding
+      explicitly, per the ANN-88 precedent.
+      THE THREE NEW ANCHOR LINES, appended to payloads/HASHES.txt in
+      this order, operator-supplied sha256 (canonical):
+      f5ac3decec2a377c1d684fef33d17a30d1e99759e65f8ecc7753593ec17f0109
+      Journal_of_London_Math_Soc-2016-Shiu-Strings-of-Congruent-Primes.pdf
+      (D. K. L. Shiu, Strings of congruent primes, J. London Math.
+      Soc. (2) 61 (2000) 359-373; doi 10.1112/S0024610799007863;
+      publisher-paywalled Wiley PDF, held by operator and executor
+      lanes only, never committed, per rule 26 -- the filename-anchor
+      convention of the two standing non-arXiv lines applies);
+      c08c6582df18f42324d61d8568941dc81246ee3a6404fa929c1d0ce5eafdca49
+      https://arxiv.org/pdf/1005.4703v2 (T. Freiberg, Strings of
+      congruent primes in short intervals, J. London Math. Soc. 84
+      (2011) 344-364); and
+      407336f47e7812aa7fa7319d4bda20e9feeb9ac40cc3a4c41c699b6ed2e5e997
+      https://arxiv.org/pdf/1110.6624v1 (T. Freiberg, Strings of
+      congruent primes in short intervals II). The version-suffixed
+      arXiv URL form follows the standing HASHES.txt convention,
+      operator-confirmed this session.
+      THE FIVE-SOURCE EXTRACTION GATE, per rule 26(5) -- named anchor
+      line, purpose, scope -- covering the two standing Maier anchors
+      and the three new lines. Destination for all five extracts:
+      dossier/item-0029-workpapers/extract/, rule-27 headers (URL with
+      version or anchor filename, source sha256, declared method and
+      scope; no grade-state, no unresolvable deixis).
+      (1) Maier-Primes-in-short-intervals.pdf (df9614f4...e39be5;
+      H. Maier, Primes in short intervals, Michigan Math. J. 32
+      (1985) 221-225). Purpose: the method's founding instance --
+      oscillation of the short-interval prime count at window
+      (log x)^lambda, the matrix construction itself, and the
+      Gallagher good-modulus input. Scope: FULL, 6 pp. Steering
+      observed on NON-CANONICAL operator-supplied copies
+      (pipeline-processed, hash-divergent) that this PDF carries no
+      text layer; Session E verifies this against the anchored bytes,
+      and the kickoff makes empty pdftotext output there an EXPECTED
+      state, not a stop -- extraction and grading for this source are
+      render-based (200-dpi precedent, ANN-78/ANN-83), so that no
+      unsatisfiable tool demand arises (rule 9).
+      (2) S0002-9939-1988-0958032-5.pdf (3a8666eb...e3261;
+      A. Hildebrand, H. Maier, Gaps between prime numbers, Proc.
+      Amer. Math. Soc. 104 (1988) 1-9). Purpose: the matrix method at
+      k consecutive gaps with a positive-proportion conclusion on the
+      VALUE axis (Lebesgue measure of the limit-point set in [0,T]^k)
+      -- the method instance closest to the word-grain object. Scope:
+      FULL, 9 pp.; renders authoritative, the OCR text layer is
+      auxiliary only (known character corruption on the same
+      non-canonical copies).
+      (3) The Shiu 2000 line above. Purpose: the consecutiveness
+      bookkeeping of the method at its origin -- arbitrarily long
+      strings of CONSECUTIVE primes in one residue class, majority
+      counting inside the matrix. Scope: FULL.
+      (4) The 1005.4703v2 line above. Purpose: the Shiu construction
+      combined with GPY weights -- the pigeonhole step that FORCES a
+      consecutive pair inside a row, the H-sequence scale structure
+      (Prop. 2.3), and the quantitative row count (Section 6), which
+      is the sharpest documented form of the row-average-to-existence
+      schema the item-0029 decisive objection must be adjudicated
+      against. Scope: FULL, 24 pp.
+      (5) The 1110.6624v1 line above. Purpose: the all-large-H
+      strengthening of the S/T inequality (Lemma 3.4 via the
+      Selberg-Delange Lemma 3.3, uniform in q), separating the
+      sparse-scale property of the method from the modulus
+      construction, plus the improved row count X^(1-c/loglog X).
+      Scope: DECLARED PARTIAL -- Sections 1-3 in full (Theorem 1.1,
+      the Discussion, the construction (3.1)-(3.6), Lemmas 3.2-3.4 as
+      statements with the proof of Lemma 3.4); Section 4's
+      Selberg-Delange proof by named reference only, not transcribed.
+      THE SESSION PLAN, operator-decided this session: THREE executor
+      sessions, three applies -- Session E (extraction; nothing
+      hashed, nothing graded), Session G (fidelity grade by a fresh
+      session over the full surface including prose glosses, hash on
+      CLEAN only; on a bounce, one repair session plus one terminal
+      re-grade by a further fresh session, at most one cycle), Session
+      M (adjudication, consuming only graded-clean-and-hashed
+      extracts, rule 26(4); the run report, the rule-15 sheet, the
+      mechanical verdict rule, the two separate named findings, the
+      BET-12 binding note, and the roadmap done-move land in that one
+      apply). The produce/grade/consume separation is rule 26(3). The
+      byte-exact kickoffs for E, G and M are authored EPHEMERALLY
+      against the then-current pin, per the standing convention; this
+      entry ratifies the frame, not any kickoff text.
+      NOTHING ELSE MOVES. No roadmap file, status, rank, arc or order
+      changes; item-0029 remains ratified at position 1. No bet is
+      resolved, re-priced or amended: BET-20260711-07 to 2026-08-08,
+      BET-20260718-08 at 0.07, BET-20260725-12/13 at 0.15 / 0.35 all
+      stand. No Lean file, frozen block, run, payload text, dossier
+      workpaper, writeup file, extract or extract header is touched.
+      No verdict, target, threshold or constant changes; the item-0028
+      verdict and the item-0026 NOT-FOUND/A3 state stand exactly as
+      ANN-88 booked them.
+      HANDOVER DELTAS, two, enumerated. (i) The cold-start read-order
+      line moves ANN-01..90 to ANN-01..91. (ii) A new frontier bullet
+      directly below the item-0028 bullet (above the PINTZ (1.8)
+      bullet) carrying the three-line anchor booking, the five-source
+      gate pointer, the render-protocol note for Maier 1985, and the
+      not-started / BET-12-does-not-bind-yet statement.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-90 left open,
+      unchanged: BET-20260711-07 (one week out), BET-20260718-08,
+      BET-20260725-12, BET-20260725-13; the item-0010 re-scope
+      (deferred until item-0029 and item-0030 return); the two Lean
+      doc surfaces routed to item-0027; the item-0006 execution
+      profile, deliberately unpriced; source_commit in
+      writeup/sources.yml and the four a292ba4 heading
+      re-assignments, routed to the next writeup work package;
+      ERRATUM-5 booked and deliberately unrepaired; Q1/Q2 of
+      item-0032. NEWLY OPEN: the item-0029 kickoff chain (E, then G,
+      then M), each authored ephemerally on operator request.
