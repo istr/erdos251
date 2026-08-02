@@ -107,3 +107,4 @@ c08c6582df18f42324d61d8568941dc81246ee3a6404fa929c1d0ce5eafdca49  https://arxiv.
 407336f47e7812aa7fa7319d4bda20e9feeb9ac40cc3a4c41c699b6ed2e5e997  https://arxiv.org/pdf/1110.6624v1
 9d0d8bc0d5f5c6e37d78c80b8bad19b877d9d71684fbca2f621f0fae656dfffa  dossier/item-0029-workpapers/extract/hildebrandmaier88-gaps.md
 0739f84c0b1a7e3d509640caed0aa578994daa59d750c0fb8b97dd525e71c5c7  dossier/item-0029-workpapers/extract-grades-G1.md
+f4c564b6e4f25cf36e01e9f79b983adeadfa5e314ee1396fdeab6e435063aab1  dossier/item-0029-workpapers/extract-grades-G2.md
