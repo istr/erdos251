@@ -1,0 +1,160 @@
+  - id: ANN-20260802-93
+    refs: [ANN-20260801-92, ANN-20260801-91, ANN-20260730-84,
+      ANN-20260728-83, BET-20260725-12]
+    date: 2026-08-02
+    note: >-
+      THE FOUR item-0029 EXTRACTS ARE GRADED: ONE IS CLEAN AND HASHED,
+      THREE BOUNCE. Session G of the three-session structure ratified at
+      ANN-20260801-91 and opened at ANN-20260801-92, executed by the
+      executor lane (local workstation, Claude Code, model string
+      claude-opus-5) on 2026-08-02 against the ephemeral kickoff
+      item-0029-kickoff-G-v1.md at a Section 0 pin equal to HEAD of main;
+      web OFF and cloud OFF for the whole session. The session was FRESH
+      in the rule-26(3) sense: it is not the Session E session, inherited
+      none of its context, notes, renders or text-layer dumps, and did not
+      read the withheld executor-local shiu00-strings.md. FILES OF THIS
+      APPLY, one apply per rule 25: the grade record
+      dossier/item-0029-workpapers/extract-grades-G1.md; the run report
+      dossier/item-0029-workpapers/item-0029-report-G.md;
+      payloads/HASHES.txt (two appended lines, nothing else touched);
+      HANDOVER.md (two bounded deltas, enumerated below); this entry.
+      Nothing else.
+      PER-EXTRACT VERDICTS, verbatim from Section 6 of the grade record:
+      "maier85-shortintervals.md      VERDICT: DEFECTIVE (1 defect)";
+      "hildebrandmaier88-gaps.md      VERDICT: CLEAN";
+      "freiberg10-strings1.md         VERDICT: DEFECTIVE (9 defects)";
+      "freiberg11-strings2.md         VERDICT: DEFECTIVE (3 defects)".
+      Thirteen defect rows in total, by class: (a) transcription
+      deviation 6, (b) page-reference error 5, (c) untrue or interpretive
+      note claim 1, (g) untrue FLAGS statement 1. Classes (d) scope
+      violation, (e) untrue header field and (f) forbidden language are
+      empty across all four extracts: no scope violation, no untrue header
+      field and no axis, gate, verdict, NOT-FOUND or grade-state language
+      was found anywhere. Each defect row carries file, extract line,
+      source page, class, verbatim is-state and verbatim should-state, so
+      a repair session can act on the record without re-deriving anything.
+      THE TWO APPENDED HASHES LINES, restated in the order Section 4.4 of
+      the kickoff licenses:
+      9d0d8bc0d5f5c6e37d78c80b8bad19b877d9d71684fbca2f621f0fae656dfffa
+      dossier/item-0029-workpapers/extract/hildebrandmaier88-gaps.md;
+      and
+      0739f84c0b1a7e3d509640caed0aa578994daa59d750c0fb8b97dd525e71c5c7
+      dossier/item-0029-workpapers/extract-grades-G1.md. Both were
+      re-verified against the files on disk after the append, and the
+      one-line-per-file invariant was re-checked over the whole file (109
+      identifiers, 109 distinct). The three DEFECTIVE extracts got NO
+      line; the grade record is hashed in every outcome, including this
+      mixed one.
+      CONSEQUENCE OF THE CLEAN VERDICT: hildebrandmaier88-gaps.md NOW
+      CARRIES CORPUS STANDING as a source surrogate for both lanes (rule
+      26(4)). It is the only item-0029 extract either lane may consume as
+      one.
+      CONSEQUENCE OF THE THREE BOUNCES, per the ANN-20260801-91 loop:
+      maier85-shortintervals.md, freiberg10-strings1.md and
+      freiberg11-strings2.md remain defective and therefore "direct
+      attention at most" (rule 26(1), verbatim); they carry no hash and
+      neither lane may consume them as source surrogates. The loop is one
+      repair session plus one terminal re-grade by a further fresh
+      session, at most one cycle, each on its own ephemeral kickoff, since
+      a session never grades or hashes an artifact it produced or repaired
+      (rule 26(3)). Session M becomes reachable when that loop closes.
+      THIS SESSION CONSUMED NOTHING AND REPAIRED NOTHING (rule 26(3)). No
+      extract was edited, not even for a one-character defect; no extract
+      content was used for item-0029 substance -- no axis, no
+      positive-proportion gate, no named finding, no comparison to a
+      project object; nothing was adjudicated. The grade record is
+      terminal: it carries the defect rows and no repair proposals beyond
+      them, no adjudication and no next-step planning.
+      THE SHIU EXCLUSION OF ANN-20260801-92 IS CARRIED FORWARD UNCHANGED.
+      shiu00-strings.md remains named in .gitignore and exists on the
+      executor workstation only; the Shiu 2000 source and that extract
+      were out of scope in every direction this session -- not opened, not
+      read, not graded, not hashed. The standing question ANN-92 created
+      is untouched and remains the operator's: the source is anchored in
+      payloads/HASHES.txt at line 105 and has no in-tree surrogate, which
+      is exactly the state rules 21 and 26 exist to prevent.
+      BET-20260725-12 STILL BINDS AND STAYS OPEN for operator judgment
+      against the item-0029 finding, resolve_by 2026-09-30. No bet is
+      scored, re-priced or amended by this apply and ledger/bets.yaml is
+      byte-untouched; a fidelity grade over source surrogates is not a
+      finding about the item.
+      V-G OUTCOMES, one line each, all recorded in the grade record and
+      the run report. V1 freshness: HOLDS. V2: FOUR MATCHES, the sha256 of
+      each local source PDF equal to its anchor line, verified before any
+      source was opened. V3: P1-P5 all hold; HEAD equalled the Section 0
+      pin so no rule-18 delta arose. V4: 69 pages (9 + 6 + 24 + 30)
+      rasterised at 200 dpi in this session from the anchored bytes before
+      grading started, plus six 300-500 dpi region re-renders named in the
+      defect rows they settle. V5: all three text-layer findings
+      reproduced independently -- Maier 1985 has no fonts and no text
+      layer (expected state, rule 9), Hildebrand-Maier 1988 has an
+      OCR-corrupt layer reproducing "Rfc", "TV" and "Pn+i ~Pn" exactly as
+      ANN-92 recorded, and both Freiberg layers are clean and usable. V6:
+      9 / 6 / 24 / 30, with Maier's six PDF pages carrying printed pages
+      221-225 and a blank sixth (0 dark pixels). V7: the recount agrees
+      with the report-E inventory in every column for all four files --
+      lines, quoted objects, display blocks, TRANSCRIPTION-UNSURE and
+      [extract note] lines -- so no recount divergence entered the defect
+      tables.
+      GATES. Every Section 8 gate ran at start and at close and is green
+      at both: frozen blocks byte-identical, both relocation checks
+      passed, the strict sorry inventory exactly Statement.lean:21, the
+      manifest rev present once, the toolchain trailing newline present,
+      ledger validate passed, ledger append-only clean over the pin..HEAD
+      range, writeup_mapper PASS, mathjax_lint 0 problems, roadmap show
+      item-0029 ratified both times, and 0 non-ASCII bytes across every
+      new file. No lake invocation was made. None of the ten STOP
+      conditions fired; all ten are reported by name in the run report.
+      THREE JUDGMENT CALLS ARE DISCLOSED RATHER THAN ABSORBED, because
+      each fixes a standard a later session would otherwise have to
+      re-derive, and each is stated with its reasoning in Section 5 of the
+      run report: (i) layout is not graded -- line breaks reflowed into a
+      separator, a display heading run into the paragraph it heads, and a
+      large brace joining separately parenthesised lines of a multi-line
+      display are presentational and were not treated as transcription
+      deviations, while delimiters carrying mathematical grouping inside a
+      single expression were; (ii) the section-sign folding of
+      freiberg11-strings2.md is declared in that extract's FLAGS rather
+      than in its Section 0, and was NOT fired as a defect, because the
+      folding remains invertible by any reader of the extract; (iii) an
+      alphabet mapping that renders faithfully, such as the calligraphic
+      and Fraktur transcriptions used but not declared in
+      freiberg11-strings2.md's Section 0, loses nothing and was not fired.
+      A later session that disagrees with any of the three can overrule it
+      against the reasoning as recorded.
+      NOTHING ELSE MOVES. No roadmap file, status, rank, arc or order
+      changes; item-0029 remains ratified and the done-move is Session
+      M's. No Lean file, frozen block, run, payload text, existing dossier
+      workpaper, writeup file, existing extract or extract header is
+      touched. No verdict, target, threshold or constant changes; no
+      item-0029 axis, the positive-proportion gate and neither named
+      finding is adjudicated anywhere in this apply.
+      HANDOVER DELTAS, two, enumerated. (i) The cold-start read-order line
+      moves ANN-01..92 to ANN-01..93. (ii) The item-0029 frontier bullet,
+      the one that began "- FIVE SOURCE ANCHORS FOR item-0029", is
+      REWRITTEN to the post-grade state: which extract is CLEAN and hashed
+      and now consumable under rule 26(4), which three bounced and still
+      direct attention at most, the unchanged Shiu exclusion, the
+      unchanged BET-12 binding, and the next step as the ANN-91
+      repair/re-grade cycle with Session M behind it.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-20260801-92 left open,
+      carried forward: BET-20260711-07, BET-20260718-08, BET-20260725-12,
+      BET-20260725-13; the item-0010 re-scope (deferred until item-0029
+      and item-0030 return); the two Lean doc surfaces routed to item-0027;
+      the item-0006 execution profile, deliberately unpriced; source_commit
+      in writeup/sources.yml and the four a292ba4 heading re-assignments,
+      routed to the next writeup work package; ERRATUM-5 booked and
+      deliberately unrepaired; Q1/Q2 of item-0032; and the Shiu 2000
+      standing question created by the operator exclusion, unchanged and
+      resolvable only by the operator. CLOSED BY THIS ENTRY: the Session G
+      grade over the four committed ungraded extracts, and the ANN-92
+      question of whether the divergences those extracts flag against the
+      dispatch attention lists survive a fresh reading of the anchored
+      bytes -- every flagged divergence in all four extracts was checked
+      against this session's renders and every one survives. NEWLY OPEN:
+      the ANN-91 bounce loop over maier85-shortintervals.md,
+      freiberg10-strings1.md and freiberg11-strings2.md, one repair
+      session plus one terminal re-grade by a further fresh session, at
+      most one cycle; and, behind it, Session M, which can consume
+      hildebrandmaier88-gaps.md today and the other three only if and when
+      the re-grade returns CLEAN.

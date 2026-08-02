@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..92; the old path
+strictly-append-only file per entry, ANN-01..93; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 9 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
@@ -110,38 +110,44 @@ its later sections carry a STALE banner, HANDOVER is the record).
   mean 0.198 -> 0.175 over eight scored. The Lemma-2-of-1004.1072 support annotation is in
   force corpus-wide; the workpaper's internal "S1" label is cited as
   "the (2.16) sharpening" to avoid collision with the separator S1.
-- FIVE SOURCE ANCHORS FOR item-0029 ARE BOOKED AND FIVE UNGRADED
-  EXTRACTS WERE PRODUCED, OF WHICH FOUR ARE IN THE TREE (ANN-91 booked
-  the anchors and the five-source rule-26(5) gate; ANN-92 booked the
-  extracts). Session E has landed maier85-shortintervals.md,
-  hildebrandmaier88-gaps.md, freiberg10-strings1.md and
-  freiberg11-strings2.md under dossier/item-0029-workpapers/extract/,
-  with the run report item-0029-report-E.md beside them. THE SHIU
-  EXTRACT IS NOT IN THE TREE: on operator instruction at apply time,
-  on publisher-copyright grounds, shiu00-strings.md is named in
-  .gitignore and exists on the executor workstation only. Read that
-  together with rule 21 -- the anchored extract is "the one permitted
-  substitute" for a source that cannot be committed -- because with it
-  withheld the Shiu 2000 source has NO in-tree representation, Session
-  G cannot grade it, and Session M cannot consume it under rule 26(4).
-  ANN-92 and the run report state the consequence in full; resolving it
-  is the operator's. THE FOUR IN-TREE EXTRACTS ARE UNGRADED: rule 26(1)
-  says "an ungraded or defective extract directs attention at most",
-  and rule 26(4) forbids either lane consuming them as source
-  surrogates before the Session G grade and the hashes that grade
-  licenses -- a cold start must not treat them as standing evidence
-  yet. NOTHING IS HASHED: payloads/HASHES.txt is byte-unchanged by that
-  apply. THE ITEM-0029 RUN HAS STARTED and BET-20260725-12 NOW BINDS
-  (item ratified and run) and stays OPEN for operator judgment against
-  the item-0029 finding, resolve_by 2026-09-30; no bet was scored.
-  NEXT IS SESSION G, the fidelity grade over the four in-tree extracts
-  by a fresh session over the full surface including prose glosses,
-  hashing on CLEAN only, then
-  Session M for the adjudication and the roadmap done-move. Scope per
-  source, the render protocols (Maier 1985 has no text layer at all;
-  the Shiu publisher PDF has one but its CUP fonts carry no ToUnicode
-  map, so it too was extracted from renders), and the V5-V9 findings
-  are in ANN-92 and in the report.
+- THE item-0029 EXTRACTS ARE GRADED: ONE IS CLEAN AND HASHED, THREE
+  BOUNCED (ANN-91 booked the five anchors and the rule-26(5) gate;
+  ANN-92 booked the four ungraded extracts; ANN-93 books the Session G
+  grade). ONLY hildebrandmaier88-gaps.md IS CLEAN. It is hashed in
+  payloads/HASHES.txt and NOW CARRIES CORPUS STANDING as a source
+  surrogate for both lanes (rule 26(4)); it is the only item-0029
+  extract either lane may consume as one.
+  THREE ARE DEFECTIVE and still direct attention at most (rule 26(1)):
+  maier85-shortintervals.md (1 defect, an untrue FLAGS statement),
+  freiberg10-strings1.md (9 defects: one non-source note claim, three
+  transcription deviations, five page-reference errors) and
+  freiberg11-strings2.md (3 transcription deviations). They carry NO
+  hash and must not be consumed as source surrogates. The defect rows
+  are specified exactly, with verbatim is-state and should-state, in
+  dossier/item-0029-workpapers/extract-grades-G1.md (itself hashed);
+  the run report is item-0029-report-G.md beside it.
+  NEXT IS THE ANN-91 BOUNCE LOOP, at most ONE cycle: one repair session
+  over the three DEFECTIVE extracts, then one terminal re-grade by a
+  FURTHER fresh session, each on its own ephemeral kickoff, because a
+  session never grades or repairs what it graded (rule 26(3)). Session M
+  becomes reachable when that loop closes; it consumes only
+  graded-clean-and-hashed extracts.
+  THE SHIU EXTRACT IS STILL NOT IN THE TREE, unchanged by this apply: on
+  operator instruction, on publisher-copyright grounds, shiu00-strings.md
+  is named in .gitignore and exists on the executor workstation only.
+  Read that together with rule 21 -- the anchored extract is "the one
+  permitted substitute" for a source that cannot be committed -- because
+  with it withheld the Shiu 2000 source has NO in-tree representation,
+  Session G could not grade it, and Session M cannot consume it under
+  rule 26(4). ANN-92 states the consequence in full; resolving it is the
+  operator's.
+  THE ITEM-0029 RUN HAS STARTED and BET-20260725-12 STILL BINDS and
+  stays OPEN for operator judgment against the item-0029 finding,
+  resolve_by 2026-09-30; no bet was scored by the grade.
+  Scope per source, the render protocols (Maier 1985 has no text layer
+  at all; the Shiu publisher PDF has one but its CUP fonts carry no
+  ToUnicode map, so it too was extracted from renders), and the V5-V9
+  findings are in ANN-92; the V-G outcomes are in ANN-93 and the report.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
