@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..93; the old path
+strictly-append-only file per entry, ANN-01..94; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 9 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
@@ -110,28 +110,35 @@ its later sections carry a STALE banner, HANDOVER is the record).
   mean 0.198 -> 0.175 over eight scored. The Lemma-2-of-1004.1072 support annotation is in
   force corpus-wide; the workpaper's internal "S1" label is cited as
   "the (2.16) sharpening" to avoid collision with the separator S1.
-- THE item-0029 EXTRACTS ARE GRADED: ONE IS CLEAN AND HASHED, THREE
-  BOUNCED (ANN-91 booked the five anchors and the rule-26(5) gate;
-  ANN-92 booked the four ungraded extracts; ANN-93 books the Session G
-  grade). ONLY hildebrandmaier88-gaps.md IS CLEAN. It is hashed in
-  payloads/HASHES.txt and NOW CARRIES CORPUS STANDING as a source
-  surrogate for both lanes (rule 26(4)); it is the only item-0029
-  extract either lane may consume as one.
-  THREE ARE DEFECTIVE and still direct attention at most (rule 26(1)):
-  maier85-shortintervals.md (1 defect, an untrue FLAGS statement),
-  freiberg10-strings1.md (9 defects: one non-source note claim, three
-  transcription deviations, five page-reference errors) and
-  freiberg11-strings2.md (3 transcription deviations). They carry NO
-  hash and must not be consumed as source surrogates. The defect rows
-  are specified exactly, with verbatim is-state and should-state, in
-  dossier/item-0029-workpapers/extract-grades-G1.md (itself hashed);
-  the run report is item-0029-report-G.md beside it.
-  NEXT IS THE ANN-91 BOUNCE LOOP, at most ONE cycle: one repair session
-  over the three DEFECTIVE extracts, then one terminal re-grade by a
-  FURTHER fresh session, each on its own ephemeral kickoff, because a
-  session never grades or repairs what it graded (rule 26(3)). Session M
-  becomes reachable when that loop closes; it consumes only
-  graded-clean-and-hashed extracts.
+- THE THREE BOUNCED item-0029 EXTRACTS ARE REPAIRED AND STILL UNGRADED
+  (ANN-91 booked the five anchors and the rule-26(5) gate; ANN-92 booked
+  the four ungraded extracts; ANN-93 books the Session G grade, one CLEAN
+  and three DEFECTIVE; ANN-94 books this repair). A REPAIR CONFERS NO
+  STANDING. maier85-shortintervals.md, freiberg10-strings1.md and
+  freiberg11-strings2.md carry NO hash, are UNGRADED, and still "direct
+  attention at most" (rule 26(1)); neither lane may consume them as
+  source surrogates until a grade says otherwise. The repair session
+  applied fourteen positions and nothing else: the thirteen defect rows
+  of dossier/item-0029-workpapers/extract-grades-G1.md byte-for-byte from
+  that record, each verified against that session's own renders of the
+  anchored bytes, plus one steering-authorized alignment (the
+  section-sign folding declaration of freiberg11-strings2.md moved from
+  its FLAGS into its Section 0, per report-G Section 5 D1(b)). It graded
+  nothing and hashed nothing; payloads/HASHES.txt is byte-unchanged. The
+  run report is item-0029-report-R.md beside the record, and its Section
+  4 carries the post-repair inventory the re-grade recounts against.
+  ONLY hildebrandmaier88-gaps.md IS CLEAN, unchanged by this apply. It is
+  hashed in payloads/HASHES.txt and CARRIES CORPUS STANDING as a source
+  surrogate for both lanes (rule 26(4)); it is still the only item-0029
+  extract either lane may consume as one. It and the hashed grade record
+  were not touched by the repair and still verify against their hash
+  lines.
+  NEXT IS THE TERMINAL RE-GRADE, the second and last half of the ANN-91
+  bounce loop, by a FURTHER fresh session on its own ephemeral kickoff,
+  because a session never grades what it repaired (rule 26(3)). The
+  one-cycle budget of ANN-91 IS SPENT once that pass returns: a shortfall
+  found there cannot loop again. Session M becomes reachable when the
+  re-grade closes; it consumes only graded-clean-and-hashed extracts.
   THE SHIU EXTRACT IS STILL NOT IN THE TREE, unchanged by this apply: on
   operator instruction, on publisher-copyright grounds, shiu00-strings.md
   is named in .gitignore and exists on the executor workstation only.

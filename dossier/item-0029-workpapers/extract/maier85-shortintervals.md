@@ -391,7 +391,8 @@ analogy with the first part.
   Gallagher-input citation point". Both are present -- Lemma 3
   (Buchstab) and Lemma 2 (Gallagher) -- but the source attributes Lemma 2
   to [7, Lemma 2] plus the prime number theorem in its own proof line,
-  and cites Gallagher only in the reference list as [3]; the string
-  "Gallagher" does not appear in the body of this paper.
+  and cites Gallagher only in the reference list as [3]; the bracketed
+  citation [3] does not appear in the body of this paper, though the name
+  Gallagher is printed in the heading of LEMMA 2 (p.222).
 - The printed matrix modulus is $`P(z)=\prod_{p<z}p`$ with a strict
   inequality (p.222), not $`p\le z`$.

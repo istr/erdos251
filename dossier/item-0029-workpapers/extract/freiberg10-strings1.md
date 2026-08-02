@@ -24,8 +24,7 @@ transcribed $`\mathcal{P}`$; calligraphic S, T and E in Section 4, transcribed
 $`\mathcal{S}`$, $`\mathcal{T}`$, $`\mathcal{E}`$; and a Fraktur S for the singular
 series, transcribed $`\mathfrak{S}`$.
 [extract note] The source prints no journal reference on the paper; it is an arXiv
-preprint throughout. The paper was later published as J. London Math. Soc. 84 (2011)
-344-364, which is recorded in ANN-20260801-91 but is not printed on these bytes.
+preprint throughout.
 
 ---
 
@@ -70,7 +69,7 @@ $`\epsilon>0`$. There exist infinitely many pairs of consecutive primes
 $`p_r,p_{r+1}`$ such that $`p_r\equiv p_{r+1}\equiv a\bmod q`$ and
 $`p_{r+1}-p_r<\epsilon\log{p_r}`$."
 
-## 3. Section 2, Preliminaries (pp.2-3)
+## 3. Section 2, Preliminaries (pp.2-4)
 
 "2. Preliminaries. In this section we will state two key technical propositions, to be
 proved in sections 4 and 5. The first proposition requires some preparation. We begin by
@@ -255,7 +254,7 @@ $$=\prod_{p\nmid Q}\left(1-\frac{k}{p}\right)\left(1-\frac{1}{p}\right)^{-k}\pro
 "In this product $`p-k\ne0`$ because, by (2.3), $`p\nmid Q`$ implies
 $`p>\log{H}\ge2k`$. For the same reason, the logarithm of the first product of the last
 line of (4.6) is"
-$$\sum_{p\nmid Q}\left(-\frac{k}{p}-\frac{k^{2}}{2p^{2}}-\cdots-k\left(-\frac{1}{p}-\frac{1}{2p^{2}}-\cdots\right)\right)\ll k^{2}\sum_{p>\log{H}}\frac{1}{p^{2}}\ll\frac{k^{2}}{\log{H}\log{}\log{H}}.$$
+$$\sum_{p\nmid Q}\left\lbrace\left(-\frac{k}{p}-\frac{k^{2}}{2p^{2}}-\cdots\right)-k\left(-\frac{1}{p}-\frac{1}{2p^{2}}-\cdots\right)\right\rbrace\ll k^{2}\sum_{p>\log{H}}\frac{1}{p^{2}}\ll\frac{k^{2}}{\log{H}\log{}\log{H}}.$$
 "For the second product, note that since $`k/\log{H}\le1/2`$, we have"
 $$0<\frac{k-\lvert\Omega(p)\rvert}{p-k}\le\frac{k}{p-k}\le\frac{2k}{p}<1.$$
 "Hence the logarithm of the second product is"
@@ -330,7 +329,7 @@ $$E^{*}(3QN,QD)\ll\frac{QN\log{QN}}{QD}\ll\frac{N\log{N}}{D},$$
 "and the Cauchy-Schwarz inequality, we have"
 $${\sum_{D\le R^{2}}}'\mu^{2}(D)(3k)^{\omega(D)}E^{*}(3QN,QD)\ll\sqrt{N\log{N}}\left(\sum_{D\le R^{2}}\frac{\mu^{2}(D)(3k)^{2\omega(D)}}{D}\right)^{1/2}\left({\sum_{D\le R^{2}}}'E^{*}(3QN,QD)\right)^{1/2}.$$
 "For positive integers $`\kappa`$, we have"
-$$\sum_{D\le R^{2}}\frac{\mu^{2}(D)\kappa^{\omega(D)}}{D}=\sum_{d_1\cdots d_{\kappa}\le R^{2}}\frac{\mu^{2}(d_1)\cdots\mu^{2}(d_{\kappa})}{d_1\cdots d_{\kappa}}\ll(\log{R^{2}})^{\kappa}\ll(\log{N})^{\kappa},$$
+$$\sum_{D\le R^{2}}\frac{\mu^{2}(D)\kappa^{\omega(D)}}{D}=\sum_{d\cdots d_{\kappa}\le R^{2}}\frac{\mu^{2}(d_1)\cdots\mu^{2}(d_{\kappa})}{d_1\cdots d_{\kappa}}\ll(\log{R^{2}})^{\kappa}\ll(\log{N})^{\kappa},$$
 "so combining and applying (4.10) yields" -- display (4.13), p.10:
 $$\mathcal{E}^{*}\ll N\frac{(\log{N})^{2(k+\ell)+(3k)^{2}/2+1/2}}{(\log{N})^{-2c_3\log{}\log{N}}}\le N(\log{N})^{-c_3\log{}\log{N}}.$$
 
@@ -531,7 +530,7 @@ $`(\log{H},(\log{H})^{2}]`$ into sub-intervals
 $`J_l=(\log{H},(\log{H})^{2}/e^{l}]`$, $`1\le l\le\log{}\log{H}`$, and using the prime
 number theorem, we deduce that the contribution from elements with a large prime factor
 is at most"
-$$\sum_{1\le l\le\log{}\log{H}}\ \sum_{\substack{p\in I_l\cr p\not\equiv1\bmod q}}\ \sum_{\substack{p'\in J_l\cr p'\equiv1\bmod q}}1\ll\sum_{1\le l\le\log{}\log{H}}\frac{e^{l}H}{(\log{H})^{3}}\frac{(\log{H})^{2}}{e^{l}\log{}\log{H}}\ll\frac{H}{\log{H}}.$$
+$$\sum_{1\le l\le\log{}\log{H}}\ \sum_{\substack{p\in I_l\cr p\not\equiv1\bmod q}}\ \sum_{\substack{p'\in J_l\cr p\equiv1\bmod q}}1\ll\sum_{1\le l\le\log{}\log{H}}\frac{e^{l}H}{(\log{H})^{3}}\frac{(\log{H})^{2}}{e^{l}\log{}\log{H}}\ll\frac{H}{\log{H}}.$$
 "If $`h=pm`$ with $`p\equiv a\bmod q`$, then $`p>H/t(H)`$, and $`m<t(H)`$ must be
 composed only of primes $`\equiv1\bmod q`$, a contradiction as
 $`h\not\equiv a\bmod q`$. The only elements left uncounted must be composed only of
@@ -747,15 +746,15 @@ freiberg@dms.umontreal.ca"
 and Proposition 2.3 via (3.1), the pigeonhole step, and (3.2).
 [extract note] 2. Lemma 2.1 (p.2) is quoted from [2, Chapter 14] and is used to define
 $`q_0`$, $`p_0`$ and (2.1); (2.1) is then invoked in Section 4 twice, at
-$`G(0,0;\Omega)`$ and $`G(0,0;\Omega^{+})`$ (pp.9, 11), and in the proof of Proposition
-2.3 (p.16).
+$`G(0,0;\Omega)`$ and $`G(0,0;\Omega^{+})`$ (pp.8, 11), and in the proof of Proposition
+2.3 (p.17).
 [extract note] 3. Proposition 2.2 (p.3) is proved in Section 4 (pp.6-11): (2.9) via
 Lemma 4.1 and the proof of Lemma 1 of [3]; (2.10) via Lemma 4.2, (4.10), (4.13), (4.14)
 and the proof of Lemma 2 of [3].
-[extract note] 4. Lemma 4.1 (p.6) is proved on pp.6-7 from (2.2), (2.3), (4.5), (4.6)
+[extract note] 4. Lemma 4.1 (p.6) is proved on pp.6-8 from (2.2), (2.3), (4.5), (4.6)
 and the prime number theorem. Lemma 4.2 (p.8) is quoted as Lemma 2 of [5]; no argument
 is printed.
-[extract note] 5. Proposition 2.3 (p.3) is proved on p.16 from Lemma 5.5 and Lemma 5.1,
+[extract note] 5. Proposition 2.3 (p.3) is proved on p.17 from Lemma 5.5 and Lemma 5.1,
 together with (5.21) and (5.23).
 [extract note] 6. Lemma 5.5 (p.16) is proved on pp.17-20: (5.21) from the construction
 of $`\mathcal{P}(H)`$, the prime number theorem and (5.5); the second assertion by
@@ -798,7 +797,10 @@ feasibility remark.
 - Source print slips, recorded and not repaired in the quotations: $`\mu(d_1)\mu(d_1)`$
   in the definition of $`F(s_1,s_2;\Omega)`$ (p.8); $`1/p^{s_1}+1/p^{s_1}`$ in the
   definition of $`G(s_1,s_2;\Omega^{+})`$ (p.11); $`\Lambda`$ without the subscript R in
-  (6.2) and (6.3) (pp.20-21); "Cauchy-Schwartz" at (6.7) (p.22).
+  (6.2) and (6.3) (pp.20-21); "Cauchy-Schwartz" at (6.7) (p.22); the summation condition
+  $`d\cdots d_{\kappa}\le R^{2}`$ printed with no subscript on the first factor (p.10);
+  the congruence condition of the third sum in the proof of Lemma 5.5 printed
+  $`p\equiv1\bmod q`$, with no prime on the variable (p.17).
 - The set of linear forms, the prime set of Section 5 and the singular series are printed
   in three different alphabets; the transcription convention for each is stated in
   Section 0.

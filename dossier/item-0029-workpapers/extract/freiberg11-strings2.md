@@ -19,6 +19,10 @@ was made from that layer and every quoted passage was verified against 200-dpi p
 rasters of the page cited.
 [extract note] The source prints the prime set of Section 3 in a calligraphic face,
 transcribed here as $`\mathcal{P}(H)`$.
+[extract note] The source prints a section sign before section numbers in
+cross-references such as "[2, 6.2]" and "See 4". The sign is dropped in the ASCII
+transcription below and the bare number retained, so "[2, 6.2]" reads as a reference to
+section 6.2 of [2] and "See 4" as a reference to this paper's Section 4.
 [extract note] The declared scope covers pp.1-13 up to the end of Section 3. The scope
 boundary and what lies outside it are stated in Section 7 below.
 
@@ -369,14 +373,14 @@ $`A=1`$, to obtain, for $`1\le l\le\log{t(H)}`$," -- display (3.21), p.11:
 $$\sum_{\substack{p\in I_l\cr p\equiv a\bmod q}}1=\sum_{\substack{p\le e^{l}H/t(H)\cr p\equiv a\bmod q}}1-\sum_{\substack{p\le e^{l-1}H/t(H)\cr p\equiv a\bmod q}}1=\left(1+O\left(\frac{\log{}\log{}\log{H}}{\log{}\log{H}}\right)\right)\cdot\frac{1}{\phi(q)}\cdot\frac{H}{t(H)\log{H}}\left(1-\frac{1}{e}\right)e^{l}.$$
 "Also, since $`\log{t(H)}=(\log{H})(\log{}\log{}\log{H})/(2\log{}\log{H})`$ by definition
 (3.2) of $`t(H)`$, we have, for $`1\le l\le\frac{1}{2}\log{t(H)}`$, that
-$`\log{H}=\log{(t(H)/e^{l})}^{1+o(1)}`$, where $`o(1)`$ is shorthand for
+$`\log{H}=\left(\log{(t(H)/e^{l})}\right)^{1+o(1)}`$, where $`o(1)`$ is shorthand for
 $`O(\log{}\log{}\log{H}/\log{}\log{H})`$. Thus, for
 $`1\le l\le\frac{1}{2}\log{t(H)}`$ and all sufficiently large H, we have"
-$$3\le q\le(\log{H})^{\alpha}\le\left(\log{t(H)/e^{l}}\right)^{\beta},\qquad\beta:=\tfrac{1}{2}(\alpha+\tfrac{1}{2})\in(0,\tfrac{1}{2}).$$
+$$3\le q\le(\log{H})^{\alpha}\le\left(\log{(t(H)/e^{l})}\right)^{\beta},\qquad\beta:=\tfrac{1}{2}(\alpha+\tfrac{1}{2})\in(0,\tfrac{1}{2}).$$
 "Therefore, for $`1\le l\le\frac{1}{2}\log{t(H)}`$, we may apply Lemma 3.3, with
 $`\beta`$ in place of $`\alpha`$, and $`A=2`$, say, to obtain"
 -- display (3.22), p.11:
-$$\sum_{\substack{m\le t(H)/e^{l}\cr p\mid m\Rightarrow p\equiv1\bmod q\ \text{and}\ p>\log{H}}}1=\left(1+O\left(\frac{(\log{}\log{t(H)})^{c}}{(\log{t(H)})^{1-2\beta}}\right)\right)\frac{c(q)}{\Gamma(1/\phi(q))}\times\frac{t(H)}{e^{l}}\cdot\frac{\left(\log{t(H)/e^{l}}\right)^{\frac{1}{\phi(q)}}}{\log{(t(H)/e^{l})}}\prod_{\substack{p\le\log{H}\cr p\equiv1\bmod q}}\left(1-\frac{1}{p}\right)$$
+$$\sum_{\substack{m\le t(H)/e^{l}\cr p\mid m\Rightarrow p\equiv1\bmod q\ \text{and}\ p>\log{H}}}1=\left(1+O\left(\frac{(\log{}\log{t(H)})^{c}}{(\log{t(H)})^{1-2\beta}}\right)\right)\frac{c(q)}{\Gamma(1/\phi(q))}\times\frac{t(H)}{e^{l}}\cdot\frac{\left(\log{(t(H)/e^{l})}\right)^{\frac{1}{\phi(q)}}}{\log{(t(H)/e^{l})}}\prod_{\substack{p\le\log{H}\cr p\equiv1\bmod q}}\left(1-\frac{1}{p}\right)$$
 $$\ge\left(1+O\left(\frac{(\log{}\log{t(H)})^{c}}{(\log{t(H)})^{1-2\beta}}\right)\right)\frac{c(q)}{\Gamma(1/\phi(q))}\times\frac{t(H)}{e^{l}}\cdot\frac{(\log{t(H)})^{\frac{1}{\phi(q)}}}{\log{t(H)}}\left(1-\frac{l}{\log{t(H)}}\right)^{\frac{1}{\phi(q)}}\prod_{\substack{p\le\log{H}\cr p\equiv1\bmod q}}\left(1-\frac{1}{p}\right).$$
 "Note that, since
 $`\log{t(H)}=(\log{H})(\log{}\log{}\log{H})/(2\log{}\log{H})`$ by definition (3.2),"
@@ -491,7 +495,5 @@ $`\frac{1}{2}(1-1/e)e^{\gamma/2}=0.42\ldots>\frac{2}{5}`$, printed on p.13.
   The source prints them unnumbered, immediately after Theorem 1.1 on p.2, and attributes
   them to Shiu [10, Theorem 2] with the case split $`a\equiv\pm1\bmod q`$ versus
   otherwise.
-- The section-reference glyph: the source prints a section sign before section numbers in
-  cross-references such as "[2, 6.2]" and "See 4". The sign is dropped in the ASCII
-  transcription above and the bare number retained, so "[2, 6.2]" reads as a reference to
-  section 6.2 of [2] and "See 4" as a reference to this paper's Section 4.
+- The source prints a section sign before section numbers in cross-references; the
+  transcription convention for it is stated in Section 0.
