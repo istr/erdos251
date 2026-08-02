@@ -3,3 +3,9 @@
 *.pdf
 .DS_Store
 runs/**/scratch/
+
+# item-0029: the Shiu 2000 extract is held out of the tree on operator
+# instruction (publisher copyright). Executor-lane local file only; it is NOT
+# an in-tree source surrogate and cannot be graded or consumed by the analysis
+# lane. See ANN-20260801-92.
+dossier/item-0029-workpapers/extract/shiu00-strings.md

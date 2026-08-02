@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..91; the old path
+strictly-append-only file per entry, ANN-01..92; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 9 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
@@ -110,21 +110,38 @@ its later sections carry a STALE banner, HANDOVER is the record).
   mean 0.198 -> 0.175 over eight scored. The Lemma-2-of-1004.1072 support annotation is in
   force corpus-wide; the workpaper's internal "S1" label is cited as
   "the (2.16) sharpening" to avoid collision with the separator S1.
-- FIVE SOURCE ANCHORS FOR item-0029 ARE BOOKED AND THE EXTRACTION IS
-  OPERATOR-GATED (ANN-91). Three new payloads/HASHES.txt lines -- the
-  Shiu 2000 publisher PDF (operator-held, filename anchor, doi
-  10.1112/S0024610799007863) and Freiberg arXiv 1005.4703v2 and
-  1110.6624v1 -- join the two standing Maier anchors
-  (Maier-Primes-in-short-intervals.pdf, S0002-9939-1988-0958032-5.pdf).
-  Purpose and scope per source, the render-based protocol for the
-  scanned Maier 1985 PDF (no text layer; empty pdftotext output there
-  is EXPECTED, not a stop), and the ratified three-session structure
-  (extract / grade / adjudicate, rule-26(3) separation, grade hashes
-  on CLEAN only) are in ANN-91. NO extract exists yet, nothing is
-  graded, and that apply was anchor preparation only: the item-0029
-  run had NOT started there and BET-20260725-12 did not bind through
-  it -- the run-opening apply states the binding explicitly (ANN-88
-  precedent).
+- FIVE SOURCE ANCHORS FOR item-0029 ARE BOOKED AND FIVE UNGRADED
+  EXTRACTS WERE PRODUCED, OF WHICH FOUR ARE IN THE TREE (ANN-91 booked
+  the anchors and the five-source rule-26(5) gate; ANN-92 booked the
+  extracts). Session E has landed maier85-shortintervals.md,
+  hildebrandmaier88-gaps.md, freiberg10-strings1.md and
+  freiberg11-strings2.md under dossier/item-0029-workpapers/extract/,
+  with the run report item-0029-report-E.md beside them. THE SHIU
+  EXTRACT IS NOT IN THE TREE: on operator instruction at apply time,
+  on publisher-copyright grounds, shiu00-strings.md is named in
+  .gitignore and exists on the executor workstation only. Read that
+  together with rule 21 -- the anchored extract is "the one permitted
+  substitute" for a source that cannot be committed -- because with it
+  withheld the Shiu 2000 source has NO in-tree representation, Session
+  G cannot grade it, and Session M cannot consume it under rule 26(4).
+  ANN-92 and the run report state the consequence in full; resolving it
+  is the operator's. THE FOUR IN-TREE EXTRACTS ARE UNGRADED: rule 26(1)
+  says "an ungraded or defective extract directs attention at most",
+  and rule 26(4) forbids either lane consuming them as source
+  surrogates before the Session G grade and the hashes that grade
+  licenses -- a cold start must not treat them as standing evidence
+  yet. NOTHING IS HASHED: payloads/HASHES.txt is byte-unchanged by that
+  apply. THE ITEM-0029 RUN HAS STARTED and BET-20260725-12 NOW BINDS
+  (item ratified and run) and stays OPEN for operator judgment against
+  the item-0029 finding, resolve_by 2026-09-30; no bet was scored.
+  NEXT IS SESSION G, the fidelity grade over the four in-tree extracts
+  by a fresh session over the full surface including prose glosses,
+  hashing on CLEAN only, then
+  Session M for the adjudication and the roadmap done-move. Scope per
+  source, the render protocols (Maier 1985 has no text layer at all;
+  the Shiu publisher PDF has one but its CUP fonts carry no ToUnicode
+  map, so it too was extracted from renders), and the V5-V9 findings
+  are in ANN-92 and in the report.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
