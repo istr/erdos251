@@ -387,7 +387,8 @@ $`\log{t(H)}=(\log{H})(\log{}\log{}\log{H})/(2\log{}\log{H})`$ by definition (3.
 $$\frac{(\log{}\log{t(H)})^{c}}{(\log{t(H)})^{1-2\beta}}\ll\frac{\log{}\log{}\log{H}}{\log{}\log{H}}$$
 "for all sufficiently large H. Thus, combining (3.22) and (3.21) with (3.20), we obtain"
 -- display (3.23), p.12:
-$$\sum_{\substack{1\le h\le H\cr h\equiv a\bmod q\cr(\tilde{Q},h)=1}}1\ge\left(1+O\left(\frac{\log{}\log{}\log{H}}{\log{}\log{H}}\right)\right)\frac{c(q)}{\Gamma(1/\phi(q))}\cdot\frac{H(\log{t(H)})^{\frac{1}{\phi(q)}}}{\log{H}}\prod_{\substack{p\le\log{H}\cr p\equiv1\bmod q}}\left(1-\frac{1}{p}\right)$$
+$$\sum_{\substack{1\le h\le H\cr h\equiv a\bmod q\cr(\tilde{Q},h)=1}}1\ge\sum_{1\le l\le\frac{1}{2}\log{t(H)}}\ \sum_{\substack{p\in I_l\cr p\equiv a\bmod q}}\ \sum_{\substack{m\le t(H)/e^{l}\cr p\mid m\Rightarrow p\equiv1\bmod q\ \text{and}\ p>\log{H}}}1$$
+$$\ge\left(1+O\left(\frac{\log{}\log{}\log{H}}{\log{}\log{H}}\right)\right)\frac{c(q)}{\Gamma(1/\phi(q))}\cdot\frac{H(\log{t(H)})^{\frac{1}{\phi(q)}}}{\log{H}}\prod_{\substack{p\le\log{H}\cr p\equiv1\bmod q}}\left(1-\frac{1}{p}\right)$$
 $$\times\left(1-\frac{1}{e}\right)\cdot\frac{1}{\phi(q)}\cdot\frac{1}{\log{t(H)}}\sum_{1\le l\le\frac{1}{2}\log{t(H)}}\left(1-\frac{l}{\log{t(H)}}\right)^{\frac{1}{\phi(q)}}.$$
 "Finally,"
 $$\sum_{1\le l\le\frac{1}{2}\log{t(H)}}\left(1-\frac{l}{\log{t(H)}}\right)^{\frac{1}{\phi(q)}}\ge\int_{1}^{\frac{1}{2}\log{t(H)}}\left(1-\frac{u}{\log{t(H)}}\right)^{\frac{1}{\phi(q)}}du$$

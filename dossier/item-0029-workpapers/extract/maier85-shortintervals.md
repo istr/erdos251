@@ -344,8 +344,8 @@ the difference between consecutive primes, Arch. Math. Naturvid. 47
   the $`\epsilon>0`$ introduced later (p.223).
 - [extract note] The variable z is not free: the proof assumes
   $`z\to\infty`$ through the set of z for which $`P(z)`$ is a good
-  modulus and $`z\ge e^{cD}`$ (p.223), and Lemma 1 asserts only that such
-  z exist arbitrarily large (p.222).
+  modulus and $`z\ge e^{cD}`$ (pp.223-224), and Lemma 1 asserts only that
+  such z exist arbitrarily large (p.222).
 - [extract note] Lemma 3 is stated for fixed $`\lambda>1`$ as a limit in
   z, and the source records that a uniform result was proven in [1]
   (p.222).

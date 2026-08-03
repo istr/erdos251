@@ -20,7 +20,8 @@ rasters of the page cited.
 [extract note] The source uses several distinguished alphabets: a calligraphic H for the
 set of linear forms, transcribed $`\mathcal{H}`$; a calligraphic L for the weighted sum,
 transcribed $`\mathcal{L}`$; a calligraphic P for the prime set of Section 5,
-transcribed $`\mathcal{P}`$; calligraphic S, T and E in Section 4, transcribed
+transcribed $`\mathcal{P}`$; a calligraphic S in Section 5 and calligraphic T and E in
+Section 4, transcribed
 $`\mathcal{S}`$, $`\mathcal{T}`$, $`\mathcal{E}`$; and a Fraktur S for the singular
 series, transcribed $`\mathfrak{S}`$.
 [extract note] The source prints no journal reference on the paper; it is an arXiv
@@ -629,7 +630,7 @@ $`N/[d_1,\ldots,d_4]+O(1)\ll N/[d_1,\ldots,d_4]`$."
 
 "As observed in Section 4, $`\lvert\Omega(d)\rvert\le k^{\omega(d)}`$ for squarefree d,
 so" -- display (6.4), p.21:
-$$\sum_{\substack{d_1,\ldots,d_4\le R\cr\text{squarefree}}}\frac{\lvert\Omega([d_1,\ldots,d_4])\rvert}{[d_1,\ldots,d_4]}\le\sum_{D\le R^{4}}\frac{\mu^{2}(D)k^{\omega(D)}}{D}\sum_{[d_1,\ldots,d_4]=D}1=\sum_{D\le R^{4}}\frac{\mu^{2}(D)(15k)^{\omega(D)}}{D}\le\prod_{p\le R^{4}}\left(1+\frac{15k}{p}\right)\ll(\log{R^{4}})^{15k}.$$
+$$\sum_{\substack{d_1,\ldots,d_4\le R\cr\text{squarefree}}}\frac{\lvert\Omega([d_1,\ldots,d_4])\rvert}{[d_1,\ldots,d_4]}\le\sum_{D\le R^{4}}\frac{\mu^{2}(D)k^{\omega(D)}}{D}\sum_{\substack{d_1,\ldots,d_4\cr[d_1,\ldots,d_4]=D}}1=\sum_{D\le R^{4}}\frac{\mu^{2}(D)(15k)^{\omega(D)}}{D}\le\prod_{p\le R^{4}}\left(1+\frac{15k}{p}\right)\ll(\log{R^{4}})^{15k}.$$
 "Since $`R^{4}<N`$, combining (6.3) and (6.4) yields (6.2)."
 
 "Now choose N so that (3.2) holds. If we restrict the outer sum in the definition of

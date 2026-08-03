@@ -1,0 +1,154 @@
+  - id: ANN-20260802-96
+    refs: [ANN-20260802-95, ANN-20260802-94, ANN-20260802-93,
+      ANN-20260801-92, ANN-20260801-91, BET-20260725-12]
+    date: 2026-08-03
+    note: >-
+      THE SECOND item-0029 CYCLE IS OPERATOR-OPENED AND ITS REPAIR HALF
+      IS DONE: THE FOUR G2 DEFECT ROWS ARE REPAIRED AND THE THREE
+      EXTRACTS REMAIN UNGRADED. Session R2, executed by the executor
+      lane (local workstation, Claude Code, model string claude-fable-5)
+      on 2026-08-03 against the ephemeral kickoff
+      item-0029-kickoff-R2-v1.md at a Section 0 pin equal to HEAD of
+      main; web OFF and cloud OFF for the whole session. The session was
+      FRESH in the rule-26(3) sense: it is none of the Sessions E, G, R
+      or G2, inherited no context, notes, renders or text-layer dumps
+      from any of them, and did not read the withheld executor-local
+      shiu00-strings.md.
+      THE CYCLE-TWO OPENING, the ratifying content of this apply: the
+      operator decided on 2026-08-02, at dispatch of this session's
+      kickoff, to resolve the four G2 defect rows in ONE ADDITIONAL
+      CYCLE -- this repair session plus the terminal Session G3
+      re-grade, and no more -- closing the ANN-95 open question in
+      favour of the second cycle and superseding the spent ANN-91
+      one-cycle budget for this item exactly once, with the operator
+      apply of this commit as the ratifying act. After Session G3 no
+      further repair may run without a new operator decision.
+      FILES OF THIS APPLY, one apply per rule 25:
+      dossier/item-0029-workpapers/extract/maier85-shortintervals.md;
+      dossier/item-0029-workpapers/extract/freiberg10-strings1.md;
+      dossier/item-0029-workpapers/extract/freiberg11-strings2.md; the
+      run report dossier/item-0029-workpapers/item-0029-report-R2.md;
+      HANDOVER.md (two bounded deltas, enumerated below); this entry.
+      Nothing else.
+      ALL FOUR POSITIONS WERE APPLIED BYTE-FOR-BYTE FROM THE G2 RECORD
+      AND VERIFIED AGAINST THIS SESSION'S OWN RENDERS: the four defect
+      rows of dossier/item-0029-workpapers/extract-grades-G2.md -- M2
+      (the maier85 uniformity-ledger locator widened to pp.223-224,
+      confirmed straddling the printed page break); F10 (the dropped
+      index row of the third sum of (6.4) restored, both printed
+      subscript rows confirmed at 500 dpi on p.21); F11 (the
+      calligraphic S reattributed to Section 5 with T and E remaining
+      Section 4, confirmed at Lemma 5.2 on p.12 and by a sweep of
+      pp.6-11 finding no calligraphic S in Section 4); G4 (the (3.23)
+      triple-sum member restored with all three summation signs and
+      their subscript rows as p.12 prints them, the recorded one-line
+      display becoming the recorded two display lines with the following
+      line unchanged). Each is-state was found byte-exact and exactly
+      once in its file before the edit, each replacement was taken from
+      the record's own fenced blocks without retyping, and each repaired
+      position was checked against a render of the source pages named in
+      that row's finding before the next position started. Sixty pages
+      (6 + 24 + 30) were rasterised in this session at 200 dpi from the
+      anchored bytes, with eight page re-renders at 400-500 dpi for the
+      glyph and subscript decisions; the three source sha256 values were
+      verified against payloads/HASHES.txt lines 29, 106 and 107 before
+      any source was opened. No position was blocked, none was
+      approximated, and no fifth edit was made: the diff of this apply
+      over the three extracts is exactly the four positions.
+      THE THREE REPAIRED EXTRACTS REMAIN UNGRADED AND CARRY NO STANDING.
+      Rule 26(1), verbatim: "an ungraded or defective extract directs
+      attention at most". Neither lane may consume them as source
+      surrogates. This session graded nothing, hashed nothing and
+      verdicted nothing, its own work included, because a session never
+      grades or hashes an artifact it produced or repaired (rule 26(3)).
+      NOTHING WAS HASHED AND payloads/HASHES.txt IS BYTE-UNCHANGED. No
+      line was added, removed or edited there, and the file appears in
+      no diff of this apply. The three hashed grade-chain artifacts were
+      opened read-only and were NOT touched:
+      dossier/item-0029-workpapers/extract/hildebrandmaier88-gaps.md
+      still verifies as 9d0d8bc0...6dfffa, extract-grades-G1.md as
+      0739f84c...71c5c7 and extract-grades-G2.md as f4c564b6...63aab1,
+      each against its payloads/HASHES.txt line, rechecked at close. The
+      one-line-per-file integrity system is intact and
+      hildebrandmaier88-gaps.md keeps the corpus standing ANN-93
+      conferred on it as the only consumable item-0029 extract.
+      THE SHIU EXCLUSION OF ANN-20260801-92 IS CARRIED FORWARD
+      UNCHANGED. shiu00-strings.md remains named in .gitignore and
+      exists on the executor workstation only; the Shiu 2000 source and
+      that extract were out of scope in every direction this session --
+      not opened, not read, not edited, not graded, not hashed. The
+      standing question remains the operator's: the source is anchored
+      in payloads/HASHES.txt at line 105 and has no in-tree surrogate,
+      which is exactly the state rules 21 and 26 exist to prevent.
+      BET-20260725-12 STILL BINDS AND STAYS OPEN for operator judgment
+      against the item-0029 finding, resolve_by 2026-09-30. No bet is
+      scored, re-priced or amended by this apply and ledger/bets.yaml is
+      byte-untouched; repairing source surrogates is not a finding about
+      the item.
+      POST-REPAIR INVENTORY, the baseline Session G3 recounts against:
+      maier85-shortintervals.md 398 lines (unchanged), 11 quoted
+      objects, 30 display blocks, 0 TRANSCRIPTION-UNSURE, 20 [extract
+      note] lines; freiberg10-strings1.md 807 lines (was 806, F11 splits
+      one note line into two), 79 objects, 153 display blocks, 0 unsure,
+      22 note lines; freiberg11-strings2.md 500 lines (was 499), 31
+      objects, 69 display blocks (was 68; G4 raises the count by one BY
+      DESIGN), 0 unsure, 20 note lines. Multi-line-display closers by
+      the corrected report-G2 D3 reading: 2 / 0 / 0. All three files are
+      inside their symmetric rule-23 envelopes (394-402 / 802-812 /
+      495-505).
+      GATES. Every Section 8 gate ran at start and at close and is green
+      at both: frozen blocks byte-identical, both relocation checks
+      passed, the strict sorry inventory exactly Statement.lean:21, the
+      manifest rev present once, the toolchain trailing newline present,
+      ledger validate passed (96 entries at close), ledger append-only
+      clean over the pin..HEAD range (1 change, additions only),
+      writeup_mapper PASS, mathjax_lint 0 problems over 155 files
+      including the three edited extracts and the new report, roadmap
+      show item-0029 ratified both times, and 0 non-ASCII bytes across
+      every new or edited file. No lake invocation was made. None of the
+      ten STOP conditions fired; all ten are reported by name in the run
+      report.
+      THE SIX DISCLOSED READINGS WERE CONSUMED, NOT RE-LITIGATED: the
+      G4 verification applied reading (b) of report-G2 Section 5 D1
+      (content-present versus content-absent; a reflowed subscript row
+      is layout), which names the very sum G4 restores as its example.
+      The Session G3 kickoff will fix all six readings (report-G Section
+      5 D1 a-c and report-G2 Section 5 D1 a-c) as governing for the
+      terminal grade.
+      NOTHING ELSE MOVES. No roadmap file, status, rank, arc or order
+      changes; item-0029 remains ratified and the done-move is Session
+      M's. No Lean file, frozen block, run, payload text, existing
+      dossier workpaper, writeup file, extract header or other extract
+      is touched. No verdict, target, threshold or constant changes; no
+      item-0029 axis, the positive-proportion gate and neither named
+      finding is adjudicated anywhere in this apply, and no extract
+      content was consumed for item-0029 substance.
+      HANDOVER DELTAS, two, enumerated. (i) The cold-start read-order
+      line moves ANN-01..95 to ANN-01..96. (ii) The item-0029 frontier
+      bullet is REWRITTEN to the cycle-two state: second cycle
+      operator-opened (this entry), the four G2 rows repaired and STILL
+      UNGRADED, hildebrandmaier88-gaps.md still the only consumable
+      surrogate, Session G3 the terminal next step, the Shiu exclusion
+      and the BET-12 binding unchanged.
+      NEXT STEP: SESSION G3, the TERMINAL re-grade of the second cycle,
+      by a further fresh session on its own ephemeral kickoff, fixing
+      the six disclosed readings as governing; hashing on CLEAN only
+      remains that session's to confer. After it the second cycle is
+      spent under the operator decision this entry books.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-20260802-95 left open,
+      carried forward with the disposition question CLOSED BY THIS ENTRY
+      in favour of the second cycle: BET-20260711-07, BET-20260718-08,
+      BET-20260725-12, BET-20260725-13; the item-0010 re-scope (deferred
+      until item-0029 and item-0030 return); the two Lean doc surfaces
+      routed to item-0027; the item-0006 execution profile, deliberately
+      unpriced; source_commit in writeup/sources.yml and the four
+      a292ba4 heading re-assignments, routed to the next writeup work
+      package; ERRATUM-5 booked and deliberately unrepaired; Q1/Q2 of
+      item-0032; the Shiu 2000 standing question created by the operator
+      exclusion, unchanged and resolvable only by the operator; and,
+      behind the loop, Session M, which can consume
+      hildebrandmaier88-gaps.md today and the other three only if and
+      when Session G3 returns CLEAN. CLOSED BY THIS ENTRY: the ANN-95
+      disposition question, by the operator decision this apply
+      ratifies. NEWLY OPEN: the Session G3 terminal re-grade, the second
+      and last half of the operator-opened second cycle.
