@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..96; the old path
+strictly-append-only file per entry, ANN-01..97; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 9 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
@@ -110,43 +110,36 @@ its later sections carry a STALE banner, HANDOVER is the record).
   mean 0.198 -> 0.175 over eight scored. The Lemma-2-of-1004.1072 support annotation is in
   force corpus-wide; the workpaper's internal "S1" label is cited as
   "the (2.16) sharpening" to avoid collision with the separator S1.
-- THE SECOND item-0029 CYCLE IS OPERATOR-OPENED AND ITS REPAIR HALF IS
-  DONE; THE THREE EXTRACTS ARE REPAIRED AND STILL UNGRADED (ANN-96; the
-  chain: ANN-91 booked the five anchors and the rule-26(5) gate, ANN-92
-  the four ungraded extracts, ANN-93 the Session G grade with one CLEAN
-  and three DEFECTIVE, ANN-94 the Session R repair, ANN-95 the terminal
-  re-grade that returned 0 CLEAN / 3 DEFECTIVE, spent the ANN-91 cycle
-  and booked the disposition question). THE ANN-95 OPEN QUESTION IS
-  CLOSED IN FAVOUR OF A SECOND CYCLE (ANN-96): the operator decided on
-  2026-08-02, at dispatch of the Session R2 kickoff, to resolve the four
-  G2 defect rows in ONE ADDITIONAL CYCLE -- the Session R2 repair plus
-  one terminal re-grade (Session G3), and NO MORE -- superseding the
-  spent ANN-91 one-cycle budget exactly once. After Session G3 no
-  further repair may run without a new operator decision.
-  ALL FOUR G2 POSITIONS ARE APPLIED, byte-for-byte from the hashed
-  extract-grades-G2.md record and verified against Session R2's own
-  renders: M2 (the maier85 uniformity-ledger locator widened to
-  pp.223-224), F10 (the dropped index row of the third sum of (6.4)
-  restored), F11 (the calligraphic S reattributed to Section 5), G4
-  (the (3.23) triple-sum member restored; one display became two by
-  design). Run report: dossier/item-0029-workpapers/item-0029-report-R2.md.
+- ALL FOUR COMMITTED item-0029 EXTRACTS ARE CLEAN, HASHED AND
+  CONSUMABLE; THE OPERATOR-OPENED SECOND CYCLE IS CLOSED FULLY (ANN-97;
+  the chain: ANN-91 booked the five anchors and the rule-26(5) gate,
+  ANN-92 the four ungraded extracts with the Shiu extract withheld,
+  ANN-93 the Session G grade with one CLEAN and three DEFECTIVE, ANN-94
+  the Session R repair, ANN-95 the terminal re-grade at 0 CLEAN that
+  spent the ANN-91 cycle, ANN-96 the operator-opened second cycle and
+  its Session R2 repair, ANN-97 the Session G3 terminal re-grade).
+  SESSION G3 RETURNED 3 CLEAN, 0 DEFECTIVE, 0 DEFECT ROWS over the full
+  surface of all three gradees, with the eighteen repaired sites of
+  both cycles re-checked as ordinary surface and correct as applied;
+  the six disclosed readings (report-G Section 5 D1 a-c, report-G2
+  Section 5 D1 a-c) were fixed as governing and consumed, not
+  re-litigated. Grade record:
+  dossier/item-0029-workpapers/extract-grades-G3.md; run report:
+  dossier/item-0029-workpapers/item-0029-report-G3.md.
+  CONSUMABLE SURROGATE SET UNDER RULE 26(4), all four in-tree extracts:
+  hildebrandmaier88-gaps.md (standing since ANN-93) and, by ANN-97,
   maier85-shortintervals.md, freiberg10-strings1.md and
-  freiberg11-strings2.md REMAIN UNGRADED and carry no standing ("an
-  ungraded or defective extract directs attention at most", rule 26(1));
-  neither lane may consume them as source surrogates before the Session
-  G3 grade and the hashes it may license.
-  NOTHING WAS HASHED by the repair and payloads/HASHES.txt is
-  byte-unchanged. ONLY hildebrandmaier88-gaps.md IS CLEAN AND
-  CONSUMABLE, unchanged: it carries the corpus standing ANN-93 conferred
-  (rule 26(4)) and is still the only item-0029 extract either lane may
-  consume. It, extract-grades-G1.md and extract-grades-G2.md were opened
-  read-only and still verify against their payloads/HASHES.txt lines.
-  SESSION G3 IS THE TERMINAL NEXT STEP: a further fresh session on its
-  own ephemeral kickoff, fixing the six disclosed readings (report-G
-  Section 5 D1 a-c and report-G2 Section 5 D1 a-c) as governing,
-  hashing on CLEAN only. Session M sits behind it and can consume
-  hildebrandmaier88-gaps.md today and the other three only if and when
-  G3 returns them CLEAN.
+  freiberg11-strings2.md -- each CLEAN, hashed in payloads/HASHES.txt,
+  and carrying corpus standing as a source surrogate for both lanes.
+  extract-grades-G1.md, -G2.md and -G3.md are all hashed; the second
+  cycle closed with no residue and NO open operator question on extract
+  disposition.
+  SESSION M IS THE NEXT STEP: the adjudication session, on its own
+  ephemeral kickoff authored on operator request, consuming only the
+  graded-clean-and-hashed four-extract surrogate set (rule 26(4)); the
+  run report, the rule-15 sheet, the mechanical verdict rule, the two
+  separate named findings, the BET-12 binding note and the roadmap
+  done-move land in that one apply (ANN-91 frame).
   THE SHIU EXTRACT IS STILL NOT IN THE TREE, unchanged: on operator
   instruction, on publisher-copyright grounds, shiu00-strings.md is
   named in .gitignore and exists on the executor workstation only. Read
@@ -157,10 +150,11 @@ its later sections carry a STALE banner, HANDOVER is the record).
   consequence in full; resolving it is the operator's.
   THE ITEM-0029 RUN HAS STARTED and BET-20260725-12 STILL BINDS and
   stays OPEN for operator judgment against the item-0029 finding,
-  resolve_by 2026-09-30; no bet was scored by the repair.
+  resolve_by 2026-09-30; no bet was scored by the grade.
   Scope per source, the render protocols and the V5-V9 findings are in
   ANN-92; the V-G outcomes are in ANN-93 and report-G, the V-G2 outcomes
-  in ANN-95 and report-G2, the V-R2 outcomes in ANN-96 and report-R2.
+  in ANN-95 and report-G2, the V-R2 outcomes in ANN-96 and report-R2,
+  the V-G3 outcomes in ANN-97 and report-G3.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
