@@ -8,12 +8,11 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..98; the old path
+strictly-append-only file per entry, ANN-01..99; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
-bets.yaml alone -- the history no longer rides along. 9 bets scored,
-BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
-successor bets BET-12/13 to 2026-09-30 open -- read the `open:`
-block, not this line, for the registered values). Both item-0026 bets
+bets.yaml alone -- the history no longer rides along. 10 bets scored,
+BET-07 to 2026-08-08 and BET-08 and BET-13 to 2026-09-30 open --
+read the `open:` block, not this line, for the registered values). Both item-0026 bets
 are now SCORED: BET-20260724-10 YES at brier 0.64 (ANN-70) and
 BET-20260724-09 NO at brier 0.0025 (ANN-71); read ANN-70 and ANN-71
 together, since both entries argue that the pair priced the project's
@@ -146,10 +145,9 @@ its later sections carry a STALE banner, HANDOVER is the record).
   byte-identical with the workpaper), item-0029-report-M.md (V-M
   table, gates, ten STOP conditions unfired, disclosures incl. the
   in-session adversarial verification that sharpened Q-SHAPE).
-  BET-20260725-12 STILL BINDS AND STAYS OPEN for operator judgment
-  against this finding, resolve_by 2026-09-30 (its clause: a bounded
-  existence statement resolves NO -- the judgment is the operator's);
-  no bet was scored and ledger/bets.yaml is untouched.
+  BET-20260725-12 IS SCORED NO by operator decision against this
+  finding (ANN-99), brier 0.0225; binary mean brier moves
+  0.175 -> 0.158 over nine scored.
   THE SHIU EXTRACT IS STILL NOT IN THE TREE, unchanged: on operator
   instruction shiu00-strings.md is named in .gitignore and exists on
   the executor workstation only, so Shiu 2000 has no in-tree

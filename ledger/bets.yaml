@@ -229,6 +229,59 @@ scored:
       BET-09/10 precedent, and the registration-vs-scoring tension
       stays exactly as item-0032 left it, explicitly unsettled.
 
+  - id: BET-20260725-12
+    registered: 2026-07-25
+    claim: >-
+      the Maier matrix method, tested against the method rather than
+      against the located theorems, yields a positive proportion of
+      flank classes carrying two distinct realized middles on a sparse
+      scale sequence, rather than a bounded existence statement
+    p: 0.15
+    resolution: >-
+      operator judgment against the item-0029 finding; a positive
+      resolution requires the proportion to be bounded below by a
+      constant, and a bounded existence statement resolves NO
+    resolve_by: 2026-09-30
+    outcome: false  # V-NEG at corpus grain; existence with growing count, short of every proportion form
+    brier: 0.0225
+    note: >-
+      prior and resolve_by steering-proposed (ANN-69); operator
+      amendment before apply is the registered value. Binds only if
+      item-0029 is ratified and runs. This is the highest-information
+      of the three bets: it prices the only registered hypothesis
+      aimed at the word-grain axis, which is the axis the item-0026
+      search named as the located absence. The low prior reflects the
+      standing objection that the method's characteristic output is one
+      favourable row, not a proportion -- an objection that has never
+      been tested against the method itself
+      SCORED 2026-08-04 by operator decision against the item-0029
+      finding (ANN-98; operator directive of the same day), eight
+      weeks before resolve_by. The registered resolution clause
+      requires the proportion bounded below by a constant and
+      resolves a bounded existence statement NO; the S6 verdict is
+      V-NEG (bounded existence or weaker, at corpus grain), and the
+      strongest supported family-axis shape is an existence
+      statement with derivably growing per-scale count -- above
+      bounded existence, short of every proportion form. NO under
+      the clause; brier (0.15)^2 = 0.0225.
+      CALIBRATION. A well-constructed, externally decidable bet of
+      the BET-11 class: the resolution ran through the byte-fixed
+      mechanical S6 rule against graded-clean-and-hashed extracts,
+      not through the project's own vocabulary. The registered
+      reasoning -- the method's characteristic output is one
+      favourable row, not a proportion, and the objection had never
+      been tested against the method itself -- is confirmed AND
+      sharpened in both directions by the adjudication: the method
+      does strictly more than one favourable row (a heavy fixed-rank
+      flank class provably carries unboundedly many distinct
+      middles, and all but o(1) of the tuple mass is non-rigid), yet
+      no proportion of the family population is derivable at any
+      rank and nothing is derivable at the growing D0 depth. Binary
+      mean brier moves 0.175 -> 0.158 over nine scored. The block
+      move open -> scored follows the BET-09/10/11 precedent; the
+      registration-vs-scoring tension stays exactly as item-0032
+      left it, explicitly unsettled.
+
 open:
   - id: BET-20260711-07
     registered: 2026-07-11
@@ -252,29 +305,6 @@ open:
       prior and resolve_by steering-proposed on operator instruction
       (ANN-52); operator amendment before apply is the registered
       value
-  - id: BET-20260725-12
-    registered: 2026-07-25
-    claim: >-
-      the Maier matrix method, tested against the method rather than
-      against the located theorems, yields a positive proportion of
-      flank classes carrying two distinct realized middles on a sparse
-      scale sequence, rather than a bounded existence statement
-    p: 0.15
-    resolution: >-
-      operator judgment against the item-0029 finding; a positive
-      resolution requires the proportion to be bounded below by a
-      constant, and a bounded existence statement resolves NO
-    resolve_by: 2026-09-30
-    note: >-
-      prior and resolve_by steering-proposed (ANN-69); operator
-      amendment before apply is the registered value. Binds only if
-      item-0029 is ratified and runs. This is the highest-information
-      of the three bets: it prices the only registered hypothesis
-      aimed at the word-grain axis, which is the axis the item-0026
-      search named as the located absence. The low prior reflects the
-      standing objection that the method's characteristic output is one
-      favourable row, not a proportion -- an objection that has never
-      been tested against the method itself
   - id: BET-20260725-13
     registered: 2026-07-25
     claim: >-

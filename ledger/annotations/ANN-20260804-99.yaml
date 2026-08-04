@@ -1,0 +1,74 @@
+  - id: ANN-20260804-99
+    refs: [ANN-20260804-98, ANN-20260801-89, BET-20260725-12]
+    date: 2026-08-04
+    note: >-
+      BET-20260725-12 IS SCORED NO AGAINST THE item-0029 FINDING, BY
+      OPERATOR DECISION. Authored by steering (Claude Fable 5,
+      analysis sandbox) on operator instruction ("Bet-Closure,
+      eindeutig", 2026-08-04) at a pin equal to the ANN-98 apply
+      commit == HEAD of main; emitted as a git am mbox; the operator
+      apply is the ratifying commit. Files of this commit:
+      ledger/bets.yaml (one entry moves open -> scored, outcome and
+      brier appended, registration note kept and extended -- the
+      mutable half of the ledger, exactly the file the item-0032
+      split carved out for this edit), HANDOVER.md (three bounded
+      deltas, enumerated below), this entry. The entry travels with
+      the edit it books in the same commit, per rule 25.
+      THE SCORING. Operator decision 2026-08-04 against the item-0029
+      finding (ANN-98), eight weeks before resolve_by 2026-09-30. The
+      registered resolution clause requires the proportion to be
+      bounded below by a constant and states that a bounded existence
+      statement resolves NO. The S6 verdict is V-NEG (bounded
+      existence or weaker, at corpus grain); the strongest supported
+      family-axis shape is an existence statement with derivably
+      growing per-scale count -- strictly above bounded existence,
+      strictly short of every proportion form -- so the clause
+      resolves NO without interpretive residue. Outcome NO, brier
+      (0.15)^2 = 0.0225; binary mean brier moves 0.175 -> 0.158 over
+      nine scored.
+      CALIBRATION, recorded with the score. A well-constructed,
+      externally decidable bet of the BET-11 class: the resolution
+      ran through the byte-fixed mechanical S6 rule against
+      graded-clean-and-hashed extracts, not through the project's own
+      vocabulary. The registered reasoning -- the method's
+      characteristic output is one favourable row, not a proportion,
+      and the objection had never been tested against the method
+      itself -- is confirmed AND sharpened in both directions: the
+      adjudication proves the method does strictly more than one
+      favourable row (a heavy fixed-rank flank class provably carries
+      unboundedly many distinct middles, and all but o(1) of the
+      tuple mass lies in non-rigid classes), yet no proportion of the
+      family population is derivable at any rank, and nothing is
+      derivable at the growing D0 depth. THE BLOCK MOVE open ->
+      scored follows the BET-09/10/11 precedent; the
+      registration-vs-scoring tension item-0032 explicitly declined
+      to settle stays unsettled, and this edit touches only the
+      mutable file that split exists to isolate.
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload,
+      dossier workpaper, writeup file, extract, extract header,
+      grade record or roadmap file is touched by this commit. NO HASH
+      LINE IS ADDED and payloads/HASHES.txt is byte-unchanged. No
+      other bet is resolved, re-priced or amended: BET-20260711-07 to
+      2026-08-08 (four days out at authoring time), BET-20260718-08
+      at 0.07 and BET-20260725-13 at 0.35 all stand. The item-0029
+      verdict stands exactly as ANN-98 booked it; no verdict on the
+      separator S1, on (CG), on B2.pairs or on the item-0010 campaign
+      state is recorded here.
+      HANDOVER DELTAS, three, enumerated. (i) The cold-start
+      read-order line moves ANN-01..98 to ANN-01..99. (ii) The same
+      passage's bet figures move to 10 bets scored with BET-07,
+      BET-08 and BET-13 open. (iii) The item-0029 frontier bullet's
+      BET-12 sentence is rewritten from binds-and-stays-open to
+      SCORED NO (ANN-99, brier 0.0225, binary mean 0.175 -> 0.158
+      over nine). Nothing else changes; HANDOVER.md is ASCII-only
+      before and after, as are this entry and the bets file.
+      STILL OPEN AFTER THIS ENTRY. BET-20260711-07 (resolve_by
+      2026-08-08), BET-20260718-08, BET-20260725-13. Everything
+      ANN-98 left open minus BET-12: the item-0010 re-scope waiting
+      on item-0030; the two Lean doc surfaces routed to item-0027;
+      the item-0006 execution profile, deliberately unpriced;
+      source_commit in writeup/sources.yml and the four a292ba4
+      heading re-assignments, routed to the next writeup work
+      package; ERRATUM-5 booked and deliberately unrepaired; Q1/Q2 of
+      item-0032; and the Shiu 2000 standing question, unchanged and
+      resolvable only by the operator.
