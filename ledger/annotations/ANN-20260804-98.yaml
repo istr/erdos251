@@ -1,0 +1,164 @@
+  - id: ANN-20260804-98
+    refs: [ANN-20260803-97, ANN-20260801-92, ANN-20260801-91,
+      BET-20260725-12]
+    date: 2026-08-04
+    note: >-
+      THE item-0029 ADJUDICATION LANDS AND THE ITEM CLOSES: VERDICT
+      V-NEG (bounded existence or weaker, at corpus grain). Session M,
+      the terminal, substantive session of the three-session structure
+      ratified at ANN-20260801-91, executed by the executor lane (local
+      workstation, Claude Code, model string claude-fable-5) on
+      2026-08-04 against the ephemeral kickoff item-0029-kickoff-M-v1.md
+      at a Section 0 pin equal to HEAD of main; web OFF and cloud OFF
+      for the whole session. The session was FRESH in the rule-26(3)
+      sense: it is none of the Sessions E, G, R, G2, R2 or G3,
+      inherited no context, notes, renders or text-layer dumps from any
+      of them, and did not read the withheld executor-local
+      shiu00-strings.md; no PDF was opened at any point (rule 26(4):
+      the graded extracts were the primary anchor for every
+      source-facing claim, executor lane included).
+      FILES OF THIS APPLY, one apply per rule 25:
+      dossier/item-0029-workpapers/word-grain-adjudication.md;
+      dossier/item-0029-workpapers/maier_matrix_sheet_29.py;
+      dossier/item-0029-workpapers/maier_matrix_sheet_29_tables.txt;
+      dossier/item-0029-workpapers/item-0029-report-M.md;
+      payloads/HASHES.txt (four appended lines, nothing else touched);
+      HANDOVER.md (four bounded deltas, enumerated below);
+      roadmap/_order.md and roadmap/item-0029.md ->
+      roadmap/completed/item-0029.md (the tool-executed done-move);
+      this entry. Nothing else.
+      THE S6 MECHANICAL DETERMINATION IN ONE SENTENCE: all four
+      clauses of the byte-fixed S6 rule fail -- (a) Q-SHAPE is not
+      SHAPE-POSITIVE-PROPORTION for any documented family notion at
+      any rank (EVIDENTIAL for the proportion step, with a PROVED
+      fixed-rank existence statement recorded as the strongest
+      family-axis shape), (b) the corpus's only positive-proportion
+      conclusion lives on the VALUE axis (Lebesgue measure of the
+      limit-point cube, a proxy; STRUCTURAL), (c) Q-CORR =
+      CORR-NOT-ESTABLISHED (EVIDENTIAL; the family index fixes
+      admissible offsets, never the realized flank word), and (d) the
+      mapped k-dependent factors are immediate rule-15 no-gos at the
+      exchange evaluation point (STRUCTURAL; the GPY (k+2l)!
+      normalization at expo 7.2-9.8, the fourth-moment discount at
+      expo 19L, the BV accumulation at 4.5 L^2) -- so V-NEG is
+      emitted, with the rule text and verdict block byte-identical
+      between the adjudication workpaper and the sheet tables.
+      FINDING F-CONS, one block: the consecutiveness constraint
+      SURVIVES the method at pair grain inside one row
+      (proved-in-source, two independent mechanisms: interval rows;
+      the Shiu-modelled S/T imbalance, second-hand provenance named),
+      and at FIXED rank it survives to matched flank words across
+      members with distinct middles (PROVED finite algebra in the
+      workpaper); it is NOT established to survive at word grain --
+      the extension to the growing D0 depth J+K = L-1 is
+      absent-from-corpus, and anything resting on Shiu-2000-only
+      content beyond the Freiberg carriage is recorded OUT-OF-REACH
+      without blocking any S6 clause.
+      FINDING F-MODEL, one block: of the distributional inputs the
+      word-grain application would consume, the good-modulus AP
+      equidistribution, Siegel-Walfisz, the GPY two-primes
+      consequence, AND the hm88 Lemma 3 sieve upper bound all FAIL in
+      the even-Cramer-smooth model (PROVED here by elementary
+      stretch-concentration, minimum-gap and AP-alignment arguments);
+      the integer-sieve Lemma 4 holds (prime-free); Landau-Page and
+      the Mertens-AP/smooth-AP translates are OPEN/untested. The two
+      classical-result priors of W4.U20.4 are cited verbatim, neither
+      re-derived nor assumed to transfer; since the verdict is V-NEG,
+      no separator delivery is claimed.
+      THE FOUR APPENDED HASHES LINES, restated in the kickoff 6.1
+      order:
+      3b285592dd71912f7637ea2a06e91abdc7e67a676dc3f82a40c6f86750482cf8
+      dossier/item-0029-workpapers/word-grain-adjudication.md;
+      9b749ba3201f7f08f06d7bb372fb8d9855287569641ebec281cec630d3690752
+      dossier/item-0029-workpapers/maier_matrix_sheet_29.py;
+      a930dcfee3860bf49625063fce726b0f710883b60efd0f6bf41cf30c563f9c7e
+      dossier/item-0029-workpapers/maier_matrix_sheet_29_tables.txt;
+      ece4a9f87fc1b2dc98f12f974eb0e4fa789c5f1a260bf1915963731bfb400552
+      dossier/item-0029-workpapers/item-0029-report-M.md. Every
+      appended line was re-verified against the file on disk after the
+      append, and the one-line-per-file invariant was re-checked over
+      the whole file (118 identifiers, 118 distinct). The terminal
+      report is hashed per the item-0028 close precedent.
+      CONSUMPTION DISCIPLINE: only the four graded-clean-and-hashed
+      surrogates (HASHES lines 108, 111, 112, 113) and the named
+      in-tree anchors were consumed; the three grade records were
+      consultable governing texts; all twelve hashed inputs verified
+      before first consumption and re-verified at close; no PDF
+      opened; no ad-hoc extraction or paraphrase bypassed the extract
+      layer (rule 26(4)). An in-session local adversarial verification
+      pass (web OFF, in-tree md/py/txt only) is disclosed in report
+      Section 4 D3; it located one under-claim in the draft Q-SHAPE
+      determination, repaired and independently re-confirmed before
+      freeze.
+      THE SHIU EXCLUSION OF ANN-20260801-92 IS CARRIED FORWARD
+      UNCHANGED. shiu00-strings.md remains named in .gitignore and
+      exists on the executor workstation only; the Shiu 2000 source
+      and that extract were out of scope in every direction -- not
+      opened, not read, not consumed (one disclosed metadata touch, a
+      line-count glob, report Section 4 D1). The standing question
+      remains the operator's alone.
+      BET-20260725-12 STILL BINDS AND STAYS OPEN for operator judgment
+      against the item-0029 finding, resolve_by 2026-09-30. No bet is
+      scored, re-priced or amended by this apply and ledger/bets.yaml
+      is byte-untouched. The finding the bet resolves against is the
+      V-NEG verdict above; per the bet's own resolution clause a
+      positive resolution requires a proportion bounded below by a
+      constant, and a bounded existence statement resolves NO -- the
+      judgment is the operator's, not this entry's.
+      GATES. Every Section 8 gate ran at start and at close and is
+      green at both: frozen blocks byte-identical, both relocation
+      checks passed, the strict sorry inventory exactly
+      Statement.lean:21, the manifest rev present once, the toolchain
+      trailing newline present, ledger validate passed (97 at start,
+      98 at close), ledger append-only clean over the pin..HEAD range,
+      writeup_mapper PASS, mathjax_lint 0 problems (157 files at
+      start, 159 at close including the two new .md), roadmap show
+      item-0029 ratified at start and done at completed/ at close,
+      0 non-ASCII bytes across every new or edited file, sheet re-run
+      stability byte-identical (V7 S1c), the twelve consumed inputs
+      and the four appended lines all re-verified at close, and the
+      duplicate-identifier check at 118/118. No lake invocation was
+      made. None of the ten STOP conditions fired; all ten are
+      reported by name in the run report Section 5.
+      THE ROADMAP DONE-MOVE IS RECORDED: executed via
+      .agents/skills/roadmap-items/scripts/roadmap.py done item-0029
+      (the ANN-88-confirmed live tool path; the .claude/... path is
+      absent), which set status done, moved the item file to
+      roadmap/completed/item-0029.md, dropped the _order.md line and
+      appended the Final summary; all three effects verified via order
+      and show.
+      HANDOVER DELTAS, four, enumerated. (i) The cold-start read-order
+      line moves ANN-01..97 to ANN-01..98. (ii) The item-0029 frontier
+      bullet is REWRITTEN to the post-adjudication state: the verdict
+      verbatim, one line per named finding, the artifact pointers,
+      BET-12 binds and stays open, the Shiu exclusion unchanged and
+      still the operator's. (iii) The EXECUTION ORDER bullet: the
+      order becomes item-0027, item-0030, item-0010, item-0006,
+      item-0024; item-0029 is CLOSED AS DONE and lives at
+      roadmap/completed/item-0029.md. (iv) The
+      WHY-THE-ORDER-IS-FEEDERS-FIRST bullet: feeder status updated
+      (item-0028 and item-0029 returned; the item-0010 re-scope stays
+      deferred until item-0030 returns).
+      NOTHING ELSE MOVES. No other roadmap file, status, rank, arc or
+      order changes. No Lean file, frozen block, run, payload text,
+      existing dossier workpaper, writeup file, extract, extract
+      header or grade record is touched; no lake invocation; no
+      re-grade; no measurement run. No verdict on any project object
+      beyond the item's single gate and its two named findings: S1,
+      (CG), B2.pairs and the item-0010 campaign state are untouched,
+      and the S1 deciding fact is quoted in the workpaper only as the
+      name of an absent exchange-rank input.
+      STILL OPEN AFTER THIS ENTRY. Carried forward from
+      ANN-20260803-97, minus what this apply closes: BET-20260711-07,
+      BET-20260718-08, BET-20260725-12 (binding, above),
+      BET-20260725-13; the item-0010 re-scope, now waiting on
+      item-0030 alone (item-0029 has returned); the two Lean doc
+      surfaces routed to item-0027; the item-0006 execution profile,
+      deliberately unpriced; source_commit in writeup/sources.yml and
+      the four a292ba4 heading re-assignments, routed to the next
+      writeup work package; ERRATUM-5 booked and deliberately
+      unrepaired; Q1/Q2 of item-0032; and the Shiu 2000 standing
+      question created by the operator exclusion, unchanged and
+      resolvable only by the operator. CLOSED BY THIS ENTRY: Session M
+      and with it item-0029, which leaves the execution order as DONE;
+      the ANN-91 three-session frame is fully discharged.

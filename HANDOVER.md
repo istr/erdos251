@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..97; the old path
+strictly-append-only file per entry, ANN-01..98; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 9 bets scored,
 BET-07 to 2026-08-08, BET-08 to 2026-09-30, and the two item-0026
@@ -110,51 +110,53 @@ its later sections carry a STALE banner, HANDOVER is the record).
   mean 0.198 -> 0.175 over eight scored. The Lemma-2-of-1004.1072 support annotation is in
   force corpus-wide; the workpaper's internal "S1" label is cited as
   "the (2.16) sharpening" to avoid collision with the separator S1.
-- ALL FOUR COMMITTED item-0029 EXTRACTS ARE CLEAN, HASHED AND
-  CONSUMABLE; THE OPERATOR-OPENED SECOND CYCLE IS CLOSED FULLY (ANN-97;
-  the chain: ANN-91 booked the five anchors and the rule-26(5) gate,
-  ANN-92 the four ungraded extracts with the Shiu extract withheld,
-  ANN-93 the Session G grade with one CLEAN and three DEFECTIVE, ANN-94
-  the Session R repair, ANN-95 the terminal re-grade at 0 CLEAN that
-  spent the ANN-91 cycle, ANN-96 the operator-opened second cycle and
-  its Session R2 repair, ANN-97 the Session G3 terminal re-grade).
-  SESSION G3 RETURNED 3 CLEAN, 0 DEFECTIVE, 0 DEFECT ROWS over the full
-  surface of all three gradees, with the eighteen repaired sites of
-  both cycles re-checked as ordinary surface and correct as applied;
-  the six disclosed readings (report-G Section 5 D1 a-c, report-G2
-  Section 5 D1 a-c) were fixed as governing and consumed, not
-  re-litigated. Grade record:
-  dossier/item-0029-workpapers/extract-grades-G3.md; run report:
-  dossier/item-0029-workpapers/item-0029-report-G3.md.
-  CONSUMABLE SURROGATE SET UNDER RULE 26(4), all four in-tree extracts:
-  hildebrandmaier88-gaps.md (standing since ANN-93) and, by ANN-97,
-  maier85-shortintervals.md, freiberg10-strings1.md and
-  freiberg11-strings2.md -- each CLEAN, hashed in payloads/HASHES.txt,
-  and carrying corpus standing as a source surrogate for both lanes.
-  extract-grades-G1.md, -G2.md and -G3.md are all hashed; the second
-  cycle closed with no residue and NO open operator question on extract
-  disposition.
-  SESSION M IS THE NEXT STEP: the adjudication session, on its own
-  ephemeral kickoff authored on operator request, consuming only the
-  graded-clean-and-hashed four-extract surrogate set (rule 26(4)); the
-  run report, the rule-15 sheet, the mechanical verdict rule, the two
-  separate named findings, the BET-12 binding note and the roadmap
-  done-move land in that one apply (ANN-91 frame).
+- THE item-0029 ADJUDICATION IS DELIVERED AND THE ITEM IS CLOSED
+  (ANN-98; Session M, the terminal leg of the ANN-91 three-session
+  frame, executed 2026-08-04 on the full four-extract surrogate set).
+  VERDICT, verbatim from the mechanical S6 application: V-NEG (bounded
+  existence or weaker, at corpus grain) -- all four S6 clauses fail:
+  no documented counting step or licensed finite algebra yields a
+  positive proportion of families with two distinct realized middles
+  at any rank; the corpus's only positive-proportion conclusion is
+  VALUE-axis (Hildebrand-Maier limit-point measure, a proxy); Q-CORR
+  is CORR-NOT-ESTABLISHED (the family index fixes admissible offsets,
+  never the realized flank word); and the mapped k-dependent factors
+  are immediate rule-15 no-gos at the exchange point. The SHARPEST
+  POSITIVE the corpus does support, PROVED in the workpaper by finite
+  algebra from documented statements: at FIXED rank on sparse
+  good-modulus scales the matrix populates flank classes carrying
+  unboundedly many DISTINCT middles -- existence with growing count,
+  never a proportion (no family-population control exists in the
+  corpus) -- exactly the decisive objection's bounded-existence
+  shape.
+  FINDING F-CONS, one line: consecutiveness survives at pair grain in
+  one row (proved-in-source) and to matched flanks with distinct
+  middles at fixed rank (PROVED); it is NOT established at the
+  growing D0 depth, which is absent-from-corpus.
+  FINDING F-MODEL, one line: the schema's equidistribution and
+  lower-bound inputs AND its tuple-level sieve upper bound fail in
+  the even-Cramer-smooth model (PROVED, elementary); the integer-
+  sieve input holds; two input families stay OPEN/untested; no
+  separator delivery is claimed at V-NEG.
+  ARTIFACTS, all hashed (HASHES lines 115-118):
+  dossier/item-0029-workpapers/word-grain-adjudication.md (Task A
+  schema, Q-CORR, Q-SHAPE, the byte-fixed S6 rule and application,
+  both findings, rule-16(a) pass), maier_matrix_sheet_29.py with
+  maier_matrix_sheet_29_tables.txt (CM-1..CM-6; S6 block
+  byte-identical with the workpaper), item-0029-report-M.md (V-M
+  table, gates, ten STOP conditions unfired, disclosures incl. the
+  in-session adversarial verification that sharpened Q-SHAPE).
+  BET-20260725-12 STILL BINDS AND STAYS OPEN for operator judgment
+  against this finding, resolve_by 2026-09-30 (its clause: a bounded
+  existence statement resolves NO -- the judgment is the operator's);
+  no bet was scored and ledger/bets.yaml is untouched.
   THE SHIU EXTRACT IS STILL NOT IN THE TREE, unchanged: on operator
-  instruction, on publisher-copyright grounds, shiu00-strings.md is
-  named in .gitignore and exists on the executor workstation only. Read
-  that together with rule 21 -- the anchored extract is "the one
-  permitted substitute" for a source that cannot be committed -- because
-  with it withheld the Shiu 2000 source has NO in-tree representation
-  and Session M cannot consume it under rule 26(4). ANN-92 states the
-  consequence in full; resolving it is the operator's.
-  THE ITEM-0029 RUN HAS STARTED and BET-20260725-12 STILL BINDS and
-  stays OPEN for operator judgment against the item-0029 finding,
-  resolve_by 2026-09-30; no bet was scored by the grade.
-  Scope per source, the render protocols and the V5-V9 findings are in
-  ANN-92; the V-G outcomes are in ANN-93 and report-G, the V-G2 outcomes
-  in ANN-95 and report-G2, the V-R2 outcomes in ANN-96 and report-R2,
-  the V-G3 outcomes in ANN-97 and report-G3.
+  instruction shiu00-strings.md is named in .gitignore and exists on
+  the executor workstation only, so Shiu 2000 has no in-tree
+  surrogate (rules 21/26); Session M consumed it in no direction and
+  every Shiu-origin statement is second-hand through the two Freiberg
+  extracts. Resolving the standing question remains the operator's
+  (ANN-92 states the consequence in full).
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
@@ -171,8 +173,10 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-88): item-0029,
-  item-0027, item-0030, item-0010, item-0006, item-0024. item-0028 IS
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-98):
+  item-0027, item-0030, item-0010, item-0006, item-0024. item-0029 IS
+  CLOSED AS DONE (ANN-98) and lives at roadmap/completed/item-0029.md;
+  item-0028 IS
   CLOSED AS DONE (ANN-88) and lives at roadmap/completed/item-0028.md.
   item-0022 IS CLOSED AS INTERRUPTED and lives at
   roadmap/completed/item-0022.md; item-0031 IS WITHDRAWN and lives at
@@ -184,8 +188,8 @@ its later sections carry a STALE banner, HANDOVER is the record).
   then. The disposition and
   evidence-standing items sat AHEAD of the research block deliberately:
   the corpus record is repaired before more mathematics is added on top
-  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0029 is at
-  position 1.
+  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0027 is at
+  position 1 (item-0029 closed as done, ANN-98).
   THE ANN-72 POLICY WAS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
   (ANN-86), AND THAT EXCEPTION IS NOW SPENT (ANN-87): item-0032 carried
   arcs [tooling, workflow] and sat at POSITION 1 ahead of the whole
@@ -220,11 +224,12 @@ its later sections carry a STALE banner, HANDOVER is the record).
   NOT dispatch item-0010 as written. After ANN-64/66 item-0010 is a
   CONSUMER: exactly one object is open against (CG), S1, no carrier is
   located, and measurement is exhausted. Every producer of the missing
-  input is now a separate scheduled item -- 0028/0029/0030 analytic,
-  0027 the machine-checked interface through which either branch is
-  consumed or stated -- so item-0010 runs after them, in whichever
-  branch they leave it. Its S- deliverable also gets strictly stronger
-  by waiting. SEPARATELY, and flagged rather than repaired here: the
+  input is a separate scheduled item -- 0028/0029/0030 analytic, of
+  which item-0028 (V-NEG, ANN-88) and item-0029 (V-NEG, ANN-98) HAVE
+  RETURNED, 0030 still ahead; 0027 the machine-checked interface
+  through which either branch is consumed or stated -- so item-0010
+  runs after them, in whichever branch they leave it. Its S-
+  deliverable also gets strictly stronger by waiting. SEPARATELY, and flagged rather than repaired here: the
   item-0010 frontmatter is STALE against the ANN-58 route change. Its
   acceptance_intent still reads "full: exchange_supply_1 proved via
   item-0017 or its obstruction folded into the item-0017 register", and
@@ -233,8 +238,9 @@ its later sections carry a STALE banner, HANDOVER is the record).
   Lean integrator) feeding items 0019/0020/0021" -- 0018/0019/0020 are
   done, 0021 is parked, and the recommended route is the direct
   collision route. A re-scope is DUE BEFORE THE ITEM RUNS and is
-  deliberately deferred until 0028/0029/0030 return, since their
-  outcome decides the branch. ANN-73 changed no item file.
+  deliberately deferred until item-0030 returns (item-0028 and
+  item-0029 have returned, both V-NEG), since the feeders' outcome
+  decides the branch. ANN-73 changed no item file.
 - THE THREE REPORTS ARE DROPPED AS OBJECTS AND THE item-0022 INSTRUMENT
   IS WITHDRAWN (ANN-76). item-0022 RAN on 2026-07-26 and its artifacts
   landed at d3966a3, 3308 lines in 13 files, unbooked for four applies;

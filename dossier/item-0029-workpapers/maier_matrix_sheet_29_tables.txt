@@ -1,0 +1,334 @@
+item-0029 Maier-matrix word-grain rule-15 sheet (Session M).
+Grid convention (re-declared, anchors read-only): L = (2/ln2)
+lnln x; D0-exact L_ceil = 2J+1, J = ceil(log2(ceil(13 C0 A''
+ln x))).  Window h = A' L ln x, A' = 1.5, A'' = 48, C0 = 2/ln3 =
+1.820478.  Exponent convention: expo(F) = ln F / lnln x,
+F = (ln x)^expo.  Budgets (echoed, read-only anchors): (G1)
+o(ln x): expo < 1 with decay or a limit < 1.  (G2) x^eps: ln F =
+o(ln x).  (G3) pigeonhole reserve: ln x / C_F must survive.
+Growth classes (item-0028 vocabulary, binding): GC-CONST expo
+bounded with a stated finite limit; GC-ITLOG expo = c lnlnln x +
+O(1); GC-FASTER expo / lnlnln x -> infinity; DETERMINISTIC /
+MEASURED-exact as in class_restricted_sheet_28.py.
+Exchange evaluation point: rank k = (2/ln2 + o(1)) lnln x, window
+A' L ln x, on the D0 grid (kickoff Section 2.3).
+
+== S1a. SELF-CHECK: reproduce the anchored F17.9 grid column ==
+F17.9 = L ln L / lnln x at k = L (pintz-constants.md Section 3
+self-check; anchored 6.143 / 6.932 / 7.944 / 8.963 at 3 dp).
+x        L          F17.9        anchored   match
+1e8         8.4065     6.1430   6.143      PASS
+1e20       11.0504     6.9320   6.932      PASS
+1e100      15.6942     7.9443   7.944      PASS
+1e1000     22.3381     8.9629   8.963      PASS
+  -> S1a: PASS
+
+== S1b. SELF-CHECK: method-side printed numeric (named) ==
+Chosen quantity: the Lemma 3.4(b) closing numeric of
+freiberg11-strings2.md (Section 6, p.13; structural-map note 6):
+  (1/2)(1 - 1/e) e^(gamma/2) = 0.42... > 2/5.
+computed: 0.421804 ; truncated 2 dp: 0.42 (source prints 0.42...);
+exceeds 2/5: True
+  -> S1b: PASS
+
+== S1c. Re-run stability ==
+Established outside this script: two full runs emit byte-identical
+tables files (recorded in item-0029-report-M.md).  -> S1c: see
+report.
+
+S1 SELF-CHECKS (in-script): ALL PASS
+
+== CM-1. Native-regime map vs the exchange evaluation point ==
+Documented native parameters (citations in parentheses):
+  maier85: modulus P(z) = prod_{p<z} p, rows r in (P^{D-1},
+  2P^{D-1}], row length U = [z^lambda], lambda > 1 fixed, x ~
+  P(z)^D (maier85-shortintervals.md Sections 4.1-4.2).
+  hm88: modulus P(z) = prod_{p<=z} p, R = P(z)^{D-1}, row length
+  T z, T fixed, x = P(z)^D, log x = D sum_{p<=z} log p ~ z
+  (hildebrandmaier88-gaps.md Section 4.2).
+  freiberg10/11: rows (Qn, Qn+H], n in (N, 2N], H = eps log N,
+  Q the Shiu-type modulus (freiberg10-strings1.md (2.6)/(5.19);
+  freiberg11-strings2.md (3.1)-(3.6)).
+Native rank is FIXED in every source: 'every fixed integer k'
+(hm88 abstract; the Theorem prints 'Let k be a positive
+integer'), 'Fix positive integers k and ell' (freiberg10
+Prop. 2.2); the exchange point demands k = L growing.  A
+non-instantiable map is itself a priced finding (kickoff CM-1).
+x        k_req=L    k_req=Lc   k_adm(source)  window A'L lnx
+1e8         8.4065         31   O(1) fixed            232.3
+1e20       11.0504         33   O(1) fixed            763.3
+1e100      15.6942         37   O(1) fixed           5420.6
+1e1000     22.3381         45   O(1) fixed          77153.0
+Rank mismatch ratio k_req/k_adm is unbounded (grows like lnln x):
+the native regime does not reach the exchange point on the rank
+axis at any scale.  Support: RECORDED (fixed-k quantifiers are
+the sources' own; no numeric k_adm exists to tabulate).
+
+Window reachability (native row length vs exchange window):
+  hm88 ratio (T z)/(A' L ln x) = (T/D)/(A' L) at z ~ ln x / D --
+  T, D fixed: the native row is SHORTER by a growing lnln-factor.
+  maier85 U = z^lambda covers the window iff lambda >= lambda*;
+  lambda* = ln(A' L ln x)/ln(z) at reference z = ln x / D, D = 2.
+x        hm88 (T/D)/(A'L) at T/D=1   maier85 lambda* (D=2 ref)
+1e8         0.0793                     2.4537
+1e20        0.0603                     2.1162
+1e100       0.0425                     1.8116
+1e1000      0.0298                     1.5966
+maier85's fixed lambda > 1 covers the exchange window once
+lambda >= lambda*, and lambda* decreases toward 1 with scale:
+the WINDOW axis is natively reachable (the regime-filter reading
+of the item-0026 record); the rank axis is not.  Support:
+MEASURED (this table) on the documented parameter shapes.
+
+== CM-2. Distributional inputs: admissible range vs mapped demand ==
+Inputs as documented (Task A element A-2 of the adjudication):
+  (i) good-modulus AP counts: maier85 Lemma 2 (x >= q^D, h ~ x),
+  hm88 Lemma 1 (uniform x >= q^D); good moduli exist on a sparse
+  z-set only (maier85 Lemma 1, hm88 Lemma 2).  Natively
+  self-consistent; no k enters -- but the word-grain application
+  needs the tuple layer below, which is fixed-k.
+  (ii) hm88 Lemma 3 (sieve upper bound, '<<_g', g fixed).
+  (iii) freiberg10 Lemma 4.2 (BV variant, moduli QD <= R*) with
+  the (4.13) accumulation exponent 2(k+ell) + (3k)^2/2 + 1/2
+  against the (4.10) saving (log N)^{-5 c3 loglog N}, c3 fixed.
+Mapped demand at k = L, ell = [sqrt(L)] (exchange rank):
+x        (4.13)-exponent at k=L    available saving exponent
+1e8            339.3              5 c3 lnln x =    14.5674 c3
+1e20           578.1              5 c3 lnln x =    19.1488 c3
+1e100         1146.3              5 c3 lnln x =    27.1960 c3
+1e1000        2298.6              5 c3 lnln x =    38.7089 c3
+The demanded polylog discount exponent grows like 4.5 L^2 (GC-
+FASTER); the documented saving carries a FIXED c3 (freiberg10
+(4.10), c3 = c2/(12 c eps)).  The documented range does not meet
+the mapped demand at the exchange rank.  Support: PROVED (finite
+arithmetic on the documented exponents of (4.10)/(4.13)).
+
+== CM-3. Weight/sieve k-dependent factors at the exchange rank ==
+CM-3a. GPY weight normalization (k+2 ell)! (freiberg10 (2.9)/
+(2.10) denominators), mapped to k = L, ell = [sqrt(L)]:
+expo = ln((k+2 ell)!)/lnln x -- the rule-15 'hidden k!' class.
+x        expo((L+2l)!)   F17.9 wall   rule-15
+1e8         7.2150     6.1430   NO-GO (G1: expo > 1 at every scale)
+1e20        8.7863     6.9320   NO-GO (G1: expo > 1 at every scale)
+1e100       8.7368     7.9443   NO-GO (G1: expo > 1 at every scale)
+1e1000      9.7930     8.9629   NO-GO (G1: expo > 1 at every scale)
+Class: GC-ITLOG (expo = (2/ln2) lnlnln x + O(1)), the F17.9 / T1
+family exp((1+o(1)) k ln k); the (G1) NO-GO stands because expo
+exceeds 1 at every scale and does not decay.  Support: MEASURED
+(lgamma) on the documented display.
+
+CM-3b. Fourth-moment row-count discount (log N)^{19k+4 ell}
+(freiberg10 (6.2)), mapped to k = L:
+x        expo = 19L+4l   rule-15
+1e8       167.7237   NO-GO (GC-FASTER)
+1e20      221.9569   NO-GO (GC-FASTER)
+1e100     310.1902   NO-GO (GC-FASTER)
+1e1000    440.4235   NO-GO (GC-FASTER)
+Support: PROVED arithmetic on the documented exponent.
+
+CM-3c. hm88 Lemma 3 implied constant '<<_g' at g = L+1: the
+source documents fixed g only; the standard growing-rank sieve
+constant is the F17.9 wall exp((1+o(1)) k ln k) (S1a column,
+6.14 -> 8.96, all > 1).  UNDOCUMENTED at growing rank; priced by
+reference class.  Support: RECORDED (fixed-g quantifier is the
+source's own) + the anchored F17.9 reference column (S1a).
+
+== CM-4. Documented counts vs word-grain populations ==
+Project comparators, quoted (collision-gap-audit.md C.1):
+  F = x^{o(1)} (family capacity), N = x^{1-o(1)} (site
+  population).  Tabulated: expo_F = (J+K) ln(e A' L ln x /
+  (2(J+K)))/lnln x at J+K = L_ceil - 1; expo_N = (ln x - ln(8 C0
+  ln x))/lnln x.
+x        expo_F(cap)   expo_N(pop)
+1e8        24.2350     4.4032
+1e20       29.0676    10.3253
+1e100      35.2196    40.8407
+1e1000     44.1956   296.0769
+Documented method-side favourable-row counts (per scale):
+  freiberg10 (6.8): >> N/(log N)^{B(eps)}, printed chain gives
+  B = 17k+2 at fixed k (share discount expo = 17k+2);
+  freiberg11 (1.2): >= X^{1-c/loglog X} strings up to X, all
+  large X, c absolute (share-of-primes discount expo below, at
+  reference c = 1, marked as reference).
+x        f10 expo (k=5 ref)  f10 expo (k=L)  f11 expo (c=1 ref)
+1e8            87.0000        144.9107         1.1701
+1e20           87.0000        189.8562         2.1398
+1e100          87.0000        268.8018         6.7830
+1e1000         87.0000        381.7473        37.4179
+(f11 column: exact share-of-primes discount expo c lnx/(lnln x)^2
+- 1, the -1 from the 1/ln X in pi(X); c = 1 reference.)
+Reading: every documented favourable-row count is a DECAYING
+proportion of its row population (polylog discount at fixed k;
+GC-FASTER discount at k = L); none is a positive proportion of
+any family count, and none allocates counts to word-grain
+classes (adjudication Q-CORR).  The proportion arithmetic against
+c * F needs an allocation step the corpus does not document; raw
+magnitude is not the blocker.  Support: PROVED arithmetic on the
+documented exponents; allocation absence RECORDED (Q-CORR).
+
+== CM-5. Per-family multiplicity; two-distinct-middles reserve ==
+Documented multiplicity control: hm88 (11) >= 3kR primes in A;
+(12) >= kR in good rows; (14) >= kR/2 consecutive-(k+1)-tuples;
+(19) <= C R/N^k tuples per value box.  No per-word or per-class
+lower bound is documented in any extract.
+
+CM-5a. Pigeonhole margins on the (14) tuple floor (finite algebra;
+adjudication Section 5.2).  ln R = (D-1) theta(z), z = ln x / D;
+reference D = 2, T = 5, k = 5; theta exact (sieve).  Two distinct
+capacities, priced separately: COMPLETE-word margin ln(k R/2) -
+k ln(T z) (positive forces some complete word -- flanks AND
+middle -- realized twice); FLANK-word margin ln(k R/2) -
+(k-1) ln(T z) (positive forces some flank word realized twice,
+middles unconstrained).  Exchange column: flank margin at k=Lc.
+x        complete k=5    flank k=5      flank k=Lc
+1e8             -12.89         -9.06       -106.80
+1e20             -3.59          1.16       -129.85
+1e100            76.21         82.56       -118.81
+1e1000         1067.33       1075.99        731.86
+Reading: both fixed-k margins tend to +infinity ((D-1)theta(z)
+~ z beats k ln(Tz)); on the grid the flank margin is positive
+from 1e20 and the complete-word margin from 1e100.  At k = L_ceil
+the tuple floor (14) is itself undocumented (fixed-k constants),
+so that column prices arithmetic only, not a documented
+statement.  Support: PROVED (finite algebra from (14) and the
+capacity counts) at fixed k; RECORDED absence at growing k.
+
+CM-5b. Two-distinct-middles margin (the per-middle ceiling route,
+adjudication Section 5.2).  For a fixed middle, members of one
+flank class are capped by (admissible s_1 count ~ c V(z) z, hm88
+Section 4.2) x (Lemma 3 at g = k+1: << R/(V(z) log R)^{k+1},
+log R ~ z), i.e. <= C'_k R/(V(z) z)^k uniformly in the middle;
+the flank pigeonhole floor M >= k R/(2 (Tz)^{k-1}) then forces
+distinct middles once margin = ln(k/2) + k ln(V(z) z) -
+(k-1) ln(T z) - ln(C'_k) > 0.  Asymptotically margin =
+ln z - k lnln z + O_{k,T}(1) -> +infinity at every fixed k:
+distinct middles are FORCED at fixed rank on all large good z
+(PROVED from (14), the Section 4.2 column count, Lemma 3 and
+Mertens).  Grid values at C'_k = 1, k = 5, T = 5 (reference;
+Lemma 3's <<_g constant is undocumented, so grid signs are
+reference-only while the divergence is PROVED):
+x        V(z)       distinct-middles margin (ref)
+1e8     0.228571         -10.68
+1e20    0.163588         -11.44
+1e100   0.114770         -11.60
+1e1000  0.079316         -11.14
+The margin's divergence onset at these reference constants lies
+far beyond the grid (ln z must beat k lnln z + O(1)); no grid
+scale certifies the forcing numerically.  What remains absent at
+EVERY rank: any family-population control that would convert the
+forced existence into a proportion of F^ms(x); and at the
+exchange rank k = L the whole chain is undocumented (CM-3).  The
+middle-slot non-concentration carrier named by the S1 deciding
+fact (separator-repricing.md W4.S1) is absent in its exchange-
+rank, D0-window form; at fixed rank Lemma 3 + Lemma 4 supply the
+surrogate used here.  Support: PROVED (asymptotic) + MEASURED
+(reference grid values) + RECORDED (absences).
+
+== CM-6. Scale-sequence structure, priced against A6 ==
+Documented scale sets: maier85 -- z with P(z) good, 'arbitrarily
+large values' (Lemma 1; sparse); hm88 -- same set (Lemma 2) plus
+a subsequence for the limit-point step (p.7); freiberg10 -- one
+H per window [X/(log X)^A, X] (Lemma 5.5); freiberg11 -- ALL
+sufficiently large H (Lemma 3.4), removing the sparseness for
+the string count (1.2).
+A6 relaxation (sparse scales suffice, no s-uniformity): every
+documented scale density MEETS the item's scale demand -- the
+density axis is the one axis the method clears natively, and
+freiberg11 clears it in the all-large-x form a fortiori.  Priced
+consequence: no scale-density cost enters any column above; the
+failing axes are rank (CM-1/CM-3), allocation/grain (CM-4/CM-5),
+never density.  Support: RECORDED (documented quantifiers).
+
+== S6. Mechanical verdict rule and application (byte-identical
+with the Verdict section of word-grain-adjudication.md) ==
+
+S6 VERDICT RULE (item-0029). Emit V-POS (positive proportion at
+corpus grain) if and only if ALL of:
+(a) Q-SHAPE = SHAPE-POSITIVE-PROPORTION at support proved-in-source
+    or PROVED (finite algebra in this workpaper from statements the
+    consumable extracts document, each cited), with the constant
+    c > 0 independent of the scale, on an unbounded scale sequence;
+(b) the counted property in (a) is two members of one family with
+    equal flanks and distinct middles -- the property itself, not a
+    proxy -- at the same support;
+(c) Q-CORR = CORR-ESTABLISHED at support proved-in-source or PROVED,
+    including the consecutiveness clause, OR the family object of (a)
+    is itself already the word-grain flank class of the fixed
+    definitions;
+(d) every load-bearing constant and factor of the chain (a)-(c)
+    appears as a sheet column with a growth class, and none is an
+    immediate rule-15 no-go at the exchange evaluation point.
+Otherwise emit V-NEG (bounded existence or weaker, at corpus grain):
+name, for each failing clause, the exact failing element, and
+classify the failure STRUCTURAL (the documented schema's own steps
+yield only the weaker shape) or EVIDENTIAL (the corpus does not
+document the needed step in either direction). In every outcome,
+record the STRONGEST shape the corpus does support, with its axis
+(A-7 taxonomy), its support class, and its citations.
+
+CLAUSE-BY-CLAUSE DETERMINATION (mechanical; structural inputs from
+word-grain-adjudication.md Sections 4-5, priced inputs from the CM
+columns of maier_matrix_sheet_29_tables.txt):
+(a) FAILS. Q-SHAPE is not SHAPE-POSITIVE-PROPORTION: no documented
+    counting step, and no finite algebra licensed from documented
+    statements, yields a lower bound c * F^ms(x), c > 0
+    scale-independent, on families carrying two distinct realized
+    middles, for any family notion at any rank
+    (hildebrandmaier88-gaps.md (11)-(19) reach value-space boxes and
+    tuple totals; freiberg10-strings1.md (3.2)/(6.8) and
+    freiberg11-strings2.md (1.2) reach favourable-row counts; no
+    extract documents family-population control either way).  What
+    IS derivable (adjudication Section 5.2, PROVED): at every fixed
+    k on the sparse good-modulus scales, the (14) tuple floor
+    against the per-middle ceiling (Lemma 3 with the Section 4.2
+    column count) forces flank classes carrying two -- derivably,
+    unboundedly many -- DISTINCT realized middles: existence with
+    growing count, short of every proportion form.  Failure class:
+    EVIDENTIAL for the proportion step, with the PROVED fixed-k
+    existence recorded below as the strongest family-axis shape.
+(b) FAILS. The corpus's only positive-proportion conclusion
+    (hildebrandmaier88-gaps.md Theorem, p.2) counts boxes of
+    normalized difference tuples in [0,T]^k -- Lebesgue measure on
+    the VALUE axis -- a proxy, not two members of one family with
+    equal flanks and distinct middles.  Failure class: STRUCTURAL
+    (the documented steps yield the value-axis shape, not the
+    property).
+(c) FAILS. Q-CORR = CORR-NOT-ESTABLISHED: the documented family index
+    fixes the admissible offset set, never the realized flank word;
+    no documented statement forces two family members to share flank
+    words of consecutive prime gaps at the D0 depth J+K = L-1
+    (missing elements named in adjudication Section 4); and no family
+    object of (a) is itself the word-grain flank class of the fixed
+    definitions.  Failure class: EVIDENTIAL.
+(d) FAILS at the exchange evaluation point.  The load-bearing
+    k-dependent factors of the documented chain, mapped to rank
+    k = L = (2/ln2) lnln x, are immediate rule-15 no-gos: the GPY
+    normalization (k+2 ell)! is the exp((1+o(1)) k ln k) class
+    (CM-3a, expo 7.2 -> 9.8 > 1 at every scale, (G1) fails); the
+    fourth-moment discount (log N)^{19k+4 ell} and the BV exponent
+    4.5 k^2 are GC-FASTER (CM-3b, CM-2); the native regimes are
+    fixed-k and do not reach the point (CM-1).  Failure class:
+    STRUCTURAL (the documented schema's own normalizations carry the
+    factors).
+
+VERDICT: V-NEG (bounded existence or weaker, at corpus grain).
+STRONGEST SUPPORTED SHAPES (recorded per the rule's final clause):
+VALUE axis -- SHAPE-POSITIVE-PROPORTION of the limit-point cube:
+lambda(S^(k) cap [0,T]^k) >= c(k) T^k, proved-in-source (assembly
+printed, Lemmas 1-3 by reference), hildebrandmaier88-gaps.md Theorem
+(p.2), fixed k, sparse scales.  ROW-COUNT axis --
+SHAPE-DECAYING-PROPORTION of favourable rows, proved-in-source:
+>> N/(log N)^{B(eps)} rows per scale (freiberg10-strings1.md (6.8))
+and >= X^{1-c/loglog X} strings up to X for all large X
+(freiberg11-strings2.md (1.2); Lemmas 3.2/3.3 proofs outside the
+declared extract scope, by named reference).  FAMILY axis -- at
+fixed rank on sparse scales: EXISTENCE of flank classes with two
+distinct realized middles, derivably unbounded per-scale count, all
+but o(1) of the tuple mass non-rigid, PROVED (finite algebra from
+hildebrandmaier88-gaps.md (14), the Section 4.2 column count, Lemma
+3 and Mertens; adjudication Section 5.2, sheet CM-5b) -- the
+decisive objection's bounded-existence-type shape, sharpened; no
+proportion of F^ms(x) is derivable either way at any rank, and at
+the D0 depth k = L nothing is derivable (fixed-k, CM-1/CM-3).
+
+END OF MAIER MATRIX SHEET 29
