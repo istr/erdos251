@@ -1,0 +1,84 @@
+  - id: ANN-20260804-100
+    refs: [ANN-20260804-99, ANN-20260804-98, BET-20260804-14,
+      BET-20260804-15, BET-20260804-16, BET-20260804-17]
+    date: 2026-08-04
+    note: >-
+      POST-0029 STEERING PACKAGE: FOUR DESIGN NOTES LAND, ITEMS
+      0035-0038 ARE PROPOSED (NOT SCHEDULED), BET-14..17 ARE
+      REGISTERED BEFORE EVIDENCE. Authored by steering (Claude Fable
+      5, analysis sandbox) on operator instruction 2026-08-04 at a
+      pin equal to the ANN-98 apply commit == HEAD of main; emitted
+      as the second commit of a git am mbox (the first is ANN-99);
+      the operator apply is the ratifying commit. Files of this
+      commit: dossier/post-0029-design-notes.md (the four notes, the
+      named-successor list, the priority proposal);
+      roadmap/item-0035.md, item-0036.md, item-0037.md, item-0038.md
+      (all status proposed, ranks 0210/0220/0230/0240, created via
+      the roadmap tool); ledger/bets.yaml (four entries appended to
+      the open block, nothing else touched); HANDOVER.md (three
+      bounded deltas, enumerated below); this entry.
+      THE ITEMS, one line each. item-0035, separator instance
+      certificate: prove the item-0029 fixed-rank distinct-middles
+      conclusion FALSE in the even-Cramer-smooth model (at most two
+      middles per fixed-rank class), pairing with the primes-side
+      PROVED statement to give the project's first word-grain
+      separator instance; kill criterion named. item-0036,
+      rank-ceiling sheet: price the adjudication 5.2 chain
+      k-uniformly under named constant hypotheses, walls W-A..W-D,
+      mechanical verdict on the ceiling k*(x) against the exchange
+      rank; no proof work, the growing-k theorem RC-1b is a named
+      successor gated on this verdict. item-0037, vacuity audit:
+      compare the frozen HLQuantA card verbatim against the
+      falsification machinery the CLEAN maier85/hm88 extracts
+      document, verdict CLEAR / INTERSECTS / INCONCLUSIVE-with-named-
+      anchor; Friedlander-Granville escalation stays a separate
+      rule-26(5) operator gate. item-0038, measurement: the
+      collision-gap-audit Section J campaign (rows J.1-J.6, row 3
+      A_P the headline) plus a separately labeled fixed-rank census
+      at k=3..5; measurement-only, ANN-63 cautions binding.
+      THE BETS. BET-20260804-14 (p 0.90, model failure of the
+      fixed-rank statement; the steering sketch's existence is
+      disclosed in the registration note), BET-20260804-15 (p 0.75,
+      k* diverges yet misses the exchange rank on every hypothesis
+      row), BET-20260804-16 (p 0.85, corpus-only audit returns
+      CLEAR), BET-20260804-17 (p 0.80, A_P >= 2 on at least half the
+      late-anchor site mass). All registered before evidence per the
+      ledger's registration rule; all bind only if their item is
+      ratified and runs; operator amendment before apply is the
+      registered value in each case.
+      THE PRIORITY PROPOSAL, recorded as a PROPOSAL ONLY (note
+      Section 6): 0035, 0036, 0037 ahead of item-0027, then
+      item-0027, item-0030, item-0038, then item-0010/0006/0024 as
+      ordered today, with RC-1b and the route-C note decided after
+      the item-0036 verdict. On the operator's standing question:
+      item-0027 and item-0030 keep their substance and relative
+      order; the cheap trio slots ahead because item-0037 is
+      insurance on the exact hypothesis item-0027 formalizes and
+      0035/0036 shape the decisions that follow. SCHEDULING IS THE
+      OPERATOR'S: roadmap/_order.md is untouched by this apply, no
+      item status moves past proposed, and the counter-case (Lean
+      momentum first) is recorded in the note.
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload
+      text, existing dossier workpaper, writeup file, extract,
+      extract header or grade record is touched. NO HASH LINE IS
+      ADDED and payloads/HASHES.txt is byte-unchanged (the design
+      notes are planning artifacts, not source surrogates or
+      terminal workpapers). No existing bet is resolved, re-priced
+      or amended; no verdict on S1, (CG), B2.pairs or the item-0010
+      campaign state is recorded; the item-0029 verdict stands
+      exactly as ANN-98 booked it.
+      HANDOVER DELTAS, three, enumerated. (i) The cold-start
+      read-order line moves ANN-01..99 to ANN-01..100. (ii) The bet
+      figures gain the four 2026-10-31 registrations. (iii) A new
+      frontier bullet POST-0029 STEERING PACKAGE is inserted after
+      the item-0029 bullet, carrying the notes pointer, the four
+      proposed items, the registrations and the proposal-only
+      clause. Nothing else changes; all edited files are ASCII-only
+      before and after.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-99 listed, plus:
+      the operator decision on ratifying and scheduling items
+      0035-0038 (the proposal above); the gated successors RC-1b and
+      the route-C design note, waiting on the item-0036 verdict; the
+      parked candidates (anti-model certificate, CF-scan of the
+      denominator floor, LI-resonance exposition), named in the note
+      Section 5 and deliberately not itemized.

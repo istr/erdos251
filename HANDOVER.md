@@ -8,11 +8,12 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..99; the old path
+strictly-append-only file per entry, ANN-01..100; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 10 bets scored,
-BET-07 to 2026-08-08 and BET-08 and BET-13 to 2026-09-30 open --
-read the `open:` block, not this line, for the registered values). Both item-0026 bets
+BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the four
+post-0029 registrations BET-14/15/16/17 to 2026-10-31 open -- read
+the `open:` block, not this line, for the registered values). Both item-0026 bets
 are now SCORED: BET-20260724-10 YES at brier 0.64 (ANN-70) and
 BET-20260724-09 NO at brier 0.0025 (ANN-71); read ANN-70 and ANN-71
 together, since both entries argue that the pair priced the project's
@@ -155,6 +156,18 @@ its later sections carry a STALE banner, HANDOVER is the record).
   every Shiu-origin statement is second-hand through the two Freiberg
   extracts. Resolving the standing question remains the operator's
   (ANN-92 states the consequence in full).
+- POST-0029 STEERING PACKAGE (ANN-100):
+  dossier/post-0029-design-notes.md lands with four design notes;
+  item-0035 (separator instance certificate), item-0036 (rank-ceiling
+  sheet), item-0037 (HLQuantA vacuity audit) and item-0038 (Section-J
+  measurement plus fixed-rank census) are PROPOSED and deliberately
+  NOT scheduled -- roadmap/_order.md is untouched and scheduling is
+  the operator's. BET-20260804-14/15/16/17 are registered before
+  evidence. The steering priority proposal (note Section 6, a
+  proposal only): 0035, 0036, 0037 ahead of item-0027, then
+  item-0027, item-0030, item-0038, then the gated successors (the
+  growing-k theorem RC-1b and the route-C note) after the item-0036
+  verdict.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
