@@ -8,11 +8,11 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..101; the old path
+strictly-append-only file per entry, ANN-01..102; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
-bets.yaml alone -- the history no longer rides along. 10 bets scored,
-BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the four
-post-0029 registrations BET-14/15/16/17 to 2026-10-31 open -- read
+bets.yaml alone -- the history no longer rides along. 11 bets scored,
+BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the three
+post-0029 registrations BET-15/16/17 to 2026-10-31 open -- read
 the `open:` block, not this line, for the registered values). Both item-0026 bets
 are now SCORED: BET-20260724-10 YES at brier 0.64 (ANN-70) and
 BET-20260724-09 NO at brier 0.0025 (ANN-71); read ANN-70 and ANN-71
@@ -168,6 +168,42 @@ its later sections carry a STALE banner, HANDOVER is the record).
   item-0027, item-0030, item-0038, then the gated successors (the
   growing-k theorem RC-1b and the route-C note) after the item-0036
   verdict.
+  RATIFIED AND SCHEDULED SINCE: the operator apply f164ea3a ratified
+  items 0035-0038 and set the order 0035, 0036, 0037, 0027, 0030,
+  0038, 0010, 0006, 0024, superseding this bullet's
+  proposed-not-scheduled clause; item-0035 has since run and closed
+  (next bullet).
+- item-0035 SEPARATOR INSTANCE LANDS (82ee6c7d apply; booked
+  ANN-102 under rule 28): VERDICT V-CERT under the byte-fixed V-35
+  rule, all fifteen run-report gates HOLD, no STOP fired. (M-BOUND)
+  PROVED at dossier grade: for every fixed rank k >= 3 and every
+  (J,K), every realized even-Cramer-smooth flank class carries AT
+  MOST TWO distinct realized middles; a two-middle class occurs only
+  as the two-member boundary form at a stretch boundary. (M-FALS)
+  displayed: the item-0029 PROVED matrix conclusion is FALSE in the
+  model at the PER-CLASS count -- the scope the in-run adversarial
+  audit forced: the pooled union of middles across different
+  per-scale classes is infinite in the model exactly as for the
+  primes and is recorded openly OUTSIDE the falsified scope; that
+  pooled reading separates nothing, the per-class count is where the
+  pair separates. Sharpness delivered non-gating (exactly two
+  middles at every large boundary class); non-transfer paragraph
+  present (fixed rank only; nothing at the growing D0 depth; no
+  verdict on S1, (CG) or B2.pairs). The primes side is consumed as
+  the carried in-tree quotation only -- the item-0029 verdict stands
+  exactly as ANN-98 booked it, and the statement pair is the
+  project's first word-grain separator instance. Census: ten
+  decompositions at q_n <= 1e7, max distinct middles = 2 in every
+  row, every two-middle class in the proved boundary form; MEASURED
+  corroboration, no gate rests on it. ARTIFACTS, all hashed (HASHES
+  lines 119-122):
+  dossier/item-0035-workpapers/separator-instance-certificate.md
+  (450 lines, exactly the envelope ceiling -- any net-line amendment
+  breaches STOP 7, an operator-side caution for repair dispatches),
+  model_word_census_35.py with model_word_census_35_tables.txt, and
+  item-0035-report.md. BET-20260804-14 IS SCORED YES by operator
+  decision against the certificate (ANN-102), brier 0.01; binary
+  mean brier moves 0.158 -> 0.143 over ten scored.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
@@ -184,8 +220,11 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-98):
-  item-0027, item-0030, item-0010, item-0006, item-0024. item-0029 IS
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-102):
+  item-0036, item-0037, item-0027, item-0030, item-0038, item-0010,
+  item-0006, item-0024. Items 0036-0038 were RATIFIED and scheduled
+  at the f164ea3a operator apply. item-0035 IS CLOSED AS DONE
+  (ANN-102) and lives at roadmap/completed/item-0035.md; item-0029 IS
   CLOSED AS DONE (ANN-98) and lives at roadmap/completed/item-0029.md;
   item-0028 IS
   CLOSED AS DONE (ANN-88) and lives at roadmap/completed/item-0028.md.
@@ -199,8 +238,8 @@ its later sections carry a STALE banner, HANDOVER is the record).
   then. The disposition and
   evidence-standing items sat AHEAD of the research block deliberately:
   the corpus record is repaired before more mathematics is added on top
-  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0027 is at
-  position 1 (item-0029 closed as done, ANN-98).
+  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0036 is at
+  position 1 (item-0035 closed as done, ANN-102).
   THE ANN-72 POLICY WAS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
   (ANN-86), AND THAT EXCEPTION IS NOW SPENT (ANN-87): item-0032 carried
   arcs [tooling, workflow] and sat at POSITION 1 ahead of the whole
@@ -218,9 +257,10 @@ its later sections carry a STALE banner, HANDOVER is the record).
   the sequence inside the research block only; no rank, status, arc,
   scope, acceptance or verdict moved.
   RANK AND ORDER NOW DIVERGE, deliberately: the ANN-72 order was
-  strictly rank-ascending, this one is not (0180, 0095, 0190, 0170,
-  0200, 0016, 0090), because rank encodes creation-time priority and
-  the feeders of item-0010 were created last. Rank remains the
+  strictly rank-ascending, this one is not (0220, 0230, 0170, 0200,
+  0240, 0016, 0090, 0020), because rank encodes creation-time
+  priority and the feeders of item-0010 were created last. Rank
+  remains the
   within-arc query key; roadmap/_order.md remains the cross-arc truth
   for what runs next. A later reader seeing rank 0016 in position 6
   should read intended sequencing, not a defect -- the same reading

@@ -281,6 +281,61 @@ scored:
       move open -> scored follows the BET-09/10/11 precedent; the
       registration-vs-scoring tension stays exactly as item-0032
       left it, explicitly unsettled.
+  - id: BET-20260804-14
+    registered: 2026-08-04
+    claim: >-
+      the item-0035 certificate proves the fixed-rank separator
+      instance: for every fixed rank k >= 3, even-Cramer-smooth flank
+      classes carry at most two distinct realized middles, so the
+      item-0029 PROVED matrix conclusion (some flank class carries
+      unboundedly many distinct middles along a scale sequence) is
+      false in the model
+    p: 0.90
+    resolution: >-
+      operator judgment against the item-0035 certificate; a positive
+      resolution requires the model bound proved at dossier grade
+      with the non-transfer paragraph present; a model counterexample
+      (a fixed-rank class with three or more distinct middles)
+      resolves NO
+    resolve_by: 2026-10-31
+    outcome: true  # V-CERT; (M-BOUND) at dossier grade, non-transfer paragraph present, kill criterion never triggered
+    brier: 0.01
+    note: >-
+      prior steering-proposed; operator amendment before apply is the
+      registered value. Binds only if item-0035 is ratified and runs.
+      Disclosed at registration: a steering sketch of the
+      boundary-class argument exists in the dispatch conversation of
+      2026-08-04 and in dossier/post-0029-design-notes.md Section
+      1.2, so this bet prices whether the sketch survives
+      dossier-grade write-up, not whether the idea exists.
+      SCORED 2026-08-05 by operator decision against the item-0035
+      certificate (ANN-102; operator directive of the same day),
+      twelve weeks before resolve_by. The registered resolution
+      clause requires the model bound proved at dossier grade with
+      the non-transfer paragraph present, and a fixed-rank class
+      with three or more distinct middles resolves NO. The
+      certificate delivers (M-BOUND) PROVED for every fixed rank
+      k >= 3 and every (J,K) (Section 5), the non-transfer paragraph
+      with exactly the three clauses (Section 8), and no three-middle
+      class exists (proved) or was found by the census (Section 10):
+      the kill criterion never triggered. YES under the clause;
+      brier (0.90 - 1)^2 = 0.01.
+      CALIBRATION. The registration disclosed that a steering sketch
+      existed, so the bet priced write-up survival, not discovery --
+      and that is what resolved: the sketch survived dossier grade
+      with repairs the in-run adversarial audit forced (the coverage
+      clause narrowed to the per-class count after a pooled-reading
+      refutation; an L5(c) over-claim weakened; the primes
+      restatement re-qualified), none touching (M-BOUND) itself. The
+      0.90 prior was calibrated for exactly this shape: high because
+      the argument existed on paper, short of certainty because
+      write-up can fail -- and on scope it nearly did. Binary mean
+      brier moves 0.158 -> 0.143 over ten scored. The block move
+      open -> scored follows the BET-09/10/11/12 precedent under
+      rule 28(iii)'s sequence invariant (judgment after the applied
+      artifact; score and late landing booking in one self-booking
+      commit); the registration-vs-scoring tension stays exactly as
+      item-0032 left it, explicitly unsettled.
 
 open:
   - id: BET-20260711-07
@@ -327,31 +382,6 @@ open:
       evidence either way, and the point of the item is that nobody has
       measured this. Registered anyway, before the evidence, per ground
       rule 4
-  - id: BET-20260804-14
-    registered: 2026-08-04
-    claim: >-
-      the item-0035 certificate proves the fixed-rank separator
-      instance: for every fixed rank k >= 3, even-Cramer-smooth flank
-      classes carry at most two distinct realized middles, so the
-      item-0029 PROVED matrix conclusion (some flank class carries
-      unboundedly many distinct middles along a scale sequence) is
-      false in the model
-    p: 0.90
-    resolution: >-
-      operator judgment against the item-0035 certificate; a positive
-      resolution requires the model bound proved at dossier grade
-      with the non-transfer paragraph present; a model counterexample
-      (a fixed-rank class with three or more distinct middles)
-      resolves NO
-    resolve_by: 2026-10-31
-    note: >-
-      prior steering-proposed; operator amendment before apply is the
-      registered value. Binds only if item-0035 is ratified and runs.
-      Disclosed at registration: a steering sketch of the
-      boundary-class argument exists in the dispatch conversation of
-      2026-08-04 and in dossier/post-0029-design-notes.md Section
-      1.2, so this bet prices whether the sketch survives
-      dossier-grade write-up, not whether the idea exists.
   - id: BET-20260804-15
     registered: 2026-08-04
     claim: >-

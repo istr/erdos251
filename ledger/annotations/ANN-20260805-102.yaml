@@ -1,0 +1,133 @@
+  - id: ANN-20260805-102
+    refs: [ANN-20260805-101, ANN-20260804-100, ANN-20260804-98,
+      BET-20260804-14]
+    date: 2026-08-05
+    note: >-
+      item-0035 CLOSES: THE SEPARATOR INSTANCE CERTIFICATE IS BOOKED,
+      BET-14 IS SCORED YES BY OPERATOR DECISION, THE ITEM LEAVES THE
+      ORDER. Authored by steering (Claude Fable 5, analysis sandbox)
+      on operator instruction 2026-08-05 at a pin equal to the
+      rule-28 apply (ANN-101), whose parent is the item-0035 landing
+      apply 82ee6c7d; emitted as a git am mbox applied immediately
+      after the rule-28 mbox; the operator apply is the ratifying
+      commit. Files of this commit: ledger/bets.yaml (one entry
+      moves open -> scored, outcome and brier appended, registration
+      note kept and extended), payloads/HASHES.txt (four lines
+      appended, nothing above them touched), HANDOVER.md (four
+      bounded deltas, enumerated below), the tool-executed roadmap
+      done-move (item-0035 to roadmap/completed/ with its final
+      summary, roadmap/_order.md loses its first line), and this
+      entry.
+      RULE-28 SHAPE, NAMED. The landing apply 82ee6c7d carried the
+      four workpapers alone -- the split rule 28(ii) names, produced
+      by the rule gap ANN-101 documents, not by any session's
+      breach. This commit is the booking mbox that rule requires as
+      the immediately next apply: nothing else rode between (the
+      rule-28 codification itself carries no content and books only
+      its own edits), and late landing booking and the
+      already-rendered BET-14 score travel here as one self-booking
+      commit under rule 28(iii)'s sequence invariant -- the artifact
+      commit is applied and readable, and the judgment postdates it.
+      THE LANDING, BOOKED. VERDICT V-CERT under the byte-fixed V-35
+      rule, all five clauses holding; all fifteen gates of the run
+      report HOLD (V1-V8 at start, W1-W7 at close), with one named
+      W1 deviation -- the untracked ephemeral kickoff file, the
+      item-0010 precedent -- and no STOP condition fired. (M-BOUND)
+      PROVED at dossier grade: for every fixed rank k >= 3 and every
+      (J,K), every realized even-Cramer-smooth flank class carries
+      at most two distinct realized middles, and a two-middle class
+      occurs only as the two-member boundary form at a stretch
+      boundary. (M-FALS) displayed: the item-0029 PROVED matrix
+      conclusion is FALSE in the model at the per-class count. The
+      in-run adversarial audit (disclosed in the report) forced the
+      scope repair that matters: the falsified reading is the
+      PER-CLASS count -- fixed or per-scale-varying -- while the
+      POOLED union of middles across different per-scale classes is
+      infinite in the model exactly as for the primes, recorded
+      openly outside the falsified scope; that pooled reading
+      separates nothing. Sharpness delivered non-gating (exactly two
+      middles realized at every large boundary class); non-transfer
+      paragraph present with exactly the three clauses (fixed rank
+      only; nothing at the growing D0 depth; no verdict on S1, (CG)
+      or B2.pairs). Census: ten decompositions at q_n <= 1e7, max
+      distinct middles = 2 in every row, every two-middle class in
+      the proved boundary form; two independent auditor
+      re-implementations reproduced the tables exactly; MEASURED
+      corroboration, no gate rests on it. ARTIFACTS, all hashed
+      (HASHES lines 119-122):
+      dossier/item-0035-workpapers/separator-instance-certificate.md
+      (450 lines -- exactly the envelope ceiling; the report notes
+      any net-line amendment would breach STOP 7, an operator-side
+      caution for any future repair dispatch),
+      model_word_census_35.py with model_word_census_35_tables.txt
+      (deterministic, byte-identical across invocations), and
+      item-0035-report.md.
+      THE SCORING. Operator decision 2026-08-05 against the
+      certificate, twelve weeks before resolve_by 2026-10-31. The
+      registered resolution clause requires the model bound proved
+      at dossier grade with the non-transfer paragraph present, and
+      resolves a three-middle model counterexample NO. The
+      certificate delivers both requirements and no three-middle
+      class exists (proved, Section 5) or was found (census, Section
+      10); the kill criterion never triggered. Outcome YES, brier
+      (0.90 - 1)^2 = 0.01; binary mean brier moves 0.158 -> 0.143
+      over ten scored. CALIBRATION, recorded with the score: the
+      registration disclosed the steering sketch, so the bet priced
+      write-up survival, not discovery -- and write-up survival is
+      what resolved, including the repairs the adversarial audit
+      forced (coverage clause narrowed to the per-class count; an
+      L5(c) over-claim weakened; the primes restatement
+      re-qualified), none touching (M-BOUND). The block move open ->
+      scored follows the BET-09/10/11/12 precedent; the
+      registration-vs-scoring tension stays exactly as item-0032
+      left it, explicitly unsettled.
+      FOLLOW-UP CANDIDATES, named and NOT itemized, from the report:
+      F1, whether the dispatch Section 4 remark's coverage clause
+      owes a rule-17 v2 if ever re-issued (the certificate's
+      deviation record may suffice; the operator's call); F2, the
+      pooled middle-diversity statistic as a calibration row for the
+      item-0038 fixed-rank census; F3, the explicit stretch-length
+      lower bound of L5(e) for item-0036 if a model-side growth row
+      is priced there.
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload
+      text, existing dossier workpaper, writeup file, extract,
+      extract header or grade record is touched by this commit. No
+      other bet is resolved, re-priced or amended: BET-20260711-07
+      (resolve_by 2026-08-08, three days out at authoring time),
+      BET-20260718-08, BET-20260725-13 and the three remaining
+      post-0029 registrations BET-15/16/17 all stand. The item-0029
+      verdict stands exactly as ANN-98 booked it: the certificate
+      falsifies the matrix conclusion IN THE MODEL and asserts
+      nothing about the primes beyond the carried quotation -- the
+      primes-side statement remains PROVED as adjudicated, and the
+      pair is the point. No verdict on the separator S1, on (CG), on
+      B2.pairs or on the item-0010 campaign state is recorded here.
+      HANDOVER DELTAS, four, enumerated. (i) The cold-start
+      read-order line moves ANN-01..101 to ANN-01..102 and its bet
+      figures to 11 scored with BET-07, BET-08, BET-13 and
+      BET-15/16/17 open. (ii) The POST-0029 bullet gains the
+      ratification postscript: items 0035-0038 were RATIFIED and
+      scheduled by the operator apply f164ea3a, superseding its
+      proposed-not-scheduled clause. (iii) A new frontier bullet
+      item-0035 SEPARATOR INSTANCE LANDS is inserted after the
+      POST-0029 bullet, carrying the verdict, the scope repair, the
+      artifacts, the hash lines and the BET-14 score. (iv) The
+      EXECUTION ORDER bullet is refreshed to the post-close order
+      0036, 0037, 0027, 0030, 0038, 0010, 0006, 0024 with item-0035
+      closed as done at roadmap/completed/item-0035.md, and its
+      stale rank-divergence list is updated to the current order's
+      ranks. Nothing else changes; all edited files are ASCII-only
+      before and after.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-101 listed minus
+      BET-14 and the item-0035 close itself: the operator decisions
+      on running item-0036 next (position 1) and on the F1 rule-17
+      question above; the gated successors RC-1b and the route-C
+      note, waiting on the item-0036 verdict; the parked candidates
+      of the design note Section 5; the item-0010 re-scope waiting
+      on item-0030; the two Lean doc surfaces routed to item-0027;
+      the item-0006 execution profile, deliberately unpriced;
+      source_commit in writeup/sources.yml and the four a292ba4
+      heading re-assignments, routed to the next writeup work
+      package; ERRATUM-5 booked and deliberately unrepaired; Q1/Q2
+      of item-0032; and the Shiu 2000 standing question, unchanged
+      and resolvable only by the operator.
