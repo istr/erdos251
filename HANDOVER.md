@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..100; the old path
+strictly-append-only file per entry, ANN-01..101; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 10 bets scored,
 BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the four
@@ -32,7 +32,7 @@ s3-adjudication.md. Then the item-0026 outputs under
 dossier/item-0026-workpapers/: extraction-report.md (per-axis verdict
 table for all seven anchors), the seven extracts under extract/, and
 pintz-constants.md with pintz_constants_sheet.py.
-6. runs/README.md rules 1-27; rules 20-27 are the item-0034 evidence-standing set (report standing, no unreadable object, the post-gate promotion gate that closes B6, symmetric scope envelope, no mid-run task change, one apply, source-extract surrogate standing, header design); rule 19
+6. runs/README.md rules 1-28; rules 20-27 are the item-0034 evidence-standing set (report standing, no unreadable object, the post-gate promotion gate that closes B6, symmetric scope envelope, no mid-run task change, one apply, source-extract surrogate standing, header design); rule 28 is the apply-unit and two-step-close rule (ANN-101: commit is the booking unit, landing books in-run or bundled, a bet score never rides the landing commit and follows the applied artifact); rule 19
 (primary-anchor authoring) is new and binds every sentence that lands
 in a committed artifact.
 7. roadmap: python3 .agents/skills/roadmap-items/scripts/roadmap.py

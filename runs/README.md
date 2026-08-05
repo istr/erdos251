@@ -326,3 +326,46 @@ Rules:
     stale "re-grade pending" clause, superseded by the ledger, because
     editing them would break the payloads/HASHES.txt one-line-per-file
     invariant. Provenance: ANN-82 header disposition, routed here.
+28. Apply units and the two-step close (2026-08-05; item-0035
+    close). An APPLY is one operator git-am invocation and may carry
+    several commits; rule 25's unit is the COMMIT: every commit
+    carries the booking of its own edits (ledger entry, hash lines,
+    handover deltas, roadmap moves, as its edits require), and an
+    artifact commit applied without its booking is the rule-25 void
+    no matter which lane was supposed to write the booking. A
+    landing has two conforming forms. (a) IN-RUN BOOKING: the
+    execution contract explicitly grants the run the bookkeeping
+    paths (the rule-18 list; payloads/HASHES.txt per AGENTS.md
+    history clause), and artifacts and booking land as one commit --
+    the item-0029 form (8fb23b5). (b) BUNDLED APPLY: the contract
+    fences the bookkeeping paths off the run; the run hands the
+    artifacts over as a commit, steering authors the booking commit
+    against exactly that commit, and the operator applies both in
+    ONE invocation -- the landing time is that apply. Applying the
+    artifact commit before its booking arrives creates the void; if
+    the operator chooses to do so anyway, nothing else is applied
+    before the booking mbox, and the booking names the split. A BET
+    SCORE is a separate unit under either form: it books an operator
+    judgment AGAINST the landed artifact, so it is never part of the
+    landing commit and never in-run. In the conforming forms the
+    landing booking states that the bet stays open for operator
+    judgment, and the score lands as its own later self-booking
+    apply (bets.yaml block move, scoring entry, handover delta) once
+    the operator has judged. When the (ii) split has already
+    occurred and the judgment is already rendered, score and late
+    landing booking may travel as one self-booking bookkeeping
+    commit: the invariant is the SEQUENCE -- judgment strictly after
+    the artifact commit is applied and readable -- not the commit
+    count. Rule 25 and the scoring separation therefore govern
+    DIFFERENT units and do not conflict; reading "the ledger entry
+    that books it" to include the bet score is the misreading this
+    rule retires. The item-0032 registration-versus-scoring tension
+    (append-never-rewrite vs the block move) is untouched here,
+    exactly as ANN-87 left it. Provenance: the item-0035 landing
+    apply 82ee6c7d carried the four workpapers with no booking --
+    produced not by a session breaking a rule but by the gap itself:
+    the dispatch fenced the executor off the bookkeeping paths and
+    routed the booking to steering "riding the operator's single
+    ratifying apply" with no rule telling the ratifier to bundle;
+    third occurrence of the D1 void (item-0022 D1; ANN-77), first
+    with no acting rule breach.

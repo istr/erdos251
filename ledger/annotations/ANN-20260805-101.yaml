@@ -1,0 +1,109 @@
+  - id: ANN-20260805-101
+    refs: [ANN-20260804-100, ANN-20260731-87, ANN-20260727-77]
+    date: 2026-08-05
+    note: >-
+      RULE 28 IS CODIFIED: APPLY UNITS AND THE TWO-STEP CLOSE. THE
+      OPERATOR-ORDERED CONTRADICTION CHECK ON THE OPERATIVE RULES
+      RETURNS ONE REAL GAP AND NO TEXTUAL CONTRADICTION; THE GAP IS
+      CLOSED AS A NEW APPENDED RULE, NO EXISTING RULE TEXT IS EDITED.
+      Authored by steering (Claude Fable 5, analysis sandbox) on
+      operator instruction 2026-08-05 at a pin equal to the item-0035
+      landing apply 82ee6c7d == HEAD of main; emitted as a git am
+      mbox to be applied BEFORE the item-0035 close-bookkeeping mbox;
+      the operator apply is the ratifying commit. Files of this
+      commit: runs/README.md (rule 28 appended after rule 27, no
+      other line touched), HANDOVER.md (two bounded deltas,
+      enumerated below), this entry.
+      THE CHECK, AS ORDERED. The operator asked, against the
+      steering claim that the 82ee6c7d landing-vs-booking split
+      deviates from rule 25: by what procedure CAN landing and
+      booking share one apply, given that a bet close must not share
+      an apply with the implementation it judges -- and whether the
+      operative rules contradict each other. Rules read in full at
+      the pin: runs/README.md 1-27, AGENTS.md, the bets.yaml
+      convention header, the item-0032 final summary and ANN-87
+      tension paragraph, and the item-0029 precedent commits 8fb23b5
+      (landing) and 51afdd0 (scoring).
+      FINDING 1, NO TEXTUAL CONTRADICTION. Rule 25 binds "the ledger
+      entry that BOOKS IT", it = the artifact drop. A bet score does
+      not book the drop; it books a separate operator act -- the
+      judgment against the landed artifact -- which structurally
+      postdates the landing (the resolution clauses read "operator
+      judgment against the <artifact>", and the standing practice,
+      BET-09/10/11/12, is that scoring is never in-run). Two booking
+      units, two self-booking applies: the item-0029 close ran
+      exactly so (8fb23b5 lands artifacts WITH their booking, bet
+      explicitly left open; 51afdd0 scores it with ANN-99). Read at
+      the unit level, rule 25 and the scoring separation govern
+      different objects and compose without conflict.
+      FINDING 2, ONE REAL GAP, WITH THIS CLOSE AS ITS DEMONSTRATED
+      CASE. Rule 25 is silent on WHO authors the landing booking and
+      on WHEN the ratifier may apply, for the case where the
+      execution contract fences the bookkeeping paths off the run --
+      which the item-0035 dispatch did (booking routed to steering,
+      "riding the operator's single ratifying apply"). Under that
+      split, no written rule told the ratifier to hold the artifact
+      commit until the booking mbox arrived and apply both in one
+      invocation; the operator applied the workpapers on their own
+      -- legitimately, under the rules as written -- and 82ee6c7d
+      became the D1 void's third occurrence (item-0022 D1; ANN-77),
+      the first produced by the rule set itself rather than by any
+      session's breach. A rule whose conforming path is not
+      constructible from its own text has a gap even when no two
+      sentences collide.
+      THE RULE, three clauses, appended as rule 28. (i) UNITS: an
+      apply is one operator git-am invocation and may carry several
+      commits; rule 25's unit is the commit -- every commit carries
+      the booking of its own edits, and an artifact commit applied
+      without its booking is the void, whoever was supposed to write
+      the booking. (ii) TWO CONFORMING LANDING FORMS: in-run booking
+      (contract grants the run the bookkeeping paths; artifacts and
+      booking are one commit; the item-0029 form) or bundled apply
+      (contract fences the paths; steering authors the booking
+      commit against exactly the artifact commit; the operator
+      applies both in one invocation, and the landing time is that
+      apply). Applying the artifact commit early creates the void;
+      if the operator chooses it anyway, nothing else is applied
+      before the booking mbox and the booking names the split. (iii)
+      BET SCORES ARE THEIR OWN UNIT: never in the landing commit,
+      never in-run; in the conforming forms the landing booking
+      states the bet stays open and the score lands as its own later
+      self-booking apply; when the (ii) split has already occurred
+      and the judgment is already rendered, score and late landing
+      booking may travel as one self-booking bookkeeping commit --
+      the invariant is the sequence, judgment strictly after the
+      artifact commit is applied and readable, not the commit count.
+      EXPLICITLY UNTOUCHED: the
+      item-0032 registration-versus-scoring tension
+      (append-never-rewrite vs the block move) stays exactly as
+      ANN-87 left it -- this rule cuts apply units, not the bets
+      file's internal convention.
+      PRACTICAL ANSWER TO THE OPERATOR QUESTION, one line: landing
+      and its LANDING BOOKING can and must share one apply (form (a)
+      or (b)); the BET CLOSE never joins them and never needs to,
+      because it books a different act -- the perceived either-or
+      dissolved with the unit confusion.
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload,
+      dossier workpaper, writeup file, extract, roadmap file, bets
+      entry or hash line is touched by this commit; payloads/
+      HASHES.txt is byte-unchanged (runs/README.md is a rules file,
+      not a payload). The item-0035 landing stays booked-pending:
+      its close-bookkeeping mbox follows as the IMMEDIATELY NEXT
+      apply, nothing else riding between, in the shape rule 28
+      names for a split already chosen -- late landing booking and
+      the already-rendered BET-14 score travelling as one
+      self-booking bookkeeping commit, permitted by (iii)'s sequence
+      invariant because the artifact commit 82ee6c7d is applied and
+      readable and the judgment postdates it.
+      HANDOVER DELTAS, two, enumerated. (i) The cold-start
+      read-order line moves ANN-01..100 to ANN-01..101. (ii) The
+      read-order item 6 moves rules 1-27 to rules 1-28 and gains the
+      one-line rule-28 pointer. Nothing else changes; both edited
+      files are ASCII-only before and after.
+      STILL OPEN AFTER THIS ENTRY. Everything ANN-100 listed,
+      unchanged -- the item-0035 close itself (the next apply), the
+      operator decisions on the order now starting at item-0036, the
+      gated successors RC-1b and route-C, the parked candidates,
+      BET-07 (resolve_by 2026-08-08), BET-08, BET-13, BET-14 (scored
+      in the next apply), BET-15/16/17, ERRATUM-5, Q1/Q2 of
+      item-0032, and the Shiu 2000 standing question.
