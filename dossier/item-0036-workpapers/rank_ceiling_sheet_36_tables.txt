@@ -1,0 +1,381 @@
+item-0036 rank-ceiling sheet for the matrix word-grain mechanism.
+== RC-0. Conventions block ==
+Grid convention (re-declared, anchors read-only): L = (2/ln2)
+lnln x; D0-exact L_ceil = 2J+1, J = ceil(log2(ceil(13 C0 A''
+ln x))).  Window h = A' L ln x, A' = 1.5, A'' = 48, C0 = 2/ln3 =
+1.820478, e^gamma = 1.781072.
+Exponent convention: expo(F) = ln F / lnln x, F = (ln x)^expo.
+Growth classes (item-0028 vocabulary, binding): GC-CONST expo
+bounded with a stated finite limit; GC-ITLOG expo = c lnlnln x +
+O(1); GC-FASTER expo / lnlnln x -> infinity; DETERMINISTIC /
+MEASURED-exact as in class_restricted_sheet_28.py.
+Exchange evaluation point: rank k = (2/ln2 + o(1)) lnln x, window
+A' L ln x, on the D0 grid.
+D0 substitution for asymptotic columns (the A2 CM-5 convention,
+z = ln x / D at reference D = 2): ln z = (1+o(1)) lnln x,
+lnln z = (1+o(1)) lnlnln x.  Shorthand below: u = lnln x,
+v = lnlnln x.
+Rank-schedule vocabulary for k(x) (the (q14) candidate list, the
+sheet's ceiling classes stated against it): RANK-CONST (k fixed);
+RANK-SQRT ((lnln x)^{1/2}); RANK-ITBELOW (lnln x/lnlnln x, one
+iterated logarithm below the exchange rank); RANK-EXCHANGE
+(beta lnln x, grid reference beta = 2/ln2).
+(P1)/(P2) predicate definitions, verbatim from V-36:
+(P1) DIVERGES iff the sheet exhibits ONE admissible lambda and ONE
+     named schedule phi_H(x) -> infinity with every chain step
+     closing at k(x) = phi_H(x) (sufficiency side); phi_H displayed.
+(P2) MISSES iff the sheet exhibits a named envelope
+     psi_H(x) = o(lnln x) such that the (q10) margin inequality -- a
+     step of the chain itself -- fails asymptotically for every
+     k(x) >= psi_H(x) and every fixed lambda > 1 (necessity side);
+     psi_H displayed.
+
+== RC-1/S1a. SELF-CHECK: reproduce the anchored CM-5b table ==
+Anchor: maier_matrix_sheet_29_tables.txt CM-5b (read-only): V(z)
+to 6dp and the distinct-middles margin (ref) to 2dp at C'_k = 1,
+k = 5, T = 5 (the anchor's reference point; T = 5 predates the
+RC-2 coupling and is reproduced here as an anchor check only).
+x        V(z)       margin(ref)   anchored           match
+1e8     0.228571        -10.68 0.228571 / -10.68   PASS
+1e20    0.163588        -11.44 0.163588 / -11.44   PASS
+1e100   0.114770        -11.60 0.114770 / -11.60   PASS
+1e1000  0.079316        -11.14 0.079316 / -11.14   PASS
+  -> S1a: PASS
+
+== RC-1/S1b. SELF-CHECK: Mertens sanity, as authored ==
+Authored check (kickoff RC-1): |V(z) e^gamma ln z - 1| <= 0.02 at
+z = ln x / 2 for all four scales (sieve product).
+x        V(z)e^g*lnz   |.-1|      <=0.02    <=0.10(surrogate)
+1e8        0.903900  0.096100   MISS      PASS
+1e20       0.913892  0.086108   MISS      PASS
+1e100      0.970159  0.029841   MISS      PASS
+1e1000     0.995740  0.004260   PASS      PASS
+  -> S1b as authored: MISS
+Determination: UNSATISFIABLE-AS-AUTHORED.  The deviation is a
+property of the anchored bytes plus finite arithmetic, not of any
+implementation: the anchored CM-5b V(z) column (S1a, reproduced
+exactly) times e^gamma ln z equals 0.9039 / 0.9139 / 0.9702 /
+0.9957, so no implementation can meet 0.02 at the three smaller
+scales -- the Mertens (q9) error term at z = 9.21..115.13 is
+3..10 percent.  The check's sanity function (catch gross errors:
+wrong log base, wrong gamma, off-by-e) is discharged by the
+attainable surrogate tolerance 0.10 above, labeled as the
+executor's surrogate, NOT the authored check.  STOP r36.4 FIRES
+on the authored reading and is resolved as a named deviation of
+the rule-17 unsatisfiable-as-authored class in the run report;
+V-36 makes every grid value reference-only, so no emitted class
+rests on this check in either form.
+
+== RC-1/S1c. SELF-CHECK: formula identity ==
+The sheet's general k-uniform margin function margin_general(k, T,
+ln C, V, z) = ln(k/2) + k ln(V z) - (k-1) ln(T z) - ln C,
+instantiated at (k = 5, T = 5, C'_k = 1), against the S1a margins
+(2dp).
+x        general(5,5,1)   S1a margin   match
+1e8             -10.68     -10.68   PASS
+1e20            -11.44     -11.44   PASS
+1e100           -11.60     -11.60   PASS
+1e1000          -11.14     -11.14   PASS
+  -> S1c: PASS
+
+== RC-1/S1d. Envelope consistency at the grid (reference-only) ==
+Exhibited sufficiency schedule phi_H(x) = (lnln x)^{1/4} (both
+rows, lambda = 2) against the necessity envelope psi_H(x) =
+(3/4) lnln x/lnlnln x (both rows).
+x        u=lnln x   v=lnlnln x   phi_H      psi_H      phi<psi
+1e8         2.9135       1.0693     1.3065     2.0434   PASS
+1e20        3.8298       1.3428     1.3989     2.1390   PASS
+1e100       5.4392       1.6936     1.5272     2.4087   PASS
+1e1000      7.7418       2.0466     1.6681     2.8370   PASS
+  -> S1d: PASS
+
+RC-1 SUMMARY: S1a PASS, S1b MISS-AS-AUTHORED (unsatisfiable;
+surrogate PASS; r36.4 deviation record in the run report), S1c
+PASS, S1d PASS.
+
+== RC-2. W-C coupling (T = lambda c; reference c = 3k) ==
+Reference c = 3k: (q6) chooses c large enough that the (q5)/(q6)
+chain yields >= 3kR primes; the chain's implied constant is
+absolute ((q6)) and its VALUE is undocumented, so c = 3k is the
+reference at absolute constant 1, disclosed undocumented.
+Documented constraints, tabulated: 0 < delta < 1 forces lambda > 1
+((q2)); T > max(2, c) ((q4)) holds since T = lambda c > c and
+T = 3 lambda k > 2 at k >= 1; K = T >= 2 ((q2)).  delta =
+c/T = 1/lambda ((q4) coupling).
+lambda   delta=1/lambda   T at k=5   T at k = beta u (1e1000)
+  1.25         0.8000      18.75            83.77
+  1.50         0.6667      22.50           100.52
+  2.00         0.5000      30.00           134.03
+  3.00         0.3333      45.00           201.04
+Symbolic in the asymptotic columns: lambda > 1 fixed, T =
+3 lambda k, delta = 1/lambda.  Support: RECORDED ((q2)/(q4)/(q6))
++ PROVED (the tabulated implications are one-line algebra).
+
+== RC-3. W-A (Lemma-3 constant + Mertens power): NECESSITY ==
+The k-uniform (q10) margin, decomposed by term (derivation
+displayed in workpaper Section 3.1):
+  margin(k) = ln(k/2) + k ln(V(z) z) - (k-1) ln(T z) - ln C_{k+1}
+  = ln z                      [single surviving positive bulk]
+  + ln(k/2)                   [O(ln k), subdominant]
+  - k (gamma + lnln z - eps(z))   [(q9): ln V(z) = -gamma -
+                               lnln z + eps(z), eps(z) -> 0; the
+                               strict/non-strict product mismatch
+                               (q9) vs (q1) is O(1/z), absorbed]
+  - (k-1)(ln k + ln(3 lambda))    [RC-2 coupling T = 3 lambda k]
+  - ln C_{k+1}                [row H at g = k+1]
+On the D0 substitution the necessity envelope psi_H(x) =
+(3/4) lnln x/lnlnln x kills the margin for every k >= psi_H and
+every fixed lambda > 1, both rows (PROVED, Section 3.1 (N1));
+the critical coefficient is theta*_EXP = 1/2 and theta*_FACT =
+1/(2 + c_H) (Section 3.1 (N2)), lambda-free.
+Grid instantiation (reference-only, MEASURED): margin at the four
+(q14) schedules, lambda = 2 reference (T = 6k), row reference
+constants H-EXP: C = e (ln C_{k+1} = k+1); H-FACT: c_H = 1
+(ln C_{k+1} = (k+1) ln(k+1)); beta = 2/ln2.
+row H-EXP (C=e ref):
+x        k=5            k=u^{1/2}      k=u/v          k=beta*u       
+1e8            -23.85         -4.81        -10.03        -47.20
+1e20           -24.60         -5.74        -10.78        -69.36
+1e100          -24.77         -7.00        -12.49       -110.65
+1e1000         -24.31         -8.47        -15.37       -175.00
+row H-FACT (c_H=1 ref):
+x        k=5            k=u^{1/2}      k=u/v          k=beta*u       
+1e8            -28.60         -4.80        -11.21        -58.87
+1e20           -29.35         -5.99        -12.13        -87.31
+1e100          -29.52         -7.68        -14.33       -140.95
+1e1000         -29.06         -9.72        -18.07       -225.18
+Reading: negative throughout the grid at every schedule --
+consistent with the anchored CM-5b onset finding (divergence onset
+far beyond the grid); no grid sign is load-bearing.  The PROVED
+content is asymptotic: at fixed k the margin tends to +infinity
+(the anchored (q10) conclusion), at k >= psi_H it tends to
+-infinity (this sheet's (P2)).  Support: PROVED (asymptotic
+classes) + MEASURED (grid values, reference-only).
+
+== RC-4. W-B (Lemma-4 uniformization): SUFFICIENCY ==
+K_1 = 2K^{1/delta} ((q3)) at the RC-2 coupling K = T, delta =
+1/lambda: K_1 = 2T^lambda = 2(3 lambda k)^lambda.
+PROVED-elementary smooth-count line (proved in workpaper Section
+3.2): the number of K_1-smooth integers in [1, Y] is at most
+(1 + log2 Y)^{pi(K_1)} (exponent-vector count).  It replaces the
+(q3) clause 'at most (log(Kz))^A ... with a suitable A = A(K_1)',
+whose A is undocumented at growing K_1 -- no emitted class rests
+on that clause.
+Sufficiency constraint (the uniformized negligible-clause of the
+(q3) proof at the smallest (7)-window z/log z):
+  pi(K_1) lnln(Kz) <= (1 - eps) ln(delta V(z) z / log z)
+expanded on D0: left side ~ pi(K_1) lnlnln x, right side ~
+(1 - eps) lnln x; with pi(K_1) <= K_1 = 2(3 lambda k)^lambda the
+constraint is k^lambda lnlnln x <~ lnln x, i.e. the per-lambda
+ceiling class
+  k*_{W-B}(x; lambda) = (lnln x/lnlnln x)^{1/lambda}
+(PROVED closure strictly below the class at every fixed lambda >
+1; above it, closure is no longer derivable from the licensed
+pi-inputs -- the CERTIFIED-CLOSURE ceiling, workpaper Section
+3.2; the true boundary is reference-only).
+Ceiling per lambda reference value (class exponent 1/lambda):
+lambda   1/lambda   ceiling class
+  1.25   0.8000   (lnln x/lnlnln x)^{0.8000}
+  1.50   0.6667   (lnln x/lnlnln x)^{0.6667}
+  2.00   0.5000   (lnln x/lnlnln x)^{0.5000}
+  3.00   0.3333   (lnln x/lnlnln x)^{0.3333}
+Symbolic in lambda: exponent 1/lambda -> 1 as lambda -> 1+ (the
+W-A class); the boundary is DEBT (d5).
+Grid instantiation (reference-only, MEASURED-exact pi): lambda =
+2 reference, K = 6k, K_1 = 2(6k)^2 = 72 k^2; LHS = pi(K_1)
+lnln(Kz); RHS0 = ln(delta V(z) z/log z) (eps = 0 reference).
+row/scale table at the four (q14) schedules:
+x        sched      K_1        pi(K_1)  LHS        RHS0
+1e8     k=5            1800.0      278     480.00     -0.75
+1e8     k=u^{1/2}       209.8       46      69.66     -0.75
+1e8     k=u/v           534.5       99     159.62     -0.75
+1e8     k=beta*u       5088.2      680    1234.20     -0.75
+1e20    k=5            1800.0      278     521.97     -0.51
+1e20    k=u^{1/2}       275.7       58      99.92     -0.51
+1e20    k=u/v           585.7      106     189.51     -0.51
+1e20    k=beta*u       8792.0     1095    2181.34     -0.51
+1e100   k=5            1800.0      278     583.16      0.33
+1e100   k=u^{1/2}       391.6       77     153.95      0.33
+1e100   k=u/v           742.6      131     267.48      0.33
+1e100   k=beta*u      17734.2     2035    4536.13      0.33
+1e1000  k=5            1800.0      278     652.35      1.87
+1e1000  k=u^{1/2}       557.4      102     233.46      1.87
+1e1000  k=u/v          1030.2      172     398.96      1.87
+1e1000  k=beta*u      35927.3     3816    9465.41      1.87
+Reading: the constraint fails at every grid cell (RHS0 is O(1) at
+grid scales while LHS is already large at k = 5) -- the
+sufficiency regime, like the CM-5b divergence onset, lies far
+beyond the grid; reference-only, no grid sign load-bearing.
+
+DEBT LEDGER (each row names the documented clause it suspends; no
+emitted class rests on any row):
+(d1) the (q2) fixed-constants clause ('Let K >= 2 and 0 < delta <
+     1 be fixed constants') under growing K, delta.
+(d2) the (q2) absolute-asymp clause ('the constants implied in
+     the symbol asymp are absolute') under growing K, delta.
+(d3) the (q4) 'z is sufficiently large in terms of T' threshold
+     as T = T(k(x)) grows along a schedule.
+(d4) the unmarked uniformity of 'the prime number theorem for
+     arithmetic progressions' in the (q3) proof as K_1 grows.
+     Finite observation (PROVED range arithmetic): K_1 stays
+     polylog in z on every schedule the sheet prices --
+     ln K_1 / lnln z at k = beta u, lambda = 2:
+     1e8     ln K_1 =    8.535, lnln z =    0.798, ratio   10.700
+     1e20    ln K_1 =    9.082, lnln z =    1.143, ratio    7.944
+     1e100   ln K_1 =    9.783, lnln z =    1.557, ratio    6.282
+     1e1000  ln K_1 =   10.489, lnln z =    1.953, ratio    5.371
+     (ratio -> lambda = 2 at k = beta u; K_1 is constant at fixed
+     k and polylog in z on every priced schedule).
+(d5) the lambda -> 1 boundary wherever it moves the binding wall
+     (it moves W-B: exponent 1/lambda -> 1).
+
+== RC-5. W-D range checks (cheap columns) ==
+(a) R >= 2k ((q7)): ln R = (D-1) theta(z) at D = 2 vs ln(2k),
+    per schedule.
+(b) T <= z, i.e. Tz <= z^2 ((q1) spacing via (q8)): T = 6k at
+    lambda = 2 reference vs z.
+(c) Lemma-1 range x = q^D: met by construction ((q5) environment,
+    x = P(z)^D).  RECORDED, k-free.
+(d) (7)-window length: Tz >= z/log z iff T >= 1/log z; T > 2
+    ((q4)) closes it.  PROVED, k-free.
+Per schedule at the grid (lambda = 2 reference; schedule order
+k = 5 / u^{1/2} / u/v / beta u; P = PASS, F = FAIL):
+x        ln R       z          (a) per schedule   (b) per schedule
+1e8           5.35       9.21 P/P/P/P            F/F/F/F
+1e20         19.22      23.03 P/P/P/P            F/P/P/F
+1e100       107.07     115.13 P/P/P/P            P/P/P/P
+1e1000     1109.71    1151.29 P/P/P/P            P/P/P/P
+Asymptotically (PROVED): (a) closes at every schedule k = O(u)
+since ln R ~ z ((q5) display) while ln 2k = O(ln u); (b) closes
+since T = 3 lambda k = O(lnln x) = o(z); (d) closes since T > 2.
+Grid reading: (b) FAILS at most schedules on the two small scales
+(z = 9.21 / 23.03 there sits below T = 6k already at k = 5) and
+clears from 1e100 -- late scale entry, the same pattern as the
+RC-3/RC-4 onsets; reference-only, no grid sign load-bearing.
+Asymptotically W-D never binds on any priced schedule.
+
+== RC-6. Assembly and verdict ==
+Per-row exhibits (PROVED in workpaper Section 3; S1d grid check):
+  H-EXP:  phi_EXP(x) = (lnln x)^{1/4} at lambda = 2 (every RC-2..
+          RC-5 step closes); psi_EXP(x) = (3/4) lnln x/lnlnln x.
+  H-FACT: phi_FACT(x) = (lnln x)^{1/4} at lambda = 2 (same
+          coupling; the row constant is o(lnln x) there);
+          psi_FACT(x) = (3/4) lnln x/lnlnln x.
+Binding walls: necessity W-A (lambda-free, theta*_EXP = 1/2,
+theta*_FACT = 1/(2+c_H)); sufficiency W-B (per fixed lambda,
+class (lnln x/lnlnln x)^{1/lambda}; lambda -> 1 boundary = d5).
+FLAG guard: NO FLAG (record in workpaper Section 7).
+
+V-36 VERDICT RULE (item-0036). Semantics: k*(x; H) is the ceiling of
+the DOCUMENTED item-0029 Section 5.2 derivation chain (the (q10)
+quotations) carried k-uniformly under hypothesis row H: the supremum
+over admissible couplings (T = lambda c with lambda > 1 fixed, per
+(q2)/(q4); c the (q6) constant at reference c = 3k, the absolute
+constant of the (q5)/(q6) chain disclosed undocumented) of the
+largest rank schedule k(x) for which EVERY chain step closes by
+finite algebra from the Section 3 quotations, the row-H bound on the
+Lemma-3 constant at g = k+1, and the PROVED-elementary smooth-count
+line of RC-4 -- every inequality either PROVED (finite algebra) or
+listed as a DEBT in the RC-4/RC-5 uniformization ledger, with no
+emitted class resting on a DEBT.
+Hypothesis rows: H-EXP: C_g <= C^g (absolute C > 1); H-FACT:
+C_g <= exp(c_H g ln g) (absolute c_H > 0); both applied to the
+Lemma-3 implied constant at g = k+1.
+Per row H emit:
+(P1) DIVERGES iff the sheet exhibits ONE admissible lambda and ONE
+     named schedule phi_H(x) -> infinity with every chain step
+     closing at k(x) = phi_H(x) (sufficiency side); phi_H displayed.
+(P2) MISSES iff the sheet exhibits a named envelope
+     psi_H(x) = o(lnln x) such that the (q10) margin inequality -- a
+     step of the chain itself -- fails asymptotically for every
+     k(x) >= psi_H(x) and every fixed lambda > 1 (necessity side);
+     psi_H displayed.
+NAME the binding wall on each side: the necessity wall (lambda-free)
+and the sufficiency wall as a function of lambda, with the
+lambda -> 1 boundary listed as a DEBT wherever it moves the wall.
+FLAG GUARD (binding; design-note D3(ii)): if closing any step under
+any row would require an equidistribution or tuple-count uniformity
+stronger than the frozen HLQuantA card consumes, emit FLAG naming
+row and step and do not emit (P1)/(P2) for that row (STOP r36.6); no
+column consumes the HLQuantA card in any direction.
+EMISSION: V-DIV-BELOW iff (P1) and (P2) both hold on BOTH rows;
+V-BOUNDED iff (P1) fails on any row (name row and wall); V-REACHES
+iff (P2) fails on any row (name row and wall); V-UNDECIDABLE iff any
+needed column is missing, any growth class is ambiguous, or a
+required envelope cannot be exhibited by finite algebra (STOP
+r36.7). Grid values are reference-only (MEASURED), never
+load-bearing for (P1)/(P2). BET-20260804-15 material: the (P1)/(P2)
+pair per row IS the bet's two halves; scoring is operator judgment,
+never in-run.
+
+V-36 CLAUSE-BY-CLAUSE APPLICATION (mechanical; every PROVED support
+below is finite algebra in rank-ceiling-sheet.md Section 3 from the
+Section-1 quotation rows, the row-H bound at g = k+1 and the RC-4
+smooth-count line; grid columns of this file are reference-only).
+COUPLING (RC-2, both rows): T = lambda c, c = 3k reference, delta =
+1/lambda; admissible iff lambda > 1 ((q2)'s 0 < delta < 1) and
+T > max(2, c) ((q4)); both hold for every fixed lambda > 1 at every
+k >= 1, and (q2)'s K >= 2 holds at K = T = 3 lambda k.
+ROW H-EXP (C_g <= C^g, absolute C > 1, applied at g = k+1):
+(P1) HOLDS. Exhibit lambda = 2 and phi_EXP(x) = (lnln x)^{1/4} ->
+     infinity.  Every chain step closes at k = phi_EXP in the
+     rule's own either-PROVED-or-DEBT sense: the RC-2 constraints
+     (PROVED); the RC-3 margin tends to +infinity (PROVED,
+     workpaper Section 3.1 (S1)); the RC-4 smooth-count constraint
+     closes with room, its left side being O((lnln x)^{1/2}
+     lnlnln x) = o(lnln x) (PROVED, Section 3.2 (S2)); the RC-5
+     range checks close (PROVED, Section 3.4); the Lemma-4
+     carriage clauses stand as the named DEBTS d1-d4, consumed as
+     proved inputs nowhere.
+(P2) HOLDS. Envelope psi_EXP(x) = (3/4) lnln x/lnlnln x = o(lnln x):
+     the (q10) margin, carried with the row bound at g = k+1, tends
+     to -infinity for every k(x) >= psi_EXP(x) and every fixed
+     lambda > 1 (PROVED, lambda-free, workpaper Section 3.1 (N1)).
+ROW H-FACT (C_g <= exp(c_H g ln g), absolute c_H > 0, at g = k+1):
+(P1) HOLDS. Same coupling lambda = 2, same schedule phi_FACT(x) =
+     (lnln x)^{1/4}: the row constant adds c_H (k+1) ln(k+1) =
+     o(lnln x) at this schedule and every step still closes in the
+     same sense (PROVED, Section 3.1 (S1)).
+(P2) HOLDS. psi_FACT(x) = (3/4) lnln x/lnlnln x: the row constant
+     only deepens the margin failure (PROVED, lambda-free, Section
+     3.1 (N1)).
+BINDING WALLS. Necessity side, lambda-free: W-A (Lemma-3 constant +
+Mertens power) -- the (q10) margin dies at k = (theta*_H + o(1))
+lnln x/lnlnln x with theta*_EXP = 1/2 and theta*_FACT = 1/(2 + c_H)
+(Section 3.1 (N2)); no admissible coupling moves it.  Sufficiency
+side, as a function of lambda: W-B (Lemma-4 uniformization, the
+smooth-count constraint) -- at every fixed lambda > 1 the chain's
+certified closure reaches the class (lnln x/lnlnln x)^{1/lambda}
+and is no longer derivable above it, so W-B binds strictly below
+W-A at every fixed lambda; the lambda -> 1 boundary moves the
+sufficiency wall toward the W-A class and is DEBT (d5).  W-C
+prices the coupling that feeds both walls (T = 3 lambda k); W-D
+never binds (RC-5).
+FLAG GUARD: checked step by step against the frozen HLQuantA card
+(strength comparison only, card read via blocks.py-verified state,
+quoted into no column): the chain consumes single-prime AP counts on
+good moduli ((q5)), a sieve UPPER bound with a named hypothesis row
+on its constant ((q1), rows H), a prime-free integer-sieve statement
+((q2)/(q3)) and the elementary smooth count -- no equidistribution
+or tuple-count uniformity at or beyond the card's strength enters in
+any direction, and no column consumes the card.  NO FLAG; STOP r36.6
+not fired.
+EMISSION: V-DIV-BELOW -- (P1) and (P2) both hold on BOTH rows: on
+every named hypothesis row the priced chain closes on a named
+diverging schedule and its (q10) margin fails on a named envelope
+psi_H = o(lnln x); the ceiling k*(x; H) diverges yet misses the
+exchange rank k = (2/ln2 + o(1)) lnln x on both rows.  Per fixed
+lambda the ceiling class is (lnln x/lnlnln x)^{1/lambda} (W-B); the
+lambda-supremum approaches, and never attains, the class
+lnln x/lnlnln x, and everything at or above psi_H fails at every
+coupling (W-A).  DEBT ledger d1-d5 stands (RC-4); no emitted class
+rests on a DEBT as a proved input (the closing clause's own
+either-PROVED-or-DEBT sense; the strict all-PROVED alternative
+reading is recorded in the run report and workpaper Section 11).
+Grid values reference-only (MEASURED), never
+load-bearing for (P1)/(P2).  BET-20260804-15 material: the per-row
+(P1)/(P2) pairs above are the bet's two halves; BET-20260804-15
+stays OPEN for operator judgment against this sheet; no bet is
+scored in-run.
+
+END OF RANK CEILING SHEET 36

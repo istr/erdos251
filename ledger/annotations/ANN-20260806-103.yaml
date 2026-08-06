@@ -1,0 +1,132 @@
+  - id: ANN-20260806-103
+    refs: [ANN-20260805-102, ANN-20260804-100, BET-20260804-15]
+    date: 2026-08-06
+    note: >-
+      item-0036 RANK-CEILING SHEET LANDS AND THE ITEM CLOSES: the
+      matrix word-grain mechanism's k-uniform ceiling is priced on
+      both named hypothesis rows, the item leaves the order,
+      BET-20260804-15 stays OPEN. Executed by the executor lane
+      (Claude Fable 5, local workstation, web OFF, corpus-only)
+      against the ephemeral kickoff item-0036-kickoff-v1.md at
+      Section 0 pin 15aff758 == HEAD; session started 2026-08-05,
+      landed 2026-08-06. RULE-28 FORM (a), IN-RUN BOOKING: the
+      execution contract grants this run the bookkeeping paths, and
+      the four artifacts land with their booking as ONE commit (the
+      item-0029 form, 8fb23b5): payloads/HASHES.txt gains exactly
+      four lines (123-126), this entry is the new annotation, the
+      three enumerated HANDOVER deltas land, and the roadmap
+      done-move is tool-executed (item-0036 to roadmap/completed/
+      with its final summary; roadmap/_order.md loses its first
+      line). The run commits exactly this one commit and pushes
+      nothing.
+      THE VERDICT, emitted by the byte-fixed V-36 rule: V-DIV-BELOW
+      -- (P1) and (P2) both hold on BOTH rows. Row H-EXP (C_g <=
+      C^g): (P1) HOLDS at lambda = 2 on the displayed schedule
+      phi_EXP(x) = (lnln x)^{1/4} -> infinity, every chain step
+      closing; (P2) HOLDS on the displayed envelope psi_EXP(x) =
+      (3/4) lnln x/lnlnln x = o(lnln x), the (q10) margin failing
+      asymptotically for every k >= psi_EXP and every fixed
+      lambda > 1. Row H-FACT (C_g <= exp(c_H g ln g)): (P1) HOLDS
+      (same coupling and schedule); (P2) HOLDS (same envelope; the
+      row constant only deepens the failure). BINDING WALLS, both
+      sides: necessity W-A (Lemma-3 constant + Mertens power),
+      lambda-free, the margin dying at k = (theta*_H + o(1))
+      lnln x/lnlnln x with theta*_EXP = 1/2 and theta*_FACT =
+      1/(2 + c_H); sufficiency W-B (Lemma-4 uniformization, the
+      smooth-count constraint), lambda-dependent, certified-closure
+      ceiling class (lnln x/lnlnln x)^{1/lambda} at every fixed
+      lambda > 1, the lambda -> 1 boundary a named DEBT. The
+      ceiling diverges yet misses the exchange rank k = (2/ln2 +
+      o(1)) lnln x on every row and every reading.
+      DEBT LEDGER, one line: five rows d1-d5 (the (q2)
+      fixed-constants and absolute-asymp clauses under growing K,
+      delta; the (q4) z-threshold as T grows; the (q3) proof's
+      unmarked PNT-in-APs uniformity as K_1 grows, with K_1 proved
+      polylog in z on every priced schedule; the lambda -> 1
+      boundary), each naming the documented clause it suspends; no
+      emitted class rests on any debt as a proved input -- the V-36
+      closing clause is applied in its own either-PROVED-or-DEBT
+      sense, and the strict all-PROVED alternative reading, under
+      which (P1) would be void at every diverging schedule, is
+      recorded in the report and workpaper Section 11 for operator
+      adjudication.
+      BET-20260804-15 stays OPEN for operator judgment against this
+      sheet; no bet is scored by this apply. The per-row (P1)/(P2)
+      pairs are the bet's two halves (rule 28(iii)).
+      DEVIATION, disclosed loudly rather than absorbed: the RC-1
+      self-check S1b as authored (|V(z) e^gamma ln z - 1| <= 0.02
+      at z = ln x/2, all four scales) is UNSATISFIABLE-AS-AUTHORED
+      -- the anchored A3 V(z) column times e^gamma ln z equals
+      0.9039/0.9139/0.9702/0.9957, so no implementation can meet
+      0.02 at the three smaller scales; STOP r36.4 FIRED on the
+      authored reading and the run proceeded under a named
+      rule-17-class deviation (unsatisfiable as authored; ANN-53
+      precedent), with the attainable surrogate tolerance 0.10
+      passing and V-36 making every grid value reference-only, so
+      no emitted class rests on the check. S1a/S1c/S1d PASS; the
+      operator acceptance of this commit is the acceptance of that
+      resolution, and rejecting it restores the strict-stop path.
+      The other nine STOP conditions did not fire. A second mid-run
+      operator instruction amended the workpaper line envelope
+      (ceiling 460 raised to the 550-600 band); gate W5 is checked
+      against the amended envelope and the report records the
+      instruction. An in-run adversarial refuter audit over the
+      draft artifacts ran before hand-off (six independent lenses,
+      25 findings, item-0035 precedent); sustained findings and the
+      repairs they forced -- the a_0 = e^{O(k)} conversion-factor
+      accounting, the certified-closure scoping of the W-B wall in
+      the tables copy, the row-carried constant semantics, the
+      uncertified c_1 boundary constant, the frozen-card domain
+      restrictions in the FLAG record -- are disclosed in
+      item-0036-report.md.
+      ARTIFACTS, all hashed (HASHES lines 123-126):
+      dossier/item-0036-workpapers/rank-ceiling-sheet.md (the
+      workpaper: V-A table, conventions, walls W-A..W-D with
+      finite-algebra derivations, the V-36 block and application,
+      DEBT ledger, FLAG-guard record NO FLAG, honest scope,
+      rule-16(a) pass, both-readings, residual uncertainty, BET-15
+      material), rank_ceiling_sheet_36.py with
+      rank_ceiling_sheet_36_tables.txt (deterministic, mpmath dps
+      40, byte-identical across invocations; RC-0..RC-6; V-36 block
+      byte-identical with the kickoff and the workpaper), and
+      item-0036-report.md (M2 shape; gates V1-V8 and W1-W9
+      verbatim; all ten STOP conditions reported).
+      HONEST SCOPE: no verdict on the separator S1, on (CG), on
+      B2.pairs or on the item-0010 campaign state; the item-0029
+      and item-0035 verdicts stand exactly as ANN-98/ANN-102 booked
+      them; the ceilings are ceilings of the DOCUMENTED chain under
+      NAMED hypotheses, not impossibility statements; RC-1b and the
+      route-C note remain GATED successors on the operator's
+      reading of this verdict. The ANN-102 F3 candidate (model-side
+      growth row) is DEFERRED BY NAME to the operator's desk in the
+      report's follow-up section; no item-0035 artifact was opened.
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload
+      text, existing workpaper, writeup file, extract, extract
+      header, grade record or bets entry is touched by this commit.
+      HANDOVER DELTAS, three, enumerated. (i) The cold-start
+      read-order line moves ANN-01..102 to ANN-01..103 (bet counts
+      unchanged; BET-15 stays listed open). (ii) A new frontier
+      bullet item-0036 RANK-CEILING SHEET LANDS directly after the
+      item-0035 bullet, carrying the verdict emission, the per-row
+      (P1)/(P2), both binding walls, the DEBT-ledger pointer, the
+      artifact list with HASHES lines 123-126, the BET-15
+      stays-open sentence and the honest-scope one-liner. (iii) The
+      EXECUTION ORDER bullet refreshed to item-0037, item-0027,
+      item-0030, item-0038, item-0010, item-0006, item-0024, with
+      item-0036 CLOSED AS DONE (ANN-103) at
+      roadmap/completed/item-0036.md, item-0037 at position 1, and
+      the rank-divergence parenthesis updated to (0230, 0170, 0200,
+      0240, 0016, 0090, 0020).
+      STILL OPEN AFTER THIS ENTRY, carrying the ANN-102 list
+      forward minus this item: the operator's reading of this
+      verdict, which gates RC-1b and the route-C note, and the
+      BET-15 judgment against this sheet; the F1 rule-17 question
+      of ANN-102; the parked candidates of the design note Section
+      5; the item-0010 re-scope waiting on item-0030; the two Lean
+      doc surfaces routed to item-0027; the item-0006 execution
+      profile, deliberately unpriced; source_commit in
+      writeup/sources.yml and the four a292ba4 heading
+      re-assignments, routed to the next writeup work package;
+      ERRATUM-5 booked and deliberately unrepaired; Q1/Q2 of
+      item-0032; and the Shiu 2000 standing question, unchanged and
+      resolvable only by the operator.

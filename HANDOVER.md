@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..102; the old path
+strictly-append-only file per entry, ANN-01..103; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 11 bets scored,
 BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the three
@@ -204,6 +204,34 @@ its later sections carry a STALE banner, HANDOVER is the record).
   item-0035-report.md. BET-20260804-14 IS SCORED YES by operator
   decision against the certificate (ANN-102), brier 0.01; binary
   mean brier moves 0.158 -> 0.143 over ten scored.
+- item-0036 RANK-CEILING SHEET LANDS (ANN-103, rule-28(a) in-run
+  booking): VERDICT V-DIV-BELOW under the byte-fixed V-36 rule --
+  (P1) and (P2) both hold on BOTH named hypothesis rows. Per row:
+  H-EXP (C_g <= C^g) and H-FACT (C_g <= exp(c_H g ln g)) each carry
+  (P1) HOLDS at lambda = 2 on the displayed diverging schedule
+  phi_H(x) = (lnln x)^{1/4} with every chain step closing, and (P2)
+  HOLDS on the displayed envelope psi_H(x) = (3/4) lnln x/lnlnln x
+  = o(lnln x) where the (q10) margin fails for every coupling: the
+  k-uniformly priced matrix chain provably extends beyond every
+  fixed rank yet misses the exchange rank on every row. BINDING
+  WALLS, both sides: necessity W-A (Lemma-3 constant + Mertens
+  power), lambda-free, critical coefficient theta*_EXP = 1/2 /
+  theta*_FACT = 1/(2+c_H) at the lnln x/lnlnln x class; sufficiency
+  W-B (Lemma-4 uniformization, smooth-count constraint),
+  lambda-dependent, certified-closure ceiling class
+  (lnln x/lnlnln x)^{1/lambda}, the lambda -> 1 boundary a named
+  DEBT. The five-row uniformization DEBT ledger (d1-d5) lives in
+  the workpaper Section 6 and sheet RC-4; no emitted class rests on
+  a debt. One deviation disclosed loudly: self-check S1b is
+  unsatisfiable as authored (STOP r36.4 fired and resolved as a
+  named rule-17-class deviation; grid values are V-36
+  reference-only). ARTIFACTS, all hashed (HASHES lines 123-126):
+  dossier/item-0036-workpapers/rank-ceiling-sheet.md,
+  rank_ceiling_sheet_36.py, rank_ceiling_sheet_36_tables.txt,
+  item-0036-report.md. BET-20260804-15 stays OPEN for operator
+  judgment against this sheet (rule 28(iii)); no bet is scored by
+  this apply. Honest scope: no S1/(CG)/B2.pairs verdict; RC-1b and
+  route-C stay gated on the operator's reading of this verdict.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
@@ -220,11 +248,13 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-102):
-  item-0036, item-0037, item-0027, item-0030, item-0038, item-0010,
+- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-103):
+  item-0037, item-0027, item-0030, item-0038, item-0010,
   item-0006, item-0024. Items 0036-0038 were RATIFIED and scheduled
-  at the f164ea3a operator apply. item-0035 IS CLOSED AS DONE
-  (ANN-102) and lives at roadmap/completed/item-0035.md; item-0029 IS
+  at the f164ea3a operator apply. item-0036 IS CLOSED AS DONE
+  (ANN-103) and lives at roadmap/completed/item-0036.md; item-0035
+  IS CLOSED AS DONE (ANN-102) and lives at
+  roadmap/completed/item-0035.md; item-0029 IS
   CLOSED AS DONE (ANN-98) and lives at roadmap/completed/item-0029.md;
   item-0028 IS
   CLOSED AS DONE (ANN-88) and lives at roadmap/completed/item-0028.md.
@@ -238,8 +268,8 @@ its later sections carry a STALE banner, HANDOVER is the record).
   then. The disposition and
   evidence-standing items sat AHEAD of the research block deliberately:
   the corpus record is repaired before more mathematics is added on top
-  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0036 is at
-  position 1 (item-0035 closed as done, ANN-102).
+  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0037 is at
+  position 1 (item-0036 closed as done, ANN-103).
   THE ANN-72 POLICY WAS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
   (ANN-86), AND THAT EXCEPTION IS NOW SPENT (ANN-87): item-0032 carried
   arcs [tooling, workflow] and sat at POSITION 1 ahead of the whole
@@ -257,7 +287,7 @@ its later sections carry a STALE banner, HANDOVER is the record).
   the sequence inside the research block only; no rank, status, arc,
   scope, acceptance or verdict moved.
   RANK AND ORDER NOW DIVERGE, deliberately: the ANN-72 order was
-  strictly rank-ascending, this one is not (0220, 0230, 0170, 0200,
+  strictly rank-ascending, this one is not (0230, 0170, 0200,
   0240, 0016, 0090, 0020), because rank encodes creation-time
   priority and the feeders of item-0010 were created last. Rank
   remains the
