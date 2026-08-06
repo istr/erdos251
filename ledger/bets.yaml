@@ -350,6 +350,8 @@ scored:
       positive resolution requires both halves (divergence of k* and
       the o(lnln x) miss) on every named hypothesis row of the sheet
     resolve_by: 2026-10-31
+    outcome: true  # V-DIV-BELOW; (P1) and (P2) both hold on both named rows
+    brier: 0.0625
     note: >-
       prior steering-proposed; operator amendment before apply is the
       registered value. Binds only if item-0036 is ratified and runs.
@@ -357,8 +359,6 @@ scored:
       Lemma-4 smoothness near (lnln x)^(1/2)) are recorded in the
       design note as discriminanda, deliberately not bet on
       separately.
-    outcome: true  # V-DIV-BELOW; (P1) and (P2) both hold on both named rows
-    brier: 0.0625
       SCORED 2026-08-06 by operator decision against the item-0036
       sheet (ANN-104; the apply of this mbox is the operator's
       deciding act, per the run report's acceptance clause), twelve

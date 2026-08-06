@@ -1,0 +1,64 @@
+  - id: ANN-20260806-106
+    refs: [ANN-20260806-105, ANN-20260806-104, ANN-20260731-87, BET-20260804-15]
+    date: 2026-08-06
+    note: >-
+      ledger/bets.yaml PARSES AGAIN: the YAML defect disclosed by
+      ANN-105 (item-0037 run report O4 / follow-up F-BETS) is
+      REPAIRED, on operator instruction, as its own bookkeeping
+      commit. THE DEFECT: at the ANN-104 apply c1fc8c3 the
+      BET-20260804-15 block acquired its scoring record by appending
+      the text AFTER the outcome:/brier: lines while the block's
+      note: >- key precedes them, so the appended lines sat at note
+      indent under a scalar value and the file stopped being valid
+      YAML -- python3 -c "import yaml;
+      yaml.safe_load(open('ledger/bets.yaml'))" raised ScannerError
+      "mapping values are not allowed here", line 367. git show
+      8a87149:ledger/bets.yaml still parses; c1fc8c3, 164af1a,
+      4dd53bab and d6d037ca do not. The file remained readable by eye
+      and ledger_check.py validate does not YAML-load it, so CI stayed
+      green and nothing alerted; any consumer that YAML-loads the
+      file failed for two days.
+      THE REPAIR, minimal and content-preserving: the two lines
+      "outcome: true  # V-DIV-BELOW; ..." and "brier: 0.0625" were
+      MOVED to sit immediately after resolve_by:, ahead of note: >-,
+      so the registration paragraph and the appended SCORED paragraph
+      are again one folded block scalar. That is exactly the layout
+      every other scored entry uses, BET-20260804-14 included, and it
+      is the layout the c1fc8c3 append assumed. NOTHING ELSE CHANGED:
+      the working file and HEAD:ledger/bets.yaml have the SAME
+      MULTISET OF LINES (490 lines, 25691 bytes both sides,
+      mechanically compared), so no character of any registration
+      field, scoring record or note was rewritten, added or lost --
+      the edit is a pure reordering of two keys inside one mapping.
+      The convention line's registration rule ("bets are written here
+      BEFORE evidence arrives; edits append, never rewrite") is
+      therefore not engaged: no value was rewritten.
+      VERIFIED AFTER THE REPAIR: the file parses; scored: 12 entries,
+      open: 5, all ids unique; BET-20260804-15 reads back id,
+      registered 2026-08-04, p 0.75, resolve_by 2026-10-31, outcome
+      true, brier 0.0625, with its claim and resolution byte-preserved
+      and its note carrying both the registration paragraph and the
+      full ANN-104 scoring record. ledger_check.py validate passed
+      (106 entries, 17 bets) and relocation-check PASSED.
+      NO BET STATE MOVED. No bet was registered, scored, amended,
+      re-priced or moved between the scored: and open: blocks by this
+      commit; BET-20260804-15 keeps the YES at brier 0.0625 that
+      ANN-104 booked and BET-20260804-16 stays OPEN exactly as ANN-105
+      left it. No annotation, artifact, hash line, roadmap file, Lean
+      file or frozen block is touched.
+      STILL OPEN, the other half of F-BETS and deliberately NOT done
+      here: the MECHANICAL GUARD. scripts/ledger_check.py validate
+      does not YAML-load bets.yaml, which is why this class of defect
+      was invisible to CI for two days; adding a load-and-shape
+      assertion there (and to the lint workflow's ledger job) would
+      catch the next one at push time. That touches scripts/ and CI,
+      a different unit from this repair, and is left to an operator
+      decision -- the item-0032 lesson (make the rule mechanical)
+      applied to the one ledger object the split left mutable.
+      HANDOVER DELTAS, two, enumerated. (i) The cold-start read-order
+      line moves ANN-01..105 to ANN-01..106; bet counts unchanged (12
+      scored, BET-16 still listed open at resolve_by 2026-10-31).
+      (ii) Disclosure (b) of the item-0037 frontier bullet is updated
+      from "observed and deliberately NOT repaired here" to REPAIRED
+      at this commit (ANN-106), with the guard recorded as the
+      residue.

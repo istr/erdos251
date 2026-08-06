@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..105; the old path
+strictly-append-only file per entry, ANN-01..106; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 12 bets scored,
 BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the two
@@ -278,11 +278,15 @@ its later sections carry a STALE banner, HANDOVER is the record).
   compression was fully reverted and a STOP-AND-ASK-BEFORE-COMPRESSING
   step is ordered and routed by name (report F-ENV; runs/README was
   not edited, being outside the granted booking paths); (b)
-  ledger/bets.yaml DOES NOT PARSE AS YAML at this pin (ScannerError
-  line 367), broken by the ANN-104 apply c1fc8c3 and invisible to CI,
-  observed and deliberately NOT repaired here (outside the granted
-  paths) -- routed to the operator as its own bookkeeping repair
-  (report F-BETS). Honest scope: the verdict is CORPUS-RELATIVE and
+  ledger/bets.yaml DID NOT PARSE AS YAML at this pin (ScannerError
+  line 367), broken by the ANN-104 apply c1fc8c3 and invisible to CI
+  -- observed by this run, outside its granted paths, and REPAIRED on
+  operator instruction in the separate bookkeeping commit that follows
+  (ANN-106: a pure two-line reordering inside the BET-15 block,
+  identical line multiset, no bet state moved). The mechanical guard
+  -- ledger_check.py validate does not YAML-load bets.yaml, which is
+  why CI stayed green -- is the recorded residue (report F-BETS).
+  Honest scope: the verdict is CORPUS-RELATIVE and
   does NOT assert HLQuantA is true (it stays a hypothesis, OPEN); no
   verdict on S1, (CG), B2.pairs or the item-0010 campaign state; the
   item-0029/0035/0036 verdicts stand exactly as ANN-98/ANN-102/ANN-103
