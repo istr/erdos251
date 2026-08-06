@@ -1,0 +1,186 @@
+  - id: ANN-20260806-105
+    refs: [ANN-20260806-103, ANN-20260804-100, ANN-20260803-97, ANN-20260802-93, BET-20260804-16]
+    date: 2026-08-06
+    note: >-
+      item-0037 HLQUANTA VACUITY AUDIT LANDS AND THE ITEM CLOSES: the
+      frozen card is audited against the Maier-genre limitation
+      machinery now fully in-corpus, the item leaves the order,
+      BET-20260804-16 stays OPEN. Executed by the executor lane
+      (Claude Code, model string claude-opus-5[1m] per rule 26(3)
+      session identity, local workstation, web OFF, cloud OFF,
+      corpus-only) against the ephemeral kickoff
+      item-0037-kickoff-v1.md at Section 0 pin 4dd53bab == HEAD, so
+      the rule-18 delta is EMPTY. RULE-28 FORM (a), IN-RUN BOOKING:
+      the execution contract grants this run the bookkeeping paths and
+      the two artifacts land with their booking as ONE commit
+      (payloads/HASHES.txt gains exactly two lines, 127-128; this
+      entry is the new annotation; three enumerated HANDOVER deltas;
+      the roadmap done-move is tool-executed, item-0037 to
+      roadmap/completed/ with its final summary and roadmap/_order.md
+      losing its first line). The run commits exactly this one commit
+      and pushes nothing.
+      THE VERDICT, emitted by the byte-fixed V-37 rule: CLEAR -- no
+      falsification instance documented in the CLEAN
+      maier85-shortintervals.md and hildebrandmaier88-gaps.md
+      extracts contradicts any instance of the frozen HLQuantA
+      statement inside the card's own quantifier ranges. Label set:
+      SEVENTEEN documented instances, ALL DISJOINT, zero INTERSECTS,
+      zero UNDECIDED-IN-CORPUS, so clause (a) applies exactly and no
+      missing anchor enters the verdict line. Per mechanism: M-OSC
+      (OSC-0..OSC-5) DISJOINT, primary separator Q-DOMAIN on the five
+      short-window and matrix rows and Q-TUPLE on the prime-free
+      sieve-function row; M-ROW (ROW-1..ROW-5) plus the cited
+      gap-ratio background row BG-1 DISJOINT, Q-DOMAIN on the three
+      matrix-carried rows and Q-TUPLE on the coprime-count,
+      limit-point-measure and gap-ratio rows; M-AP (AP-1..AP-5)
+      DISJOINT, Q-TUPLE on the two good-modulus existence rows,
+      Q-DOMAIN on the two single-prime AP rows, and Q-BAND on AP-5
+      (hm88 Lemma 3), the corpus's only tuple-counting statement,
+      whose implied constant is existentially quantified and
+      undocumented and therefore cannot contradict a specific
+      two-sided factor.
+      THE MANDATORY Q-UNIF-EDGE PASS returns the contract's THIRD
+      branch: the documented scopes demonstrably CANNOT REACH the
+      cumulative even-offset tuple count within the card's ranges,
+      support class PROVED. The argument is three elementary lemmas
+      plus three priced summations: (L1) capacity -- altering primes
+      only inside a set S moves tupleCount by at most |S|; (L2) a mass
+      floor M_H(x) >= x exp(-(4+o(1))(lnln x)^2) = x^{1-o(1)} proved
+      UNIFORMLY over the card's whole range (admissibility gives
+      1 - nu/p >= 1/p, nu <= k gives the p > 2k tail, and
+      sum_{p<=2k} log p <= 2k log 4 is PROVED-LEAN in-tree as
+      Erdos251.sum_log_primesUpto_le); (L3) carrier cardinality
+      x^{1-1/D+o(1)} for BOTH documented matrices, the deficit being
+      architectural (carrier density = row length / P(z), row length
+      polynomial in z, modulus the primorial with log P(z) asymp z);
+      and the summations over subwindows, dyadic scales and admissible
+      moduli, each staying o(M_H(x)). TWO SHARPENINGS, new to the
+      record: the Q-UNIF edge is the face on which the documented
+      mechanisms are FURTHEST from reaching, since they do not vary
+      with H while the mass floor loses only x^{o(1)} there; and hm88
+      Lemma 3 is INELIGIBLE at the card's span edge, its own spacing
+      hypothesis |s_i - s_j| <= z^2 being incompatible with span
+      (log x)^3 for every modulus P(z) <= x/2.
+      BET-20260804-16 STAYS OPEN for operator judgment against this
+      audit; no bet is scored by this apply (rule 28(iii)). Under the
+      registered mapping CLEAR is the bet's YES material;
+      ledger/bets.yaml is byte-untouched by this landing.
+      IN-RUN ADVERSARIAL REFUTER PASS, disclosed, seven findings
+      (workpaper Section 12; run report O1). Three changed the
+      artifact rather than polishing it: F1, the first Q-DOMAIN
+      separator was qualitative and would have rested on an unproved
+      size comparison, repaired by proving (L2) and routing every
+      separation through (L1); F2, the draft used the SPARSENESS of
+      the good-modulus scale set as a separator, which is INVALID
+      because the card is universal in x so one admissible scale
+      falsifies it -- the separation is by magnitude at each scale,
+      and this is the finding a naive audit would most likely have
+      shipped; F5, AP-5 was drafted UNDECIDED-IN-CORPUS on the ground
+      that the Lemma-3 constant is undocumented, which would have made
+      the verdict INCONCLUSIVE and VOIDED BET-16, and was overturned
+      against the anchor on the statement's own quantifier structure.
+      Also sustained: F3 (Q-TUPLE does not separate at k = 1, where
+      H = {0} makes the card a single-prime statement), F4 (a REJECTED
+      comfort reading -- (q2) lower-bounds a limsup and bounds no
+      amplitude), F6 (the D = 1 matrix corner checked, not assumed
+      away), F7 (instance set swept, OSC-0 and BG-1 added with their
+      V-A rows). No finding touched the emission.
+      DEVIATION, disclosed loudly rather than absorbed, AND ITS SECOND
+      RECURRENCE. The dispatch line envelope [340, 520] was too small
+      for the artifact it ordered; the workpaper lands at 628 lines
+      under an operator amendment to [340, 650] issued mid-run ("I
+      approve a 650 line limit"), and gate W4 is checked against the
+      amended band. THE OPERATOR RECORDS THIS AS THE SECOND TIME THE
+      STEERING LANE SET A BUDGET TOO SMALL: the first was item-0036,
+      envelope [140, 460] amended to [550, 600], landing at 566
+      (ANN-103). NEW and executor-side: on hitting the ceiling this
+      run FIRST COMPRESSED the draft and only then reported, so a
+      silent quality loss preceded the report; the compression was
+      fully reverted after the amendment and the delivered artifact is
+      the uncompressed one. THE OPERATOR ORDERS A STOP-AND-ASK STEP
+      (run report F-ENV): when an artifact cannot be delivered inside
+      a declared envelope or budget without dropping content, the run
+      STOPS and asks the operator for an envelope or budget decision
+      BEFORE compressing. Recommended landing is a runs/README clause
+      of the rule-23 family plus a kickoff-template line; NOT applied
+      by this run, since runs/README.md is outside the granted booking
+      paths (r37.8), so the candidate is routed by name.
+      SECOND DISCLOSURE, observed and deliberately NOT repaired:
+      ledger/bets.yaml does not parse as YAML at this pin
+      (ScannerError at line 367). The break was introduced by the
+      ANN-104 apply c1fc8c3, where the BET-15 scoring text was
+      appended after brier: 0.0625 at note indent while the block's
+      note: >- precedes outcome:/brier:; 8a87149 still parses. NOT
+      repaired here because bets.yaml is outside this run's granted
+      booking paths and must stay byte-untouched (r37.8). CI does not
+      catch it: ledger_check.py validate does not YAML-load the file.
+      Routed to the operator as its own bookkeeping repair, with a
+      suggested validate-side assertion (run report F-BETS).
+      The other nine STOP conditions did not fire; r37.3 in particular
+      did NOT fire -- every instance was decided in-corpus, and the
+      two escalation candidates named in workpaper Section 13
+      (Halberstam-Richert Theorem 2.3 for an explicit sieve constant
+      at growing g, named by hm88 without a transcribed constant; the
+      Friedlander-Granville AP-uniformity zone of the design note
+      Section 3.2) are NOT missing anchors for any instance, do not
+      enter the verdict line, and remain operator-gated rule-26(5)
+      events out of scope for this item.
+      ARTIFACTS, both hashed (HASHES lines 127-128):
+      dossier/item-0037-workpapers/hlquanta-vacuity-audit.md (the
+      workpaper: V-A table of 31 rows and 56 quotation pieces, the
+      frozen-card anchor and the four axes, the three elementary
+      lemmas, Task A with each mechanism's governing sentence quoted
+      verbatim, the Task B seventeen-row label table with the
+      separations written out, the mandatory Q-UNIF-edge pass, the
+      V-37 block and its clause-by-clause application, BET-16
+      material, the rule-16(a) pass, honest scope, the two carried
+      extract differences, the refuter record, residual uncertainty
+      and both readings) and item-0037-report.md (M2 shape; gates
+      V1-V8 and W1-W9 verbatim; all ten STOP conditions reported by
+      name; the deviation and both disclosures).
+      HONEST SCOPE: the verdict is CORPUS-RELATIVE and prices the
+      documented zone exactly. It does NOT establish that HLQuantA is
+      true -- the card remains a hypothesis, OPEN, exactly as the
+      round-1 conditional theorem consumes it -- and it records no
+      verdict on the separator S1, on (CG), on B2.pairs or on the
+      item-0010 campaign state. The item-0029, item-0035 and
+      item-0036 verdicts stand exactly as ANN-98, ANN-102 and ANN-103
+      booked them and none was consumed as an input. The two
+      documented extract differences (all-vs-nonprincipal characters;
+      strict-vs-non-strict modulus) are carried, not smoothed, and no
+      separator depends on either.
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload
+      text beyond the two appended HASHES lines, existing dossier
+      workpaper, writeup file, extract, extract header, grade record
+      or bets entry is touched by this commit.
+      HANDOVER DELTAS, three, enumerated. (i) The cold-start
+      read-order line moves ANN-01..104 to ANN-01..105; bet counts
+      unchanged (this landing scores no bet) and BET-16 stays listed
+      open, resolve_by 2026-10-31. (ii) A new frontier bullet
+      item-0037 HLQUANTA VACUITY AUDIT LANDS directly after the
+      item-0036 bullet, carrying the V-37 = CLEAR emission, the
+      per-mechanism labels and the Q-UNIF-edge outcome, the artifact
+      list with HASHES lines 127-128, the BET-16 stays-open sentence,
+      the envelope-amendment and bets.yaml disclosures, and the
+      honest-scope one-liner. (iii) The EXECUTION ORDER bullet is
+      refreshed to the post-done-move roadmap/_order.md read from the
+      tool -- item-0027, item-0030, item-0038, item-0039, item-0010,
+      item-0006, item-0024 -- which also brings the bullet current to
+      the item-0039 ratification it predated; the rank-divergence
+      parenthesis becomes (0170, 0200, 0240, 0250, 0016, 0090, 0020)
+      and item-0037 is marked CLOSED AS DONE (ANN-105) at
+      roadmap/completed/item-0037.md.
+      STILL OPEN AFTER THIS ENTRY, carrying the ANN-104 list forward
+      minus nothing this apply closes: the BET-16 judgment against
+      this audit; the stop-and-ask rule candidate and the bets.yaml
+      YAML repair, both routed here; the RC-1b and route-C gate
+      decisions; the item-0039 ratification is done (4dd53ba) and its
+      scheduling stands at position 4; the F1 rule-17 question of
+      ANN-102; the parked candidates of the design note Section 5;
+      the item-0010 re-scope waiting on item-0030; the two Lean doc
+      surfaces routed to item-0027; the item-0006 execution profile,
+      deliberately unpriced; source_commit in writeup/sources.yml and
+      the four a292ba4 heading re-assignments; ERRATUM-5 booked and
+      deliberately unrepaired; Q1/Q2 of item-0032; and the Shiu 2000
+      standing question, unchanged and resolvable only by the
+      operator.

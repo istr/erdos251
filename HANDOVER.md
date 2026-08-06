@@ -8,7 +8,7 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..104; the old path
+strictly-append-only file per entry, ANN-01..105; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
 bets.yaml alone -- the history no longer rides along. 12 bets scored,
 BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the two
@@ -237,6 +237,56 @@ its later sections carry a STALE banner, HANDOVER is the record).
   all-PROVED alternative stays recorded, not adopted. Honest scope:
   no S1/(CG)/B2.pairs verdict; RC-1b and route-C stay gated on the
   operator's reading of this verdict.
+- item-0037 HLQUANTA VACUITY AUDIT LANDS (ANN-105, rule-28(a) in-run
+  booking): VERDICT V-37 = CLEAR under the byte-fixed V-37 rule -- no
+  falsification instance documented in the CLEAN maier85 and hm88
+  extracts contradicts any instance of the frozen HLQuantA statement
+  inside the card's own quantifier ranges. SEVENTEEN documented
+  instances, ALL DISJOINT, zero INTERSECTS, zero UNDECIDED-IN-CORPUS,
+  so clause (a) applies exactly and no missing anchor enters the
+  verdict line. Primary separators: Q-DOMAIN on M-OSC's five
+  short-window/matrix rows and on M-ROW's three matrix-carried rows
+  and the two single-prime AP rows; Q-TUPLE on the prime-free
+  sieve-function, coprime-count, limit-point-measure, gap-ratio and
+  good-modulus-existence rows; Q-BAND on AP-5 (hm88 Lemma 3), the
+  corpus's ONLY tuple-counting statement, whose implied constant is
+  existentially quantified and undocumented and therefore cannot
+  contradict a specific two-sided factor. THE MANDATORY Q-UNIF-EDGE
+  PASS returns the third branch, CANNOT REACH, PROVED: (L1) capacity
+  (altering primes only inside S moves tupleCount by at most |S|),
+  (L2) a mass floor M_H(x) >= x exp(-(4+o(1))(lnln x)^2) = x^{1-o(1)}
+  proved UNIFORMLY over the card's whole range, (L3) documented
+  carriers of cardinality x^{1-1/D+o(1)} for BOTH matrices, plus the
+  subwindow, dyadic-scale and modulus summations, each staying
+  o(M_H(x)). TWO SHARPENINGS: the Q-UNIF edge is the face on which the
+  documented mechanisms are FURTHEST from reaching (they do not vary
+  with H, the floor loses only x^{o(1)}); and hm88 Lemma 3 is
+  INELIGIBLE at the card's span edge, its spacing hypothesis
+  |s_i - s_j| <= z^2 being incompatible with span (log x)^3 for every
+  modulus P(z) <= x/2. ARTIFACTS, both hashed (HASHES lines 127-128):
+  dossier/item-0037-workpapers/hlquanta-vacuity-audit.md (628 lines;
+  V-A table of 31 rows/56 pieces, the four axes, the three lemmas,
+  Task A verbatim, the Task B label table, the Q-UNIF-edge pass, the
+  V-37 block and application, rule-16(a) pass, refuter record, both
+  readings) and item-0037-report.md. BET-20260804-16 STAYS OPEN for
+  operator judgment (CLEAR is its YES material; rule 28(iii),
+  bets.yaml byte-untouched). TWO DISCLOSURES a cold start must see:
+  (a) the dispatch line envelope [340, 520] was TOO SMALL and was
+  amended mid-run by the operator to [340, 650] -- the SECOND
+  recurrence after item-0036's [140, 460] -> [550, 600] -- and the run
+  compressed before reporting, which is the executor-side defect; the
+  compression was fully reverted and a STOP-AND-ASK-BEFORE-COMPRESSING
+  step is ordered and routed by name (report F-ENV; runs/README was
+  not edited, being outside the granted booking paths); (b)
+  ledger/bets.yaml DOES NOT PARSE AS YAML at this pin (ScannerError
+  line 367), broken by the ANN-104 apply c1fc8c3 and invisible to CI,
+  observed and deliberately NOT repaired here (outside the granted
+  paths) -- routed to the operator as its own bookkeeping repair
+  (report F-BETS). Honest scope: the verdict is CORPUS-RELATIVE and
+  does NOT assert HLQuantA is true (it stays a hypothesis, OPEN); no
+  verdict on S1, (CG), B2.pairs or the item-0010 campaign state; the
+  item-0029/0035/0036 verdicts stand exactly as ANN-98/ANN-102/ANN-103
+  booked them and none was consumed as an input.
 - PINTZ (1.8) IS NOT AN AVAILABLE FLOOR AT TARGET RANK, and a cold
   start reading only this file would otherwise assume it is. The
   dispatched effectivization returned a STOP-condition-6 finding: the
@@ -253,9 +303,14 @@ its later sections carry a STALE banner, HANDOVER is the record).
   order-one collision region is 1e27--1e30 and the proved F/N onset is
   near 1e105. The three ANN-63 reading cautions are BINDING on every
   downstream citation.
-- EXECUTION ORDER at this apply (roadmap/_order.md, ANN-103):
-  item-0037, item-0027, item-0030, item-0038, item-0010,
-  item-0006, item-0024. Items 0036-0038 were RATIFIED and scheduled
+- EXECUTION ORDER at this apply (roadmap/_order.md read from the tool
+  after the item-0037 done-move, ANN-105): item-0027, item-0030,
+  item-0038, item-0039, item-0010, item-0006, item-0024. This refresh
+  also brings the bullet current to the item-0039 ratification
+  (4dd53ba / 164af1a, roadmap-only), which the previous text
+  predated and OMITTED. item-0037 IS CLOSED AS DONE (ANN-105) and
+  lives at roadmap/completed/item-0037.md.
+  Items 0036-0038 were RATIFIED and scheduled
   at the f164ea3a operator apply. item-0036 IS CLOSED AS DONE
   (ANN-103) and lives at roadmap/completed/item-0036.md; item-0035
   IS CLOSED AS DONE (ANN-102) and lives at
@@ -273,8 +328,8 @@ its later sections carry a STALE banner, HANDOVER is the record).
   then. The disposition and
   evidence-standing items sat AHEAD of the research block deliberately:
   the corpus record is repaired before more mathematics is added on top
-  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0037 is at
-  position 1 (item-0036 closed as done, ANN-103).
+  of it. THE RESEARCH BLOCK IS THE WHOLE ORDER and item-0027 is at
+  position 1 (item-0037 closed as done, ANN-105).
   THE ANN-72 POLICY WAS SUPERSEDED FOR item-0032 AND FOR NOTHING ELSE
   (ANN-86), AND THAT EXCEPTION IS NOW SPENT (ANN-87): item-0032 carried
   arcs [tooling, workflow] and sat at POSITION 1 ahead of the whole
@@ -292,12 +347,12 @@ its later sections carry a STALE banner, HANDOVER is the record).
   the sequence inside the research block only; no rank, status, arc,
   scope, acceptance or verdict moved.
   RANK AND ORDER NOW DIVERGE, deliberately: the ANN-72 order was
-  strictly rank-ascending, this one is not (0230, 0170, 0200,
-  0240, 0016, 0090, 0020), because rank encodes creation-time
+  strictly rank-ascending, this one is not (0170, 0200, 0240,
+  0250, 0016, 0090, 0020), because rank encodes creation-time
   priority and the feeders of item-0010 were created last. Rank
   remains the
   within-arc query key; roadmap/_order.md remains the cross-arc truth
-  for what runs next. A later reader seeing rank 0016 in position 6
+  for what runs next. A later reader seeing rank 0016 in position 5
   should read intended sequencing, not a defect -- the same reading
   ANN-72 booked for item-0024. Earlier claims in this file that
   item-0026 runs first, and before that item-0022, are both SUPERSEDED,
