@@ -9,6 +9,7 @@ for queries; this file is the cross-arc truth for *what runs next*. IDs only
 - item-0027
 - item-0030
 - item-0038
+- item-0039
 - item-0010
 - item-0006
 - item-0024
