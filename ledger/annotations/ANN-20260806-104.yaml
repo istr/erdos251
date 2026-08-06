@@ -1,0 +1,115 @@
+  - id: ANN-20260806-104
+    refs: [ANN-20260806-103, BET-20260804-15, ANN-20260805-102]
+    date: 2026-08-06
+    note: >-
+      BET-20260804-15 IS SCORED YES AND THE item-0036 CLOSE IS
+      RATIFIED. One operator apply, the 15aff758 form: the judgment
+      postdates the applied and readable artifact commit 8a87149
+      (rule 28(iii) sequence invariant), and the score travels with
+      the ratification record as one self-booking commit. Steering
+      verification preceded this apply: fresh clone at 8a87149,
+      parent == the item-0036 kickoff pin, writes exactly the
+      kickoff Section 5 scope, ledger trio green, frozen blocks
+      byte-identical, all four HASHES lines re-hashed and matching,
+      the sheet re-executed byte-identically, the V-36 block
+      cmp-identical across tables RC-6, workpaper Section 5 and the
+      kickoff Section 1 bytes, and the fifteen V-A quotations
+      re-confirmed under the ANN-80 flattened scan.
+      RATIFIED WITH THE ACCEPTANCE OF 8a87149, per the kickoff's own
+      acceptance clause: (a) the STOP r36.4 resolution -- self-check
+      S1b (|V(z) e^gamma ln z - 1| <= 0.02 at z = ln x/2) is
+      UNSATISFIABLE-AS-AUTHORED, a property of the anchored A3 V(z)
+      column times e^gamma ln z (0.9039/0.9139/0.9702/0.9957; the
+      Mertens (q9) error term at z = 9.21..115.13 is 3..10 percent);
+      the run proceeded under the named rule-17-class deviation
+      (ANN-53 precedent) with the attainable surrogate tolerance
+      0.10 passing and every grid value V-36 reference-only. The
+      authoring defect sits in the steering lane: the tolerance was
+      byte-fixed without computing it against the anchored values it
+      cites. The report's kickoff-template lesson is adopted as
+      binding steering practice: a byte-fixed numeric self-check
+      tolerance is verified satisfiable at authoring time, and a
+      byte-fixed verdict rule that both mandates a DEBT ledger and
+      bars classes resting on debts fixes the reading of "resting"
+      in its own text. (b) The mid-run workpaper envelope amendment
+      (ceiling 460 raised to the 550-600 band by operator
+      instruction; gate W5 checked against the amended band).
+      THE V-36 CLOSING-CLAUSE READING, adjudicated and adopted. The
+      clause -- "every inequality either PROVED (finite algebra) or
+      listed as a DEBT in the RC-4/RC-5 uniformization ledger, with
+      no emitted class resting on a DEBT" -- is part of the rule
+      block byte-fixed in the kickoff BEFORE the run, dispatched by
+      the operator, and landed cmp-identical in the tables and the
+      workpaper (gate W9). The operator ADOPTS the clause as
+      written: the dash clause defines "closes", so a chain step
+      whose suspended fixed-constant clauses are named DEBT rows is
+      a closing step, and "no emitted class resting on a DEBT" bars
+      consuming a debt as a proved input, which no emitted class
+      does. Grounds, recorded for the file: under the strict
+      all-PROVED alternative raised by the in-run audit (report O2;
+      workpaper Section 11), (P1) is void at EVERY diverging
+      schedule -- K = T = 3 lambda k(x) grows against the (q2)
+      fixed-constants clause, debt d1, on every one -- so the
+      V-DIV-BELOW branch of the emission list is unreachable by
+      construction and the resting-clause has no work to do; the
+      byte-fixed rule is not read so that a named emission branch is
+      dead and a stated clause idle. The adopted reading is the one
+      under which the rule's own text, the kickoff's mandated d1-d5
+      DEBT-ledger design, its Section 8 expected picture and the
+      pre-registered BET-15 prior are coherent. The strict
+      alternative stays RECORDED in the artifacts (report O2,
+      workpaper Section 11), NOT adopted; under it the emission
+      would be V-BOUNDED (row: both; wall: W-B) with (P2) unchanged,
+      and the bet below would have resolved NO. The verdict
+      V-DIV-BELOW therefore STANDS as emitted.
+      THE SCORE. BET-20260804-15 resolves YES: the registered
+      resolution clause requires both halves (divergence of k* and
+      the o(lnln x) miss) on every named hypothesis row, and the
+      sheet delivers (P1) and (P2) on H-EXP and on H-FACT -- the
+      displayed schedule phi_H(x) = (lnln x)^{1/4} at lambda = 2
+      closes every chain step, the displayed envelope psi_H(x) =
+      (3/4) lnln x/lnlnln x = o(lnln x) kills the (q10) margin at
+      every fixed coupling, and the assembly states both halves
+      verbatim (workpaper Section 3.5). Brier (0.75 - 1)^2 =
+      0.0625; binary mean brier moves 0.143 -> 0.136 over eleven
+      scored. The entry moves open -> scored in ledger/bets.yaml
+      with its registered fields byte-preserved and the scoring
+      record appended to its note.
+      F3 STAYS AT THE OPERATOR'S DESK. The ANN-102 F3 candidate
+      (the explicit stretch-length lower bound of certificate L5(e)
+      as a model-side growth row) was deferred by name by the run;
+      a PROPOSED roadmap item for it (item-0039) is prepared by
+      steering as a separate mbox, and its ratification and
+      scheduling remain operator acts in the f164ea3a form. The
+      RC-1b and route-C gate decisions likewise remain the
+      operator's, now with their priced decision surface (necessity
+      W-A at theta*_H lnln x/lnlnln x, certified closure W-B at
+      (lnln x/lnlnln x)^{1/lambda}, the grey zone between, and
+      d1-d5 as the debts RC-1b would discharge).
+      NOTHING ELSE MOVES. No Lean file, frozen block, run, payload
+      text, dossier workpaper, writeup file, extract, extract
+      header, grade record, roadmap file or other bets entry is
+      touched by this apply.
+      HANDOVER DELTAS, two, enumerated. (i) The cold-start
+      read-order line moves ANN-01..103 to ANN-01..104, the scored
+      count moves 11 to 12, and the open post-0029 registrations
+      line drops BET-15 (BET-16/17 remain). (ii) The item-0036
+      frontier bullet replaces its BET-15 stays-open sentence with
+      the scored record (YES, brier 0.0625, mean 0.143 -> 0.136
+      over eleven) plus the one-line ratification record (r36.4
+      deviation and envelope amendment ratified; the V-36 closing
+      clause adopted as written, the strict alternative recorded,
+      not adopted).
+      STILL OPEN AFTER THIS ENTRY, carrying the ANN-103 list
+      forward minus the two points this apply closes (the verdict
+      reading and the BET-15 judgment): the RC-1b and route-C gate
+      decisions; the F3 ratification decision (item-0039 proposed);
+      the F1 rule-17 question of ANN-102; the parked candidates of
+      the design note Section 5; the item-0010 re-scope waiting on
+      item-0030; the two Lean doc surfaces routed to item-0027; the
+      item-0006 execution profile, deliberately unpriced;
+      source_commit in writeup/sources.yml and the four a292ba4
+      heading re-assignments, routed to the next writeup work
+      package; ERRATUM-5 booked and deliberately unrepaired; Q1/Q2
+      of item-0032; and the Shiu 2000 standing question, unchanged
+      and resolvable only by the operator.

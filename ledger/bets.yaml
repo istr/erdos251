@@ -336,6 +336,70 @@ scored:
       artifact; score and late landing booking in one self-booking
       commit); the registration-vs-scoring tension stays exactly as
       item-0032 left it, explicitly unsettled.
+  - id: BET-20260804-15
+    registered: 2026-08-04
+    claim: >-
+      the item-0036 sheet returns, on every named constant-hypothesis
+      row, a ceiling with k*(x) -> infinity and k*(x) = o(lnln x):
+      the matrix mechanism provably extends beyond every fixed rank
+      under the priced chain, yet the chain misses the exchange rank
+      on every hypothesis row
+    p: 0.75
+    resolution: >-
+      operator judgment against the item-0036 mechanical verdict; a
+      positive resolution requires both halves (divergence of k* and
+      the o(lnln x) miss) on every named hypothesis row of the sheet
+    resolve_by: 2026-10-31
+    note: >-
+      prior steering-proposed; operator amendment before apply is the
+      registered value. Binds only if item-0036 is ratified and runs.
+      The two candidate walls (Lemma-3/Mertens near lnln x/lnlnln x;
+      Lemma-4 smoothness near (lnln x)^(1/2)) are recorded in the
+      design note as discriminanda, deliberately not bet on
+      separately.
+    outcome: true  # V-DIV-BELOW; (P1) and (P2) both hold on both named rows
+    brier: 0.0625
+      SCORED 2026-08-06 by operator decision against the item-0036
+      sheet (ANN-104; the apply of this mbox is the operator's
+      deciding act, per the run report's acceptance clause), twelve
+      weeks before resolve_by. The registered resolution clause
+      requires both halves on every named hypothesis row. The
+      byte-fixed V-36 rule emits V-DIV-BELOW: on H-EXP and on
+      H-FACT, (P1) HOLDS -- the displayed schedule phi_H(x) =
+      (lnln x)^{1/4} at the admissible coupling lambda = 2 closes
+      every chain step -- and (P2) HOLDS -- the displayed envelope
+      psi_H(x) = (3/4) lnln x/lnlnln x = o(lnln x) kills the (q10)
+      margin at every fixed coupling; the workpaper assembly states
+      the two halves verbatim ("On every reading k* -> infinity and
+      k* = o(lnln x)", Section 3.5). YES under the clause; brier
+      (0.75 - 1)^2 = 0.0625.
+      READING. The V-36 closing clause -- every inequality either
+      PROVED (finite algebra) or listed as a DEBT, with no emitted
+      class resting on a DEBT -- is part of the rule block byte-fixed
+      in the kickoff BEFORE the run and dispatched by the operator;
+      the emission is mechanical under it. ANN-104 records the
+      operator's adoption of the clause as written, with grounds.
+      The strict all-PROVED alternative raised by the in-run audit
+      (report O2), under which (P1) is void at every diverging
+      schedule and the emission would be V-BOUNDED, stays recorded
+      in the artifacts, not adopted; had it been adopted, this bet
+      would have resolved NO at brier 0.5625 -- stated so the ledger
+      shows the scoring hinged on a rule reading and names where
+      that reading is adjudicated.
+      CALIBRATION. Registered the day the design note landed, before
+      the verdict rule was authored; the two candidate walls were
+      recorded as discriminanda, deliberately not bet on separately
+      -- and the sheet resolved them INTO one report: W-B
+      sufficiency binding below W-A necessity at every fixed lambda,
+      the registration's (lnln x)^(1/2) smoothness sketch landing as
+      the certified class (lnln x/lnlnln x)^{1/lambda} at the
+      lambda = 2 reference. The 0.75 prior priced whether the
+      documented chain, carried honestly with its debts named, would
+      both extend beyond every fixed rank and still miss -- exactly
+      the two halves that resolved. Binary mean brier moves 0.143 ->
+      0.136 over eleven scored. The block move open -> scored
+      follows the BET-14 precedent under rule 28(iii)'s sequence
+      invariant (judgment after the applied artifact 8a87149).
 
 open:
   - id: BET-20260711-07
@@ -382,27 +446,6 @@ open:
       evidence either way, and the point of the item is that nobody has
       measured this. Registered anyway, before the evidence, per ground
       rule 4
-  - id: BET-20260804-15
-    registered: 2026-08-04
-    claim: >-
-      the item-0036 sheet returns, on every named constant-hypothesis
-      row, a ceiling with k*(x) -> infinity and k*(x) = o(lnln x):
-      the matrix mechanism provably extends beyond every fixed rank
-      under the priced chain, yet the chain misses the exchange rank
-      on every hypothesis row
-    p: 0.75
-    resolution: >-
-      operator judgment against the item-0036 mechanical verdict; a
-      positive resolution requires both halves (divergence of k* and
-      the o(lnln x) miss) on every named hypothesis row of the sheet
-    resolve_by: 2026-10-31
-    note: >-
-      prior steering-proposed; operator amendment before apply is the
-      registered value. Binds only if item-0036 is ratified and runs.
-      The two candidate walls (Lemma-3/Mertens near lnln x/lnlnln x;
-      Lemma-4 smoothness near (lnln x)^(1/2)) are recorded in the
-      design note as discriminanda, deliberately not bet on
-      separately.
   - id: BET-20260804-16
     registered: 2026-08-04
     claim: >-
