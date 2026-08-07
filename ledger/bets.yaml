@@ -401,6 +401,65 @@ scored:
       follows the BET-14 precedent under rule 28(iii)'s sequence
       invariant (judgment after the applied artifact 8a87149).
 
+  - id: BET-20260804-16
+    registered: 2026-08-04
+    claim: >-
+      the corpus-only vacuity audit returns CLEAR: no falsification
+      instance documented in the CLEAN maier85 and hm88 extracts
+      contradicts any instance of the frozen HLQuantA statement
+      inside the card's own quantifier ranges
+    p: 0.85
+    resolution: >-
+      operator judgment against the item-0037 mechanical verdict;
+      CLEAR resolves YES, INTERSECTS resolves NO, and INCONCLUSIVE
+      with a named missing anchor at resolve_by voids the bet
+      (recorded, not scored)
+    resolve_by: 2026-10-31
+    outcome: true  # V-37 = CLEAR; seventeen documented instances all DISJOINT, zero INTERSECTS, zero UNDECIDED-IN-CORPUS
+    brier: 0.0225
+    note: >-
+      prior steering-proposed; operator amendment before apply is the
+      registered value. Binds only if item-0037 is ratified and runs.
+      The prior encodes the triage-1b history: the frozen card's
+      global-count form was chosen after the over-uniform variant
+      fell, against exactly the short-window oscillation zone; the
+      residual risk priced here is the span-(log x)^3 offset face
+      combined with tuple sizes near 4 lnln x, which nobody has
+      checked against the documented machinery.
+      SCORED 2026-08-07 by operator decision against the item-0037
+      audit (ANN-107; operator directive of the same day), twelve
+      weeks before resolve_by. The registered resolution clause maps
+      CLEAR to YES, INTERSECTS to NO, and INCONCLUSIVE with a named
+      missing anchor at resolve_by to VOID. The byte-fixed V-37 rule
+      emits CLEAR: seventeen documented falsification instances of
+      M-OSC, M-ROW and M-AP are ALL DISJOINT, with zero INTERSECTS and
+      zero UNDECIDED-IN-CORPUS, so clause (a) applies and no missing
+      anchor enters the verdict line. YES under the clause; brier
+      (0.85 - 1)^2 = 0.0225.
+      READING. The audit's mandatory Q-UNIF-edge pass returns the
+      "cannot reach" as PROVED rather than by a Q-DOMAIN appeal: a
+      capacity lemma, a uniform mass floor M_H(x) = x^{1-o(1)} (with
+      the Chebyshev input PROVED-LEAN in-tree as
+      Erdos251.sum_log_primesUpto_le), and both documented matrices
+      carrying density x^{-1/D+o(1)}, so an x^{o(1)} edge penalty
+      cannot close an x^{1/D} gap. The verdict is CORPUS-RELATIVE: it
+      prices the documented Maier-genre zone and does NOT establish
+      that HLQuantA is true, which remains the open hypothesis the
+      round-1 conditional theorem consumes.
+      CALIBRATION. The 0.85 prior priced exactly the one unchecked
+      face -- the span-(log x)^3 offset range at tuple sizes near
+      4 lnln x -- and that face resolved cleanly to DISJOINT. The
+      in-run refuter overturned an interim UNDECIDED reading of the
+      Lemma-3 instance (report F5), which would have made the verdict
+      INCONCLUSIVE and VOIDED this bet, against the anchor's own
+      quantifier structure, so the YES survived the one path that
+      would have voided it. Binary mean brier moves 0.136 -> 0.127
+      over twelve scored. The block move open -> scored follows the
+      BET-14/BET-15 precedent under rule 28(iii)'s sequence invariant
+      (judgment after the applied artifact d6d037ca); the
+      registration-vs-scoring tension stays exactly as item-0032 left
+      it, explicitly unsettled.
+
 open:
   - id: BET-20260711-07
     registered: 2026-07-11
@@ -446,29 +505,6 @@ open:
       evidence either way, and the point of the item is that nobody has
       measured this. Registered anyway, before the evidence, per ground
       rule 4
-  - id: BET-20260804-16
-    registered: 2026-08-04
-    claim: >-
-      the corpus-only vacuity audit returns CLEAR: no falsification
-      instance documented in the CLEAN maier85 and hm88 extracts
-      contradicts any instance of the frozen HLQuantA statement
-      inside the card's own quantifier ranges
-    p: 0.85
-    resolution: >-
-      operator judgment against the item-0037 mechanical verdict;
-      CLEAR resolves YES, INTERSECTS resolves NO, and INCONCLUSIVE
-      with a named missing anchor at resolve_by voids the bet
-      (recorded, not scored)
-    resolve_by: 2026-10-31
-    note: >-
-      prior steering-proposed; operator amendment before apply is the
-      registered value. Binds only if item-0037 is ratified and runs.
-      The prior encodes the triage-1b history: the frozen card's
-      global-count form was chosen after the over-uniform variant
-      fell, against exactly the short-window oscillation zone; the
-      residual risk priced here is the span-(log x)^3 offset face
-      combined with tuple sizes near 4 lnln x, which nobody has
-      checked against the documented machinery.
   - id: BET-20260804-17
     registered: 2026-08-04
     claim: >-

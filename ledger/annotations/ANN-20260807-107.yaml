@@ -1,0 +1,96 @@
+  - id: ANN-20260807-107
+    refs: [ANN-20260806-105, ANN-20260806-104, ANN-20260804-100, BET-20260804-16]
+    date: 2026-08-07
+    note: >-
+      BET-20260804-16 IS SCORED YES against the item-0037 HLQuantA
+      vacuity audit, by operator decision. Authored by steering
+      (Claude Opus 4.8, analysis sandbox) on operator instruction
+      2026-08-07 at a pin equal to the item-0037 landing apply
+      d6d037ca, whose child b8ce44a3 carries the ANN-106 bets.yaml
+      repair; emitted as a git am mbox; the operator apply is the
+      ratifying and deciding commit. Files of this commit:
+      ledger/bets.yaml (one entry moves open -> scored, outcome and
+      brier inserted BEFORE the note, the registration note kept and
+      extended with the scoring record, nothing above the entry
+      touched), HANDOVER.md (two bounded deltas, enumerated below),
+      and this entry. No artifact, roadmap file, payload text or Lean
+      file is touched.
+      RULE-28(iii), NAMED. The score is a SEPARATE unit and rides no
+      landing commit: the item-0037 artifact commit d6d037ca is
+      applied and readable, and this operator judgment postdates it,
+      per the sequence invariant. bets.yaml is otherwise byte-clean at
+      this pin -- the ANN-106 repair of the BET-15 YAML defect is
+      already applied -- and this commit adds ONLY the BET-16 scoring,
+      introducing no new structural hazard: outcome and brier are
+      placed before the note folded scalar, the canonical order the
+      BET-15 defect violated by appending them after it.
+      THE SCORING. Operator decision 2026-08-07 against the item-0037
+      workpaper dossier/item-0037-workpapers/hlquanta-vacuity-audit.md
+      (hashed at payloads/HASHES.txt line 127), twelve weeks before
+      resolve_by 2026-10-31. The registered resolution clause maps
+      CLEAR to YES, INTERSECTS to NO, and INCONCLUSIVE with a named
+      missing anchor to VOID. The byte-fixed V-37 rule emitted CLEAR:
+      seventeen documented falsification instances (M-OSC OSC-0..5;
+      M-ROW ROW-1..5 plus the gap-ratio background BG-1; M-AP
+      AP-1..5), ALL DISJOINT, zero INTERSECTS, zero
+      UNDECIDED-IN-CORPUS, so clause (a) applied and no missing anchor
+      entered the verdict line. Outcome YES, brier (0.85 - 1)^2 =
+      0.0225; binary mean brier moves 0.136 -> 0.127 over twelve
+      scored. The block move open -> scored follows the BET-14/BET-15
+      precedent.
+      CALIBRATION, recorded with the score. The 0.85 prior priced the
+      one face the design note named as unchecked -- the span-(log x)^3
+      offset range at tuple sizes near 4 lnln x -- and the audit's
+      mandatory Q-UNIF-edge pass resolved exactly that face to
+      DISJOINT, returning the cannot-reach as PROVED rather than by a
+      Q-DOMAIN appeal: a capacity lemma, a uniform mass floor
+      M_H(x) = x^{1-o(1)} with the Chebyshev input PROVED-LEAN in-tree
+      as Erdos251.sum_log_primesUpto_le, and both documented matrices
+      carrying density x^{-1/D+o(1)}, an x^{o(1)} edge penalty against
+      an x^{1/D} gap. The bet priced write-up survival of a heuristic
+      expectation, not discovery; what resolved is that the
+      expectation survived a PROVED derivation, and survived the one
+      refuter path that would have voided the bet -- an interim
+      UNDECIDED reading of the Lemma-3 instance (run report F5) that
+      would have made the verdict INCONCLUSIVE and this bet VOID,
+      overturned against the anchor's own quantifier structure to
+      DISJOINT. The registration-vs-scoring tension stays exactly as
+      item-0032 left it, explicitly unsettled.
+      HONEST SCOPE, carried into the score. The YES is a judgment that
+      the audit correctly found no documented intersection; it is NOT
+      a claim that HLQuantA is true. The card remains OPEN, exactly as
+      the round-1 conditional theorem consumes it, and item-0027 will
+      build its integrator around a hypothesis whose vacuity against
+      the DOCUMENTED zone -- not whose truth -- this audit and this
+      score settle. No verdict on the separator S1, on (CG), on
+      B2.pairs or on the item-0010 campaign state is recorded here.
+      NOTHING ELSE MOVES. No other bet is resolved, re-priced or
+      amended: BET-20260711-07 (resolve_by 2026-08-08), BET-20260718-08,
+      BET-20260725-13 and BET-20260804-17 all stand OPEN. The
+      item-0029, item-0035, item-0036 and item-0037 verdicts stand
+      exactly as ANN-98, ANN-102, ANN-103 and ANN-105 booked them. No
+      Lean file, frozen block, run, payload text, dossier workpaper,
+      writeup file, extract, extract header, grade record or roadmap
+      file is touched.
+      HANDOVER DELTAS, two, enumerated. (i) The cold-start read-order
+      line moves ANN-01..106 to ANN-01..107 and its bet figures to 13
+      scored with BET-16 removed from the open list, leaving
+      BET-20260711-07, BET-20260718-08, BET-20260725-13 and
+      BET-20260804-17 open. (ii) The item-0037 frontier bullet's
+      BET-16 stays-open sentence is replaced by the score:
+      BET-20260804-16 IS SCORED YES by operator decision against the
+      audit (ANN-107), brier 0.0225, binary mean brier 0.136 -> 0.127
+      over twelve scored.
+      STILL OPEN AFTER THIS ENTRY, carrying the ANN-105 list forward
+      minus the BET-16 judgment this apply closes: the stop-and-ask
+      rule candidate (F-ENV) and the bets.yaml validate-side YAML
+      guard (F-BETS), both routed at ANN-105 and not yet landed; the
+      RC-1b and route-C gate decisions; the F1 rule-17 question of
+      ANN-102; the parked candidates of the design note Section 5; the
+      item-0010 re-scope waiting on item-0030; the two Lean doc
+      surfaces routed to item-0027; the item-0006 execution profile,
+      deliberately unpriced; source_commit in writeup/sources.yml and
+      the four a292ba4 heading re-assignments; ERRATUM-5 booked and
+      deliberately unrepaired; Q1/Q2 of item-0032; and the Shiu 2000
+      standing question, unchanged and resolvable only by the
+      operator.

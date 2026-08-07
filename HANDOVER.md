@@ -8,11 +8,11 @@ Operator: istr. Steering: Claude Fable 5 (fresh instance reads THIS first).
 1. This file. 2. THE LEDGER IS NO LONGER ONE FILE (item-0032, ANN-87):
 read ledger/bets.yaml for version/convention/scored/open, and
 ledger/annotations/<id>.yaml for the annotation history, one
-strictly-append-only file per entry, ANN-01..106; the old path
+strictly-append-only file per entry, ANN-01..107; the old path
 ledger.yaml is now a pointer stub. If you only need bet state, read
-bets.yaml alone -- the history no longer rides along. 12 bets scored,
-BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the two
-post-0029 registrations BET-16/17 to 2026-10-31 open -- read
+bets.yaml alone -- the history no longer rides along. 13 bets scored,
+BET-07 to 2026-08-08, BET-08 and BET-13 to 2026-09-30 and the
+post-0029 registration BET-17 to 2026-10-31 open -- read
 the `open:` block, not this line, for the registered values). Both item-0026 bets
 are now SCORED: BET-20260724-10 YES at brier 0.64 (ANN-70) and
 BET-20260724-09 NO at brier 0.0025 (ANN-71); read ANN-70 and ANN-71
@@ -268,9 +268,9 @@ its later sections carry a STALE banner, HANDOVER is the record).
   V-A table of 31 rows/56 pieces, the four axes, the three lemmas,
   Task A verbatim, the Task B label table, the Q-UNIF-edge pass, the
   V-37 block and application, rule-16(a) pass, refuter record, both
-  readings) and item-0037-report.md. BET-20260804-16 STAYS OPEN for
-  operator judgment (CLEAR is its YES material; rule 28(iii),
-  bets.yaml byte-untouched). TWO DISCLOSURES a cold start must see:
+  readings) and item-0037-report.md. BET-20260804-16 IS SCORED YES by operator
+  decision against this audit (ANN-107), brier 0.0225; binary mean
+  brier moves 0.136 -> 0.127 over twelve scored. TWO DISCLOSURES a cold start must see:
   (a) the dispatch line envelope [340, 520] was TOO SMALL and was
   amended mid-run by the operator to [340, 650] -- the SECOND
   recurrence after item-0036's [140, 460] -> [550, 600] -- and the run
